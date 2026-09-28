@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reading (Sept. 28): The Pump That Never Rests</title>
+<style>
+  body{font-family:"Segoe UI",Verdana,Arial,sans-serif;font-size:20px;line-height:1.65;margin:0;background:#fdf1f1;color:#2b1d1d}
+  .wrap{max-width:880px;margin:0 auto;padding:20px 18px 80px}
+  a.home{font-size:.9em;color:#c62828}
+  h1{color:#b71c1c;font-size:2em;margin:10px 0}
+  h2{color:#c62828;margin-top:36px;border-bottom:3px solid #ffcdd2;padding-bottom:4px}
+  .box{background:#fff;border-radius:16px;padding:18px 22px;margin:16px 0;box-shadow:0 3px 10px rgba(0,0,0,.07)}
+  .passage{font-family:Georgia,"Times New Roman",serif;font-size:1.1em;line-height:1.8}
+  .passage h3{text-align:center;font-family:"Segoe UI",Verdana,sans-serif;color:#b71c1c;font-size:1.4em;margin:4px 0 14px}
+  .passage p{text-indent:1.5em;margin:0 0 14px}
+  mark.v{background:#fff59d;padding:0 3px;border-radius:4px;font-weight:bold}
+  .tipbox{background:#fff8e1;border-left:8px solid #ffb300}
+  .q{border-left:8px solid #bcaaa4}
+  .q.right{border-left-color:#43a047;background:#f1f8e9}
+  .q.wrong{border-left-color:#e53935;background:#fff5f5}
+  .tag{display:inline-block;font-size:.7em;background:#7e57c2;color:#fff;border-radius:8px;padding:1px 8px;margin-left:6px;vertical-align:middle}
+  .opt{display:block;width:100%;text-align:left;font-size:.95em;background:#fafafa;border:2px solid #e0e0e0;border-radius:10px;padding:8px 14px;margin:8px 0;cursor:pointer;font-family:inherit}
+  .opt:hover{border-color:#ef9a9a;background:#fff}
+  .opt.sel-right{background:#c8e6c9;border-color:#43a047}
+  .opt.sel-wrong{background:#ffcdd2;border-color:#e53935}
+  .fb{margin-top:6px;font-weight:bold}
+  .fb.good{color:#2e7d32} .fb.bad{color:#c62828}
+  .explain{color:#4e342e;font-weight:normal}
+  select{font-size:.95em;padding:6px 8px;border-radius:8px;border:2px solid #ef9a9a;max-width:100%;font-family:inherit}
+  .vrow{display:flex;flex-wrap:wrap;align-items:center;gap:10px;padding:8px 6px;border-bottom:1px dashed #eee}
+  .vrow .w{font-weight:bold;min-width:140px}
+  .vrow.right{background:#f1f8e9} .vrow.wrong{background:#fff5f5}
+  .mark{font-size:1.2em;min-width:30px}
+  button.main{font-size:1em;padding:10px 20px;border:none;border-radius:10px;cursor:pointer;font-weight:bold;background:#e53935;color:#fff;margin-top:10px}
+  button.main:hover{background:#c62828}
+  button.sec{font-size:.95em;padding:8px 16px;border:none;border-radius:10px;cursor:pointer;font-weight:bold;background:#ffe082;color:#5d4037}
+  textarea{width:100%;box-sizing:border-box;font-size:1em;font-family:inherit;padding:10px;border:2px solid #ef9a9a;border-radius:10px;min-height:120px}
+  #model{display:none;background:#f3e5f5;border-radius:10px;padding:10px 14px;margin-top:10px}
+  #scoreBox{position:sticky;bottom:0;background:#b71c1c;color:#fff;border-radius:16px 16px 0 0;padding:12px 20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-top:30px}
+  #scoreBox button{font-size:.95em;padding:8px 16px;border:none;border-radius:10px;cursor:pointer;font-weight:bold;background:#ffca28;color:#3e2723}
+  #final{display:none;text-align:center;border:4px solid #43a047;font-size:1.1em}
+</style>
+</head>
+<body>
+<div class="wrap">
+<a class="home" href="../../index.html">&larr; Back to all lessons</a>
+<h1>📖 Reading Week 1: The Pump That Never Rests</h1>
+
+<div class="box tipbox">
+  <strong>Before you read, Ace:</strong> Good readers are like doctors doing a check-up. They look closely and ask questions.
+  <ul>
+    <li><strong>Preview:</strong> Read the title. What do you think the passage is about?</li>
+    <li><strong>Pause:</strong> After each paragraph, say its main idea in your head in one sentence.</li>
+    <li><strong>Words in <mark class="v">yellow</mark></strong> are vocabulary words. Use the sentence around them (the <em>context</em>) to figure out what they mean.</li>
+  </ul>
+</div>
+
+<div class="box passage" id="passage">
+<h3>The Pump That Never Rests</h3>
+<p>Make a fist and look at it. Your heart is roughly that size, and right now, while you read this sentence, it is working harder than any other muscle in your body. It started beating before you were born, and it has not taken a single break since: not during sleep, not during a birthday party, not even for a second. Scientists <mark class="v">estimate</mark> that the heart beats about 100 000 times every day. Over a long life, that adds up to more than two and a half billion beats. No machine built by humans can match that kind of <mark class="v">endurance</mark>.</p>
+<p>So what exactly does this tireless organ do? The heart's job is to pump blood, and blood is the body's delivery service. Every cell in your body, from the cells in your toes to the cells in your brain, needs a <mark class="v">constant</mark> supply of oxygen and nutrients. Blood carries these supplies to the cells and then hauls away wastes such as carbon dioxide. Without a steady flow, cells begin to suffer. Brain cells are especially <mark class="v">sensitive</mark>; they can be damaged after only a few minutes without oxygen.</p>
+<p>The heart is divided into four hollow chambers. The two upper chambers are called atria (just one is an atrium). They act like waiting rooms, collecting blood as it returns to the heart. The two lower chambers are called ventricles, and they are the powerful pumps that push blood out. A thick wall of muscle called the septum separates the right side of the heart from the left side, so the blood on the two sides never mixes.</p>
+<p>Each side has a different mission. The right side receives blood that has already delivered its oxygen and sends it on a short trip to the lungs. There, the blood releases carbon dioxide, which you breathe out, and picks up fresh oxygen, which you breathed in. The refreshed blood then travels back to the left side of the heart. The left ventricle has the toughest job of all: it must squeeze hard enough to push blood through the entire body, all the way to your fingertips and back. That is why its muscular wall is much thicker than the wall of the right ventricle.</p>
+<p>If you have ever pressed your ear against someone's chest, you may have heard a sound like "lub-dub, lub-dub." Those sounds are not made by the muscle itself. They are made by valves, small flaps of tissue that snap shut to keep blood flowing in only one direction. Doctors listen to these sounds with a stethoscope. An unusual sound, called a murmur, can be a clue that a valve is not closing properly, although many murmurs, especially in children, turn out to be harmless.</p>
+<p>What tells the heart when to beat? Tucked into the wall of the right atrium is a tiny cluster of special cells called the sinoatrial node. It produces an electrical signal that spreads across the heart and causes the muscle to <mark class="v">contract</mark>. Because it sets the rhythm, it is often called the heart's natural pacemaker. If this system stops working properly, surgeons can <mark class="v">implant</mark> an artificial pacemaker, a small battery-powered device that sends regular electrical pulses to keep the heartbeat steady.</p>
+<p>The blood that leaves the heart travels through an <mark class="v">astonishing</mark> network of blood vessels. Arteries carry blood away from the heart, veins carry it back, and tiny capillaries, many thinner than a strand of hair, connect the two. If all of an adult's blood vessels were laid end to end, they would stretch roughly 100 000 kilometres, enough to circle Earth about two and a half times.</p>
+<p>Even though your heart works without any instructions from you, the choices you make still affect it. Regular exercise makes the heart muscle stronger and more <mark class="v">efficient</mark>, so a fit person's heart can pump the same amount of blood with fewer beats. Eating vegetables, fruits, and whole grains, getting enough sleep, and never smoking all help protect the heart for decades. Your heart will keep faithfully beating for you every second of your life. The least you can do is take good care of it in return.</p>
+<p style="text-indent:0;font-size:.8em;color:#795548;text-align:right">About 688 words</p>
+</div>
+
+<h2>Part 1: Comprehension</h2>
+<p>Click the best answer. You'll find out right away if you're correct. Only your <strong>first click</strong> counts toward your score, but you can keep trying to find the right answer.</p>
+<div id="mc"></div>
+
+<h2>Part 2: Think Deeper (not scored)</h2>
+<div class="box">
+  <p><strong>In 2 to 4 sentences, explain the path a drop of blood takes from the right side of the heart until it is ready to be pumped out to the body. Use at least two words from the passage (for example: <em>ventricle, lungs, oxygen, carbon dioxide</em>).</strong></p>
+  <textarea id="openAns" placeholder="Write your answer here, Ace..."></textarea>
+  <p><button type="button" class="sec" id="showModel">Compare with a model answer</button></p>
+  <div id="model"><strong>Model answer:</strong> The drop of blood starts on the right side of the heart after it has already delivered its oxygen to the body. The right side pumps it to the lungs, where it gets rid of carbon dioxide and picks up fresh oxygen. Then it travels back to the left side of the heart, where the strong left ventricle squeezes it out to the rest of the body.<br><em>Did your answer mention the lungs, swapping carbon dioxide for oxygen, and returning to the left side? If so, great work!</em></div>
+</div>
+
+<h2>Part 3: Vocabulary</h2>
+<div class="box">
+  <h3 style="margin-top:0">A. Match each word to its meaning</h3>
+  <p>Choose the meaning that fits how the word is used in the passage.</p>
+  <div id="vmatch"></div>
+  <h3>B. Fill in the blank</h3>
+  <p>Choose the vocabulary word that best completes each sentence.</p>
+  <div id="vfill"></div>
+  <button type="button" class="main" id="checkVocab">Check my vocabulary</button>
+  <div class="fb" id="vocabFb"></div>
+</div>
+
+<div class="box" id="final"></div>
+<div id="scoreBox">
+  <span id="scoreText"></span>
+  <button type="button" id="finishBtn">I'm done! Show my final score</button>
+</div>
+</div>
+
+<script>
+var MC = [
+ {q:"Which sentence best states the <strong>main idea</strong> of the whole passage?",
+  o:["The heart is about the size of a fist.",
+     "The heart is a hard-working organ whose parts work together to move blood through the body, and our choices affect its health.",
+     "Doctors use stethoscopes to listen for heart murmurs.",
+     "Blood vessels could circle Earth two and a half times."],
+  a:1, e:"The other choices are true details, but only this one sums up the whole passage."},
+ {q:"According to the passage, what is the job of the <strong>atria</strong>?",
+  o:["They push blood out to the whole body.","They separate the left and right sides of the heart.","They collect blood as it returns to the heart.","They make the lub-dub sound."],
+  a:2, e:"The passage says the atria \"act like waiting rooms, collecting blood as it returns to the heart.\""},
+ {q:"Where does the <strong>right side</strong> of the heart send blood?",
+  o:["To the brain","To the lungs","To the fingertips","To the left atrium directly through the septum"],
+  a:1, e:"The right side sends blood \"on a short trip to the lungs\" to pick up oxygen. The septum keeps the two sides apart, so blood can't go straight through it."},
+ {q:"What causes the \"lub-dub\" sound of a heartbeat?",
+  o:["The heart muscle squeezing","Blood rushing through capillaries","Valves snapping shut","The sinoatrial node sending a signal"],
+  a:2, e:"The passage says the sounds \"are made by valves, small flaps of tissue that snap shut.\""},
+ {q:"Which blood vessels carry blood <strong>away from</strong> the heart?",
+  o:["Veins","Capillaries","Arteries","Atria"],
+  a:2, e:"\"Arteries carry blood away from the heart, veins carry it back.\" Memory trick: <strong>A</strong>rteries go <strong>A</strong>way."},
+ {q:"Why is the wall of the left ventricle thicker than the wall of the right ventricle?",
+  o:["It has to push blood through the entire body, which takes more force.","It holds more blood while waiting.","It needs to protect the lungs.","It contains the sinoatrial node."],
+  a:0, e:"The left ventricle \"must squeeze hard enough to push blood through the entire body,\" so it needs more muscle."},
+ {q:"A doctor hears a heart murmur in a healthy 8-year-old. Based on the passage, what is the <strong>most reasonable</strong> conclusion?", tag:"Inference",
+  o:["The child definitely has a dangerous heart disease.","The child needs a pacemaker right away.","The murmur might be harmless, but it could be a clue worth checking about a valve.","Murmurs only happen in adults, so the doctor made a mistake."],
+  a:2, e:"The passage says a murmur \"can be a clue that a valve is not closing properly,\" but \"many murmurs, especially in children, turn out to be harmless.\" A good doctor keeps both possibilities in mind."},
+ {q:"A marathon runner has a lower resting heart rate than most people. Which idea from the passage best explains why?", tag:"Inference",
+  o:["Runners have smaller hearts.","Exercise makes the heart stronger and more efficient, so it can pump the same amount of blood with fewer beats.","Runners' hearts take breaks during sleep.","Runners have fewer blood vessels to fill."],
+  a:1, e:"Not stated directly about runners, but the passage says a fit person's heart \"can pump the same amount of blood with fewer beats.\" You connected the clues!"},
+ {q:"Why did the author write, \"No machine built by humans can match that kind of endurance\"?", tag:"Author's purpose",
+  o:["To explain how pacemakers are built","To argue that machines are useless","To show how remarkable the heart is by comparing it to machines","To tell readers to stop using machines"],
+  a:2, e:"The comparison helps the reader feel amazed at how long the heart keeps working without a break."},
+ {q:"If a person's sinoatrial node stopped working properly, what problem would they most likely have?", tag:"Inference",
+  o:["Their heart might not beat with a steady rhythm.","Their blood would mix between the left and right sides.","Their lungs could not hold air.","Their bones would become weak."],
+  a:0, e:"The sinoatrial node \"sets the rhythm,\" so a problem with it would affect the heartbeat's timing. That's why surgeons might implant an artificial pacemaker."}
+];
+
+var VOCAB = ["endurance","estimate","constant","sensitive","contract","implant","astonishing","efficient"];
+var DEFS = {
+ endurance:"the ability to keep going for a long time without stopping",
+ estimate:"to make a careful, reasoned guess about an amount",
+ constant:"continuing all the time without stopping",
+ sensitive:"easily affected or harmed by something",
+ contract:"to squeeze together and become tighter or smaller",
+ implant:"to place something inside the body, usually by surgery",
+ astonishing:"extremely surprising or amazing",
+ efficient:"working well without wasting energy or effort"
+};
+var FILL = [
+ {s:"The scientists could only ____ how many birds were in the huge flock.", a:"estimate"},
+ {s:"Your muscles ____ when you lift something heavy, and relax when you let go.", a:"contract"},
+ {s:"Some people's skin is so ____ to sunlight that they burn in just ten minutes.", a:"sensitive"},
+ {s:"Cross-country skiers need great ____ to race for hours through the snow.", a:"endurance"}
+];
+var FILL_OPTIONS = ["efficient","estimate","contract","astonishing","sensitive","endurance"];
+
+var PRAISE=["Nice work, Ace!","Correct! Sharp reading, Ace!","Yes! You found the evidence!","Excellent thinking!","Right! Dr. Ace, reading detective!"];
+function pick(a){return a[Math.floor(Math.random()*a.length)];}
+
+// deterministic shuffle so options stay put during a session but aren't in alphabetical order
+function shuffled(arr,seed){var a=arr.slice(),s=seed;for(var i=a.length-1;i>0;i--){s=(s*9301+49297)%233280;var j=Math.floor(s/233280*(i+1));var t=a[i];a[i]=a[j];a[j]=t;}return a;}
+
+var mcState=MC.map(function(){return {answered:false,firstRight:false,done:false};});
+var vocabScore=0, vocabChecked=false;
+var VOCAB_TOTAL=VOCAB.length+FILL.length;
+
+function buildMC(){
+  var box=document.getElementById("mc");
+  MC.forEach(function(item,i){
+    var d=document.createElement("div"); d.className="box q"; d.id="mc"+i;
+    var html="<div><strong>"+(i+1)+".</strong> "+item.q+(item.tag?'<span class="tag">'+item.tag+'</span>':"")+"</div>";
+    item.o.forEach(function(opt,j){ html+='<button type="button" class="opt" data-i="'+i+'" data-j="'+j+'">'+String.fromCharCode(65+j)+". "+opt+"</button>"; });
+    html+='<div class="fb" id="mcfb'+i+'"></div>';
+    d.innerHTML=html; box.appendChild(d);
+  });
+  box.addEventListener("click",function(e){
+    var b=e.target.closest?e.target.closest(".opt"):e.target; if(!b||!b.classList.contains("opt"))return;
+    answerMC(+b.getAttribute("data-i"),+b.getAttribute("data-j"),b);
+  });
+}
+function answerMC(i,j,btn){
+  var st=mcState[i], item=MC[i], fb=document.getElementById("mcfb"+i), card=document.getElementById("mc"+i);
+  if(st.done) return;
+  var right=(j===item.a);
+  if(!st.answered){ st.answered=true; st.firstRight=right; }
+  if(right){
+    st.done=true; btn.classList.add("sel-right"); card.className="box q right";
+    fb.className="fb good"; fb.innerHTML="✅ "+pick(PRAISE)+' <span class="explain">'+item.e+"</span>";
+  } else {
+    btn.classList.add("sel-wrong"); card.className="box q wrong";
+    fb.className="fb bad"; fb.innerHTML="❌ Not quite, Ace. Look back at the passage and try another answer.";
+  }
+  updateScore();
+}
+
+function buildVocab(){
+  var m=document.getElementById("vmatch");
+  var defOrder=shuffled(VOCAB,7);
+  VOCAB.forEach(function(w,i){
+    var row=document.createElement("div"); row.className="vrow"; row.id="vm"+i;
+    var sel='<select id="vsel'+i+'" aria-label="Meaning of '+w+'"><option value="">- choose a meaning -</option>';
+    defOrder.forEach(function(k){ sel+='<option value="'+k+'">'+DEFS[k]+'</option>'; });
+    sel+="</select>";
+    row.innerHTML='<span class="mark" id="vmk'+i+'"></span><span class="w">'+w+'</span>'+sel;
+    m.appendChild(row);
+  });
+  var f=document.getElementById("vfill");
+  FILL.forEach(function(item,i){
+    var row=document.createElement("div"); row.className="vrow"; row.id="vf"+i;
+    var sel='<select id="fsel'+i+'" aria-label="Blank '+(i+1)+'"><option value="">- choose -</option>';
+    FILL_OPTIONS.forEach(function(w){ sel+='<option value="'+w+'">'+w+'</option>'; });
+    sel+="</select>";
+    var parts=item.s.split("____");
+    row.innerHTML='<span class="mark" id="vfk'+i+'"></span><span>'+(i+1)+'. '+parts[0]+sel+parts[1]+'</span>';
+    f.appendChild(row);
+  });
+}
+function checkVocab(){
+  var score=0, blank=0;
+  VOCAB.forEach(function(w,i){
+    var v=document.getElementById("vsel"+i).value, ok=(v===w);
+    if(!v) blank++;
+    if(ok) score++;
+    document.getElementById("vm"+i).className="vrow "+(ok?"right":"wrong");
+    document.getElementById("vmk"+i).textContent=ok?"✅":"❌";
+  });
+  FILL.forEach(function(item,i){
+    var v=document.getElementById("fsel"+i).value, ok=(v===item.a);
+    if(!v) blank++;
+    if(ok) score++;
+    document.getElementById("vf"+i).className="vrow "+(ok?"right":"wrong");
+    document.getElementById("vfk"+i).textContent=ok?"✅":"❌";
+  });
+  vocabScore=score; vocabChecked=true;
+  var fb=document.getElementById("vocabFb");
+  if(score===VOCAB_TOTAL){ fb.className="fb good"; fb.textContent="🌟 "+score+" / "+VOCAB_TOTAL+". Perfect! Your vocabulary is getting seriously strong, Ace!"; }
+  else { fb.className="fb bad"; fb.textContent=score+" / "+VOCAB_TOTAL+" correct"+(blank?" ("+blank+" left blank)":"")+". Fix the ❌ ones and check again. Try finding the word in the passage for clues!"; }
+  updateScore();
+}
+function scores(){
+  var mc=0,answered=0; mcState.forEach(function(s){ if(s.firstRight) mc++; if(s.answered) answered++; });
+  return {mc:mc,answered:answered,vocab:vocabScore};
+}
+function updateScore(){
+  var s=scores();
+  document.getElementById("scoreText").textContent="Comprehension: "+s.mc+" / "+MC.length+" · Vocabulary: "+(vocabChecked?s.vocab:"-")+" / "+VOCAB_TOTAL;
+}
+function finish(){
+  if(!vocabChecked) checkVocab();
+  var s=scores(), total=MC.length+VOCAB_TOTAL, got=s.mc+s.vocab, pct=Math.round(100*got/total);
+  var msg = pct===100 ? "🏆 A perfect score! Outstanding reading, Dr. Ace!" :
+            pct>=80 ? "🌟 Fantastic work, Ace! You read like a Grade 7 student!" :
+            pct>=60 ? "💪 Solid effort, Ace! Reread the paragraphs for the questions you missed." :
+                      "🌱 This was a challenging passage. Read it once more, slowly, and try again. You've got this, Ace!";
+  var f=document.getElementById("final"); f.style.display="block";
+  f.innerHTML="<h2 style='border:none;margin-top:0'>Final Score: "+got+" / "+total+" ("+pct+"%)</h2>"+
+    "<p>Comprehension (first tries): "+s.mc+" / "+MC.length+(s.answered<MC.length?" (you skipped "+(MC.length-s.answered)+")":"")+"<br>Vocabulary: "+s.vocab+" / "+VOCAB_TOTAL+"</p><p>"+msg+"</p>"+
+    "<p style='font-size:.85em;color:#795548'>Finished on "+new Date().toLocaleString("en-CA")+"</p>";
+  f.scrollIntoView({behavior:"smooth"});
+}
+buildMC(); buildVocab(); updateScore();
+document.getElementById("checkVocab").addEventListener("click",checkVocab);
+document.getElementById("finishBtn").addEventListener("click",finish);
+document.getElementById("showModel").addEventListener("click",function(){document.getElementById("model").style.display="block";});
+</script>
+</body>
+</html>

@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Math (Sept. 28): Medical Math Challenge</title>
+<style>
+  body{font-family:"Segoe UI",Verdana,Arial,sans-serif;font-size:20px;line-height:1.6;margin:0;background:#eef5fb;color:#1d2a3a}
+  .wrap{max-width:880px;margin:0 auto;padding:20px 18px 80px}
+  a.home{font-size:.9em;color:#1565c0}
+  h1{color:#0d47a1;font-size:2em;margin:10px 0}
+  h2{color:#1565c0;margin-top:36px;border-bottom:3px solid #bbdefb;padding-bottom:4px}
+  .box{background:#fff;border-radius:16px;padding:18px 22px;margin:16px 0;box-shadow:0 3px 10px rgba(0,0,0,.07)}
+  .example{border-left:8px solid #42a5f5}
+  .example h3{margin:0 0 6px;color:#1565c0}
+  .step{margin:4px 0 4px 10px}
+  code,.mono{font-family:Consolas,"Courier New",monospace;background:#e3f2fd;padding:1px 6px;border-radius:5px}
+  .q{border-left:8px solid #90a4ae}
+  .q.right{border-left-color:#43a047;background:#f1f8e9}
+  .q.wrong{border-left-color:#e53935;background:#fff5f5}
+  .qnum{font-weight:bold;color:#0d47a1}
+  .row{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:10px}
+  input[type=text]{font-size:1.05em;padding:8px 12px;border:2px solid #90caf9;border-radius:10px;width:190px}
+  input[type=text]:focus{outline:none;border-color:#1e88e5;box-shadow:0 0 0 3px #bbdefb}
+  button{font-size:.95em;padding:8px 16px;border:none;border-radius:10px;cursor:pointer;font-weight:bold}
+  .check{background:#1e88e5;color:#fff} .check:hover{background:#1565c0}
+  .hint{background:#ffe082;color:#5d4037} .hint:hover{background:#ffd54f}
+  .sol{background:#ce93d8;color:#311b92}
+  .unit{color:#546e7a}
+  .fb{margin-top:8px;font-weight:bold;min-height:1em}
+  .fb.good{color:#2e7d32} .fb.bad{color:#c62828}
+  .hints{margin-top:8px;color:#5d4037;background:#fff8e1;border-radius:10px;padding:0 12px}
+  .hints p{margin:6px 0;padding:6px 0}
+  .solution{margin-top:8px;background:#f3e5f5;border-radius:10px;padding:8px 12px;display:none}
+  #scoreBox{position:sticky;bottom:0;background:#0d47a1;color:#fff;border-radius:16px 16px 0 0;padding:12px 20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-top:30px}
+  #scoreBox button{background:#ffca28;color:#3e2723}
+  #final{display:none;font-size:1.15em;text-align:center;border:4px solid #43a047}
+  .tipbox{background:#fff8e1;border-left:8px solid #ffb300}
+  table.t{border-collapse:collapse;margin:8px 0} table.t td,table.t th{border:1px solid #b0bec5;padding:4px 12px;text-align:center}
+</style>
+</head>
+<body>
+<div class="wrap">
+<a class="home" href="../../index.html">&larr; Back to all lessons</a>
+<h1>🧮 Math Week 1: Medical Math Challenge</h1>
+<p>Doctors and nurses use math all day: counting heartbeats, working out medicine doses, and spotting patterns. This week, Ace, you'll train like a medical team with <strong>multi-step problems</strong>, <strong>fractions and decimals</strong>, <strong>big-number multiplication and division</strong>, and <strong>patterns and equations</strong>.</p>
+
+<h2>Part 1: Learn the Moves</h2>
+
+<div class="box tipbox">
+  <strong>The 4-Step Problem Solver (like a doctor's check-up):</strong>
+  <ol>
+    <li><strong>Read</strong>: What is the question actually asking? Underline the numbers and units.</li>
+    <li><strong>Plan</strong>: Which operations do I need, and in what order?</li>
+    <li><strong>Solve</strong>: Do one step at a time and write each step down.</li>
+    <li><strong>Check</strong>: Is my answer reasonable? Did I answer the question that was asked?</li>
+  </ol>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 1: Multi-step problem (rates)</h3>
+  <p>A puppy's heart beats 120 times per minute. How many times does it beat in a quarter of an hour?</p>
+  <p class="step">Step 1: A quarter of an hour = 60 ÷ 4 = <strong>15 minutes</strong>.</p>
+  <p class="step">Step 2: 120 beats × 15 minutes = <strong>1800 beats</strong>.</p>
+  <p class="step">Check: 120 × 10 = 1200 and 120 × 5 = 600, and 1200 + 600 = 1800 ✔</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 2: Adding fractions with different denominators</h3>
+  <p>A patient drinks 2/3 L of juice and 1/4 L of water. How much altogether?</p>
+  <p class="step">Step 1: Find a common denominator. Multiples of 3 and 4 meet at <strong>12</strong>.</p>
+  <p class="step">Step 2: 2/3 = 8/12 and 1/4 = 3/12.</p>
+  <p class="step">Step 3: 8/12 + 3/12 = <strong>11/12 L</strong>.</p>
+  <p>To <em>subtract mixed numbers</em>, you may need to regroup: 3 1/5 − 1 3/5 → 2 6/5 − 1 3/5 = <strong>1 3/5</strong>.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 3: Ratios and doses</h3>
+  <p>A (pretend) vitamin syrup is given at <strong>3 mL for every 5 kg</strong> of body mass. How much for a 40 kg person?</p>
+  <p class="step">Step 1: How many groups of 5 kg are in 40 kg? 40 ÷ 5 = <strong>8 groups</strong>.</p>
+  <p class="step">Step 2: 8 groups × 3 mL = <strong>24 mL</strong>.</p>
+  <p><em>Real medicine safety: only a doctor, pharmacist, or parent decides real doses!</em></p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 4: Long division check</h3>
+  <p>6 552 ÷ 18 = ?</p>
+  <p class="step">18 goes into 65 three times (54), remainder 11. Bring down 5 → 115.</p>
+  <p class="step">18 goes into 115 six times (108), remainder 7. Bring down 2 → 72.</p>
+  <p class="step">18 goes into 72 four times (72), remainder 0. Answer: <strong>364</strong>.</p>
+  <p class="step">Check by multiplying: 364 × 18 = 6552 ✔</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 5: Patterns and equations</h3>
+  <p>Pattern: 5, 8, 11, 14, … The rule is "start at 5, add 3". Term number <em>n</em> is <span class="mono">3n + 2</span>.</p>
+  <table class="t"><tr><th>n</th><td>1</td><td>2</td><td>3</td><td>4</td></tr><tr><th>3n + 2</th><td>5</td><td>8</td><td>11</td><td>14</td></tr></table>
+  <p>So the 10th term is 3 × 10 + 2 = <strong>32</strong>.</p>
+  <p>Equation: <span class="mono">2x + 5 = 17</span>. Undo the steps backwards: subtract 5 → <span class="mono">2x = 12</span>, divide by 2 → <span class="mono">x = 6</span>. Check: 2 × 6 + 5 = 17 ✔</p>
+  <p><strong>Order of operations (BEDMAS):</strong> Brackets, Exponents, Division and Multiplication (left to right), Addition and Subtraction (left to right).</p>
+</div>
+
+<h2>Part 2: The Challenge (20 problems)</h2>
+<p>Type your answer in the box and press <strong>Check</strong> (or press Enter). You can type fractions like <span class="mono">3/4</span>, mixed numbers like <span class="mono">1 3/4</span> (with a space), or decimals like <span class="mono">1.75</span>. Don't type the units. Stuck? Press <strong>Hint</strong>. After 2 tries, you can see a full solution.</p>
+
+<div id="questions"></div>
+
+<div class="box" id="final"></div>
+
+<div id="scoreBox">
+  <span id="scoreText">Score: 0 / 20 correct</span>
+  <button id="finishBtn" type="button">I'm done! Show my final score</button>
+</div>
+</div>
+
+<script>
+var NAME = "Ace";
+var QUESTIONS = [
+ {t:"Ace's resting heart rate is 72 beats per minute. How many times does his heart beat in <strong>one hour</strong>?", a:"4320", u:"beats",
+  h:["There are 60 minutes in one hour.","Multiply 72 × 60. Try 70 × 60 first, then add 2 × 60."],
+  s:"72 × 60 = 4200 + 120 = 4320 beats."},
+ {t:"At the same rate (72 beats per minute), how many times does Ace's heart beat in <strong>one whole day</strong> (24 hours)?", a:"103680", u:"beats",
+  h:["You already know the beats in one hour from question 1.","Multiply your answer from question 1 by 24."],
+  s:"4320 × 24 = 86 400 + 17 280 = 103 680 beats. That's over one hundred thousand beats a day!"},
+ {t:"Each heartbeat pumps about 70 mL of blood. At 72 beats per minute, about how many <strong>litres</strong> of blood does the heart pump in one minute? (1 L = 1000 mL)", a:"5.04", u:"L",
+  h:["First find the millilitres: 70 × 72.","Then change mL to L by dividing by 1000 (move the decimal 3 places left)."],
+  s:"70 × 72 = 5040 mL. 5040 ÷ 1000 = 5.04 L per minute."},
+ {t:"An adult skeleton has 206 bones. Each hand has 27 bones and each foot has 26 bones. How many bones are in the <strong>rest of the body</strong> (not in the hands or feet)?", a:"100", u:"bones",
+  h:["Two hands and two feet: find 2 × 27 and 2 × 26.","Add those to get the hands-and-feet total, then subtract from 206."],
+  s:"Hands: 2 × 27 = 54. Feet: 2 × 26 = 52. Together 54 + 52 = 106. Rest of body: 206 − 106 = 100 bones. More than half your bones are in your hands and feet!"},
+ {t:"After soccer practice, Ace drinks 3/4 L of water, then later drinks another 2/5 L. How many litres did he drink altogether? (Give a fraction, mixed number, or decimal.)", a:"23/20", u:"L",
+  h:["Find a common denominator for 4 and 5.","3/4 = 15/20 and 2/5 = 8/20. Now add, then change an improper fraction to a mixed number."],
+  s:"15/20 + 8/20 = 23/20 = 1 3/20 L (which is 1.15 L)."},
+ {t:"A nurse has 2 1/2 L of saline solution. Each patient needs 3/8 L. How many patients can get a <strong>full</strong> dose?", a:"6", u:"patients",
+  h:["Change 2 1/2 into eighths: how many eighths are in 2 1/2?","2 1/2 = 20/8. How many groups of 3/8 fit into 20/8? Only count full groups."],
+  s:"2 1/2 = 20/8. 20 ÷ 3 = 6 remainder 2, so 6 full doses (with 2/8 L left over)."},
+ {t:"A pretend medicine is given at <strong>5 mL for every 10 kg</strong> of body mass. Ace has a mass of 34 kg. How many mL should he get? (Pretend only! Real doses come from a doctor.)", a:"17", u:"mL",
+  h:["5 mL for 10 kg is the same as how many mL for 1 kg?","5 ÷ 10 = 0.5 mL per kg. Now multiply by 34."],
+  s:"5 mL ÷ 10 kg = 0.5 mL per kg. 0.5 × 34 = 17 mL."},
+ {t:"A doctor takes a patient's temperature four times: 37.0 °C, 38.4 °C, 37.8 °C and 39.2 °C. What is the <strong>mean</strong> (average) temperature?", a:"38.1", u:"°C",
+  h:["The mean = add all the values, then divide by how many there are.","37.0 + 38.4 + 37.8 + 39.2 = 152.4. Now divide by 4."],
+  s:"Sum = 152.4. 152.4 ÷ 4 = 38.1 °C."},
+ {t:"A hospital receives 8544 bandages and shares them equally among 24 wards. How many bandages does each ward get?", a:"356", u:"bandages",
+  h:["Use long division: 8544 ÷ 24.","24 goes into 85 three times (72), remainder 13. Bring down the 4 to make 134…"],
+  s:"8544 ÷ 24 = 356. Check: 356 × 24 = 7120 + 1424 = 8544 ✔"},
+ {t:"A small clinic sees 347 patients every week. How many patients does it see in one year (52 weeks)?", a:"18044", u:"patients",
+  h:["Multiply 347 × 52.","Split it: 347 × 50 = 17 350, and 347 × 2 = 694. Add them."],
+  s:"347 × 50 = 17 350; 347 × 2 = 694; 17 350 + 694 = 18 044 patients."},
+ {t:"In a science lab, bacteria <strong>double</strong> every 20 minutes. A dish starts with 3 bacteria. How many will there be after <strong>2 hours</strong>?", a:"192", u:"bacteria",
+  h:["How many 20-minute periods are in 2 hours (120 minutes)?","There are 6 doublings. 3 → 6 → 12 → … keep going 6 times."],
+  s:"120 ÷ 20 = 6 doublings. 3 → 6 → 12 → 24 → 48 → 96 → 192. (That's 3 × 2⁶ = 3 × 64.) This is why washing your hands matters!"},
+ {t:"Solve for <em>n</em>: <span class='mono'>4n + 7 = 43</span>", a:"9", u:"",
+  h:["Undo the steps backwards. First undo the + 7.","43 − 7 = 36, so 4n = 36. Now undo the × 4."],
+  s:"4n = 43 − 7 = 36, so n = 36 ÷ 4 = 9. Check: 4 × 9 + 7 = 43 ✔"},
+ {t:"What is the next number in this pattern? <span class='mono'>2, 5, 11, 23, 47, ___</span>", a:"95", u:"",
+  h:["Look at how each number relates to the one before. The jumps (3, 6, 12, 24) are doubling.","Rule: multiply by 2, then add 1."],
+  s:"Rule: × 2 then + 1. 47 × 2 + 1 = 95."},
+ {t:"A pattern follows the rule: term number <em>n</em> = <span class='mono'>3n + 4</span>. What is the <strong>25th</strong> term?", a:"79", u:"",
+  h:["Replace n with 25.","3 × 25 = 75. Then add 4."],
+  s:"3 × 25 + 4 = 75 + 4 = 79."},
+ {t:"About 60% of a person's body mass is water. If Ace's mass is 45 kg, about how many kilograms of him is water?", a:"27", u:"kg",
+  h:["60% means 60 out of 100, or 6 out of 10.","Find 10% of 45 (that's 4.5), then multiply by 6."],
+  s:"10% of 45 = 4.5. 60% = 6 × 4.5 = 27 kg."},
+ {t:"Use the order of operations (BEDMAS): <span class='mono'>48 ÷ (6 − 2) × 3 + 5²</span>", a:"61", u:"",
+  h:["Brackets first: 6 − 2 = 4. Exponent next: 5² = 5 × 5.","48 ÷ 4 = 12, then 12 × 3 (division and multiplication go left to right), then add 25."],
+  s:"(6 − 2) = 4; 5² = 25; 48 ÷ 4 = 12; 12 × 3 = 36; 36 + 25 = 61."},
+ {t:"Resting, Ace breathes 12 times per minute. While running, he breathes 36 times per minute. How many <strong>more</strong> breaths does he take in 15 minutes of running than in 15 minutes of resting?", a:"360", u:"breaths",
+  h:["Find the difference per minute first: 36 − 12.","24 more breaths each minute. Now multiply by 15."],
+  s:"36 − 12 = 24 more per minute. 24 × 15 = 360 more breaths. (Or 540 − 180 = 360.)"},
+ {t:"Out of 240 students at a school, 5/8 got a flu shot. How many students did <strong>not</strong> get a flu shot?", a:"90", u:"students",
+  h:["If 5/8 got the shot, what fraction did NOT?","3/8 did not. Find 1/8 of 240 first (240 ÷ 8), then multiply by 3."],
+  s:"1 − 5/8 = 3/8. 240 ÷ 8 = 30; 30 × 3 = 90 students."},
+ {t:"One patient wore a cast for 6 1/4 weeks. Another wore a cast for 4 5/6 weeks. How much longer did the first patient wear the cast? (Give a fraction, mixed number, or decimal.)", a:"17/12", u:"weeks",
+  h:["Use a common denominator of 12: 1/4 = 3/12 and 5/6 = 10/12.","6 3/12 − 4 10/12: you can't take 10/12 from 3/12, so regroup 6 3/12 as 5 15/12."],
+  s:"6 3/12 = 5 15/12. 5 15/12 − 4 10/12 = 1 5/12 weeks."},
+ {t:"After a race, Ace's heart rate was 60 less than <strong>three times</strong> his resting rate. His heart rate after the race was 150 beats per minute. What is his resting heart rate? (Hint: 3r − 60 = 150)", a:"70", u:"beats per minute",
+  h:["Undo the − 60 first: 150 + 60 = ?","3r = 210. Now divide by 3."],
+  s:"3r − 60 = 150 → 3r = 210 → r = 70 beats per minute. Check: 3 × 70 − 60 = 150 ✔"}
+];
+
+var PRAISE = ["Nice work, Ace!","Correct! Your brain is on fire! 🔥","Yes! Dr. Ace strikes again!","Excellent, Ace. That was a tough one!","Right on! 🎯","Brilliant thinking, Ace!","Spot on, like a real doctor!"];
+var ENCOURAGE = ["Not quite. Check your steps and try again!","Close call. Try again, Ace! Maybe use a hint?","Hmm, not yet. Re-read the question carefully.","Keep going, Ace. Mistakes help your brain grow!"];
+
+// Parse "12", "1,200", "5.04", "3/4", "1 3/4", "-2" into a number (or NaN)
+function parseAnswer(str){
+  if(str===undefined||str===null) return NaN;
+  var s=String(str).trim().toLowerCase();
+  s=s.replace(/[\u2212\u2013]/g,"-");
+  s=s.replace(/(\d),(?=\d{3}(\D|$))/g,"$1");   // thousands commas
+  s=s.replace(/[^0-9.\/\- ]/g," ").replace(/\s+/g," ").trim(); // drop units/letters
+  s=s.replace(/\s*\/\s*/g,"/");
+  var m;
+  if((m=s.match(/^(-?\d+) (\d+)\/(\d+)$/))){ var w=parseFloat(m[1]),n=parseFloat(m[2]),d=parseFloat(m[3]); if(d===0)return NaN; return w<0? w-n/d : w+n/d; }
+  if((m=s.match(/^(-?\d+(?:\.\d+)?)\/(\d+(?:\.\d+)?)$/))){ var d2=parseFloat(m[2]); if(d2===0)return NaN; return parseFloat(m[1])/d2; }
+  s=s.replace(/ /g,"");  // "103 680" -> "103680"
+  if(/^-?(\d+\.?\d*|\.\d+)$/.test(s)) return parseFloat(s);
+  return NaN;
+}
+function isCorrect(input,key){
+  var a=parseAnswer(input), k=parseAnswer(key);
+  if(isNaN(a)) return false;
+  var isInt=Math.abs(k-Math.round(k))<1e-12;
+  var tol=isInt?1e-9:0.005;   // fractional answers accept rounded decimals (e.g. 1.42 for 1 5/12)
+  return Math.abs(a-k)<=tol;
+}
+
+var state=[];
+function render(){
+  var box=document.getElementById("questions");
+  QUESTIONS.forEach(function(q,i){
+    state.push({correct:false,tries:0,hints:0});
+    var d=document.createElement("div");
+    d.className="box q"; d.id="q"+i;
+    d.innerHTML='<div><span class="qnum">'+(i+1)+'.</span> '+q.t+'</div>'+
+      '<div class="row"><input type="text" id="in'+i+'" aria-label="Answer to question '+(i+1)+'" autocomplete="off"> <span class="unit">'+q.u+'</span>'+
+      '<button type="button" class="check" data-i="'+i+'">Check</button>'+
+      '<button type="button" class="hint" data-i="'+i+'">Hint 💡</button>'+
+      '<button type="button" class="sol" data-i="'+i+'" style="display:none">Show solution</button></div>'+
+      '<div class="fb" id="fb'+i+'"></div><div class="hints" id="hints'+i+'"></div>'+
+      '<div class="solution" id="sol'+i+'"><strong>Solution:</strong> '+q.s+'</div>';
+    box.appendChild(d);
+  });
+  box.addEventListener("click",function(e){
+    var b=e.target; if(b.tagName!=="BUTTON")return;
+    var i=+b.getAttribute("data-i");
+    if(b.className==="check") check(i);
+    else if(b.className==="hint") hint(i);
+    else if(b.className==="sol") document.getElementById("sol"+i).style.display="block";
+  });
+  box.addEventListener("keydown",function(e){
+    if(e.key==="Enter"&&e.target.tagName==="INPUT"){ check(+e.target.id.slice(2)); }
+  });
+}
+function pick(arr){return arr[Math.floor(Math.random()*arr.length)];}
+function check(i){
+  var val=document.getElementById("in"+i).value;
+  var fb=document.getElementById("fb"+i), card=document.getElementById("q"+i);
+  if(val.trim()===""){fb.className="fb bad";fb.textContent="Type an answer first, Ace!";return;}
+  if(isNaN(parseAnswer(val))){fb.className="fb bad";fb.textContent="I can't read that as a number. Try something like 42, 3.5, 3/4 or 1 3/4.";return;}
+  state[i].tries++;
+  if(isCorrect(val,QUESTIONS[i].a)){
+    state[i].correct=true; card.className="box q right"; fb.className="fb good";
+    fb.textContent="✅ "+pick(PRAISE)+(state[i].tries===1?" (first try!)":"");
+  } else {
+    state[i].correct=false; card.className="box q wrong"; fb.className="fb bad";
+    fb.textContent="❌ "+pick(ENCOURAGE);
+    if(state[i].tries>=2) card.querySelector(".sol").style.display="inline-block";
+  }
+  updateScore();
+}
+function hint(i){
+  var q=QUESTIONS[i], s=state[i], hb=document.getElementById("hints"+i);
+  if(s.hints<q.h.length){
+    var p=document.createElement("p"); p.textContent="💡 Hint "+(s.hints+1)+": "+q.h[s.hints]; hb.appendChild(p); s.hints++;
+  }
+  if(s.hints>=q.h.length) document.querySelector("#q"+i+" .hint").disabled=true;
+  updateScore();
+}
+function counts(){
+  var c=0,first=0,h=0;
+  state.forEach(function(s){ if(s.correct){c++; if(s.tries===1)first++;} h+=s.hints; });
+  return {correct:c,first:first,hints:h};
+}
+function updateScore(){
+  var k=counts();
+  document.getElementById("scoreText").textContent="Score: "+k.correct+" / "+QUESTIONS.length+" correct · hints used: "+k.hints;
+}
+function finish(){
+  var k=counts(), n=QUESTIONS.length, pct=Math.round(100*k.correct/n);
+  var msg;
+  if(pct===100) msg="🏆 PERFECT SCORE! Incredible work, Dr. Ace. You're ready for the operating room of math!";
+  else if(pct>=85) msg="🌟 Outstanding, Ace! That's a Grade 6-7 level performance!";
+  else if(pct>=65) msg="💪 Great effort, Ace! Review the ones you missed and try them again.";
+  else if(pct>=40) msg="👍 Good start, Ace! These problems are tough. Use the hints and solutions to learn the tricks, then try again.";
+  else msg="🌱 These are challenge problems, well above grade level. Every doctor started as a beginner. Go through the worked examples and try again, Ace!";
+  var f=document.getElementById("final");
+  f.style.display="block";
+  f.innerHTML="<h2 style='border:none;margin-top:0'>Final Score: "+k.correct+" / "+n+" ("+pct+"%)</h2>"+
+    "<p>Correct on the first try: "+k.first+" · Hints used: "+k.hints+"</p><p>"+msg+"</p>"+
+    "<p style='font-size:.85em;color:#546e7a'>Finished on "+new Date().toLocaleString("en-CA")+"</p>";
+  f.scrollIntoView({behavior:"smooth"});
+}
+render();
+updateScore();
+document.getElementById("finishBtn").addEventListener("click",finish);
+</script>
+</body>
+</html>

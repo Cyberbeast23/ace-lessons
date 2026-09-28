@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Writing (Sept. 28): Building a Strong Paragraph</title>
+<style>
+  body{font-family:"Segoe UI",Verdana,Arial,sans-serif;font-size:20px;line-height:1.6;margin:0;background:#eef7ee;color:#1b2b1b}
+  .wrap{max-width:880px;margin:0 auto;padding:20px 18px 80px}
+  a.home{font-size:.9em;color:#2e7d32}
+  h1{color:#1b5e20;font-size:2em;margin:10px 0}
+  h2{color:#2e7d32;margin-top:36px;border-bottom:3px solid #c8e6c9;padding-bottom:4px}
+  h3{color:#2e7d32}
+  .box{background:#fff;border-radius:16px;padding:18px 22px;margin:16px 0;box-shadow:0 3px 10px rgba(0,0,0,.07)}
+  .tipbox{background:#fff8e1;border-left:8px solid #ffb300}
+  .burger{display:grid;gap:8px;margin:10px 0}
+  .burger div{border-radius:14px;padding:10px 16px}
+  .bun{background:#ffcc80} .fill1{background:#a5d6a7} .fill2{background:#ef9a9a} .fill3{background:#ffe082}
+  .ts{background:#bbdefb;border-radius:5px;padding:1px 3px}
+  .ev{background:#c8e6c9;border-radius:5px;padding:1px 3px}
+  .ex{background:#ffe0b2;border-radius:5px;padding:1px 3px}
+  .cs{background:#e1bee7;border-radius:5px;padding:1px 3px}
+  .legend span{display:inline-block;margin:4px 8px 4px 0;font-size:.85em}
+  .model{font-family:Georgia,"Times New Roman",serif;font-size:1.05em;line-height:1.9}
+  .row{padding:10px 6px;border-bottom:1px dashed #ddd}
+  .row.right{background:#f1f8e9} .row.wrong{background:#fff5f5}
+  select{font-size:.9em;padding:5px 8px;border-radius:8px;border:2px solid #a5d6a7;font-family:inherit}
+  .q{border-left:8px solid #b0bec5}
+  .q.right{border-left-color:#43a047;background:#f1f8e9}
+  .q.wrong{border-left-color:#e53935;background:#fff5f5}
+  .opt{display:block;width:100%;text-align:left;font-size:.95em;background:#fafafa;border:2px solid #e0e0e0;border-radius:10px;padding:8px 14px;margin:8px 0;cursor:pointer;font-family:inherit}
+  .opt:hover{border-color:#81c784;background:#fff}
+  .opt.sel-right{background:#c8e6c9;border-color:#43a047}
+  .opt.sel-wrong{background:#ffcdd2;border-color:#e53935}
+  .fb{margin-top:6px;font-weight:bold}
+  .fb.good{color:#2e7d32} .fb.bad{color:#c62828}
+  .explain{font-weight:normal;color:#33691e}
+  .bad-sent{font-family:Consolas,"Courier New",monospace;background:#ffebee;padding:6px 10px;border-radius:8px;display:inline-block;margin:6px 0}
+  input.fix{width:100%;box-sizing:border-box;font-size:1em;padding:8px 12px;border:2px solid #a5d6a7;border-radius:10px;font-family:inherit}
+  button{font-size:.95em;padding:8px 16px;border:none;border-radius:10px;cursor:pointer;font-weight:bold;font-family:inherit}
+  .go{background:#43a047;color:#fff} .go:hover{background:#2e7d32}
+  .hint{background:#ffe082;color:#5d4037}
+  .blue{background:#1e88e5;color:#fff}
+  .purple{background:#8e24aa;color:#fff}
+  .grey{background:#cfd8dc;color:#263238}
+  .btnrow{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px}
+  textarea{width:100%;box-sizing:border-box;min-height:300px;font-size:1.05em;line-height:1.7;font-family:Georgia,"Times New Roman",serif;padding:14px;border:3px solid #a5d6a7;border-radius:12px}
+  textarea:focus{outline:none;border-color:#43a047}
+  .counter{display:flex;flex-wrap:wrap;gap:20px;align-items:center;margin:8px 0;font-weight:bold}
+  .meter{flex:1;min-width:200px;height:18px;background:#e0e0e0;border-radius:9px;overflow:hidden}
+  .meter div{height:100%;width:0;background:#ffb300;transition:width .2s}
+  .checklist label{display:block;padding:6px 4px;cursor:pointer}
+  .checklist input{transform:scale(1.4);margin-right:10px}
+  .prompts label{display:block;background:#f1f8e9;border-radius:10px;padding:10px 14px;margin:8px 0;cursor:pointer}
+  .prompts input{transform:scale(1.3);margin-right:8px}
+  #scoreBox{position:sticky;bottom:0;background:#1b5e20;color:#fff;border-radius:16px 16px 0 0;padding:12px 20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-top:30px}
+  #printArea{display:none}
+  @media print{
+    body{background:#fff;font-size:14pt}
+    .wrap,#scoreBox{display:none !important}
+    #printArea{display:block;font-family:Georgia,serif;line-height:1.8}
+    #printArea h1{font-size:18pt;margin:0 0 6pt}
+    #printArea .meta{font-size:11pt;color:#444}
+    #printArea .text{white-space:pre-wrap;border-top:1px solid #999;padding-top:10pt;margin-top:10pt}
+    #printArea .lines{margin-top:24pt;border-top:1px solid #999;padding-top:6pt;font-size:11pt}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+<a class="home" href="../../index.html">&larr; Back to all lessons</a>
+<h1>✍️ Writing Week 1: Building a Strong Paragraph</h1>
+<p>Doctors write every day: patient notes, reports, and research papers. Their writing has to be <strong>clear, organized, and backed by evidence</strong>. This week, Ace, you'll learn how to build a paragraph like an expert.</p>
+
+<h2>Part 1: The Lesson</h2>
+<div class="box">
+  <h3 style="margin-top:0">The Paragraph Burger 🍔</h3>
+  <p>A strong informational paragraph is built like a burger. The buns hold everything together, and the fillings are the good stuff in the middle.</p>
+  <div class="burger">
+    <div class="bun"><strong>Top bun: Topic sentence.</strong> Tells the reader the <em>main idea</em>. It should be clear and interesting, and not too specific.</div>
+    <div class="fill1"><strong>Filling: Evidence / supporting details.</strong> Facts, examples, or numbers that <em>prove</em> or support the main idea. Strong paragraphs have 2 or 3.</div>
+    <div class="fill2"><strong>Filling: Explanation.</strong> Tell the reader <em>why the evidence matters</em> or how it connects to the main idea. Use linking words: <em>because, this means, as a result, for example, in addition, however</em>.</div>
+    <div class="bun"><strong>Bottom bun: Concluding sentence.</strong> Wraps up by restating the main idea <em>in new words</em>, or ends with a final thought. Don't just copy the topic sentence!</div>
+  </div>
+</div>
+
+<div class="box">
+  <h3 style="margin-top:0">Model Paragraph</h3>
+  <p class="legend"><span class="ts">Topic sentence</span><span class="ev">Evidence</span><span class="ex">Explanation</span><span class="cs">Conclusion</span></p>
+  <p class="model">
+    <span class="ts">Your bones are not dry, dead sticks. They are living organs that are constantly changing.</span>
+    <span class="ev">For example, when a bone breaks, special cells rush to the injury and begin building new bone tissue within days.</span>
+    <span class="ex">This means a broken arm can actually heal itself, as long as a doctor sets it straight and a cast holds it still.</span>
+    <span class="ev">In addition, a baby is born with around 300 bones, but many of them slowly fuse together until an adult has only 206.</span>
+    <span class="ex">Something that can grow, repair itself, and change shape over time must be alive.</span>
+    <span class="cs">The next time you look at a skeleton, remember that the bones inside you are busy, growing, living parts of your body.</span>
+  </p>
+  <p><strong>Notice:</strong> Every sentence is about the same main idea (bones are alive). A sentence like "I like watching hockey" would not belong, even if it's true!</p>
+</div>
+
+<h2>Part 2: Label the Paragraph</h2>
+<div class="box">
+  <p>Here is a paragraph with its sentences numbered. Choose the job of each sentence. <strong>Watch out:</strong> one sentence is <em>off-topic</em> and doesn't belong!</p>
+  <div id="labelRows"></div>
+  <div class="btnrow"><button type="button" class="go" id="checkLabels">Check my labels</button></div>
+  <div class="fb" id="labelFb"></div>
+</div>
+
+<h2>Part 3: Grammar Clinic 🩺</h2>
+<div class="box tipbox">A doctor examines a patient carefully to find what's wrong. You're the doctor for these sentences! <strong>Section A:</strong> pick the correct sentence. <strong>Section B:</strong> type the sentence again with <em>all</em> mistakes fixed. We use <strong>Canadian spelling</strong> (colour, favourite, centre, neighbour).</div>
+<h3>Section A: Pick the correct sentence</h3>
+<div id="gmc"></div>
+<h3>Section B: Fix the sentence</h3>
+<p>Retype the whole sentence correctly, with capital letters and punctuation. Each one has <strong>at least two</strong> mistakes (except where noted).</p>
+<div id="gfix"></div>
+
+<h2>Part 4: Your Turn to Write</h2>
+<div class="box">
+  <h3 style="margin-top:0">Choose a prompt</h3>
+  <div class="prompts" id="prompts">
+    <label><input type="radio" name="prompt" value="Why is sleep so important for a growing body? Explain using at least two reasons or facts." checked> 😴 <strong>Why is sleep so important for a growing body?</strong> Explain using at least two reasons or facts.</label>
+    <label><input type="radio" name="prompt" value="Should every student in Grade 5 learn basic first aid? Give your opinion and support it with reasons."> 🩹 <strong>Should every student in Grade 5 learn basic first aid?</strong> Give your opinion and support it with reasons.</label>
+    <label><input type="radio" name="prompt" value="Which organ in the human body do you think is the most amazing, and why?"> 🫀 <strong>Which organ in the human body do you think is the most amazing, and why?</strong> (You can use facts from this week's reading!)</label>
+  </div>
+  <p><strong>Goal:</strong> one strong paragraph (or two) of <strong>120 to 200 words</strong>, with a topic sentence, at least two pieces of evidence, explanations, and a concluding sentence.</p>
+  <label for="essay"><strong>Write here, Ace:</strong></label>
+  <textarea id="essay" placeholder="Start with a strong topic sentence..."></textarea>
+  <div class="counter">
+    <span id="wc">0 words</span>
+    <span id="sc">0 sentences</span>
+    <div class="meter" aria-hidden="true"><div id="meterBar"></div></div>
+  </div>
+  <div class="fb" id="wcMsg">Aim for 120 to 200 words.</div>
+  <p style="font-size:.8em;color:#607d8b" id="saveNote">Your writing is saved automatically in this browser as you type.</p>
+
+  <h3>Self-check before you finish ✅</h3>
+  <div class="checklist" id="checklist">
+    <label><input type="checkbox"> My <strong>topic sentence</strong> clearly states the main idea.</label>
+    <label><input type="checkbox"> I included at least <strong>two pieces of evidence</strong> (facts, examples, or reasons).</label>
+    <label><input type="checkbox"> I <strong>explained</strong> why my evidence matters, using linking words (because, for example, this means...).</label>
+    <label><input type="checkbox"> My <strong>concluding sentence</strong> restates the main idea in new words.</label>
+    <label><input type="checkbox"> Every sentence stays <strong>on topic</strong>.</label>
+    <label><input type="checkbox"> Every sentence starts with a <strong>capital letter</strong> and ends with <strong>punctuation</strong>.</label>
+    <label><input type="checkbox"> I checked my <strong>spelling</strong> (Canadian spelling!) and read it out loud once.</label>
+    <label><input type="checkbox"> I used at least one <strong>new vocabulary word</strong> from this week (e.g. endurance, efficient, constant).</label>
+  </div>
+  <div class="btnrow">
+    <button type="button" class="blue" id="downloadBtn">⬇️ Download my writing (for Dad)</button>
+    <button type="button" class="purple" id="printBtn">🖨️ Print my writing</button>
+    <button type="button" class="grey" id="clearBtn">Start over</button>
+  </div>
+  <div class="fb" id="doneMsg"></div>
+</div>
+
+<div id="scoreBox"><span id="scoreText"></span><span>Keep going, Ace! 💪</span></div>
+</div>
+
+<div id="printArea"></div>
+
+<script>
+var NAME="Ace";
+var PRAISE=["Nice work, Ace!","Correct! Great editing eye!","Yes! Dr. Ace fixed it!","Excellent, Ace!","Perfect diagnosis! 🩺"];
+function pick(a){return a[Math.floor(Math.random()*a.length)];}
+
+/* ---------- Part 2: labels ---------- */
+var LABELS=["Topic sentence","Evidence","Explanation","Concluding sentence","Off-topic (doesn't belong)"];
+var LABEL_ITEMS=[
+ {s:"Washing your hands is one of the simplest ways to stop germs from spreading.", a:"Topic sentence"},
+ {s:"Studies have found that regular handwashing can greatly reduce the number of people who catch colds and stomach bugs.", a:"Evidence"},
+ {s:"This matters because germs from your hands easily get into your eyes, nose, and mouth.", a:"Explanation"},
+ {s:"My cousin has a new puppy named Maple.", a:"Off-topic (doesn't belong)"},
+ {s:"Doctors and nurses scrub their hands for a long time before every surgery.", a:"Evidence"},
+ {s:"In short, a little soap and water can protect you and everyone around you from getting sick.", a:"Concluding sentence"}
+];
+var labelScore=0, labelChecked=false;
+function buildLabels(){
+  var box=document.getElementById("labelRows");
+  LABEL_ITEMS.forEach(function(it,i){
+    var d=document.createElement("div"); d.className="row"; d.id="lr"+i;
+    var sel='<select id="ls'+i+'" aria-label="Job of sentence '+(i+1)+'"><option value="">- choose -</option>';
+    LABELS.forEach(function(l){sel+='<option>'+l+'</option>';});
+    sel+='</select>';
+    d.innerHTML='<strong>'+(i+1)+'.</strong> '+it.s+'<br>'+sel+' <span id="lm'+i+'"></span>';
+    box.appendChild(d);
+  });
+}
+function checkLabels(){
+  var sc=0;
+  LABEL_ITEMS.forEach(function(it,i){
+    var ok=document.getElementById("ls"+i).value===it.a; if(ok)sc++;
+    document.getElementById("lr"+i).className="row "+(ok?"right":"wrong");
+    document.getElementById("lm"+i).textContent=ok?"✅":"❌";
+  });
+  labelScore=sc; labelChecked=true;
+  var fb=document.getElementById("labelFb");
+  if(sc===LABEL_ITEMS.length){fb.className="fb good";fb.textContent="🌟 "+sc+" / "+LABEL_ITEMS.length+". "+pick(PRAISE)+" You spotted the off-topic sentence about the puppy!";}
+  else{fb.className="fb bad";fb.textContent=sc+" / "+LABEL_ITEMS.length+". Hint: evidence gives a fact or example; explanation tells WHY it matters. Fix the ❌ ones and check again.";}
+  updateScore();
+}
+
+/* ---------- Part 3A: grammar multiple choice ---------- */
+var GMC=[
+ {q:"Which sentence uses <em>its</em> and <em>it's</em> correctly?",
+  o:["Its amazing how the heart keeps it's rhythm.","It's amazing how the heart keeps its rhythm.","It's amazing how the heart keeps it's rhythm.","Its amazing how the heart keeps its rhythm."],
+  a:1,e:"<em>It's</em> = it is. <em>Its</em> (no apostrophe) shows ownership, like <em>his</em> or <em>hers</em>."},
+ {q:"Which sentence has correct <strong>subject-verb agreement</strong>?",
+  o:["Each of the students have a stethoscope.","Each of the students are having a stethoscope.","Each of the students has a stethoscope.","Each of the students have got a stethoscope."],
+  a:2,e:"The subject is <em>each</em> (singular), not <em>students</em>. So the verb is <em>has</em>."},
+ {q:"Which sentence uses <em>their</em>, <em>there</em>, and <em>they're</em> correctly?",
+  o:["They're going to their appointment over there.","Their going to they're appointment over there.","There going to their appointment over they're.","They're going to there appointment over their."],
+  a:0,e:"<em>They're</em> = they are; <em>their</em> = belongs to them; <em>there</em> = a place."},
+ {q:"Which sentence is punctuated correctly?",
+  o:["After the X-ray the doctor, explained the results.","After the X-ray, the doctor explained the results.","After, the X-ray the doctor explained the results.","After the X-ray the doctor explained, the results."],
+  a:1,e:"Put a comma after an introductory phrase like <em>After the X-ray</em>."},
+ {q:"Which one is a <strong>complete sentence</strong> (not a fragment)?",
+  o:["Because the surgeon was very careful.","Washing her hands for two full minutes.","The surgeon washed her hands carefully.","When the operation finally ended."],
+  a:2,e:"A complete sentence needs a subject and a verb and must express a complete thought. The others leave you asking \"...and then what?\""},
+ {q:"Which sentence uses <strong>Canadian spelling</strong> correctly?",
+  o:["The center of our neighborhood has a new health clinic.","The centre of our neighborhood has a new health clinic.","The center of our neighbourhood has a new health clinic.","The centre of our neighbourhood has a new health clinic."],
+  a:3,e:"Canadian spelling: <em>centre</em> and <em>neighbourhood</em> (like colour, favourite, and metre)."},
+ {q:"Which sentence uses <em>fewer</em> and <em>less</em> correctly?",
+  o:["The patient had less symptoms and fewer pain.","The patient had fewer symptoms and less pain.","The patient had less symptoms and less pain.","The patient had fewer symptoms and fewer pain."],
+  a:1,e:"Use <em>fewer</em> for things you can count (symptoms) and <em>less</em> for things you can't count (pain)."}
+];
+var gmcState=GMC.map(function(){return{answered:false,firstRight:false,done:false};});
+function buildGMC(){
+  var box=document.getElementById("gmc");
+  GMC.forEach(function(it,i){
+    var d=document.createElement("div"); d.className="box q"; d.id="g"+i;
+    var h='<div><strong>'+(i+1)+'.</strong> '+it.q+'</div>';
+    it.o.forEach(function(o,j){h+='<button type="button" class="opt" data-i="'+i+'" data-j="'+j+'">'+String.fromCharCode(65+j)+'. '+o+'</button>';});
+    h+='<div class="fb" id="gfb'+i+'"></div>';
+    d.innerHTML=h; box.appendChild(d);
+  });
+  box.addEventListener("click",function(e){
+    var b=e.target.closest?e.target.closest(".opt"):e.target; if(!b||!b.classList.contains("opt"))return;
+    var i=+b.getAttribute("data-i"), j=+b.getAttribute("data-j"), st=gmcState[i], it=GMC[i];
+    if(st.done)return;
+    var ok=j===it.a; if(!st.answered){st.answered=true;st.firstRight=ok;}
+    var fb=document.getElementById("gfb"+i);
+    if(ok){st.done=true;b.classList.add("sel-right");document.getElementById("g"+i).className="box q right";fb.className="fb good";fb.innerHTML="✅ "+pick(PRAISE)+' <span class="explain">'+it.e+'</span>';}
+    else{b.classList.add("sel-wrong");document.getElementById("g"+i).className="box q wrong";fb.className="fb bad";fb.textContent="❌ Not quite, Ace. Look closely and try again.";}
+    updateScore();
+  });
+}
+
+/* ---------- Part 3B: fix the sentence ---------- */
+var GFIX=[
+ {bad:"my friend and me went to maple grove hospital on saturday.",
+  ok:["My friend and I went to Maple Grove Hospital on Saturday."],
+  hint:"Capitalize the first word, names of places, and days of the week. Would you say \"me went\"?"},
+ {bad:"The doctor checked Aces heart lungs and ears.",
+  ok:["The doctor checked Ace's heart, lungs, and ears.","The doctor checked Ace's heart, lungs and ears."],
+  hint:"The heart belongs to Ace, so it needs an apostrophe. A list of three things needs commas."},
+ {bad:"Bones are alive they grow and repair themselves.",
+  ok:["Bones are alive. They grow and repair themselves.","Bones are alive; they grow and repair themselves.","Bones are alive, and they grow and repair themselves.","Bones are alive because they grow and repair themselves.","Bones are alive: they grow and repair themselves."],
+  hint:"This is a run-on sentence (two sentences joined without punctuation). Split it into two sentences, or join them correctly. (Only one mistake here!)"},
+ {bad:"The nurse's favorite color are blue.",
+  ok:["The nurse's favourite colour is blue."],
+  hint:"Use Canadian spelling (add a 'u' in two places!). Also, is the verb right for one colour?"}
+];
+var gfixState=GFIX.map(function(){return{tries:0,correct:false,firstRight:false};});
+function norm(s){return s.replace(/[\u2018\u2019\u02BC]/g,"'").replace(/[\u201C\u201D]/g,'"').replace(/\s+/g," ").trim();}
+function checkFixAnswer(i,val){var v=norm(val);return GFIX[i].ok.some(function(a){return norm(a)===v;});}
+function buildGFix(){
+  var box=document.getElementById("gfix");
+  GFIX.forEach(function(it,i){
+    var d=document.createElement("div"); d.className="box q"; d.id="f"+i;
+    d.innerHTML='<div><strong>'+(i+1)+'.</strong> Fix: <span class="bad-sent">'+it.bad+'</span></div>'+
+     '<input class="fix" type="text" id="fi'+i+'" autocomplete="off" spellcheck="false" aria-label="Corrected sentence '+(i+1)+'">'+
+     '<div class="btnrow"><button type="button" class="go" data-act="check" data-i="'+i+'">Check</button><button type="button" class="hint" data-act="hint" data-i="'+i+'">Hint 💡</button><button type="button" class="grey" data-act="show" data-i="'+i+'" style="display:none">Show answer</button></div>'+
+     '<div class="fb" id="ffb'+i+'"></div>';
+    box.appendChild(d);
+  });
+  box.addEventListener("click",function(e){
+    var b=e.target; if(b.tagName!=="BUTTON")return;
+    var i=+b.getAttribute("data-i"), act=b.getAttribute("data-act"), fb=document.getElementById("ffb"+i);
+    if(act==="hint"){fb.className="fb";fb.style.color="#5d4037";fb.textContent="💡 "+GFIX[i].hint;return;}
+    fb.style.color="";
+    if(act==="show"){fb.className="fb";fb.innerHTML='Answer: <em>'+GFIX[i].ok[0]+'</em>'+(GFIX[i].ok.length>1?' (other correct versions are accepted too)':'');return;}
+    fixCheck(i);
+  });
+  box.addEventListener("keydown",function(e){if(e.key==="Enter"&&e.target.classList.contains("fix"))fixCheck(+e.target.id.slice(2));});
+}
+function fixCheck(i){
+  var val=document.getElementById("fi"+i).value, fb=document.getElementById("ffb"+i), st=gfixState[i];
+  fb.style.color="";
+  if(!val.trim()){fb.className="fb bad";fb.textContent="Type the corrected sentence first, Ace!";return;}
+  st.tries++;
+  if(checkFixAnswer(i,val)){ if(st.tries===1)st.firstRight=true; st.correct=true; document.getElementById("f"+i).className="box q right"; fb.className="fb good"; fb.textContent="✅ "+pick(PRAISE); }
+  else { st.correct=false; document.getElementById("f"+i).className="box q wrong"; fb.className="fb bad"; fb.textContent="❌ Not quite. Check every capital letter, apostrophe, comma, and spelling. Try again!"; if(st.tries>=2)document.querySelector('#f'+i+' [data-act=show]').style.display="inline-block"; }
+  updateScore();
+}
+
+/* ---------- Score ---------- */
+function updateScore(){
+  var g=0; gmcState.forEach(function(s){if(s.firstRight)g++;});
+  var f=0; gfixState.forEach(function(s){if(s.correct)f++;});
+  var total=LABEL_ITEMS.length+GMC.length+GFIX.length, got=labelScore+g+f;
+  document.getElementById("scoreText").textContent="Score: "+got+" / "+total+"  (labels "+(labelChecked?labelScore:"-")+"/"+LABEL_ITEMS.length+" · grammar A "+g+"/"+GMC.length+" · grammar B "+f+"/"+GFIX.length+")";
+}
+
+/* ---------- Part 4: writing ---------- */
+var KEY="ace-writing-2026-09-28";
+function countWords(t){var m=t.trim().match(/[A-Za-zÀ-ÿ0-9]+(?:['’\-][A-Za-zÀ-ÿ0-9]+)*/g);return m?m.length:0;}
+function countSentences(t){var m=t.match(/[^.!?]*[A-Za-z0-9][^.!?]*[.!?]+/g);return m?m.length:0;}
+function currentPrompt(){var r=document.querySelector('input[name=prompt]:checked');return r?r.value:"";}
+function updateCount(){
+  var t=document.getElementById("essay").value, w=countWords(t), s=countSentences(t);
+  document.getElementById("wc").textContent=w+(w===1?" word":" words");
+  document.getElementById("sc").textContent=s+(s===1?" sentence":" sentences");
+  var bar=document.getElementById("meterBar"); bar.style.width=Math.min(100,w/200*100)+"%";
+  var msg=document.getElementById("wcMsg");
+  if(w<120){bar.style.background="#ffb300";msg.className="fb";msg.textContent=w===0?"Aim for 120 to 200 words.":"Keep going, Ace! "+(120-w)+" more words to reach the goal.";}
+  else if(w<=200){bar.style.background="#43a047";msg.className="fb good";msg.textContent="🎯 You're in the target zone! Nice work, Ace!";}
+  else{bar.style.background="#1e88e5";msg.className="fb";msg.textContent="Wow, that's a lot of writing! Make sure every sentence stays on topic. Could any be cut?";}
+  try{localStorage.setItem(KEY,JSON.stringify({text:t,prompt:currentPrompt(),checks:checkStates()}));}catch(e){document.getElementById("saveNote").textContent="(This browser can't auto-save here, so use the Download button before closing!)";}
+}
+function checkStates(){return Array.prototype.map.call(document.querySelectorAll("#checklist input"),function(c){return c.checked;});}
+function checklistText(){
+  return Array.prototype.map.call(document.querySelectorAll("#checklist label"),function(l){return (l.querySelector("input").checked?"[x] ":"[ ] ")+l.textContent.trim();}).join("\n");
+}
+function stamp(){var d=new Date();function p(n){return (n<10?"0":"")+n;}return d.getFullYear()+"-"+p(d.getMonth()+1)+"-"+p(d.getDate());}
+function buildReport(){
+  var t=document.getElementById("essay").value;
+  return "Writing Week 1: "+NAME+"\nDate: "+new Date().toLocaleString("en-CA")+"\nPrompt: "+currentPrompt()+
+    "\nWords: "+countWords(t)+"   Sentences: "+countSentences(t)+
+    "\n\n----- "+NAME+"'s writing -----\n\n"+t+"\n\n----- Self-check -----\n"+checklistText()+
+    "\n\n----- Parent feedback -----\n\n\n";
+}
+function download(){
+  var t=document.getElementById("essay").value;
+  if(!t.trim()){document.getElementById("doneMsg").className="fb bad";document.getElementById("doneMsg").textContent="Write something first, Ace!";return;}
+  var blob=new Blob([buildReport().replace(/\n/g,"\r\n")],{type:"text/plain;charset=utf-8"});
+  var a=document.createElement("a"); a.href=URL.createObjectURL(blob); a.download=NAME+"-writing-2026-09-28"+".txt";
+  document.body.appendChild(a); a.click();
+  setTimeout(function(){URL.revokeObjectURL(a.href);a.remove();},1000);
+  var dm=document.getElementById("doneMsg"); dm.className="fb good"; dm.textContent="📄 Saved! Look in your Downloads folder and show Dad. Great job finishing, Ace!";
+}
+function esc(s){return s.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");}
+function printIt(){
+  var t=document.getElementById("essay").value;
+  if(!t.trim()){document.getElementById("doneMsg").className="fb bad";document.getElementById("doneMsg").textContent="Write something first, Ace!";return;}
+  document.getElementById("printArea").innerHTML="<h1>Writing Week 1: "+NAME+"</h1><div class='meta'>"+esc(new Date().toLocaleString("en-CA"))+"<br><strong>Prompt:</strong> "+esc(currentPrompt())+"<br>Words: "+countWords(t)+" · Sentences: "+countSentences(t)+"</div><div class='text'>"+esc(t)+"</div><div class='lines'><strong>Self-check:</strong><br>"+esc(checklistText()).replace(/\n/g,"<br>")+"</div><div class='lines'><strong>Parent feedback:</strong><br><br><br><br></div>";
+  window.print();
+}
+function restore(){
+  try{var d=JSON.parse(localStorage.getItem(KEY)||"null"); if(!d)return;
+    document.getElementById("essay").value=d.text||"";
+    Array.prototype.forEach.call(document.querySelectorAll("input[name=prompt]"),function(r){r.checked=(r.value===d.prompt);});
+    if(!document.querySelector("input[name=prompt]:checked"))document.querySelector("input[name=prompt]").checked=true;
+    var cs=document.querySelectorAll("#checklist input"); (d.checks||[]).forEach(function(v,i){if(cs[i])cs[i].checked=v;});
+  }catch(e){}
+}
+buildLabels(); buildGMC(); buildGFix(); restore(); updateCount(); updateScore();
+document.getElementById("checkLabels").addEventListener("click",checkLabels);
+document.getElementById("essay").addEventListener("input",updateCount);
+document.getElementById("checklist").addEventListener("change",function(){updateCount(); if(checkStates().every(Boolean)){var dm=document.getElementById("doneMsg");dm.className="fb good";dm.textContent="✅ All boxes checked! Now download or print it for Dad. Awesome work, Ace!";}});
+document.getElementById("prompts").addEventListener("change",updateCount);
+document.getElementById("downloadBtn").addEventListener("click",download);
+document.getElementById("printBtn").addEventListener("click",printIt);
+document.getElementById("clearBtn").addEventListener("click",function(){ if(confirm("Erase your writing and start over?")){document.getElementById("essay").value="";Array.prototype.forEach.call(document.querySelectorAll("#checklist input"),function(c){c.checked=false;});document.getElementById("doneMsg").textContent="";updateCount();} });
+</script>
+</body>
+</html>
