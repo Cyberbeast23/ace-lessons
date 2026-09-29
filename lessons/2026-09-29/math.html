@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Math (Sept. 29): Skeleton Math Lab</title>
+<style>
+  body{font-family:"Segoe UI",Verdana,Arial,sans-serif;font-size:20px;line-height:1.6;margin:0;background:#eef5fb;color:#1d2a3a}
+  .wrap{max-width:880px;margin:0 auto;padding:20px 18px 80px}
+  a.home{font-size:.9em;color:#1565c0}
+  h1{color:#0d47a1;font-size:2em;margin:10px 0}
+  h2{color:#1565c0;margin-top:36px;border-bottom:3px solid #bbdefb;padding-bottom:4px}
+  .box{background:#fff;border-radius:16px;padding:18px 22px;margin:16px 0;box-shadow:0 3px 10px rgba(0,0,0,.07)}
+  .example{border-left:8px solid #42a5f5}
+  .example h3{margin:0 0 6px;color:#1565c0}
+  .step{margin:4px 0 4px 10px}
+  code,.mono{font-family:Consolas,"Courier New",monospace;background:#e3f2fd;padding:1px 6px;border-radius:5px}
+  .q{border-left:8px solid #90a4ae}
+  .q.right{border-left-color:#43a047;background:#f1f8e9}
+  .q.wrong{border-left-color:#e53935;background:#fff5f5}
+  .qnum{font-weight:bold;color:#0d47a1}
+  .row{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:10px}
+  input[type=text]{font-size:1.05em;padding:8px 12px;border:2px solid #90caf9;border-radius:10px;width:190px}
+  input[type=text]:focus{outline:none;border-color:#1e88e5;box-shadow:0 0 0 3px #bbdefb}
+  button{font-size:.95em;padding:8px 16px;border:none;border-radius:10px;cursor:pointer;font-weight:bold}
+  .check{background:#1e88e5;color:#fff} .check:hover{background:#1565c0}
+  .hint{background:#ffe082;color:#5d4037} .hint:hover{background:#ffd54f}
+  .sol{background:#ce93d8;color:#311b92}
+  .unit{color:#546e7a}
+  .fb{margin-top:8px;font-weight:bold;min-height:1em}
+  .fb.good{color:#2e7d32} .fb.bad{color:#c62828}
+  .hints{margin-top:8px;color:#5d4037;background:#fff8e1;border-radius:10px;padding:0 12px}
+  .hints p{margin:6px 0;padding:6px 0}
+  .solution{margin-top:8px;background:#f3e5f5;border-radius:10px;padding:8px 12px;display:none}
+  #scoreBox{position:sticky;bottom:0;background:#0d47a1;color:#fff;border-radius:16px 16px 0 0;padding:12px 20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-top:30px}
+  #scoreBox button{background:#ffca28;color:#3e2723}
+  #final{display:none;font-size:1.15em;text-align:center;border:4px solid #43a047}
+  .tipbox{background:#fff8e1;border-left:8px solid #ffb300}
+  table.t{border-collapse:collapse;margin:8px 0} table.t td,table.t th{border:1px solid #b0bec5;padding:4px 12px;text-align:center}
+</style>
+</head>
+<body>
+<div class="wrap">
+<a class="home" href="../../index.html">&larr; Back to all lessons</a>
+<h1>🧮 Math Week 2: Skeleton Math Lab</h1>
+<p>Yesterday you trained on heart rates and doses. Today, Ace, you'll think like an orthopaedic doctor: counting bones, tracking fracture healing, reading X-ray wait times, and using <strong>fractions, ratios, percentages, BEDMAS, mean/range, and area</strong> to solve skeleton problems.</p>
+
+<h2>Part 1: Learn the Moves</h2>
+
+<div class="box tipbox">
+  <strong>The 4-Step Problem Solver (still your doctor's check-up):</strong>
+  <ol>
+    <li><strong>Read</strong>: What is the question actually asking? Underline the numbers and units.</li>
+    <li><strong>Plan</strong>: Which operations do I need, and in what order?</li>
+    <li><strong>Solve</strong>: Do one step at a time and write each step down.</li>
+    <li><strong>Check</strong>: Is my answer reasonable? Did I answer the question that was asked?</li>
+  </ol>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 1: Multi-step with the skeleton</h3>
+  <p>An adult has 206 bones. Each hand has 27 bones. How many bones are <strong>not</strong> in the two hands?</p>
+  <p class="step">Step 1: Two hands → 2 × 27 = <strong>54</strong>.</p>
+  <p class="step">Step 2: 206 − 54 = <strong>152 bones</strong>.</p>
+  <p class="step">Check: 152 + 54 = 206 ✔</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 2: Fractions of healing time</h3>
+  <p>A wrist fracture needs 8 weeks in a cast. After 3/8 of the healing time, how many weeks are left?</p>
+  <p class="step">Step 1: Time used = 3/8 × 8 = <strong>3 weeks</strong>.</p>
+  <p class="step">Step 2: Time left = 8 − 3 = <strong>5 weeks</strong> (or 5/8 of 8).</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 3: Percentages and calcium</h3>
+  <p>Ace needs about 1000 mg of calcium a day. He has already had 35%. How many milligrams does he still need?</p>
+  <p class="step">Step 1: 35% of 1000 = 0.35 × 1000 = <strong>350 mg</strong> already eaten.</p>
+  <p class="step">Step 2: 1000 − 350 = <strong>650 mg</strong> still needed. (Or find 65% of 1000.)</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 4: Mean and range</h3>
+  <p>Five patients waited for an X-ray: 10, 22, 14, 18, and 16 minutes. Find the <strong>mean</strong> and the <strong>range</strong>.</p>
+  <p class="step">Mean = (10 + 22 + 14 + 18 + 16) ÷ 5 = 80 ÷ 5 = <strong>16 minutes</strong>.</p>
+  <p class="step">Range = largest − smallest = 22 − 10 = <strong>12 minutes</strong>.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 5: Area, perimeter, and BEDMAS</h3>
+  <p>An X-ray film is a rectangle 20 cm by 25 cm.</p>
+  <p class="step">Area = length × width = 20 × 25 = <strong>500 cm²</strong>.</p>
+  <p class="step">Perimeter = 2 × (20 + 25) = 2 × 45 = <strong>90 cm</strong>.</p>
+  <p><strong>BEDMAS reminder:</strong> Brackets, Exponents, Division/Multiplication (left→right), Addition/Subtraction (left→right).</p>
+  <p class="step"><span class="mono">(30 − 6) ÷ 4 × 2² + 1</span> → 24 ÷ 4 = 6; 2² = 4; 6 × 4 = 24; 24 + 1 = <strong>25</strong>.</p>
+</div>
+
+<h2>Part 2: The Challenge (20 problems)</h2>
+<p>Type your answer and press <strong>Check</strong> (or Enter). Fractions like <span class="mono">3/4</span>, mixed numbers like <span class="mono">1 3/4</span>, or decimals like <span class="mono">1.75</span> are fine. Don't type the units. Stuck? Press <strong>Hint</strong>. After 2 tries, you can see a full solution.</p>
+
+<div id="questions"></div>
+
+<div class="box" id="final"></div>
+
+<div id="scoreBox">
+  <span id="scoreText">Score: 0 / 20 correct</span>
+  <button id="finishBtn" type="button">I'm done! Show my final score</button>
+</div>
+</div>
+
+<script>
+var NAME = "Ace";
+var QUESTIONS = [
+ {t:"An adult human skeleton has <strong>206 bones</strong>. The skull has 22 of them. How many bones are <strong>not</strong> in the skull?", a:"184", u:"bones",
+  h:["Subtract the skull bones from the total.","206 − 22 = ?"],
+  s:"206 − 22 = 184 bones."},
+ {t:"A baby is born with about 270 bones. By adulthood, many have fused together, leaving 206. How many bones fused (disappeared as separate bones)?", a:"64", u:"bones",
+  h:["Find the difference between baby bones and adult bones.","270 − 206 = ?"],
+  s:"270 − 206 = 64 bones fused together as Ace grew. Cool, right?"},
+ {t:"Each foot has 26 bones. How many bones are in <strong>both feet and both hands</strong> if each hand has 27 bones?", a:"106", u:"bones",
+  h:["Hands: 2 × 27. Feet: 2 × 26.","Add the two totals."],
+  s:"Hands: 54. Feet: 52. Together: 54 + 52 = 106 bones."},
+ {t:"The femur (thigh bone) is roughly <strong>1/4</strong> of a person's height. Ace is 148 cm tall. About how long is one of his femurs?", a:"37", u:"cm",
+  h:["Find one-quarter of 148.","148 ÷ 4 = ?"],
+  s:"148 ÷ 4 = 37 cm."},
+ {t:"Growing kids need about 1000 mg of calcium a day for strong bones. Ace has already eaten 3/5 of that. How many milligrams does he still need?", a:"400", u:"mg",
+  h:["First find how much he already ate: 3/5 of 1000.","3/5 × 1000 = 600. Subtract from 1000."],
+  s:"3/5 × 1000 = 600 mg eaten. Still needed: 1000 − 600 = 400 mg."},
+ {t:"A broken wrist needs 8 weeks in a cast. After 5/8 of the healing time has passed, how many weeks are left?", a:"3", u:"weeks",
+  h:["Time used = 5/8 × 8.","Then subtract from 8."],
+  s:"5/8 × 8 = 5 weeks used. 8 − 5 = 3 weeks left."},
+ {t:"A pretend calcium syrup is given at <strong>4 mL for every 8 kg</strong> of body mass. Ace has a mass of 40 kg. How many mL should he get? (Pretend only!)", a:"20", u:"mL",
+  h:["How many groups of 8 kg are in 40 kg?","40 ÷ 8 = 5 groups. Each group needs 4 mL."],
+  s:"40 ÷ 8 = 5 groups. 5 × 4 = 20 mL. (Or 4/8 = 0.5 mL per kg; 0.5 × 40 = 20.)"},
+ {t:"Five patients waited for a bone X-ray: 12, 25, 18, 9, and 16 minutes. What is the <strong>mean</strong> (average) wait?", a:"16", u:"minutes",
+  h:["Add all five waits, then divide by 5.","12 + 25 + 18 + 9 + 16 = 80."],
+  s:"Sum = 80. 80 ÷ 5 = 16 minutes."},
+ {t:"Using the same five wait times (12, 25, 18, 9, 16), what is the <strong>range</strong>?", a:"16", u:"minutes",
+  h:["Range = largest − smallest.","Largest is 25, smallest is 9."],
+  s:"25 − 9 = 16 minutes."},
+ {t:"About 50% of an adult's bones are in the hands and feet. If an adult has 206 bones, about how many are in the hands and feet? (Round to the nearest whole number.)", a:"103", u:"bones",
+  h:["50% means half.","206 ÷ 2 = ?"],
+  s:"50% of 206 = 103 bones. (Real total for hands + feet is 106 — close!)"},
+ {t:"A clinic sees 18 bone-injury patients on Monday. Tuesday it sees <strong>1.5 times</strong> as many. Wednesday it sees 7 fewer than Tuesday. How many patients did it see over the <strong>three days</strong> altogether?", a:"65", u:"patients",
+  h:["Tuesday = 18 × 1.5. Wednesday = Tuesday − 7.","Then add Mon + Tue + Wed."],
+  s:"Tue: 18 × 1.5 = 27. Wed: 27 − 7 = 20. Total: 18 + 27 + 20 = 65 patients."},
+ {t:"Solve for <em>n</em>: <span class='mono'>5n − 14 = 61</span>", a:"15", u:"",
+  h:["Undo the − 14 first: add 14 to both sides.","5n = 75. Now divide by 5."],
+  s:"5n = 61 + 14 = 75, so n = 75 ÷ 5 = 15. Check: 5 × 15 − 14 = 61 ✔"},
+ {t:"A growth plate lets a bone grow about 0.4 cm per month. How many centimetres will it grow in <strong>2.5 years</strong>?", a:"12", u:"cm",
+  h:["First change 2.5 years into months.","2.5 × 12 = 30 months. Then multiply by 0.4."],
+  s:"2.5 years = 30 months. 30 × 0.4 = 12 cm."},
+ {t:"Use BEDMAS: <span class='mono'>(48 − 12) ÷ 6 × 3² + 4</span>", a:"58", u:"",
+  h:["Brackets first: 48 − 12 = 36. Exponent: 3² = 9.","36 ÷ 6 = 6; 6 × 9 = 54; 54 + 4 = ?"],
+  s:"(48 − 12) = 36; 3² = 9; 36 ÷ 6 = 6; 6 × 9 = 54; 54 + 4 = 58."},
+ {t:"An X-ray film is a rectangle 28 cm long and 22 cm wide. What is its <strong>area</strong>?", a:"616", u:"cm²",
+  h:["Area of a rectangle = length × width.","28 × 22. Try 28 × 20 + 28 × 2."],
+  s:"28 × 22 = 28 × 20 + 28 × 2 = 560 + 56 = 616 cm²."},
+ {t:"Using the same 28 cm by 22 cm film, what is its <strong>perimeter</strong>?", a:"100", u:"cm",
+  h:["Perimeter = 2 × (length + width).","28 + 22 = 50. Then multiply by 2."],
+  s:"2 × (28 + 22) = 2 × 50 = 100 cm."},
+ {t:"Out of 240 clinic visits last month, 3/8 were for bone or joint problems. How many visits were for bone or joint problems?", a:"90", u:"visits",
+  h:["Find 1/8 of 240 first.","240 ÷ 8 = 30. Then multiply by 3."],
+  s:"240 ÷ 8 = 30; 30 × 3 = 90 visits."},
+ {t:"A pattern of vertebra counts by section starts: 7, 12, 5, 5, … (cervical, thoracic, lumbar, sacral). The rule for term <em>n</em> is not simple, but look at this different pattern: <span class='mono'>4, 9, 19, 39, ___</span>. What is the next number?", a:"79", u:"",
+  h:["Each term is roughly double the one before, then something is added.","Rule: multiply by 2, then add 1."],
+  s:"Rule: × 2 then + 1. 39 × 2 + 1 = 79."},
+ {t:"A pattern follows the rule: term number <em>n</em> = <span class='mono'>4n − 3</span>. What is the <strong>20th</strong> term?", a:"77", u:"",
+  h:["Replace n with 20.","4 × 20 = 80. Then subtract 3."],
+  s:"4 × 20 − 3 = 80 − 3 = 77."},
+ {t:"After a fall, Ace's cast weight was 80 g less than <strong>twice</strong> the mass of a small brace. The cast weighed 420 g. What is the mass of the brace? (Hint: 2b − 80 = 420)", a:"250", u:"g",
+  h:["Undo the − 80 first: 420 + 80 = ?","2b = 500. Divide by 2."],
+  s:"2b − 80 = 420 → 2b = 500 → b = 250 g. Check: 2 × 250 − 80 = 420 ✔"}
+];
+
+var PRAISE = ["Nice work, Ace!","Correct! Your brain is on fire! 🔥","Yes! Dr. Ace strikes again!","Excellent, Ace. That was a tough one!","Right on! 🎯","Brilliant thinking, Ace!","Spot on, like a real doctor!"];
+var ENCOURAGE = ["Not quite. Check your steps and try again!","Close call. Try again, Ace! Maybe use a hint?","Hmm, not yet. Re-read the question carefully.","Keep going, Ace. Mistakes help your brain grow!"];
+
+function parseAnswer(str){
+  if(str===undefined||str===null) return NaN;
+  var s=String(str).trim().toLowerCase();
+  s=s.replace(/[\u2212\u2013]/g,"-");
+  s=s.replace(/(\d),(?=\d{3}(\D|$))/g,"$1");
+  s=s.replace(/[^0-9.\/\- ]/g," ").replace(/\s+/g," ").trim();
+  s=s.replace(/\s*\/\s*/g,"/");
+  var m;
+  if((m=s.match(/^(-?\d+) (\d+)\/(\d+)$/))){ var w=parseFloat(m[1]),n=parseFloat(m[2]),d=parseFloat(m[3]); if(d===0)return NaN; return w<0? w-n/d : w+n/d; }
+  if((m=s.match(/^(-?\d+(?:\.\d+)?)\/(\d+(?:\.\d+)?)$/))){ var d2=parseFloat(m[2]); if(d2===0)return NaN; return parseFloat(m[1])/d2; }
+  s=s.replace(/ /g,"");
+  if(/^-?(\d+\.?\d*|\.\d+)$/.test(s)) return parseFloat(s);
+  return NaN;
+}
+function isCorrect(input,key){
+  var a=parseAnswer(input), k=parseAnswer(key);
+  if(isNaN(a)) return false;
+  var isInt=Math.abs(k-Math.round(k))<1e-12;
+  var tol=isInt?1e-9:0.005;
+  return Math.abs(a-k)<=tol;
+}
+
+var state=[];
+function render(){
+  var box=document.getElementById("questions");
+  QUESTIONS.forEach(function(q,i){
+    state.push({correct:false,tries:0,hints:0});
+    var d=document.createElement("div");
+    d.className="box q"; d.id="q"+i;
+    d.innerHTML='<div><span class="qnum">'+(i+1)+'.</span> '+q.t+'</div>'+
+      '<div class="row"><input type="text" id="in'+i+'" aria-label="Answer to question '+(i+1)+'" autocomplete="off"> <span class="unit">'+q.u+'</span>'+
+      '<button type="button" class="check" data-i="'+i+'">Check</button>'+
+      '<button type="button" class="hint" data-i="'+i+'">Hint 💡</button>'+
+      '<button type="button" class="sol" data-i="'+i+'" style="display:none">Show solution</button></div>'+
+      '<div class="fb" id="fb'+i+'"></div><div class="hints" id="hints'+i+'"></div>'+
+      '<div class="solution" id="sol'+i+'"><strong>Solution:</strong> '+q.s+'</div>';
+    box.appendChild(d);
+  });
+  box.addEventListener("click",function(e){
+    var b=e.target; if(b.tagName!=="BUTTON")return;
+    var i=+b.getAttribute("data-i");
+    if(b.className==="check") check(i);
+    else if(b.className==="hint") hint(i);
+    else if(b.className==="sol") document.getElementById("sol"+i).style.display="block";
+  });
+  box.addEventListener("keydown",function(e){
+    if(e.key==="Enter"&&e.target.tagName==="INPUT"){ check(+e.target.id.slice(2)); }
+  });
+}
+function pick(arr){return arr[Math.floor(Math.random()*arr.length)];}
+function check(i){
+  var val=document.getElementById("in"+i).value;
+  var fb=document.getElementById("fb"+i), card=document.getElementById("q"+i);
+  if(val.trim()===""){fb.className="fb bad";fb.textContent="Type an answer first, Ace!";return;}
+  if(isNaN(parseAnswer(val))){fb.className="fb bad";fb.textContent="I can't read that as a number. Try something like 42, 3.5, 3/4 or 1 3/4.";return;}
+  state[i].tries++;
+  if(isCorrect(val,QUESTIONS[i].a)){
+    state[i].correct=true; card.className="box q right"; fb.className="fb good";
+    fb.textContent="✅ "+pick(PRAISE)+(state[i].tries===1?" (first try!)":"");
+  } else {
+    state[i].correct=false; card.className="box q wrong"; fb.className="fb bad";
+    fb.textContent="❌ "+pick(ENCOURAGE);
+    if(state[i].tries>=2) card.querySelector(".sol").style.display="inline-block";
+  }
+  updateScore();
+}
+function hint(i){
+  var q=QUESTIONS[i], s=state[i], hb=document.getElementById("hints"+i);
+  if(s.hints<q.h.length){
+    var p=document.createElement("p"); p.textContent="💡 Hint "+(s.hints+1)+": "+q.h[s.hints]; hb.appendChild(p); s.hints++;
+  }
+  if(s.hints>=q.h.length) document.querySelector("#q"+i+" .hint").disabled=true;
+  updateScore();
+}
+function counts(){
+  var c=0,first=0,h=0;
+  state.forEach(function(s){ if(s.correct){c++; if(s.tries===1)first++;} h+=s.hints; });
+  return {correct:c,first:first,hints:h};
+}
+function updateScore(){
+  var k=counts();
+  document.getElementById("scoreText").textContent="Score: "+k.correct+" / "+QUESTIONS.length+" correct · hints used: "+k.hints;
+}
+function finish(){
+  var k=counts(), n=QUESTIONS.length, pct=Math.round(100*k.correct/n);
+  var msg;
+  if(pct===100) msg="🏆 PERFECT SCORE! Incredible work, Dr. Ace. Your skeleton math is rock-solid!";
+  else if(pct>=85) msg="🌟 Outstanding, Ace! That's a Grade 6-7 level performance!";
+  else if(pct>=65) msg="💪 Great effort, Ace! Review the ones you missed and try them again.";
+  else if(pct>=40) msg="👍 Good start, Ace! These problems are tough. Use the hints and solutions to learn the tricks, then try again.";
+  else msg="🌱 These are challenge problems, well above grade level. Every doctor started as a beginner. Go through the worked examples and try again, Ace!";
+  var f=document.getElementById("final");
+  f.style.display="block";
+  f.innerHTML="<h2 style='border:none;margin-top:0'>Final Score: "+k.correct+" / "+n+" ("+pct+"%)</h2>"+
+    "<p>Correct on the first try: "+k.first+" · Hints used: "+k.hints+"</p><p>"+msg+"</p>"+
+    "<p style='font-size:.85em;color:#546e7a'>Finished on "+new Date().toLocaleString("en-CA")+"</p>";
+  f.scrollIntoView({behavior:"smooth"});
+}
+render();
+updateScore();
+document.getElementById("finishBtn").addEventListener("click",finish);
+</script>
+</body>
+</html>

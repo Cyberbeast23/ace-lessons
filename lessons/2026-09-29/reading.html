@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reading (Sept. 29): Your Living Scaffold</title>
+<style>
+  body{font-family:"Segoe UI",Verdana,Arial,sans-serif;font-size:20px;line-height:1.65;margin:0;background:#fdf1f1;color:#2b1d1d}
+  .wrap{max-width:880px;margin:0 auto;padding:20px 18px 80px}
+  a.home{font-size:.9em;color:#c62828}
+  h1{color:#b71c1c;font-size:2em;margin:10px 0}
+  h2{color:#c62828;margin-top:36px;border-bottom:3px solid #ffcdd2;padding-bottom:4px}
+  .box{background:#fff;border-radius:16px;padding:18px 22px;margin:16px 0;box-shadow:0 3px 10px rgba(0,0,0,.07)}
+  .passage{font-family:Georgia,"Times New Roman",serif;font-size:1.1em;line-height:1.8}
+  .passage h3{text-align:center;font-family:"Segoe UI",Verdana,sans-serif;color:#b71c1c;font-size:1.4em;margin:4px 0 14px}
+  .passage p{text-indent:1.5em;margin:0 0 14px}
+  mark.v{background:#fff59d;padding:0 3px;border-radius:4px;font-weight:bold}
+  .tipbox{background:#fff8e1;border-left:8px solid #ffb300}
+  .q{border-left:8px solid #bcaaa4}
+  .q.right{border-left-color:#43a047;background:#f1f8e9}
+  .q.wrong{border-left-color:#e53935;background:#fff5f5}
+  .tag{display:inline-block;font-size:.7em;background:#7e57c2;color:#fff;border-radius:8px;padding:1px 8px;margin-left:6px;vertical-align:middle}
+  .opt{display:block;width:100%;text-align:left;font-size:.95em;background:#fafafa;border:2px solid #e0e0e0;border-radius:10px;padding:8px 14px;margin:8px 0;cursor:pointer;font-family:inherit}
+  .opt:hover{border-color:#ef9a9a;background:#fff}
+  .opt.sel-right{background:#c8e6c9;border-color:#43a047}
+  .opt.sel-wrong{background:#ffcdd2;border-color:#e53935}
+  .fb{margin-top:6px;font-weight:bold}
+  .fb.good{color:#2e7d32} .fb.bad{color:#c62828}
+  .explain{color:#4e342e;font-weight:normal}
+  select{font-size:.95em;padding:6px 8px;border-radius:8px;border:2px solid #ef9a9a;max-width:100%;font-family:inherit}
+  .vrow{display:flex;flex-wrap:wrap;align-items:center;gap:10px;padding:8px 6px;border-bottom:1px dashed #eee}
+  .vrow .w{font-weight:bold;min-width:140px}
+  .vrow.right{background:#f1f8e9} .vrow.wrong{background:#fff5f5}
+  .mark{font-size:1.2em;min-width:30px}
+  button.main{font-size:1em;padding:10px 20px;border:none;border-radius:10px;cursor:pointer;font-weight:bold;background:#e53935;color:#fff;margin-top:10px}
+  button.main:hover{background:#c62828}
+  button.sec{font-size:.95em;padding:8px 16px;border:none;border-radius:10px;cursor:pointer;font-weight:bold;background:#ffe082;color:#5d4037}
+  textarea{width:100%;box-sizing:border-box;font-size:1em;font-family:inherit;padding:10px;border:2px solid #ef9a9a;border-radius:10px;min-height:120px}
+  #model{display:none;background:#f3e5f5;border-radius:10px;padding:10px 14px;margin-top:10px}
+  #scoreBox{position:sticky;bottom:0;background:#b71c1c;color:#fff;border-radius:16px 16px 0 0;padding:12px 20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-top:30px}
+  #scoreBox button{font-size:.95em;padding:8px 16px;border:none;border-radius:10px;cursor:pointer;font-weight:bold;background:#ffca28;color:#3e2723}
+  #final{display:none;text-align:center;border:4px solid #43a047;font-size:1.1em}
+</style>
+</head>
+<body>
+<div class="wrap">
+<a class="home" href="../../index.html">&larr; Back to all lessons</a>
+<h1>📖 Reading Week 2: Your Living Scaffold</h1>
+
+<div class="box tipbox">
+  <strong>Before you read, Ace:</strong> Good readers are like doctors doing a check-up. They look closely and ask questions.
+  <ul>
+    <li><strong>Preview:</strong> Read the title. What do you think the passage is about?</li>
+    <li><strong>Pause:</strong> After each paragraph, say its main idea in your head in one sentence.</li>
+    <li><strong>Words in <mark class="v">yellow</mark></strong> are vocabulary words. Use the sentence around them (the <em>context</em>) to figure out what they mean.</li>
+  </ul>
+</div>
+
+<div class="box passage" id="passage">
+<h3>Your Living Scaffold</h3>
+<p>If you have ever visited a museum and stared at a dinosaur skeleton, you might have thought of bones as dry, silent sticks. Your own skeleton is nothing like that. Right now, while you sit and read, more than two hundred bones are quietly working as a living <mark class="v">scaffold</mark>. They hold you upright, protect soft organs, and even make the blood cells that keep you alive. Bones are not leftover props from childhood. They are busy organs that grow, repair, and change shape throughout your life.</p>
+<p>An adult human usually has 206 bones, but a newborn baby has closer to 270. Why the difference? Many of a baby's bones are still made of a tough, flexible tissue called <mark class="v">cartilage</mark>. Over the years, <mark class="v">minerals</mark> such as calcium harden that cartilage into true bone, and some separate pieces slowly fuse together. The skull is a perfect example. A baby's skull has soft spots so the head can grow; later those plates knit into one strong shell that guards the brain.</p>
+<p>Bones have several jobs at once. The skull, ribs, and backbone form a kind of armour around the brain, heart, and spinal cord. Long bones in the arms and legs act like levers, so muscles can swing, jump, and lift. Inside many bones is a soft, spongy centre called marrow. Red marrow is a factory that produces billions of new blood cells every day. Without it, your body could not replace worn-out cells or fight infection.</p>
+<p>When a bone breaks, the body launches an <mark class="v">impressive</mark> repair mission. Special cells called osteoblasts rush to the crack and begin laying down new bone tissue, almost like builders pouring fresh concrete. A doctor may set the bone straight and wrap it in a cast so the pieces stay <mark class="v">aligned</mark> while they knit. Healing can take weeks or months, depending on the person's age, the bone involved, and how well the break is cared for. Children often heal faster than adults because their bones are still growing.</p>
+<p>Doctors study bones with tools that would have seemed like magic a century ago. An X-ray sends a small amount of radiation through the body; <mark class="v">dense</mark> bone blocks more of it than soft tissue, so the image shows a clear outline of the skeleton. For trickier injuries, a CT scan or MRI can reveal tiny cracks or damage to the soft cartilage between joints. Learning to read these images is one of the skills that future doctors, including you someday, Ace, practise for years.</p>
+<p>Bones stay strong only if they get what they need. Calcium and vitamin D are the raw materials for hard bone tissue. Weight-bearing exercise, such as walking, running, or jumping, signals bones to become denser and tougher. Poor <mark class="v">posture</mark>, on the other hand, can strain the spine over time. Sitting tall and carrying a backpack on both shoulders are small habits that protect the scaffold you will need for decades.</p>
+<p>Joints are the hinges where two bones meet. Some, like the knee, swing mostly in one direction. Others, like the shoulder, allow a wide range of motion. Tough bands of tissue called ligaments hold the bones of a joint together, while cartilage cushions the ends so they do not grind. When cartilage wears away, people feel the stiffness and pain of arthritis. Scientists are busy looking for ways to repair damaged cartilage, a puzzle that still has no perfect answer.</p>
+<p>The next time you see a Halloween skeleton decoration, remember how different the real thing is. Your bones are <mark class="v">dynamic</mark>: they rebuild themselves, store minerals, and partner with muscles every time you move. Treat them well with food, sleep, and exercise, and they will quietly support every adventure you take. A strong scaffold makes a strong life.</p>
+<p style="text-indent:0;font-size:.8em;color:#795548;text-align:right">About 620 words</p>
+</div>
+
+<h2>Part 1: Comprehension</h2>
+<p>Click the best answer. You'll find out right away if you're correct. Only your <strong>first click</strong> counts toward your score, but you can keep trying to find the right answer.</p>
+<div id="mc"></div>
+
+<h2>Part 2: Think Deeper (not scored)</h2>
+<div class="box">
+  <p><strong>In 2 to 4 sentences, explain how a broken bone heals and why a cast helps. Use at least two ideas from the passage (for example: <em>osteoblasts, aligned, cartilage, healing time</em>).</strong></p>
+  <textarea id="openAns" placeholder="Write your answer here, Ace..."></textarea>
+  <p><button type="button" class="sec" id="showModel">Compare with a model answer</button></p>
+  <div id="model"><strong>Model answer:</strong> When a bone breaks, special cells called osteoblasts rush to the crack and begin building new bone tissue. A doctor sets the bone straight and uses a cast to keep the pieces aligned while they knit together. Healing can take weeks or months, and children often heal faster than adults because their bones are still growing.<br><em>Did your answer mention repair cells (or osteoblasts), keeping the bone straight/aligned, and time to heal? If so, great work!</em></div>
+</div>
+
+<h2>Part 3: Vocabulary</h2>
+<div class="box">
+  <h3 style="margin-top:0">A. Match each word to its meaning</h3>
+  <p>Choose the meaning that fits how the word is used in the passage.</p>
+  <div id="vmatch"></div>
+  <h3>B. Fill in the blank</h3>
+  <p>Choose the vocabulary word that best completes each sentence.</p>
+  <div id="vfill"></div>
+  <button type="button" class="main" id="checkVocab">Check my vocabulary</button>
+  <div class="fb" id="vocabFb"></div>
+</div>
+
+<div class="box" id="final"></div>
+<div id="scoreBox">
+  <span id="scoreText"></span>
+  <button type="button" id="finishBtn">I'm done! Show my final score</button>
+</div>
+</div>
+
+<script>
+var MC = [
+ {q:"Which sentence best states the <strong>main idea</strong> of the whole passage?",
+  o:["Babies have more bones than adults.",
+     "Bones are living organs that support, protect, repair, and change, and they need good care to stay strong.",
+     "X-rays use radiation to take pictures of bones.",
+     "Osteoblasts are cells that build new bone tissue."],
+  a:1, e:"The other choices are true details, but only this one sums up the whole passage."},
+ {q:"According to the passage, why does a baby have more bones than an adult?",
+  o:["Babies grow extra bones after birth.","Many baby bones are cartilage that later hardens and fuses into fewer bones.","Adults lose bones when they exercise.","Doctors remove unused bones during childhood."],
+  a:1, e:"The passage says baby bones are often cartilage that hardens, and separate pieces fuse, so the count drops to about 206."},
+ {q:"What is one job of <strong>red marrow</strong>?",
+  o:["It cushions joints like cartilage.","It produces new blood cells.","It holds two bones together like a ligament.","It takes X-ray pictures."],
+  a:1, e:"The passage calls red marrow \"a factory that produces billions of new blood cells every day.\""},
+ {q:"What do <strong>osteoblasts</strong> do when a bone breaks?",
+  o:["They take X-rays of the crack.","They remove calcium from the diet.","They lay down new bone tissue at the injury.","They turn into ligaments."],
+  a:2, e:"Osteoblasts \"rush to the crack and begin laying down new bone tissue.\""},
+ {q:"Why does an X-ray show bones clearly?",
+  o:["Bones glow in the dark.","Dense bone blocks more radiation than soft tissue.","X-rays only work on cartilage.","Doctors colour the bones first."],
+  a:1, e:"\"Dense bone blocks more of it than soft tissue, so the image shows a clear outline of the skeleton.\""},
+ {q:"Which habit does the passage say helps bones become denser and tougher?",
+  o:["Watching more television","Avoiding all dairy foods","Weight-bearing exercise such as walking, running, or jumping","Sleeping without a pillow"],
+  a:2, e:"Weight-bearing exercise \"signals bones to become denser and tougher.\""},
+ {q:"A Grade 5 student slouches every day with a heavy backpack on one shoulder. Based on the passage, what is the <strong>most reasonable</strong> concern?", tag:"Inference",
+  o:["The backpack will turn cartilage into bone overnight.","Poor posture and uneven load can strain the spine over time.","The student will grow extra vertebrae.","X-rays will stop working on that student."],
+  a:1, e:"The passage warns that poor posture can strain the spine and suggests carrying a backpack on both shoulders."},
+ {q:"Why might children heal broken bones faster than adults?", tag:"Inference",
+  o:["Children never need casts.","Children's bones are still growing.","Children have no cartilage.","Adults refuse to drink milk."],
+  a:1, e:"The passage says children often heal faster \"because their bones are still growing.\""},
+ {q:"Why did the author compare bones to a \"living scaffold\"?", tag:"Author's purpose",
+  o:["To argue that bones are useless decoration","To help readers picture how bones support and hold up the body while still being alive","To explain how to build a museum display","To scare readers about broken bones"],
+  a:1, e:"A scaffold supports a structure; calling it \"living\" reminds readers that bones are active organs, not dead sticks."},
+ {q:"If someone's joint cartilage wore away completely, what problem would they most likely have?", tag:"Inference",
+  o:["Their skull plates would reopen.","They might feel stiffness and pain when the joint moves.","Their marrow would stop making blood overnight.","They would grow 270 bones again."],
+  a:1, e:"The passage says when cartilage wears away, people feel the stiffness and pain of arthritis."}
+];
+
+var VOCAB = ["scaffold","cartilage","minerals","impressive","aligned","dense","posture","dynamic"];
+var DEFS = {
+ scaffold:"a supporting framework that holds something up",
+ cartilage:"a tough, flexible tissue that can harden into bone or cushion joints",
+ minerals:"natural substances such as calcium that strengthen bone",
+ impressive:"causing admiration because it is large, skilful, or remarkable",
+ aligned:"placed in a straight, correct position",
+ dense:"packed tightly together; thick or solid",
+ posture:"the way a person holds their body when sitting or standing",
+ dynamic:"constantly active, changing, or rebuilding"
+};
+var FILL = [
+ {s:"Good ____ helps protect your spine when you sit at a desk for a long time.", a:"posture"},
+ {s:"The tip of the nose stays soft because it is made of ____, not hard bone.", a:"cartilage"},
+ {s:"Bone is ____ tissue, so an X-ray can outline it clearly against softer parts.", a:"dense"},
+ {s:"Your skeleton is ____: it rebuilds itself and changes as you grow.", a:"dynamic"}
+];
+var FILL_OPTIONS = ["posture","cartilage","impressive","dense","dynamic","scaffold"];
+
+var PRAISE=["Nice work, Ace!","Correct! Sharp reading, Ace!","Yes! You found the evidence!","Excellent thinking!","Right! Dr. Ace, reading detective!"];
+function pick(a){return a[Math.floor(Math.random()*a.length)];}
+function shuffled(arr,seed){var a=arr.slice(),s=seed;for(var i=a.length-1;i>0;i--){s=(s*9301+49297)%233280;var j=Math.floor(s/233280*(i+1));var t=a[i];a[i]=a[j];a[j]=t;}return a;}
+
+var mcState=MC.map(function(){return {answered:false,firstRight:false,done:false};});
+var vocabScore=0, vocabChecked=false;
+var VOCAB_TOTAL=VOCAB.length+FILL.length;
+
+function buildMC(){
+  var box=document.getElementById("mc");
+  MC.forEach(function(item,i){
+    var d=document.createElement("div"); d.className="box q"; d.id="mc"+i;
+    var html="<div><strong>"+(i+1)+".</strong> "+item.q+(item.tag?'<span class="tag">'+item.tag+'</span>':"")+"</div>";
+    item.o.forEach(function(opt,j){ html+='<button type="button" class="opt" data-i="'+i+'" data-j="'+j+'">'+String.fromCharCode(65+j)+". "+opt+"</button>"; });
+    html+='<div class="fb" id="mcfb'+i+'"></div>';
+    d.innerHTML=html; box.appendChild(d);
+  });
+  box.addEventListener("click",function(e){
+    var b=e.target.closest?e.target.closest(".opt"):e.target; if(!b||!b.classList.contains("opt"))return;
+    answerMC(+b.getAttribute("data-i"),+b.getAttribute("data-j"),b);
+  });
+}
+function answerMC(i,j,btn){
+  var st=mcState[i], item=MC[i], fb=document.getElementById("mcfb"+i), card=document.getElementById("mc"+i);
+  if(st.done) return;
+  var right=(j===item.a);
+  if(!st.answered){ st.answered=true; st.firstRight=right; }
+  if(right){
+    st.done=true; btn.classList.add("sel-right"); card.className="box q right";
+    fb.className="fb good"; fb.innerHTML="✅ "+pick(PRAISE)+' <span class="explain">'+item.e+"</span>";
+  } else {
+    btn.classList.add("sel-wrong"); card.className="box q wrong";
+    fb.className="fb bad"; fb.innerHTML="❌ Not quite, Ace. Look back at the passage and try another answer.";
+  }
+  updateScore();
+}
+function buildVocab(){
+  var m=document.getElementById("vmatch");
+  var defOrder=shuffled(VOCAB,11);
+  VOCAB.forEach(function(w,i){
+    var row=document.createElement("div"); row.className="vrow"; row.id="vm"+i;
+    var sel='<select id="vsel'+i+'" aria-label="Meaning of '+w+'"><option value="">- choose a meaning -</option>';
+    defOrder.forEach(function(k){ sel+='<option value="'+k+'">'+DEFS[k]+'</option>'; });
+    sel+="</select>";
+    row.innerHTML='<span class="mark" id="vmk'+i+'"></span><span class="w">'+w+'</span>'+sel;
+    m.appendChild(row);
+  });
+  var f=document.getElementById("vfill");
+  FILL.forEach(function(item,i){
+    var row=document.createElement("div"); row.className="vrow"; row.id="vf"+i;
+    var sel='<select id="fsel'+i+'" aria-label="Blank '+(i+1)+'"><option value="">- choose -</option>';
+    FILL_OPTIONS.forEach(function(w){ sel+='<option value="'+w+'">'+w+'</option>'; });
+    sel+="</select>";
+    var parts=item.s.split("____");
+    row.innerHTML='<span class="mark" id="vfk'+i+'"></span><span>'+(i+1)+'. '+parts[0]+sel+parts[1]+'</span>';
+    f.appendChild(row);
+  });
+}
+function checkVocab(){
+  var score=0, blank=0;
+  VOCAB.forEach(function(w,i){
+    var v=document.getElementById("vsel"+i).value, ok=(v===w);
+    if(!v) blank++;
+    if(ok) score++;
+    document.getElementById("vm"+i).className="vrow "+(ok?"right":"wrong");
+    document.getElementById("vmk"+i).textContent=ok?"✅":"❌";
+  });
+  FILL.forEach(function(item,i){
+    var v=document.getElementById("fsel"+i).value, ok=(v===item.a);
+    if(!v) blank++;
+    if(ok) score++;
+    document.getElementById("vf"+i).className="vrow "+(ok?"right":"wrong");
+    document.getElementById("vfk"+i).textContent=ok?"✅":"❌";
+  });
+  vocabScore=score; vocabChecked=true;
+  var fb=document.getElementById("vocabFb");
+  if(score===VOCAB_TOTAL){ fb.className="fb good"; fb.textContent="🌟 "+score+" / "+VOCAB_TOTAL+". Perfect! Your vocabulary is getting seriously strong, Ace!"; }
+  else { fb.className="fb bad"; fb.textContent=score+" / "+VOCAB_TOTAL+" correct"+(blank?" ("+blank+" left blank)":"")+". Fix the ❌ ones and check again. Try finding the word in the passage for clues!"; }
+  updateScore();
+}
+function scores(){
+  var mc=0,answered=0; mcState.forEach(function(s){ if(s.firstRight) mc++; if(s.answered) answered++; });
+  return {mc:mc,answered:answered,vocab:vocabScore};
+}
+function updateScore(){
+  var s=scores();
+  document.getElementById("scoreText").textContent="Comprehension: "+s.mc+" / "+MC.length+" · Vocabulary: "+(vocabChecked?s.vocab:"-")+" / "+VOCAB_TOTAL;
+}
+function finish(){
+  if(!vocabChecked) checkVocab();
+  var s=scores(), total=MC.length+VOCAB_TOTAL, got=s.mc+s.vocab, pct=Math.round(100*got/total);
+  var msg = pct===100 ? "🏆 A perfect score! Outstanding reading, Dr. Ace!" :
+            pct>=80 ? "🌟 Fantastic work, Ace! You read like a Grade 7 student!" :
+            pct>=60 ? "💪 Solid effort, Ace! Reread the paragraphs for the questions you missed." :
+                      "🌱 This was a challenging passage. Read it once more, slowly, and try again. You've got this, Ace!";
+  var f=document.getElementById("final"); f.style.display="block";
+  f.innerHTML="<h2 style='border:none;margin-top:0'>Final Score: "+got+" / "+total+" ("+pct+"%)</h2>"+
+    "<p>Comprehension (first tries): "+s.mc+" / "+MC.length+(s.answered<MC.length?" (you skipped "+(MC.length-s.answered)+")":"")+"<br>Vocabulary: "+s.vocab+" / "+VOCAB_TOTAL+"</p><p>"+msg+"</p>"+
+    "<p style='font-size:.85em;color:#795548'>Finished on "+new Date().toLocaleString("en-CA")+"</p>";
+  f.scrollIntoView({behavior:"smooth"});
+}
+buildMC(); buildVocab(); updateScore();
+document.getElementById("checkVocab").addEventListener("click",checkVocab);
+document.getElementById("finishBtn").addEventListener("click",finish);
+document.getElementById("showModel").addEventListener("click",function(){document.getElementById("model").style.display="block";});
+</script>
+</body>
+</html>
