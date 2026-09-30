@@ -42,6 +42,31 @@
   #scoreBox button{font-size:.95em;padding:8px 16px;border:none;border-radius:10px;cursor:pointer;font-weight:bold;background:#ffca28;color:#3e2723}
   #final{display:none;text-align:center;border:4px solid #43a047;font-size:1.1em}
   .tone{font-size:.85em;color:#6a1b9a}
+
+  .audio-bar{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin:12px 0 4px}
+  button.speak,button.record,button.play-mine,button.play-model,button.audio-ctrl{
+    font-size:1.05em;padding:14px 18px;min-height:52px;min-width:52px;
+    border:none;border-radius:14px;cursor:pointer;font-weight:bold;font-family:inherit;
+    touch-action:manipulation;-webkit-tap-highlight-color:transparent;
+  }
+  button.speak,button.play-model,button.audio-ctrl.hear{background:#7b1fa2;color:#fff}
+  button.speak:hover,button.play-model:hover,button.audio-ctrl.hear:hover{background:#6a1b9a}
+  button.speak.playing{background:#43a047}
+  button.record{background:#e53935;color:#fff}
+  button.record:hover{background:#c62828}
+  button.record.recording{background:#ffca28;color:#3e2723;animation:pulse 1s infinite}
+  @keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.04)}}
+  button.play-mine{background:#00897b;color:#fff}
+  button.play-mine:hover{background:#00695c}
+  button.play-mine:disabled{opacity:.45;cursor:not-allowed}
+  button.audio-ctrl.stop{background:#546e7a;color:#fff}
+  button.audio-ctrl.stop:hover{background:#37474f}
+  .practice{margin-top:14px;padding-top:12px;border-top:2px dashed #e1bee7}
+  .practice-row{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+  .rec-status{margin-top:8px;font-weight:bold;color:#6a1b9a;font-size:.95em}
+  .rec-status.rec-on{color:#c62828}
+  .mic-msg{margin-top:8px;background:#fff3e0;border-left:6px solid #ef6c00;border-radius:10px;padding:10px 14px;font-size:.95em;color:#e65100}
+  .box[data-audio]{position:relative}
 </style>
 </head>
 <body>
@@ -60,6 +85,12 @@
 </div>
 
 <h2>Part 1: Learn Today's Words</h2>
+<div class="box tipbox" style="background:#f3e5f5;border-left-color:#8e24aa"><strong>Listen &amp; practise:</strong> Tap <em>Hear model</em> to hear the word (Hong Kong voice). Then tap <em>Record</em>, say it out loud, and compare with <em>Play my try</em> + <em>Play model</em>. Recordings stay on this device only for this visit — nothing is uploaded.</div>
+<div class="audio-bar">
+  <button type="button" class="audio-ctrl hear" id="playAll">🔊 Play all words</button>
+  <button type="button" class="audio-ctrl stop" id="stopAudio">⏹️ Stop</button>
+  <span class="tone">Plays every word with English first (greetings + family).</span>
+</div>
 <div id="cards"></div>
 
 <div class="box tipbox">
@@ -89,23 +120,24 @@
 </div>
 </div>
 
+<script src="../../audio/cantonese/player.js"></script>
 <script>
 var WORDS = [
- {zh:"爸爸", jy:"baa4 baa1", en:"Dad / Father",
+ {zh:"爸爸", jy:"baa4 baa1", audio:"09-baa4-baa1-dad.mp3", en:"Dad / Father",
   ex_zh:"我爸爸係醫生。", ex_jy:"ngo5 baa4 baa1 hai6 ji1 sang1.", ex_en:"My dad is a doctor."},
- {zh:"媽媽", jy:"maa4 maa1", en:"Mum / Mother",
+ {zh:"媽媽", jy:"maa4 maa1", audio:"10-maa4-maa1-mom.mp3", en:"Mum / Mother",
   ex_zh:"媽媽教我做功課。", ex_jy:"maa4 maa1 gaau3 ngo5 zou6 gung1 fo3.", ex_en:"Mum teaches me to do homework."},
- {zh:"哥哥", jy:"go1 go1", en:"Older brother",
+ {zh:"哥哥", jy:"go1 go1", audio:"11-go1-go1-older-brother.mp3", en:"Older brother",
   ex_zh:"我哥哥好高。", ex_jy:"ngo5 go1 go1 hou2 gou1.", ex_en:"My older brother is very tall."},
- {zh:"弟弟", jy:"dai6 dai2", en:"Younger brother",
+ {zh:"弟弟", jy:"dai6 dai2", audio:"12-dai6-dai2-younger-brother.mp3", en:"Younger brother",
   ex_zh:"弟弟鍾意踢足球。", ex_jy:"dai6 dai2 zung1 ji3 tek3 zuk1 kau4.", ex_en:"Younger brother likes to play soccer."},
- {zh:"姐姐", jy:"ze2 ze1", en:"Older sister",
+ {zh:"姐姐", jy:"ze2 ze1", audio:"13-ze2-ze1-older-sister.mp3", en:"Older sister",
   ex_zh:"姐姐幫我溫習。", ex_jy:"ze2 ze1 bong1 ngo5 wan1 zaap6.", ex_en:"Older sister helps me revise / study."},
- {zh:"妹妹", jy:"mui6 mui2", en:"Younger sister",
+ {zh:"妹妹", jy:"mui6 mui2", audio:"14-mui6-mui2-younger-sister.mp3", en:"Younger sister",
   ex_zh:"妹妹讀小學。", ex_jy:"mui6 mui2 duk6 siu2 hok6.", ex_en:"Younger sister goes to primary school."},
- {zh:"爺爺", jy:"ye4 ye2", en:"Paternal grandpa (Dad's dad)",
+ {zh:"爺爺", jy:"ye4 ye2", audio:"15-ye4-ye2-paternal-grandpa.mp3", en:"Paternal grandpa (Dad's dad)",
   ex_zh:"爺爺住喺香港。", ex_jy:"ye4 ye2 zyu6 hai2 hoeng1 gong2.", ex_en:"Paternal grandpa lives in Hong Kong."},
- {zh:"嫲嫲", jy:"maa4 maa4", en:"Paternal grandma (Dad's mum)",
+ {zh:"嫲嫲", jy:"maa4 maa4", audio:"16-maa4-maa4-paternal-grandma.mp3", en:"Paternal grandma (Dad's mum)",
   ex_zh:"嫲嫲煮咗晚飯。", ex_jy:"maa4 maa4 zyu2 zo2 maan5 faan6.", ex_en:"Paternal grandma cooked dinner."}
 ];
 
@@ -117,11 +149,13 @@ function buildCards(){
   var box=document.getElementById("cards");
   WORDS.forEach(function(w,i){
     var d=document.createElement("div"); d.className="box";
+    if(w.audio){ d.setAttribute("data-audio", w.audio); d.setAttribute("data-audio-label", w.zh+" "+w.jy); }
     d.innerHTML='<div class="card">'+
       '<div class="char">'+(i+1)+'. '+w.zh+'</div>'+
-      '<div class="meta"><div><span class="jyut">'+w.jy+'</span> <span class="tone">← say this out loud</span></div>'+
+      '<div class="meta"><div><span class="jyut">'+w.jy+'</span> <span class="tone">← tap Hear model, then Record</span></div>'+
       '<div><strong>'+w.en+'</strong></div></div></div>'+
-      '<div class="ex"><strong>Example:</strong> '+w.ex_zh+'<br><span class="jyut">'+w.ex_jy+'</span><br><em>'+w.ex_en+'</em></div>';
+      '<div class="ex"><strong>Example:</strong> '+w.ex_zh+'<br><span class="jyut">'+w.ex_jy+'</span><br><em>'+w.ex_en+'</em></div>'+
+      '<div class="practice"></div>';
     box.appendChild(d);
   });
 }
@@ -265,6 +299,7 @@ function finish(){
   f.scrollIntoView({behavior:"smooth"});
 }
 buildCards(); buildMatch(); buildMC(); buildFill(); updateScore();
+if(window.AceCantoneseAudio) AceCantoneseAudio.wireLesson({playAllBtn:"#playAll",stopBtn:"#stopAudio"});
 document.getElementById("checkMatch").addEventListener("click",checkMatch);
 document.getElementById("finishBtn").addEventListener("click",finish);
 </script>

@@ -42,6 +42,31 @@
   #scoreBox button{font-size:.95em;padding:8px 16px;border:none;border-radius:10px;cursor:pointer;font-weight:bold;background:#ffca28;color:#3e2723}
   #final{display:none;text-align:center;border:4px solid #43a047;font-size:1.1em}
   .tone{font-size:.85em;color:#6a1b9a}
+
+  .audio-bar{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin:12px 0 4px}
+  button.speak,button.record,button.play-mine,button.play-model,button.audio-ctrl{
+    font-size:1.05em;padding:14px 18px;min-height:52px;min-width:52px;
+    border:none;border-radius:14px;cursor:pointer;font-weight:bold;font-family:inherit;
+    touch-action:manipulation;-webkit-tap-highlight-color:transparent;
+  }
+  button.speak,button.play-model,button.audio-ctrl.hear{background:#7b1fa2;color:#fff}
+  button.speak:hover,button.play-model:hover,button.audio-ctrl.hear:hover{background:#6a1b9a}
+  button.speak.playing{background:#43a047}
+  button.record{background:#e53935;color:#fff}
+  button.record:hover{background:#c62828}
+  button.record.recording{background:#ffca28;color:#3e2723;animation:pulse 1s infinite}
+  @keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.04)}}
+  button.play-mine{background:#00897b;color:#fff}
+  button.play-mine:hover{background:#00695c}
+  button.play-mine:disabled{opacity:.45;cursor:not-allowed}
+  button.audio-ctrl.stop{background:#546e7a;color:#fff}
+  button.audio-ctrl.stop:hover{background:#37474f}
+  .practice{margin-top:14px;padding-top:12px;border-top:2px dashed #e1bee7}
+  .practice-row{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+  .rec-status{margin-top:8px;font-weight:bold;color:#6a1b9a;font-size:.95em}
+  .rec-status.rec-on{color:#c62828}
+  .mic-msg{margin-top:8px;background:#fff3e0;border-left:6px solid #ef6c00;border-radius:10px;padding:10px 14px;font-size:.95em;color:#e65100}
+  .box[data-audio]{position:relative}
 </style>
 </head>
 <body>
@@ -60,6 +85,12 @@
 </div>
 
 <h2>Part 1: Learn Today's Words</h2>
+<div class="box tipbox" style="background:#f3e5f5;border-left-color:#8e24aa"><strong>Listen &amp; practise:</strong> Tap <em>Hear model</em> to hear the word (Hong Kong voice). Then tap <em>Record</em>, say it out loud, and compare with <em>Play my try</em> + <em>Play model</em>. Recordings stay on this device only for this visit — nothing is uploaded.</div>
+<div class="audio-bar">
+  <button type="button" class="audio-ctrl hear" id="playAll">🔊 Play all words</button>
+  <button type="button" class="audio-ctrl stop" id="stopAudio">⏹️ Stop</button>
+  <span class="tone">Plays every greeting with English first (ALL-words includes family too).</span>
+</div>
 <div id="cards"></div>
 
 <div class="box tipbox">
@@ -89,23 +120,24 @@
 </div>
 </div>
 
+<script src="../../audio/cantonese/player.js"></script>
 <script>
 var WORDS = [
- {zh:"你好", jy:"nei5 hou2", en:"Hello / Hi",
+ {zh:"你好", jy:"nei5 hou2", audio:"01-nei5-hou2-hello.mp3", en:"Hello / Hi",
   ex_zh:"你好！我叫 Ace。", ex_jy:"nei5 hou2! ngo5 giu3 Ace.", ex_en:"Hello! My name is Ace."},
- {zh:"早晨", jy:"zou2 san4", en:"Good morning",
+ {zh:"早晨", jy:"zou2 san4", audio:"02-zou2-san4-good-morning.mp3", en:"Good morning",
   ex_zh:"早晨！今日好嗎？", ex_jy:"zou2 san4! gam1 jat6 hou2 maa3?", ex_en:"Good morning! How are you today?"},
- {zh:"再見", jy:"zoi3 gin3", en:"Goodbye / See you again",
+ {zh:"再見", jy:"zoi3 gin3", audio:"03-zoi3-gin3-goodbye.mp3", en:"Goodbye / See you again",
   ex_zh:"再見，明天見！", ex_jy:"zoi3 gin3, ming4 tin1 gin3!", ex_en:"Goodbye, see you tomorrow!"},
- {zh:"多謝", jy:"do1 ze6", en:"Thank you (for a gift or big favour)",
+ {zh:"多謝", jy:"do1 ze6", audio:"04-do1-ze6-thank-you.mp3", en:"Thank you (for a gift or big favour)",
   ex_zh:"多謝你嘅禮物。", ex_jy:"do1 ze6 nei5 ge3 lai5 mat6.", ex_en:"Thank you for your gift."},
- {zh:"唔該", jy:"m4 goi1", en:"Please / Thanks (for a small help)",
+ {zh:"唔該", jy:"m4 goi1", audio:"05-m4-goi1-please.mp3", en:"Please / Thanks (for a small help)",
   ex_zh:"唔該，幫我開門。", ex_jy:"m4 goi1, bong1 ngo5 hoi1 mun4.", ex_en:"Please help me open the door. / Thanks for opening it."},
- {zh:"對唔住", jy:"deoi3 m4 zyu6", en:"Sorry / Excuse me",
+ {zh:"對唔住", jy:"deoi3 m4 zyu6", audio:"06-deoi3-m4-zyu6-sorry.mp3", en:"Sorry / Excuse me",
   ex_zh:"對唔住，我遲咗。", ex_jy:"deoi3 m4 zyu6, ngo5 ci4 zo2.", ex_en:"Sorry, I am late."},
- {zh:"係", jy:"hai6", en:"Yes / It is",
+ {zh:"係", jy:"hai6", audio:"07-hai6-yes.mp3", en:"Yes / It is",
   ex_zh:"你係學生嗎？係。", ex_jy:"nei5 hai6 hok6 saang1 maa3? hai6.", ex_en:"Are you a student? Yes."},
- {zh:"唔係", jy:"m4 hai6", en:"No / It is not",
+ {zh:"唔係", jy:"m4 hai6", audio:"08-m4-hai6-no.mp3", en:"No / It is not",
   ex_zh:"今日係星期一嗎？唔係。", ex_jy:"gam1 jat6 hai6 sing1 kei4 jat1 maa3? m4 hai6.", ex_en:"Is today Monday? No."}
 ];
 
@@ -117,11 +149,13 @@ function buildCards(){
   var box=document.getElementById("cards");
   WORDS.forEach(function(w,i){
     var d=document.createElement("div"); d.className="box";
+    if(w.audio){ d.setAttribute("data-audio", w.audio); d.setAttribute("data-audio-label", w.zh+" "+w.jy); }
     d.innerHTML='<div class="card">'+
       '<div class="char">'+(i+1)+'. '+w.zh+'</div>'+
-      '<div class="meta"><div><span class="jyut">'+w.jy+'</span> <span class="tone">← say this out loud</span></div>'+
+      '<div class="meta"><div><span class="jyut">'+w.jy+'</span> <span class="tone">← tap Hear model, then Record</span></div>'+
       '<div><strong>'+w.en+'</strong></div></div></div>'+
-      '<div class="ex"><strong>Example:</strong> '+w.ex_zh+'<br><span class="jyut">'+w.ex_jy+'</span><br><em>'+w.ex_en+'</em></div>';
+      '<div class="ex"><strong>Example:</strong> '+w.ex_zh+'<br><span class="jyut">'+w.ex_jy+'</span><br><em>'+w.ex_en+'</em></div>'+
+      '<div class="practice"></div>';
     box.appendChild(d);
   });
 }
@@ -263,6 +297,7 @@ function finish(){
   f.scrollIntoView({behavior:"smooth"});
 }
 buildCards(); buildMatch(); buildMC(); buildFill(); updateScore();
+if(window.AceCantoneseAudio) AceCantoneseAudio.wireLesson({playAllBtn:"#playAll",stopBtn:"#stopAudio"});
 document.getElementById("checkMatch").addEventListener("click",checkMatch);
 document.getElementById("finishBtn").addEventListener("click",finish);
 </script>
