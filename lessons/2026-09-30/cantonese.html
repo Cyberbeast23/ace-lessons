@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cantonese (Sept. 30): Family Members</title>
+<style>
+  body{font-family:"Segoe UI",Verdana,Arial,sans-serif;font-size:20px;line-height:1.6;margin:0;background:#f3eefb;color:#1d1a2a}
+  .wrap{max-width:880px;margin:0 auto;padding:20px 18px 80px}
+  a.home{font-size:.9em;color:#6a1b9a}
+  h1{color:#4a148c;font-size:2em;margin:10px 0}
+  h2{color:#6a1b9a;margin-top:36px;border-bottom:3px solid #e1bee7;padding-bottom:4px}
+  h3{color:#6a1b9a}
+  .box{background:#fff;border-radius:16px;padding:18px 22px;margin:16px 0;box-shadow:0 3px 10px rgba(0,0,0,.07)}
+  .tipbox{background:#fff8e1;border-left:8px solid #ffb300}
+  .char{font-size:2.2em;font-weight:bold;color:#4a148c;line-height:1.2}
+  .jyut{font-family:Consolas,"Courier New",monospace;background:#f3e5f5;padding:2px 8px;border-radius:8px;font-size:1.05em}
+  .card{display:grid;grid-template-columns:auto 1fr;gap:8px 18px;align-items:center;border-left:8px solid #ab47bc;padding-left:14px}
+  .card .meta{grid-column:2}
+  .ex{margin-top:8px;background:#faf5ff;border-radius:10px;padding:8px 12px;font-size:.95em}
+  .q{border-left:8px solid #b0bec5}
+  .q.right{border-left-color:#43a047;background:#f1f8e9}
+  .q.wrong{border-left-color:#e53935;background:#fff5f5}
+  .opt{display:block;width:100%;text-align:left;font-size:.95em;background:#fafafa;border:2px solid #e0e0e0;border-radius:10px;padding:8px 14px;margin:8px 0;cursor:pointer;font-family:inherit}
+  .opt:hover{border-color:#ce93d8;background:#fff}
+  .opt.sel-right{background:#c8e6c9;border-color:#43a047}
+  .opt.sel-wrong{background:#ffcdd2;border-color:#e53935}
+  .fb{margin-top:6px;font-weight:bold}
+  .fb.good{color:#2e7d32} .fb.bad{color:#c62828}
+  .explain{font-weight:normal;color:#4a148c}
+  .vrow{display:flex;flex-wrap:wrap;align-items:center;gap:10px;padding:8px 6px;border-bottom:1px dashed #eee}
+  .vrow .w{font-weight:bold;min-width:120px;font-size:1.3em}
+  .vrow.right{background:#f1f8e9} .vrow.wrong{background:#fff5f5}
+  select{font-size:.95em;padding:6px 8px;border-radius:8px;border:2px solid #ce93d8;max-width:100%;font-family:inherit}
+  .mark{font-size:1.2em;min-width:30px}
+  button.main{font-size:1em;padding:10px 20px;border:none;border-radius:10px;cursor:pointer;font-weight:bold;background:#8e24aa;color:#fff;margin-top:10px}
+  button.main:hover{background:#6a1b9a}
+  input[type=text]{font-size:1.05em;padding:8px 12px;border:2px solid #ce93d8;border-radius:10px;width:220px;font-family:inherit}
+  button.check{font-size:.95em;padding:8px 16px;border:none;border-radius:10px;cursor:pointer;font-weight:bold;background:#8e24aa;color:#fff}
+  .row{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:10px}
+  #scoreBox{position:sticky;bottom:0;background:#4a148c;color:#fff;border-radius:16px 16px 0 0;padding:12px 20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-top:30px}
+  #scoreBox button{font-size:.95em;padding:8px 16px;border:none;border-radius:10px;cursor:pointer;font-weight:bold;background:#ffca28;color:#3e2723}
+  #final{display:none;text-align:center;border:4px solid #43a047;font-size:1.1em}
+  .tone{font-size:.85em;color:#6a1b9a}
+</style>
+</head>
+<body>
+<div class="wrap">
+<a class="home" href="../../index.html">&larr; Back to all lessons</a>
+<h1>🗣️ Cantonese Week 2: Family Members (Hong Kong)</h1>
+<p>Ace, you already know numbers 1–10 and greetings like 你好 and 多謝. Today you'll learn how to name <strong>family members</strong> the Hong Kong way, using <strong>Traditional Chinese</strong> characters and Jyutping with tone numbers.</p>
+
+<div class="box tipbox">
+  <strong>How to read Jyutping (sounds):</strong>
+  <ul>
+    <li>Letters show the sound. Numbers show the <strong>tone</strong> (the musical pitch): 1 high, 2 rising, 3 mid, 4 low/falling, 5 low rising, 6 low.</li>
+    <li>Example: <span class="jyut">baa4 baa1</span> — say <em>bah</em> (tone 4) + <em>bah</em> (tone 1, higher).</li>
+    <li><strong>Listening/speaking tip:</strong> Say each family word out loud three times while looking at the characters. Many family words repeat the same syllable twice (爸爸, 媽媽, 哥哥) — that doubling is a warm, familiar sound in Cantonese. Record yourself if you can, then compare with Dad!</li>
+  </ul>
+</div>
+
+<h2>Part 1: Learn Today's Words</h2>
+<div id="cards"></div>
+
+<div class="box tipbox">
+  <strong>Doctor's tip for Ace:</strong> In Hong Kong Cantonese, <span class="jyut">爺爺 ye4 ye2</span> is Dad's dad (paternal grandpa), and <span class="jyut">嫲嫲 maa4 maa4</span> is Dad's mum (paternal grandma). Mum's parents use different words (公公 / 婆婆) — you'll learn those another day. Future doctors meet whole families, so knowing the right title shows respect!
+</div>
+
+<h2>Part 2: Match the Meaning</h2>
+<div class="box">
+  <p>Match each Cantonese phrase to its English meaning.</p>
+  <div id="vmatch"></div>
+  <button type="button" class="main" id="checkMatch">Check my matching</button>
+  <div class="fb" id="matchFb"></div>
+</div>
+
+<h2>Part 3: What Would You Say?</h2>
+<p>Click the best Cantonese phrase for each situation. Only your <strong>first click</strong> counts toward your score.</p>
+<div id="mc"></div>
+
+<h2>Part 4: Type the Jyutping</h2>
+<p>Look at the Chinese characters and type the Jyutping (with tone numbers). Spelling must match, including the numbers. Example: <span class="jyut">baa4 baa1</span></p>
+<div id="fill"></div>
+
+<div class="box" id="final"></div>
+<div id="scoreBox">
+  <span id="scoreText"></span>
+  <button type="button" id="finishBtn">I'm done! Show my final score</button>
+</div>
+</div>
+
+<script>
+var WORDS = [
+ {zh:"爸爸", jy:"baa4 baa1", en:"Dad / Father",
+  ex_zh:"我爸爸係醫生。", ex_jy:"ngo5 baa4 baa1 hai6 ji1 sang1.", ex_en:"My dad is a doctor."},
+ {zh:"媽媽", jy:"maa4 maa1", en:"Mum / Mother",
+  ex_zh:"媽媽教我做功課。", ex_jy:"maa4 maa1 gaau3 ngo5 zou6 gung1 fo3.", ex_en:"Mum teaches me to do homework."},
+ {zh:"哥哥", jy:"go1 go1", en:"Older brother",
+  ex_zh:"我哥哥好高。", ex_jy:"ngo5 go1 go1 hou2 gou1.", ex_en:"My older brother is very tall."},
+ {zh:"弟弟", jy:"dai6 dai2", en:"Younger brother",
+  ex_zh:"弟弟鍾意踢足球。", ex_jy:"dai6 dai2 zung1 ji3 tek3 zuk1 kau4.", ex_en:"Younger brother likes to play soccer."},
+ {zh:"姐姐", jy:"ze2 ze1", en:"Older sister",
+  ex_zh:"姐姐幫我溫習。", ex_jy:"ze2 ze1 bong1 ngo5 wan1 zaap6.", ex_en:"Older sister helps me revise / study."},
+ {zh:"妹妹", jy:"mui6 mui2", en:"Younger sister",
+  ex_zh:"妹妹讀小學。", ex_jy:"mui6 mui2 duk6 siu2 hok6.", ex_en:"Younger sister goes to primary school."},
+ {zh:"爺爺", jy:"ye4 ye2", en:"Paternal grandpa (Dad's dad)",
+  ex_zh:"爺爺住喺香港。", ex_jy:"ye4 ye2 zyu6 hai2 hoeng1 gong2.", ex_en:"Paternal grandpa lives in Hong Kong."},
+ {zh:"嫲嫲", jy:"maa4 maa4", en:"Paternal grandma (Dad's mum)",
+  ex_zh:"嫲嫲煮咗晚飯。", ex_jy:"maa4 maa4 zyu2 zo2 maan5 faan6.", ex_en:"Paternal grandma cooked dinner."}
+];
+
+var PRAISE=["Nice work, Ace!","正確！ Correct!","Yes! Your family words are sharp!","Excellent, Ace!","Right! Future doctor, multilingual edition!"];
+function pick(a){return a[Math.floor(Math.random()*a.length)];}
+function shuffled(arr,seed){var a=arr.slice(),s=seed;for(var i=a.length-1;i>0;i--){s=(s*9301+49297)%233280;var j=Math.floor(s/233280*(i+1));var t=a[i];a[i]=a[j];a[j]=t;}return a;}
+
+function buildCards(){
+  var box=document.getElementById("cards");
+  WORDS.forEach(function(w,i){
+    var d=document.createElement("div"); d.className="box";
+    d.innerHTML='<div class="card">'+
+      '<div class="char">'+(i+1)+'. '+w.zh+'</div>'+
+      '<div class="meta"><div><span class="jyut">'+w.jy+'</span> <span class="tone">← say this out loud</span></div>'+
+      '<div><strong>'+w.en+'</strong></div></div></div>'+
+      '<div class="ex"><strong>Example:</strong> '+w.ex_zh+'<br><span class="jyut">'+w.ex_jy+'</span><br><em>'+w.ex_en+'</em></div>';
+    box.appendChild(d);
+  });
+}
+
+var matchScore=0, matchChecked=false;
+function buildMatch(){
+  var m=document.getElementById("vmatch");
+  var order=shuffled(WORDS.map(function(w){return w.jy;}),7);
+  WORDS.forEach(function(w,i){
+    var row=document.createElement("div"); row.className="vrow"; row.id="vm"+i;
+    var sel='<select id="vsel'+i+'" aria-label="Meaning of '+w.zh+'"><option value="">- choose English -</option>';
+    order.forEach(function(jy){
+      var en=WORDS.find(function(x){return x.jy===jy;}).en;
+      sel+='<option value="'+jy+'">'+en+'</option>';
+    });
+    sel+='</select>';
+    row.innerHTML='<span class="mark" id="vmk'+i+'"></span><span class="w">'+w.zh+'</span><span class="jyut">'+w.jy+'</span>'+sel;
+    m.appendChild(row);
+  });
+}
+function checkMatch(){
+  var score=0, blank=0;
+  WORDS.forEach(function(w,i){
+    var v=document.getElementById("vsel"+i).value, ok=(v===w.jy);
+    if(!v) blank++;
+    if(ok) score++;
+    document.getElementById("vm"+i).className="vrow "+(ok?"right":"wrong");
+    document.getElementById("vmk"+i).textContent=ok?"✅":"❌";
+  });
+  matchScore=score; matchChecked=true;
+  var fb=document.getElementById("matchFb");
+  if(score===WORDS.length){ fb.className="fb good"; fb.textContent="🌟 "+score+" / "+WORDS.length+". Perfect matching, Ace!"; }
+  else { fb.className="fb bad"; fb.textContent=score+" / "+WORDS.length+" correct"+(blank?" ("+blank+" blank)":"")+". Fix the ❌ ones and check again."; }
+  updateScore();
+}
+
+var MC = [
+ {q:"You want to talk about your dad. Which word do you use?",
+  o:["媽媽 maa4 maa1","爸爸 baa4 baa1","弟弟 dai6 dai2","姐姐 ze2 ze1"], a:1,
+  e:"爸爸 (baa4 baa1) means Dad / Father."},
+ {q:"You are talking about Dad's father (your paternal grandpa). What do you say?",
+  o:["爺爺 ye4 ye2","嫲嫲 maa4 maa4","哥哥 go1 go1","妹妹 mui6 mui2"], a:0,
+  e:"爺爺 is paternal grandpa (Dad's dad). 嫲嫲 is paternal grandma."},
+ {q:"Your older brother helps you with math. Which word names him?",
+  o:["弟弟 dai6 dai2","哥哥 go1 go1","爺爺 ye4 ye2","媽媽 maa4 maa1"], a:1,
+  e:"哥哥 means older brother. 弟弟 is younger brother."},
+ {q:"You want to say \"Mum\" in Cantonese. Which is correct?",
+  o:["爸爸 baa4 baa1","嫲嫲 maa4 maa4","媽媽 maa4 maa1","姐姐 ze2 ze1"], a:2,
+  e:"媽媽 (maa4 maa1) means Mum. Careful: 嫲嫲 (maa4 maa4) is paternal grandma — different tones!"},
+ {q:"Someone asks about your younger sister. Which word do you use?",
+  o:["妹妹 mui6 mui2","姐姐 ze2 ze1","哥哥 go1 go1","爺爺 ye4 ye2"], a:0,
+  e:"妹妹 is younger sister. 姐姐 is older sister."},
+ {q:"Dad's mum cooked dinner. Which word names her in Hong Kong Cantonese?",
+  o:["媽媽 maa4 maa1","嫲嫲 maa4 maa4","妹妹 mui6 mui2","弟弟 dai6 dai2"], a:1,
+  e:"嫲嫲 (maa4 maa4) is paternal grandma — the usual Hong Kong word for Dad's mum."}
+];
+var mcState=MC.map(function(){return{answered:false,firstRight:false,done:false};});
+function buildMC(){
+  var box=document.getElementById("mc");
+  MC.forEach(function(item,i){
+    var d=document.createElement("div"); d.className="box q"; d.id="mc"+i;
+    var html="<div><strong>"+(i+1)+".</strong> "+item.q+"</div>";
+    item.o.forEach(function(opt,j){ html+='<button type="button" class="opt" data-i="'+i+'" data-j="'+j+'">'+String.fromCharCode(65+j)+". "+opt+"</button>"; });
+    html+='<div class="fb" id="mcfb'+i+'"></div>';
+    d.innerHTML=html; box.appendChild(d);
+  });
+  box.addEventListener("click",function(e){
+    var b=e.target.closest?e.target.closest(".opt"):e.target; if(!b||!b.classList.contains("opt"))return;
+    var i=+b.getAttribute("data-i"), j=+b.getAttribute("data-j"), st=mcState[i], item=MC[i];
+    if(st.done)return;
+    var right=(j===item.a);
+    if(!st.answered){ st.answered=true; st.firstRight=right; }
+    var fb=document.getElementById("mcfb"+i), card=document.getElementById("mc"+i);
+    if(right){ st.done=true; b.classList.add("sel-right"); card.className="box q right"; fb.className="fb good"; fb.innerHTML="✅ "+pick(PRAISE)+' <span class="explain">'+item.e+"</span>"; }
+    else { b.classList.add("sel-wrong"); card.className="box q wrong"; fb.className="fb bad"; fb.textContent="❌ Not quite, Ace. Think about the family role and try again."; }
+    updateScore();
+  });
+}
+
+var FILL = [
+ {zh:"爸爸", a:"baa4 baa1"},
+ {zh:"媽媽", a:"maa4 maa1"},
+ {zh:"哥哥", a:"go1 go1"},
+ {zh:"弟弟", a:"dai6 dai2"},
+ {zh:"姐姐", a:"ze2 ze1"},
+ {zh:"妹妹", a:"mui6 mui2"},
+ {zh:"爺爺", a:"ye4 ye2"},
+ {zh:"嫲嫲", a:"maa4 maa4"}
+];
+var fillState=FILL.map(function(){return{correct:false,tries:0};});
+function normJy(s){return String(s).trim().toLowerCase().replace(/\s+/g," ");}
+function buildFill(){
+  var box=document.getElementById("fill");
+  FILL.forEach(function(it,i){
+    var d=document.createElement("div"); d.className="box q"; d.id="f"+i;
+    d.innerHTML='<div><strong>'+(i+1)+'.</strong> Type Jyutping for <span class="char" style="font-size:1.4em">'+it.zh+'</span></div>'+
+      '<div class="row"><input type="text" id="fi'+i+'" autocomplete="off" spellcheck="false" aria-label="Jyutping '+it.zh+'">'+
+      '<button type="button" class="check" data-i="'+i+'">Check</button></div><div class="fb" id="ffb'+i+'"></div>';
+    box.appendChild(d);
+  });
+  box.addEventListener("click",function(e){
+    var b=e.target; if(b.tagName!=="BUTTON"||!b.classList.contains("check"))return;
+    fillCheck(+b.getAttribute("data-i"));
+  });
+  box.addEventListener("keydown",function(e){if(e.key==="Enter"&&e.target.tagName==="INPUT")fillCheck(+e.target.id.slice(2));});
+}
+function fillCheck(i){
+  var val=document.getElementById("fi"+i).value, fb=document.getElementById("ffb"+i), st=fillState[i];
+  if(!val.trim()){fb.className="fb bad";fb.textContent="Type the Jyutping first, Ace!";return;}
+  st.tries++;
+  if(normJy(val)===normJy(FILL[i].a)){
+    st.correct=true; document.getElementById("f"+i).className="box q right";
+    fb.className="fb good"; fb.textContent="✅ "+pick(PRAISE)+(st.tries===1?" (first try!)":"");
+  } else {
+    st.correct=false; document.getElementById("f"+i).className="box q wrong";
+    fb.className="fb bad"; fb.textContent="❌ Not quite. Check letters, spaces, and tone numbers. Answer looks like: baa4 baa1";
+  }
+  updateScore();
+}
+
+function scores(){
+  var mc=0; mcState.forEach(function(s){if(s.firstRight)mc++;});
+  var f=0; fillState.forEach(function(s){if(s.correct)f++;});
+  return {match:matchScore, mc:mc, fill:f};
+}
+function updateScore(){
+  var s=scores();
+  document.getElementById("scoreText").textContent="Match: "+(matchChecked?s.match:"-")+"/"+WORDS.length+" · Situations: "+s.mc+"/"+MC.length+" · Jyutping: "+s.fill+"/"+FILL.length;
+}
+function finish(){
+  if(!matchChecked) checkMatch();
+  var s=scores(), total=WORDS.length+MC.length+FILL.length, got=s.match+s.mc+s.fill, pct=Math.round(100*got/total);
+  var msg = pct===100 ? "🏆 完美！ Perfect score, Ace! You can name your family in Cantonese!" :
+            pct>=80 ? "🌟 Fantastic work, Ace! Practise saying each family word out loud tonight." :
+            pct>=60 ? "💪 Solid effort! Review the cards and try the ❌ ones again." :
+                      "🌱 New family words take practice! Look at Part 1 again, say each phrase three times, then retry.";
+  var f=document.getElementById("final"); f.style.display="block";
+  f.innerHTML="<h2 style='border:none;margin-top:0'>Final Score: "+got+" / "+total+" ("+pct+"%)</h2>"+
+    "<p>Matching: "+s.match+"/"+WORDS.length+" · Situations (first try): "+s.mc+"/"+MC.length+" · Jyutping typing: "+s.fill+"/"+FILL.length+"</p><p>"+msg+"</p>"+
+    "<p style='font-size:.85em;color:#6a1b9a'>Finished on "+new Date().toLocaleString("en-CA")+"</p>";
+  f.scrollIntoView({behavior:"smooth"});
+}
+buildCards(); buildMatch(); buildMC(); buildFill(); updateScore();
+document.getElementById("checkMatch").addEventListener("click",checkMatch);
+document.getElementById("finishBtn").addEventListener("click",finish);
+</script>
+</body>
+</html>
