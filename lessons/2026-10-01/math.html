@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Math (Oct. 1): Dinosaur Dig Math Lab</title>
+<style>
+  body{font-family:"Segoe UI",Verdana,Arial,sans-serif;font-size:20px;line-height:1.6;margin:0;background:#f3efe6;color:#1d2a3a}
+  .wrap{max-width:880px;margin:0 auto;padding:20px 18px 80px}
+  a.home{font-size:.9em;color:#6d4c41}
+  h1{color:#4e342e;font-size:2em;margin:10px 0}
+  h2{color:#6d4c41;margin-top:36px;border-bottom:3px solid #d7ccc8;padding-bottom:4px}
+  .box{background:#fff;border-radius:16px;padding:18px 22px;margin:16px 0;box-shadow:0 3px 10px rgba(0,0,0,.07)}
+  .example{border-left:8px solid #8d6e63}
+  .example h3{margin:0 0 6px;color:#6d4c41}
+  .step{margin:4px 0 4px 10px}
+  code,.mono{font-family:Consolas,"Courier New",monospace;background:#efebe9;padding:1px 6px;border-radius:5px}
+  .q{border-left:8px solid #90a4ae}
+  .q.right{border-left-color:#43a047;background:#f1f8e9}
+  .q.wrong{border-left-color:#e53935;background:#fff5f5}
+  .qnum{font-weight:bold;color:#4e342e}
+  .row{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:10px}
+  input[type=text]{font-size:1.05em;padding:8px 12px;border:2px solid #bcaaa4;border-radius:10px;width:190px}
+  input[type=text]:focus{outline:none;border-color:#6d4c41;box-shadow:0 0 0 3px #d7ccc8}
+  button{font-size:.95em;padding:8px 16px;border:none;border-radius:10px;cursor:pointer;font-weight:bold}
+  .check{background:#6d4c41;color:#fff} .check:hover{background:#4e342e}
+  .hint{background:#ffe082;color:#5d4037} .hint:hover{background:#ffd54f}
+  .sol{background:#ce93d8;color:#311b92}
+  .unit{color:#546e7a}
+  .fb{margin-top:8px;font-weight:bold;min-height:1em}
+  .fb.good{color:#2e7d32} .fb.bad{color:#c62828}
+  .hints{margin-top:8px;color:#5d4037;background:#fff8e1;border-radius:10px;padding:0 12px}
+  .hints p{margin:6px 0;padding:6px 0}
+  .solution{margin-top:8px;background:#f3e5f5;border-radius:10px;padding:8px 12px;display:none}
+  #scoreBox{position:sticky;bottom:0;background:#4e342e;color:#fff;border-radius:16px 16px 0 0;padding:12px 20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-top:30px}
+  #scoreBox button{background:#ffca28;color:#3e2723}
+  #final{display:none;font-size:1.15em;text-align:center;border:4px solid #43a047}
+  .tipbox{background:#fff8e1;border-left:8px solid #ffb300}
+</style>
+</head>
+<body>
+<div class="wrap">
+<a class="home" href="../../index.html">&larr; Back to all lessons</a>
+<h1>🧮 Math Week 4: Dinosaur Dig Math Lab</h1>
+<p>Today we leave the clinic, Ace, and dig into the <strong>Mesozoic Era</strong>! You'll use <strong>fractions, ratios, percentages, BEDMAS, mean/median/range, unit rates, area/volume, scale, and elapsed time</strong> — just like a palaeontologist measuring fossils, dig sites, and museum halls.</p>
+
+<h2>Part 1: Learn the Moves</h2>
+
+<div class="box tipbox">
+  <strong>The 4-Step Problem Solver (your dig-site check-up):</strong>
+  <ol>
+    <li><strong>Read</strong>: What is the question actually asking? Underline the numbers and units.</li>
+    <li><strong>Plan</strong>: Which operations do I need, and in what order?</li>
+    <li><strong>Solve</strong>: Do one step at a time and write each step down.</li>
+    <li><strong>Check</strong>: Is my answer reasonable? Did I answer the question that was asked?</li>
+  </ol>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 1: Scale model length</h3>
+  <p>A museum model of a T. rex is built at a scale of <strong>1 : 20</strong>. The model is 65 cm long. How long was the real dinosaur in centimetres?</p>
+  <p class="step">Step 1: Real length = model × scale factor = 65 × 20 = <strong>1300 cm</strong>.</p>
+  <p class="step">Check: 1300 ÷ 20 = 65 ✔</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 2: Fractions of fossils found</h3>
+  <p>A dig site has 48 fossil pieces. Ace's team has cleaned <strong>3/8</strong> of them. How many pieces are cleaned?</p>
+  <p class="step">Step 1: 48 ÷ 8 = 6; 6 × 3 = <strong>18 pieces</strong>.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 3: Percent of herbivores</h3>
+  <p>Out of 25 dinosaurs on a field chart, 40% are herbivores. How many are herbivores?</p>
+  <p class="step">Step 1: 40% = 0.40.</p>
+  <p class="step">Step 2: 0.40 × 25 = <strong>10 herbivores</strong>.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 4: Mean, median, and range</h3>
+  <p>Five fossil dig depths (metres): 2, 9, 5, 4, and 5. Find the <strong>mean</strong>, <strong>median</strong>, and <strong>range</strong>.</p>
+  <p class="step">Mean = (2 + 9 + 5 + 4 + 5) ÷ 5 = 25 ÷ 5 = <strong>5 m</strong>.</p>
+  <p class="step">Ordered: 2, 4, 5, 5, 9. Median = <strong>5 m</strong>.</p>
+  <p class="step">Range = 9 − 2 = <strong>7 m</strong>.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 5: Volume, conversion, and BEDMAS</h3>
+  <p>Convert 2500 mm to metres: 2500 ÷ 1000 = <strong>2.5 m</strong>.</p>
+  <p class="step">A fossil crate is 40 cm × 30 cm × 20 cm. Volume = 40 × 30 × 20 = <strong>24 000 cm³</strong>.</p>
+  <p><strong>BEDMAS:</strong> <span class="mono">(50 − 10) ÷ 5 × 3² + 4</span> → 40 ÷ 5 = 8; 3² = 9; 8 × 9 = 72; 72 + 4 = <strong>76</strong>.</p>
+</div>
+
+<h2>Part 2: The Challenge (20 problems)</h2>
+<p>Type your answer and press <strong>Check</strong> (or Enter). Fractions like <span class="mono">3/4</span>, mixed numbers like <span class="mono">1 3/4</span>, or decimals like <span class="mono">1.75</span> are fine. Don't type the units. Stuck? Press <strong>Hint</strong>. After 2 tries, you can see a full solution.</p>
+
+<div id="questions"></div>
+<div class="box" id="final"></div>
+<div id="scoreBox">
+  <span id="scoreText">Score: 0 / 20 correct</span>
+  <button id="finishBtn" type="button">I'm done! Show my final score</button>
+</div>
+</div>
+
+<script>
+var NAME = "Ace";
+var QUESTIONS = [
+ {t:"A T. rex model is built at a scale of <strong>1 : 20</strong>. The model is <strong>60 cm</strong> long. How long was the real dinosaur in centimetres?", a:"1200", u:"cm",
+  h:["Multiply the model length by the scale factor 20.","60 × 20 = ?"],
+  s:"60 × 20 = 1200 cm."},
+ {t:"Ace's dig team found <strong>36 fossil pieces</strong>. They have cleaned <strong>2/3</strong> of them. How many pieces are cleaned?", a:"24", u:"pieces",
+  h:["Find 2/3 of 36.","36 ÷ 3 = 12; then multiply by 2."],
+  s:"36 ÷ 3 = 12; 12 × 2 = 24 pieces."},
+ {t:"Out of 40 dinosaurs on a chart, <strong>35%</strong> are carnivores. How many are carnivores?", a:"14", u:"carnivores",
+  h:["35% = 0.35. Multiply by 40.","0.35 × 40 = ?"],
+  s:"0.35 × 40 = 14 carnivores."},
+ {t:"A Stegosaurus was about <strong>9 m</strong> long. A baby was <strong>1/3</strong> as long. How long was the baby in metres?", a:"3", u:"m",
+  h:["Find 1/3 of 9.","9 ÷ 3 = ?"],
+  s:"9 ÷ 3 = 3 m."},
+ {t:"Five dig depths (metres): 3, 8, 6, 4, and 4. What is the <strong>mean</strong> depth?", a:"5", u:"m",
+  h:["Add all five depths, then divide by 5.","3 + 8 + 6 + 4 + 4 = 25."],
+  s:"Sum = 25. 25 ÷ 5 = 5 m."},
+ {t:"Using the same five depths (3, 8, 6, 4, 4), what is the <strong>range</strong>?", a:"5", u:"m",
+  h:["Range = largest − smallest.","Largest is 8, smallest is 3."],
+  s:"8 − 3 = 5 m."},
+ {t:"Using the same five depths (3, 8, 6, 4, 4), what is the <strong>median</strong>?", a:"4", u:"m",
+  h:["Put the numbers in order from smallest to largest.","Ordered: 3, 4, 4, 6, 8. The middle value is the median."],
+  s:"Ordered: 3, 4, 4, 6, 8. Median = 4 m."},
+ {t:"A fossil truck travels <strong>180 km in 3 hours</strong> at a steady rate. What is the unit rate in kilometres per hour?", a:"60", u:"km/h",
+  h:["Divide distance by time.","180 ÷ 3 = ?"],
+  s:"180 ÷ 3 = 60 km/h."},
+ {t:"Convert <strong>4500 mm</strong> of a femur fossil length to metres.", a:"4.5", u:"m",
+  h:["1 m = 1000 mm. Divide by 1000.","4500 ÷ 1000 = ?"],
+  s:"4500 ÷ 1000 = 4.5 m."},
+ {t:"Use BEDMAS: <span class='mono'>(72 − 24) ÷ 6 × 2² + 3</span>", a:"35", u:"",
+  h:["Brackets first: 72 − 24 = 48. Exponent: 2² = 4.","48 ÷ 6 = 8; 8 × 4 = 32; 32 + 3 = ?"],
+  s:"(72 − 24) = 48; 2² = 4; 48 ÷ 6 = 8; 8 × 4 = 32; 32 + 3 = 35."},
+ {t:"Solve for <em>n</em>: <span class='mono'>5n + 15 = 70</span>", a:"11", u:"",
+  h:["Undo the + 15 first: subtract 15 from both sides.","5n = 55. Now divide by 5."],
+  s:"5n = 70 − 15 = 55, so n = 55 ÷ 5 = 11. Check: 5 × 11 + 15 = 70 ✔"},
+ {t:"A rectangular dig trench is <strong>18 m</strong> long and <strong>7 m</strong> wide. What is its <strong>area</strong>?", a:"126", u:"m²",
+  h:["Area of a rectangle = length × width.","18 × 7 = ?"],
+  s:"18 × 7 = 126 m²."},
+ {t:"A fossil shipping crate measures 25 cm by 20 cm by 16 cm. What is its <strong>volume</strong>?", a:"8000", u:"cm³",
+  h:["Volume of a rectangular prism = length × width × height.","25 × 20 × 16 = ?"],
+  s:"25 × 20 = 500; 500 × 16 = 8000 cm³."},
+ {t:"The museum tour started at <strong>10:25</strong> and finished at <strong>12:10</strong>. How many <strong>minutes</strong> did the tour last?", a:"105", u:"minutes",
+  h:["From 10:25 to 11:25 is 60 minutes. From 11:25 to 12:10 is another 45 minutes.","Add 60 + 45."],
+  s:"10:25 → 11:25 = 60 min; 11:25 → 12:10 = 45 min; total = 105 minutes."},
+ {t:"Plaster and water are mixed in a <strong>1 : 3</strong> ratio for fossil jackets (1 part plaster to 3 parts water). Ace needs 12 L of plaster. What is the <strong>total volume</strong> of the finished mixture?", a:"48", u:"L",
+  h:["Total parts = 1 + 3 = 4. Plaster is 1 of those 4 parts.","If 1 part = 12 L, then 4 parts = 4 × 12."],
+  s:"4 parts × 12 L = 48 L total (12 L plaster + 36 L water)."},
+ {t:"A Triceratops skull mass estimate rose from <strong>250 kg</strong> to <strong>300 kg</strong> after new fossils were found. What was the <strong>percent increase</strong>?", a:"20", u:"%",
+  h:["Increase = 300 − 250 = 50 kg.","Percent increase = (increase ÷ original) × 100 = (50 ÷ 250) × 100."],
+  s:"50 ÷ 250 = 0.2 = 20%."},
+ {t:"On Monday the dig found 30 fossils. Tuesday it found <strong>4/5</strong> as many as Monday. Wednesday it found 6 more than Tuesday. How many fossils did it find over the <strong>three days</strong> altogether?", a:"84", u:"fossils",
+  h:["Tuesday = 4/5 × 30. Wednesday = Tuesday + 6.","Then add Mon + Tue + Wed."],
+  s:"Tue: 4/5 × 30 = 24. Wed: 24 + 6 = 30. Total: 30 + 24 + 30 = 84 fossils."},
+ {t:"A scale drawing uses <strong>1 cm = 2.5 m</strong>. A dinosaur hall wall is <strong>8 cm</strong> on the drawing. What is the real length in metres?", a:"20", u:"m",
+  h:["Multiply the drawing length by 2.5.","8 × 2.5 = ?"],
+  s:"8 × 2.5 = 20 m."},
+ {t:"Ace sorted 96 fossil tags. <strong>3/8</strong> were plant fossils and the rest were animal fossils. How many were <strong>animal</strong> fossils?", a:"60", u:"tags",
+  h:["First find plant fossils: 3/8 of 96. Then subtract from 96.","96 ÷ 8 = 12; 12 × 3 = 36 plant; 96 − 36 = ?"],
+  s:"Plant: 3/8 × 96 = 36. Animal: 96 − 36 = 60 tags."},
+ {t:"A dig runs from Year −150 (million years ago label) to Year −145 on a timeline strip that is 20 cm long for those 5 million years. What is the unit rate in <strong>million years per centimetre</strong>?", a:"0.25", u:"million years per cm",
+  h:["5 million years ÷ 20 cm.","5 ÷ 20 = ?"],
+  s:"5 ÷ 20 = 0.25 million years per centimetre."}
+];
+
+var PRAISE = ["Nice work, Ace!","Correct! Your fossil math is sharp! 🦴","Yes! Palaeontologist Ace strikes again!","Excellent, Ace. That was a tough dig!","Right on! 🎯","Brilliant thinking, Ace!","Spot on, like a real scientist!"];
+var ENCOURAGE = ["Not quite. Check your steps and try again!","Close call. Try again, Ace! Maybe use a hint?","Hmm, not yet. Re-read the question carefully.","Keep going, Ace. Mistakes help your brain grow!"];
+
+function parseAnswer(str){
+  if(str===undefined||str===null) return NaN;
+  var s=String(str).trim().toLowerCase();
+  s=s.replace(/[\u2212\u2013]/g,"-");
+  s=s.replace(/(\d),(?=\d{3}(\D|$))/g,"$1");
+  s=s.replace(/[^0-9.\/\- ]/g," ").replace(/\s+/g," ").trim();
+  s=s.replace(/\s*\/\s*/g,"/");
+  var m;
+  if((m=s.match(/^(-?\d+) (\d+)\/(\d+)$/))){ var w=parseFloat(m[1]),n=parseFloat(m[2]),d=parseFloat(m[3]); if(d===0)return NaN; return w<0? w-n/d : w+n/d; }
+  if((m=s.match(/^(-?\d+(?:\.\d+)?)\/(\d+(?:\.\d+)?)$/))){ var d2=parseFloat(m[2]); if(d2===0)return NaN; return parseFloat(m[1])/d2; }
+  s=s.replace(/ /g,"");
+  if(/^-?(\d+\.?\d*|\.\d+)$/.test(s)) return parseFloat(s);
+  return NaN;
+}
+function isCorrect(input,key){
+  var a=parseAnswer(input), k=parseAnswer(key);
+  if(isNaN(a)) return false;
+  var isInt=Math.abs(k-Math.round(k))<1e-12;
+  var tol=isInt?1e-9:0.005;
+  return Math.abs(a-k)<=tol;
+}
+
+var state=[];
+function render(){
+  var box=document.getElementById("questions");
+  QUESTIONS.forEach(function(q,i){
+    state.push({correct:false,tries:0,hints:0});
+    var d=document.createElement("div");
+    d.className="box q"; d.id="q"+i;
+    d.innerHTML='<div><span class="qnum">'+(i+1)+'.</span> '+q.t+'</div>'+
+      '<div class="row"><input type="text" id="in'+i+'" aria-label="Answer to question '+(i+1)+'" autocomplete="off"> <span class="unit">'+q.u+'</span>'+
+      '<button type="button" class="check" data-i="'+i+'">Check</button>'+
+      '<button type="button" class="hint" data-i="'+i+'">Hint 💡</button>'+
+      '<button type="button" class="sol" data-i="'+i+'" style="display:none">Show solution</button></div>'+
+      '<div class="fb" id="fb'+i+'"></div><div class="hints" id="hints'+i+'"></div>'+
+      '<div class="solution" id="sol'+i+'"><strong>Solution:</strong> '+q.s+'</div>';
+    box.appendChild(d);
+  });
+  box.addEventListener("click",function(e){
+    var b=e.target; if(b.tagName!=="BUTTON")return;
+    var i=+b.getAttribute("data-i");
+    if(b.className==="check") check(i);
+    else if(b.className==="hint") hint(i);
+    else if(b.className==="sol") document.getElementById("sol"+i).style.display="block";
+  });
+  box.addEventListener("keydown",function(e){
+    if(e.key==="Enter"&&e.target.tagName==="INPUT"){ check(+e.target.id.slice(2)); }
+  });
+}
+function pick(arr){return arr[Math.floor(Math.random()*arr.length)];}
+function check(i){
+  var val=document.getElementById("in"+i).value;
+  var fb=document.getElementById("fb"+i), card=document.getElementById("q"+i);
+  if(val.trim()===""){fb.className="fb bad";fb.textContent="Type an answer first, Ace!";return;}
+  if(isNaN(parseAnswer(val))){fb.className="fb bad";fb.textContent="I can't read that as a number. Try something like 42, 3.5, 3/4 or 1 3/4.";return;}
+  state[i].tries++;
+  if(isCorrect(val,QUESTIONS[i].a)){
+    state[i].correct=true; card.className="box q right"; fb.className="fb good";
+    fb.textContent="✅ "+pick(PRAISE)+(state[i].tries===1?" (first try!)":"");
+  } else {
+    state[i].correct=false; card.className="box q wrong"; fb.className="fb bad";
+    fb.textContent="❌ "+pick(ENCOURAGE);
+    if(state[i].tries>=2) card.querySelector(".sol").style.display="inline-block";
+  }
+  updateScore();
+}
+function hint(i){
+  var q=QUESTIONS[i], s=state[i], hb=document.getElementById("hints"+i);
+  if(s.hints<q.h.length){
+    var p=document.createElement("p"); p.textContent="💡 Hint "+(s.hints+1)+": "+q.h[s.hints]; hb.appendChild(p); s.hints++;
+  }
+  if(s.hints>=q.h.length) document.querySelector("#q"+i+" .hint").disabled=true;
+  updateScore();
+}
+function counts(){
+  var c=0,first=0,h=0;
+  state.forEach(function(s){ if(s.correct){c++; if(s.tries===1)first++;} h+=s.hints; });
+  return {correct:c,first:first,hints:h};
+}
+function updateScore(){
+  var k=counts();
+  document.getElementById("scoreText").textContent="Score: "+k.correct+" / "+QUESTIONS.length+" correct · hints used: "+k.hints;
+}
+function finish(){
+  var k=counts(), n=QUESTIONS.length, pct=Math.round(100*k.correct/n);
+  var msg;
+  if(pct===100) msg="🏆 PERFECT SCORE! Incredible work, Ace. Your dinosaur dig math is museum-ready!";
+  else if(pct>=85) msg="🌟 Outstanding, Ace! That's a Grade 6-7 level performance!";
+  else if(pct>=65) msg="💪 Great effort, Ace! Review the ones you missed and try them again.";
+  else if(pct>=40) msg="👍 Good start, Ace! These problems are tough. Use the hints and solutions to learn the tricks, then try again.";
+  else msg="🌱 These are challenge problems, well above grade level. Every scientist started as a beginner. Go through the worked examples and try again, Ace!";
+  var f=document.getElementById("final");
+  f.style.display="block";
+  f.innerHTML="<h2 style='border:none;margin-top:0'>Final Score: "+k.correct+" / "+n+" ("+pct+"%)</h2>"+
+    "<p>Correct on the first try: "+k.first+" · Hints used: "+k.hints+"</p><p>"+msg+"</p>"+
+    "<p style='font-size:.85em;color:#546e7a'>Finished on "+new Date().toLocaleString("en-CA")+"</p>";
+  f.scrollIntoView({behavior:"smooth"});
+}
+render();
+updateScore();
+document.getElementById("finishBtn").addEventListener("click",finish);
+</script>
+</body>
+</html>

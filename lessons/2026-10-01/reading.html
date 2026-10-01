@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reading (Oct. 1): Bones in the Rock</title>
+<style>
+  body{font-family:"Segoe UI",Verdana,Arial,sans-serif;font-size:20px;line-height:1.65;margin:0;background:#f7f1e8;color:#1a2b2e}
+  .wrap{max-width:880px;margin:0 auto;padding:20px 18px 80px}
+  a.home{font-size:.9em;color:#5d4037}
+  h1{color:#3e2723;font-size:2em;margin:10px 0}
+  h2{color:#5d4037;margin-top:36px;border-bottom:3px solid #d7ccc8;padding-bottom:4px}
+  .box{background:#fff;border-radius:16px;padding:18px 22px;margin:16px 0;box-shadow:0 3px 10px rgba(0,0,0,.07)}
+  .passage{font-family:Georgia,"Times New Roman",serif;font-size:1.1em;line-height:1.8}
+  .passage h3{text-align:center;font-family:"Segoe UI",Verdana,sans-serif;color:#3e2723;font-size:1.4em;margin:4px 0 14px}
+  .passage p{text-indent:1.5em;margin:0 0 14px}
+  mark.v{background:#fff59d;padding:0 3px;border-radius:4px;font-weight:bold}
+  .tipbox{background:#fff8e1;border-left:8px solid #ffb300}
+  .q{border-left:8px solid #bcaaa4}
+  .q.right{border-left-color:#43a047;background:#f1f8e9}
+  .q.wrong{border-left-color:#e53935;background:#fff5f5}
+  .tag{display:inline-block;font-size:.7em;background:#6d4c41;color:#fff;border-radius:8px;padding:1px 8px;margin-left:6px;vertical-align:middle}
+  .opt{display:block;width:100%;text-align:left;font-size:.95em;background:#fafafa;border:2px solid #e0e0e0;border-radius:10px;padding:8px 14px;margin:8px 0;cursor:pointer;font-family:inherit}
+  .opt:hover{border-color:#a1887f;background:#fff}
+  .opt.sel-right{background:#c8e6c9;border-color:#43a047}
+  .opt.sel-wrong{background:#ffcdd2;border-color:#e53935}
+  .fb{margin-top:6px;font-weight:bold}
+  .fb.good{color:#2e7d32} .fb.bad{color:#c62828}
+  .explain{color:#3e2723;font-weight:normal}
+  select{font-size:.95em;padding:6px 8px;border-radius:8px;border:2px solid #a1887f;max-width:100%;font-family:inherit}
+  .vrow{display:flex;flex-wrap:wrap;align-items:center;gap:10px;padding:8px 6px;border-bottom:1px dashed #eee}
+  .vrow .w{font-weight:bold;min-width:140px}
+  .vrow.right{background:#f1f8e9} .vrow.wrong{background:#fff5f5}
+  .mark{font-size:1.2em;min-width:30px}
+  button.main{font-size:1em;padding:10px 20px;border:none;border-radius:10px;cursor:pointer;font-weight:bold;background:#6d4c41;color:#fff;margin-top:10px}
+  button.main:hover{background:#4e342e}
+  button.sec{font-size:.95em;padding:8px 16px;border:none;border-radius:10px;cursor:pointer;font-weight:bold;background:#ffe082;color:#5d4037}
+  textarea{width:100%;box-sizing:border-box;font-size:1em;font-family:inherit;padding:10px;border:2px solid #a1887f;border-radius:10px;min-height:120px}
+  #model{display:none;background:#efebe9;border-radius:10px;padding:10px 14px;margin-top:10px}
+  #scoreBox{position:sticky;bottom:0;background:#3e2723;color:#fff;border-radius:16px 16px 0 0;padding:12px 20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-top:30px}
+  #scoreBox button{font-size:.95em;padding:8px 16px;border:none;border-radius:10px;cursor:pointer;font-weight:bold;background:#ffca28;color:#3e2723}
+  #final{display:none;text-align:center;border:4px solid #43a047;font-size:1.1em}
+</style>
+</head>
+<body>
+<div class="wrap">
+<a class="home" href="../../index.html">&larr; Back to all lessons</a>
+<h1>📖 Reading Week 4: Bones in the Rock</h1>
+
+<div class="box tipbox">
+  <strong>Before you read, Ace:</strong> Good readers dig for clues the way palaeontologists dig for fossils.
+  <ul>
+    <li><strong>Preview:</strong> Read the title. What do you think the passage is about?</li>
+    <li><strong>Pause:</strong> After each paragraph, say its main idea in your head in one sentence.</li>
+    <li><strong>Words in <mark class="v">yellow</mark></strong> are vocabulary words. Use the sentence around them (the <em>context</em>) to figure out what they mean.</li>
+  </ul>
+</div>
+
+<div class="box passage" id="passage">
+<h3>Bones in the Rock</h3>
+<p>Sixty-six million years ago, a world of giants walked the Earth. Towering predators such as Tyrannosaurus rex hunted across plains, while plant-eating giants like Triceratops chewed tough ferns. Then something enormous changed the planet. Scientists think a huge asteroid slammed into what is now Mexico, darkening the skies and chilling the climate. Many dinosaurs — though not birds, which are living dinosaur relatives — became <mark class="v">extinct</mark>. Their bodies, eggs, footprints, and even droppings sometimes became <mark class="v">fossils</mark>: remains or traces locked into rock for ages.</p>
+<p>Fossils do not form every day. Most dead animals rot or are eaten. For a bone to fossilize, it usually needs to be buried quickly under mud, sand, or ash so scavengers and weather cannot destroy it. Over millions of years, minerals from groundwater seep into the bone and harden it, turning it into a kind of rock copy. That is why a fossil can feel heavy and cold, more like stone than living tissue. Soft parts such as skin and organs almost never survive, which is why palaeontologists must be careful detectives.</p>
+<p>The age of the dinosaurs spans three periods of the <mark class="v">Mesozoic</mark> Era: Triassic, Jurassic, and Cretaceous. During the Jurassic, famous plant-eaters such as Stegosaurus lumbered through forests, while long-necked sauropods reached for high leaves. Later, in the Cretaceous, T. rex and Triceratops shared landscapes in western North America. Canada has its own dinosaur treasure: Alberta's badlands, especially near Drumheller, hold some of the richest Cretaceous fossil beds on Earth. Visitors can see skeletons in museums and walk rocky valleys where bones still weather out of the cliffs.</p>
+<p>Not every dinosaur was a meat-eating <mark class="v">predator</mark>. Many were <mark class="v">herbivores</mark> that ate plants, and some were omnivores. Teeth tell the story. Sharp, serrated teeth suggest a <mark class="v">carnivore</mark>. Flat grinding teeth suggest a plant-eater. Horns, frills, and armour plates were not just decoration; they could scare rivals, attract mates, or protect against bites. Scientists also study trackways — lines of fossil footprints — to learn how dinosaurs walked, whether they travelled in herds, and how fast they might have moved.</p>
+<p>Modern <mark class="v">palaeontology</mark> is teamwork. Dig crews carefully <mark class="v">excavate</mark> sites with brushes, chisels, and plaster jackets that protect fragile bones for the trip to the lab. In the lab, preparators chip away rock grain by grain. Then researchers compare bones, measure joints, and build digital models. Sometimes a new fossil overturns an old idea — for example, when feathered dinosaurs from China showed that many meat-eaters were more birdlike than anyone once imagined.</p>
+<p>Why does any of this matter to a future doctor like you, Ace? Palaeontology trains the same habits medicine needs: patient observation, careful measurement, and the courage to change your mind when better evidence appears. A fossil is a clue, not a full video of the past. Scientists ask questions, test ideas, and admit what they do not yet know. That scientific mindset — curious, careful, and honest — is exactly what good doctors practise every day.</p>
+<p>The next time you stand under a towering museum skeleton, look past the drama of giant teeth. Think of the quiet work: a bone buried in mud, minerals seeping in, a dig team brushing dust for hours, a scientist redrawing a family tree. Dinosaurs are gone, but their story is still being written, one fossil at a time. And every careful reader of rocks — just like every careful reader of books — helps the truth come into clearer focus.</p>
+<p style="text-indent:0;font-size:.8em;color:#546e7a;text-align:right">About 620 words</p>
+</div>
+
+<h2>Part 1: Comprehension</h2>
+<p>Click the best answer. You'll find out right away if you're correct. Only your <strong>first click</strong> counts toward your score, but you can keep trying to find the right answer.</p>
+<div id="mc"></div>
+
+<h2>Part 2: Think Deeper (not scored)</h2>
+<div class="box">
+  <p><strong>In 2 to 4 sentences, explain how a dinosaur bone can become a fossil. Use at least two ideas from the passage (for example: <em>bury, minerals, excavate, extinct</em>).</strong></p>
+  <textarea id="openAns" placeholder="Write your answer here, Ace..."></textarea>
+  <p><button type="button" class="sec" id="showModel">Compare with a model answer</button></p>
+  <div id="model"><strong>Model answer:</strong> A bone usually needs to be buried quickly under mud, sand, or ash so it is not destroyed. Over a long time, minerals from groundwater seep into the bone and harden it into a rock-like fossil. Later, scientists may excavate the site carefully so the fossil can be studied in a lab.<br><em>Did your answer mention burial (or protection) and minerals (or hardening)? If so, great work!</em></div>
+</div>
+
+<h2>Part 3: Vocabulary</h2>
+<div class="box">
+  <h3 style="margin-top:0">A. Match each word to its meaning</h3>
+  <p>Choose the meaning that fits how the word is used in the passage.</p>
+  <div id="vmatch"></div>
+  <h3>B. Fill in the blank</h3>
+  <p>Choose the vocabulary word that best completes each sentence.</p>
+  <div id="vfill"></div>
+  <button type="button" class="main" id="checkVocab">Check my vocabulary</button>
+  <div class="fb" id="vocabFb"></div>
+</div>
+
+<div class="box" id="final"></div>
+<div id="scoreBox">
+  <span id="scoreText"></span>
+  <button type="button" id="finishBtn">I'm done! Show my final score</button>
+</div>
+</div>
+
+<script>
+var MC = [
+ {q:"Which sentence best states the <strong>main idea</strong> of the whole passage?",
+  o:["Alberta has badlands near Drumheller.",
+     "Fossils and careful science help us understand dinosaurs of the Mesozoic Era, and that detective work builds habits useful in medicine too.",
+     "T. rex had sharp teeth.",
+     "Asteroids are made of rock."],
+  a:1, e:"The other choices are true details, but only this one sums up the whole passage."},
+ {q:"According to the passage, what does it mean if a species is <strong>extinct</strong>?",
+  o:["It lives only in museums as toys.","It no longer lives anywhere on Earth.","It hibernates under rock.","It has become a bird overnight."],
+  a:1, e:"The passage says many dinosaurs became extinct — gone from the living world (except bird relatives noted separately)."},
+ {q:"Why must a bone usually be buried quickly to become a fossil?",
+  o:["So tourists can find it faster.","So scavengers and weather cannot destroy it.","So it turns into oil.","So it grows feathers."],
+  a:1, e:"Quick burial protects remains from scavengers and weather."},
+ {q:"What happens when minerals seep into a buried bone?",
+  o:["The bone melts into lava.","The bone hardens into a rock-like copy.","The dinosaur comes back to life.","The bone turns into a footprint."],
+  a:1, e:"Minerals harden the bone into a stone-like fossil."},
+ {q:"Which Canadian place does the passage name for rich Cretaceous fossils?",
+  o:["The Rocky Mountains only","Alberta's badlands near Drumheller","Toronto's subway tunnels","The Arctic Ocean floor only"],
+  a:1, e:"The passage highlights Alberta's badlands, especially near Drumheller."},
+ {q:"How can teeth help scientists tell a carnivore from a herbivore?",
+  o:["Tooth colour shows favourite food brands.","Sharp serrated teeth suggest a carnivore; flat grinding teeth suggest a plant-eater.","All dinosaurs had the same teeth.","Teeth never fossilize."],
+  a:1, e:"The passage contrasts sharp serrated teeth with flat grinding teeth."},
+ {q:"A student says, \"Palaeontology is just guessing with no evidence.\" Based on the passage, what is the <strong>best</strong> reply?", tag:"Inference",
+  o:["True — fossils are useless.","False — scientists excavate carefully, measure bones, build models, and change ideas when better evidence appears.","True — museums invent dinosaurs.","False — because dinosaurs still live in every city."],
+  a:1, e:"The passage describes careful excavation, lab work, models, and updating ideas with new fossils."},
+ {q:"Why might trackways (fossil footprints) be useful?", tag:"Inference",
+  o:["They prove dinosaurs could fly every day.","They can show how dinosaurs walked, whether they travelled in herds, and clues about speed.","They replace the need for any bones.","They tell exact dinosaur names from colour."],
+  a:1, e:"The passage says trackways help with walking style, herds, and possible speed."},
+ {q:"Why did the author connect palaeontology to becoming a doctor?", tag:"Author's purpose",
+  o:["To argue that Ace should quit reading","To show that careful observation, measurement, and honesty with evidence matter in both fields","To scare readers about asteroids","To advertise a toy store"],
+  a:1, e:"The author links scientific habits — observation, measurement, updating beliefs — to medicine."},
+ {q:"If soft parts almost never fossilize, what problem do scientists face?", tag:"Inference",
+  o:["They always know exact skin colour from every fossil.","They must infer much about soft tissues from bones, tracks, and rare special fossils.","They can interview living T. rex.","They never need museums."],
+  a:1, e:"Because soft parts rarely survive, scientists must be careful detectives using incomplete clues."}
+];
+
+var VOCAB = ["extinct","fossils","Mesozoic","predator","herbivore","carnivore","palaeontology","excavate"];
+var DEFS = {
+ extinct:"no longer living anywhere on Earth",
+ fossils:"remains or traces of ancient life preserved in rock",
+ Mesozoic:"the era that includes Triassic, Jurassic, and Cretaceous periods",
+ predator:"an animal that hunts other animals for food",
+ herbivore:"an animal that eats only plants",
+ carnivore:"an animal that eats mainly meat",
+ palaeontology:"the science of studying fossils (Canadian spelling)",
+ excavate:"to dig carefully in order to uncover something"
+};
+var FILL = [
+ {s:"Dinosaurs that no longer live anywhere on Earth are ____.", a:"extinct"},
+ {s:"Bones hardened by minerals in rock are called ____.", a:"fossils"},
+ {s:"Scientists ____ a dig site slowly with brushes and chisels.", a:"excavate"},
+ {s:"____ is the science that studies fossils.", a:"palaeontology"}
+];
+var FILL_OPTIONS = ["extinct","fossils","excavate","palaeontology","predator","herbivore"];
+
+var PRAISE=["Nice work, Ace!","Correct! Sharp reading, Ace!","Yes! You found the evidence!","Excellent thinking!","Right! Ace, fossil detective!"];
+function pick(a){return a[Math.floor(Math.random()*a.length)];}
+function shuffled(arr,seed){var a=arr.slice(),s=seed;for(var i=a.length-1;i>0;i--){s=(s*9301+49297)%233280;var j=Math.floor(s/233280*(i+1));var t=a[i];a[i]=a[j];a[j]=t;}return a;}
+
+var mcState=MC.map(function(){return {answered:false,firstRight:false,done:false};});
+var vocabScore=0, vocabChecked=false;
+var VOCAB_TOTAL=VOCAB.length+FILL.length;
+
+function buildMC(){
+  var box=document.getElementById("mc");
+  MC.forEach(function(item,i){
+    var d=document.createElement("div"); d.className="box q"; d.id="mc"+i;
+    var html="<div><strong>"+(i+1)+".</strong> "+item.q+(item.tag?'<span class="tag">'+item.tag+'</span>':"")+"</div>";
+    item.o.forEach(function(opt,j){ html+='<button type="button" class="opt" data-i="'+i+'" data-j="'+j+'">'+String.fromCharCode(65+j)+". "+opt+"</button>"; });
+    html+='<div class="fb" id="mcfb'+i+'"></div>';
+    d.innerHTML=html; box.appendChild(d);
+  });
+  box.addEventListener("click",function(e){
+    var b=e.target.closest?e.target.closest(".opt"):e.target; if(!b||!b.classList.contains("opt"))return;
+    answerMC(+b.getAttribute("data-i"),+b.getAttribute("data-j"),b);
+  });
+}
+function answerMC(i,j,btn){
+  var st=mcState[i], item=MC[i], fb=document.getElementById("mcfb"+i), card=document.getElementById("mc"+i);
+  if(st.done) return;
+  var right=(j===item.a);
+  if(!st.answered){ st.answered=true; st.firstRight=right; }
+  if(right){
+    st.done=true; btn.classList.add("sel-right"); card.className="box q right";
+    fb.className="fb good"; fb.innerHTML="✅ "+pick(PRAISE)+' <span class="explain">'+item.e+"</span>";
+  } else {
+    btn.classList.add("sel-wrong"); card.className="box q wrong";
+    fb.className="fb bad"; fb.innerHTML="❌ Not quite, Ace. Look back at the passage and try another answer.";
+  }
+  updateScore();
+}
+function buildVocab(){
+  var m=document.getElementById("vmatch");
+  var defOrder=shuffled(VOCAB,21);
+  VOCAB.forEach(function(w,i){
+    var row=document.createElement("div"); row.className="vrow"; row.id="vm"+i;
+    var sel='<select id="vsel'+i+'" aria-label="Meaning of '+w+'"><option value="">- choose a meaning -</option>';
+    defOrder.forEach(function(k){ sel+='<option value="'+k+'">'+DEFS[k]+'</option>'; });
+    sel+="</select>";
+    row.innerHTML='<span class="mark" id="vmk'+i+'"></span><span class="w">'+w+'</span>'+sel;
+    m.appendChild(row);
+  });
+  var f=document.getElementById("vfill");
+  FILL.forEach(function(item,i){
+    var row=document.createElement("div"); row.className="vrow"; row.id="vf"+i;
+    var sel='<select id="fsel'+i+'" aria-label="Blank '+(i+1)+'"><option value="">- choose -</option>';
+    FILL_OPTIONS.forEach(function(w){ sel+='<option value="'+w+'">'+w+'</option>'; });
+    sel+="</select>";
+    var parts=item.s.split("____");
+    row.innerHTML='<span class="mark" id="vfk'+i+'"></span><span>'+(i+1)+'. '+parts[0]+sel+parts[1]+'</span>';
+    f.appendChild(row);
+  });
+}
+function checkVocab(){
+  var score=0, blank=0;
+  VOCAB.forEach(function(w,i){
+    var v=document.getElementById("vsel"+i).value, ok=(v===w);
+    if(!v) blank++;
+    if(ok) score++;
+    document.getElementById("vm"+i).className="vrow "+(ok?"right":"wrong");
+    document.getElementById("vmk"+i).textContent=ok?"✅":"❌";
+  });
+  FILL.forEach(function(item,i){
+    var v=document.getElementById("fsel"+i).value, ok=(v===item.a);
+    if(!v) blank++;
+    if(ok) score++;
+    document.getElementById("vf"+i).className="vrow "+(ok?"right":"wrong");
+    document.getElementById("vfk"+i).textContent=ok?"✅":"❌";
+  });
+  vocabScore=score; vocabChecked=true;
+  var fb=document.getElementById("vocabFb");
+  if(score===VOCAB_TOTAL){ fb.className="fb good"; fb.textContent="🌟 "+score+" / "+VOCAB_TOTAL+". Perfect! Your dinosaur vocabulary is museum-strong, Ace!"; }
+  else { fb.className="fb bad"; fb.textContent=score+" / "+VOCAB_TOTAL+" correct"+(blank?" ("+blank+" left blank)":"")+". Fix the ❌ ones and check again. Try finding the word in the passage for clues!"; }
+  updateScore();
+}
+function scores(){
+  var mc=0,answered=0; mcState.forEach(function(s){ if(s.firstRight) mc++; if(s.answered) answered++; });
+  return {mc:mc,answered:answered,vocab:vocabScore};
+}
+function updateScore(){
+  var s=scores();
+  document.getElementById("scoreText").textContent="Comprehension: "+s.mc+" / "+MC.length+" · Vocabulary: "+(vocabChecked?s.vocab:"-")+" / "+VOCAB_TOTAL;
+}
+function finish(){
+  if(!vocabChecked) checkVocab();
+  var s=scores(), total=MC.length+VOCAB_TOTAL, got=s.mc+s.vocab, pct=Math.round(100*got/total);
+  var msg = pct===100 ? "🏆 A perfect score! Outstanding reading, Ace!" :
+            pct>=80 ? "🌟 Fantastic work, Ace! You read like a Grade 7 student!" :
+            pct>=60 ? "💪 Solid effort, Ace! Reread the paragraphs for the questions you missed." :
+                      "🌱 This was a challenging passage. Read it once more, slowly, and try again. You've got this, Ace!";
+  var f=document.getElementById("final"); f.style.display="block";
+  f.innerHTML="<h2 style='border:none;margin-top:0'>Final Score: "+got+" / "+total+" ("+pct+"%)</h2>"+
+    "<p>Comprehension (first tries): "+s.mc+" / "+MC.length+(s.answered<MC.length?" (you skipped "+(MC.length-s.answered)+")":"")+"<br>Vocabulary: "+s.vocab+" / "+VOCAB_TOTAL+"</p><p>"+msg+"</p>"+
+    "<p style='font-size:.85em;color:#546e7a'>Finished on "+new Date().toLocaleString("en-CA")+"</p>";
+  f.scrollIntoView({behavior:"smooth"});
+}
+buildMC(); buildVocab(); updateScore();
+document.getElementById("checkVocab").addEventListener("click",checkVocab);
+document.getElementById("finishBtn").addEventListener("click",finish);
+document.getElementById("showModel").addEventListener("click",function(){document.getElementById("model").style.display="block";});
+</script>
+</body>
+</html>

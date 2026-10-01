@@ -6,7 +6,7 @@ TTS voice (Cantonese): zh-HK-HiuMaanNeural
 TTS voice (English in ALL-words.mp3): en-HK-YanNeural
 Rate: slowed (~-20%) for clear listening practice.
 
-Sources: Ace lessons 2026-09-29 (Greetings) + 2026-09-30 (Family Members).
+Sources: Ace lessons 2026-09-29 (Greetings) + 2026-09-30 (Family Members) + 2026-10-01 (Food).
 Numbers 1-10 are already known and not included here.
 
 How to practise:
@@ -94,6 +94,47 @@ Individual files
   Chinese:  嫲嫲
   Jyutping: maa4 maa4
   English:  paternal grandma
+
+
+17-faan6-rice.mp3
+  Chinese:  飯
+  Jyutping: faan6
+  English:  rice / meal
+
+18-min6-noodles.mp3
+  Chinese:  麵
+  Jyutping: min6
+  English:  noodles
+
+19-seoi2-water.mp3
+  Chinese:  水
+  Jyutping: seoi2
+  English:  water
+
+20-caa4-tea.mp3
+  Chinese:  茶
+  Jyutping: caa4
+  English:  tea
+
+21-jyu2-fish.mp3
+  Chinese:  魚
+  Jyutping: jyu2
+  English:  fish
+
+22-gai1-chicken.mp3
+  Chinese:  雞
+  Jyutping: gai1
+  English:  chicken
+
+23-ping4-gwo2-apple.mp3
+  Chinese:  蘋果
+  Jyutping: ping4 gwo2
+  English:  apple
+
+24-hou2-sik6-delicious.mp3
+  Chinese:  好食
+  Jyutping: hou2 sik6
+  English:  delicious / tasty
 
 Combined file
 -------------
