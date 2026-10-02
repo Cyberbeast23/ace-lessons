@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reading (Oct. 2): Along the Nile</title>
+<style>
+  body{font-family:"Segoe UI",Verdana,Arial,sans-serif;font-size:20px;line-height:1.65;margin:0;background:#f7f1e8;color:#1a2b2e}
+  .wrap{max-width:880px;margin:0 auto;padding:20px 18px 80px}
+  a.home{font-size:.9em;color:#5d4037}
+  h1{color:#3e2723;font-size:2em;margin:10px 0}
+  h2{color:#5d4037;margin-top:36px;border-bottom:3px solid #d7ccc8;padding-bottom:4px}
+  .box{background:#fff;border-radius:16px;padding:18px 22px;margin:16px 0;box-shadow:0 3px 10px rgba(0,0,0,.07)}
+  .passage{font-family:Georgia,"Times New Roman",serif;font-size:1.1em;line-height:1.8}
+  .passage h3{text-align:center;font-family:"Segoe UI",Verdana,sans-serif;color:#3e2723;font-size:1.4em;margin:4px 0 14px}
+  .passage p{text-indent:1.5em;margin:0 0 14px}
+  mark.v{background:#fff59d;padding:0 3px;border-radius:4px;font-weight:bold}
+  .tipbox{background:#fff8e1;border-left:8px solid #ffb300}
+  .q{border-left:8px solid #bcaaa4}
+  .q.right{border-left-color:#43a047;background:#f1f8e9}
+  .q.wrong{border-left-color:#e53935;background:#fff5f5}
+  .tag{display:inline-block;font-size:.7em;background:#6d4c41;color:#fff;border-radius:8px;padding:1px 8px;margin-left:6px;vertical-align:middle}
+  .opt{display:block;width:100%;text-align:left;font-size:.95em;background:#fafafa;border:2px solid #e0e0e0;border-radius:10px;padding:8px 14px;margin:8px 0;cursor:pointer;font-family:inherit}
+  .opt:hover{border-color:#a1887f;background:#fff}
+  .opt.sel-right{background:#c8e6c9;border-color:#43a047}
+  .opt.sel-wrong{background:#ffcdd2;border-color:#e53935}
+  .fb{margin-top:6px;font-weight:bold}
+  .fb.good{color:#2e7d32} .fb.bad{color:#c62828}
+  .explain{color:#3e2723;font-weight:normal}
+  select{font-size:.95em;padding:6px 8px;border-radius:8px;border:2px solid #a1887f;max-width:100%;font-family:inherit}
+  .vrow{display:flex;flex-wrap:wrap;align-items:center;gap:10px;padding:8px 6px;border-bottom:1px dashed #eee}
+  .vrow .w{font-weight:bold;min-width:140px}
+  .vrow.right{background:#f1f8e9} .vrow.wrong{background:#fff5f5}
+  .mark{font-size:1.2em;min-width:30px}
+  button.main{font-size:1em;padding:10px 20px;border:none;border-radius:10px;cursor:pointer;font-weight:bold;background:#6d4c41;color:#fff;margin-top:10px}
+  button.main:hover{background:#4e342e}
+  button.sec{font-size:.95em;padding:8px 16px;border:none;border-radius:10px;cursor:pointer;font-weight:bold;background:#ffe082;color:#5d4037}
+  textarea{width:100%;box-sizing:border-box;font-size:1em;font-family:inherit;padding:10px;border:2px solid #a1887f;border-radius:10px;min-height:120px}
+  #model{display:none;background:#efebe9;border-radius:10px;padding:10px 14px;margin-top:10px}
+  #scoreBox{position:sticky;bottom:0;background:#3e2723;color:#fff;border-radius:16px 16px 0 0;padding:12px 20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-top:30px}
+  #scoreBox button{font-size:.95em;padding:8px 16px;border:none;border-radius:10px;cursor:pointer;font-weight:bold;background:#ffca28;color:#3e2723}
+  #final{display:none;text-align:center;border:4px solid #43a047;font-size:1.1em}
+</style>
+</head>
+<body>
+<div class="wrap">
+<a class="home" href="../../index.html">&larr; Back to all lessons</a>
+<h1>📖 Reading Week 5: Along the Nile</h1>
+
+<div class="box tipbox">
+  <strong>Before you read, Ace:</strong> Good readers dig for clues the way historians dig for artefacts.
+  <ul>
+    <li><strong>Preview:</strong> Read the title. What do you think the passage is about?</li>
+    <li><strong>Pause:</strong> After each paragraph, say its main idea in your head in one sentence.</li>
+    <li><strong>Words in <mark class="v">yellow</mark></strong> are vocabulary words. Use the sentence around them (the <em>context</em>) to figure out what they mean.</li>
+  </ul>
+</div>
+
+<div class="box passage" id="passage">
+<h3>Along the Nile</h3>
+<p>Thousands of years ago, a long green ribbon of life cut through a dry land. That ribbon was the Nile River, and along its banks rose one of the world's most famous <mark class="v">civilisations</mark>: Ancient Egypt. Without the Nile's yearly flood, Egypt would have been mostly desert. When the river rose, it left dark, rich mud on the fields. Farmers planted wheat and barley in that mud. The flood was not a disaster to them; it was a gift that fed cities, temples, and armies.</p>
+<p>At the top of society sat the <mark class="v">pharaoh</mark>, a ruler who was treated almost like a god on Earth. Pharaohs ordered the building of huge stone <mark class="v">monuments</mark> — pyramids, temples, and statues — to show power and to honour the gods. The Great Pyramid at Giza, built for Pharaoh Khufu, still amazes visitors today. Workers hauled limestone blocks with ramps, ropes, and careful planning. Contrary to some old myths, much of this labour came from skilled seasonal workers who were fed and housed, not only from enslaved people.</p>
+<p>Egyptians wrote with picture-signs called <mark class="v">hieroglyphs</mark>. Scribes pressed reed pens into papyrus, a paper-like sheet made from a river plant. Hieroglyphs could record taxes, prayers, medical recipes, and stories of the gods. For centuries after Egypt's power faded, no one could read those signs. Then, in 1799, soldiers found the Rosetta Stone, which carried the same message in three scripts. A French scholar named Champollion cracked the code, unlocking a library of <mark class="v">ancient</mark> voices.</p>
+<p>Religion shaped daily life. Egyptians believed in many gods and in an afterlife where the soul continued. Bodies of important people were carefully prepared as <mark class="v">mummies</mark> and placed in tombs with food, tools, and treasures they might need. Tombs were often decorated with painted scenes of farming, hunting, and festivals. Those paintings are like windows into the past: they show clothes, boats, animals, and even board games.</p>
+<p>Trade and technology travelled with the river. Boats carried grain, stone, gold, and ideas. Craftspeople made jewellery, linen cloth, and tools of copper and bronze. Doctors studied wounds and wrote medical texts that mixed careful observation with prayers. Future doctors like you, Ace, can notice the pattern: careful looking, careful recording, and the courage to revise ideas when better evidence appears — the same habits that help historians read tombs and help physicians read patients.</p>
+<p>Why does Ancient Egypt still matter? Because it shows how geography can shape a civilisation, how writing preserves knowledge, and how monuments can outlast the people who built them. When you stand before a museum sarcophagus or a photo of a desert <mark class="v">temple</mark>, you are meeting human curiosity from five thousand years ago. The Nile still flows. The questions — Who were we? What did we value? How did we survive? — still matter. And every careful reader of history, just like every careful reader of books, helps those old voices speak a little more clearly.</p>
+<p style="text-indent:0;font-size:.8em;color:#546e7a;text-align:right">About 580 words</p>
+</div>
+
+<h2>Part 1: Comprehension</h2>
+<p>Click the best answer. You'll find out right away if you're correct. Only your <strong>first click</strong> counts toward your score, but you can keep trying to find the right answer.</p>
+<div id="mc"></div>
+
+<h2>Part 2: Think Deeper (not scored)</h2>
+<div class="box">
+  <p><strong>In 2 to 4 sentences, explain why the Nile was so important to Ancient Egypt. Use at least two ideas from the passage (for example: <em>flood, mud, desert, trade, boats</em>).</strong></p>
+  <textarea id="openAns" placeholder="Write your answer here, Ace..."></textarea>
+  <p><button type="button" class="sec" id="showModel">Compare with a model answer</button></p>
+  <div id="model"><strong>Model answer:</strong> The Nile's yearly flood left rich mud on the fields so farmers could grow wheat and barley in a land that was mostly desert. Boats on the river also carried grain, stone, gold, and ideas, linking cities and temples. Without that water and mud, Ancient Egypt's civilisation could not have thrived.<br><em>Did your answer mention the flood/mud (or farming) and travel/trade (or desert contrast)? If so, great work!</em></div>
+</div>
+
+<h2>Part 3: Vocabulary</h2>
+<div class="box">
+  <h3 style="margin-top:0">A. Match each word to its meaning</h3>
+  <p>Choose the meaning that fits how the word is used in the passage.</p>
+  <div id="vmatch"></div>
+  <h3>B. Fill in the blank</h3>
+  <p>Choose the vocabulary word that best completes each sentence.</p>
+  <div id="vfill"></div>
+  <button type="button" class="main" id="checkVocab">Check my vocabulary</button>
+  <div class="fb" id="vocabFb"></div>
+</div>
+
+<div class="box" id="final"></div>
+<div id="scoreBox">
+  <span id="scoreText"></span>
+  <button type="button" id="finishBtn">I'm done! Show my final score</button>
+</div>
+</div>
+
+<script>
+var MC = [
+ {q:"Which sentence best states the <strong>main idea</strong> of the whole passage?",
+  o:["Champollion liked puzzles.",
+     "The Nile shaped Ancient Egyptian civilisation — farming, monuments, writing, religion, and trade — and studying it trains careful thinking.",
+     "Pyramids are made of limestone.",
+     "Papyrus grows near rivers."],
+  a:1, e:"The other choices are true details, but only this one sums up the whole passage."},
+ {q:"According to the passage, what did the Nile's yearly flood leave on the fields?",
+  o:["Salt that ruined crops.","Dark, rich mud for planting.","Gold nuggets for pharaohs.","Hieroglyph stones."],
+  a:1, e:"The flood left dark, rich mud that farmers used for wheat and barley."},
+ {q:"What was a <strong>pharaoh</strong>?",
+  o:["A type of Nile fish.","A ruler treated almost like a god on Earth.","A reed pen for papyrus.","A French scholar."],
+  a:1, e:"The passage says the pharaoh sat at the top of society and was treated almost like a god."},
+ {q:"Why was the Rosetta Stone important?",
+  o:["It was a pyramid capstone.","It helped scholars unlock how to read hieroglyphs.","It stopped the Nile flood.","It was Khufu's throne."],
+  a:1, e:"It carried the same message in three scripts and helped Champollion crack the code."},
+ {q:"What does the passage say about who built the pyramids?",
+  o:["Only robots built them.","Much labour came from skilled seasonal workers who were fed and housed, not only from enslaved people.","No one knows anything at all.","Children alone carved every block."],
+  a:1, e:"The passage corrects old myths about the workforce."},
+ {q:"Why were important people prepared as mummies?",
+  o:["So they could swim the Nile faster.","Because Egyptians believed in an afterlife where the soul continued.","To make hieroglyph ink.","To scare tourists."],
+  a:1, e:"Religion and belief in the afterlife shaped mummy preparation and tomb goods."},
+ {q:"A student says, \"Ancient Egypt had no science, only magic.\" Based on the passage, what is the <strong>best</strong> reply?", tag:"Inference",
+  o:["True — doctors never observed wounds.","Incomplete — Egyptians also recorded medical recipes, observed carefully, and used technology like boats, copper tools, and planning for monuments.","True — writing never existed.","False — because pharaohs invented cars."],
+  a:1, e:"The passage mentions medical texts, careful observation, boats, tools, and planned construction."},
+ {q:"How does the author connect Egypt to becoming a doctor?", tag:"Author's purpose",
+  o:["To argue Ace should quit school","To show that careful looking, careful recording, and revising ideas with evidence matter in both history and medicine","To advertise a Nile cruise","To scare readers about floods"],
+  a:1, e:"The author links observation, recording, and updating beliefs to both fields."},
+ {q:"What problem did historians face before the Rosetta Stone was understood?", tag:"Inference",
+  o:["They could interview living pharaohs easily.","They could not read hieroglyphs, so many ancient voices stayed locked.","They had too many translations already.","Papyrus never survived."],
+  a:1, e:"For centuries no one could read the signs until the code was cracked."},
+ {q:"Why might tomb paintings matter to historians?", tag:"Inference",
+  o:["They prove Egyptians invented aeroplanes.","They act like windows into daily life — clothes, boats, animals, and games.","They replace the need for any writing.","They tell exact Nile flood dates from colour alone."],
+  a:1, e:"The passage calls painted scenes windows into the past."}
+];
+
+var VOCAB = ["civilisations","pharaoh","monuments","hieroglyphs","ancient","mummies","temple"];
+var DEFS = {
+ civilisations:"complex societies with cities, writing, and organised government (Canadian spelling)",
+ pharaoh:"a ruler of Ancient Egypt, treated almost like a god",
+ monuments:"large structures built to honour people, gods, or events",
+ hieroglyphs:"picture-writing signs used in Ancient Egypt",
+ ancient:"from a time long ago in history",
+ mummies:"bodies carefully preserved for the afterlife",
+ temple:"a building used for worship of gods"
+};
+var FILL = [
+ {s:"The ____ ordered huge pyramids to be built.", a:"pharaoh"},
+ {s:"Picture-signs called ____ recorded taxes and prayers.", a:"hieroglyphs"},
+ {s:"Bodies prepared for the afterlife are called ____.", a:"mummies"},
+ {s:"A desert ____ was a place to honour the gods.", a:"temple"}
+];
+var FILL_OPTIONS = ["pharaoh","hieroglyphs","mummies","temple","monuments","ancient"];
+
+var PRAISE=["Nice work, Ace!","Correct! Sharp reading, Ace!","Yes! You found the evidence!","Excellent thinking!","Right! Ace, Nile detective!"];
+function pick(a){return a[Math.floor(Math.random()*a.length)];}
+function shuffled(arr,seed){var a=arr.slice(),s=seed;for(var i=a.length-1;i>0;i--){s=(s*9301+49297)%233280;var j=Math.floor(s/233280*(i+1));var t=a[i];a[i]=a[j];a[j]=t;}return a;}
+
+var mcState=MC.map(function(){return {answered:false,firstRight:false,done:false};});
+var vocabScore=0, vocabChecked=false;
+var VOCAB_TOTAL=VOCAB.length+FILL.length;
+
+function buildMC(){
+  var box=document.getElementById("mc");
+  MC.forEach(function(item,i){
+    var d=document.createElement("div"); d.className="box q"; d.id="mc"+i;
+    var html="<div><strong>"+(i+1)+".</strong> "+item.q+(item.tag?'<span class="tag">'+item.tag+'</span>':"")+"</div>";
+    item.o.forEach(function(opt,j){ html+='<button type="button" class="opt" data-i="'+i+'" data-j="'+j+'">'+String.fromCharCode(65+j)+". "+opt+"</button>"; });
+    html+='<div class="fb" id="mcfb'+i+'"></div>';
+    d.innerHTML=html; box.appendChild(d);
+  });
+  box.addEventListener("click",function(e){
+    var b=e.target.closest?e.target.closest(".opt"):e.target; if(!b||!b.classList.contains("opt"))return;
+    answerMC(+b.getAttribute("data-i"),+b.getAttribute("data-j"),b);
+  });
+}
+function answerMC(i,j,btn){
+  var st=mcState[i], item=MC[i], fb=document.getElementById("mcfb"+i), card=document.getElementById("mc"+i);
+  if(st.done) return;
+  var right=(j===item.a);
+  if(!st.answered){ st.answered=true; st.firstRight=right; }
+  if(right){
+    st.done=true; btn.classList.add("sel-right"); card.className="box q right";
+    fb.className="fb good"; fb.innerHTML="✅ "+pick(PRAISE)+' <span class="explain">'+item.e+"</span>";
+  } else {
+    btn.classList.add("sel-wrong"); card.className="box q wrong";
+    fb.className="fb bad"; fb.innerHTML="❌ Not quite, Ace. Look back at the passage and try another answer.";
+  }
+  updateScore();
+}
+function buildVocab(){
+  var m=document.getElementById("vmatch");
+  var defOrder=shuffled(VOCAB,22);
+  VOCAB.forEach(function(w,i){
+    var row=document.createElement("div"); row.className="vrow"; row.id="vm"+i;
+    var sel='<select id="vsel'+i+'" aria-label="Meaning of '+w+'"><option value="">- choose a meaning -</option>';
+    defOrder.forEach(function(k){ sel+='<option value="'+k+'">'+DEFS[k]+'</option>'; });
+    sel+="</select>";
+    row.innerHTML='<span class="mark" id="vmk'+i+'"></span><span class="w">'+w+'</span>'+sel;
+    m.appendChild(row);
+  });
+  var f=document.getElementById("vfill");
+  FILL.forEach(function(item,i){
+    var row=document.createElement("div"); row.className="vrow"; row.id="vf"+i;
+    var sel='<select id="fsel'+i+'" aria-label="Blank '+(i+1)+'"><option value="">- choose -</option>';
+    FILL_OPTIONS.forEach(function(w){ sel+='<option value="'+w+'">'+w+'</option>'; });
+    sel+="</select>";
+    var parts=item.s.split("____");
+    row.innerHTML='<span class="mark" id="vfk'+i+'"></span><span>'+(i+1)+'. '+parts[0]+sel+parts[1]+'</span>';
+    f.appendChild(row);
+  });
+}
+function checkVocab(){
+  var score=0, blank=0;
+  VOCAB.forEach(function(w,i){
+    var v=document.getElementById("vsel"+i).value, ok=(v===w);
+    if(!v) blank++;
+    if(ok) score++;
+    document.getElementById("vm"+i).className="vrow "+(ok?"right":"wrong");
+    document.getElementById("vmk"+i).textContent=ok?"✅":"❌";
+  });
+  FILL.forEach(function(item,i){
+    var v=document.getElementById("fsel"+i).value, ok=(v===item.a);
+    if(!v) blank++;
+    if(ok) score++;
+    document.getElementById("vf"+i).className="vrow "+(ok?"right":"wrong");
+    document.getElementById("vfk"+i).textContent=ok?"✅":"❌";
+  });
+  vocabScore=score; vocabChecked=true;
+  var fb=document.getElementById("vocabFb");
+  if(score===VOCAB_TOTAL){ fb.className="fb good"; fb.textContent="🌟 "+score+" / "+VOCAB_TOTAL+". Perfect! Your Egypt vocabulary is temple-strong, Ace!"; }
+  else { fb.className="fb bad"; fb.textContent=score+" / "+VOCAB_TOTAL+" correct"+(blank?" ("+blank+" left blank)":"")+". Fix the ❌ ones and check again. Try finding the word in the passage for clues!"; }
+  updateScore();
+}
+function scores(){
+  var mc=0,answered=0; mcState.forEach(function(s){ if(s.firstRight) mc++; if(s.answered) answered++; });
+  return {mc:mc,answered:answered,vocab:vocabScore};
+}
+function updateScore(){
+  var s=scores();
+  document.getElementById("scoreText").textContent="Comprehension: "+s.mc+" / "+MC.length+" · Vocabulary: "+(vocabChecked?s.vocab:"-")+" / "+VOCAB_TOTAL;
+}
+function finish(){
+  if(!vocabChecked) checkVocab();
+  var s=scores(), total=MC.length+VOCAB_TOTAL, got=s.mc+s.vocab, pct=Math.round(100*got/total);
+  var msg = pct===100 ? "🏆 A perfect score! Outstanding reading, Ace!" :
+            pct>=80 ? "🌟 Fantastic work, Ace! You read like a Grade 7 student!" :
+            pct>=60 ? "💪 Solid effort, Ace! Reread the paragraphs for the questions you missed." :
+                      "🌱 This was a challenging passage. Read it once more, slowly, and try again. You've got this, Ace!";
+  var f=document.getElementById("final"); f.style.display="block";
+  f.innerHTML="<h2 style='border:none;margin-top:0'>Final Score: "+got+" / "+total+" ("+pct+"%)</h2>"+
+    "<p>Comprehension (first tries): "+s.mc+" / "+MC.length+(s.answered<MC.length?" (you skipped "+(MC.length-s.answered)+")":"")+"<br>Vocabulary: "+s.vocab+" / "+VOCAB_TOTAL+"</p><p>"+msg+"</p>"+
+    "<p style='font-size:.85em;color:#546e7a'>Finished on "+new Date().toLocaleString("en-CA")+"</p>";
+  f.scrollIntoView({behavior:"smooth"});
+}
+buildMC(); buildVocab(); updateScore();
+document.getElementById("checkVocab").addEventListener("click",checkVocab);
+document.getElementById("finishBtn").addEventListener("click",finish);
+document.getElementById("showModel").addEventListener("click",function(){document.getElementById("model").style.display="block";});
+</script>
+</body>
+</html>
