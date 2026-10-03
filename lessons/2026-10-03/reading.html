@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reading (Oct. 3): Into the Deep Ocean</title>
+<style>
+  body{font-family:"Segoe UI",Verdana,Arial,sans-serif;font-size:20px;line-height:1.65;margin:0;background:#e3f2fd;color:#0d2137}
+  .wrap{max-width:880px;margin:0 auto;padding:20px 18px 80px}
+  a.home{font-size:.9em;color:#0277bd}
+  h1{color:#01579b;font-size:2em;margin:10px 0}
+  h2{color:#0277bd;margin-top:36px;border-bottom:3px solid #81d4fa;padding-bottom:4px}
+  .box{background:#fff;border-radius:16px;padding:18px 22px;margin:16px 0;box-shadow:0 3px 10px rgba(0,0,0,.07)}
+  .passage{font-family:Georgia,"Times New Roman",serif;font-size:1.1em;line-height:1.8}
+  .passage h3{text-align:center;font-family:"Segoe UI",Verdana,sans-serif;color:#01579b;font-size:1.4em;margin:4px 0 14px}
+  .passage p{text-indent:1.5em;margin:0 0 14px}
+  mark.v{background:#fff59d;padding:0 3px;border-radius:4px;font-weight:bold}
+  .tipbox{background:#fff8e1;border-left:8px solid #ffb300}
+  .q{border-left:8px solid #90caf9}
+  .q.right{border-left-color:#43a047;background:#f1f8e9}
+  .q.wrong{border-left-color:#e53935;background:#fff5f5}
+  .tag{display:inline-block;font-size:.7em;background:#0277bd;color:#fff;border-radius:8px;padding:1px 8px;margin-left:6px;vertical-align:middle}
+  .opt{display:block;width:100%;text-align:left;font-size:.95em;background:#fafafa;border:2px solid #e0e0e0;border-radius:10px;padding:8px 14px;margin:8px 0;cursor:pointer;font-family:inherit}
+  .opt:hover{border-color:#4fc3f7;background:#fff}
+  .opt.sel-right{background:#c8e6c9;border-color:#43a047}
+  .opt.sel-wrong{background:#ffcdd2;border-color:#e53935}
+  .fb{margin-top:6px;font-weight:bold}
+  .fb.good{color:#2e7d32} .fb.bad{color:#c62828}
+  .explain{color:#01579b;font-weight:normal}
+  select{font-size:.95em;padding:6px 8px;border-radius:8px;border:2px solid #4fc3f7;max-width:100%;font-family:inherit}
+  .vrow{display:flex;flex-wrap:wrap;align-items:center;gap:10px;padding:8px 6px;border-bottom:1px dashed #eee}
+  .vrow .w{font-weight:bold;min-width:140px}
+  .vrow.right{background:#f1f8e9} .vrow.wrong{background:#fff5f5}
+  .mark{font-size:1.2em;min-width:30px}
+  button.main{font-size:1em;padding:10px 20px;border:none;border-radius:10px;cursor:pointer;font-weight:bold;background:#0277bd;color:#fff;margin-top:10px}
+  button.main:hover{background:#01579b}
+  button.sec{font-size:.95em;padding:8px 16px;border:none;border-radius:10px;cursor:pointer;font-weight:bold;background:#ffe082;color:#5d4037}
+  textarea{width:100%;box-sizing:border-box;font-size:1em;font-family:inherit;padding:10px;border:2px solid #4fc3f7;border-radius:10px;min-height:120px}
+  #model{display:none;background:#e1f5fe;border-radius:10px;padding:10px 14px;margin-top:10px}
+  #scoreBox{position:sticky;bottom:0;background:#01579b;color:#fff;border-radius:16px 16px 0 0;padding:12px 20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-top:30px}
+  #scoreBox button{font-size:.95em;padding:8px 16px;border:none;border-radius:10px;cursor:pointer;font-weight:bold;background:#ffca28;color:#3e2723}
+  #final{display:none;text-align:center;border:4px solid #43a047;font-size:1.1em}
+</style>
+</head>
+<body>
+<div class="wrap">
+<a class="home" href="../../index.html">&larr; Back to all lessons</a>
+<h1>📖 Reading Week 6: Into the Deep Ocean</h1>
+
+<div class="box tipbox">
+  <strong>Before you read, Ace:</strong> Good readers dive for clues the way scientists dive for samples.
+  <ul>
+    <li><strong>Preview:</strong> Read the title. What do you think the passage is about?</li>
+    <li><strong>Pause:</strong> After each paragraph, say its main idea in your head in one sentence.</li>
+    <li><strong>Words in <mark class="v">yellow</mark></strong> are vocabulary words. Use the sentence around them (the <em>context</em>) to figure out what they mean.</li>
+  </ul>
+</div>
+
+<div class="box passage" id="passage">
+<h3>Into the Deep Ocean</h3>
+<p>Most of Earth's surface is covered by salt water, yet humans have explored only a tiny fraction of it. The ocean is not one flat blue sheet. It is a stack of layers, each with its own light, temperature, and pressure. Near the surface, sunlight fuels tiny drifting organisms called <mark class="v">plankton</mark>. Those plankton form the base of a vast food web: small fish eat plankton, larger fish eat smaller fish, and whales filter clouds of plankton from the water. Without that invisible soup of life, the ocean's great hunters would starve. Scientists call this sunlit layer the photic zone, and it is only a thin skin on a planet-sized sea.</p>
+<p>As you dive deeper, light fades. Below about 200 metres, plants cannot photosynthesise. Deeper still, pressure climbs. Water presses from every direction; at the bottom of some trenches, the force can crush unprotected equipment. That crushing force is why engineers build thick-walled <mark class="v">submarines</mark> and robotic landers. Even so, the deep is not empty. In the midnight zones, some animals make their own light. This living glow — <mark class="v">bioluminescence</mark> — can lure prey, confuse predators, or help creatures find mates in near darkness. Anglerfish, jellyfish, and tiny crustaceans all take part in this underwater light show, proving that life invents clever tools when the Sun cannot reach.</p>
+<p>Canada borders both the Pacific and the Atlantic oceans. Along the Pacific coast of British Columbia, cold currents and rocky shores create rich <mark class="v">habitats</mark> for kelp forests, salmon, and seabirds. On the Atlantic side, the continental shelf has long supported fisheries and research. Scientists map those waters with <mark class="v">sonar</mark>, a system that sends sound waves and listens for echoes. Sonar can reveal seamounts, wrecks, and the shape of the seafloor without anyone having to swim there. Ships also lower conductivity-temperature-depth instruments — sensors that measure how salty, warm, or cold the water is at each layer — so maps of the ocean include chemistry as well as shape.</p>
+<p>Research vessels carry teams of biologists, geologists, and engineers. They lower cameras, nets, and sensors into places no human could safely visit. Some missions study how water <mark class="v">pressure</mark> rises with depth: roughly one extra atmosphere of force for every ten metres down. Others track ocean <mark class="v">currents</mark> that move heat around the planet, shaping weather far inland. When a current shifts, coastal towns can feel warmer winters or colder summers. Understanding those flows helps countries plan for climate change. Buoyancy matters too; engineers design tanks and floats so instruments sink or rise on command, the same physical idea that keeps a life jacket pushing you upward at the surface.</p>
+<p>Why does the deep ocean matter to a future doctor? Because careful observation, careful measurement, and respect for evidence are the same habits that keep patients safe. An oceanographer who trusts a sonar reading must still check for noise and bias. A physician who reads a lab report must still look at the whole patient. Both fields ask: What do we know? What might we be missing? What happens if we go deeper? Curiosity without careful checking can mislead; checking without curiosity never discovers anything new.</p>
+<p>The next time you stand on a Canadian <mark class="v">coastline</mark> and watch waves roll in, remember that under those waves lie canyons, glowing creatures, and food webs as complex as any city. Most of that world is still barely mapped. Every careful reader of science — just like every careful reader of books — helps push the edge of the known a little farther into the blue. Ace, when you practise reading for evidence today, you are training the same mind that one day might read a chart, a scan, or a patient story with equal care.</p>
+<p style="text-indent:0;font-size:.8em;color:#546e7a;text-align:right">About 620 words</p>
+</div>
+
+<h2>Part 1: Comprehension</h2>
+<p>Click the best answer. You'll find out right away if you're correct. Only your <strong>first click</strong> counts toward your score, but you can keep trying to find the right answer.</p>
+<div id="mc"></div>
+
+<h2>Part 2: Think Deeper (not scored)</h2>
+<div class="box">
+  <p><strong>In 2 to 4 sentences, explain why the deep ocean is hard to explore and why scientists still try. Use at least two ideas from the passage (for example: <em>pressure, light, sonar, research vessels, bioluminescence</em>).</strong></p>
+  <textarea id="openAns" placeholder="Write your answer here, Ace..."></textarea>
+  <p><button type="button" class="sec" id="showModel">Compare with a model answer</button></p>
+  <div id="model"><strong>Model answer:</strong> The deep ocean is hard to explore because light fades and water pressure rises so high it can crush unprotected equipment, which is why engineers build thick-walled submarines and robots. Scientists still explore with research vessels, sonar, cameras, and sensors because the deep holds food webs, glowing animals, and clues about currents that affect climate. Careful measurement helps us understand a world that is still barely mapped.<br><em>Did your answer mention pressure/light (or equipment) and a reason scientists explore (sonar, vessels, climate, or discovery)? If so, great work!</em></div>
+</div>
+
+<h2>Part 3: Vocabulary</h2>
+<div class="box">
+  <h3 style="margin-top:0">A. Match each word to its meaning</h3>
+  <p>Choose the meaning that fits how the word is used in the passage.</p>
+  <div id="vmatch"></div>
+  <h3>B. Fill in the blank</h3>
+  <p>Choose the vocabulary word that best completes each sentence.</p>
+  <div id="vfill"></div>
+  <button type="button" class="main" id="checkVocab">Check my vocabulary</button>
+  <div class="fb" id="vocabFb"></div>
+</div>
+
+<div class="box" id="final"></div>
+<div id="scoreBox">
+  <span id="scoreText"></span>
+  <button type="button" id="finishBtn">I'm done! Show my final score</button>
+</div>
+</div>
+
+<script>
+var MC = [
+ {q:"Which sentence best states the <strong>main idea</strong> of the whole passage?",
+  o:["Whales only eat kelp.",
+     "The ocean has layered zones of light, pressure, and life; Canada studies them with sonar and research vessels, and careful science habits matter on land and at sea.",
+     "Sonar was invented last week.",
+     "Plankton glow in the dark."],
+  a:1, e:"The other choices are true details or false, but only this one sums up the whole passage."},
+ {q:"According to the passage, what do plankton do near the surface?",
+  o:["They crush submarines.","They form the base of a vast food web.","They invent sonar.","They stop all ocean currents."],
+  a:1, e:"Plankton are tiny drifting organisms that many sea animals depend on."},
+ {q:"What is <strong>bioluminescence</strong>?",
+  o:["A type of Canadian coastline.","Living light some deep-sea animals make.","A thick-walled submarine.","A warm ocean current only."],
+  a:1, e:"The passage defines bioluminescence as living glow that can lure prey, confuse predators, or help find mates."},
+ {q:"Why do engineers build thick-walled submarines for deep dives?",
+  o:["To make them look shiny.","Because water pressure can crush unprotected equipment.","So plankton can live inside.","To block sonar forever."],
+  a:1, e:"Pressure rises with depth and can crush unprotected gear."},
+ {q:"How do scientists map the seafloor without swimming there?",
+  o:["By tasting the water.","With sonar that sends sound waves and listens for echoes.","By counting only seabirds.","By waiting for the tide alone."],
+  a:1, e:"Sonar reveals seamounts, wrecks, and seafloor shape."},
+ {q:"What does the passage say about Canada's oceans?",
+  o:["Canada has no coastline.","Canada borders both the Pacific and the Atlantic, with rich Pacific habitats and Atlantic research and fisheries.","Only the Arctic Ocean matters.","British Columbia has no kelp."],
+  a:1, e:"The passage describes Pacific BC habitats and Atlantic shelf fisheries and research."},
+ {q:"A student says, \"The deep ocean is empty and useless.\" Based on the passage, what is the <strong>best</strong> reply?", tag:"Inference",
+  o:["True — nothing lives below 200 metres.","Incomplete — deep zones have bioluminescent animals, food webs, and clues about currents that affect climate.","True — sonar never works.","False — because oceans are fresh water."],
+  a:1, e:"The passage describes life, glow, research, and climate-linked currents in the deep."},
+ {q:"How does the author connect ocean science to becoming a doctor?", tag:"Author's purpose",
+  o:["To argue Ace should quit school","To show that careful observation, measurement, and checking for missing evidence matter in both fields","To advertise a submarine ride","To scare readers about plankton"],
+  a:1, e:"The author links careful habits of oceanographers and physicians."},
+ {q:"What problem does rising pressure create for explorers?", tag:"Inference",
+  o:["It makes surface plankton too bright.","It can crush unprotected equipment, so special vessels and robots are needed.","It stops all sonar instantly.","It turns salt water into fresh water."],
+  a:1, e:"Pressure is why thick-walled submarines and robotic landers are built."},
+ {q:"Why might ocean currents matter to people who live far from the sea?", tag:"Inference",
+  o:["Currents only affect fish names.","Currents move heat and can change weather inland, so understanding them helps with climate planning.","Currents invent hieroglyphs.","Currents erase coastlines overnight always."],
+  a:1, e:"The passage says shifting currents can change coastal winters and summers and help climate planning."}
+];
+
+var VOCAB = ["plankton","submarines","bioluminescence","habitats","sonar","pressure","currents","coastline"];
+var DEFS = {
+ plankton:"tiny drifting organisms that many sea animals eat",
+ submarines:"vessels that can travel underwater",
+ bioluminescence:"living light made by some deep-sea animals",
+ habitats:"natural homes of plants or animals",
+ sonar:"a system that uses sound waves to find objects underwater",
+ pressure:"the force pressing on something (rises with ocean depth)",
+ currents:"continuous flows of water in the sea",
+ coastline:"the land along the edge of the sea"
+};
+var FILL = [
+ {s:"Scientists used ____ to locate a wreck on the seafloor.", a:"sonar"},
+ {s:"Whales filter ____ from the water.", a:"plankton"},
+ {s:"Water ____ rises as you dive deeper.", a:"pressure"},
+ {s:"Coral reefs are a rich ____ for fish.", a:"habitats"}
+];
+var FILL_OPTIONS = ["sonar","plankton","pressure","habitats","currents","coastline"];
+
+var PRAISE=["Nice work, Ace!","Correct! Sharp reading, Ace!","Yes! You found the evidence!","Excellent thinking!","Right! Ace, ocean detective!"];
+function pick(a){return a[Math.floor(Math.random()*a.length)];}
+function shuffled(arr,seed){var a=arr.slice(),s=seed;for(var i=a.length-1;i>0;i--){s=(s*9301+49297)%233280;var j=Math.floor(s/233280*(i+1));var t=a[i];a[i]=a[j];a[j]=t;}return a;}
+
+var mcState=MC.map(function(){return {answered:false,firstRight:false,done:false};});
+var vocabScore=0, vocabChecked=false;
+var VOCAB_TOTAL=VOCAB.length+FILL.length;
+
+function buildMC(){
+  var box=document.getElementById("mc");
+  MC.forEach(function(item,i){
+    var d=document.createElement("div"); d.className="box q"; d.id="mc"+i;
+    var html="<div><strong>"+(i+1)+".</strong> "+item.q+(item.tag?'<span class="tag">'+item.tag+'</span>':"")+"</div>";
+    item.o.forEach(function(opt,j){ html+='<button type="button" class="opt" data-i="'+i+'" data-j="'+j+'">'+String.fromCharCode(65+j)+". "+opt+"</button>"; });
+    html+='<div class="fb" id="mcfb'+i+'"></div>';
+    d.innerHTML=html; box.appendChild(d);
+  });
+  box.addEventListener("click",function(e){
+    var b=e.target.closest?e.target.closest(".opt"):e.target; if(!b||!b.classList.contains("opt"))return;
+    answerMC(+b.getAttribute("data-i"),+b.getAttribute("data-j"),b);
+  });
+}
+function answerMC(i,j,btn){
+  var st=mcState[i], item=MC[i], fb=document.getElementById("mcfb"+i), card=document.getElementById("mc"+i);
+  if(st.done) return;
+  var right=(j===item.a);
+  if(!st.answered){ st.answered=true; st.firstRight=right; }
+  if(right){
+    st.done=true; btn.classList.add("sel-right"); card.className="box q right";
+    fb.className="fb good"; fb.innerHTML="✅ "+pick(PRAISE)+' <span class="explain">'+item.e+"</span>";
+  } else {
+    btn.classList.add("sel-wrong"); card.className="box q wrong";
+    fb.className="fb bad"; fb.innerHTML="❌ Not quite, Ace. Look back at the passage and try another answer.";
+  }
+  updateScore();
+}
+function buildVocab(){
+  var m=document.getElementById("vmatch");
+  var defOrder=shuffled(VOCAB,33);
+  VOCAB.forEach(function(w,i){
+    var row=document.createElement("div"); row.className="vrow"; row.id="vm"+i;
+    var sel='<select id="vsel'+i+'" aria-label="Meaning of '+w+'"><option value="">- choose a meaning -</option>';
+    defOrder.forEach(function(k){ sel+='<option value="'+k+'">'+DEFS[k]+'</option>'; });
+    sel+="</select>";
+    row.innerHTML='<span class="mark" id="vmk'+i+'"></span><span class="w">'+w+'</span>'+sel;
+    m.appendChild(row);
+  });
+  var f=document.getElementById("vfill");
+  FILL.forEach(function(item,i){
+    var row=document.createElement("div"); row.className="vrow"; row.id="vf"+i;
+    var sel='<select id="fsel'+i+'" aria-label="Blank '+(i+1)+'"><option value="">- choose -</option>';
+    FILL_OPTIONS.forEach(function(w){ sel+='<option value="'+w+'">'+w+'</option>'; });
+    sel+="</select>";
+    var parts=item.s.split("____");
+    row.innerHTML='<span class="mark" id="vfk'+i+'"></span><span>'+(i+1)+'. '+parts[0]+sel+parts[1]+'</span>';
+    f.appendChild(row);
+  });
+}
+function checkVocab(){
+  var score=0, blank=0;
+  VOCAB.forEach(function(w,i){
+    var v=document.getElementById("vsel"+i).value, ok=(v===w);
+    if(!v) blank++;
+    if(ok) score++;
+    document.getElementById("vm"+i).className="vrow "+(ok?"right":"wrong");
+    document.getElementById("vmk"+i).textContent=ok?"✅":"❌";
+  });
+  FILL.forEach(function(item,i){
+    var v=document.getElementById("fsel"+i).value, ok=(v===item.a);
+    if(!v) blank++;
+    if(ok) score++;
+    document.getElementById("vf"+i).className="vrow "+(ok?"right":"wrong");
+    document.getElementById("vfk"+i).textContent=ok?"✅":"❌";
+  });
+  vocabScore=score; vocabChecked=true;
+  var fb=document.getElementById("vocabFb");
+  if(score===VOCAB_TOTAL){ fb.className="fb good"; fb.textContent="🌟 "+score+" / "+VOCAB_TOTAL+". Perfect! Your ocean vocabulary is deep-blue strong, Ace!"; }
+  else { fb.className="fb bad"; fb.textContent=score+" / "+VOCAB_TOTAL+" correct"+(blank?" ("+blank+" left blank)":"")+". Fix the ❌ ones and check again. Try finding the word in the passage for clues!"; }
+  updateScore();
+}
+function scores(){
+  var mc=0,answered=0; mcState.forEach(function(s){ if(s.firstRight) mc++; if(s.answered) answered++; });
+  return {mc:mc,answered:answered,vocab:vocabScore};
+}
+function updateScore(){
+  var s=scores();
+  document.getElementById("scoreText").textContent="Comprehension: "+s.mc+" / "+MC.length+" · Vocabulary: "+(vocabChecked?s.vocab:"-")+" / "+VOCAB_TOTAL;
+}
+function finish(){
+  if(!vocabChecked) checkVocab();
+  var s=scores(), total=MC.length+VOCAB_TOTAL, got=s.mc+s.vocab, pct=Math.round(100*got/total);
+  var msg = pct===100 ? "🏆 A perfect score! Outstanding reading, Ace!" :
+            pct>=80 ? "🌟 Fantastic work, Ace! You read like a Grade 7 student!" :
+            pct>=60 ? "💪 Solid effort, Ace! Reread the paragraphs for the questions you missed." :
+                      "🌱 This was a challenging passage. Read it once more, slowly, and try again. You've got this, Ace!";
+  var f=document.getElementById("final"); f.style.display="block";
+  f.innerHTML="<h2 style='border:none;margin-top:0'>Final Score: "+got+" / "+total+" ("+pct+"%)</h2>"+
+    "<p>Comprehension (first tries): "+s.mc+" / "+MC.length+(s.answered<MC.length?" (you skipped "+(MC.length-s.answered)+")":"")+"<br>Vocabulary: "+s.vocab+" / "+VOCAB_TOTAL+"</p><p>"+msg+"</p>"+
+    "<p style='font-size:.85em;color:#546e7a'>Finished on "+new Date().toLocaleString("en-CA")+"</p>";
+  f.scrollIntoView({behavior:"smooth"});
+}
+buildMC(); buildVocab(); updateScore();
+document.getElementById("checkVocab").addEventListener("click",checkVocab);
+document.getElementById("finishBtn").addEventListener("click",finish);
+document.getElementById("showModel").addEventListener("click",function(){document.getElementById("model").style.display="block";});
+</script>
+</body>
+</html>

@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cantonese (Oct. 3): Body Parts</title>
+<style>
+  body{font-family:"Segoe UI",Verdana,Arial,sans-serif;font-size:20px;line-height:1.6;margin:0;background:#e8f4fc;color:#0d2137}
+  .wrap{max-width:880px;margin:0 auto;padding:20px 18px 80px}
+  a.home{font-size:.9em;color:#0277bd}
+  h1{color:#01579b;font-size:2em;margin:10px 0}
+  h2{color:#0277bd;margin-top:36px;border-bottom:3px solid #81d4fa;padding-bottom:4px}
+  h3{color:#0277bd}
+  .box{background:#fff;border-radius:16px;padding:18px 22px;margin:16px 0;box-shadow:0 3px 10px rgba(0,0,0,.07)}
+  .tipbox{background:#fff8e1;border-left:8px solid #ffb300}
+  .char{font-size:2.2em;font-weight:bold;color:#01579b;line-height:1.2}
+  .jyut{font-family:Consolas,"Courier New",monospace;background:#e1f5fe;padding:2px 8px;border-radius:8px;font-size:1.05em}
+  .card{display:grid;grid-template-columns:auto 1fr;gap:8px 18px;align-items:center;border-left:8px solid #0288d1;padding-left:14px}
+  .card .meta{grid-column:2}
+  .ex{margin-top:8px;background:#e3f2fd;border-radius:10px;padding:8px 12px;font-size:.95em}
+  .q{border-left:8px solid #b0bec5}
+  .q.right{border-left-color:#43a047;background:#f1f8e9}
+  .q.wrong{border-left-color:#e53935;background:#fff5f5}
+  .opt{display:block;width:100%;text-align:left;font-size:.95em;background:#fafafa;border:2px solid #e0e0e0;border-radius:10px;padding:8px 14px;margin:8px 0;cursor:pointer;font-family:inherit}
+  .opt:hover{border-color:#4fc3f7;background:#fff}
+  .opt.sel-right{background:#c8e6c9;border-color:#43a047}
+  .opt.sel-wrong{background:#ffcdd2;border-color:#e53935}
+  .fb{margin-top:6px;font-weight:bold}
+  .fb.good{color:#2e7d32} .fb.bad{color:#c62828}
+  .explain{font-weight:normal;color:#01579b}
+  .vrow{display:flex;flex-wrap:wrap;align-items:center;gap:10px;padding:8px 6px;border-bottom:1px dashed #eee}
+  .vrow .w{font-weight:bold;min-width:120px;font-size:1.3em}
+  .vrow.right{background:#f1f8e9} .vrow.wrong{background:#fff5f5}
+  select{font-size:.95em;padding:6px 8px;border-radius:8px;border:2px solid #4fc3f7;max-width:100%;font-family:inherit}
+  .mark{font-size:1.2em;min-width:30px}
+  button.main{font-size:1em;padding:10px 20px;border:none;border-radius:10px;cursor:pointer;font-weight:bold;background:#0277bd;color:#fff;margin-top:10px}
+  button.main:hover{background:#01579b}
+  input[type=text]{font-size:1.05em;padding:8px 12px;border:2px solid #4fc3f7;border-radius:10px;width:220px;font-family:inherit}
+  button.check{font-size:.95em;padding:8px 16px;border:none;border-radius:10px;cursor:pointer;font-weight:bold;background:#0277bd;color:#fff}
+  .row{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:10px}
+  #scoreBox{position:sticky;bottom:0;background:#01579b;color:#fff;border-radius:16px 16px 0 0;padding:12px 20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-top:30px}
+  #scoreBox button{font-size:.95em;padding:8px 16px;border:none;border-radius:10px;cursor:pointer;font-weight:bold;background:#ffca28;color:#3e2723}
+  #final{display:none;text-align:center;border:4px solid #43a047;font-size:1.1em}
+  .tone{font-size:.85em;color:#0277bd}
+
+  .audio-bar{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin:12px 0 4px}
+  button.speak,button.record,button.play-mine,button.play-model,button.audio-ctrl{
+    font-size:1.05em;padding:14px 18px;min-height:52px;min-width:52px;
+    border:none;border-radius:14px;cursor:pointer;font-weight:bold;font-family:inherit;
+    touch-action:manipulation;-webkit-tap-highlight-color:transparent;
+  }
+  button.speak,button.play-model,button.audio-ctrl.hear{background:#0288d1;color:#fff}
+  button.speak:hover,button.play-model:hover,button.audio-ctrl.hear:hover{background:#01579b}
+  button.speak.playing{background:#43a047}
+  button.record{background:#e53935;color:#fff}
+  button.record:hover{background:#c62828}
+  button.record.recording{background:#ffca28;color:#3e2723;animation:pulse 1s infinite}
+  @keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.04)}}
+  button.play-mine{background:#00897b;color:#fff}
+  button.play-mine:hover{background:#00695c}
+  button.play-mine:disabled{opacity:.45;cursor:not-allowed}
+  button.audio-ctrl.stop{background:#546e7a;color:#fff}
+  button.audio-ctrl.stop:hover{background:#37474f}
+  .practice{margin-top:14px;padding-top:12px;border-top:2px dashed #81d4fa}
+  .practice-row{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+  .rec-status{margin-top:8px;font-weight:bold;color:#0277bd;font-size:.95em}
+  .rec-status.rec-on{color:#c62828}
+  .mic-msg{margin-top:8px;background:#fff3e0;border-left:6px solid #ef6c00;border-radius:10px;padding:10px 14px;font-size:.95em;color:#e65100}
+  .box[data-audio]{position:relative}
+</style>
+</head>
+<body>
+<div class="wrap">
+<a class="home" href="../../index.html">&larr; Back to all lessons</a>
+<h1>🗣️ Cantonese Week 5: Body Parts (Hong Kong)</h1>
+<p>Ace, you already know numbers, greetings, family, food, and school. Today — while your English lessons explore oceans — you'll learn everyday <strong>body parts</strong> the Hong Kong way, using <strong>Traditional Chinese</strong> characters and Jyutping with tone numbers. (A future doctor needs body words!)</p>
+
+<div class="box tipbox">
+  <strong>How to read Jyutping (sounds):</strong>
+  <ul>
+    <li>Letters show the sound. Numbers show the <strong>tone</strong> (the musical pitch): 1 high, 2 rising, 3 mid, 4 low/falling, 5 low rising, 6 low.</li>
+    <li>Example: <span class="jyut">tau4</span> — say <em>tau</em> with tone 4 (low/falling).</li>
+    <li><strong>Listening/speaking tip:</strong> Say each body word out loud three times while looking at the characters. Tap Hear model, then Record and compare!</li>
+  </ul>
+</div>
+
+<h2>Part 1: Learn Today's Words</h2>
+<div class="box tipbox" style="background:#e1f5fe;border-left-color:#0288d1"><strong>Listen &amp; practise:</strong> Tap <em>Hear model</em> to hear the word (Hong Kong voice). Then tap <em>Record</em>, say it out loud, and compare with <em>Play my try</em> + <em>Play model</em>. Recordings stay on this device only for this visit — nothing is uploaded.</div>
+<div class="audio-bar">
+  <button type="button" class="audio-ctrl hear" id="playAll">🔊 Play all words</button>
+  <button type="button" class="audio-ctrl stop" id="stopAudio">⏹️ Stop</button>
+  <span class="tone">Plays every word with English first (greetings + family + food + school + body).</span>
+</div>
+<div id="cards"></div>
+
+<div class="box tipbox">
+  <strong>Doctor tip for Ace:</strong> In Hong Kong Cantonese, <span class="jyut">心 sam1</span> means the heart organ — and can also mean "heart" as in feelings. <span class="jyut">腳 goek3</span> can mean foot or leg depending on context.
+</div>
+
+<h2>Part 2: Match the Meaning</h2>
+<div class="box">
+  <p>Match each Cantonese phrase to its English meaning.</p>
+  <div id="vmatch"></div>
+  <button type="button" class="main" id="checkMatch">Check my matching</button>
+  <div class="fb" id="matchFb"></div>
+</div>
+
+<h2>Part 3: What Would You Say?</h2>
+<p>Click the best Cantonese phrase for each situation. Only your <strong>first click</strong> counts toward your score.</p>
+<div id="mc"></div>
+
+<h2>Part 4: Type the Jyutping</h2>
+<p>Look at the Chinese characters and type the Jyutping (with tone numbers). Spelling must match, including the numbers. Example: <span class="jyut">tau4</span></p>
+<div id="fill"></div>
+
+<div class="box" id="final"></div>
+<div id="scoreBox">
+  <span id="scoreText"></span>
+  <button type="button" id="finishBtn">I'm done! Show my final score</button>
+</div>
+</div>
+
+<script src="../../audio/cantonese/player.js"></script>
+<script>
+var WORDS = [
+ {zh:"頭", jy:"tau4", audio:"33-tau4-head.mp3", en:"head",
+  ex_zh:"我嘅頭好痛。", ex_jy:"ngo5 ge3 tau4 hou2 tung3.", ex_en:"My head hurts a lot."},
+ {zh:"手", jy:"sau2", audio:"34-sau2-hand.mp3", en:"hand",
+  ex_zh:"請伸手。", ex_jy:"cing2 san1 sau2.", ex_en:"Please stretch out your hand."},
+ {zh:"腳", jy:"goek3", audio:"35-goek3-foot.mp3", en:"foot / leg",
+  ex_zh:"我踢波用腳。", ex_jy:"ngo5 tek3 bo1 jung6 goek3.", ex_en:"I use my foot/leg to kick a ball."},
+ {zh:"眼", jy:"ngaan5", audio:"36-ngaan5-eye.mp3", en:"eye",
+  ex_zh:"佢有一對大大嘅眼。", ex_jy:"keoi5 jau5 jat1 deoi3 daai6 daai6 ge3 ngaan5.", ex_en:"He/She has a pair of big eyes."},
+ {zh:"耳", jy:"ji5", audio:"37-ji5-ear.mp3", en:"ear",
+  ex_zh:"我用耳聽。", ex_jy:"ngo5 jung6 ji5 teng1.", ex_en:"I listen with my ears."},
+ {zh:"口", jy:"hau2", audio:"38-hau2-mouth.mp3", en:"mouth",
+  ex_zh:"請張開口。", ex_jy:"cing2 zoeng1 hoi1 hau2.", ex_en:"Please open your mouth."},
+ {zh:"鼻", jy:"bei6", audio:"39-bei6-nose.mp3", en:"nose",
+  ex_zh:"我用鼻呼吸。", ex_jy:"ngo5 jung6 bei6 fu1 kap1.", ex_en:"I breathe with my nose."},
+ {zh:"心", jy:"sam1", audio:"40-sam1-heart.mp3", en:"heart",
+  ex_zh:"我嘅心跳得好快。", ex_jy:"ngo5 ge3 sam1 tiu3 dak1 hou2 faai3.", ex_en:"My heart is beating very fast."}
+];
+
+var PRAISE=["Nice work, Ace!","正確！ Correct!","Yes! Your body words are sharp!","Excellent, Ace!","Right! Future doctor, multilingual edition!"];
+function pick(a){return a[Math.floor(Math.random()*a.length)];}
+function shuffled(arr,seed){var a=arr.slice(),s=seed;for(var i=a.length-1;i>0;i--){s=(s*9301+49297)%233280;var j=Math.floor(s/233280*(i+1));var t=a[i];a[i]=a[j];a[j]=t;}return a;}
+
+function buildCards(){
+  var box=document.getElementById("cards");
+  WORDS.forEach(function(w,i){
+    var d=document.createElement("div"); d.className="box";
+    if(w.audio){ d.setAttribute("data-audio", w.audio); d.setAttribute("data-audio-label", w.zh+" "+w.jy); }
+    d.innerHTML='<div class="card">'+
+      '<div class="char">'+(i+1)+'. '+w.zh+'</div>'+
+      '<div class="meta"><div><span class="jyut">'+w.jy+'</span> <span class="tone">← tap Hear model, then Record</span></div>'+
+      '<div><strong>'+w.en+'</strong></div></div></div>'+
+      '<div class="ex"><strong>Example:</strong> '+w.ex_zh+'<br><span class="jyut">'+w.ex_jy+'</span><br><em>'+w.ex_en+'</em></div>'+
+      '<div class="practice"></div>';
+    box.appendChild(d);
+  });
+}
+
+var matchScore=0, matchChecked=false;
+function buildMatch(){
+  var m=document.getElementById("vmatch");
+  var order=shuffled(WORDS.map(function(w){return w.jy;}),15);
+  WORDS.forEach(function(w,i){
+    var row=document.createElement("div"); row.className="vrow"; row.id="vm"+i;
+    var sel='<select id="vsel'+i+'" aria-label="Meaning of '+w.zh+'"><option value="">- choose English -</option>';
+    order.forEach(function(jy){
+      var en=WORDS.find(function(x){return x.jy===jy;}).en;
+      sel+='<option value="'+jy+'">'+en+'</option>';
+    });
+    sel+='</select>';
+    row.innerHTML='<span class="mark" id="vmk'+i+'"></span><span class="w">'+w.zh+'</span><span class="jyut">'+w.jy+'</span>'+sel;
+    m.appendChild(row);
+  });
+}
+function checkMatch(){
+  var score=0, blank=0;
+  WORDS.forEach(function(w,i){
+    var v=document.getElementById("vsel"+i).value, ok=(v===w.jy);
+    if(!v) blank++;
+    if(ok) score++;
+    document.getElementById("vm"+i).className="vrow "+(ok?"right":"wrong");
+    document.getElementById("vmk"+i).textContent=ok?"✅":"❌";
+  });
+  matchScore=score; matchChecked=true;
+  var fb=document.getElementById("matchFb");
+  if(score===WORDS.length){ fb.className="fb good"; fb.textContent="🌟 "+score+" / "+WORDS.length+". Perfect matching, Ace!"; }
+  else { fb.className="fb bad"; fb.textContent=score+" / "+WORDS.length+" correct"+(blank?" ("+blank+" blank)":"")+". Fix the ❌ ones and check again."; }
+  updateScore();
+}
+
+var MC = [
+ {q:"You point to the top of your body. Which word means head?",
+  o:["手 sau2","頭 tau4","腳 goek3","鼻 bei6"], a:1,
+  e:"頭 (tau4) means head."},
+ {q:"You wave hello. Which word means hand?",
+  o:["眼 ngaan5","手 sau2","耳 ji5","心 sam1"], a:1,
+  e:"手 (sau2) means hand."},
+ {q:"You kick a ball. Which word means foot/leg?",
+  o:["口 hau2","腳 goek3","頭 tau4","眼 ngaan5"], a:1,
+  e:"腳 (goek3) means foot or leg."},
+ {q:"You look at a book. Which word means eye?",
+  o:["耳 ji5","眼 ngaan5","鼻 bei6","手 sau2"], a:1,
+  e:"眼 (ngaan5) means eye."},
+ {q:"You listen carefully. Which word means ear?",
+  o:["耳 ji5","口 hau2","心 sam1","腳 goek3"], a:0,
+  e:"耳 (ji5) means ear."},
+ {q:"A doctor checks your heartbeat. Which word means heart?",
+  o:["頭 tau4","心 sam1","鼻 bei6","手 sau2"], a:1,
+  e:"心 (sam1) means heart."}
+];
+var mcState=MC.map(function(){return{answered:false,firstRight:false,done:false};});
+function buildMC(){
+  var box=document.getElementById("mc");
+  MC.forEach(function(item,i){
+    var d=document.createElement("div"); d.className="box q"; d.id="mc"+i;
+    var html="<div><strong>"+(i+1)+".</strong> "+item.q+"</div>";
+    item.o.forEach(function(opt,j){ html+='<button type="button" class="opt" data-i="'+i+'" data-j="'+j+'">'+String.fromCharCode(65+j)+". "+opt+"</button>"; });
+    html+='<div class="fb" id="mcfb'+i+'"></div>';
+    d.innerHTML=html; box.appendChild(d);
+  });
+  box.addEventListener("click",function(e){
+    var b=e.target.closest?e.target.closest(".opt"):e.target; if(!b||!b.classList.contains("opt"))return;
+    var i=+b.getAttribute("data-i"), j=+b.getAttribute("data-j"), st=mcState[i], item=MC[i];
+    if(st.done)return;
+    var right=(j===item.a);
+    if(!st.answered){ st.answered=true; st.firstRight=right; }
+    var fb=document.getElementById("mcfb"+i), card=document.getElementById("mc"+i);
+    if(right){ st.done=true; b.classList.add("sel-right"); card.className="box q right"; fb.className="fb good"; fb.innerHTML="✅ "+pick(PRAISE)+' <span class="explain">'+item.e+"</span>"; }
+    else { b.classList.add("sel-wrong"); card.className="box q wrong"; fb.className="fb bad"; fb.textContent="❌ Not quite, Ace. Think about body parts and try again."; }
+    updateScore();
+  });
+}
+
+var FILL = [
+ {zh:"頭", a:"tau4"},
+ {zh:"手", a:"sau2"},
+ {zh:"腳", a:"goek3"},
+ {zh:"眼", a:"ngaan5"},
+ {zh:"耳", a:"ji5"},
+ {zh:"口", a:"hau2"},
+ {zh:"鼻", a:"bei6"},
+ {zh:"心", a:"sam1"}
+];
+var fillState=FILL.map(function(){return{correct:false,tries:0};});
+function normJy(s){return String(s).trim().toLowerCase().replace(/\s+/g," ");}
+function buildFill(){
+  var box=document.getElementById("fill");
+  FILL.forEach(function(it,i){
+    var d=document.createElement("div"); d.className="box q"; d.id="f"+i;
+    d.innerHTML='<div><strong>'+(i+1)+'.</strong> Type Jyutping for <span class="char" style="font-size:1.4em">'+it.zh+'</span></div>'+
+      '<div class="row"><input type="text" id="fi'+i+'" autocomplete="off" spellcheck="false" aria-label="Jyutping '+it.zh+'">'+
+      '<button type="button" class="check" data-i="'+i+'">Check</button></div><div class="fb" id="ffb'+i+'"></div>';
+    box.appendChild(d);
+  });
+  box.addEventListener("click",function(e){
+    var b=e.target; if(b.tagName!=="BUTTON"||!b.classList.contains("check"))return;
+    fillCheck(+b.getAttribute("data-i"));
+  });
+  box.addEventListener("keydown",function(e){if(e.key==="Enter"&&e.target.tagName==="INPUT")fillCheck(+e.target.id.slice(2));});
+}
+function fillCheck(i){
+  var val=document.getElementById("fi"+i).value, fb=document.getElementById("ffb"+i), st=fillState[i];
+  if(!val.trim()){fb.className="fb bad";fb.textContent="Type the Jyutping first, Ace!";return;}
+  st.tries++;
+  if(normJy(val)===normJy(FILL[i].a)){
+    st.correct=true; document.getElementById("f"+i).className="box q right";
+    fb.className="fb good"; fb.textContent="✅ "+pick(PRAISE)+(st.tries===1?" (first try!)":"");
+  } else {
+    st.correct=false; document.getElementById("f"+i).className="box q wrong";
+    fb.className="fb bad"; fb.textContent="❌ Not quite. Check letters, spaces, and tone numbers. Answer looks like: tau4";
+  }
+  updateScore();
+}
+
+function scores(){
+  var mc=0; mcState.forEach(function(s){if(s.firstRight)mc++;});
+  var f=0; fillState.forEach(function(s){if(s.correct)f++;});
+  return {match:matchScore, mc:mc, fill:f};
+}
+function updateScore(){
+  var s=scores();
+  document.getElementById("scoreText").textContent="Match: "+(matchChecked?s.match:"-")+"/"+WORDS.length+" · Situations: "+s.mc+"/"+MC.length+" · Jyutping: "+s.fill+"/"+FILL.length;
+}
+function finish(){
+  if(!matchChecked) checkMatch();
+  var s=scores(), total=WORDS.length+MC.length+FILL.length, got=s.match+s.mc+s.fill, pct=Math.round(100*got/total);
+  var msg = pct===100 ? "🏆 完美！ Perfect score, Ace! You can talk about body parts in Cantonese!" :
+            pct>=80 ? "🌟 Fantastic work, Ace! Practise saying each body word out loud tonight." :
+            pct>=60 ? "💪 Solid effort! Review the cards and try the ❌ ones again." :
+                      "🌱 New body words take practice! Look at Part 1 again, say each phrase three times, then retry.";
+  var f=document.getElementById("final"); f.style.display="block";
+  f.innerHTML="<h2 style='border:none;margin-top:0'>Final Score: "+got+" / "+total+" ("+pct+"%)</h2>"+
+    "<p>Matching: "+s.match+"/"+WORDS.length+" · Situations (first try): "+s.mc+"/"+MC.length+" · Jyutping typing: "+s.fill+"/"+FILL.length+"</p><p>"+msg+"</p>"+
+    "<p style='font-size:.85em;color:#0277bd'>Finished on "+new Date().toLocaleString("en-CA")+"</p>";
+  f.scrollIntoView({behavior:"smooth"});
+}
+buildCards(); buildMatch(); buildMC(); buildFill(); updateScore();
+if(window.AceCantoneseAudio) AceCantoneseAudio.wireLesson({playAllBtn:"#playAll",stopBtn:"#stopAudio"});
+document.getElementById("checkMatch").addEventListener("click",checkMatch);
+document.getElementById("finishBtn").addEventListener("click",finish);
+</script>
+</body>
+</html>
