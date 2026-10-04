@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reading (Oct. 4): How Bridges Hold Us Up</title>
+<style>
+  body{font-family:"Segoe UI",Verdana,Arial,sans-serif;font-size:20px;line-height:1.65;margin:0;background:#f5f0eb;color:#2c2416}
+  .wrap{max-width:880px;margin:0 auto;padding:20px 18px 80px}
+  a.home{font-size:.9em;color:#bf360c}
+  h1{color:#e65100;font-size:2em;margin:10px 0}
+  h2{color:#ef6c00;margin-top:36px;border-bottom:3px solid #ffcc80;padding-bottom:4px}
+  .box{background:#fff;border-radius:16px;padding:18px 22px;margin:16px 0;box-shadow:0 3px 10px rgba(0,0,0,.07)}
+  .passage{font-family:Georgia,"Times New Roman",serif;font-size:1.1em;line-height:1.8}
+  .passage h3{text-align:center;font-family:"Segoe UI",Verdana,sans-serif;color:#e65100;font-size:1.4em;margin:4px 0 14px}
+  .passage p{text-indent:1.5em;margin:0 0 14px}
+  mark.v{background:#fff59d;padding:0 3px;border-radius:4px;font-weight:bold}
+  .tipbox{background:#fff8e1;border-left:8px solid #ffb300}
+  .q{border-left:8px solid #ffcc80}
+  .q.right{border-left-color:#43a047;background:#f1f8e9}
+  .q.wrong{border-left-color:#e53935;background:#fff5f5}
+  .tag{display:inline-block;font-size:.7em;background:#ef6c00;color:#fff;border-radius:8px;padding:1px 8px;margin-left:6px;vertical-align:middle}
+  .opt{display:block;width:100%;text-align:left;font-size:.95em;background:#fafafa;border:2px solid #e0e0e0;border-radius:10px;padding:8px 14px;margin:8px 0;cursor:pointer;font-family:inherit}
+  .opt:hover{border-color:#ffb74d;background:#fff}
+  .opt.sel-right{background:#c8e6c9;border-color:#43a047}
+  .opt.sel-wrong{background:#ffcdd2;border-color:#e53935}
+  .fb{margin-top:6px;font-weight:bold}
+  .fb.good{color:#2e7d32} .fb.bad{color:#c62828}
+  .explain{color:#e65100;font-weight:normal}
+  select{font-size:.95em;padding:6px 8px;border-radius:8px;border:2px solid #ffb74d;max-width:100%;font-family:inherit}
+  .vrow{display:flex;flex-wrap:wrap;align-items:center;gap:10px;padding:8px 6px;border-bottom:1px dashed #eee}
+  .vrow .w{font-weight:bold;min-width:140px}
+  .vrow.right{background:#f1f8e9} .vrow.wrong{background:#fff5f5}
+  .mark{font-size:1.2em;min-width:30px}
+  button.main{font-size:1em;padding:10px 20px;border:none;border-radius:10px;cursor:pointer;font-weight:bold;background:#ef6c00;color:#fff;margin-top:10px}
+  button.main:hover{background:#e65100}
+  button.sec{font-size:.95em;padding:8px 16px;border:none;border-radius:10px;cursor:pointer;font-weight:bold;background:#ffe082;color:#5d4037}
+  textarea{width:100%;box-sizing:border-box;font-size:1em;font-family:inherit;padding:10px;border:2px solid #ffb74d;border-radius:10px;min-height:120px}
+  #model{display:none;background:#fff3e0;border-radius:10px;padding:10px 14px;margin-top:10px}
+  #scoreBox{position:sticky;bottom:0;background:#e65100;color:#fff;border-radius:16px 16px 0 0;padding:12px 20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-top:30px}
+  #scoreBox button{font-size:.95em;padding:8px 16px;border:none;border-radius:10px;cursor:pointer;font-weight:bold;background:#ffca28;color:#3e2723}
+  #final{display:none;text-align:center;border:4px solid #43a047;font-size:1.1em}
+</style>
+</head>
+<body>
+<div class="wrap">
+<a class="home" href="../../index.html">&larr; Back to all lessons</a>
+<h1>📖 Reading Week 7: How Bridges Hold Us Up</h1>
+
+<div class="box tipbox">
+  <strong>Before you read, Ace:</strong> Good readers look for forces and evidence the way engineers look for loads and weaknesses.
+  <ul>
+    <li><strong>Preview:</strong> Read the title. What do you think the passage is about?</li>
+    <li><strong>Pause:</strong> After each paragraph, say its main idea in your head in one sentence.</li>
+    <li><strong>Words in <mark class="v">yellow</mark></strong> are vocabulary words. Use the sentence around them (the <em>context</em>) to figure out what they mean.</li>
+  </ul>
+</div>
+
+<div class="box passage" id="passage">
+<h3>How Bridges Hold Us Up</h3>
+<p>Every time you cross a river or a harbour on a bridge, you are trusting a carefully planned fight against gravity. A bridge must carry its own weight plus the weight of cars, trucks, wind, and sometimes ice. Engineers call those pushes and pulls <mark class="v">loads</mark>. If the structure cannot redirect those loads into the ground safely, the bridge fails. That is why civil engineers study materials, shapes, and forces long before the first beam is lifted into place. A future doctor needs the same habit: understand the forces at work before you decide what to do next.</p>
+<p>Three big ideas appear again and again. <mark class="v">Compression</mark> is a squeezing force — think of standing on a stone arch and pushing the stones together. <mark class="v">Tension</mark> is a stretching force — think of a cable being pulled tight like a giant rope. A third idea is bending, which mixes both: the top of a beam may be compressed while the bottom is stretched. Different bridge types use these forces in different ways. A short <mark class="v">beam</mark> bridge is basically a stiff plank resting on supports called piers. It is simple and strong for short spans, but as the gap grows, the beam must become thicker and heavier until that design stops being practical.</p>
+<p>An <mark class="v">arch</mark> bridge turns much of the load into compression. The curve pushes outward into strong abutments at each end, so the stones or concrete blocks squeeze together instead of tearing apart. Suspension bridges work almost the opposite way. Tall towers hold main cables that hang in smooth curves. Vertical hangers drip down from those cables to the roadway. Most of the weight of the deck hangs in tension from the cables, and the cables pass that pull into the towers and then into massive anchors in the ground. The famous Lions Gate Bridge in Vancouver is a Canadian suspension bridge of this kind: towers, cables, and a long span over Burrard Inlet that lets ships pass beneath while cars roll above.</p>
+<p>Materials matter as much as shape. Steel is strong in both tension and compression and can be made into slender cables and girders. Concrete is excellent in compression but weaker in tension, so engineers often bury steel bars inside it — <mark class="v">reinforced</mark> concrete — so the steel takes the stretch while the concrete takes the squeeze. Foundations and abutments must sit on solid ground or deep piles; a beautiful deck is useless if its feet sink. Inspectors check for rust, cracked concrete, and loose bolts because small weaknesses grow under years of traffic and weather.</p>
+<p>Why should careful reading of bridge science matter to Ace? Because engineering and medicine share a mindset. You identify the problem, gather evidence, choose a design that matches the forces involved, and then test whether it works. An engineer who ignores tension in a cable is as careless as a doctor who ignores a vital sign. Both fields ask: What is pushing? What is pulling? What could fail if we guess instead of measure?</p>
+<p>The next time you see a span of steel and concrete leaping across water, notice the towers, the curve of the cables, and the solid abutments at each end. That quiet structure is a conversation between gravity and human imagination. Every careful reader of science — just like every careful designer of bridges — helps turn daring ideas into safe crossings. Ace, when you practise reading for evidence today, you are training the same mind that one day might read a chart, a scan, or a patient story with equal care.</p>
+<p style="text-indent:0;font-size:.8em;color:#546e7a;text-align:right">About 580 words</p>
+</div>
+
+<h2>Part 1: Comprehension</h2>
+<p>Click the best answer. You'll find out right away if you're correct. Only your <strong>first click</strong> counts toward your score, but you can keep trying to find the right answer.</p>
+<div id="mc"></div>
+
+<h2>Part 2: Think Deeper (not scored)</h2>
+<div class="box">
+  <p><strong>In 2 to 4 sentences, explain how a suspension bridge carries weight differently from a beam bridge. Use at least two ideas from the passage (for example: <em>tension, compression, cables, towers, piers, arch</em>).</strong></p>
+  <textarea id="openAns" placeholder="Write your answer here, Ace..."></textarea>
+  <p><button type="button" class="sec" id="showModel">Compare with a model answer</button></p>
+  <div id="model"><strong>Model answer:</strong> A beam bridge is a stiff plank resting on piers, so short spans work well but longer gaps need thicker, heavier beams. A suspension bridge hangs most of the deck's weight in tension from main cables held by tall towers; those cables pass the pull into anchors in the ground. So beam bridges rely more on bending and support from below, while suspension bridges use stretching cables and towers to carry long spans.<br><em>Did your answer contrast supports/piers with cables/towers (or tension vs bending)? If so, great work!</em></div>
+</div>
+
+<h2>Part 3: Vocabulary</h2>
+<div class="box">
+  <h3 style="margin-top:0">A. Match each word to its meaning</h3>
+  <p>Choose the meaning that fits how the word is used in the passage.</p>
+  <div id="vmatch"></div>
+  <h3>B. Fill in the blank</h3>
+  <p>Choose the vocabulary word that best completes each sentence.</p>
+  <div id="vfill"></div>
+  <button type="button" class="main" id="checkVocab">Check my vocabulary</button>
+  <div class="fb" id="vocabFb"></div>
+</div>
+
+<div class="box" id="final"></div>
+<div id="scoreBox">
+  <span id="scoreText"></span>
+  <button type="button" id="finishBtn">I'm done! Show my final score</button>
+</div>
+</div>
+
+<script>
+var MC = [
+ {q:"Which sentence best states the <strong>main idea</strong> of the whole passage?",
+  o:["Only steel can make bridges.",
+     "Bridges redirect loads using compression, tension, and different designs (beam, arch, suspension); materials and careful checking keep crossings safe.",
+     "Lions Gate Bridge is the only bridge in Canada.",
+     "Doctors should never study engineering."],
+  a:1, e:"The other choices are false or too narrow; this one sums up forces, types, materials, and safety."},
+ {q:"According to the passage, what are <strong>loads</strong>?",
+  o:["Only the colour of paint on a tower.","Pushes and pulls a bridge must carry, such as its own weight plus traffic, wind, and ice.","A type of fish under Burrard Inlet.","The name of a steel company."],
+  a:1, e:"Engineers call those pushes and pulls loads."},
+ {q:"What is <strong>tension</strong>?",
+  o:["A squeezing force like standing on a stone arch.","A stretching force, like a cable pulled tight.","A type of pier made of wood only.","A paint colour for decks."],
+  a:1, e:"The passage compares tension to a cable being pulled tight like a giant rope."},
+ {q:"Why are short beam bridges practical but long ones harder?",
+  o:["Because beams never bend.","As the gap grows, the beam must become thicker and heavier until that design stops being practical.","Because arches cannot use concrete.","Because cables only work underwater."],
+  a:1, e:"Longer beam spans need thicker, heavier beams."},
+ {q:"How does an arch bridge mainly carry weight?",
+  o:["By hanging the deck from glass strings.","By turning much of the load into compression, pushing into abutments.","By floating on the river.","By using only tension cables with no towers."],
+  a:1, e:"The curve pushes outward into abutments so blocks squeeze together."},
+ {q:"What Canadian example does the passage give of a suspension bridge?",
+  o:["A wooden plank over a creek with no name.","The Lions Gate Bridge in Vancouver, with towers and cables over Burrard Inlet.","An ice bridge that melts every spring.","A subway tunnel under Toronto."],
+  a:1, e:"Lions Gate Bridge is named as a Canadian suspension bridge."},
+ {q:"A student says, \"Concrete is perfect for every part of a bridge by itself.\" Based on the passage, what is the <strong>best</strong> reply?", tag:"Inference",
+  o:["True — concrete is strong in tension and compression equally.","Incomplete — concrete is excellent in compression but weaker in tension, so steel reinforcement often takes the stretch.","True — cables are made of concrete.","False — because all bridges are made of wood."],
+  a:1, e:"The passage explains reinforced concrete: steel takes stretch, concrete takes squeeze."},
+ {q:"How does the author connect bridge engineering to becoming a doctor?", tag:"Author's purpose",
+  o:["To argue Ace should quit school","To show that identifying forces, gathering evidence, and checking carefully matter in both fields","To advertise a ferry ride","To scare readers about wind"],
+  a:1, e:"The author links careful habits of engineers and physicians."},
+ {q:"What problem do foundations and abutments solve?", tag:"Inference",
+  o:["They choose paint colours.","They must sit on solid ground or piles so the bridge's feet do not sink.","They invent traffic lights.","They replace all cables with string."],
+  a:1, e:"A beautiful deck is useless if its feet sink."},
+ {q:"Why might inspectors check for rust and cracked concrete?", tag:"Inference",
+  o:["Because small weaknesses grow under years of traffic and weather.","Because rust makes bridges more colourful.","Because cracks always make bridges stronger.","Because inspectors dislike steel."],
+  a:1, e:"The passage says small weaknesses grow under years of traffic and weather."}
+];
+
+var VOCAB = ["loads","compression","tension","beam","arch","reinforced"];
+var DEFS = {
+ loads:"pushes and pulls a bridge must carry (weight, traffic, wind, ice)",
+ compression:"a squeezing force that pushes materials together",
+ tension:"a stretching force that pulls materials apart",
+ beam:"a stiff horizontal member resting on supports (good for short spans)",
+ arch:"a curved structure that turns load into compression into abutments",
+ reinforced:"strengthened (e.g. concrete with steel bars to take tension)"
+};
+var FILL = [
+ {s:"A cable under ____ is being stretched like a giant rope.", a:"tension"},
+ {s:"An ____ bridge pushes load into abutments as a squeezing force.", a:"arch"},
+ {s:"Engineers call the weight of traffic and wind the ____ on a bridge.", a:"loads"},
+ {s:"____ concrete hides steel bars inside so the steel can take the stretch.", a:"reinforced"}
+];
+var FILL_OPTIONS = ["tension","arch","loads","reinforced","beam","compression"];
+
+var PRAISE=["Nice work, Ace!","Correct! Sharp reading, Ace!","Yes! You found the evidence!","Excellent thinking!","Right! Ace, bridge detective!"];
+function pick(a){return a[Math.floor(Math.random()*a.length)];}
+function shuffled(arr,seed){var a=arr.slice(),s=seed;for(var i=a.length-1;i>0;i--){s=(s*9301+49297)%233280;var j=Math.floor(s/233280*(i+1));var t=a[i];a[i]=a[j];a[j]=t;}return a;}
+
+var mcState=MC.map(function(){return {answered:false,firstRight:false,done:false};});
+var vocabScore=0, vocabChecked=false;
+var VOCAB_TOTAL=VOCAB.length+FILL.length;
+
+function buildMC(){
+  var box=document.getElementById("mc");
+  MC.forEach(function(item,i){
+    var d=document.createElement("div"); d.className="box q"; d.id="mc"+i;
+    var html="<div><strong>"+(i+1)+".</strong> "+item.q+(item.tag?'<span class="tag">'+item.tag+'</span>':"")+"</div>";
+    item.o.forEach(function(opt,j){ html+='<button type="button" class="opt" data-i="'+i+'" data-j="'+j+'">'+String.fromCharCode(65+j)+". "+opt+"</button>"; });
+    html+='<div class="fb" id="mcfb'+i+'"></div>';
+    d.innerHTML=html; box.appendChild(d);
+  });
+  box.addEventListener("click",function(e){
+    var b=e.target.closest?e.target.closest(".opt"):e.target; if(!b||!b.classList.contains("opt"))return;
+    answerMC(+b.getAttribute("data-i"),+b.getAttribute("data-j"),b);
+  });
+}
+function answerMC(i,j,btn){
+  var st=mcState[i], item=MC[i], fb=document.getElementById("mcfb"+i), card=document.getElementById("mc"+i);
+  if(st.done) return;
+  var right=(j===item.a);
+  if(!st.answered){ st.answered=true; st.firstRight=right; }
+  if(right){
+    st.done=true; btn.classList.add("sel-right"); card.className="box q right";
+    fb.className="fb good"; fb.innerHTML="✅ "+pick(PRAISE)+' <span class="explain">'+item.e+"</span>";
+  } else {
+    btn.classList.add("sel-wrong"); card.className="box q wrong";
+    fb.className="fb bad"; fb.innerHTML="❌ Not quite, Ace. Look back at the passage and try another answer.";
+  }
+  updateScore();
+}
+function buildVocab(){
+  var m=document.getElementById("vmatch");
+  var defOrder=shuffled(VOCAB,44);
+  VOCAB.forEach(function(w,i){
+    var row=document.createElement("div"); row.className="vrow"; row.id="vm"+i;
+    var sel='<select id="vsel'+i+'" aria-label="Meaning of '+w+'"><option value="">- choose a meaning -</option>';
+    defOrder.forEach(function(k){ sel+='<option value="'+k+'">'+DEFS[k]+'</option>'; });
+    sel+="</select>";
+    row.innerHTML='<span class="mark" id="vmk'+i+'"></span><span class="w">'+w+'</span>'+sel;
+    m.appendChild(row);
+  });
+  var f=document.getElementById("vfill");
+  FILL.forEach(function(item,i){
+    var row=document.createElement("div"); row.className="vrow"; row.id="vf"+i;
+    var sel='<select id="fsel'+i+'" aria-label="Blank '+(i+1)+'"><option value="">- choose -</option>';
+    FILL_OPTIONS.forEach(function(w){ sel+='<option value="'+w+'">'+w+'</option>'; });
+    sel+="</select>";
+    var parts=item.s.split("____");
+    row.innerHTML='<span class="mark" id="vfk'+i+'"></span><span>'+(i+1)+'. '+parts[0]+sel+parts[1]+'</span>';
+    f.appendChild(row);
+  });
+}
+function checkVocab(){
+  var score=0, blank=0;
+  VOCAB.forEach(function(w,i){
+    var v=document.getElementById("vsel"+i).value, ok=(v===w);
+    if(!v) blank++;
+    if(ok) score++;
+    document.getElementById("vm"+i).className="vrow "+(ok?"right":"wrong");
+    document.getElementById("vmk"+i).textContent=ok?"✅":"❌";
+  });
+  FILL.forEach(function(item,i){
+    var v=document.getElementById("fsel"+i).value, ok=(v===item.a);
+    if(!v) blank++;
+    if(ok) score++;
+    document.getElementById("vf"+i).className="vrow "+(ok?"right":"wrong");
+    document.getElementById("vfk"+i).textContent=ok?"✅":"❌";
+  });
+  vocabScore=score; vocabChecked=true;
+  var fb=document.getElementById("vocabFb");
+  if(score===VOCAB_TOTAL){ fb.className="fb good"; fb.textContent="🌟 "+score+" / "+VOCAB_TOTAL+". Perfect! Your bridge vocabulary is steel-strong, Ace!"; }
+  else { fb.className="fb bad"; fb.textContent=score+" / "+VOCAB_TOTAL+" correct"+(blank?" ("+blank+" left blank)":"")+". Fix the ❌ ones and check again. Try finding the word in the passage for clues!"; }
+  updateScore();
+}
+function scores(){
+  var mc=0,answered=0; mcState.forEach(function(s){ if(s.firstRight) mc++; if(s.answered) answered++; });
+  return {mc:mc,answered:answered,vocab:vocabScore};
+}
+function updateScore(){
+  var s=scores();
+  document.getElementById("scoreText").textContent="Comprehension: "+s.mc+" / "+MC.length+" · Vocabulary: "+(vocabChecked?s.vocab:"-")+" / "+VOCAB_TOTAL;
+}
+function finish(){
+  if(!vocabChecked) checkVocab();
+  var s=scores(), total=MC.length+VOCAB_TOTAL, got=s.mc+s.vocab, pct=Math.round(100*got/total);
+  var msg = pct===100 ? "🏆 A perfect score! Outstanding reading, Ace!" :
+            pct>=80 ? "🌟 Fantastic work, Ace! You read like a Grade 7 student!" :
+            pct>=60 ? "💪 Solid effort, Ace! Reread the paragraphs for the questions you missed." :
+                      "🌱 This was a challenging passage. Read it once more, slowly, and try again. You've got this, Ace!";
+  var f=document.getElementById("final"); f.style.display="block";
+  f.innerHTML="<h2 style='border:none;margin-top:0'>Final Score: "+got+" / "+total+" ("+pct+"%)</h2>"+
+    "<p>Comprehension (first tries): "+s.mc+" / "+MC.length+(s.answered<MC.length?" (you skipped "+(MC.length-s.answered)+")":"")+"<br>Vocabulary: "+s.vocab+" / "+VOCAB_TOTAL+"</p><p>"+msg+"</p>"+
+    "<p style='font-size:.85em;color:#546e7a'>Finished on "+new Date().toLocaleString("en-CA")+"</p>";
+  f.scrollIntoView({behavior:"smooth"});
+}
+buildMC(); buildVocab(); updateScore();
+document.getElementById("checkVocab").addEventListener("click",checkVocab);
+document.getElementById("finishBtn").addEventListener("click",finish);
+document.getElementById("showModel").addEventListener("click",function(){document.getElementById("model").style.display="block";});
+</script>
+</body>
+</html>

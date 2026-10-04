@@ -6,7 +6,7 @@ TTS voice (Cantonese): zh-HK-HiuMaanNeural
 TTS voice (English in ALL-words.mp3): en-HK-YanNeural
 Rate: slowed (~-20%) for clear listening practice.
 
-Sources: Ace lessons 2026-09-29 (Greetings) + 2026-09-30 (Family Members) + 2026-10-01 (Food) + 2026-10-02 (School).
+Sources: Ace lessons 2026-09-29 (Greetings) + 2026-09-30 (Family Members) + 2026-10-01 (Food) + 2026-10-02 (School) + 2026-10-03 (Body) + 2026-10-04 (Colours).
 Numbers 1-10 are already known and not included here.
 
 How to practise:
@@ -176,6 +176,88 @@ Individual files
   Chinese:  功課
   Jyutping: gung1 fo3
   English:  homework
+
+33-tau4-head.mp3
+  Chinese:  頭
+  Jyutping: tau4
+  English:  head
+
+34-sau2-hand.mp3
+  Chinese:  手
+  Jyutping: sau2
+  English:  hand
+
+35-goek3-foot.mp3
+  Chinese:  腳
+  Jyutping: goek3
+  English:  foot / leg
+
+36-ngaan5-eye.mp3
+  Chinese:  眼
+  Jyutping: ngaan5
+  English:  eye
+
+37-ji5-ear.mp3
+  Chinese:  耳
+  Jyutping: ji5
+  English:  ear
+
+38-hau2-mouth.mp3
+  Chinese:  口
+  Jyutping: hau2
+  English:  mouth
+
+39-bei6-nose.mp3
+  Chinese:  鼻
+  Jyutping: bei6
+  English:  nose
+
+40-sam1-heart.mp3
+  Chinese:  心
+  Jyutping: sam1
+  English:  heart
+
+
+41-ngaan4-sik1-colour.mp3
+  Chinese:  顏色
+  Jyutping: ngaan4 sik1
+  English:  colour
+
+42-hung4-sik1-red.mp3
+  Chinese:  紅色
+  Jyutping: hung4 sik1
+  English:  red
+
+43-laam4-sik1-blue.mp3
+  Chinese:  藍色
+  Jyutping: laam4 sik1
+  English:  blue
+
+44-wong4-sik1-yellow.mp3
+  Chinese:  黃色
+  Jyutping: wong4 sik1
+  English:  yellow
+
+45-luk6-sik1-green.mp3
+  Chinese:  綠色
+  Jyutping: luk6 sik1
+  English:  green
+
+46-baak6-sik1-white.mp3
+  Chinese:  白色
+  Jyutping: baak6 sik1
+  English:  white
+
+47-hak1-sik1-black.mp3
+  Chinese:  黑色
+  Jyutping: hak1 sik1
+  English:  black
+
+48-gei2-leng3-so-pretty.mp3
+  Chinese:  幾靚
+  Jyutping: gei2 leng3
+  English:  so pretty / looking nice
+
 
 Combined file
 -------------
