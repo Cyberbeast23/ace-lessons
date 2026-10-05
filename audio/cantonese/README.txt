@@ -6,7 +6,7 @@ TTS voice (Cantonese): zh-HK-HiuMaanNeural
 TTS voice (English in ALL-words.mp3): en-HK-YanNeural
 Rate: slowed (~-20%) for clear listening practice.
 
-Sources: Ace lessons 2026-09-29 (Greetings) + 2026-09-30 (Family Members) + 2026-10-01 (Food) + 2026-10-02 (School) + 2026-10-03 (Body) + 2026-10-04 (Colours).
+Sources: Ace lessons 2026-09-29 (Greetings) + 2026-09-30 (Family Members) + 2026-10-01 (Food) + 2026-10-02 (School) + 2026-10-03 (Body) + 2026-10-04 (Colours) + 2026-10-05 (Sky & Space).
 Numbers 1-10 are already known and not included here.
 
 How to practise:
@@ -257,6 +257,47 @@ Individual files
   Chinese:  幾靚
   Jyutping: gei2 leng3
   English:  so pretty / looking nice
+
+
+49-taai3-joeng4-sun.mp3
+  Chinese:  太陽
+  Jyutping: taai3 joeng4
+  English:  sun
+
+50-jyut6-loeng6-moon.mp3
+  Chinese:  月亮
+  Jyutping: jyut6 loeng6
+  English:  moon
+
+51-sing1-sing1-stars.mp3
+  Chinese:  星星
+  Jyutping: sing1 sing1
+  English:  star / stars
+
+52-tin1-hung1-sky.mp3
+  Chinese:  天空
+  Jyutping: tin1 hung1
+  English:  sky
+
+53-dei6-kau4-earth.mp3
+  Chinese:  地球
+  Jyutping: dei6 kau4
+  English:  Earth
+
+54-fo2-zin3-rocket.mp3
+  Chinese:  火箭
+  Jyutping: fo2 zin3
+  English:  rocket
+
+55-taai3-hung1-jan4-astronaut.mp3
+  Chinese:  太空人
+  Jyutping: taai3 hung1 jan4
+  English:  astronaut
+
+56-hou2-jyun5-very-far.mp3
+  Chinese:  好遠
+  Jyutping: hou2 jyun5
+  English:  very far
 
 
 Combined file

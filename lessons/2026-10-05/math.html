@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Math (Oct. 5): Space &amp; Solar System Math Lab</title>
+<style>
+  body{font-family:"Segoe UI",Verdana,Arial,sans-serif;font-size:20px;line-height:1.6;margin:0;background:#f5f0eb;color:#2c2416}
+  .wrap{max-width:880px;margin:0 auto;padding:20px 18px 80px}
+  a.home{font-size:.9em;color:#bf360c}
+  h1{color:#e65100;font-size:2em;margin:10px 0}
+  h2{color:#ef6c00;margin-top:36px;border-bottom:3px solid #ffcc80;padding-bottom:4px}
+  .box{background:#fff;border-radius:16px;padding:18px 22px;margin:16px 0;box-shadow:0 3px 10px rgba(0,0,0,.07)}
+  .example{border-left:8px solid #ef6c00}
+  .example h3{margin:0 0 6px;color:#e65100}
+  .step{margin:4px 0 4px 10px}
+  code,.mono{font-family:Consolas,"Courier New",monospace;background:#fff3e0;padding:1px 6px;border-radius:5px}
+  .q{border-left:8px solid #90a4ae}
+  .q.right{border-left-color:#43a047;background:#f1f8e9}
+  .q.wrong{border-left-color:#e53935;background:#fff5f5}
+  .qnum{font-weight:bold;color:#e65100}
+  .row{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:10px}
+  input[type=text]{font-size:1.05em;padding:8px 12px;border:2px solid #ffcc80;border-radius:10px;width:190px}
+  input[type=text]:focus{outline:none;border-color:#ef6c00;box-shadow:0 0 0 3px #ffe0b2}
+  button{font-size:.95em;padding:8px 16px;border:none;border-radius:10px;cursor:pointer;font-weight:bold}
+  .check{background:#ef6c00;color:#fff} .check:hover{background:#e65100}
+  .hint{background:#ffe082;color:#5d4037} .hint:hover{background:#ffd54f}
+  .sol{background:#ce93d8;color:#311b92}
+  .unit{color:#546e7a}
+  .fb{margin-top:8px;font-weight:bold;min-height:1em}
+  .fb.good{color:#2e7d32} .fb.bad{color:#c62828}
+  .hints{margin-top:8px;color:#e65100;background:#fff3e0;border-radius:10px;padding:0 12px}
+  .hints p{margin:6px 0;padding:6px 0}
+  .solution{margin-top:8px;background:#f3e5f5;border-radius:10px;padding:8px 12px;display:none}
+  #scoreBox{position:sticky;bottom:0;background:#e65100;color:#fff;border-radius:16px 16px 0 0;padding:12px 20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-top:30px}
+  #scoreBox button{background:#ffca28;color:#3e2723}
+  #final{display:none;font-size:1.15em;text-align:center;border:4px solid #43a047}
+  .tipbox{background:#fff8e1;border-left:8px solid #ffb300}
+</style>
+</head>
+<body>
+<div class="wrap">
+<a class="home" href="../../index.html">&larr; Back to all lessons</a>
+<h1>🚀 Math Week 8: Space &amp; Solar System Math Lab</h1>
+<p>Mission control to Ace! Today you'll level up with <strong>integers (negative numbers), powers of ten and scientific notation, circle-graph angles, a missing value from a mean, percent decrease, exponents, two-step equations, ratios, and huge-number rates</strong> — the same maths that space agencies use to plan rockets, orbits, and spacewalks.</p>
+
+<h2>Part 1: Learn the Moves</h2>
+
+<div class="box tipbox">
+  <strong>The 4-Step Problem Solver (your pre-launch checklist):</strong>
+  <ol>
+    <li><strong>Read</strong>: What is the question actually asking? Underline the numbers and units.</li>
+    <li><strong>Plan</strong>: Which operations do I need, and in what order?</li>
+    <li><strong>Solve</strong>: Do one step at a time and write each step down.</li>
+    <li><strong>Check</strong>: Is my answer reasonable? Did I answer the question that was asked?</li>
+  </ol>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 1: Temperatures below zero (integers)</h3>
+  <p>A crater on the Moon is about <strong>100 °C</strong> in sunlight and about <strong>−150 °C</strong> in shadow. What is the difference?</p>
+  <p class="step">Step 1: Difference = warmer − colder = 100 − (−150).</p>
+  <p class="step">Step 2: Subtracting a negative is the same as adding: 100 + 150 = <strong>250 degrees</strong>.</p>
+  <p class="step">Check on a number line: from −150 up to 0 is 150, and from 0 up to 100 is 100. 150 + 100 = 250 ✔</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 2: Powers of ten and scientific notation</h3>
+  <p>Jupiter is about <strong>780 000 000 km</strong> from the Sun. Write that in scientific notation.</p>
+  <p class="step">Step 1: Put the decimal after the first digit: 7.8.</p>
+  <p class="step">Step 2: Count how many places the decimal moved: 8 places. So 780 000 000 = <strong>7.8 × 10<sup>8</sup></strong> km.</p>
+  <p class="step">Going backwards: 2.5 × 10<sup>4</sup> means move the decimal 4 places right: 25 000.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 3: Circle-graph angles</h3>
+  <p>A whole circle is <strong>360°</strong>. In a survey, <strong>20%</strong> of students chose Jupiter as their favourite planet. How big is Jupiter's slice?</p>
+  <p class="step">20% of 360° = 0.20 × 360 = <strong>72°</strong>.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 4: The missing value from a mean</h3>
+  <p>Three rocket tests lasted 10, 14, and <em>x</em> seconds. The mean was <strong>12 s</strong>. Find <em>x</em>.</p>
+  <p class="step">Step 1: Total = mean × number of values = 12 × 3 = 36.</p>
+  <p class="step">Step 2: x = 36 − 10 − 14 = <strong>12 s</strong>.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 5: Percent decrease and exponents</h3>
+  <p>A fuel tank held 200 L and now holds 150 L. Decrease = 50 L. Percent decrease = 50 ÷ 200 × 100 = <strong>25%</strong>. (Always divide by the <em>starting</em> amount.)</p>
+  <p><strong>Exponents (BEDMAS):</strong> <span class="mono">3² × 4 − 2³</span> → 9 × 4 = 36; 2³ = 8; 36 − 8 = <strong>28</strong>.</p>
+</div>
+
+<h2>Part 2: The Challenge (20 problems)</h2>
+<p>Type your answer and press <strong>Check</strong> (or Enter). Fractions like <span class="mono">3/4</span>, mixed numbers like <span class="mono">1 3/4</span>, or decimals like <span class="mono">1.75</span> are fine. Don't type the units. Stuck? Press <strong>Hint</strong>. After 2 tries, you can see a full solution.</p>
+
+<div id="questions"></div>
+<div class="box" id="final"></div>
+<div id="scoreBox">
+  <span id="scoreText">Score: 0 / 20 correct</span>
+  <button id="finishBtn" type="button">I'm done! Show my final score</button>
+</div>
+</div>
+
+<script>
+var NAME = "Ace";
+var QUESTIONS = [
+ {t:"Gravity on Mars is about <strong>38%</strong> of Earth's. A backpack that feels like <strong>50 kg</strong> on Earth would feel like how many kilograms on Mars?", a:"19", u:"kg",
+  h:["38% = 0.38. Multiply by 50.","0.38 × 50 = ?"],
+  s:"0.38 × 50 = 19 kg. (Its mass is still 50 kg, but Mars pulls on it more weakly.)"},
+ {t:"Moon gravity is about <strong>1/6</strong> of Earth's, so you could jump roughly <strong>6 times</strong> as high. Ace can jump <strong>0.45 m</strong> high on Earth. About how high could he jump on the Moon?", a:"2.7", u:"m",
+  h:["Multiply 0.45 by 6.","0.45 × 6 = ?"],
+  s:"0.45 × 6 = 2.7 m."},
+ {t:"Sunlight takes about <strong>500 seconds</strong> to reach Earth. That is 8 minutes and how many <strong>seconds</strong>?", a:"20", u:"s",
+  h:["8 minutes = 8 × 60 seconds.","500 − 480 = ?"],
+  s:"8 × 60 = 480 s. 500 − 480 = 20 s, so it takes 8 min 20 s."},
+ {t:"The International Space Station (ISS) circles Earth about <strong>16 times a day</strong>. How many orbits does it make in <strong>one week</strong>?", a:"112", u:"orbits",
+  h:["A week has 7 days.","16 × 7 = ?"],
+  s:"16 × 7 = 112 orbits."},
+ {t:"The ISS travels at about <strong>28 000 km/h</strong>. How far does it travel in <strong>1.5 hours</strong>?", a:"42000", u:"km",
+  h:["Distance = speed × time.","28 000 × 1.5 = 28 000 + 14 000."],
+  s:"28 000 × 1.5 = 42 000 km — more than once around Earth!"},
+ {t:"Earth is about <strong>150 000 000 km</strong> from the Sun. In scientific notation that is <strong>1.5 × 10<sup>n</sup></strong> km. What is <em>n</em>?", a:"8", u:"",
+  h:["Start with 1.5 and count how many places the decimal must move to the right to make 150 000 000.","150 000 000 has 9 digits. The decimal moves one less than that."],
+  s:"1.5 → 150 000 000 moves the decimal 8 places, so n = 8."},
+ {t:"The Moon is about <strong>3.84 × 10<sup>5</sup> km</strong> from Earth. Write this distance as an ordinary number.", a:"384000", u:"km",
+  h:["× 10<sup>5</sup> means move the decimal 5 places to the right.","3.84 → 38.4 → 384 → 3840 → 38 400 → 384 000."],
+  s:"3.84 × 100 000 = 384 000 km."},
+ {t:"In daytime the Moon's surface can reach about <strong>120 °C</strong>. At night it can drop to about <strong>−170 °C</strong>. What is the difference in degrees?", a:"290", u:"°C",
+  h:["Difference = 120 − (−170).","Subtracting a negative means adding: 120 + 170."],
+  s:"120 − (−170) = 120 + 170 = 290 degrees."},
+ {t:"The average temperature on Mars is about <strong>−60 °C</strong>. Earth's average is about <strong>15 °C</strong>. How many degrees colder is Mars?", a:"75", u:"°C",
+  h:["Find 15 − (−60).","15 + 60 = ?"],
+  s:"15 − (−60) = 75 degrees colder."},
+ {t:"In a class survey, <strong>35%</strong> of students picked Saturn as their favourite planet. How many degrees should Saturn's slice be in a circle graph?", a:"126", u:"°",
+  h:["A full circle is 360°.","0.35 × 360 = ?"],
+  s:"0.35 × 360 = 126°."},
+ {t:"Ace builds a scale model of the planets where <strong>1 cm = 1000 km</strong>. Earth's diameter is about <strong>12 700 km</strong>. How wide should model Earth be in centimetres?", a:"12.7", u:"cm",
+  h:["Divide the real size by 1000.","12 700 ÷ 1000 = ?"],
+  s:"12 700 ÷ 1000 = 12.7 cm."},
+ {t:"Solve for <em>x</em>: <span class='mono'>5x + 18 = 93</span>", a:"15", u:"",
+  h:["Subtract 18 from both sides first.","5x = 75. Now divide by 5."],
+  s:"5x = 93 − 18 = 75, so x = 75 ÷ 5 = 15. Check: 5 × 15 + 18 = 93 ✔"},
+ {t:"Ace's spacewalk practice times were <strong>42, 38, 45,</strong> and <strong><em>x</em></strong> minutes. The <strong>mean</strong> was <strong>42 minutes</strong>. Find <em>x</em>.", a:"43", u:"minutes",
+  h:["Total = mean × number of values = 42 × 4.","42 × 4 = 168. Now subtract the three times you know."],
+  s:"42 × 4 = 168. 42 + 38 + 45 = 125. x = 168 − 125 = 43 minutes."},
+ {t:"A rocket had <strong>500 tonnes</strong> of fuel at launch and <strong>120 tonnes</strong> a few minutes later. What was the <strong>percent decrease</strong>?", a:"76", u:"%",
+  h:["Decrease = 500 − 120 = 380.","Percent decrease = 380 ÷ 500 × 100."],
+  s:"380 ÷ 500 = 0.76 = 76%."},
+ {t:"Use BEDMAS: <span class='mono'>2<sup>5</sup> × 3 − 4<sup>2</sup></span>", a:"80", u:"",
+  h:["Exponents first: 2⁵ = 32 and 4² = 16.","32 × 3 = 96; then 96 − 16."],
+  s:"2⁵ = 32, 4² = 16. 32 × 3 = 96. 96 − 16 = 80."},
+ {t:"A day on Mars (called a <em>sol</em>) lasts about <strong>24 hours 40 minutes</strong>. How many <strong>minutes</strong> long is one sol?", a:"1480", u:"minutes",
+  h:["24 hours × 60 minutes, then add 40.","24 × 60 = 1440."],
+  s:"24 × 60 = 1440; 1440 + 40 = 1480 minutes."},
+ {t:"A space probe travels <strong>1 800 000 km</strong> in <strong>3 days</strong> at a steady speed. What is its speed in <strong>kilometres per hour</strong>?", a:"25000", u:"km/h",
+  h:["First change 3 days into hours: 3 × 24.","1 800 000 ÷ 72 = ?"],
+  s:"3 days = 72 h. 1 800 000 ÷ 72 = 25 000 km/h."},
+ {t:"A supply ship carries <strong>2400 kg</strong> of cargo to the space station. <strong>3/8</strong> is water, <strong>1/4</strong> is food, and the rest is equipment. How many kilograms of <strong>equipment</strong> are there?", a:"900", u:"kg",
+  h:["Water: 3/8 × 2400. Food: 1/4 × 2400.","Water = 900, food = 600. Subtract both from 2400."],
+  s:"Water: 2400 ÷ 8 × 3 = 900. Food: 2400 ÷ 4 = 600. Equipment: 2400 − 900 − 600 = 900 kg."},
+ {t:"At mission control, the ratio of engineers to doctors is <strong>7 : 2</strong>. There are <strong>63</strong> engineers and doctors altogether. How many are <strong>doctors</strong>?", a:"14", u:"doctors",
+  h:["Total parts = 7 + 2 = 9. Find the size of one part.","63 ÷ 9 = 7 people per part. Doctors are 2 parts."],
+  s:"63 ÷ 9 = 7. Doctors = 2 × 7 = 14 (and engineers = 49)."},
+ {t:"A tiny cube satellite (a <em>CubeSat</em>) measures <strong>10 cm</strong> on every edge. How many CubeSats fit exactly inside a box that is <strong>30 cm × 20 cm × 10 cm</strong>?", a:"6", u:"CubeSats",
+  h:["How many fit along each edge? 30 ÷ 10, 20 ÷ 10, 10 ÷ 10.","3 × 2 × 1 = ? (Or compare volumes: 6000 cm³ ÷ 1000 cm³.)"],
+  s:"3 × 2 × 1 = 6. Check with volume: 6000 cm³ ÷ 1000 cm³ = 6 ✔"}
+];
+
+var PRAISE = ["Nice work, Ace!","Correct! Mission control approves! 🚀","Yes! Astronaut Ace strikes again!","Excellent, Ace. That was a tough orbit puzzle!","Right on target! 🎯","Brilliant thinking, Ace!","Spot on, like a real flight engineer!"];
+var ENCOURAGE = ["Not quite. Check your steps and try again!","Close call. Try again, Ace! Maybe use a hint?","Hmm, not yet. Re-read the question carefully.","Keep going, Ace. Mistakes help your brain grow!"];
+
+function parseAnswer(str){
+  if(str===undefined||str===null) return NaN;
+  var s=String(str).trim().toLowerCase();
+  s=s.replace(/[\u2212\u2013]/g,"-");
+  s=s.replace(/(\d),(?=\d{3}(\D|$))/g,"$1");
+  s=s.replace(/[^0-9.\/\- ]/g," ").replace(/\s+/g," ").trim();
+  s=s.replace(/\s*\/\s*/g,"/");
+  var m;
+  if((m=s.match(/^(-?\d+) (\d+)\/(\d+)$/))){ var w=parseFloat(m[1]),n=parseFloat(m[2]),d=parseFloat(m[3]); if(d===0)return NaN; return w<0? w-n/d : w+n/d; }
+  if((m=s.match(/^(-?\d+(?:\.\d+)?)\/(\d+(?:\.\d+)?)$/))){ var d2=parseFloat(m[2]); if(d2===0)return NaN; return parseFloat(m[1])/d2; }
+  s=s.replace(/ /g,"");
+  if(/^-?(\d+\.?\d*|\.\d+)$/.test(s)) return parseFloat(s);
+  return NaN;
+}
+function isCorrect(input,key){
+  var a=parseAnswer(input), k=parseAnswer(key);
+  if(isNaN(a)) return false;
+  var isInt=Math.abs(k-Math.round(k))<1e-12;
+  var tol=isInt?1e-9:0.005;
+  return Math.abs(a-k)<=tol;
+}
+
+var state=[];
+function render(){
+  var box=document.getElementById("questions");
+  QUESTIONS.forEach(function(q,i){
+    state.push({correct:false,tries:0,hints:0});
+    var d=document.createElement("div");
+    d.className="box q"; d.id="q"+i;
+    d.innerHTML='<div><span class="qnum">'+(i+1)+'.</span> '+q.t+'</div>'+
+      '<div class="row"><input type="text" id="in'+i+'" aria-label="Answer to question '+(i+1)+'" autocomplete="off"> <span class="unit">'+q.u+'</span>'+
+      '<button type="button" class="check" data-i="'+i+'">Check</button>'+
+      '<button type="button" class="hint" data-i="'+i+'">Hint 💡</button>'+
+      '<button type="button" class="sol" data-i="'+i+'" style="display:none">Show solution</button></div>'+
+      '<div class="fb" id="fb'+i+'"></div><div class="hints" id="hints'+i+'"></div>'+
+      '<div class="solution" id="sol'+i+'"><strong>Solution:</strong> '+q.s+'</div>';
+    box.appendChild(d);
+  });
+  box.addEventListener("click",function(e){
+    var b=e.target; if(b.tagName!=="BUTTON")return;
+    var i=+b.getAttribute("data-i");
+    if(b.className==="check") check(i);
+    else if(b.className==="hint") hint(i);
+    else if(b.className==="sol") document.getElementById("sol"+i).style.display="block";
+  });
+  box.addEventListener("keydown",function(e){
+    if(e.key==="Enter"&&e.target.tagName==="INPUT"){ check(+e.target.id.slice(2)); }
+  });
+}
+function pick(arr){return arr[Math.floor(Math.random()*arr.length)];}
+function check(i){
+  var val=document.getElementById("in"+i).value;
+  var fb=document.getElementById("fb"+i), card=document.getElementById("q"+i);
+  if(val.trim()===""){fb.className="fb bad";fb.textContent="Type an answer first, Ace!";return;}
+  if(isNaN(parseAnswer(val))){fb.className="fb bad";fb.textContent="I can't read that as a number. Try something like 42, 3.5, 3/4 or 1 3/4.";return;}
+  state[i].tries++;
+  if(isCorrect(val,QUESTIONS[i].a)){
+    state[i].correct=true; card.className="box q right"; fb.className="fb good";
+    fb.textContent="✅ "+pick(PRAISE)+(state[i].tries===1?" (first try!)":"");
+  } else {
+    state[i].correct=false; card.className="box q wrong"; fb.className="fb bad";
+    fb.textContent="❌ "+pick(ENCOURAGE);
+    if(state[i].tries>=2) card.querySelector(".sol").style.display="inline-block";
+  }
+  updateScore();
+}
+function hint(i){
+  var q=QUESTIONS[i], s=state[i], hb=document.getElementById("hints"+i);
+  if(s.hints<q.h.length){
+    var p=document.createElement("p"); p.textContent="💡 Hint "+(s.hints+1)+": "+q.h[s.hints]; hb.appendChild(p); s.hints++;
+  }
+  if(s.hints>=q.h.length) document.querySelector("#q"+i+" .hint").disabled=true;
+  updateScore();
+}
+function counts(){
+  var c=0,first=0,h=0;
+  state.forEach(function(s){ if(s.correct){c++; if(s.tries===1)first++;} h+=s.hints; });
+  return {correct:c,first:first,hints:h};
+}
+function updateScore(){
+  var k=counts();
+  document.getElementById("scoreText").textContent="Score: "+k.correct+" / "+QUESTIONS.length+" correct · hints used: "+k.hints;
+}
+function finish(){
+  var k=counts(), n=QUESTIONS.length, pct=Math.round(100*k.correct/n);
+  var msg;
+  if(pct===100) msg="🏆 PERFECT SCORE! Incredible work, Ace. Your space maths is launch-ready!";
+  else if(pct>=85) msg="🌟 Outstanding, Ace! That's a Grade 6-7 level performance!";
+  else if(pct>=65) msg="💪 Great effort, Ace! Review the ones you missed and try them again.";
+  else if(pct>=40) msg="👍 Good start, Ace! These problems are tough. Use the hints and solutions to learn the tricks, then try again.";
+  else msg="🌱 These are challenge problems, well above grade level. Every astronaut started as a beginner. Go through the worked examples and try again, Ace!";
+  var f=document.getElementById("final");
+  f.style.display="block";
+  f.innerHTML="<h2 style='border:none;margin-top:0'>Final Score: "+k.correct+" / "+n+" ("+pct+"%)</h2>"+
+    "<p>Correct on the first try: "+k.first+" · Hints used: "+k.hints+"</p><p>"+msg+"</p>"+
+    "<p style='font-size:.85em;color:#546e7a'>Finished on "+new Date().toLocaleString("en-CA")+"</p>";
+  f.scrollIntoView({behavior:"smooth"});
+}
+render();
+updateScore();
+document.getElementById("finishBtn").addEventListener("click",finish);
+</script>
+</body>
+</html>

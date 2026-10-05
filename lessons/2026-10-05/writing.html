@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Writing (Oct. 5): Narrative Writing (Space) + Grammar Clinic</title>
+<style>
+  body{font-family:"Segoe UI",Verdana,Arial,sans-serif;font-size:20px;line-height:1.6;margin:0;background:#fff8f0;color:#2c2416}
+  .wrap{max-width:880px;margin:0 auto;padding:20px 18px 80px}
+  a.home{font-size:.9em;color:#bf360c}
+  h1{color:#e65100;font-size:2em;margin:10px 0}
+  h2{color:#ef6c00;margin-top:36px;border-bottom:3px solid #ffcc80;padding-bottom:4px}
+  h3{color:#ef6c00}
+  .box{background:#fff;border-radius:16px;padding:18px 22px;margin:16px 0;box-shadow:0 3px 10px rgba(0,0,0,.07)}
+  .tipbox{background:#fff8e1;border-left:8px solid #ffb300}
+  .senses{display:grid;gap:8px;margin:10px 0;grid-template-columns:repeat(auto-fit,minmax(140px,1fr))}
+  .senses .side{border-radius:14px;padding:10px 16px;background:#fff3e0}
+  .ts{background:#ffcc80;border-radius:5px;padding:1px 3px}
+  .ev{background:#c8e6c9;border-radius:5px;padding:1px 3px}
+  .ex{background:#ffe0b2;border-radius:5px;padding:1px 3px}
+  .cs{background:#e1bee7;border-radius:5px;padding:1px 3px}
+  .legend span{display:inline-block;margin:4px 8px 4px 0;font-size:.85em}
+  .model{font-family:Georgia,"Times New Roman",serif;font-size:1.05em;line-height:1.9}
+  .row{padding:10px 6px;border-bottom:1px dashed #ddd}
+  .row.right{background:#f1f8e9} .row.wrong{background:#fff5f5}
+  select{font-size:.9em;padding:5px 8px;border-radius:8px;border:2px solid #ffb74d;font-family:inherit}
+  .q{border-left:8px solid #b0bec5}
+  .q.right{border-left-color:#43a047;background:#f1f8e9}
+  .q.wrong{border-left-color:#e53935;background:#fff5f5}
+  .opt{display:block;width:100%;text-align:left;font-size:.95em;background:#fafafa;border:2px solid #e0e0e0;border-radius:10px;padding:8px 14px;margin:8px 0;cursor:pointer;font-family:inherit}
+  .opt:hover{border-color:#ffb74d;background:#fff}
+  .opt.sel-right{background:#c8e6c9;border-color:#43a047}
+  .opt.sel-wrong{background:#ffcdd2;border-color:#e53935}
+  .fb{margin-top:6px;font-weight:bold}
+  .fb.good{color:#2e7d32} .fb.bad{color:#c62828}
+  .explain{font-weight:normal;color:#e65100}
+  .bad-sent{font-family:Consolas,"Courier New",monospace;background:#ffebee;padding:6px 10px;border-radius:8px;display:inline-block;margin:6px 0}
+  input.fix{width:100%;box-sizing:border-box;font-size:1em;padding:8px 12px;border:2px solid #ffb74d;border-radius:10px;font-family:inherit}
+  button{font-size:.95em;padding:8px 16px;border:none;border-radius:10px;cursor:pointer;font-weight:bold;font-family:inherit}
+  .go{background:#ef6c00;color:#fff} .go:hover{background:#e65100}
+  .hint{background:#ffe082;color:#5d4037}
+  .blue{background:#1e88e5;color:#fff}
+  .purple{background:#8e24aa;color:#fff}
+  .grey{background:#cfd8dc;color:#263238}
+  .btnrow{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px}
+  textarea{width:100%;box-sizing:border-box;min-height:300px;font-size:1.05em;line-height:1.7;font-family:Georgia,"Times New Roman",serif;padding:14px;border:3px solid #ffb74d;border-radius:12px}
+  textarea:focus{outline:none;border-color:#ef6c00}
+  .counter{display:flex;flex-wrap:wrap;gap:20px;align-items:center;margin:8px 0;font-weight:bold}
+  .meter{flex:1;min-width:200px;height:18px;background:#e0e0e0;border-radius:9px;overflow:hidden}
+  .meter div{height:100%;width:0;background:#ffb300;transition:width .2s}
+  .checklist label{display:block;padding:6px 4px;cursor:pointer}
+  .checklist input{transform:scale(1.4);margin-right:10px}
+  .prompts label{display:block;background:#fff3e0;border-radius:10px;padding:10px 14px;margin:8px 0;cursor:pointer}
+  .prompts input{transform:scale(1.3);margin-right:8px}
+  #scoreBox{position:sticky;bottom:0;background:#e65100;color:#fff;border-radius:16px 16px 0 0;padding:12px 20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-top:30px}
+  #printArea{display:none}
+  @media print{
+    body{background:#fff;font-size:14pt}
+    .wrap,#scoreBox{display:none !important}
+    #printArea{display:block;font-family:Georgia,serif;line-height:1.8}
+    #printArea h1{font-size:18pt;margin:0 0 6pt}
+    #printArea .meta{font-size:11pt;color:#444}
+    #printArea .text{white-space:pre-wrap;border-top:1px solid #999;padding-top:10pt;margin-top:10pt}
+    #printArea .lines{margin-top:24pt;border-top:1px solid #999;padding-top:6pt;font-size:11pt}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+<a class="home" href="../../index.html">&larr; Back to all lessons</a>
+<h1>✍️ Writing Week 8: Narrative Writing (A Mission in Space)</h1>
+<p>Yesterday you persuaded and explained. Today, Ace, you'll tell a <strong>story</strong>: a first-person narrative about a moment in space, with a strong hook, vivid sensory details, a little dialogue, a problem that builds tension, and an ending that shows how the character changed.</p>
+
+<h2>Part 1: The Lesson</h2>
+<div class="box">
+  <h3 style="margin-top:0">Narrative = a story with a shape</h3>
+  <p>A strong narrative doesn't just list events ("then... then... then..."). It pulls the reader <em>into</em> a moment. Good writers <strong>show</strong> instead of only <strong>telling</strong>: instead of "I was scared," they write "My hands shook so hard my glove tapped against the hatch."</p>
+  <div class="senses">
+    <div class="side"><strong>Hook:</strong> start in the action or with a surprise</div>
+    <div class="side"><strong>Setting:</strong> where and when, using the senses</div>
+    <div class="side"><strong>Problem:</strong> something goes wrong or gets hard</div>
+    <div class="side"><strong>Dialogue:</strong> a few real-sounding lines</div>
+    <div class="side"><strong>Resolution:</strong> how it ends and what changed</div>
+  </div>
+  <p><strong>Useful time-order and suspense words:</strong> <em>suddenly, at first, a moment later, meanwhile, just as, finally, without warning, by the time</em>.</p>
+  <p><strong>Dialogue rules:</strong> Put the spoken words inside quotation marks. Put the comma or end mark <em>inside</em> the closing quotation mark. Start a new paragraph each time a new person speaks. Example: <em>"Check your oxygen," said Commander Lee.</em></p>
+</div>
+
+<div class="box">
+  <h3 style="margin-top:0">Model Narrative Paragraph</h3>
+  <p class="legend"><span class="ts">Hook</span><span class="ev">Setting / sensory details</span><span class="ex">Problem + dialogue</span><span class="cs">Resolution</span></p>
+  <p class="model">
+    <span class="ts">The warning light blinked red just as I floated out of the airlock.</span>
+    <span class="ev">Below my boots, Earth turned slowly, a swirl of blue ocean and white cloud, so bright it made my eyes water inside the helmet. The only sounds were my own breathing and the soft hum of the fans in my suit.</span>
+    <span class="ex">"Ace, your tether clip is loose," crackled Commander Lee's voice over the radio. My heart thumped against my ribs. I reached for the clip, but my thick glove slid right off it. "Slow down," she said calmly. "Breathe first, then try again."</span>
+    <span class="ex">I took one long breath, counted to three, and pressed the clip until I felt it snap shut.</span>
+    <span class="cs">Back inside the station, I stared out the window at the planet I had almost drifted away from, and I knew I would never rush a safety check again.</span>
+  </p>
+  <p><strong>Notice:</strong> The story starts in the action, uses sight and sound, builds a problem with dialogue, and ends by showing what the character learned.</p>
+</div>
+
+<h2>Part 2: Spot Strong Writing</h2>
+<div class="box">
+  <p>For each sentence, choose whether it <strong>shows</strong> the story with vivid detail, only <strong>tells</strong> in a vague way, or is <strong>off-topic</strong> for a space story.</p>
+  <div id="labelRows"></div>
+  <div class="btnrow"><button type="button" class="go" id="checkLabels">Check my answers</button></div>
+  <div class="fb" id="labelFb"></div>
+</div>
+
+<h2>Part 3: Grammar Clinic 🩺</h2>
+<div class="box tipbox">A doctor examines a patient carefully to find what's wrong. You're the doctor for these sentences! <strong>Section A:</strong> pick the correct sentence. <strong>Section B:</strong> type the sentence again with <em>all</em> mistakes fixed. We use <strong>Canadian spelling</strong> (colour, favourite, metre, travelled, centre). Today, watch <strong>dialogue punctuation</strong>, <strong>its / it's</strong>, <strong>comparatives and superlatives</strong> (bigger, biggest), <strong>subject-verb agreement</strong>, and <strong>verb tense</strong>.</div>
+<h3>Section A: Pick the correct sentence</h3>
+<div id="gmc"></div>
+<h3>Section B: Fix the sentence</h3>
+<p>Retype the whole sentence correctly, with capital letters and punctuation. Each one has <strong>at least two</strong> mistakes (except where noted).</p>
+<div id="gfix"></div>
+
+<h2>Part 4: Your Turn to Write</h2>
+<div class="box">
+  <h3 style="margin-top:0">Choose a prompt</h3>
+  <div class="prompts" id="prompts">
+    <label><input type="radio" name="prompt" value="Write a first-person story about your first spacewalk outside the International Space Station, when something unexpected goes wrong." checked> 🧑‍🚀 <strong>First spacewalk.</strong> Something goes wrong outside the station.</label>
+    <label><input type="radio" name="prompt" value="You are the doctor on a crew travelling to Mars. A crewmate feels sick halfway there. Tell the story of how you solve the problem."> 🩺 <strong>Space doctor.</strong> A crewmate needs your help on the way to Mars.</label>
+    <label><input type="radio" name="prompt" value="Tell the story of the moment your rocket launches, from the countdown to the first time you see Earth from orbit."> 🚀 <strong>Liftoff!</strong> From countdown to your first view of Earth.</label>
+  </div>
+  <p><strong>Goal:</strong> a story of <strong>180 to 280 words</strong> (two or three paragraphs) with a hook, sensory details, at least <strong>two lines of correctly punctuated dialogue</strong>, a problem, and a resolution.</p>
+  <label for="essay"><strong>Write here, Ace:</strong></label>
+  <textarea id="essay" placeholder="Start with a hook that drops the reader right into the action..."></textarea>
+  <div class="counter">
+    <span id="wc">0 words</span>
+    <span id="sc">0 sentences</span>
+    <div class="meter" aria-hidden="true"><div id="meterBar"></div></div>
+  </div>
+  <div class="fb" id="wcMsg">Aim for 180 to 280 words.</div>
+  <p style="font-size:.8em;color:#607d8b" id="saveNote">Your writing is saved automatically in this browser as you type.</p>
+
+  <h3>Self-check before you finish ✅</h3>
+  <div class="checklist" id="checklist">
+    <label><input type="checkbox"> My story starts with a <strong>hook</strong> (action, a sound, a surprise, or a question).</label>
+    <label><input type="checkbox"> I used at least <strong>three senses</strong> (sight, sound, touch, smell, taste) to show the setting.</label>
+    <label><input type="checkbox"> I wrote at least <strong>two lines of dialogue</strong>, with quotation marks and commas in the right places.</label>
+    <label><input type="checkbox"> There is a clear <strong>problem</strong> that builds suspense.</label>
+    <label><input type="checkbox"> My <strong>ending</strong> shows how the problem was solved and what the character learned or felt.</label>
+    <label><input type="checkbox"> I stayed in the <strong>same tense</strong> (past tense is easiest) and in first person ("I").</label>
+    <label><input type="checkbox"> I checked my <strong>spelling</strong> (Canadian spelling!) and read it out loud once.</label>
+    <label><input type="checkbox"> I used at least one <strong>vocabulary word</strong> from today (e.g. orbit, gravity, atmosphere, satellite, astronaut, telescope).</label>
+  </div>
+  <div class="btnrow">
+    <button type="button" class="blue" id="downloadBtn">⬇️ Download my writing (for Dad)</button>
+    <button type="button" class="purple" id="printBtn">🖨️ Print my writing</button>
+    <button type="button" class="grey" id="clearBtn">Start over</button>
+  </div>
+  <div class="fb" id="doneMsg"></div>
+</div>
+
+<div id="scoreBox"><span id="scoreText"></span><span>Keep going, Ace! 💪</span></div>
+</div>
+
+<div id="printArea"></div>
+
+<script>
+var NAME="Ace";
+var PRAISE=["Nice work, Ace!","Correct! Great editing eye!","Yes! Ace fixed it!","Excellent, Ace!","Perfect diagnosis! 🩺"];
+function pick(a){return a[Math.floor(Math.random()*a.length)];}
+
+var LABELS=["Shows (vivid detail)","Tells (vague)","Off-topic (doesn't belong)"];
+var LABEL_ITEMS=[
+ {s:"My stomach flipped as the engines roared and the seat pressed hard against my back.", a:"Shows (vivid detail)"},
+ {s:"Space was really cool and stuff.", a:"Tells (vague)"},
+ {s:"Through the tiny window, the Moon looked like a chalky marble hanging in black velvet.", a:"Shows (vivid detail)"},
+ {s:"My cousin's soccer team won the city championship last spring.", a:"Off-topic (doesn't belong)"},
+ {s:"I felt happy.", a:"Tells (vague)"},
+ {s:"A drop of orange juice wobbled in front of my nose, and I gulped it out of the air.", a:"Shows (vivid detail)"}
+];
+var labelScore=0, labelChecked=false;
+function buildLabels(){
+  var box=document.getElementById("labelRows");
+  LABEL_ITEMS.forEach(function(it,i){
+    var d=document.createElement("div"); d.className="row"; d.id="lr"+i;
+    var sel='<select id="ls'+i+'" aria-label="Job of sentence '+(i+1)+'"><option value="">- choose -</option>';
+    LABELS.forEach(function(l){sel+='<option>'+l+'</option>';});
+    sel+='</select>';
+    d.innerHTML='<strong>'+(i+1)+'.</strong> '+it.s+'<br>'+sel+' <span id="lm'+i+'"></span>';
+    box.appendChild(d);
+  });
+}
+function checkLabels(){
+  var sc=0;
+  LABEL_ITEMS.forEach(function(it,i){
+    var ok=document.getElementById("ls"+i).value===it.a; if(ok)sc++;
+    document.getElementById("lr"+i).className="row "+(ok?"right":"wrong");
+    document.getElementById("lm"+i).textContent=ok?"✅":"❌";
+  });
+  labelScore=sc; labelChecked=true;
+  var fb=document.getElementById("labelFb");
+  if(sc===LABEL_ITEMS.length){fb.className="fb good";fb.textContent="🌟 "+sc+" / "+LABEL_ITEMS.length+". "+pick(PRAISE)+" You spotted the off-topic soccer sentence!";}
+  else{fb.className="fb bad";fb.textContent=sc+" / "+LABEL_ITEMS.length+". Hint: specific sights, sounds, and feelings = shows; vague words like cool or happy = tells. Fix the ❌ ones and check again.";}
+  updateScore();
+}
+
+var GMC=[
+ {q:"Which sentence punctuates <strong>dialogue</strong> correctly?",
+  o:["\"Prepare for launch\" said the commander.","\"Prepare for launch,\" said the commander.","\"Prepare for launch\", said the commander.","Prepare for launch, \"said the commander.\""],
+  a:1,e:"The comma goes <em>inside</em> the closing quotation mark."},
+ {q:"Which sentence uses <em>its / it's</em> correctly?",
+  o:["It's orbit takes about 27 days, and its very far away.","Its orbit takes about 27 days, and it's very far away.","It's orbit takes about 27 days, and it's very far away.","Its orbit takes about 27 days, and its very far away."],
+  a:1,e:"<em>Its</em> = belonging to it (no apostrophe). <em>It's</em> = it is."},
+ {q:"Which sentence uses a <strong>superlative</strong> correctly?",
+  o:["Jupiter is the most biggest planet.","Jupiter is the bigger planet of all eight.","Jupiter is the biggest planet in our Solar System.","Jupiter is more bigger than all the others."],
+  a:2,e:"Use <em>-est</em> (biggest) when comparing three or more, and never add <em>most</em> as well."},
+ {q:"Which sentence has correct <strong>subject-verb agreement</strong>?",
+  o:["Each of the astronauts exercise for two hours.","Each of the astronauts exercises for two hours.","Each of the astronauts are exercising for two hours.","Each of the astronauts have exercised for two hours."],
+  a:1,e:"The subject is <em>each</em> (one), so the verb is singular: <em>exercises</em>."},
+ {q:"Which sentence stays in the <strong>same verb tense</strong>?",
+  o:["The rocket shook, and then it climbs into the clouds.","The rocket shakes, and then it climbed into the clouds.","The rocket shook, and then it climbed into the clouds.","The rocket shaking, and then it climbed into the clouds."],
+  a:2,e:"<em>Shook</em> and <em>climbed</em> are both past tense."},
+ {q:"Which sentence uses <strong>Canadian spelling</strong> correctly?",
+  o:["The crew travelled 400 kilometres, past the grey centre of the storm.","The crew traveled 400 kilometers, past the gray center of the storm.","The crew travelled 400 kilometers, past the grey center of the storm.","The crew traveled 400 kilometres, past the gray centre of the storm."],
+  a:0,e:"Canadian: <em>travelled</em>, <em>kilometres</em>, <em>grey</em>, <em>centre</em>."},
+ {q:"Which choice correctly starts a <strong>new paragraph</strong> for a new speaker?",
+  o:["\"Are you ready?\" asked Lee. \"Ready,\" I said. (all in one paragraph)","\"Are you ready?\" asked Lee.<br>\"Ready,\" I said. (new line for the new speaker)","\"Are you ready? asked Lee. Ready, I said.\"","Are you ready asked Lee ready I said."],
+  a:1,e:"Each new speaker gets a new paragraph, so the reader always knows who is talking."}
+];
+var gmcState=GMC.map(function(){return{answered:false,firstRight:false,done:false};});
+function buildGMC(){
+  var box=document.getElementById("gmc");
+  GMC.forEach(function(it,i){
+    var d=document.createElement("div"); d.className="box q"; d.id="g"+i;
+    var h='<div><strong>'+(i+1)+'.</strong> '+it.q+'</div>';
+    it.o.forEach(function(o,j){h+='<button type="button" class="opt" data-i="'+i+'" data-j="'+j+'">'+String.fromCharCode(65+j)+'. '+o+'</button>';});
+    h+='<div class="fb" id="gfb'+i+'"></div>';
+    d.innerHTML=h; box.appendChild(d);
+  });
+  box.addEventListener("click",function(e){
+    var b=e.target.closest?e.target.closest(".opt"):e.target; if(!b||!b.classList.contains("opt"))return;
+    var i=+b.getAttribute("data-i"), j=+b.getAttribute("data-j"), st=gmcState[i], it=GMC[i];
+    if(st.done)return;
+    var ok=j===it.a; if(!st.answered){st.answered=true;st.firstRight=ok;}
+    var fb=document.getElementById("gfb"+i);
+    if(ok){st.done=true;b.classList.add("sel-right");document.getElementById("g"+i).className="box q right";fb.className="fb good";fb.innerHTML="✅ "+pick(PRAISE)+' <span class="explain">'+it.e+'</span>';}
+    else{b.classList.add("sel-wrong");document.getElementById("g"+i).className="box q wrong";fb.className="fb bad";fb.textContent="❌ Not quite, Ace. Look closely and try again.";}
+    updateScore();
+  });
+}
+
+var GFIX=[
+ {bad:"\"look at the earth\" said ace \"it's so blue.\"",
+  ok:["\"Look at the Earth,\" said Ace. \"It's so blue.\"","\"Look at the Earth,\" said Ace, \"it's so blue.\"","\"Look at the Earth,\" said Ace. \"It's so blue!\"","\"Look at Earth,\" said Ace. \"It's so blue.\""],
+  hint:"Capitalize the first spoken word, Earth (a planet's name), and Ace. Put a comma inside the first closing quotation mark."},
+ {bad:"The astronauts checks there oxygen tanks before every spacewalk.",
+  ok:["The astronauts check their oxygen tanks before every spacewalk."],
+  hint:"Plural subject (astronauts) needs check, not checks. There/their: which one means belonging to them?"},
+ {bad:"Jupiter is more bigger then Saturn, its the largest planet.",
+  ok:["Jupiter is bigger than Saturn; it's the largest planet.","Jupiter is bigger than Saturn. It's the largest planet.","Jupiter is bigger than Saturn, and it's the largest planet.","Jupiter is bigger than Saturn; it is the largest planet.","Jupiter is bigger than Saturn. It is the largest planet.","Jupiter is bigger than Saturn, and it is the largest planet."],
+  hint:"Remove the extra word before bigger. Then/than: which one compares? Its/it's: which means it is? Fix the comma splice too."},
+ {bad:"My favorite color in the night sky is the red glow of mars.",
+  ok:["My favourite colour in the night sky is the red glow of Mars."],
+  hint:"Two Canadian spellings to fix, and a planet's name needs a capital letter."}
+];
+
+var gfixState=GFIX.map(function(){return{tries:0,correct:false,firstRight:false};});
+function norm(s){return s.replace(/[\u2018\u2019\u02BC]/g,"'").replace(/[\u201C\u201D]/g,'"').replace(/\s+/g," ").trim();}
+function checkFixAnswer(i,val){var v=norm(val);return GFIX[i].ok.some(function(a){return norm(a)===v;});}
+function buildGFix(){
+  var box=document.getElementById("gfix");
+  GFIX.forEach(function(it,i){
+    var d=document.createElement("div"); d.className="box q"; d.id="f"+i;
+    d.innerHTML='<div><strong>'+(i+1)+'.</strong> Fix: <span class="bad-sent">'+it.bad+'</span></div>'+
+     '<input class="fix" type="text" id="fi'+i+'" autocomplete="off" spellcheck="false" aria-label="Corrected sentence '+(i+1)+'">'+
+     '<div class="btnrow"><button type="button" class="go" data-act="check" data-i="'+i+'">Check</button><button type="button" class="hint" data-act="hint" data-i="'+i+'">Hint 💡</button><button type="button" class="grey" data-act="show" data-i="'+i+'" style="display:none">Show answer</button></div>'+
+     '<div class="fb" id="ffb'+i+'"></div>';
+    box.appendChild(d);
+  });
+  box.addEventListener("click",function(e){
+    var b=e.target; if(b.tagName!=="BUTTON")return;
+    var i=+b.getAttribute("data-i"), act=b.getAttribute("data-act"), fb=document.getElementById("ffb"+i);
+    if(act==="hint"){fb.className="fb";fb.style.color="#5d4037";fb.textContent="💡 "+GFIX[i].hint;return;}
+    fb.style.color="";
+    if(act==="show"){fb.className="fb";fb.innerHTML='Answer: <em>'+GFIX[i].ok[0]+'</em>'+(GFIX[i].ok.length>1?' (other correct versions are accepted too)':'');return;}
+    fixCheck(i);
+  });
+  box.addEventListener("keydown",function(e){if(e.key==="Enter"&&e.target.classList.contains("fix"))fixCheck(+e.target.id.slice(2));});
+}
+function fixCheck(i){
+  var val=document.getElementById("fi"+i).value, fb=document.getElementById("ffb"+i), st=gfixState[i];
+  fb.style.color="";
+  if(!val.trim()){fb.className="fb bad";fb.textContent="Type the corrected sentence first, Ace!";return;}
+  st.tries++;
+  if(checkFixAnswer(i,val)){ if(st.tries===1)st.firstRight=true; st.correct=true; document.getElementById("f"+i).className="box q right"; fb.className="fb good"; fb.textContent="✅ "+pick(PRAISE); }
+  else { st.correct=false; document.getElementById("f"+i).className="box q wrong"; fb.className="fb bad"; fb.textContent="❌ Not quite. Check every capital letter, apostrophe, comma, and spelling. Try again!"; if(st.tries>=2)document.querySelector('#f'+i+' [data-act=show]').style.display="inline-block"; }
+  updateScore();
+}
+
+function updateScore(){
+  var g=0; gmcState.forEach(function(s){if(s.firstRight)g++;});
+  var f=0; gfixState.forEach(function(s){if(s.correct)f++;});
+  var total=LABEL_ITEMS.length+GMC.length+GFIX.length, got=labelScore+g+f;
+  document.getElementById("scoreText").textContent="Score: "+got+" / "+total+"  (labels "+(labelChecked?labelScore:"-")+"/"+LABEL_ITEMS.length+" · grammar A "+g+"/"+GMC.length+" · grammar B "+f+"/"+GFIX.length+")";
+}
+
+var KEY="ace-writing-2026-10-05";
+function countWords(t){var m=t.trim().match(/[A-Za-zÀ-ÿ0-9]+(?:['’\-][A-Za-zÀ-ÿ0-9]+)*/g);return m?m.length:0;}
+function countSentences(t){var m=t.match(/[^.!?]*[A-Za-z0-9][^.!?]*[.!?]+/g);return m?m.length:0;}
+function currentPrompt(){var r=document.querySelector('input[name=prompt]:checked');return r?r.value:"";}
+function updateCount(){
+  var t=document.getElementById("essay").value, w=countWords(t), s=countSentences(t);
+  document.getElementById("wc").textContent=w+(w===1?" word":" words");
+  document.getElementById("sc").textContent=s+(s===1?" sentence":" sentences");
+  var bar=document.getElementById("meterBar"); bar.style.width=Math.min(100,w/280*100)+"%";
+  var msg=document.getElementById("wcMsg");
+  if(w<180){bar.style.background="#ffb300";msg.className="fb";msg.textContent=w===0?"Aim for 180 to 280 words.":"Keep going, Ace! "+(180-w)+" more words to reach the goal.";}
+  else if(w<=280){bar.style.background="#43a047";msg.className="fb good";msg.textContent="🎯 You're in the target zone! Nice work, Ace!";}
+  else{bar.style.background="#1e88e5";msg.className="fb";msg.textContent="Wow, that's a lot of writing! Make sure every sentence moves the story forward. Could any be cut?";}
+  try{localStorage.setItem(KEY,JSON.stringify({text:t,prompt:currentPrompt(),checks:checkStates()}));}catch(e){document.getElementById("saveNote").textContent="(This browser can't auto-save here, so use the Download button before closing!)";}
+}
+function checkStates(){return Array.prototype.map.call(document.querySelectorAll("#checklist input"),function(c){return c.checked;});}
+function checklistText(){
+  return Array.prototype.map.call(document.querySelectorAll("#checklist label"),function(l){return (l.querySelector("input").checked?"[x] ":"[ ] ")+l.textContent.trim();}).join("\n");
+}
+function buildReport(){
+  var t=document.getElementById("essay").value;
+  return "Writing Week 8: "+NAME+"\nDate: "+new Date().toLocaleString("en-CA")+"\nPrompt: "+currentPrompt()+
+    "\nWords: "+countWords(t)+"   Sentences: "+countSentences(t)+
+    "\n\n----- "+NAME+"'s writing -----\n\n"+t+"\n\n----- Self-check -----\n"+checklistText()+
+    "\n\n----- Parent feedback -----\n\n\n";
+}
+function download(){
+  var t=document.getElementById("essay").value;
+  if(!t.trim()){document.getElementById("doneMsg").className="fb bad";document.getElementById("doneMsg").textContent="Write something first, Ace!";return;}
+  var blob=new Blob([buildReport().replace(/\n/g,"\r\n")],{type:"text/plain;charset=utf-8"});
+  var a=document.createElement("a"); a.href=URL.createObjectURL(blob); a.download=NAME+"-writing-2026-10-05"+".txt";
+  document.body.appendChild(a); a.click();
+  setTimeout(function(){URL.revokeObjectURL(a.href);a.remove();},1000);
+  var dm=document.getElementById("doneMsg"); dm.className="fb good"; dm.textContent="📄 Saved! Look in your Downloads folder and show Dad. Great job finishing, Ace!";
+}
+function esc(s){return s.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");}
+function printIt(){
+  var t=document.getElementById("essay").value;
+  if(!t.trim()){document.getElementById("doneMsg").className="fb bad";document.getElementById("doneMsg").textContent="Write something first, Ace!";return;}
+  document.getElementById("printArea").innerHTML="<h1>Writing Week 8: "+NAME+"</h1><div class='meta'>"+esc(new Date().toLocaleString("en-CA"))+"<br><strong>Prompt:</strong> "+esc(currentPrompt())+"<br>Words: "+countWords(t)+" · Sentences: "+countSentences(t)+"</div><div class='text'>"+esc(t)+"</div><div class='lines'><strong>Self-check:</strong><br>"+esc(checklistText()).replace(/\n/g,"<br>")+"</div><div class='lines'><strong>Parent feedback:</strong><br><br><br><br></div>";
+  window.print();
+}
+function restore(){
+  try{var d=JSON.parse(localStorage.getItem(KEY)||"null"); if(!d)return;
+    document.getElementById("essay").value=d.text||"";
+    Array.prototype.forEach.call(document.querySelectorAll("input[name=prompt]"),function(r){r.checked=(r.value===d.prompt);});
+    if(!document.querySelector("input[name=prompt]:checked"))document.querySelector("input[name=prompt]").checked=true;
+    var cs=document.querySelectorAll("#checklist input"); (d.checks||[]).forEach(function(v,i){if(cs[i])cs[i].checked=v;});
+  }catch(e){}
+}
+buildLabels(); buildGMC(); buildGFix(); restore(); updateCount(); updateScore();
+document.getElementById("checkLabels").addEventListener("click",checkLabels);
+document.getElementById("essay").addEventListener("input",updateCount);
+document.getElementById("checklist").addEventListener("change",function(){updateCount(); if(checkStates().every(Boolean)){var dm=document.getElementById("doneMsg");dm.className="fb good";dm.textContent="✅ All boxes checked! Now download or print it for Dad. Awesome work, Ace!";}});
+document.getElementById("prompts").addEventListener("change",updateCount);
+document.getElementById("downloadBtn").addEventListener("click",download);
+document.getElementById("printBtn").addEventListener("click",printIt);
+document.getElementById("clearBtn").addEventListener("click",function(){ if(confirm("Erase your writing and start over?")){document.getElementById("essay").value="";Array.prototype.forEach.call(document.querySelectorAll("#checklist input"),function(c){c.checked=false;});document.getElementById("doneMsg").textContent="";updateCount();} });
+</script>
+</body>
+</html>
