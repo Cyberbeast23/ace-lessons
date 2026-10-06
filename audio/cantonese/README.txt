@@ -6,7 +6,7 @@ TTS voice (Cantonese): zh-HK-HiuMaanNeural
 TTS voice (English in ALL-words.mp3): en-HK-YanNeural
 Rate: slowed (~-20%) for clear listening practice.
 
-Sources: Ace lessons 2026-09-29 (Greetings) + 2026-09-30 (Family Members) + 2026-10-01 (Food) + 2026-10-02 (School) + 2026-10-03 (Body) + 2026-10-04 (Colours) + 2026-10-05 (Sky & Space).
+Sources: Ace lessons 2026-09-29 (Greetings) + 2026-09-30 (Family Members) + 2026-10-01 (Food) + 2026-10-02 (School) + 2026-10-03 (Body) + 2026-10-04 (Colours) + 2026-10-05 (Sky & Space) + 2026-10-06 (Numbers 11-100).
 Numbers 1-10 are already known and not included here.
 
 How to practise:
@@ -298,6 +298,47 @@ Individual files
   Chinese:  好遠
   Jyutping: hou2 jyun5
   English:  very far
+
+
+57-sap6-jat1-eleven.mp3
+  Chinese:  十一
+  Jyutping: sap6 jat1
+  English:  eleven (11)
+
+58-sap6-ng5-fifteen.mp3
+  Chinese:  十五
+  Jyutping: sap6 ng5
+  English:  fifteen (15)
+
+59-ji6-sap6-twenty.mp3
+  Chinese:  二十
+  Jyutping: ji6 sap6
+  English:  twenty (20)
+
+60-ji6-sap6-saam1-twenty-three.mp3
+  Chinese:  二十三
+  Jyutping: ji6 sap6 saam1
+  English:  twenty-three (23)
+
+61-saam1-sap6-thirty.mp3
+  Chinese:  三十
+  Jyutping: saam1 sap6
+  English:  thirty (30)
+
+62-gau2-sap6-gau2-ninety-nine.mp3
+  Chinese:  九十九
+  Jyutping: gau2 sap6 gau2
+  English:  ninety-nine (99)
+
+63-jat1-baak3-one-hundred.mp3
+  Chinese:  一百
+  Jyutping: jat1 baak3
+  English:  one hundred (100)
+
+64-gei2-do1-how-many.mp3
+  Chinese:  幾多
+  Jyutping: gei2 do1
+  English:  how many / how much
 
 
 Combined file

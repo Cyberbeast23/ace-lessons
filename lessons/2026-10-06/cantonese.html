@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cantonese (Oct. 6): Big Numbers 11–100 (數字)</title>
+<style>
+  body{font-family:"Segoe UI",Verdana,Arial,sans-serif;font-size:20px;line-height:1.6;margin:0;background:#f5f0eb;color:#2c2416}
+  .wrap{max-width:880px;margin:0 auto;padding:20px 18px 80px}
+  a.home{font-size:.9em;color:#bf360c}
+  h1{color:#e65100;font-size:2em;margin:10px 0}
+  h2{color:#ef6c00;margin-top:36px;border-bottom:3px solid #ffcc80;padding-bottom:4px}
+  h3{color:#ef6c00}
+  .box{background:#fff;border-radius:16px;padding:18px 22px;margin:16px 0;box-shadow:0 3px 10px rgba(0,0,0,.07)}
+  .tipbox{background:#fff8e1;border-left:8px solid #ffb300}
+  .char{font-size:2.2em;font-weight:bold;color:#e65100;line-height:1.2}
+  .jyut{font-family:Consolas,"Courier New",monospace;background:#fff3e0;padding:2px 8px;border-radius:8px;font-size:1.05em}
+  .card{display:grid;grid-template-columns:auto 1fr;gap:8px 18px;align-items:center;border-left:8px solid #ef6c00;padding-left:14px}
+  .card .meta{grid-column:2}
+  .ex{margin-top:8px;background:#fff3e0;border-radius:10px;padding:8px 12px;font-size:.95em}
+  .q{border-left:8px solid #b0bec5}
+  .q.right{border-left-color:#43a047;background:#f1f8e9}
+  .q.wrong{border-left-color:#e53935;background:#fff5f5}
+  .opt{display:block;width:100%;text-align:left;font-size:.95em;background:#fafafa;border:2px solid #e0e0e0;border-radius:10px;padding:8px 14px;margin:8px 0;cursor:pointer;font-family:inherit}
+  .opt:hover{border-color:#ffb74d;background:#fff}
+  .opt.sel-right{background:#c8e6c9;border-color:#43a047}
+  .opt.sel-wrong{background:#ffcdd2;border-color:#e53935}
+  .fb{margin-top:6px;font-weight:bold}
+  .fb.good{color:#2e7d32} .fb.bad{color:#c62828}
+  .explain{font-weight:normal;color:#e65100}
+  .vrow{display:flex;flex-wrap:wrap;align-items:center;gap:10px;padding:8px 6px;border-bottom:1px dashed #eee}
+  .vrow .w{font-weight:bold;min-width:120px;font-size:1.3em}
+  .vrow.right{background:#f1f8e9} .vrow.wrong{background:#fff5f5}
+  select{font-size:.95em;padding:6px 8px;border-radius:8px;border:2px solid #ffb74d;max-width:100%;font-family:inherit}
+  .mark{font-size:1.2em;min-width:30px}
+  button.main{font-size:1em;padding:10px 20px;border:none;border-radius:10px;cursor:pointer;font-weight:bold;background:#ef6c00;color:#fff;margin-top:10px}
+  button.main:hover{background:#e65100}
+  input[type=text]{font-size:1.05em;padding:8px 12px;border:2px solid #ffb74d;border-radius:10px;width:220px;font-family:inherit}
+  button.check{font-size:.95em;padding:8px 16px;border:none;border-radius:10px;cursor:pointer;font-weight:bold;background:#ef6c00;color:#fff}
+  .row{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:10px}
+  #scoreBox{position:sticky;bottom:0;background:#e65100;color:#fff;border-radius:16px 16px 0 0;padding:12px 20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-top:30px}
+  #scoreBox button{font-size:.95em;padding:8px 16px;border:none;border-radius:10px;cursor:pointer;font-weight:bold;background:#ffca28;color:#3e2723}
+  #final{display:none;text-align:center;border:4px solid #43a047;font-size:1.1em}
+  .tone{font-size:.85em;color:#ef6c00}
+
+  .audio-bar{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin:12px 0 4px}
+  button.speak,button.record,button.play-mine,button.play-model,button.audio-ctrl{
+    font-size:1.05em;padding:14px 18px;min-height:52px;min-width:52px;
+    border:none;border-radius:14px;cursor:pointer;font-weight:bold;font-family:inherit;
+    touch-action:manipulation;-webkit-tap-highlight-color:transparent;
+  }
+  button.speak,button.play-model,button.audio-ctrl.hear{background:#ef6c00;color:#fff}
+  button.speak:hover,button.play-model:hover,button.audio-ctrl.hear:hover{background:#e65100}
+  button.speak.playing{background:#43a047}
+  button.record{background:#e53935;color:#fff}
+  button.record:hover{background:#c62828}
+  button.record.recording{background:#ffca28;color:#3e2723;animation:pulse 1s infinite}
+  @keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.04)}}
+  button.play-mine{background:#00897b;color:#fff}
+  button.play-mine:hover{background:#00695c}
+  button.play-mine:disabled{opacity:.45;cursor:not-allowed}
+  button.audio-ctrl.stop{background:#546e7a;color:#fff}
+  button.audio-ctrl.stop:hover{background:#37474f}
+  .practice{margin-top:14px;padding-top:12px;border-top:2px dashed #ffcc80}
+  .practice-row{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+  .rec-status{margin-top:8px;font-weight:bold;color:#ef6c00;font-size:.95em}
+  .rec-status.rec-on{color:#c62828}
+  .mic-msg{margin-top:8px;background:#fff3e0;border-left:6px solid #ef6c00;border-radius:10px;padding:10px 14px;font-size:.95em;color:#e65100}
+  .box[data-audio]{position:relative}
+</style>
+</head>
+<body>
+<div class="wrap">
+<a class="home" href="../../index.html">&larr; Back to all lessons</a>
+<h1>🗣️ Cantonese Week 8: Big Numbers 11–100 數字 (Hong Kong)</h1>
+<p>Ace, you already know the numbers <strong>一 to 十 (1–10)</strong>, plus greetings, family, food, school, body parts, colours, and sky &amp; space words. Today — while your maths lesson cracks Roman numerals — you'll build <strong>bigger numbers up to 100</strong> the Hong Kong way, using <strong>Traditional Chinese</strong> characters and Jyutping with tone numbers. Good news: Cantonese numbers are like LEGO. Once you know 1 to 10, you can snap together every number up to 99!</p>
+
+<div class="box tipbox">
+  <strong>How to read Jyutping (sounds):</strong>
+  <ul>
+    <li>Letters show the sound. Numbers show the <strong>tone</strong> (the musical pitch): 1 high, 2 rising, 3 mid, 4 low/falling, 5 low rising, 6 low.</li>
+    <li>Example: <span class="jyut">sap6</span> in 十 (ten) — say <em>sap</em> with tone 6 (low and level).</li>
+    <li><strong>Listening/speaking tip:</strong> Say each number out loud three times while looking at the characters. Tap Hear model, then Record and compare!</li>
+  </ul>
+</div>
+
+<h2>Part 1: Learn Today's Words</h2>
+<div class="box tipbox" style="background:#fff3e0;border-left-color:#ef6c00"><strong>Listen &amp; practise:</strong> Tap <em>Hear model</em> to hear the word (Hong Kong voice). Then tap <em>Record</em>, say it out loud, and compare with <em>Play my try</em> + <em>Play model</em>. Recordings stay on this device only for this visit — nothing is uploaded.</div>
+<div class="audio-bar">
+  <button type="button" class="audio-ctrl hear" id="playAll">🔊 Play all words</button>
+  <button type="button" class="audio-ctrl stop" id="stopAudio">⏹️ Stop</button>
+  <span class="tone">Plays every word with English first (greetings + family + food + school + body + colours + sky &amp; space + numbers 11–100).</span>
+</div>
+<div id="cards"></div>
+
+<div class="box tipbox">
+  <strong>Number-building tip for Ace:</strong>
+  <ul>
+    <li><strong>十 + a number</strong> = the teens: 十 + 一 = 十一 (11), 十 + 五 = 十五 (15).</li>
+    <li><strong>a number + 十</strong> = the tens: 二 + 十 = 二十 (20), 三 + 十 = 三十 (30). It means "two tens," "three tens."</li>
+    <li><strong>number + 十 + number</strong> = everything in between: 二十三 = 2 tens + 3 = 23. 九十九 = 9 tens + 9 = 99.</li>
+    <li>Compare with Rome: Romans wrote 23 as <strong>XXIII</strong> (10 + 10 + 1 + 1 + 1). Cantonese says 二十三 — "two-ten-three." 一百 (100) is the Roman <strong>C</strong>!</li>
+    <li>Fun fact: in fast, everyday speech, people in Hong Kong often shorten the twenties to 廿 <span class="jyut">jaa6</span>, so 二十三 can sound like 廿三 <span class="jyut">jaa6 saam1</span>. You don't need to learn it yet — just listen for it!</li>
+  </ul>
+</div>
+
+<h2>Part 2: Match the Meaning</h2>
+<div class="box">
+  <p>Match each Cantonese phrase to its English meaning.</p>
+  <div id="vmatch"></div>
+  <button type="button" class="main" id="checkMatch">Check my matching</button>
+  <div class="fb" id="matchFb"></div>
+</div>
+
+<h2>Part 3: What Would You Say?</h2>
+<p>Click the best Cantonese phrase for each situation. Only your <strong>first click</strong> counts toward your score.</p>
+<div id="mc"></div>
+
+<h2>Part 4: Type the Jyutping</h2>
+<p>Look at the Chinese characters and type the Jyutping (with tone numbers). Spelling must match, including the numbers. Example: <span class="jyut">sap6 jat1</span></p>
+<div id="fill"></div>
+
+<div class="box" id="final"></div>
+<div id="scoreBox">
+  <span id="scoreText"></span>
+  <button type="button" id="finishBtn">I'm done! Show my final score</button>
+</div>
+</div>
+
+<script src="../../audio/cantonese/player.js"></script>
+<script>
+var WORDS = [
+ {zh:"十一", jy:"sap6 jat1", audio:"57-sap6-jat1-eleven.mp3", en:"eleven (11)",
+  ex_zh:"我出年十一歲。", ex_jy:"ngo5 ceot1 nin2 sap6 jat1 seoi3.", ex_en:"Next year I will be eleven."},
+ {zh:"十五", jy:"sap6 ng5", audio:"58-sap6-ng5-fifteen.mp3", en:"fifteen (15)",
+  ex_zh:"我有十五本書。", ex_jy:"ngo5 jau5 sap6 ng5 bun2 syu1.", ex_en:"I have fifteen books."},
+ {zh:"二十", jy:"ji6 sap6", audio:"59-ji6-sap6-twenty.mp3", en:"twenty (20)",
+  ex_zh:"班上有二十個同學。", ex_jy:"baan1 soeng6 jau5 ji6 sap6 go3 tung4 hok6.", ex_en:"There are twenty classmates in the class."},
+ {zh:"二十三", jy:"ji6 sap6 saam1", audio:"60-ji6-sap6-saam1-twenty-three.mp3", en:"twenty-three (23)",
+  ex_zh:"今日係二十三號。", ex_jy:"gam1 jat6 hai6 ji6 sap6 saam1 hou6.", ex_en:"Today is the 23rd."},
+ {zh:"三十", jy:"saam1 sap6", audio:"61-saam1-sap6-thirty.mp3", en:"thirty (30)",
+  ex_zh:"媽媽買咗三十個蘋果。", ex_jy:"maa4 maa1 maai5 zo2 saam1 sap6 go3 ping4 gwo2.", ex_en:"Mom bought thirty apples."},
+ {zh:"九十九", jy:"gau2 sap6 gau2", audio:"62-gau2-sap6-gau2-ninety-nine.mp3", en:"ninety-nine (99)",
+  ex_zh:"我考試攞咗九十九分！", ex_jy:"ngo5 haau2 si5 lo2 zo2 gau2 sap6 gau2 fan1!", ex_en:"I got ninety-nine marks on my test!"},
+ {zh:"一百", jy:"jat1 baak3", audio:"63-jat1-baak3-one-hundred.mp3", en:"one hundred (100)",
+  ex_zh:"一百減一係九十九。", ex_jy:"jat1 baak3 gaam2 jat1 hai6 gau2 sap6 gau2.", ex_en:"One hundred minus one is ninety-nine."},
+ {zh:"幾多", jy:"gei2 do1", audio:"64-gei2-do1-how-many.mp3", en:"how many / how much",
+  ex_zh:"你有幾多本書？", ex_jy:"nei5 jau5 gei2 do1 bun2 syu1?", ex_en:"How many books do you have?"}
+];
+
+var PRAISE=["Nice work, Ace!","正確！ Correct!","Yes! You can count like a Hong Kong pro!","Excellent, Ace!","Right! Future doctor, multilingual edition!"];
+function pick(a){return a[Math.floor(Math.random()*a.length)];}
+function shuffled(arr,seed){var a=arr.slice(),s=seed;for(var i=a.length-1;i>0;i--){s=(s*9301+49297)%233280;var j=Math.floor(s/233280*(i+1));var t=a[i];a[i]=a[j];a[j]=t;}return a;}
+
+function buildCards(){
+  var box=document.getElementById("cards");
+  WORDS.forEach(function(w,i){
+    var d=document.createElement("div"); d.className="box";
+    if(w.audio){ d.setAttribute("data-audio", w.audio); d.setAttribute("data-audio-label", w.zh+" "+w.jy); }
+    d.innerHTML='<div class="card">'+
+      '<div class="char">'+(i+1)+'. '+w.zh+'</div>'+
+      '<div class="meta"><div><span class="jyut">'+w.jy+'</span> <span class="tone">← tap Hear model, then Record</span></div>'+
+      '<div><strong>'+w.en+'</strong></div></div></div>'+
+      '<div class="ex"><strong>Example:</strong> '+w.ex_zh+'<br><span class="jyut">'+w.ex_jy+'</span><br><em>'+w.ex_en+'</em></div>'+
+      '<div class="practice"></div>';
+    box.appendChild(d);
+  });
+}
+
+var matchScore=0, matchChecked=false;
+function buildMatch(){
+  var m=document.getElementById("vmatch");
+  var order=shuffled(WORDS.map(function(w){return w.jy;}),16);
+  WORDS.forEach(function(w,i){
+    var row=document.createElement("div"); row.className="vrow"; row.id="vm"+i;
+    var sel='<select id="vsel'+i+'" aria-label="Meaning of '+w.zh+'"><option value="">- choose English -</option>';
+    order.forEach(function(jy){
+      var en=WORDS.find(function(x){return x.jy===jy;}).en;
+      sel+='<option value="'+jy+'">'+en+'</option>';
+    });
+    sel+='</select>';
+    row.innerHTML='<span class="mark" id="vmk'+i+'"></span><span class="w">'+w.zh+'</span><span class="jyut">'+w.jy+'</span>'+sel;
+    m.appendChild(row);
+  });
+}
+function checkMatch(){
+  var score=0, blank=0;
+  WORDS.forEach(function(w,i){
+    var v=document.getElementById("vsel"+i).value, ok=(v===w.jy);
+    if(!v) blank++;
+    if(ok) score++;
+    document.getElementById("vm"+i).className="vrow "+(ok?"right":"wrong");
+    document.getElementById("vmk"+i).textContent=ok?"✅":"❌";
+  });
+  matchScore=score; matchChecked=true;
+  var fb=document.getElementById("matchFb");
+  if(score===WORDS.length){ fb.className="fb good"; fb.textContent="🌟 "+score+" / "+WORDS.length+". Perfect matching, Ace!"; }
+  else { fb.className="fb bad"; fb.textContent=score+" / "+WORDS.length+" correct"+(blank?" ("+blank+" blank)":"")+". Fix the ❌ ones and check again."; }
+  updateScore();
+}
+
+var MC = [
+ {q:"Your friend asks how old you'll be next birthday. Which word means <strong>eleven</strong>?",
+  o:["十五 sap6 ng5","十一 sap6 jat1","一百 jat1 baak3","二十 ji6 sap6"], a:1,
+  e:"十一 (sap6 jat1) = ten + one = eleven."},
+ {q:"The Roman numeral <strong>XXX</strong> means 30. How do you say <strong>thirty</strong> in Cantonese?",
+  o:["十三 sap6 saam1","三十三 saam1 sap6 saam1","三十 saam1 sap6","二十 ji6 sap6"], a:2,
+  e:"三十 (saam1 sap6) = three tens = 30. Careful: 十三 (sap6 saam1) is 13!"},
+ {q:"The Roman numeral <strong>C</strong> means 100. Which phrase means <strong>one hundred</strong>?",
+  o:["九十九 gau2 sap6 gau2","十 sap6","一百 jat1 baak3","幾多 gei2 do1"], a:2,
+  e:"一百 (jat1 baak3) = one hundred."},
+ {q:"You want to ask Grandma <strong>how many</strong> dumplings there are. Which word do you need?",
+  o:["幾多 gei2 do1","好遠 hou2 jyun5","多謝 do1 ze6","係 hai6"], a:0,
+  e:"幾多 (gei2 do1) = how many / how much. (多謝 do1 ze6 means thank you!)"},
+ {q:"Which phrase means <strong>twenty-three</strong>?",
+  o:["三十二 saam1 sap6 ji6","二十三 ji6 sap6 saam1","十二 sap6 ji6","二三 ji6 saam1"], a:1,
+  e:"二十三 = two tens + three = 23. 三十二 would be 32."},
+ {q:"Which sentence means \"I got ninety-nine marks on my test!\"?",
+  o:["我有十五本書。","今日係二十三號。","我考試攞咗九十九分！","一百減一係九十九。"], a:2,
+  e:"考試 test + 攞咗 got + 九十九 ninety-nine + 分 marks."}
+];
+var mcState=MC.map(function(){return{answered:false,firstRight:false,done:false};});
+function buildMC(){
+  var box=document.getElementById("mc");
+  MC.forEach(function(item,i){
+    var d=document.createElement("div"); d.className="box q"; d.id="mc"+i;
+    var html="<div><strong>"+(i+1)+".</strong> "+item.q+"</div>";
+    item.o.forEach(function(opt,j){ html+='<button type="button" class="opt" data-i="'+i+'" data-j="'+j+'">'+String.fromCharCode(65+j)+". "+opt+"</button>"; });
+    html+='<div class="fb" id="mcfb'+i+'"></div>';
+    d.innerHTML=html; box.appendChild(d);
+  });
+  box.addEventListener("click",function(e){
+    var b=e.target.closest?e.target.closest(".opt"):e.target; if(!b||!b.classList.contains("opt"))return;
+    var i=+b.getAttribute("data-i"), j=+b.getAttribute("data-j"), st=mcState[i], item=MC[i];
+    if(st.done)return;
+    var right=(j===item.a);
+    if(!st.answered){ st.answered=true; st.firstRight=right; }
+    var fb=document.getElementById("mcfb"+i), card=document.getElementById("mc"+i);
+    if(right){ st.done=true; b.classList.add("sel-right"); card.className="box q right"; fb.className="fb good"; fb.innerHTML="✅ "+pick(PRAISE)+' <span class="explain">'+item.e+"</span>"; }
+    else { b.classList.add("sel-wrong"); card.className="box q wrong"; fb.className="fb bad"; fb.textContent="❌ Not quite, Ace. Think about how the number is built (tens + ones) and try again."; }
+    updateScore();
+  });
+}
+
+var FILL = [
+ {zh:"十一", a:"sap6 jat1"},
+ {zh:"十五", a:"sap6 ng5"},
+ {zh:"二十", a:"ji6 sap6"},
+ {zh:"二十三", a:"ji6 sap6 saam1"},
+ {zh:"三十", a:"saam1 sap6"},
+ {zh:"九十九", a:"gau2 sap6 gau2"},
+ {zh:"一百", a:"jat1 baak3"},
+ {zh:"幾多", a:"gei2 do1"}
+];
+var fillState=FILL.map(function(){return{correct:false,tries:0};});
+function normJy(s){return String(s).trim().toLowerCase().replace(/\s+/g," ");}
+function buildFill(){
+  var box=document.getElementById("fill");
+  FILL.forEach(function(it,i){
+    var d=document.createElement("div"); d.className="box q"; d.id="f"+i;
+    d.innerHTML='<div><strong>'+(i+1)+'.</strong> Type Jyutping for <span class="char" style="font-size:1.4em">'+it.zh+'</span></div>'+
+      '<div class="row"><input type="text" id="fi'+i+'" autocomplete="off" spellcheck="false" aria-label="Jyutping '+it.zh+'">'+
+      '<button type="button" class="check" data-i="'+i+'">Check</button></div><div class="fb" id="ffb'+i+'"></div>';
+    box.appendChild(d);
+  });
+  box.addEventListener("click",function(e){
+    var b=e.target; if(b.tagName!=="BUTTON"||!b.classList.contains("check"))return;
+    fillCheck(+b.getAttribute("data-i"));
+  });
+  box.addEventListener("keydown",function(e){if(e.key==="Enter"&&e.target.tagName==="INPUT")fillCheck(+e.target.id.slice(2));});
+}
+function fillCheck(i){
+  var val=document.getElementById("fi"+i).value, fb=document.getElementById("ffb"+i), st=fillState[i];
+  if(!val.trim()){fb.className="fb bad";fb.textContent="Type the Jyutping first, Ace!";return;}
+  st.tries++;
+  if(normJy(val)===normJy(FILL[i].a)){
+    st.correct=true; document.getElementById("f"+i).className="box q right";
+    fb.className="fb good"; fb.textContent="✅ "+pick(PRAISE)+(st.tries===1?" (first try!)":"");
+  } else {
+    st.correct=false; document.getElementById("f"+i).className="box q wrong";
+    fb.className="fb bad"; fb.textContent="❌ Not quite. Check letters, spaces, and tone numbers. Answer looks like: sap6 jat1";
+  }
+  updateScore();
+}
+
+function scores(){
+  var mc=0; mcState.forEach(function(s){if(s.firstRight)mc++;});
+  var f=0; fillState.forEach(function(s){if(s.correct)f++;});
+  return {match:matchScore, mc:mc, fill:f};
+}
+function updateScore(){
+  var s=scores();
+  document.getElementById("scoreText").textContent="Match: "+(matchChecked?s.match:"-")+"/"+WORDS.length+" · Situations: "+s.mc+"/"+MC.length+" · Jyutping: "+s.fill+"/"+FILL.length;
+}
+function finish(){
+  if(!matchChecked) checkMatch();
+  var s=scores(), total=WORDS.length+MC.length+FILL.length, got=s.match+s.mc+s.fill, pct=Math.round(100*got/total);
+  var msg = pct===100 ? "🏆 完美！ Perfect score, Ace! You can count all the way to 一百 in Cantonese!" :
+            pct>=80 ? "🌟 Fantastic work, Ace! Tonight, try counting to 30 in Cantonese — or say the page numbers out loud as you read!" :
+            pct>=60 ? "💪 Solid effort! Review the cards and try the ❌ ones again." :
+                      "🌱 Big numbers take practice! Look at Part 1 again, say each phrase three times, then retry.";
+  var f=document.getElementById("final"); f.style.display="block";
+  f.innerHTML="<h2 style='border:none;margin-top:0'>Final Score: "+got+" / "+total+" ("+pct+"%)</h2>"+
+    "<p>Matching: "+s.match+"/"+WORDS.length+" · Situations (first try): "+s.mc+"/"+MC.length+" · Jyutping typing: "+s.fill+"/"+FILL.length+"</p><p>"+msg+"</p>"+
+    "<p style='font-size:.85em;color:#ef6c00'>Finished on "+new Date().toLocaleString("en-CA")+"</p>";
+  f.scrollIntoView({behavior:"smooth"});
+}
+buildCards(); buildMatch(); buildMC(); buildFill(); updateScore();
+if(window.AceCantoneseAudio) AceCantoneseAudio.wireLesson({playAllBtn:"#playAll",stopBtn:"#stopAudio"});
+document.getElementById("checkMatch").addEventListener("click",checkMatch);
+document.getElementById("finishBtn").addEventListener("click",finish);
+</script>
+</body>
+</html>
