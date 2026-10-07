@@ -6,7 +6,7 @@ TTS voice (Cantonese): zh-HK-HiuMaanNeural
 TTS voice (English in ALL-words.mp3): en-HK-YanNeural
 Rate: slowed (~-20%) for clear listening practice.
 
-Sources: Ace lessons 2026-09-29 (Greetings) + 2026-09-30 (Family Members) + 2026-10-01 (Food) + 2026-10-02 (School) + 2026-10-03 (Body) + 2026-10-04 (Colours) + 2026-10-05 (Sky & Space) + 2026-10-06 (Numbers 11-100).
+Sources: Ace lessons 2026-09-29 (Greetings) + 2026-09-30 (Family Members) + 2026-10-01 (Food) + 2026-10-02 (School) + 2026-10-03 (Body) + 2026-10-04 (Colours) + 2026-10-05 (Sky & Space) + 2026-10-06 (Numbers 11-100) + 2026-10-07 (At the Doctor).
 Numbers 1-10 are already known and not included here.
 
 How to practise:
@@ -339,6 +339,47 @@ Individual files
   Chinese:  幾多
   Jyutping: gei2 do1
   English:  how many / how much
+
+
+65-ji1-sang1-doctor.mp3
+  Chinese:  醫生
+  Jyutping: ji1 sang1
+  English:  doctor
+
+66-sam1-tiu3-heartbeat.mp3
+  Chinese:  心跳
+  Jyutping: sam1 tiu3
+  English:  heartbeat
+
+67-m4-syu1-fuk6-unwell.mp3
+  Chinese:  唔舒服
+  Jyutping: m4 syu1 fuk6
+  English:  unwell (not feeling well)
+
+68-tung3-hurts.mp3
+  Chinese:  痛
+  Jyutping: tung3
+  English:  hurts / pain
+
+69-faat3-siu1-fever.mp3
+  Chinese:  發燒
+  Jyutping: faat3 siu1
+  English:  have a fever
+
+70-sik6-joek6-take-medicine.mp3
+  Chinese:  食藥
+  Jyutping: sik6 joek6
+  English:  take medicine
+
+71-jau1-sik1-rest.mp3
+  Chinese:  休息
+  Jyutping: jau1 sik1
+  English:  rest
+
+72-hou2-faan1-laa1-all-better.mp3
+  Chinese:  好返啦
+  Jyutping: hou2 faan1 laa1
+  English:  all better now (recovered)
 
 
 Combined file

@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cantonese (Oct. 7): At the Doctor (睇醫生)</title>
+<style>
+  body{font-family:"Segoe UI",Verdana,Arial,sans-serif;font-size:20px;line-height:1.6;margin:0;background:#f5f0eb;color:#2c2416}
+  .wrap{max-width:880px;margin:0 auto;padding:20px 18px 80px}
+  a.home{font-size:.9em;color:#bf360c}
+  h1{color:#e65100;font-size:2em;margin:10px 0}
+  h2{color:#ef6c00;margin-top:36px;border-bottom:3px solid #ffcc80;padding-bottom:4px}
+  h3{color:#ef6c00}
+  .box{background:#fff;border-radius:16px;padding:18px 22px;margin:16px 0;box-shadow:0 3px 10px rgba(0,0,0,.07)}
+  .tipbox{background:#fff8e1;border-left:8px solid #ffb300}
+  .char{font-size:2.2em;font-weight:bold;color:#e65100;line-height:1.2}
+  .jyut{font-family:Consolas,"Courier New",monospace;background:#fff3e0;padding:2px 8px;border-radius:8px;font-size:1.05em}
+  .card{display:grid;grid-template-columns:auto 1fr;gap:8px 18px;align-items:center;border-left:8px solid #ef6c00;padding-left:14px}
+  .card .meta{grid-column:2}
+  .ex{margin-top:8px;background:#fff3e0;border-radius:10px;padding:8px 12px;font-size:.95em}
+  .q{border-left:8px solid #b0bec5}
+  .q.right{border-left-color:#43a047;background:#f1f8e9}
+  .q.wrong{border-left-color:#e53935;background:#fff5f5}
+  .opt{display:block;width:100%;text-align:left;font-size:.95em;background:#fafafa;border:2px solid #e0e0e0;border-radius:10px;padding:8px 14px;margin:8px 0;cursor:pointer;font-family:inherit}
+  .opt:hover{border-color:#ffb74d;background:#fff}
+  .opt.sel-right{background:#c8e6c9;border-color:#43a047}
+  .opt.sel-wrong{background:#ffcdd2;border-color:#e53935}
+  .fb{margin-top:6px;font-weight:bold}
+  .fb.good{color:#2e7d32} .fb.bad{color:#c62828}
+  .explain{font-weight:normal;color:#e65100}
+  .vrow{display:flex;flex-wrap:wrap;align-items:center;gap:10px;padding:8px 6px;border-bottom:1px dashed #eee}
+  .vrow .w{font-weight:bold;min-width:120px;font-size:1.3em}
+  .vrow.right{background:#f1f8e9} .vrow.wrong{background:#fff5f5}
+  select{font-size:.95em;padding:6px 8px;border-radius:8px;border:2px solid #ffb74d;max-width:100%;font-family:inherit}
+  .mark{font-size:1.2em;min-width:30px}
+  button.main{font-size:1em;padding:10px 20px;border:none;border-radius:10px;cursor:pointer;font-weight:bold;background:#ef6c00;color:#fff;margin-top:10px}
+  button.main:hover{background:#e65100}
+  input[type=text]{font-size:1.05em;padding:8px 12px;border:2px solid #ffb74d;border-radius:10px;width:220px;font-family:inherit}
+  button.check{font-size:.95em;padding:8px 16px;border:none;border-radius:10px;cursor:pointer;font-weight:bold;background:#ef6c00;color:#fff}
+  .row{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:10px}
+  #scoreBox{position:sticky;bottom:0;background:#e65100;color:#fff;border-radius:16px 16px 0 0;padding:12px 20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-top:30px}
+  #scoreBox button{font-size:.95em;padding:8px 16px;border:none;border-radius:10px;cursor:pointer;font-weight:bold;background:#ffca28;color:#3e2723}
+  #final{display:none;text-align:center;border:4px solid #43a047;font-size:1.1em}
+  .tone{font-size:.85em;color:#ef6c00}
+
+  .audio-bar{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin:12px 0 4px}
+  button.speak,button.record,button.play-mine,button.play-model,button.audio-ctrl{
+    font-size:1.05em;padding:14px 18px;min-height:52px;min-width:52px;
+    border:none;border-radius:14px;cursor:pointer;font-weight:bold;font-family:inherit;
+    touch-action:manipulation;-webkit-tap-highlight-color:transparent;
+  }
+  button.speak,button.play-model,button.audio-ctrl.hear{background:#ef6c00;color:#fff}
+  button.speak:hover,button.play-model:hover,button.audio-ctrl.hear:hover{background:#e65100}
+  button.speak.playing{background:#43a047}
+  button.record{background:#e53935;color:#fff}
+  button.record:hover{background:#c62828}
+  button.record.recording{background:#ffca28;color:#3e2723;animation:pulse 1s infinite}
+  @keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.04)}}
+  button.play-mine{background:#00897b;color:#fff}
+  button.play-mine:hover{background:#00695c}
+  button.play-mine:disabled{opacity:.45;cursor:not-allowed}
+  button.audio-ctrl.stop{background:#546e7a;color:#fff}
+  button.audio-ctrl.stop:hover{background:#37474f}
+  .practice{margin-top:14px;padding-top:12px;border-top:2px dashed #ffcc80}
+  .practice-row{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+  .rec-status{margin-top:8px;font-weight:bold;color:#ef6c00;font-size:.95em}
+  .rec-status.rec-on{color:#c62828}
+  .mic-msg{margin-top:8px;background:#fff3e0;border-left:6px solid #ef6c00;border-radius:10px;padding:10px 14px;font-size:.95em;color:#e65100}
+  .box[data-audio]{position:relative}
+</style>
+</head>
+<body>
+<div class="wrap">
+<a class="home" href="../../index.html">&larr; Back to all lessons</a>
+<h1>🗣️ Cantonese Week 9: At the Doctor 睇醫生 (Hong Kong)</h1>
+<p>Ace, you already know numbers up to 100, plus greetings, family, food, school, body parts, colours, and sky &amp; space words. Today — while your maths and reading lessons explore the heart and blood — you'll learn what to say <strong>at the doctor's</strong> when you're feeling sick, the Hong Kong way, using <strong>Traditional Chinese</strong> characters and Jyutping with tone numbers. A future doctor needs to understand patients, so these words are super useful!</p>
+
+<div class="box tipbox">
+  <strong>How to read Jyutping (sounds):</strong>
+  <ul>
+    <li>Letters show the sound. Numbers show the <strong>tone</strong> (the musical pitch): 1 high, 2 rising, 3 mid, 4 low/falling, 5 low rising, 6 low.</li>
+    <li>Example: <span class="jyut">tung3</span> in 痛 (hurts) — say <em>tung</em> with tone 3 (middle and level).</li>
+    <li><strong>Listening/speaking tip:</strong> Say each word out loud three times while looking at the characters. Tap Hear model, then Record and compare!</li>
+  </ul>
+</div>
+
+<h2>Part 1: Learn Today's Words</h2>
+<div class="box tipbox" style="background:#fff3e0;border-left-color:#ef6c00"><strong>Listen &amp; practise:</strong> Tap <em>Hear model</em> to hear the word (Hong Kong voice). Then tap <em>Record</em>, say it out loud, and compare with <em>Play my try</em> + <em>Play model</em>. Recordings stay on this device only for this visit — nothing is uploaded.</div>
+<div class="audio-bar">
+  <button type="button" class="audio-ctrl hear" id="playAll">🔊 Play all words</button>
+  <button type="button" class="audio-ctrl stop" id="stopAudio">⏹️ Stop</button>
+  <span class="tone">Plays every word with English first (greetings + family + food + school + body + colours + sky &amp; space + numbers 11–100 + at the doctor).</span>
+</div>
+<div id="cards"></div>
+
+<div class="box tipbox">
+  <strong>Doctor's tips for Ace:</strong>
+  <ul>
+    <li><strong>睇醫生</strong> <span class="jyut">tai2 ji1 sang1</span> means "see a doctor." 睇 <span class="jyut">tai2</span> means "look / see."</li>
+    <li>Remember 心 <span class="jyut">sam1</span> (heart) from body-parts day? Add 跳 <span class="jyut">tiu3</span> (jump) and you get 心跳 — a heartbeat is your heart "jumping"!</li>
+    <li>To say where it hurts, use a body part + 痛: 頭痛 <span class="jyut">tau4 tung3</span> (headache), 肚痛 <span class="jyut">tou5 tung3</span> (tummy ache).</li>
+    <li>唔 <span class="jyut">m4</span> means "not." 舒服 <span class="jyut">syu1 fuk6</span> means "comfortable," so 唔舒服 = "not comfortable" = unwell.</li>
+    <li>返 <span class="jyut">faan1</span> means "back again," so 好返 = "good again" — better!</li>
+  </ul>
+</div>
+
+<h2>Part 2: Match the Meaning</h2>
+<div class="box">
+  <p>Match each Cantonese phrase to its English meaning.</p>
+  <div id="vmatch"></div>
+  <button type="button" class="main" id="checkMatch">Check my matching</button>
+  <div class="fb" id="matchFb"></div>
+</div>
+
+<h2>Part 3: What Would You Say?</h2>
+<p>Click the best Cantonese phrase for each situation. Only your <strong>first click</strong> counts toward your score.</p>
+<div id="mc"></div>
+
+<h2>Part 4: Type the Jyutping</h2>
+<p>Look at the Chinese characters and type the Jyutping (with tone numbers). Spelling must match, including the numbers. Example: <span class="jyut">ji1 sang1</span></p>
+<div id="fill"></div>
+
+<div class="box" id="final"></div>
+<div id="scoreBox">
+  <span id="scoreText"></span>
+  <button type="button" id="finishBtn">I'm done! Show my final score</button>
+</div>
+</div>
+
+<script src="../../audio/cantonese/player.js"></script>
+<script>
+var WORDS = [
+ {zh:"醫生", jy:"ji1 sang1", audio:"65-ji1-sang1-doctor.mp3", en:"doctor",
+  ex_zh:"我想做醫生。", ex_jy:"ngo5 soeng2 zou6 ji1 sang1.", ex_en:"I want to be a doctor."},
+ {zh:"心跳", jy:"sam1 tiu3", audio:"66-sam1-tiu3-heartbeat.mp3", en:"heartbeat",
+  ex_zh:"跑步之後，我心跳得好快。", ex_jy:"paau2 bou6 zi1 hau6, ngo5 sam1 tiu3 dak1 hou2 faai3.", ex_en:"After running, my heart beats very fast."},
+ {zh:"唔舒服", jy:"m4 syu1 fuk6", audio:"67-m4-syu1-fuk6-unwell.mp3", en:"unwell (not feeling well)",
+  ex_zh:"我今日唔舒服。", ex_jy:"ngo5 gam1 jat6 m4 syu1 fuk6.", ex_en:"I don't feel well today."},
+ {zh:"痛", jy:"tung3", audio:"68-tung3-hurts.mp3", en:"hurts / pain",
+  ex_zh:"我個頭好痛。", ex_jy:"ngo5 go3 tau4 hou2 tung3.", ex_en:"My head really hurts."},
+ {zh:"發燒", jy:"faat3 siu1", audio:"69-faat3-siu1-fever.mp3", en:"have a fever",
+  ex_zh:"佢發燒，要睇醫生。", ex_jy:"keoi5 faat3 siu1, jiu3 tai2 ji1 sang1.", ex_en:"He has a fever and needs to see a doctor."},
+ {zh:"食藥", jy:"sik6 joek6", audio:"70-sik6-joek6-take-medicine.mp3", en:"take medicine",
+  ex_zh:"記住食藥呀！", ex_jy:"gei3 zyu6 sik6 joek6 aa3!", ex_en:"Remember to take your medicine!"},
+ {zh:"休息", jy:"jau1 sik1", audio:"71-jau1-sik1-rest.mp3", en:"rest",
+  ex_zh:"你要多啲休息。", ex_jy:"nei5 jiu3 do1 di1 jau1 sik1.", ex_en:"You need to rest more."},
+ {zh:"好返啦", jy:"hou2 faan1 laa1", audio:"72-hou2-faan1-laa1-all-better.mp3", en:"all better now (recovered)",
+  ex_zh:"我食咗藥，休息咗，好返啦！", ex_jy:"ngo5 sik6 zo2 joek6, jau1 sik1 zo2, hou2 faan1 laa1!", ex_en:"I took my medicine and rested, and now I'm all better!"}
+];
+
+var PRAISE=["Nice work, Ace!","正確！ Correct!","Yes! 醫生 Ace is ready for patients!","Excellent, Ace!","Right! Future doctor, multilingual edition!"];
+function pick(a){return a[Math.floor(Math.random()*a.length)];}
+function shuffled(arr,seed){var a=arr.slice(),s=seed;for(var i=a.length-1;i>0;i--){s=(s*9301+49297)%233280;var j=Math.floor(s/233280*(i+1));var t=a[i];a[i]=a[j];a[j]=t;}return a;}
+
+function buildCards(){
+  var box=document.getElementById("cards");
+  WORDS.forEach(function(w,i){
+    var d=document.createElement("div"); d.className="box";
+    if(w.audio){ d.setAttribute("data-audio", w.audio); d.setAttribute("data-audio-label", w.zh+" "+w.jy); }
+    d.innerHTML='<div class="card">'+
+      '<div class="char">'+(i+1)+'. '+w.zh+'</div>'+
+      '<div class="meta"><div><span class="jyut">'+w.jy+'</span> <span class="tone">← tap Hear model, then Record</span></div>'+
+      '<div><strong>'+w.en+'</strong></div></div></div>'+
+      '<div class="ex"><strong>Example:</strong> '+w.ex_zh+'<br><span class="jyut">'+w.ex_jy+'</span><br><em>'+w.ex_en+'</em></div>'+
+      '<div class="practice"></div>';
+    box.appendChild(d);
+  });
+}
+
+var matchScore=0, matchChecked=false;
+function buildMatch(){
+  var m=document.getElementById("vmatch");
+  var order=shuffled(WORDS.map(function(w){return w.jy;}),16);
+  WORDS.forEach(function(w,i){
+    var row=document.createElement("div"); row.className="vrow"; row.id="vm"+i;
+    var sel='<select id="vsel'+i+'" aria-label="Meaning of '+w.zh+'"><option value="">- choose English -</option>';
+    order.forEach(function(jy){
+      var en=WORDS.find(function(x){return x.jy===jy;}).en;
+      sel+='<option value="'+jy+'">'+en+'</option>';
+    });
+    sel+='</select>';
+    row.innerHTML='<span class="mark" id="vmk'+i+'"></span><span class="w">'+w.zh+'</span><span class="jyut">'+w.jy+'</span>'+sel;
+    m.appendChild(row);
+  });
+}
+function checkMatch(){
+  var score=0, blank=0;
+  WORDS.forEach(function(w,i){
+    var v=document.getElementById("vsel"+i).value, ok=(v===w.jy);
+    if(!v) blank++;
+    if(ok) score++;
+    document.getElementById("vm"+i).className="vrow "+(ok?"right":"wrong");
+    document.getElementById("vmk"+i).textContent=ok?"✅":"❌";
+  });
+  matchScore=score; matchChecked=true;
+  var fb=document.getElementById("matchFb");
+  if(score===WORDS.length){ fb.className="fb good"; fb.textContent="🌟 "+score+" / "+WORDS.length+". Perfect matching, Ace!"; }
+  else { fb.className="fb bad"; fb.textContent=score+" / "+WORDS.length+" correct"+(blank?" ("+blank+" blank)":"")+". Fix the ❌ ones and check again."; }
+  updateScore();
+}
+
+var MC = [
+ {q:"You wake up with a hot forehead and the thermometer says 38.5 °C. What do you tell Mom?",
+  o:["我發燒。 ngo5 faat3 siu1.","我好返啦。 ngo5 hou2 faan1 laa1.","我想做醫生。 ngo5 soeng2 zou6 ji1 sang1.","我食藥。 ngo5 sik6 joek6."], a:0,
+  e:"發燒 (faat3 siu1) = have a fever. 我發燒 = I have a fever."},
+ {q:"Your head hurts. Which sentence says <strong>\"My head hurts\"</strong>?",
+  o:["我個手好痛。","我個頭好痛。","我個頭好靚。","我心跳得好快。"], a:1,
+  e:"頭 (tau4) = head and 痛 (tung3) = hurts. Careful: 手 (sau2) is hand!"},
+ {q:"The doctor says you should take your medicine. Which words mean <strong>take medicine</strong>?",
+  o:["休息 jau1 sik1","醫生 ji1 sang1","食藥 sik6 joek6","食飯 sik6 faan6"], a:2,
+  e:"食藥 (sik6 joek6) = take medicine. Literally \"eat medicine\"! 食飯 (sik6 faan6) means \"eat a meal.\""},
+ {q:"You just finished a fast run and put your hand on your chest. What are you feeling?",
+  o:["發燒 faat3 siu1 (a fever)","心跳 sam1 tiu3 (your heartbeat)","醫生 ji1 sang1 (a doctor)","好遠 hou2 jyun5 (very far)"], a:1,
+  e:"心跳 (sam1 tiu3) = heartbeat. 心 = heart, 跳 = jump."},
+ {q:"Your teacher asks why you look sad. You don't feel well. What do you say?",
+  o:["我好返啦。","我想做醫生。","我今日唔舒服。","我有十五本書。"], a:2,
+  e:"唔舒服 (m4 syu1 fuk6) = unwell. 我今日唔舒服 = I don't feel well today."},
+ {q:"After three days of rest and medicine, you feel great again. What do you tell Grandma?",
+  o:["我發燒。","我個頭好痛。","我唔舒服。","我好返啦！"], a:3,
+  e:"好返啦 (hou2 faan1 laa1) = I'm all better now!"}
+];
+var mcState=MC.map(function(){return{answered:false,firstRight:false,done:false};});
+function buildMC(){
+  var box=document.getElementById("mc");
+  MC.forEach(function(item,i){
+    var d=document.createElement("div"); d.className="box q"; d.id="mc"+i;
+    var html="<div><strong>"+(i+1)+".</strong> "+item.q+"</div>";
+    item.o.forEach(function(opt,j){ html+='<button type="button" class="opt" data-i="'+i+'" data-j="'+j+'">'+String.fromCharCode(65+j)+". "+opt+"</button>"; });
+    html+='<div class="fb" id="mcfb'+i+'"></div>';
+    d.innerHTML=html; box.appendChild(d);
+  });
+  box.addEventListener("click",function(e){
+    var b=e.target.closest?e.target.closest(".opt"):e.target; if(!b||!b.classList.contains("opt"))return;
+    var i=+b.getAttribute("data-i"), j=+b.getAttribute("data-j"), st=mcState[i], item=MC[i];
+    if(st.done)return;
+    var right=(j===item.a);
+    if(!st.answered){ st.answered=true; st.firstRight=right; }
+    var fb=document.getElementById("mcfb"+i), card=document.getElementById("mc"+i);
+    if(right){ st.done=true; b.classList.add("sel-right"); card.className="box q right"; fb.className="fb good"; fb.innerHTML="✅ "+pick(PRAISE)+' <span class="explain">'+item.e+"</span>"; }
+    else { b.classList.add("sel-wrong"); card.className="box q wrong"; fb.className="fb bad"; fb.textContent="❌ Not quite, Ace. Think about what a patient would say and try again."; }
+    updateScore();
+  });
+}
+
+var FILL = [
+ {zh:"醫生", a:"ji1 sang1"},
+ {zh:"心跳", a:"sam1 tiu3"},
+ {zh:"唔舒服", a:"m4 syu1 fuk6"},
+ {zh:"痛", a:"tung3"},
+ {zh:"發燒", a:"faat3 siu1"},
+ {zh:"食藥", a:"sik6 joek6"},
+ {zh:"休息", a:"jau1 sik1"},
+ {zh:"好返啦", a:"hou2 faan1 laa1"}
+];
+var fillState=FILL.map(function(){return{correct:false,tries:0};});
+function normJy(s){return String(s).trim().toLowerCase().replace(/\s+/g," ");}
+function buildFill(){
+  var box=document.getElementById("fill");
+  FILL.forEach(function(it,i){
+    var d=document.createElement("div"); d.className="box q"; d.id="f"+i;
+    d.innerHTML='<div><strong>'+(i+1)+'.</strong> Type Jyutping for <span class="char" style="font-size:1.4em">'+it.zh+'</span></div>'+
+      '<div class="row"><input type="text" id="fi'+i+'" autocomplete="off" spellcheck="false" aria-label="Jyutping '+it.zh+'">'+
+      '<button type="button" class="check" data-i="'+i+'">Check</button></div><div class="fb" id="ffb'+i+'"></div>';
+    box.appendChild(d);
+  });
+  box.addEventListener("click",function(e){
+    var b=e.target; if(b.tagName!=="BUTTON"||!b.classList.contains("check"))return;
+    fillCheck(+b.getAttribute("data-i"));
+  });
+  box.addEventListener("keydown",function(e){if(e.key==="Enter"&&e.target.tagName==="INPUT")fillCheck(+e.target.id.slice(2));});
+}
+function fillCheck(i){
+  var val=document.getElementById("fi"+i).value, fb=document.getElementById("ffb"+i), st=fillState[i];
+  if(!val.trim()){fb.className="fb bad";fb.textContent="Type the Jyutping first, Ace!";return;}
+  st.tries++;
+  if(normJy(val)===normJy(FILL[i].a)){
+    st.correct=true; document.getElementById("f"+i).className="box q right";
+    fb.className="fb good"; fb.textContent="✅ "+pick(PRAISE)+(st.tries===1?" (first try!)":"");
+  } else {
+    st.correct=false; document.getElementById("f"+i).className="box q wrong";
+    fb.className="fb bad"; fb.textContent="❌ Not quite. Check letters, spaces, and tone numbers. Answer looks like: ji1 sang1";
+  }
+  updateScore();
+}
+
+function scores(){
+  var mc=0; mcState.forEach(function(s){if(s.firstRight)mc++;});
+  var f=0; fillState.forEach(function(s){if(s.correct)f++;});
+  return {match:matchScore, mc:mc, fill:f};
+}
+function updateScore(){
+  var s=scores();
+  document.getElementById("scoreText").textContent="Match: "+(matchChecked?s.match:"-")+"/"+WORDS.length+" · Situations: "+s.mc+"/"+MC.length+" · Jyutping: "+s.fill+"/"+FILL.length;
+}
+function finish(){
+  if(!matchChecked) checkMatch();
+  var s=scores(), total=WORDS.length+MC.length+FILL.length, got=s.match+s.mc+s.fill, pct=Math.round(100*got/total);
+  var msg = pct===100 ? "🏆 完美！ Perfect score, Ace! You can talk to a doctor in Cantonese!" :
+            pct>=80 ? "🌟 Fantastic work, Ace! Tonight, play doctor and patient with Dad: one of you says what hurts, the other says 休息 or 食藥!" :
+            pct>=60 ? "💪 Solid effort! Review the cards and try the ❌ ones again." :
+                      "🌱 New words take practice! Look at Part 1 again, say each phrase three times, then retry.";
+  var f=document.getElementById("final"); f.style.display="block";
+  f.innerHTML="<h2 style='border:none;margin-top:0'>Final Score: "+got+" / "+total+" ("+pct+"%)</h2>"+
+    "<p>Matching: "+s.match+"/"+WORDS.length+" · Situations (first try): "+s.mc+"/"+MC.length+" · Jyutping typing: "+s.fill+"/"+FILL.length+"</p><p>"+msg+"</p>"+
+    "<p style='font-size:.85em;color:#ef6c00'>Finished on "+new Date().toLocaleString("en-CA")+"</p>";
+  f.scrollIntoView({behavior:"smooth"});
+}
+buildCards(); buildMatch(); buildMC(); buildFill(); updateScore();
+if(window.AceCantoneseAudio) AceCantoneseAudio.wireLesson({playAllBtn:"#playAll",stopBtn:"#stopAudio"});
+document.getElementById("checkMatch").addEventListener("click",checkMatch);
+document.getElementById("finishBtn").addEventListener("click",finish);
+</script>
+</body>
+</html>

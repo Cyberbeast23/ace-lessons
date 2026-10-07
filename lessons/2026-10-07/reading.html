@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reading (Oct. 7): The Doctor Who Followed the Blood</title>
+<style>
+  body{font-family:"Segoe UI",Verdana,Arial,sans-serif;font-size:20px;line-height:1.65;margin:0;background:#f5f0eb;color:#2c2416}
+  .wrap{max-width:880px;margin:0 auto;padding:20px 18px 80px}
+  a.home{font-size:.9em;color:#bf360c}
+  h1{color:#e65100;font-size:2em;margin:10px 0}
+  h2{color:#ef6c00;margin-top:36px;border-bottom:3px solid #ffcc80;padding-bottom:4px}
+  .box{background:#fff;border-radius:16px;padding:18px 22px;margin:16px 0;box-shadow:0 3px 10px rgba(0,0,0,.07)}
+  .passage{font-family:Georgia,"Times New Roman",serif;font-size:1.1em;line-height:1.8}
+  .passage h3{text-align:center;font-family:"Segoe UI",Verdana,sans-serif;color:#e65100;font-size:1.4em;margin:4px 0 14px}
+  .passage p{text-indent:1.5em;margin:0 0 14px}
+  mark.v{background:#fff59d;padding:0 3px;border-radius:4px;font-weight:bold}
+  .tipbox{background:#fff8e1;border-left:8px solid #ffb300}
+  .q{border-left:8px solid #ffcc80}
+  .q.right{border-left-color:#43a047;background:#f1f8e9}
+  .q.wrong{border-left-color:#e53935;background:#fff5f5}
+  .tag{display:inline-block;font-size:.7em;background:#ef6c00;color:#fff;border-radius:8px;padding:1px 8px;margin-left:6px;vertical-align:middle}
+  .opt{display:block;width:100%;text-align:left;font-size:.95em;background:#fafafa;border:2px solid #e0e0e0;border-radius:10px;padding:8px 14px;margin:8px 0;cursor:pointer;font-family:inherit}
+  .opt:hover{border-color:#ffb74d;background:#fff}
+  .opt.sel-right{background:#c8e6c9;border-color:#43a047}
+  .opt.sel-wrong{background:#ffcdd2;border-color:#e53935}
+  .fb{margin-top:6px;font-weight:bold}
+  .fb.good{color:#2e7d32} .fb.bad{color:#c62828}
+  .explain{color:#e65100;font-weight:normal}
+  select{font-size:.95em;padding:6px 8px;border-radius:8px;border:2px solid #ffb74d;max-width:100%;font-family:inherit}
+  .vrow{display:flex;flex-wrap:wrap;align-items:center;gap:10px;padding:8px 6px;border-bottom:1px dashed #eee}
+  .vrow .w{font-weight:bold;min-width:140px}
+  .vrow.right{background:#f1f8e9} .vrow.wrong{background:#fff5f5}
+  .mark{font-size:1.2em;min-width:30px}
+  button.main{font-size:1em;padding:10px 20px;border:none;border-radius:10px;cursor:pointer;font-weight:bold;background:#ef6c00;color:#fff;margin-top:10px}
+  button.main:hover{background:#e65100}
+  button.sec{font-size:.95em;padding:8px 16px;border:none;border-radius:10px;cursor:pointer;font-weight:bold;background:#ffe082;color:#5d4037}
+  textarea{width:100%;box-sizing:border-box;font-size:1em;font-family:inherit;padding:10px;border:2px solid #ffb74d;border-radius:10px;min-height:120px}
+  #model{display:none;background:#fff3e0;border-radius:10px;padding:10px 14px;margin-top:10px}
+  #scoreBox{position:sticky;bottom:0;background:#e65100;color:#fff;border-radius:16px 16px 0 0;padding:12px 20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-top:30px}
+  #scoreBox button{font-size:.95em;padding:8px 16px;border:none;border-radius:10px;cursor:pointer;font-weight:bold;background:#ffca28;color:#3e2723}
+  #final{display:none;text-align:center;border:4px solid #43a047;font-size:1.1em}
+</style>
+</head>
+<body>
+<div class="wrap">
+<a class="home" href="../../index.html">&larr; Back to all lessons</a>
+<h1>📖 Reading Week 10: The Doctor Who Followed the Blood</h1>
+
+<div class="box tipbox">
+  <strong>Before you read, Ace:</strong> Today's passage is a true science history story. Good readers track <em>when</em> things happened, <em>what evidence</em> each person used, and <em>why</em> some ideas won out over others.
+  <ul>
+    <li><strong>Preview:</strong> Read the title. Who might "the doctor who followed the blood" be?</li>
+    <li><strong>Pause:</strong> After each paragraph, say its main idea in one sentence. Watch for time clues (<em>About 1800 years ago, In the 1200s, In 1628, In 1661</em>) that show the order of events.</li>
+    <li><strong>Root detective:</strong> Medical words are built from Greek and Latin parts:
+      <span style="display:block;margin-top:6px"><strong>cardi-</strong> = heart (Greek <em>kardia</em>) · <strong>vas-/vascul-</strong> = vessel (Latin) · <strong>pulmo-</strong> = lung (Latin) · <strong>hem-</strong> = blood (Greek <em>haima</em>) · <strong>capill-</strong> = hair (Latin) · <strong>-logy / -logist</strong> = the study of / one who studies</span></li>
+    <li><strong>Words in <mark class="v">yellow</mark></strong> are vocabulary words. Use the sentence around them (the <em>context</em>) to figure out what they mean.</li>
+  </ul>
+</div>
+
+<div class="box passage" id="passage">
+<h3>The Doctor Who Followed the Blood</h3>
+<p>Every science textbook today explains that blood travels in a loop: out of the heart, around the body, and back again. It seems obvious now. Yet for most of human history, even the smartest doctors believed something completely different. The story of how people discovered the truth is really a story about how science works: someone notices that an old idea does not fit the evidence, tests it carefully, and is brave enough to say so.</p>
+<p>About 1800 years ago, a Greek doctor named Galen worked in the Roman Empire, first treating injured gladiators and later caring for emperors. Galen was a brilliant observer, and his books were copied and studied for about 1400 years. He taught that the liver turned food into fresh blood and that the body used blood up the way a fire uses up wood. He also believed that blood seeped from the right side of the heart to the left side through tiny invisible holes in the wall between them, called the septum. Because Galen was so respected, few doctors dared to question him.</p>
+<p>A few did. In the 1200s, a physician named Ibn al-Nafis, working in Damascus and Cairo, wrote that the septum was thick and solid, with no holes at all. Blood, he argued, must travel from the right side of the heart to the lungs, mix with air there, and only then return to the left side. He was right, but his work was written in Arabic and remained almost unknown in Europe for centuries.</p>
+<p>The person who finally put the whole puzzle together was William Harvey, an English doctor born in 1578. Harvey had studied in Padua, Italy, where his teacher had discovered small flaps, called valves, inside veins. Harvey wondered why veins would need valves. Instead of simply trusting old books, he dissected animals, watched their hearts beat, and designed experiments. In one <mark class="v">ingenious</mark> test, he tied a band tightly around a person's upper arm so that the veins below it swelled up. When he pressed on a vein and tried to push the blood away from the heart, toward the hand, it would not budge, because the valves blocked it. When he pushed the blood toward the heart, it flowed easily. Blood in the veins, he reasoned, travels in only one direction: back to the heart.</p>
+<p>Harvey also used mathematics. He estimated how much blood the heart pushes out with each beat and multiplied by the number of beats in an hour. The answer was staggering: in a single hour, the heart pumped more blood than the entire mass of a grown man. Nobody could possibly eat enough food to make that much new blood. These numbers seemed to <mark class="v">contradict</mark> everything Galen had taught. Harvey reached a bold <mark class="v">conclusion</mark>: the body does not use up its blood. Instead, the same blood must <mark class="v">circulate</mark>, pumped out through the arteries and returned through the veins, over and over again. In 1628, he published his ideas in a short book whose Latin title means "On the Motion of the Heart and Blood."</p>
+<p>Not everyone cheered. Some doctors chose to <mark class="v">ridicule</mark> Harvey, calling his ideas foolish, and according to one writer who knew him, many of his patients left him. Harvey also could not answer one important question: how did blood get from the smallest arteries into the smallest veins? He predicted that connections must exist, even though no one could see them. In 1661, four years after Harvey's death, an Italian scientist named Marcello Malpighi looked at a frog's lung through an early microscope and finally saw them: <mark class="v">microscopic</mark> tubes, thinner than a hair, linking arteries to veins. Today we call them capillaries, from the Latin <em>capillus</em>, meaning "hair."</p>
+<p>We now know that blood follows two loops, both powered by the heart. The short <em>pulmonary</em> loop (from the Latin <em>pulmo</em>, "lung") carries blood to the lungs to pick up oxygen. The long <em>systemic</em> loop carries that oxygen-rich blood to every other part of the body. Doctors who specialize in the heart are called cardiologists, from the Greek <em>kardia</em>, "heart," and <em>-logist</em>, "one who studies." Every time a cardiologist checks a pulse or listens through a stethoscope, they rely on Harvey's discovery. Perhaps his greatest gift, though, was not a fact about blood but a way of thinking: test ideas with careful observation and measurement, and follow the evidence, even when it disagrees with famous experts.</p>
+<p style="text-indent:0;font-size:.8em;color:#546e7a;text-align:right">About 740 words</p>
+</div>
+
+<h2>Part 1: Comprehension</h2>
+<p>Click the best answer. You'll find out right away if you're correct. Only your <strong>first click</strong> counts toward your score, but you can keep trying to find the right answer.</p>
+<div id="mc"></div>
+
+<h2>Part 2: Think Deeper (not scored)</h2>
+<div class="box">
+  <p><strong>Harvey had to convince doctors who trusted Galen. In 3 to 5 sentences, explain <em>two</em> different pieces of evidence Harvey used to show that blood circulates. Then tell which piece of evidence you find most convincing, and why. Use details from the passage (for example: <em>valves, arm band, veins, estimated, per beat, per hour, food</em>).</strong></p>
+  <textarea id="openAns" placeholder="Write your answer here, Ace..."></textarea>
+  <p><button type="button" class="sec" id="showModel">Compare with a model answer</button></p>
+  <div id="model"><strong>Model answer:</strong> Harvey's first piece of evidence came from an experiment. He tied a band around a person's arm and showed that blood in the veins could be pushed toward the heart but not away from it, because valves blocked it. His second piece of evidence was mathematical: he multiplied the blood pumped per beat by the beats in an hour and found that the heart pumps more blood than a person's whole mass, which is far too much to be made from food. I find the maths most convincing, because it proves the body cannot be using blood up, so the same blood must go around again and again.<br><em>Did you name two different kinds of evidence (an experiment and a calculation), explain how each one supports circulation, and give a clear reason for your choice? If so, excellent work!</em></div>
+</div>
+
+<h2>Part 3: Vocabulary</h2>
+<div class="box">
+  <h3 style="margin-top:0">A. Match each word to its meaning</h3>
+  <p>Choose the meaning that fits how the word is used in the passage.</p>
+  <div id="vmatch"></div>
+  <h3>B. Fill in the blank</h3>
+  <p>Choose the vocabulary word that best completes each sentence.</p>
+  <div id="vfill"></div>
+  <button type="button" class="main" id="checkVocab">Check my vocabulary</button>
+  <div class="fb" id="vocabFb"></div>
+</div>
+
+<div class="box" id="final"></div>
+<div id="scoreBox">
+  <span id="scoreText"></span>
+  <button type="button" id="finishBtn">I'm done! Show my final score</button>
+</div>
+</div>
+
+<script>
+var MC = [
+ {q:"Which sentence best states the <strong>main idea</strong> of the whole passage?",
+  o:["Galen treated gladiators and emperors in the Roman Empire.",
+     "Over many centuries, people discovered that blood circulates, mainly through Harvey's experiments and measurements, showing how science tests old ideas against evidence.",
+     "Frogs have capillaries in their lungs that can be seen with a microscope.",
+     "Doctors should never trust old books."],
+  a:1, e:"A and C are single details, and D goes too far. B sums up the discovery and the lesson about how science works."},
+ {q:"How is most of the passage organized?", tag:"Text structure",
+  o:["As a list of heart diseases and their cures","As one long description of a single experiment","In chronological (time) order, from Galen to Ibn al-Nafis to Harvey to Malpighi to today","As a compare-and-contrast of frogs and humans"],
+  a:2, e:"Time clues such as <em>About 1800 years ago</em>, <em>In the 1200s</em>, <em>In 1628</em>, and <em>In 1661</em> show chronological order."},
+ {q:"According to the passage, what did Galen believe happened to blood?",
+  o:["The body used it up, the way a fire uses up wood.","It travelled through the lungs to pick up air.","It went round and round in a loop.","It was made by the heart from air."],
+  a:0, e:"Galen taught that the liver made blood from food and the body used it up like fuel."},
+ {q:"What did Ibn al-Nafis argue in the 1200s?",
+  o:["That blood is made in the liver","That the septum has no holes, so blood must travel from the right side of the heart to the lungs before reaching the left side","That capillaries connect arteries and veins","That veins have valves"],
+  a:1, e:"He said the septum was solid and that blood must pass through the lungs. He was right!"},
+ {q:"In Harvey's arm-band experiment, why couldn't blood in a vein be pushed toward the hand?", tag:"Cause and effect",
+  o:["The band stopped all blood from moving anywhere.","The veins were too small.","The valves in the veins blocked blood from flowing away from the heart.","The blood had already been used up."],
+  a:2, e:"Valves let blood in veins flow only one way: back toward the heart."},
+ {q:"Why did Harvey's calculation suggest that blood must circulate?", tag:"Inference",
+  o:["It showed the heart beats more slowly than Galen thought.","It proved that the liver makes blood very quickly.","It showed the heart pumped so much blood each hour that the body could never make that much new blood from food, so the same blood must be reused.","It showed that blood is heavier than water."],
+  a:2, e:"More blood than a whole person's mass every hour is impossible to make from food, so the blood must go around again and again."},
+ {q:"<em>Capillary</em> comes from the Latin <em>capillus</em>, meaning \"hair.\" Why is that a good name?", tag:"Word roots",
+  o:["Capillaries grow hair on the skin.","Capillaries are extremely thin tubes, thinner than a hair.","Capillaries are found only in the scalp.","Capillaries are the longest vessels in the body."],
+  a:1, e:"Malpighi saw tubes thinner than a hair, so the name fits."},
+ {q:"Which word means \"having to do with the lungs\"?", tag:"Word roots",
+  o:["cardiac","vascular","hemoglobin","pulmonary"],
+  a:3, e:"<em>Pulmonary</em> comes from <em>pulmo</em>, \"lung.\" (Cardiac = heart, vascular = vessels, hemoglobin = the oxygen-carrying part of blood.)"},
+ {q:"Why does the author mention that some doctors ridiculed Harvey and that patients left him?", tag:"Author's purpose",
+  o:["To show that new ideas that disagree with famous experts can be resisted, even when they are correct","To prove that Harvey was a bad doctor","To explain how capillaries were discovered","To persuade readers not to visit doctors"],
+  a:0, e:"Harvey was right, yet people still pushed back, which shows how hard it can be to change old beliefs."},
+ {q:"Why could Harvey only <em>predict</em> the connections between arteries and veins, not show them?", tag:"Inference",
+  o:["He was not allowed to study the body.","He did not believe they existed.","They were too small to see without a good microscope, which he did not use.","They only exist in frogs."],
+  a:2, e:"Capillaries are microscopic. Malpighi saw them with a microscope in 1661, four years after Harvey died."}
+];
+
+var VOCAB = ["circulate","contradict","ingenious","ridicule","microscopic","conclusion"];
+var DEFS = {
+ circulate:"to move around in a loop and come back to where it started",
+ contradict:"to say or show the opposite of something",
+ ingenious:"very clever, original, and well thought out",
+ ridicule:"to make fun of someone or their ideas in an unkind way",
+ microscopic:"so tiny it can only be seen with a microscope",
+ conclusion:"a decision you reach after studying the evidence"
+};
+var FILL = [
+ {s:"The scientist reached a ____ only after she had tested her idea five times.", a:"conclusion"},
+ {s:"Germs are ____, so you can't see them on your hands, but washing still removes them.", a:"microscopic"},
+ {s:"Ceiling fans help warm air ____ around the whole room.", a:"circulate"},
+ {s:"It is unkind to ____ a classmate who gives a wrong answer.", a:"ridicule"}
+];
+var FILL_OPTIONS = ["conclusion","microscopic","circulate","ridicule","contradict","ingenious"];
+
+var PRAISE=["Nice work, Ace!","Correct! Sharp reading, Ace!","Yes! You followed the evidence!","Excellent thinking, Dr. Ace!","Right! Harvey would be proud! ❤️"];
+function pick(a){return a[Math.floor(Math.random()*a.length)];}
+function shuffled(arr,seed){var a=arr.slice(),s=seed;for(var i=a.length-1;i>0;i--){s=(s*9301+49297)%233280;var j=Math.floor(s/233280*(i+1));var t=a[i];a[i]=a[j];a[j]=t;}return a;}
+
+var mcState=MC.map(function(){return {answered:false,firstRight:false,done:false};});
+var vocabScore=0, vocabChecked=false;
+var VOCAB_TOTAL=VOCAB.length+FILL.length;
+
+function buildMC(){
+  var box=document.getElementById("mc");
+  MC.forEach(function(item,i){
+    var d=document.createElement("div"); d.className="box q"; d.id="mc"+i;
+    var html="<div><strong>"+(i+1)+".</strong> "+item.q+(item.tag?'<span class="tag">'+item.tag+'</span>':"")+"</div>";
+    item.o.forEach(function(opt,j){ html+='<button type="button" class="opt" data-i="'+i+'" data-j="'+j+'">'+String.fromCharCode(65+j)+". "+opt+"</button>"; });
+    html+='<div class="fb" id="mcfb'+i+'"></div>';
+    d.innerHTML=html; box.appendChild(d);
+  });
+  box.addEventListener("click",function(e){
+    var b=e.target.closest?e.target.closest(".opt"):e.target; if(!b||!b.classList.contains("opt"))return;
+    answerMC(+b.getAttribute("data-i"),+b.getAttribute("data-j"),b);
+  });
+}
+function answerMC(i,j,btn){
+  var st=mcState[i], item=MC[i], fb=document.getElementById("mcfb"+i), card=document.getElementById("mc"+i);
+  if(st.done) return;
+  var right=(j===item.a);
+  if(!st.answered){ st.answered=true; st.firstRight=right; }
+  if(right){
+    st.done=true; btn.classList.add("sel-right"); card.className="box q right";
+    fb.className="fb good"; fb.innerHTML="✅ "+pick(PRAISE)+' <span class="explain">'+item.e+"</span>";
+  } else {
+    btn.classList.add("sel-wrong"); card.className="box q wrong";
+    fb.className="fb bad"; fb.innerHTML="❌ Not quite, Ace. Look back at the passage and try another answer.";
+  }
+  updateScore();
+}
+function buildVocab(){
+  var m=document.getElementById("vmatch");
+  var defOrder=shuffled(VOCAB,44);
+  VOCAB.forEach(function(w,i){
+    var row=document.createElement("div"); row.className="vrow"; row.id="vm"+i;
+    var sel='<select id="vsel'+i+'" aria-label="Meaning of '+w+'"><option value="">- choose a meaning -</option>';
+    defOrder.forEach(function(k){ sel+='<option value="'+k+'">'+DEFS[k]+'</option>'; });
+    sel+="</select>";
+    row.innerHTML='<span class="mark" id="vmk'+i+'"></span><span class="w">'+w+'</span>'+sel;
+    m.appendChild(row);
+  });
+  var f=document.getElementById("vfill");
+  FILL.forEach(function(item,i){
+    var row=document.createElement("div"); row.className="vrow"; row.id="vf"+i;
+    var sel='<select id="fsel'+i+'" aria-label="Blank '+(i+1)+'"><option value="">- choose -</option>';
+    FILL_OPTIONS.forEach(function(w){ sel+='<option value="'+w+'">'+w+'</option>'; });
+    sel+="</select>";
+    var parts=item.s.split("____");
+    row.innerHTML='<span class="mark" id="vfk'+i+'"></span><span>'+(i+1)+'. '+parts[0]+sel+parts[1]+'</span>';
+    f.appendChild(row);
+  });
+}
+function checkVocab(){
+  var score=0, blank=0;
+  VOCAB.forEach(function(w,i){
+    var v=document.getElementById("vsel"+i).value, ok=(v===w);
+    if(!v) blank++;
+    if(ok) score++;
+    document.getElementById("vm"+i).className="vrow "+(ok?"right":"wrong");
+    document.getElementById("vmk"+i).textContent=ok?"✅":"❌";
+  });
+  FILL.forEach(function(item,i){
+    var v=document.getElementById("fsel"+i).value, ok=(v===item.a);
+    if(!v) blank++;
+    if(ok) score++;
+    document.getElementById("vf"+i).className="vrow "+(ok?"right":"wrong");
+    document.getElementById("vfk"+i).textContent=ok?"✅":"❌";
+  });
+  vocabScore=score; vocabChecked=true;
+  var fb=document.getElementById("vocabFb");
+  if(score===VOCAB_TOTAL){ fb.className="fb good"; fb.textContent="🌟 "+score+" / "+VOCAB_TOTAL+". Perfect! Your vocabulary has a strong pulse, Ace!"; }
+  else { fb.className="fb bad"; fb.textContent=score+" / "+VOCAB_TOTAL+" correct"+(blank?" ("+blank+" left blank)":"")+". Fix the ❌ ones and check again. Try finding the word in the passage for clues!"; }
+  updateScore();
+}
+function scores(){
+  var mc=0,answered=0; mcState.forEach(function(s){ if(s.firstRight) mc++; if(s.answered) answered++; });
+  return {mc:mc,answered:answered,vocab:vocabScore};
+}
+function updateScore(){
+  var s=scores();
+  document.getElementById("scoreText").textContent="Comprehension: "+s.mc+" / "+MC.length+" · Vocabulary: "+(vocabChecked?s.vocab:"-")+" / "+VOCAB_TOTAL;
+}
+function finish(){
+  if(!vocabChecked) checkVocab();
+  var s=scores(), total=MC.length+VOCAB_TOTAL, got=s.mc+s.vocab, pct=Math.round(100*got/total);
+  var msg = pct===100 ? "🏆 A perfect score! Outstanding reading, Ace!" :
+            pct>=80 ? "🌟 Fantastic work, Ace! You read like a Grade 7 student!" :
+            pct>=60 ? "💪 Solid effort, Ace! Reread the paragraphs for the questions you missed." :
+                      "🌱 This was a challenging passage. Read it once more, slowly, and try again. You've got this, Ace!";
+  var f=document.getElementById("final"); f.style.display="block";
+  f.innerHTML="<h2 style='border:none;margin-top:0'>Final Score: "+got+" / "+total+" ("+pct+"%)</h2>"+
+    "<p>Comprehension (first tries): "+s.mc+" / "+MC.length+(s.answered<MC.length?" (you skipped "+(MC.length-s.answered)+")":"")+"<br>Vocabulary: "+s.vocab+" / "+VOCAB_TOTAL+"</p><p>"+msg+"</p>"+
+    "<p style='font-size:.85em;color:#546e7a'>Finished on "+new Date().toLocaleString("en-CA")+"</p>";
+  f.scrollIntoView({behavior:"smooth"});
+}
+buildMC(); buildVocab(); updateScore();
+document.getElementById("checkVocab").addEventListener("click",checkVocab);
+document.getElementById("finishBtn").addEventListener("click",finish);
+document.getElementById("showModel").addEventListener("click",function(){document.getElementById("model").style.display="block";});
+</script>
+</body>
+</html>

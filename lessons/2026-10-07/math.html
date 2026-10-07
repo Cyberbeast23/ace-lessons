@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Math (Oct. 7): Heart &amp; Blood Circulation Math Lab</title>
+<style>
+  body{font-family:"Segoe UI",Verdana,Arial,sans-serif;font-size:20px;line-height:1.6;margin:0;background:#f5f0eb;color:#2c2416}
+  .wrap{max-width:880px;margin:0 auto;padding:20px 18px 80px}
+  a.home{font-size:.9em;color:#bf360c}
+  h1{color:#e65100;font-size:2em;margin:10px 0}
+  h2{color:#ef6c00;margin-top:36px;border-bottom:3px solid #ffcc80;padding-bottom:4px}
+  .box{background:#fff;border-radius:16px;padding:18px 22px;margin:16px 0;box-shadow:0 3px 10px rgba(0,0,0,.07)}
+  .example{border-left:8px solid #ef6c00}
+  .example h3{margin:0 0 6px;color:#e65100}
+  .step{margin:4px 0 4px 10px}
+  code,.mono{font-family:Consolas,"Courier New",monospace;background:#fff3e0;padding:1px 6px;border-radius:5px}
+  .q{border-left:8px solid #90a4ae}
+  .q.right{border-left-color:#43a047;background:#f1f8e9}
+  .q.wrong{border-left-color:#e53935;background:#fff5f5}
+  .qnum{font-weight:bold;color:#e65100}
+  .row{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:10px}
+  input[type=text]{font-size:1.05em;padding:8px 12px;border:2px solid #ffcc80;border-radius:10px;width:190px}
+  input[type=text]:focus{outline:none;border-color:#ef6c00;box-shadow:0 0 0 3px #ffe0b2}
+  button{font-size:.95em;padding:8px 16px;border:none;border-radius:10px;cursor:pointer;font-weight:bold}
+  .check{background:#ef6c00;color:#fff} .check:hover{background:#e65100}
+  .hint{background:#ffe082;color:#5d4037} .hint:hover{background:#ffd54f}
+  .sol{background:#ce93d8;color:#311b92}
+  .unit{color:#546e7a}
+  .fb{margin-top:8px;font-weight:bold;min-height:1em}
+  .fb.good{color:#2e7d32} .fb.bad{color:#c62828}
+  .hints{margin-top:8px;color:#e65100;background:#fff3e0;border-radius:10px;padding:0 12px}
+  .hints p{margin:6px 0;padding:6px 0}
+  .solution{margin-top:8px;background:#f3e5f5;border-radius:10px;padding:8px 12px;display:none}
+  #scoreBox{position:sticky;bottom:0;background:#e65100;color:#fff;border-radius:16px 16px 0 0;padding:12px 20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-top:30px}
+  #scoreBox button{background:#ffca28;color:#3e2723}
+  #final{display:none;font-size:1.15em;text-align:center;border:4px solid #43a047}
+  .tipbox{background:#fff8e1;border-left:8px solid #ffb300}
+</style>
+</head>
+<body>
+<div class="wrap">
+<a class="home" href="../../index.html">&larr; Back to all lessons</a>
+<h1>❤️ Math Week 10: Heart &amp; Blood Circulation Lab</h1>
+<p>Put on your lab coat, Ace! Today you'll think like a <strong>cardiologist</strong> (a heart doctor). You'll level up with <strong>unit rates from pulse counts, cardiac output (litres per minute), proportions, percent increase and decrease, working backwards from a percent, reading a heart-rate line graph (rate of change and estimating between points), algebraic formulas, and an equation with brackets</strong> — the same maths doctors, nurses, and sports scientists use every day.</p>
+
+<h2>Part 1: Learn the Moves</h2>
+
+<div class="box tipbox">
+  <strong>The 4-Step Problem Solver (your doctor's checklist):</strong>
+  <ol>
+    <li><strong>Read</strong>: What is the question actually asking? Underline the numbers and units.</li>
+    <li><strong>Plan</strong>: Which operations do I need, and in what order?</li>
+    <li><strong>Solve</strong>: Do one step at a time and write each step down.</li>
+    <li><strong>Check</strong>: Is my answer reasonable? Did I answer the question that was asked, in the right unit?</li>
+  </ol>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 1: From a pulse count to a unit rate</h3>
+  <p>A <strong>unit rate</strong> tells you how much happens in <em>one</em> unit of something, like beats per <em>one</em> minute (bpm).</p>
+  <p class="step">Nurses often count a pulse for 15 seconds. There are four 15-second blocks in a minute, so they <strong>multiply by 4</strong>.</p>
+  <p class="step">Example: 22 beats in 15 seconds → 22 × 4 = <strong>88 bpm</strong>.</p>
+  <p class="step">Counted for 20 seconds instead? 60 ÷ 20 = 3, so multiply by 3. Counted for 12 seconds? 60 ÷ 12 = 5, so multiply by 5.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 2: Cardiac output (how much blood the heart pumps)</h3>
+  <p><span class="mono">cardiac output = heart rate × stroke volume</span>. <em>Stroke volume</em> is the amount of blood pushed out in one beat.</p>
+  <p class="step">Heart rate 80 bpm, stroke volume 65 mL: 80 × 65 = 5200 mL per minute.</p>
+  <p class="step">Change to litres: <span class="mono">1 L = 1000 mL</span>, so 5200 mL = <strong>5.2 L per minute</strong>.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 3: Percent increase, percent decrease, and working backwards</h3>
+  <p class="step"><strong>Percent change</strong> = change ÷ <em>starting</em> amount × 100. From 60 bpm to 90 bpm: change 30, so 30 ÷ 60 × 100 = <strong>50% increase</strong>. From 90 down to 72: change 18, so 18 ÷ 90 × 100 = <strong>20% decrease</strong>.</p>
+  <p class="step"><strong>Working backwards:</strong> "After a 25% increase, the heart rate was 100 bpm. What was it before?" The new amount is 100% + 25% = 125% of the old one, so old = 100 ÷ 1.25 = <strong>80 bpm</strong>. (Not 100 − 25!)</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 4: Reading a line graph</h3>
+  <p class="step"><strong>Rate of change</strong> between two points = change in the <em>y</em>-value ÷ change in the <em>x</em>-value. If heart rate goes from 90 bpm at 3 min to 120 bpm at 5 min, it rose 30 bpm in 2 min, so 30 ÷ 2 = <strong>15 bpm per minute</strong>. The steepest part of the line is where the rate of change is biggest.</p>
+  <p class="step"><strong>Estimating between points:</strong> if the line is straight from 90 (at 3 min) to 120 (at 5 min), then halfway, at 4 min, the value is halfway between: (90 + 120) ÷ 2 = <strong>105 bpm</strong>.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 5: Formulas and equations with brackets</h3>
+  <p class="step">Sports coaches estimate an adult's maximum heart rate with the formula <span class="mono">220 − a</span>, where <em>a</em> is age in years. For a 30-year-old: 220 − 30 = <strong>190 bpm</strong>. (It's only an estimate, and it isn't used for kids.)</p>
+  <p class="step"><strong>Equation with brackets:</strong> <span class="mono">5(12 − x) + 9x = 76</span>. Expand: 60 − 5x + 9x = 76 → 60 + 4x = 76 → 4x = 16 → <strong>x = 4</strong>. Check: 5 × 8 + 9 × 4 = 40 + 36 = 76 ✔</p>
+</div>
+
+<h2>Part 2: The Challenge (20 problems)</h2>
+<p>Type your answer and press <strong>Check</strong> (or Enter). Fractions like <span class="mono">3/4</span>, mixed numbers like <span class="mono">1 3/4</span>, or decimals like <span class="mono">1.75</span> are fine. Don't type the units, and you may use spaces or commas in big numbers (1 000 000). Stuck? Press <strong>Hint</strong>. After 2 tries, you can see a full solution.</p>
+
+<div id="questions"></div>
+<div class="box" id="final"></div>
+<div id="scoreBox">
+  <span id="scoreText">Score: 0 / 20 correct</span>
+  <button id="finishBtn" type="button">I'm done! Show my final score</button>
+</div>
+</div>
+
+<script>
+var NAME = "Ace";
+var GRAPH = '<div style="margin:10px 0"><svg viewBox="0 70 680 290" width="100%" style="max-width:680px;background:#fff;border-radius:12px" role="img" aria-label="Line graph of Ace heart rate in beats per minute over 20 minutes"><rect x="116" y="90.0" width="224" height="210.0" fill="#ffebee"/><text x="228.0" y="292" text-anchor="middle" font-size="13" fill="#c62828">exercise (jumping jacks + jogging)</text><text x="480.0" y="292" text-anchor="middle" font-size="13" fill="#1565c0">cool-down (walking, then sitting)</text><line x1="60" y1="300.0" x2="620" y2="300.0" stroke="#e0e0e0"/><text x="52" y="304.0" text-anchor="end" font-size="13" fill="#455a64">40</text><line x1="60" y1="270.0" x2="620" y2="270.0" stroke="#e0e0e0"/><text x="52" y="274.0" text-anchor="end" font-size="13" fill="#455a64">60</text><line x1="60" y1="240.0" x2="620" y2="240.0" stroke="#e0e0e0"/><text x="52" y="244.0" text-anchor="end" font-size="13" fill="#455a64">80</text><line x1="60" y1="210.0" x2="620" y2="210.0" stroke="#e0e0e0"/><text x="52" y="214.0" text-anchor="end" font-size="13" fill="#455a64">100</text><line x1="60" y1="180.0" x2="620" y2="180.0" stroke="#e0e0e0"/><text x="52" y="184.0" text-anchor="end" font-size="13" fill="#455a64">120</text><line x1="60" y1="150.0" x2="620" y2="150.0" stroke="#e0e0e0"/><text x="52" y="154.0" text-anchor="end" font-size="13" fill="#455a64">140</text><line x1="60" y1="120.0" x2="620" y2="120.0" stroke="#e0e0e0"/><text x="52" y="124.0" text-anchor="end" font-size="13" fill="#455a64">160</text><line x1="60" y1="90.0" x2="620" y2="90.0" stroke="#e0e0e0"/><text x="52" y="94.0" text-anchor="end" font-size="13" fill="#455a64">180</text><line x1="60" y1="300.0" x2="60" y2="90.0" stroke="#f0f0f0"/><text x="60" y="318.0" text-anchor="middle" font-size="13" fill="#455a64">0</text><line x1="116" y1="300.0" x2="116" y2="90.0" stroke="#f0f0f0"/><text x="116" y="318.0" text-anchor="middle" font-size="13" fill="#455a64">2</text><line x1="172" y1="300.0" x2="172" y2="90.0" stroke="#f0f0f0"/><text x="172" y="318.0" text-anchor="middle" font-size="13" fill="#455a64">4</text><line x1="228" y1="300.0" x2="228" y2="90.0" stroke="#f0f0f0"/><text x="228" y="318.0" text-anchor="middle" font-size="13" fill="#455a64">6</text><line x1="284" y1="300.0" x2="284" y2="90.0" stroke="#f0f0f0"/><text x="284" y="318.0" text-anchor="middle" font-size="13" fill="#455a64">8</text><line x1="340" y1="300.0" x2="340" y2="90.0" stroke="#f0f0f0"/><text x="340" y="318.0" text-anchor="middle" font-size="13" fill="#455a64">10</text><line x1="396" y1="300.0" x2="396" y2="90.0" stroke="#f0f0f0"/><text x="396" y="318.0" text-anchor="middle" font-size="13" fill="#455a64">12</text><line x1="452" y1="300.0" x2="452" y2="90.0" stroke="#f0f0f0"/><text x="452" y="318.0" text-anchor="middle" font-size="13" fill="#455a64">14</text><line x1="508" y1="300.0" x2="508" y2="90.0" stroke="#f0f0f0"/><text x="508" y="318.0" text-anchor="middle" font-size="13" fill="#455a64">16</text><line x1="564" y1="300.0" x2="564" y2="90.0" stroke="#f0f0f0"/><text x="564" y="318.0" text-anchor="middle" font-size="13" fill="#455a64">18</text><line x1="620" y1="300.0" x2="620" y2="90.0" stroke="#f0f0f0"/><text x="620" y="318.0" text-anchor="middle" font-size="13" fill="#455a64">20</text><line x1="60" y1="300.0" x2="620" y2="300.0" stroke="#455a64" stroke-width="2"/><line x1="60" y1="300.0" x2="60" y2="90.0" stroke="#455a64" stroke-width="2"/><text x="340.0" y="338.0" text-anchor="middle" font-size="14" font-weight="bold" fill="#263238">Time (minutes)</text><text x="16" y="195.0" text-anchor="middle" font-size="14" font-weight="bold" fill="#263238" transform="rotate(-90 16 195.0)">Heart rate (bpm)</text><polyline fill="none" stroke="#d32f2f" stroke-width="3" points="60,264.0 116,240.0 172,204.0 228,150.0 284,120.0 340,120.0 396,168.0 452,210.0 508,228.0 564,246.0 620,252.0"/><circle cx="60" cy="264.0" r="5" fill="#d32f2f"/><text x="76" y="258.0" text-anchor="middle" font-size="13" font-weight="bold" fill="#b71c1c">64</text><circle cx="116" cy="240.0" r="5" fill="#d32f2f"/><text x="116" y="230.0" text-anchor="middle" font-size="13" font-weight="bold" fill="#b71c1c">80</text><circle cx="172" cy="204.0" r="5" fill="#d32f2f"/><text x="172" y="194.0" text-anchor="middle" font-size="13" font-weight="bold" fill="#b71c1c">104</text><circle cx="228" cy="150.0" r="5" fill="#d32f2f"/><text x="228" y="140.0" text-anchor="middle" font-size="13" font-weight="bold" fill="#b71c1c">140</text><circle cx="284" cy="120.0" r="5" fill="#d32f2f"/><text x="284" y="110.0" text-anchor="middle" font-size="13" font-weight="bold" fill="#b71c1c">160</text><circle cx="340" cy="120.0" r="5" fill="#d32f2f"/><text x="340" y="110.0" text-anchor="middle" font-size="13" font-weight="bold" fill="#b71c1c">160</text><circle cx="396" cy="168.0" r="5" fill="#d32f2f"/><text x="396" y="158.0" text-anchor="middle" font-size="13" font-weight="bold" fill="#b71c1c">128</text><circle cx="452" cy="210.0" r="5" fill="#d32f2f"/><text x="452" y="200.0" text-anchor="middle" font-size="13" font-weight="bold" fill="#b71c1c">100</text><circle cx="508" cy="228.0" r="5" fill="#d32f2f"/><text x="508" y="218.0" text-anchor="middle" font-size="13" font-weight="bold" fill="#b71c1c">88</text><circle cx="564" cy="246.0" r="5" fill="#d32f2f"/><text x="564" y="236.0" text-anchor="middle" font-size="13" font-weight="bold" fill="#b71c1c">76</text><circle cx="620" cy="252.0" r="5" fill="#d32f2f"/><text x="620" y="242.0" text-anchor="middle" font-size="13" font-weight="bold" fill="#b71c1c">72</text></svg></div>';
+var QUESTIONS = [
+ {t:"Ace presses two fingers gently on his wrist and counts <strong>19 beats in 15 seconds</strong>. What is his heart rate in beats per minute (bpm)?", a:"76", u:"bpm",
+  h:["How many 15-second blocks fit in one minute?","19 × 4 = ?"],
+  s:"60 ÷ 15 = 4 blocks, so 19 × 4 = 76 bpm."},
+ {t:"A hummingbird's heart can beat about <strong>1260 times per minute</strong>. A blue whale's heart may beat only about <strong>2 times per minute</strong>. How many times does the hummingbird's heart beat in the time it takes the whale's heart to beat <strong>once</strong>?", a:"630", u:"beats",
+  h:["At 2 beats per minute, one whale beat takes half a minute.","How many hummingbird beats happen in half a minute?"],
+  s:"One whale beat takes 1/2 minute. The hummingbird beats 1260 ÷ 2 = 630 times in that half minute."},
+ {t:"A person's heart beats <strong>75 times per minute</strong> and pumps <strong>70 mL</strong> of blood with each beat. What is the cardiac output in <strong>litres per minute</strong>?", a:"5.25", u:"L per minute",
+  h:["Cardiac output = heart rate × stroke volume.","75 × 70 = 5250 mL. Now change mL into L."],
+  s:"75 × 70 = 5250 mL per minute = 5.25 L per minute (divide by 1000)."},
+ {t:"At that same rate (<strong>5.25 L per minute</strong>), how many litres of blood does the heart pump in <strong>one full day</strong>?", a:"7560", u:"L",
+  h:["How many minutes are in a day? 24 × 60.","5.25 × 1440 = ?"],
+  s:"24 × 60 = 1440 minutes. 5.25 × 1440 = 7560 L, enough to fill about 38 bathtubs (if each holds about 200 L)!"},
+ {t:"During a hard race, an athlete's heart beats <strong>160 times per minute</strong> and pumps <strong>125 mL</strong> per beat. What is the cardiac output in <strong>litres per minute</strong>?", a:"20", u:"L per minute",
+  h:["160 × 125 = ? mL","Divide by 1000 to change mL to L."],
+  s:"160 × 125 = 20 000 mL = 20 L per minute."},
+ {t:"At rest, the same athlete's heart pumps <strong>5 L per minute</strong>. During the race it pumps <strong>20 L per minute</strong>. What is the <strong>percent increase</strong>?", a:"300", u:"%",
+  h:["Change = 20 − 5 = 15 L.","Percent increase = change ÷ starting amount × 100."],
+  s:"15 ÷ 5 = 3, and 3 × 100 = 300%. (Careful: the new amount is 4 times as much, which is a 300% <em>increase</em>.)"},
+ {t:"A child has about <strong>75 mL of blood for every kilogram</strong> of body mass. About how many <strong>litres</strong> of blood does a <strong>38 kg</strong> child have?", a:"2.85", u:"L",
+  h:["38 × 75 = ? mL","Change mL to litres by dividing by 1000."],
+  s:"38 × 75 = 2850 mL = 2.85 L."},
+ {t:"An adult has about <strong>5 L</strong> of blood. On a brisk walk, the heart pumps <strong>6 L per minute</strong>. How many <strong>seconds</strong> does it take the heart to pump an amount equal to all 5 L?", a:"50", u:"seconds",
+  h:["Time = amount ÷ rate = 5 ÷ 6 of a minute.","5/6 of 60 seconds = ?"],
+  s:"5 ÷ 6 = 5/6 of a minute. 5/6 × 60 = 50 seconds."},
+ {t:"A coach is <strong>40</strong> years old. Using the estimate <span class='mono'>maximum heart rate = 220 − a</span>, what is <strong>70%</strong> of his maximum heart rate?", a:"126", u:"bpm",
+  h:["First find his maximum: 220 − 40.","70% of 180 = 0.7 × 180."],
+  s:"220 − 40 = 180 bpm. 0.7 × 180 = 126 bpm."},
+ {t:"Using the same formula (<span class='mono'>220 − a</span>), a runner's estimated maximum heart rate is <strong>185 bpm</strong>. How old is the runner? Solve <span class='mono'>220 − a = 185</span>.", a:"35", u:"years old",
+  h:["What number subtracted from 220 leaves 185?","a = 220 − 185."],
+  s:"220 − a = 185, so a = 220 − 185 = 35 years old. Check: 220 − 35 = 185 ✔"},
+ {t:"An IV drip gives a patient <strong>18 mL</strong> of saline every <strong>45 minutes</strong>. At the same rate, how many mL does it give in <strong>2 hours</strong>?", a:"48", u:"mL",
+  h:["Find the unit rate: 18 ÷ 45 = ? mL per minute.","2 hours = 120 minutes. Multiply the unit rate by 120."],
+  s:"18 ÷ 45 = 0.4 mL per minute. 0.4 × 120 = 48 mL. (Or as a proportion: 18/45 = x/120, so x = 48.)"},
+ {t:"In healthy blood there is about <strong>1 white blood cell for every 600 red blood cells</strong>. A tiny sample contains <strong>4 200 000</strong> red blood cells. About how many white blood cells does it contain?", a:"7000", u:"white blood cells",
+  h:["The ratio white : red is 1 : 600.","4 200 000 ÷ 600 = ?"],
+  s:"4 200 000 ÷ 600 = 7000 white blood cells."},
+ {t:"In 1628, the doctor William Harvey estimated that the heart pushes out at least <strong>60 mL</strong> of blood per beat. At <strong>72 beats per minute</strong>, how many <strong>litres</strong> would the heart pump in <strong>one hour</strong>?", a:"259.2", u:"L",
+  h:["Beats in one hour = 72 × 60 = 4320.","4320 × 60 mL = ? mL. Then divide by 1000."],
+  s:"72 × 60 = 4320 beats. 4320 × 60 = 259 200 mL = 259.2 L. That is far more blood than a body could possibly make from food in an hour, so Harvey argued the same blood must go round and round: it <em>circulates</em>!"},
+ {t:"In one hour, Ace exercises for <em>x</em> minutes at <strong>150 bpm</strong> and rests for the remaining minutes at <strong>70 bpm</strong>. His heart beats <strong>5800</strong> times in that hour. Solve <span class='mono'>70(60 − x) + 150x = 5800</span> to find how many minutes he exercised.", a:"20", u:"minutes",
+  h:["Expand the brackets: 70 × 60 = 4200 and 70 × (−x) = −70x.","4200 − 70x + 150x = 5800, so 4200 + 80x = 5800."],
+  s:"4200 + 80x = 5800 → 80x = 1600 → x = 20 minutes. Check: 70 × 40 + 150 × 20 = 2800 + 3000 = 5800 ✔"},
+ {t:"After three months of soccer training, Ace's resting heart rate dropped from <strong>80 bpm</strong> to <strong>68 bpm</strong>. What was the <strong>percent decrease</strong>?", a:"15", u:"%",
+  h:["Change = 80 − 68 = 12.","Divide by the <em>starting</em> amount (80), then × 100."],
+  s:"12 ÷ 80 = 0.15 = 15% decrease. A stronger heart pumps more blood per beat, so it needs fewer beats."},
+ {t:"After a sprint, Jordan's heart rate was <strong>140 bpm</strong>. That was a <strong>75% increase</strong> from his resting heart rate. What was his resting heart rate?", a:"80", u:"bpm",
+  h:["140 is 100% + 75% = 175% of the resting rate.","Resting rate = 140 ÷ 1.75."],
+  s:"140 ÷ 1.75 = 80 bpm. Check: 75% of 80 is 60, and 80 + 60 = 140 ✔"},
+ {t:"A red blood cell is about <strong>0.008 mm</strong> across. How many red blood cells lined up side by side would stretch <strong>1 cm</strong>?", a:"1250", u:"red blood cells",
+  h:["Change 1 cm into millimetres first: 1 cm = 10 mm.","10 ÷ 0.008 = ? (Try 10 000 ÷ 8.)"],
+  s:"1 cm = 10 mm. 10 ÷ 0.008 = 10 000 ÷ 8 = 1250 cells."},
+ {t:GRAPH+"The graph shows Ace's heart rate during a workout. Between which two readings does his heart rate rise <strong>fastest</strong>? Give that <strong>rate of change</strong> in bpm per minute.", a:"18", u:"bpm per minute",
+  h:["Find the rise for each 2-minute step: 0→2, 2→4, 4→6, 6→8.","The rises are 16, 24, 36 and 20 bpm. Divide the biggest by 2 minutes."],
+  s:"From 4 min (104) to 6 min (140) the rate rises 36 bpm in 2 minutes: 36 ÷ 2 = 18 bpm per minute. That is the steepest part of the line."},
+ {t:"Use the graph in question 18. Assume the line is straight between 4 minutes and 6 minutes. Estimate Ace's heart rate at <strong>5 minutes</strong>.", a:"122", u:"bpm",
+  h:["5 minutes is exactly halfway between 4 and 6 minutes.","Find the number halfway between 104 and 140."],
+  s:"(104 + 140) ÷ 2 = 244 ÷ 2 = 122 bpm."},
+ {t:"Use the graph in question 18. Ace stopped exercising at 10 minutes. What was the <strong>percent decrease</strong> in his heart rate during the first 2 minutes of his cool-down (from 10 to 12 minutes)?", a:"20", u:"%",
+  h:["Read the graph: 160 bpm at 10 min and 128 bpm at 12 min.","Change = 32. Divide by the starting amount, 160."],
+  s:"160 − 128 = 32. 32 ÷ 160 = 0.2 = 20% decrease. A quick drop after exercise is a sign of a fit, healthy heart."}
+];
+
+var PRAISE = ["Nice work, Ace!","Correct! Your heart maths is pumping! ❤️","Yes! Dr. Ace strikes again!","Excellent, Ace. That was a tough one!","Right on target! 🎯","Brilliant thinking, future cardiologist!","Spot on, Ace! 🩺"];
+var ENCOURAGE = ["Not quite. Check your steps and try again!","Close call. Try again, Ace! Maybe use a hint?","Hmm, not yet. Re-read the question carefully.","Keep going, Ace. Mistakes help your brain grow!"];
+
+function parseAnswer(str){
+  if(str===undefined||str===null) return NaN;
+  var s=String(str).trim().toLowerCase();
+  s=s.replace(/[\u2212\u2013]/g,"-");
+  s=s.replace(/(\d),(?=\d{3}(\D|$))/g,"$1");
+  s=s.replace(/[^0-9.\/\- ]/g," ").replace(/\s+/g," ").trim();
+  s=s.replace(/\s*\/\s*/g,"/");
+  var m;
+  if((m=s.match(/^(-?\d+) (\d+)\/(\d+)$/))){ var w=parseFloat(m[1]),n=parseFloat(m[2]),d=parseFloat(m[3]); if(d===0)return NaN; return w<0? w-n/d : w+n/d; }
+  if((m=s.match(/^(-?\d+(?:\.\d+)?)\/(\d+(?:\.\d+)?)$/))){ var d2=parseFloat(m[2]); if(d2===0)return NaN; return parseFloat(m[1])/d2; }
+  s=s.replace(/ /g,"");
+  if(/^-?(\d+\.?\d*|\.\d+)$/.test(s)) return parseFloat(s);
+  return NaN;
+}
+function isCorrect(input,key){
+  var a=parseAnswer(input), k=parseAnswer(key);
+  if(isNaN(a)) return false;
+  var isInt=Math.abs(k-Math.round(k))<1e-12;
+  var tol=isInt?1e-9:0.005;
+  return Math.abs(a-k)<=tol;
+}
+
+function isRomanCorrect(input,key){ return String(input).replace(/\s+/g,"").toUpperCase()===key; }
+var state=[];
+function render(){
+  var box=document.getElementById("questions");
+  QUESTIONS.forEach(function(q,i){
+    state.push({correct:false,tries:0,hints:0});
+    var d=document.createElement("div");
+    d.className="box q"; d.id="q"+i;
+    d.innerHTML='<div><span class="qnum">'+(i+1)+'.</span> '+q.t+'</div>'+
+      '<div class="row"><input type="text"'+(q.r?' placeholder="e.g. MMXXVI"':'')+' id="in'+i+'" aria-label="Answer to question '+(i+1)+'" autocomplete="off"> <span class="unit">'+q.u+'</span>'+
+      '<button type="button" class="check" data-i="'+i+'">Check</button>'+
+      '<button type="button" class="hint" data-i="'+i+'">Hint 💡</button>'+
+      '<button type="button" class="sol" data-i="'+i+'" style="display:none">Show solution</button></div>'+
+      '<div class="fb" id="fb'+i+'"></div><div class="hints" id="hints'+i+'"></div>'+
+      '<div class="solution" id="sol'+i+'"><strong>Solution:</strong> '+q.s+'</div>';
+    box.appendChild(d);
+  });
+  box.addEventListener("click",function(e){
+    var b=e.target; if(b.tagName!=="BUTTON")return;
+    var i=+b.getAttribute("data-i");
+    if(b.className==="check") check(i);
+    else if(b.className==="hint") hint(i);
+    else if(b.className==="sol") document.getElementById("sol"+i).style.display="block";
+  });
+  box.addEventListener("keydown",function(e){
+    if(e.key==="Enter"&&e.target.tagName==="INPUT"){ check(+e.target.id.slice(2)); }
+  });
+}
+function pick(arr){return arr[Math.floor(Math.random()*arr.length)];}
+function check(i){
+  var val=document.getElementById("in"+i).value;
+  var fb=document.getElementById("fb"+i), card=document.getElementById("q"+i);
+  if(val.trim()===""){fb.className="fb bad";fb.textContent="Type an answer first, Ace!";return;}
+  var isR=!!QUESTIONS[i].r;
+  if(isR&&!/^[ivxlcdm\s]+$/i.test(val)){fb.className="fb bad";fb.textContent="Use only Roman numeral letters: I, V, X, L, C, D, M.";return;}
+  if(!isR&&isNaN(parseAnswer(val))){fb.className="fb bad";fb.textContent="I can't read that as a number. Try something like 42, 3.5, 3/4 or 1 3/4.";return;}
+  state[i].tries++;
+  if(isR?isRomanCorrect(val,QUESTIONS[i].a):isCorrect(val,QUESTIONS[i].a)){
+    state[i].correct=true; card.className="box q right"; fb.className="fb good";
+    fb.textContent="✅ "+pick(PRAISE)+(state[i].tries===1?" (first try!)":"");
+  } else {
+    state[i].correct=false; card.className="box q wrong"; fb.className="fb bad";
+    fb.textContent="❌ "+pick(ENCOURAGE);
+    if(state[i].tries>=2) card.querySelector(".sol").style.display="inline-block";
+  }
+  updateScore();
+}
+function hint(i){
+  var q=QUESTIONS[i], s=state[i], hb=document.getElementById("hints"+i);
+  if(s.hints<q.h.length){
+    var p=document.createElement("p"); p.textContent="💡 Hint "+(s.hints+1)+": "+q.h[s.hints]; hb.appendChild(p); s.hints++;
+  }
+  if(s.hints>=q.h.length) document.querySelector("#q"+i+" .hint").disabled=true;
+  updateScore();
+}
+function counts(){
+  var c=0,first=0,h=0;
+  state.forEach(function(s){ if(s.correct){c++; if(s.tries===1)first++;} h+=s.hints; });
+  return {correct:c,first:first,hints:h};
+}
+function updateScore(){
+  var k=counts();
+  document.getElementById("scoreText").textContent="Score: "+k.correct+" / "+QUESTIONS.length+" correct · hints used: "+k.hints;
+}
+function finish(){
+  var k=counts(), n=QUESTIONS.length, pct=Math.round(100*k.correct/n);
+  var msg;
+  if(pct===100) msg="🏆 PERFECT SCORE! Incredible work, Ace. A real cardiologist would be impressed!";
+  else if(pct>=85) msg="🌟 Outstanding, Ace! That's a Grade 6-7 level performance!";
+  else if(pct>=65) msg="💪 Great effort, Ace! Review the ones you missed and try them again.";
+  else if(pct>=40) msg="👍 Good start, Ace! These problems are tough. Use the hints and solutions to learn the tricks, then try again.";
+  else msg="🌱 These are challenge problems, well above grade level. Every doctor started as a beginner! Go through the worked examples and try again, Ace!";
+  var f=document.getElementById("final");
+  f.style.display="block";
+  f.innerHTML="<h2 style='border:none;margin-top:0'>Final Score: "+k.correct+" / "+n+" ("+pct+"%)</h2>"+
+    "<p>Correct on the first try: "+k.first+" · Hints used: "+k.hints+"</p><p>"+msg+"</p>"+
+    "<p style='font-size:.85em;color:#546e7a'>Finished on "+new Date().toLocaleString("en-CA")+"</p>";
+  f.scrollIntoView({behavior:"smooth"});
+}
+render();
+updateScore();
+document.getElementById("finishBtn").addEventListener("click",finish);
+</script>
+</body>
+</html>
