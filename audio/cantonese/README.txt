@@ -6,7 +6,7 @@ TTS voice (Cantonese): zh-HK-HiuMaanNeural
 TTS voice (English in ALL-words.mp3): en-HK-YanNeural
 Rate: slowed (~-20%) for clear listening practice.
 
-Sources: Ace lessons 2026-09-29 (Greetings) + 2026-09-30 (Family Members) + 2026-10-01 (Food) + 2026-10-02 (School) + 2026-10-03 (Body) + 2026-10-04 (Colours) + 2026-10-05 (Sky & Space) + 2026-10-06 (Numbers 11-100) + 2026-10-07 (At the Doctor).
+Sources: Ace lessons 2026-09-29 (Greetings) + 2026-09-30 (Family Members) + 2026-10-01 (Food) + 2026-10-02 (School) + 2026-10-03 (Body) + 2026-10-04 (Colours) + 2026-10-05 (Sky & Space) + 2026-10-06 (Numbers 11-100) + 2026-10-07 (At the Doctor) + 2026-10-08 (Nature: Mountains & Volcanoes).
 Numbers 1-10 are already known and not included here.
 
 How to practise:
@@ -380,6 +380,47 @@ Individual files
   Chinese:  好返啦
   Jyutping: hou2 faan1 laa1
   English:  all better now (recovered)
+
+
+73-saan1-mountain.mp3
+  Chinese:  山
+  Jyutping: saan1
+  English:  mountain
+
+74-fo2-saan1-volcano.mp3
+  Chinese:  火山
+  Jyutping: fo2 saan1
+  English:  volcano
+
+75-fo2-fire.mp3
+  Chinese:  火
+  Jyutping: fo2
+  English:  fire
+
+76-sek6-tau4-rock.mp3
+  Chinese:  石頭
+  Jyutping: sek6 tau4
+  English:  rock / stone
+
+77-hoi2-sea.mp3
+  Chinese:  海
+  Jyutping: hoi2
+  English:  sea
+
+78-syu6-tree.mp3
+  Chinese:  樹
+  Jyutping: syu6
+  English:  tree
+
+79-dei6-zan3-earthquake.mp3
+  Chinese:  地震
+  Jyutping: dei6 zan3
+  English:  earthquake
+
+80-hou2-jit6-very-hot.mp3
+  Chinese:  好熱
+  Jyutping: hou2 jit6
+  English:  very hot
 
 
 Combined file
