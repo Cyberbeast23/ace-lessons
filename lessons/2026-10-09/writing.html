@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Writing (Oct. 9): How-To Guide (Make and Crack a Secret Code) + Grammar Clinic</title>
+<style>
+  body{font-family:"Segoe UI",Verdana,Arial,sans-serif;font-size:20px;line-height:1.6;margin:0;background:#fff8f0;color:#2c2416}
+  .wrap{max-width:880px;margin:0 auto;padding:20px 18px 80px}
+  a.home{font-size:.9em;color:#bf360c}
+  h1{color:#e65100;font-size:2em;margin:10px 0}
+  h2{color:#ef6c00;margin-top:36px;border-bottom:3px solid #ffcc80;padding-bottom:4px}
+  h3{color:#ef6c00}
+  .box{background:#fff;border-radius:16px;padding:18px 22px;margin:16px 0;box-shadow:0 3px 10px rgba(0,0,0,.07)}
+  .tipbox{background:#fff8e1;border-left:8px solid #ffb300}
+  .senses{display:grid;gap:8px;margin:10px 0;grid-template-columns:repeat(auto-fit,minmax(140px,1fr))}
+  .senses .side{border-radius:14px;padding:10px 16px;background:#fff3e0}
+  .ts{background:#ffcc80;border-radius:5px;padding:1px 3px}
+  .ev{background:#c8e6c9;border-radius:5px;padding:1px 3px}
+  .ex{background:#ffe0b2;border-radius:5px;padding:1px 3px}
+  .cs{background:#e1bee7;border-radius:5px;padding:1px 3px}
+  .legend span{display:inline-block;margin:4px 8px 4px 0;font-size:.85em}
+  .model{font-family:Georgia,"Times New Roman",serif;font-size:1.05em;line-height:1.9}
+  .row{padding:10px 6px;border-bottom:1px dashed #ddd}
+  .row.right{background:#f1f8e9} .row.wrong{background:#fff5f5}
+  select{font-size:.9em;padding:5px 8px;border-radius:8px;border:2px solid #ffb74d;font-family:inherit}
+  .q{border-left:8px solid #b0bec5}
+  .q.right{border-left-color:#43a047;background:#f1f8e9}
+  .q.wrong{border-left-color:#e53935;background:#fff5f5}
+  .opt{display:block;width:100%;text-align:left;font-size:.95em;background:#fafafa;border:2px solid #e0e0e0;border-radius:10px;padding:8px 14px;margin:8px 0;cursor:pointer;font-family:inherit}
+  .opt:hover{border-color:#ffb74d;background:#fff}
+  .opt.sel-right{background:#c8e6c9;border-color:#43a047}
+  .opt.sel-wrong{background:#ffcdd2;border-color:#e53935}
+  .fb{margin-top:6px;font-weight:bold}
+  .fb.good{color:#2e7d32} .fb.bad{color:#c62828}
+  .explain{font-weight:normal;color:#e65100}
+  .bad-sent{font-family:Consolas,"Courier New",monospace;background:#ffebee;padding:6px 10px;border-radius:8px;display:inline-block;margin:6px 0}
+  input.fix{width:100%;box-sizing:border-box;font-size:1em;padding:8px 12px;border:2px solid #ffb74d;border-radius:10px;font-family:inherit}
+  button{font-size:.95em;padding:8px 16px;border:none;border-radius:10px;cursor:pointer;font-weight:bold;font-family:inherit}
+  .go{background:#ef6c00;color:#fff} .go:hover{background:#e65100}
+  .hint{background:#ffe082;color:#5d4037}
+  .blue{background:#1e88e5;color:#fff}
+  .purple{background:#8e24aa;color:#fff}
+  .grey{background:#cfd8dc;color:#263238}
+  .btnrow{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px}
+  textarea{width:100%;box-sizing:border-box;min-height:300px;font-size:1.05em;line-height:1.7;font-family:Georgia,"Times New Roman",serif;padding:14px;border:3px solid #ffb74d;border-radius:12px}
+  textarea:focus{outline:none;border-color:#ef6c00}
+  .counter{display:flex;flex-wrap:wrap;gap:20px;align-items:center;margin:8px 0;font-weight:bold}
+  .meter{flex:1;min-width:200px;height:18px;background:#e0e0e0;border-radius:9px;overflow:hidden}
+  .meter div{height:100%;width:0;background:#ffb300;transition:width .2s}
+  .checklist label{display:block;padding:6px 4px;cursor:pointer}
+  .checklist input{transform:scale(1.4);margin-right:10px}
+  .prompts label{display:block;background:#fff3e0;border-radius:10px;padding:10px 14px;margin:8px 0;cursor:pointer}
+  .prompts input{transform:scale(1.3);margin-right:8px}
+  #scoreBox{position:sticky;bottom:0;background:#e65100;color:#fff;border-radius:16px 16px 0 0;padding:12px 20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-top:30px}
+  .w5{display:grid;gap:8px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));margin:10px 0}
+  .w5 label{display:block;font-weight:bold;color:#e65100}
+  .w5 input{width:100%;box-sizing:border-box;font-size:.95em;padding:6px 10px;border:2px solid #ffb74d;border-radius:8px;font-family:inherit}
+  #printArea{display:none}
+  @media print{
+    body{background:#fff;font-size:14pt}
+    .wrap,#scoreBox{display:none !important}
+    #printArea{display:block;font-family:Georgia,serif;line-height:1.8}
+    #printArea h1{font-size:18pt;margin:0 0 6pt}
+    #printArea .meta{font-size:11pt;color:#444}
+    #printArea .text{white-space:pre-wrap;border-top:1px solid #999;padding-top:10pt;margin-top:10pt}
+    #printArea .lines{margin-top:24pt;border-top:1px solid #999;padding-top:6pt;font-size:11pt}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+<a class="home" href="../../index.html">&larr; Back to all lessons</a>
+<h1>✍️ Writing Week 12: How-To Guide: Make and Crack a Secret Code</h1>
+<p>Yesterday you wrote like a news reporter. Today, Ace, you'll write like an <strong>instruction writer</strong>. A <strong>how-to guide</strong> (also called <strong>procedural writing</strong>) teaches someone to do something they've never done before, using only your words. If one step is missing or out of order, the reader gets stuck, or their secret code doesn't work! You'll learn how to write clear <strong>command steps</strong>, a precise <strong>materials list</strong>, and helpful <strong>tips and warnings</strong>. Then you'll write your own guide to a secret code.</p>
+
+<h2>Part 1: The Lesson</h2>
+<div class="box">
+  <h3 style="margin-top:0">A how-to guide has five parts 🛠️</h3>
+  <p>Readers follow a how-to guide from top to bottom, doing each step as they read it:</p>
+  <div class="senses">
+    <div class="side"><strong>1. Title:</strong> tells exactly what readers will make or do, often starting with "How to"</div>
+    <div class="side"><strong>2. Introduction:</strong> one or two sentences on what it is, why it's useful, and how long it takes</div>
+    <div class="side"><strong>3. Materials:</strong> everything the reader needs, gathered before they start</div>
+    <div class="side"><strong>4. Steps:</strong> numbered, in the exact order, each beginning with a command verb</div>
+    <div class="side"><strong>5. Tips, warnings + conclusion:</strong> help readers avoid mistakes and check that it worked</div>
+  </div>
+  <h3>Five instruction-writer moves</h3>
+  <ul>
+    <li><strong>Start each step with a command verb</strong> (the <em>imperative</em>): <em>Cut, Write, Turn, Line up, Count.</em> Not <em>"You should maybe cut..."</em></li>
+    <li><strong>One action per step, in the exact order:</strong> if the reader must do two things, make two steps.</li>
+    <li><strong>Be precise:</strong> give exact amounts and sizes in metric units. <em>"Cut a circle 10 cm across"</em> is better than <em>"cut a smallish circle."</em></li>
+    <li><strong>Use sequence words</strong> with a comma after them: <em>First, Next, After that, When the ink is dry, Finally,</em></li>
+    <li><strong>Talk to the reader and warn them early:</strong> use "you," and put a warning <em>before</em> the step where the mistake could happen. <em>"Be careful: write the letters the same size, or the slices won't line up."</em></li>
+  </ul>
+  <p><strong>Grown-up word:</strong> lists of steps should be <strong>parallel</strong>: every item has the same grammar shape (<em>count the letters, find the most common one, guess the shift</em>).</p>
+</div>
+
+<div class="box">
+  <h3 style="margin-top:0">Model How-To Guide (short version)</h3>
+  <p class="legend"><span class="ts">Title + introduction</span><span class="ev">Materials</span><span class="ex">Steps</span><span class="cs">Tips + conclusion</span></p>
+  <p class="model">
+    <span class="ts"><strong>How to Make a Caesar Cipher Wheel</strong><br>A cipher wheel lets you code and decode secret messages in seconds. With some cardboard and a pencil, you can make one in about 20 minutes.</span><br>
+    <span class="ev">You will need these materials: two circles of thin cardboard (one 14 cm across and one 10 cm across), a protractor, a pencil, and a paper fastener.</span><br>
+    <span class="ex">1. Divide each circle into 26 equal slices, each about 13.8° wide (because 360° ÷ 26 ≈ 13.8°).<br>2. Write the alphabet around the edge of both circles, one letter in each slice.<br>3. Push the paper fastener through the centres of both circles, with the small circle on top.<br>4. Turn the small wheel until its A lines up with the big wheel's D. You now have a shift of 3!</span><br>
+    <span class="cs">Be careful to write every letter the same size, or the slices won't line up. To test your wheel, code the word ACE using the big wheel's letters. If you get DFH, your wheel works!</span>
+  </p>
+  <p><strong>Notice:</strong> The title says exactly what you'll make, the materials list has exact sizes, every step starts with a command verb (<em>Divide, Write, Push, Turn</em>) and does only one job, and the guide ends by telling the reader how to check their work.</p>
+</div>
+
+<h2>Part 2: Name That How-To Part</h2>
+<div class="box">
+  <p>Each line comes from a student's how-to guide called <em>How to Send a Secret Message in Invisible Ink</em>. Choose which <strong>part of the guide</strong> it belongs in.</p>
+  <div id="labelRows"></div>
+  <div class="btnrow"><button type="button" class="go" id="checkLabels">Check my answers</button></div>
+  <div class="fb" id="labelFb"></div>
+</div>
+
+<h2>Part 3: Grammar Clinic 🔍</h2>
+<div class="box tipbox">A codebreaker checks every symbol for clues. You're the codebreaker for these sentences! <strong>Section A:</strong> pick the correct sentence. <strong>Section B:</strong> type the sentence again with <em>all</em> mistakes fixed. We use <strong>Canadian spelling</strong> (centimetre, centre, colour, neighbour). Today, watch <strong>command verbs</strong>, <strong>commas after sequence words</strong>, <strong>colons before lists</strong>, <strong>commas in a list</strong>, <strong>parallel lists</strong>, <strong>your / you're</strong>, <strong>their / there / they're</strong>, <strong>its / it's</strong>, and <strong>comma splices with "then"</strong>.</div>
+<h3>Section A: Pick the correct sentence</h3>
+<div id="gmc"></div>
+<h3>Section B: Fix the sentence</h3>
+<p>Retype the whole sentence correctly, with capital letters and punctuation. Each one has <strong>at least two</strong> mistakes.</p>
+<div id="gfix"></div>
+
+<h2>Part 4: Your Turn to Write</h2>
+<div class="box">
+  <h3 style="margin-top:0">Step 1: Choose your guide</h3>
+  <div class="prompts" id="prompts">
+    <label><input type="radio" name="prompt" value="Guide A: How to code and decode a message with a Caesar cipher." checked> 🔐 <strong>Guide A:</strong> How to code <em>and</em> decode a message with a Caesar cipher (include what to do when the alphabet wraps around past Z).</label>
+    <label><input type="radio" name="prompt" value="Guide B: How to crack a secret message using frequency analysis."> 🔎 <strong>Guide B:</strong> How to crack a secret message using frequency analysis, the method Al-Kindi described (use facts from today's reading).</label>
+    <label><input type="radio" name="prompt" value="Guide C: How to invent your own secret code and teach a friend to use it."> 🕵️ <strong>Guide C:</strong> How to invent your <em>own</em> secret code (a symbol code, a number code, or anything you like) and teach a friend to use it.</label>
+  </div>
+  <p><strong>Plan your guide:</strong> jot down a few words for each box. (These notes save with your writing.)</p>
+  <div class="w5" id="w5">
+    <div><label for="w5goal">Goal: what will readers be able to do?</label><input id="w5goal" type="text" autocomplete="off"></div>
+    <div><label for="w5materials">Materials they need</label><input id="w5materials" type="text" autocomplete="off"></div>
+    <div><label for="w5steps">Steps, in order (short notes)</label><input id="w5steps" type="text" autocomplete="off"></div>
+    <div><label for="w5tips">Tips and warnings</label><input id="w5tips" type="text" autocomplete="off"></div>
+    <div><label for="w5check">How will they know it worked?</label><input id="w5check" type="text" autocomplete="off"></div>
+    <div><label for="w5example">An example to show them</label><input id="w5example" type="text" autocomplete="off"></div>
+  </div>
+
+  <h3>Step 2: Write your how-to guide</h3>
+  <p><strong>Goal:</strong> a how-to guide of <strong>200 to 300 words</strong> with a <strong>title</strong>, a short <strong>introduction</strong>, a <strong>materials</strong> list, at least <strong>six numbered steps</strong> that each begin with a command verb, at least <strong>one tip or warning</strong>, a worked <strong>example</strong> (a real word coded and decoded), and a <strong>conclusion</strong> that tells readers how to check their work.</p>
+  <p><button type="button" class="hint" id="templateBtn">📋 Add the how-to guide headings for me</button></p>
+  <label for="essay"><strong>Write here, Ace:</strong></label>
+  <textarea id="essay" placeholder="Title: How to ..."></textarea>
+  <div class="counter">
+    <span id="wc">0 words</span>
+    <span id="sc">0 sentences</span>
+    <div class="meter" aria-hidden="true"><div id="meterBar"></div></div>
+  </div>
+  <div class="fb" id="wcMsg">Aim for 200 to 300 words.</div>
+  <p style="font-size:.8em;color:#607d8b" id="saveNote">Your writing is saved automatically in this browser as you type.</p>
+
+  <h3>Self-check before you finish ✅</h3>
+  <div class="checklist" id="checklist">
+    <label><input type="checkbox"> My <strong>title</strong> tells exactly what readers will make or do.</label>
+    <label><input type="checkbox"> My <strong>introduction</strong> says what it is and why it's useful.</label>
+    <label><input type="checkbox"> My <strong>materials</strong> list has everything, with exact amounts or sizes in metric units.</label>
+    <label><input type="checkbox"> I have at least <strong>six numbered steps</strong>, in the exact order, with <strong>one action per step</strong>.</label>
+    <label><input type="checkbox"> Every step <strong>starts with a command verb</strong> (Write, Count, Turn, Find...).</label>
+    <label><input type="checkbox"> I added a <strong>tip or warning</strong> before the step where a mistake could happen.</label>
+    <label><input type="checkbox"> I included a worked <strong>example</strong> and a <strong>conclusion</strong> that tells readers how to check it worked.</label>
+    <label><input type="checkbox"> I checked commas after <strong>sequence words</strong>, <strong>your / you're</strong>, <strong>its / it's</strong>, and <strong>Canadian spelling</strong> (centimetre, centre, colour).</label>
+  </div>
+  <div class="btnrow">
+    <button type="button" class="blue" id="downloadBtn">⬇️ Download my writing (for Dad)</button>
+    <button type="button" class="purple" id="printBtn">🖨️ Print my writing</button>
+    <button type="button" class="grey" id="clearBtn">Start over</button>
+  </div>
+  <div class="fb" id="doneMsg"></div>
+</div>
+
+<div id="scoreBox"><span id="scoreText"></span><span>Keep going, Agent Ace! 🔐</span></div>
+</div>
+
+<div id="printArea"></div>
+
+<script>
+var NAME="Ace";
+var PRAISE=["Nice work, Ace!","Correct! Great editing eye!","Yes! Ace fixed it!","Excellent, Agent Ace!","Code cracked! 🔓"];
+function pick(a){return a[Math.floor(Math.random()*a.length)];}
+
+var LABELS=["Title","Introduction","Materials","Step","Tip or warning"];
+var LABEL_ITEMS=[
+ {s:"How to Send a Secret Message in Invisible Ink", a:"Title"},
+ {s:"Invisible ink lets you hide a message in plain sight, and you can make it with something from your kitchen.", a:"Introduction"},
+ {s:"You will need these materials: half a lemon, a small bowl, a cotton swab, white paper, and a lamp.", a:"Materials"},
+ {s:"Dip the cotton swab in the lemon juice and write your message on the paper.", a:"Step"},
+ {s:"Be careful: ask an adult to help, because a lamp bulb can get very hot.", a:"Tip or warning"},
+ {s:"Hold the dry paper near the warm lamp until the message turns brown.", a:"Step"}
+];
+var labelScore=0, labelChecked=false;
+function buildLabels(){
+  var box=document.getElementById("labelRows");
+  LABEL_ITEMS.forEach(function(it,i){
+    var d=document.createElement("div"); d.className="row"; d.id="lr"+i;
+    var sel='<select id="ls'+i+'" aria-label="Job of sentence '+(i+1)+'"><option value="">- choose -</option>';
+    LABELS.forEach(function(l){sel+='<option>'+l+'</option>';});
+    sel+='</select>';
+    d.innerHTML='<strong>'+(i+1)+'.</strong> '+it.s+'<br>'+sel+' <span id="lm'+i+'"></span>';
+    box.appendChild(d);
+  });
+}
+function checkLabels(){
+  var sc=0;
+  LABEL_ITEMS.forEach(function(it,i){
+    var ok=document.getElementById("ls"+i).value===it.a; if(ok)sc++;
+    document.getElementById("lr"+i).className="row "+(ok?"right":"wrong");
+    document.getElementById("lm"+i).textContent=ok?"✅":"❌";
+  });
+  labelScore=sc; labelChecked=true;
+  var fb=document.getElementById("labelFb");
+  if(sc===LABEL_ITEMS.length){fb.className="fb good";fb.textContent="🌟 "+sc+" / "+LABEL_ITEMS.length+". "+pick(PRAISE)+" Your instructions are crystal clear!";}
+  else{fb.className="fb bad";fb.textContent=sc+" / "+LABEL_ITEMS.length+". Hint: a name with no period = title; a sentence about what it is and why it\u2019s useful = introduction; a list of things to gather = materials; a command telling the reader to do something = step; \u201cBe careful\u201d or \u201cTip\u201d = tip or warning. Fix the ❌ ones and check again.";}
+  updateScore();
+}
+
+var GMC=[
+ {q:"Which step is written as a clear <strong>command</strong>?",
+  o:["The small wheel should maybe be turned by you.","Turning the small wheel until its A lines up with D.","You might want to think about turning the wheel.","Turn the small wheel until its A lines up with D."],
+  a:3,e:"A command (imperative) sentence starts with the action verb and tells the reader exactly what to do: <em>Turn...</em>"},
+ {q:"Which sentence uses a <strong>sequence word</strong> with the correct comma?",
+  o:["First cut out both circles.","First, cut out both circles.","First cut, out both circles.","First: cut out, both circles."],
+  a:1,e:"Put a comma right after a sequence word at the start of a sentence: <em>First, Next, Finally,</em>"},
+ {q:"Which sentence uses a <strong>colon</strong> correctly?",
+  o:["You will need these materials: a ruler, a pencil, and two circles.","You will need these: materials a ruler, a pencil, and two circles.","You will need these materials a ruler: a pencil: and two circles.","You: will need these materials, a ruler, a pencil, and two circles."],
+  a:0,e:"A colon comes after a complete sentence (<em>You will need these materials</em>) to introduce a list."},
+ {q:"Which sentence has a <strong>parallel</strong> list (every item in the same grammar shape)?",
+  o:["To crack the code, count the letters, find the most common one, and you should guess the shift.","To crack the code, counting the letters, find the most common one, and guessing the shift.","To crack the code, count the letters, find the most common one, and guess the shift.","To crack the code, count the letters, finding the most common one, and the shift."],
+  a:2,e:"All three items start with a command verb: <em>count, find, guess</em>. That's parallel structure."},
+ {q:"Which sentence uses <em>your / you're</em> correctly?",
+  o:["You're going to need your pencil.","Your going to need you're pencil.","Your going to need your pencil.","You're going to need you're pencil."],
+  a:0,e:"<em>You're</em> means \"you are\" (you are going to need). <em>Your</em> shows ownership (your pencil)."},
+ {q:"Which sentence uses <em>their / there / they're</em> correctly?",
+  o:["Spies hid they're messages over their.","Spies hid there messages over their.","Spies hid their messages over they're.","Spies hid their messages over there."],
+  a:3,e:"<em>Their</em> shows ownership (their messages). <em>There</em> is a place (over there). <em>They're</em> means \"they are.\""},
+ {q:"Which sentence is correct and is <strong>not a comma splice</strong>?",
+  o:["Write the message, then fold the paper.","Write the message, fold the paper.","Write the message, and then fold the paper.","Write the message and, fold the paper."],
+  a:2,e:"<em>Then</em> on its own is not a joining word, so a comma plus <em>then</em> is still a comma splice. Use <em>and then</em>, or start a new sentence: <em>Write the message. Then fold the paper.</em>"}
+];
+var gmcState=GMC.map(function(){return{answered:false,firstRight:false,done:false};});
+function buildGMC(){
+  var box=document.getElementById("gmc");
+  GMC.forEach(function(it,i){
+    var d=document.createElement("div"); d.className="box q"; d.id="g"+i;
+    var h='<div><strong>'+(i+1)+'.</strong> '+it.q+'</div>';
+    it.o.forEach(function(o,j){h+='<button type="button" class="opt" data-i="'+i+'" data-j="'+j+'">'+String.fromCharCode(65+j)+'. '+o+'</button>';});
+    h+='<div class="fb" id="gfb'+i+'"></div>';
+    d.innerHTML=h; box.appendChild(d);
+  });
+  box.addEventListener("click",function(e){
+    var b=e.target.closest?e.target.closest(".opt"):e.target; if(!b||!b.classList.contains("opt"))return;
+    var i=+b.getAttribute("data-i"), j=+b.getAttribute("data-j"), st=gmcState[i], it=GMC[i];
+    if(st.done)return;
+    var ok=j===it.a; if(!st.answered){st.answered=true;st.firstRight=ok;}
+    var fb=document.getElementById("gfb"+i);
+    if(ok){st.done=true;b.classList.add("sel-right");document.getElementById("g"+i).className="box q right";fb.className="fb good";fb.innerHTML="✅ "+pick(PRAISE)+' <span class="explain">'+it.e+'</span>';}
+    else{b.classList.add("sel-wrong");document.getElementById("g"+i).className="box q wrong";fb.className="fb bad";fb.textContent="❌ Not quite, Ace. Look closely and try again.";}
+    updateScore();
+  });
+}
+
+var GFIX=[
+ {bad:"first, write the alphabet around the edge of both circle's.",
+  ok:["First, write the alphabet around the edge of both circles."],
+  hint:"Start the sentence with a capital letter. A plural word (more than one circle) does not need an apostrophe."},
+ {bad:"You will need a ruler a pencil and, two cardboard circles.",
+  ok:["You will need a ruler, a pencil, and two cardboard circles.","You will need a ruler, a pencil and two cardboard circles."],
+  hint:"Put commas between the items in the list. The comma goes before \"and,\" not after it."},
+ {bad:"Turn the wheel until it's A lines up with the D, then your ready.",
+  ok:["Turn the wheel until its A lines up with the D. Then you're ready.", "Turn the wheel until its A lines up with the D, and then you're ready.", "Turn the wheel until its A lines up with the D; then you're ready."],
+  hint:"\"It's\" means \"it is,\" but here you need the owner word \"its.\" \"Your\" should be \"you're\" (you are). And a comma plus \"then\" is a comma splice: use a period, or \", and then.\""},
+ {bad:"next, draw a circle 12 centimeters across in the center of the card.",
+  ok:["Next, draw a circle 12 centimetres across in the centre of the card."],
+  hint:"Capitalize the first word. Then fix two words to Canadian spelling."}
+];
+
+var gfixState=GFIX.map(function(){return{tries:0,correct:false,firstRight:false};});
+function norm(s){return s.replace(/[\u2018\u2019\u02BC]/g,"'").replace(/[\u201C\u201D]/g,'"').replace(/\s+/g," ").trim();}
+function checkFixAnswer(i,val){var v=norm(val);return GFIX[i].ok.some(function(a){return norm(a)===v;});}
+function buildGFix(){
+  var box=document.getElementById("gfix");
+  GFIX.forEach(function(it,i){
+    var d=document.createElement("div"); d.className="box q"; d.id="f"+i;
+    d.innerHTML='<div><strong>'+(i+1)+'.</strong> Fix: <span class="bad-sent">'+it.bad+'</span></div>'+
+     '<input class="fix" type="text" id="fi'+i+'" autocomplete="off" spellcheck="false" aria-label="Corrected sentence '+(i+1)+'">'+
+     '<div class="btnrow"><button type="button" class="go" data-act="check" data-i="'+i+'">Check</button><button type="button" class="hint" data-act="hint" data-i="'+i+'">Hint 💡</button><button type="button" class="grey" data-act="show" data-i="'+i+'" style="display:none">Show answer</button></div>'+
+     '<div class="fb" id="ffb'+i+'"></div>';
+    box.appendChild(d);
+  });
+  box.addEventListener("click",function(e){
+    var b=e.target; if(b.tagName!=="BUTTON")return;
+    var i=+b.getAttribute("data-i"), act=b.getAttribute("data-act"), fb=document.getElementById("ffb"+i);
+    if(act==="hint"){fb.className="fb";fb.style.color="#5d4037";fb.textContent="💡 "+GFIX[i].hint;return;}
+    fb.style.color="";
+    if(act==="show"){fb.className="fb";fb.innerHTML='Answer: <em>'+GFIX[i].ok[0]+'</em>'+(GFIX[i].ok.length>1?' (other correct versions are accepted too)':'');return;}
+    fixCheck(i);
+  });
+  box.addEventListener("keydown",function(e){if(e.key==="Enter"&&e.target.classList.contains("fix"))fixCheck(+e.target.id.slice(2));});
+}
+function fixCheck(i){
+  var val=document.getElementById("fi"+i).value, fb=document.getElementById("ffb"+i), st=gfixState[i];
+  fb.style.color="";
+  if(!val.trim()){fb.className="fb bad";fb.textContent="Type the corrected sentence first, Ace!";return;}
+  st.tries++;
+  if(checkFixAnswer(i,val)){ if(st.tries===1)st.firstRight=true; st.correct=true; document.getElementById("f"+i).className="box q right"; fb.className="fb good"; fb.textContent="✅ "+pick(PRAISE); }
+  else { st.correct=false; document.getElementById("f"+i).className="box q wrong"; fb.className="fb bad"; fb.textContent="❌ Not quite. Check every capital letter, apostrophe, comma, and spelling. Try again!"; if(st.tries>=2)document.querySelector('#f'+i+' [data-act=show]').style.display="inline-block"; }
+  updateScore();
+}
+
+function updateScore(){
+  var g=0; gmcState.forEach(function(s){if(s.firstRight)g++;});
+  var f=0; gfixState.forEach(function(s){if(s.correct)f++;});
+  var total=LABEL_ITEMS.length+GMC.length+GFIX.length, got=labelScore+g+f;
+  document.getElementById("scoreText").textContent="Score: "+got+" / "+total+"  (labels "+(labelChecked?labelScore:"-")+"/"+LABEL_ITEMS.length+" · grammar A "+g+"/"+GMC.length+" · grammar B "+f+"/"+GFIX.length+")";
+}
+
+var W5=["goal","materials","steps","tips","check","example"];
+function w5Save(){try{localStorage.setItem(KEY+"-5w",JSON.stringify(W5.map(function(k){return document.getElementById("w5"+k).value;})));}catch(e){}}
+function w5Restore(){try{var d=JSON.parse(localStorage.getItem(KEY+"-5w")||"null");if(d)d.forEach(function(x,i){document.getElementById("w5"+W5[i]).value=x;});}catch(e){}}
+function w5Summary(){return W5.map(function(k){return k.charAt(0).toUpperCase()+k.slice(1)+": "+document.getElementById("w5"+k).value;}).join("\n");}
+function addTemplate(){
+  var t=document.getElementById("essay");
+  var tpl="Title: How to \n\nIntroduction: \n\nMaterials: You will need these materials: \n\nSteps:\n1. \n2. \n3. \n4. \n5. \n6. \n\nTips and warnings: \n\nExample: \n\nConclusion (how to check it worked): ";
+  if(t.value.trim()&&!confirm("Add the headings below what you've already written?"))return;
+  t.value=(t.value.trim()?t.value.replace(/\s+$/,"")+"\n\n":"")+tpl; updateCount(); t.focus();
+}
+var KEY="ace-writing-2026-10-09";
+function countWords(t){var m=t.trim().match(/[A-Za-zÀ-ÿ0-9]+(?:['’\-][A-Za-zÀ-ÿ0-9]+)*/g);return m?m.length:0;}
+function countSentences(t){var m=t.match(/[^.!?]*[A-Za-z0-9][^.!?]*[.!?]+/g);return m?m.length:0;}
+function currentPrompt(){var r=document.querySelector('input[name=prompt]:checked');return r?r.value:"";}
+function updateCount(){
+  var t=document.getElementById("essay").value, w=countWords(t), s=countSentences(t);
+  document.getElementById("wc").textContent=w+(w===1?" word":" words");
+  document.getElementById("sc").textContent=s+(s===1?" sentence":" sentences");
+  var bar=document.getElementById("meterBar"); bar.style.width=Math.min(100,w/300*100)+"%";
+  var msg=document.getElementById("wcMsg");
+  if(w<200){bar.style.background="#ffb300";msg.className="fb";msg.textContent=w===0?"Aim for 200 to 300 words.":"Keep going, Ace! "+(200-w)+" more words to reach the goal.";}
+  else if(w<=300){bar.style.background="#43a047";msg.className="fb good";msg.textContent="🎯 You're in the target zone! Nice work, Ace!";}
+  else{bar.style.background="#1e88e5";msg.className="fb";msg.textContent="Wow, that's a lot of writing! Good instructions are short and clear. Could any steps be shorter?";}
+  try{localStorage.setItem(KEY,JSON.stringify({text:t,prompt:currentPrompt(),checks:checkStates()}));}catch(e){document.getElementById("saveNote").textContent="(This browser can't auto-save here, so use the Download button before closing!)";}
+}
+function checkStates(){return Array.prototype.map.call(document.querySelectorAll("#checklist input"),function(c){return c.checked;});}
+function checklistText(){
+  return Array.prototype.map.call(document.querySelectorAll("#checklist label"),function(l){return (l.querySelector("input").checked?"[x] ":"[ ] ")+l.textContent.trim();}).join("\n");
+}
+function buildReport(){
+  var t=document.getElementById("essay").value;
+  return "Writing Week 12: "+NAME+"\nDate: "+new Date().toLocaleString("en-CA")+"\nPrompt: "+currentPrompt()+
+    "\nWords: "+countWords(t)+"   Sentences: "+countSentences(t)+"\nPlanning notes:\n"+w5Summary()+
+    "\n\n----- "+NAME+"'s writing -----\n\n"+t+"\n\n----- Self-check -----\n"+checklistText()+
+    "\n\n----- Parent feedback -----\n\n\n";
+}
+function download(){
+  var t=document.getElementById("essay").value;
+  if(!t.trim()){document.getElementById("doneMsg").className="fb bad";document.getElementById("doneMsg").textContent="Write something first, Ace!";return;}
+  var blob=new Blob([buildReport().replace(/\n/g,"\r\n")],{type:"text/plain;charset=utf-8"});
+  var a=document.createElement("a"); a.href=URL.createObjectURL(blob); a.download=NAME+"-writing-2026-10-09"+".txt";
+  document.body.appendChild(a); a.click();
+  setTimeout(function(){URL.revokeObjectURL(a.href);a.remove();},1000);
+  var dm=document.getElementById("doneMsg"); dm.className="fb good"; dm.textContent="📄 Saved! Look in your Downloads folder and show Dad. Great job finishing, Ace!";
+}
+function esc(s){return s.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");}
+function printIt(){
+  var t=document.getElementById("essay").value;
+  if(!t.trim()){document.getElementById("doneMsg").className="fb bad";document.getElementById("doneMsg").textContent="Write something first, Ace!";return;}
+  document.getElementById("printArea").innerHTML="<h1>Writing Week 12: "+NAME+"</h1><div class='meta'>"+esc(new Date().toLocaleString("en-CA"))+"<br><strong>Prompt:</strong> "+esc(currentPrompt())+"<br>Words: "+countWords(t)+" · Sentences: "+countSentences(t)+"</div><div class='text'>"+esc(t)+"</div><div class='lines'><strong>Self-check:</strong><br>"+esc(checklistText()).replace(/\n/g,"<br>")+"</div><div class='lines'><strong>Parent feedback:</strong><br><br><br><br></div>";
+  window.print();
+}
+function restore(){
+  try{var d=JSON.parse(localStorage.getItem(KEY)||"null"); if(!d)return;
+    document.getElementById("essay").value=d.text||"";
+    Array.prototype.forEach.call(document.querySelectorAll("input[name=prompt]"),function(r){r.checked=(r.value===d.prompt);});
+    if(!document.querySelector("input[name=prompt]:checked"))document.querySelector("input[name=prompt]").checked=true;
+    var cs=document.querySelectorAll("#checklist input"); (d.checks||[]).forEach(function(v,i){if(cs[i])cs[i].checked=v;});
+  }catch(e){}
+}
+buildLabels(); buildGMC(); buildGFix(); restore(); w5Restore(); updateCount(); updateScore();
+W5.forEach(function(k){document.getElementById("w5"+k).addEventListener("input",w5Save);});
+document.getElementById("templateBtn").addEventListener("click",addTemplate);
+document.getElementById("checkLabels").addEventListener("click",checkLabels);
+document.getElementById("essay").addEventListener("input",updateCount);
+document.getElementById("checklist").addEventListener("change",function(){updateCount(); if(checkStates().every(Boolean)){var dm=document.getElementById("doneMsg");dm.className="fb good";dm.textContent="✅ All boxes checked! Now download or print it for Dad. Awesome work, Ace!";}});
+document.getElementById("prompts").addEventListener("change",updateCount);
+document.getElementById("downloadBtn").addEventListener("click",download);
+document.getElementById("printBtn").addEventListener("click",printIt);
+document.getElementById("clearBtn").addEventListener("click",function(){ if(confirm("Erase your writing and start over?")){document.getElementById("essay").value="";Array.prototype.forEach.call(document.querySelectorAll("#checklist input"),function(c){c.checked=false;});document.getElementById("doneMsg").textContent="";updateCount();} });
+</script>
+</body>
+</html>

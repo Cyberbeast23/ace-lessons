@@ -6,7 +6,7 @@ TTS voice (Cantonese): zh-HK-HiuMaanNeural
 TTS voice (English in ALL-words.mp3): en-HK-YanNeural
 Rate: slowed (~-20%) for clear listening practice.
 
-Sources: Ace lessons 2026-09-29 (Greetings) + 2026-09-30 (Family Members) + 2026-10-01 (Food) + 2026-10-02 (School) + 2026-10-03 (Body) + 2026-10-04 (Colours) + 2026-10-05 (Sky & Space) + 2026-10-06 (Numbers 11-100) + 2026-10-07 (At the Doctor) + 2026-10-08 (Nature: Mountains & Volcanoes).
+Sources: Ace lessons 2026-09-29 (Greetings) + 2026-09-30 (Family Members) + 2026-10-01 (Food) + 2026-10-02 (School) + 2026-10-03 (Body) + 2026-10-04 (Colours) + 2026-10-05 (Sky & Space) + 2026-10-06 (Numbers 11-100) + 2026-10-07 (At the Doctor) + 2026-10-08 (Nature: Mountains & Volcanoes) + 2026-10-09 (Question Words & Secrets).
 Numbers 1-10 are already known and not included here.
 
 How to practise:
@@ -421,6 +421,47 @@ Individual files
   Chinese:  好熱
   Jyutping: hou2 jit6
   English:  very hot
+
+
+81-bin1-go3-who.mp3
+  Chinese:  邊個
+  Jyutping: bin1 go3
+  English:  who
+
+82-mat1-je5-what.mp3
+  Chinese:  乜嘢
+  Jyutping: mat1 je5
+  English:  what
+
+83-bin1-dou6-where.mp3
+  Chinese:  邊度
+  Jyutping: bin1 dou6
+  English:  where
+
+84-gei2-si4-when.mp3
+  Chinese:  幾時
+  Jyutping: gei2 si4
+  English:  when
+
+85-dim2-gaai2-why.mp3
+  Chinese:  點解
+  Jyutping: dim2 gaai2
+  English:  why
+
+86-dim2-joeng2-how.mp3
+  Chinese:  點樣
+  Jyutping: dim2 joeng2
+  English:  how
+
+87-bei3-mat6-secret.mp3
+  Chinese:  秘密
+  Jyutping: bei3 mat6
+  English:  secret
+
+88-gu2-haa5-guess.mp3
+  Chinese:  估吓
+  Jyutping: gu2 haa5
+  English:  take a guess
 
 
 Combined file

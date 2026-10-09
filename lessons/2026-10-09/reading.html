@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reading (Oct. 9): The Secret War Between Codemakers and Codebreakers</title>
+<style>
+  body{font-family:"Segoe UI",Verdana,Arial,sans-serif;font-size:20px;line-height:1.65;margin:0;background:#f5f0eb;color:#2c2416}
+  .wrap{max-width:880px;margin:0 auto;padding:20px 18px 80px}
+  a.home{font-size:.9em;color:#bf360c}
+  h1{color:#e65100;font-size:2em;margin:10px 0}
+  h2{color:#ef6c00;margin-top:36px;border-bottom:3px solid #ffcc80;padding-bottom:4px}
+  .box{background:#fff;border-radius:16px;padding:18px 22px;margin:16px 0;box-shadow:0 3px 10px rgba(0,0,0,.07)}
+  .passage{font-family:Georgia,"Times New Roman",serif;font-size:1.1em;line-height:1.8}
+  .passage h3{text-align:center;font-family:"Segoe UI",Verdana,sans-serif;color:#e65100;font-size:1.4em;margin:4px 0 14px}
+  .passage p{text-indent:1.5em;margin:0 0 14px}
+  mark.v{background:#fff59d;padding:0 3px;border-radius:4px;font-weight:bold}
+  .tipbox{background:#fff8e1;border-left:8px solid #ffb300}
+  .q{border-left:8px solid #ffcc80}
+  .q.right{border-left-color:#43a047;background:#f1f8e9}
+  .q.wrong{border-left-color:#e53935;background:#fff5f5}
+  .tag{display:inline-block;font-size:.7em;background:#ef6c00;color:#fff;border-radius:8px;padding:1px 8px;margin-left:6px;vertical-align:middle}
+  .opt{display:block;width:100%;text-align:left;font-size:.95em;background:#fafafa;border:2px solid #e0e0e0;border-radius:10px;padding:8px 14px;margin:8px 0;cursor:pointer;font-family:inherit}
+  .opt:hover{border-color:#ffb74d;background:#fff}
+  .opt.sel-right{background:#c8e6c9;border-color:#43a047}
+  .opt.sel-wrong{background:#ffcdd2;border-color:#e53935}
+  .fb{margin-top:6px;font-weight:bold}
+  .fb.good{color:#2e7d32} .fb.bad{color:#c62828}
+  .explain{color:#e65100;font-weight:normal}
+  select{font-size:.95em;padding:6px 8px;border-radius:8px;border:2px solid #ffb74d;max-width:100%;font-family:inherit}
+  .vrow{display:flex;flex-wrap:wrap;align-items:center;gap:10px;padding:8px 6px;border-bottom:1px dashed #eee}
+  .vrow .w{font-weight:bold;min-width:140px}
+  .vrow.right{background:#f1f8e9} .vrow.wrong{background:#fff5f5}
+  .mark{font-size:1.2em;min-width:30px}
+  button.main{font-size:1em;padding:10px 20px;border:none;border-radius:10px;cursor:pointer;font-weight:bold;background:#ef6c00;color:#fff;margin-top:10px}
+  button.main:hover{background:#e65100}
+  button.sec{font-size:.95em;padding:8px 16px;border:none;border-radius:10px;cursor:pointer;font-weight:bold;background:#ffe082;color:#5d4037}
+  textarea{width:100%;box-sizing:border-box;font-size:1em;font-family:inherit;padding:10px;border:2px solid #ffb74d;border-radius:10px;min-height:120px}
+  #model{display:none;background:#fff3e0;border-radius:10px;padding:10px 14px;margin-top:10px}
+  #scoreBox{position:sticky;bottom:0;background:#e65100;color:#fff;border-radius:16px 16px 0 0;padding:12px 20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-top:30px}
+  #scoreBox button{font-size:.95em;padding:8px 16px;border:none;border-radius:10px;cursor:pointer;font-weight:bold;background:#ffca28;color:#3e2723}
+  #final{display:none;text-align:center;border:4px solid #43a047;font-size:1.1em}
+</style>
+</head>
+<body>
+<div class="wrap">
+<a class="home" href="../../index.html">&larr; Back to all lessons</a>
+<h1>📖 Reading Week 12: The Secret War Between Codemakers and Codebreakers</h1>
+
+<div class="box tipbox">
+  <strong>Before you read, Ace:</strong> Today's passage is an informational text that moves through history, from ancient Rome to your own computer. Good readers track the <em>sequence</em> of events, notice how each new invention is a <em>response</em> to the one before it, and think about <em>why</em> the author chose each example.
+  <ul>
+    <li><strong>Preview:</strong> Read the title. Why might the author call codemaking and codebreaking a "war"?</li>
+    <li><strong>Pause:</strong> After each paragraph, say its main idea in one sentence. Watch for time clue words (<em>more than 2000 years ago, in the 800s, in 1586, during the Second World War, today</em>).</li>
+    <li><strong>Root detective:</strong> Code words are built from Greek and Latin parts:
+      <span style="display:block;margin-top:6px"><strong>crypt-</strong> = hidden (Greek <em>kryptos</em>) · <strong>-graph / -graphy</strong> = writing · <strong>en-</strong> = put into · <strong>de-</strong> = undo, reverse · <strong>con-</strong> = with, together · <strong>fid-</strong> = trust (Latin <em>fides</em>) · <strong>inter-</strong> = between · <strong>cipher</strong> = from the Arabic <em>ṣifr</em>, "zero" or "empty"</span></li>
+    <li><strong>Words in <mark class="v">yellow</mark></strong> are vocabulary words. Use the sentence around them (the <em>context</em>) to figure out what they mean.</li>
+  </ul>
+</div>
+
+<div class="box passage" id="passage">
+<h3>The Secret War Between Codemakers and Codebreakers</h3>
+<p>For as long as people have had secrets, other people have wanted to read them. Generals, kings, spies, and even schoolchildren passing notes have all faced the same problem: how do you send a message that only the right person can understand? The answer is cryptography, the art of hidden writing. But every time someone invents a clever new code, someone else works just as hard to break it. This contest between codemakers and codebreakers has shaped history for more than 2000 years.</p>
+<p>One of the earliest famous codes belonged to Julius Caesar. According to the Roman writer Suetonius, Caesar protected his private letters by replacing each letter with the one three places further along in the alphabet, so A became D and B became E. To anyone who did not know the trick, the message looked like nonsense. For a while, that was enough. Many of Caesar's enemies could not read at all, and the idea of a secret alphabet was new. The Caesar cipher had a fatal weakness, however: there are only 25 possible shifts, so a patient enemy could simply try them all.</p>
+<p>Stronger codes used a scrambled alphabet, in which any letter could stand for any other. There are so many possible scrambled alphabets that no one could ever test them one by one. For centuries, these codes seemed unbreakable. Then, in the 800s, a scholar named Al-Kindi, working in Baghdad, described an <mark class="v">ingenious</mark> shortcut. He noticed that in any language, some letters appear far more often than others. In English, for example, about one letter in eight is an E. A codebreaker who counts the letters in a secret message can guess that the most common symbol probably stands for the most common letter, then fill in the rest like a crossword puzzle. This method, called frequency analysis, meant that any code that simply swapped one letter for another was now <mark class="v">vulnerable</mark>.</p>
+<p>Codebreaking could even decide the fate of a queen. In 1586, Mary, Queen of Scots, was being held prisoner in England. Her supporters wrote to her in a secret cipher, hidden inside the stoppers of beer barrels, about a plot to free her and take the English throne. What Mary did not know was that her letters were being secretly <mark class="v">intercepted</mark>. A skilled codebreaker named Thomas Phelippes used frequency analysis to read them. The letters became evidence against her, and Mary was executed in 1587. Her trust in a weak code cost her everything.</p>
+<p>The most famous battle between codemakers and codebreakers happened during the Second World War. The German military used a typewriter-like machine called Enigma, which changed its secret alphabet after every single letter. With its rotors and plugs, it could be set up in more ways than there are grains of sand on all the world's beaches. Yet mathematicians in Poland, led by Marian Rejewski, worked out how Enigma was wired years before the war began, and they shared their discoveries with Britain and France in 1939. At Bletchley Park in England, thousands of people, including the mathematician Alan Turing, built on that work in a <mark class="v">systematic</mark> way, designing machines that could test thousands of settings each day. Canada had its own codebreaking team in Ottawa, too. Some codes were never broken at all. Navajo Code Talkers in the United States Marine Corps, and Cree speakers from Canada such as Charles Tomkins, sent messages in their own languages, which the enemy had no way of learning. Historians believe that breaking enemy codes shortened the war and saved many lives.</p>
+<p>Today, the war goes on inside your computer. Every time someone types a password or buys something online, their information is encrypted using prime numbers so large that the fastest computers would need thousands of years to factor them. Codemakers are already preparing for powerful new quantum computers that might one day crack today's codes. The tools have changed from Caesar's letters to computer chips, but the lesson has not: a code is only as strong as its weakest point, and it is <mark class="v">crucial</mark> never to assume that a secret will stay hidden forever. Sometimes the weakest point is not the maths at all, but a person who <mark class="v">conceals</mark> a password under the keyboard.</p>
+<p style="text-indent:0;font-size:.8em;color:#546e7a;text-align:right">About 700 words</p>
+</div>
+
+<h2>Part 1: Comprehension</h2>
+<p>Click the best answer. You'll find out right away if you're correct. Only your <strong>first click</strong> counts toward your score, but you can keep trying to find the right answer.</p>
+<div id="mc"></div>
+
+<h2>Part 2: Think Deeper (not scored)</h2>
+<div class="box">
+  <p><strong>The author says "a code is only as strong as its weakest point." In 3 to 5 sentences, explain what this means. Use <em>two</em> examples from the passage where a code (or the people using it) had a weak point that codebreakers found. Then explain one thing you would do to keep your own passwords safe.</strong></p>
+  <textarea id="openAns" placeholder="Write your answer here, Ace..."></textarea>
+  <p><button type="button" class="sec" id="showModel">Compare with a model answer</button></p>
+  <div id="model"><strong>Model answer:</strong> It means that even a very complicated code can fail if just one part of it is easy to attack. Caesar's cipher had only 25 possible shifts, so an enemy could try every one. Mary, Queen of Scots, trusted a cipher that only swapped letters, so Thomas Phelippes could crack it with frequency analysis and use her own letters against her. Even today, a strong computer code is useless if someone hides their password under the keyboard. To keep my passwords safe, I would make them long, never share them, and never write them where others can find them.<br><em>Did you explain the quotation in your own words, give two clear examples from the passage, and add your own idea about password safety? If so, excellent work!</em></div>
+</div>
+
+<h2>Part 3: Vocabulary</h2>
+<div class="box">
+  <h3 style="margin-top:0">A. Match each word to its meaning</h3>
+  <p>Choose the meaning that fits how the word is used in the passage.</p>
+  <div id="vmatch"></div>
+  <h3>B. Fill in the blank</h3>
+  <p>Choose the vocabulary word that best completes each sentence.</p>
+  <div id="vfill"></div>
+  <button type="button" class="main" id="checkVocab">Check my vocabulary</button>
+  <div class="fb" id="vocabFb"></div>
+</div>
+
+<div class="box" id="final"></div>
+<div id="scoreBox">
+  <span id="scoreText"></span>
+  <button type="button" id="finishBtn">I'm done! Show my final score</button>
+</div>
+</div>
+
+<script>
+var MC = [
+ {q:"Which sentence best states the <strong>main idea</strong> of the whole passage?",
+  o:["Julius Caesar used a shift of three to protect his letters.",
+     "Throughout history, every new code has been met by clever codebreakers, so the contest between hiding and revealing secrets has never ended.",
+     "Enigma was a German machine used in the Second World War.",
+     "Frequency analysis is the only way to break a code."],
+  a:1, e:"A and C are single details, and D is not true (Navajo and Cree codes, for example, were never broken that way). B sums up the pattern that connects every paragraph."},
+ {q:"How is the passage mainly organized?", tag:"Text structure",
+  o:["As a comparison of two machines","As a list of steps for making a code","As a story told by one spy","In chronological (time) order, from ancient Rome to today"],
+  a:3, e:"The examples move through time: Caesar, the 800s, 1586, the Second World War, and today."},
+ {q:"According to the passage, why was the Caesar cipher eventually easy to break?",
+  o:["Because there are only 25 possible shifts, so an enemy could try them all","Because it used numbers instead of letters","Because Caesar told everyone his secret","Because it was hidden in beer barrels"],
+  a:0, e:"The passage calls this its \"fatal weakness\": with only 25 shifts, a patient enemy could test every one."},
+ {q:"What did Al-Kindi notice that made frequency analysis possible?", tag:"Cause and effect",
+  o:["That codes are always written in Arabic","That messages can be hidden in barrels","That some letters appear far more often than others in any language","That Caesar always used a shift of three"],
+  a:2, e:"Because some letters (like E in English) are much more common, a codebreaker can match the most common symbols to the most common letters."},
+ {q:"Why does the author include the story of Mary, Queen of Scots?", tag:"Author's purpose",
+  o:["To show that a weak code can have serious real-life consequences","To explain how Enigma worked","To prove that queens were good codebreakers","To describe life in a Scottish castle"],
+  a:0, e:"Mary trusted a code that could be broken by frequency analysis, and it cost her life: the author uses her story to show the stakes."},
+ {q:"What is the main reason the Polish mathematicians were important to breaking Enigma?", tag:"Inference",
+  o:["They built the Enigma machine for Germany.","They invented the Caesar cipher.","They were the Navajo Code Talkers.","They worked out how Enigma was wired before the war and shared their discoveries, giving Bletchley Park a head start."],
+  a:3, e:"The passage says the British codebreakers \"built on that work.\" Without the Polish discoveries, the job would have been much harder."},
+ {q:"Why could the enemy not break the codes sent by Navajo and Cree speakers?",
+  o:["Because the messages were sent by Enigma","Because they used a Caesar shift of 25","Because the messages were in languages the enemy had no way of learning","Because the messages were never sent"],
+  a:2, e:"The messages were spoken in their own languages, which the enemy had no way to learn, so frequency tricks and machines could not help."},
+ {q:"The root <em>crypt-</em> means \"hidden\" and <em>-graphy</em> means \"writing.\" What does <em>cryptography</em> mean?", tag:"Word roots",
+  o:["The study of old tombs","The art of hidden writing, or making codes","A kind of handwriting","Drawing maps"],
+  a:1, e:"The passage itself defines cryptography as \"the art of hidden writing.\""},
+ {q:"The word <em>confidential</em> contains <em>con-</em> (\"with\") and <em>fid-</em> (\"trust\"). A confidential message is one that is...", tag:"Word roots",
+  o:["trusted only to certain people and kept private","shared with everyone on the internet","written in a different language","very old and faded"],
+  a:0, e:"Confidential information is shared \"with trust,\" only with people who are allowed to see it."},
+ {q:"What does the last sentence suggest about keeping secrets safe today?", tag:"Inference",
+  o:["Only mathematicians can protect a password.","Computers can never be hacked.","People's habits can be a code's biggest weakness, even when the maths is strong.","Keyboards are the safest place to keep a password."],
+  a:2, e:"A password hidden under the keyboard shows that human mistakes can undo even the strongest maths."}
+];
+
+var VOCAB = ["ingenious","vulnerable","intercepted","systematic","crucial","conceals"];
+var DEFS = {
+ ingenious:"very clever, original, and inventive",
+ vulnerable:"open to being attacked, harmed, or broken",
+ intercepted:"stopped or caught on the way, before reaching where it was going",
+ systematic:"done step by step, following a careful plan or method",
+ crucial:"extremely important; necessary for success",
+ conceals:"hides something or keeps it from being seen or known"
+};
+var FILL = [
+ {s:"The goalie ____ the pass before it could reach the other team's striker.", a:"intercepted"},
+ {s:"Ace's ____ invention used a shoebox and a mirror to see around corners.", a:"ingenious"},
+ {s:"A turtle's soft belly is ____, so it pulls into its shell when danger comes.", a:"vulnerable"},
+ {s:"Wearing a helmet is ____ when you ride a bike, because it protects your brain.", a:"crucial"}
+];
+var FILL_OPTIONS = ["intercepted","ingenious","vulnerable","crucial","systematic","conceals"];
+
+var PRAISE=["Nice work, Ace!","Correct! Sharp reading, Ace!","Yes! You followed the evidence!","Excellent thinking, Dr. Ace!","Right! A real codebreaker! 🔐"];
+function pick(a){return a[Math.floor(Math.random()*a.length)];}
+function shuffled(arr,seed){var a=arr.slice(),s=seed;for(var i=a.length-1;i>0;i--){s=(s*9301+49297)%233280;var j=Math.floor(s/233280*(i+1));var t=a[i];a[i]=a[j];a[j]=t;}return a;}
+
+var mcState=MC.map(function(){return {answered:false,firstRight:false,done:false};});
+var vocabScore=0, vocabChecked=false;
+var VOCAB_TOTAL=VOCAB.length+FILL.length;
+
+function buildMC(){
+  var box=document.getElementById("mc");
+  MC.forEach(function(item,i){
+    var d=document.createElement("div"); d.className="box q"; d.id="mc"+i;
+    var html="<div><strong>"+(i+1)+".</strong> "+item.q+(item.tag?'<span class="tag">'+item.tag+'</span>':"")+"</div>";
+    item.o.forEach(function(opt,j){ html+='<button type="button" class="opt" data-i="'+i+'" data-j="'+j+'">'+String.fromCharCode(65+j)+". "+opt+"</button>"; });
+    html+='<div class="fb" id="mcfb'+i+'"></div>';
+    d.innerHTML=html; box.appendChild(d);
+  });
+  box.addEventListener("click",function(e){
+    var b=e.target.closest?e.target.closest(".opt"):e.target; if(!b||!b.classList.contains("opt"))return;
+    answerMC(+b.getAttribute("data-i"),+b.getAttribute("data-j"),b);
+  });
+}
+function answerMC(i,j,btn){
+  var st=mcState[i], item=MC[i], fb=document.getElementById("mcfb"+i), card=document.getElementById("mc"+i);
+  if(st.done) return;
+  var right=(j===item.a);
+  if(!st.answered){ st.answered=true; st.firstRight=right; }
+  if(right){
+    st.done=true; btn.classList.add("sel-right"); card.className="box q right";
+    fb.className="fb good"; fb.innerHTML="✅ "+pick(PRAISE)+' <span class="explain">'+item.e+"</span>";
+  } else {
+    btn.classList.add("sel-wrong"); card.className="box q wrong";
+    fb.className="fb bad"; fb.innerHTML="❌ Not quite, Ace. Look back at the passage and try another answer.";
+  }
+  updateScore();
+}
+function buildVocab(){
+  var m=document.getElementById("vmatch");
+  var defOrder=shuffled(VOCAB,44);
+  VOCAB.forEach(function(w,i){
+    var row=document.createElement("div"); row.className="vrow"; row.id="vm"+i;
+    var sel='<select id="vsel'+i+'" aria-label="Meaning of '+w+'"><option value="">- choose a meaning -</option>';
+    defOrder.forEach(function(k){ sel+='<option value="'+k+'">'+DEFS[k]+'</option>'; });
+    sel+="</select>";
+    row.innerHTML='<span class="mark" id="vmk'+i+'"></span><span class="w">'+w+'</span>'+sel;
+    m.appendChild(row);
+  });
+  var f=document.getElementById("vfill");
+  FILL.forEach(function(item,i){
+    var row=document.createElement("div"); row.className="vrow"; row.id="vf"+i;
+    var sel='<select id="fsel'+i+'" aria-label="Blank '+(i+1)+'"><option value="">- choose -</option>';
+    FILL_OPTIONS.forEach(function(w){ sel+='<option value="'+w+'">'+w+'</option>'; });
+    sel+="</select>";
+    var parts=item.s.split("____");
+    row.innerHTML='<span class="mark" id="vfk'+i+'"></span><span>'+(i+1)+'. '+parts[0]+sel+parts[1]+'</span>';
+    f.appendChild(row);
+  });
+}
+function checkVocab(){
+  var score=0, blank=0;
+  VOCAB.forEach(function(w,i){
+    var v=document.getElementById("vsel"+i).value, ok=(v===w);
+    if(!v) blank++;
+    if(ok) score++;
+    document.getElementById("vm"+i).className="vrow "+(ok?"right":"wrong");
+    document.getElementById("vmk"+i).textContent=ok?"✅":"❌";
+  });
+  FILL.forEach(function(item,i){
+    var v=document.getElementById("fsel"+i).value, ok=(v===item.a);
+    if(!v) blank++;
+    if(ok) score++;
+    document.getElementById("vf"+i).className="vrow "+(ok?"right":"wrong");
+    document.getElementById("vfk"+i).textContent=ok?"✅":"❌";
+  });
+  vocabScore=score; vocabChecked=true;
+  var fb=document.getElementById("vocabFb");
+  if(score===VOCAB_TOTAL){ fb.className="fb good"; fb.textContent="🌟 "+score+" / "+VOCAB_TOTAL+". Perfect! You cracked every vocabulary code, Ace!"; }
+  else { fb.className="fb bad"; fb.textContent=score+" / "+VOCAB_TOTAL+" correct"+(blank?" ("+blank+" left blank)":"")+". Fix the ❌ ones and check again. Try finding the word in the passage for clues!"; }
+  updateScore();
+}
+function scores(){
+  var mc=0,answered=0; mcState.forEach(function(s){ if(s.firstRight) mc++; if(s.answered) answered++; });
+  return {mc:mc,answered:answered,vocab:vocabScore};
+}
+function updateScore(){
+  var s=scores();
+  document.getElementById("scoreText").textContent="Comprehension: "+s.mc+" / "+MC.length+" · Vocabulary: "+(vocabChecked?s.vocab:"-")+" / "+VOCAB_TOTAL;
+}
+function finish(){
+  if(!vocabChecked) checkVocab();
+  var s=scores(), total=MC.length+VOCAB_TOTAL, got=s.mc+s.vocab, pct=Math.round(100*got/total);
+  var msg = pct===100 ? "🏆 A perfect score! Outstanding reading, Ace!" :
+            pct>=80 ? "🌟 Fantastic work, Ace! You read like a Grade 7 student!" :
+            pct>=60 ? "💪 Solid effort, Ace! Reread the paragraphs for the questions you missed." :
+                      "🌱 This was a challenging passage. Read it once more, slowly, and try again. You've got this, Ace!";
+  var f=document.getElementById("final"); f.style.display="block";
+  f.innerHTML="<h2 style='border:none;margin-top:0'>Final Score: "+got+" / "+total+" ("+pct+"%)</h2>"+
+    "<p>Comprehension (first tries): "+s.mc+" / "+MC.length+(s.answered<MC.length?" (you skipped "+(MC.length-s.answered)+")":"")+"<br>Vocabulary: "+s.vocab+" / "+VOCAB_TOTAL+"</p><p>"+msg+"</p>"+
+    "<p style='font-size:.85em;color:#546e7a'>Finished on "+new Date().toLocaleString("en-CA")+"</p>";
+  f.scrollIntoView({behavior:"smooth"});
+}
+buildMC(); buildVocab(); updateScore();
+document.getElementById("checkVocab").addEventListener("click",checkVocab);
+document.getElementById("finishBtn").addEventListener("click",finish);
+document.getElementById("showModel").addEventListener("click",function(){document.getElementById("model").style.display="block";});
+</script>
+</body>
+</html>

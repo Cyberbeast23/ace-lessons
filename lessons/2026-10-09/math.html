@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Math (Oct. 9): Codes &amp; Ciphers Math Lab</title>
+<style>
+  body{font-family:"Segoe UI",Verdana,Arial,sans-serif;font-size:20px;line-height:1.6;margin:0;background:#f5f0eb;color:#2c2416}
+  .wrap{max-width:880px;margin:0 auto;padding:20px 18px 80px}
+  a.home{font-size:.9em;color:#bf360c}
+  h1{color:#e65100;font-size:2em;margin:10px 0}
+  h2{color:#ef6c00;margin-top:36px;border-bottom:3px solid #ffcc80;padding-bottom:4px}
+  .box{background:#fff;border-radius:16px;padding:18px 22px;margin:16px 0;box-shadow:0 3px 10px rgba(0,0,0,.07)}
+  .example{border-left:8px solid #ef6c00}
+  .example h3{margin:0 0 6px;color:#e65100}
+  .step{margin:4px 0 4px 10px}
+  code,.mono{font-family:Consolas,"Courier New",monospace;background:#fff3e0;padding:1px 6px;border-radius:5px}
+  .q{border-left:8px solid #90a4ae}
+  .q.right{border-left-color:#43a047;background:#f1f8e9}
+  .q.wrong{border-left-color:#e53935;background:#fff5f5}
+  .qnum{font-weight:bold;color:#e65100}
+  .row{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:10px}
+  input[type=text]{font-size:1.05em;padding:8px 12px;border:2px solid #ffcc80;border-radius:10px;width:190px}
+  input[type=text]:focus{outline:none;border-color:#ef6c00;box-shadow:0 0 0 3px #ffe0b2}
+  button{font-size:.95em;padding:8px 16px;border:none;border-radius:10px;cursor:pointer;font-weight:bold}
+  .check{background:#ef6c00;color:#fff} .check:hover{background:#e65100}
+  .hint{background:#ffe082;color:#5d4037} .hint:hover{background:#ffd54f}
+  .sol{background:#ce93d8;color:#311b92}
+  .unit{color:#546e7a}
+  .fb{margin-top:8px;font-weight:bold;min-height:1em}
+  .fb.good{color:#2e7d32} .fb.bad{color:#c62828}
+  .hints{margin-top:8px;color:#e65100;background:#fff3e0;border-radius:10px;padding:0 12px}
+  .hints p{margin:6px 0;padding:6px 0}
+  .solution{margin-top:8px;background:#f3e5f5;border-radius:10px;padding:8px 12px;display:none}
+  #scoreBox{position:sticky;bottom:0;background:#e65100;color:#fff;border-radius:16px 16px 0 0;padding:12px 20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-top:30px}
+  #scoreBox button{background:#ffca28;color:#3e2723}
+  #final{display:none;font-size:1.15em;text-align:center;border:4px solid #43a047}
+  .tipbox{background:#fff8e1;border-left:8px solid #ffb300}
+</style>
+</head>
+<body>
+<div class="wrap">
+<a class="home" href="../../index.html">&larr; Back to all lessons</a>
+<h1>🔐 Math Week 12: Codes &amp; Ciphers Lab</h1>
+<p>Agent Ace, your mission today is to think like a <strong>cryptographer</strong> (someone who makes codes) and a <strong>codebreaker</strong> (someone who cracks them). Secret codes are built out of maths, from Julius Caesar's letter shifts to the prime numbers that protect every online bank account today. You'll level up with <strong>clock arithmetic and remainders, negative numbers on a wrap-around wheel, prime factorization, LCM and GCF, binary numbers and powers of 2, counting the number of possible passwords, arrangements, ratios and percents, a frequency bar graph, and equations with brackets</strong>.</p>
+
+<h2>Part 1: Learn the Moves</h2>
+
+<div class="box tipbox">
+  <strong>The 4-Step Problem Solver (your codebreaker's checklist):</strong>
+  <ol>
+    <li><strong>Read</strong>: What is the question actually asking? Underline the numbers and units.</li>
+    <li><strong>Plan</strong>: Which operations do I need, and in what order?</li>
+    <li><strong>Solve</strong>: Do one step at a time and write each step down.</li>
+    <li><strong>Check</strong>: Is my answer reasonable? Did I answer the question that was asked, in the right unit?</li>
+  </ol>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 1: Caesar shifts and clock arithmetic</h3>
+  <p>Number the letters <span class="mono">A = 0, B = 1, C = 2, … Z = 25</span>. A <strong>Caesar cipher</strong> adds the same <strong>shift</strong> to every letter.</p>
+  <p class="step">Shift 3: C (2) becomes 2 + 3 = 5, which is F.</p>
+  <p class="step">The alphabet wraps around like a clock. X (23) + 3 = 26, but there is no letter 26, so subtract 26: 26 − 26 = <strong>0, which is A</strong>. Mathematicians call this <strong>modular arithmetic</strong>: you keep only the <strong>remainder</strong> after dividing by 26.</p>
+  <p class="step">To <strong>decode</strong>, subtract the shift. If the answer is negative, add 26: coded B (1) with shift 3 is 1 − 3 = −2, and −2 + 26 = <strong>24, which is Y</strong>.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 2: Primes and prime factorization</h3>
+  <p class="step">A <strong>prime number</strong> has exactly two factors: 1 and itself (2, 3, 5, 7, 11, 13, 17, 19, 23, …).</p>
+  <p class="step">Every whole number greater than 1 can be broken into primes. Use a factor tree: 84 = 2 × 42 = 2 × 2 × 21 = <strong>2 × 2 × 3 × 7</strong>. Multiplying primes is easy, but going backwards with huge numbers is so hard that computers use it to protect secrets!</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 3: LCM and GCF</h3>
+  <p class="step"><strong>LCM</strong> (lowest common multiple): two code wheels turn once every 4 s and every 6 s. Multiples of 4: 4, 8, <strong>12</strong>… Multiples of 6: 6, <strong>12</strong>… They line up again after <strong>12 s</strong>.</p>
+  <p class="step"><strong>GCF</strong> (greatest common factor): to split 24 red cards and 36 blue cards into identical packs, find the biggest number that divides both: <strong>12 packs</strong> (each with 2 red and 3 blue).</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 4: Binary numbers and powers of 2</h3>
+  <p class="step">Computers store every message using only <strong>0</strong> and <strong>1</strong>. In <strong>binary</strong>, the place values are powers of 2: <span class="mono">… 32, 16, 8, 4, 2, 1</span>.</p>
+  <p class="step">1011 in binary = 1 × 8 + 0 × 4 + 1 × 2 + 1 × 1 = <strong>11</strong>. To go the other way, take away the biggest power of 2 you can: 13 = 8 + 4 + 1 = <strong>1101</strong>.</p>
+  <p class="step">With 3 binary digits (bits) you can make 2 × 2 × 2 = 2<sup>3</sup> = <strong>8</strong> different patterns.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 5: Counting passwords, arrangements, and equations</h3>
+  <p class="step"><strong>Counting principle:</strong> multiply the number of choices for each spot. A 3-digit lock (0–9 on each dial) has 10 × 10 × 10 = <strong>1000</strong> combinations.</p>
+  <p class="step"><strong>Arrangements:</strong> the letters of SPY can be ordered in 3 × 2 × 1 = <strong>6</strong> ways (SPY, SYP, PSY, PYS, YSP, YPS).</p>
+  <p class="step"><strong>Equation with brackets:</strong> <span class="mono">3(2x + 1) = 45</span>. Divide both sides by 3: 2x + 1 = 15 → 2x = 14 → <strong>x = 7</strong>. Check: 3 × (14 + 1) = 45 ✔</p>
+</div>
+
+<h2>Part 2: The Challenge (20 problems)</h2>
+<p>Type your answer and press <strong>Check</strong> (or Enter). Fractions like <span class="mono">3/4</span>, mixed numbers like <span class="mono">1 3/4</span>, or decimals like <span class="mono">1.75</span> are fine. Don't type the units, and you may use spaces or commas in big numbers (1 000 000). Stuck? Press <strong>Hint</strong>. After 2 tries, you can see a full solution.</p>
+
+<div id="questions"></div>
+<div class="box" id="final"></div>
+<div id="scoreBox">
+  <span id="scoreText">Score: 0 / 20 correct</span>
+  <button id="finishBtn" type="button">I'm done! Show my final score</button>
+</div>
+</div>
+
+<script>
+var NAME = "Ace";
+var GRAPH = '<div style="margin:10px 0"><svg viewBox="0 70 680 290" width="100%" style="max-width:680px;background:#fff;border-radius:12px" role="img" aria-label="Bar graph of how many times the six most common letters appear in a 160-letter coded message"><line x1="60" y1="300.0" x2="620" y2="300.0" stroke="#e0e0e0"/><text x="52" y="304.0" text-anchor="end" font-size="13" fill="#455a64">0</text><line x1="60" y1="258.0" x2="620" y2="258.0" stroke="#e0e0e0"/><text x="52" y="262.0" text-anchor="end" font-size="13" fill="#455a64">5</text><line x1="60" y1="216.0" x2="620" y2="216.0" stroke="#e0e0e0"/><text x="52" y="220.0" text-anchor="end" font-size="13" fill="#455a64">10</text><line x1="60" y1="174.0" x2="620" y2="174.0" stroke="#e0e0e0"/><text x="52" y="178.0" text-anchor="end" font-size="13" fill="#455a64">15</text><line x1="60" y1="132.0" x2="620" y2="132.0" stroke="#e0e0e0"/><text x="52" y="136.0" text-anchor="end" font-size="13" fill="#455a64">20</text><line x1="60" y1="90.0" x2="620" y2="90.0" stroke="#e0e0e0"/><text x="52" y="94.0" text-anchor="end" font-size="13" fill="#455a64">25</text><line x1="60" y1="300.0" x2="620" y2="300.0" stroke="#455a64" stroke-width="2"/><line x1="60" y1="300.0" x2="60" y2="90.0" stroke="#455a64" stroke-width="2"/><rect class="bar" x="78.7" y="132.0" width="56.0" height="168.0" fill="#3949ab" rx="4"/><text x="106.7" y="124.0" text-anchor="middle" font-size="13" font-weight="bold" fill="#1a237e">20</text><text x="106.7" y="319.0" text-anchor="middle" font-size="15" font-weight="bold" fill="#263238">H</text><rect class="bar" x="172.0" y="174.0" width="56.0" height="126.0" fill="#3949ab" rx="4"/><text x="200.0" y="166.0" text-anchor="middle" font-size="13" font-weight="bold" fill="#1a237e">15</text><text x="200.0" y="319.0" text-anchor="middle" font-size="15" font-weight="bold" fill="#263238">W</text><rect class="bar" x="265.3" y="190.8" width="56.0" height="109.2" fill="#3949ab" rx="4"/><text x="293.3" y="182.8" text-anchor="middle" font-size="13" font-weight="bold" fill="#1a237e">13</text><text x="293.3" y="319.0" text-anchor="middle" font-size="15" font-weight="bold" fill="#263238">D</text><rect class="bar" x="358.7" y="199.2" width="56.0" height="100.8" fill="#3949ab" rx="4"/><text x="386.7" y="191.2" text-anchor="middle" font-size="13" font-weight="bold" fill="#1a237e">12</text><text x="386.7" y="319.0" text-anchor="middle" font-size="15" font-weight="bold" fill="#263238">R</text><rect class="bar" x="452.0" y="207.6" width="56.0" height="92.4" fill="#3949ab" rx="4"/><text x="480.0" y="199.6" text-anchor="middle" font-size="13" font-weight="bold" fill="#1a237e">11</text><text x="480.0" y="319.0" text-anchor="middle" font-size="15" font-weight="bold" fill="#263238">L</text><rect class="bar" x="545.3" y="216.0" width="56.0" height="84.0" fill="#3949ab" rx="4"/><text x="573.3" y="208.0" text-anchor="middle" font-size="13" font-weight="bold" fill="#1a237e">10</text><text x="573.3" y="319.0" text-anchor="middle" font-size="15" font-weight="bold" fill="#263238">V</text><text x="340.0" y="342.0" text-anchor="middle" font-size="14" font-weight="bold" fill="#263238">Coded letter</text><text x="16" y="195.0" text-anchor="middle" font-size="14" font-weight="bold" fill="#263238" transform="rotate(-90 16 195.0)">Times it appears</text></svg></div>';
+var QUESTIONS = [
+ {t:"Use <span class='mono'>A = 0, B = 1, … Z = 25</span>. In a Caesar cipher with a shift of <strong>5</strong>, the letter H is number 7. What <strong>number</strong> is its coded letter?", a:"12", u:"",
+  h:["Add the shift to the letter's number.","7 + 5 = ?"],
+  s:"7 + 5 = 12, which is the letter M. So H becomes M."},
+ {t:"With a shift of <strong>7</strong>, what number does the letter V (21) become? Remember the alphabet wraps around after Z (25).", a:"2", u:"",
+  h:["21 + 7 = 28. There is no letter 28!","Subtract 26 to wrap around."],
+  s:"21 + 7 = 28. 28 − 26 = 2, which is C. So V becomes C."},
+ {t:"A message was coded with a shift of <strong>10</strong>. One coded letter is E (4). What number was the <strong>original</strong> letter?", a:"20", u:"",
+  h:["To decode, subtract the shift: 4 − 10.","4 − 10 = −6. A negative number means you went past A, so add 26."],
+  s:"4 − 10 = −6. −6 + 26 = 20, which is U. Check: U (20) + 10 = 30, and 30 − 26 = 4 = E ✔"},
+ {t:"A tricky spy shifts every letter by <strong>100</strong> places around the 26-letter wheel. That is exactly the same as shifting by how many places (a number from 0 to 25)?", a:"22", u:"places",
+  h:["Every 26 places brings you all the way around the wheel back to the start.","Divide 100 by 26 and find the remainder: 26 × 3 = 78."],
+  s:"100 ÷ 26 = 3 remainder 22 (because 26 × 3 = 78 and 100 − 78 = 22). Three full trips around the wheel change nothing, so a shift of 100 is the same as a shift of 22."},
+ {t:"A Caesar cipher has only <strong>25</strong> useful shifts (1 to 25). A computer tests one shift every <strong>0.2 seconds</strong>. How many seconds does it take to test all of them?", a:"5", u:"seconds",
+  h:["Multiply the number of shifts by the time for each one.","25 × 0.2 = ?"],
+  s:"25 × 0.2 = 5 seconds. That's why a Caesar cipher is far too weak for real secrets today!"},
+ {t:"A secret number is the <strong>product of the four smallest prime numbers</strong>. What is the secret number?", a:"210", u:"",
+  h:["The four smallest primes are 2, 3, 5 and 7. (1 is not prime!)","2 × 3 × 5 × 7 = ?"],
+  s:"2 × 3 = 6, 6 × 5 = 30, 30 × 7 = 210."},
+ {t:"The number <strong>391</strong> is the product of exactly two prime numbers. What is the <strong>larger</strong> of the two primes?", a:"23", u:"",
+  h:["391 is not divisible by 2, 3, 5, 7, 11 or 13. Keep testing primes in order.","Try 17: 17 × 20 = 340, and 391 − 340 = 51 = 17 × 3."],
+  s:"391 = 17 × 23, and both 17 and 23 are prime. The larger one is 23. Real codes use the same idea, but with primes hundreds of digits long!"},
+ {t:"Code wheel A turns once every <strong>12 seconds</strong> and code wheel B turns once every <strong>18 seconds</strong>. They start lined up. After how many seconds will they <strong>first</strong> line up again?", a:"36", u:"seconds",
+  h:["You need the lowest common multiple (LCM) of 12 and 18.","Multiples of 12: 12, 24, 36… Multiples of 18: 18, 36…"],
+  s:"The LCM of 12 and 18 is 36, so they line up again after 36 seconds."},
+ {t:"A codebreaking club has <strong>48</strong> red code cards and <strong>60</strong> blue code cards. They want to make identical packs that use every card, with nothing left over. What is the <strong>greatest</strong> number of packs they can make?", a:"12", u:"packs",
+  h:["You need the greatest common factor (GCF) of 48 and 60.","48 = 2 × 2 × 2 × 2 × 3 and 60 = 2 × 2 × 3 × 5. Multiply the primes they share."],
+  s:"They share 2 × 2 × 3 = 12, so the GCF is 12: 12 packs, each with 4 red and 5 blue cards."},
+ {t:"Change the binary number <strong>110101</strong> into an ordinary (base-10) number.", a:"53", u:"",
+  h:["The place values from the right are 1, 2, 4, 8, 16, 32.","Add the place values that have a 1: 32 + 16 + 4 + 1."],
+  s:"110101 = 32 + 16 + 0 + 4 + 0 + 1 = 53."},
+ {t:"Write the number <strong>100</strong> in <strong>binary</strong>. (Type only 0s and 1s.)", a:"1100100", u:"",
+  h:["The powers of 2 are 1, 2, 4, 8, 16, 32, 64. Start with the biggest one that fits: 64.","100 = 64 + 32 + 4. Put a 1 in those places and a 0 everywhere else."],
+  s:"100 = 64 + 32 + 4, so the places 64, 32, 16, 8, 4, 2, 1 hold 1, 1, 0, 0, 1, 0, 0. In binary, 100 is 1100100."},
+ {t:"A computer <strong>byte</strong> has <strong>8 bits</strong> (each bit is 0 or 1). How many different patterns can one byte make?", a:"256", u:"patterns",
+  h:["Each bit has 2 choices, so multiply 2 by itself 8 times.","2⁸ = 2 × 2 × 2 × 2 × 2 × 2 × 2 × 2."],
+  s:"2⁸ = 256 patterns. That's enough to give every letter, digit and symbol on a keyboard its own code."},
+ {t:"A password must be <strong>3 capital letters</strong> (A to Z) followed by <strong>2 digits</strong> (0 to 9), like <span class='mono'>ACE42</span>. Letters and digits may repeat. How many different passwords are possible?", a:"1757600", u:"passwords",
+  h:["Multiply the choices for each spot: 26 × 26 × 26 × 10 × 10.","26 × 26 × 26 = 17 576."],
+  s:"26 × 26 × 26 = 17 576. 17 576 × 10 × 10 = 1 757 600 passwords."},
+ {t:"A lock has <strong>4 dials</strong>, each numbered 0 to 9, so it has 10 000 combinations. A robot tries one combination every <strong>3 seconds</strong>. How many <strong>hours</strong> would it take to try every combination? Round to the <strong>nearest tenth</strong>.", a:"8.3", u:"hours",
+  h:["Total seconds = 10 000 × 3 = 30 000 s.","There are 60 × 60 = 3600 seconds in an hour. 30 000 ÷ 3600 = ?"],
+  s:"30 000 ÷ 3600 = 8.33…, which rounds to 8.3 hours."},
+ {t:"How many different ways can you arrange the four letters of the word <strong>CODE</strong> (using each letter once)?", a:"24", u:"ways",
+  h:["4 choices for the first letter, then 3 left for the second, and so on.","4 × 3 × 2 × 1 = ?"],
+  s:"4 × 3 × 2 × 1 = 24 ways. (Mathematicians write this as 4!, which is read \"four factorial.\")"},
+ {t:"Agent Ace's secret number is <em>x</em>. If you triple it, subtract 7, and then double the result, you get 64. Solve <span class='mono'>2(3x − 7) = 64</span>.", a:"13", u:"",
+  h:["Divide both sides by 2 first: 3x − 7 = 32.","Add 7 to both sides, then divide by 3."],
+  s:"3x − 7 = 32 → 3x = 39 → x = 13. Check: 2 × (39 − 7) = 2 × 32 = 64 ✔"},
+ {t:"In a coded message, the ratio of vowels to consonants is <strong>2 : 3</strong>. The message has <strong>185</strong> letters. How many letters are <strong>vowels</strong>?", a:"74", u:"vowels",
+  h:["2 + 3 = 5 equal parts.","One part = 185 ÷ 5 = 37. Vowels are 2 parts."],
+  s:"185 ÷ 5 = 37. Vowels = 2 × 37 = 74 (and consonants = 3 × 37 = 111)."},
+ {t:GRAPH+"Ace intercepted a coded message of <strong>160 letters</strong> made with a Caesar cipher. The bar graph shows its six most common letters. In English, the most common letter is <strong>E (4)</strong>. If the most common coded letter stands for E, what is the <strong>shift</strong>?", a:"3", u:"",
+  h:["The tallest bar is H. What number is H?","H = 7 and E = 4. How far is it from E to H?"],
+  s:"H (7) is the most common coded letter. 7 − 4 = 3, so the shift is 3. This trick is called frequency analysis."},
+ {t:"Use the graph in question 18. What <strong>percent</strong> of the 160 letters in the message are the letter H?", a:"12.5", u:"%",
+  h:["Read the graph: H appears 20 times.","20 ÷ 160 × 100 = ?"],
+  s:"20 ÷ 160 = 0.125 = 12.5%. That's very close to how often E appears in ordinary English, which supports the idea that H stands for E."},
+ {t:"Use the shift you found in question 18. The coded letter <strong>W</strong> is number 22. What <strong>number</strong> is the original letter? (Bonus: which letter is it?)", a:"19", u:"",
+  h:["To decode, subtract the shift: 22 − 3.","Count from A = 0 to find letter 19."],
+  s:"22 − 3 = 19, which is T, the second most common letter in English. The code is cracking open! (D, R, L and V decode to A, O, I and S.)"}
+];
+
+var PRAISE = ["Nice work, Ace!","Correct! Code cracked! 🔓","Yes! Agent Ace strikes again!","Excellent, Ace. That was a tough one!","Right on target! 🎯","Brilliant thinking, future codebreaker!","Top secret genius! 🕵️"];
+var ENCOURAGE = ["Not quite. Check your steps and try again!","Close call. Try again, Ace! Maybe use a hint?","Hmm, not yet. Re-read the question carefully.","Keep going, Ace. Mistakes help your brain grow!"];
+
+function parseAnswer(str){
+  if(str===undefined||str===null) return NaN;
+  var s=String(str).trim().toLowerCase();
+  s=s.replace(/[\u2212\u2013]/g,"-");
+  s=s.replace(/(\d),(?=\d{3}(\D|$))/g,"$1");
+  s=s.replace(/[^0-9.\/\- ]/g," ").replace(/\s+/g," ").trim();
+  s=s.replace(/\s*\/\s*/g,"/");
+  var m;
+  if((m=s.match(/^(-?\d+) (\d+)\/(\d+)$/))){ var w=parseFloat(m[1]),n=parseFloat(m[2]),d=parseFloat(m[3]); if(d===0)return NaN; return w<0? w-n/d : w+n/d; }
+  if((m=s.match(/^(-?\d+(?:\.\d+)?)\/(\d+(?:\.\d+)?)$/))){ var d2=parseFloat(m[2]); if(d2===0)return NaN; return parseFloat(m[1])/d2; }
+  s=s.replace(/ /g,"");
+  if(/^-?(\d+\.?\d*|\.\d+)$/.test(s)) return parseFloat(s);
+  return NaN;
+}
+function isCorrect(input,key){
+  var a=parseAnswer(input), k=parseAnswer(key);
+  if(isNaN(a)) return false;
+  var isInt=Math.abs(k-Math.round(k))<1e-12;
+  var tol=isInt?1e-9:0.005;
+  return Math.abs(a-k)<=tol;
+}
+
+function isRomanCorrect(input,key){ return String(input).replace(/\s+/g,"").toUpperCase()===key; }
+var state=[];
+function render(){
+  var box=document.getElementById("questions");
+  QUESTIONS.forEach(function(q,i){
+    state.push({correct:false,tries:0,hints:0});
+    var d=document.createElement("div");
+    d.className="box q"; d.id="q"+i;
+    d.innerHTML='<div><span class="qnum">'+(i+1)+'.</span> '+q.t+'</div>'+
+      '<div class="row"><input type="text"'+(q.r?' placeholder="e.g. MMXXVI"':'')+' id="in'+i+'" aria-label="Answer to question '+(i+1)+'" autocomplete="off"> <span class="unit">'+q.u+'</span>'+
+      '<button type="button" class="check" data-i="'+i+'">Check</button>'+
+      '<button type="button" class="hint" data-i="'+i+'">Hint 💡</button>'+
+      '<button type="button" class="sol" data-i="'+i+'" style="display:none">Show solution</button></div>'+
+      '<div class="fb" id="fb'+i+'"></div><div class="hints" id="hints'+i+'"></div>'+
+      '<div class="solution" id="sol'+i+'"><strong>Solution:</strong> '+q.s+'</div>';
+    box.appendChild(d);
+  });
+  box.addEventListener("click",function(e){
+    var b=e.target; if(b.tagName!=="BUTTON")return;
+    var i=+b.getAttribute("data-i");
+    if(b.className==="check") check(i);
+    else if(b.className==="hint") hint(i);
+    else if(b.className==="sol") document.getElementById("sol"+i).style.display="block";
+  });
+  box.addEventListener("keydown",function(e){
+    if(e.key==="Enter"&&e.target.tagName==="INPUT"){ check(+e.target.id.slice(2)); }
+  });
+}
+function pick(arr){return arr[Math.floor(Math.random()*arr.length)];}
+function check(i){
+  var val=document.getElementById("in"+i).value;
+  var fb=document.getElementById("fb"+i), card=document.getElementById("q"+i);
+  if(val.trim()===""){fb.className="fb bad";fb.textContent="Type an answer first, Ace!";return;}
+  var isR=!!QUESTIONS[i].r;
+  if(isR&&!/^[ivxlcdm\s]+$/i.test(val)){fb.className="fb bad";fb.textContent="Use only Roman numeral letters: I, V, X, L, C, D, M.";return;}
+  if(!isR&&isNaN(parseAnswer(val))){fb.className="fb bad";fb.textContent="I can't read that as a number. Try something like 42, 3.5, 3/4 or 1 3/4.";return;}
+  state[i].tries++;
+  if(isR?isRomanCorrect(val,QUESTIONS[i].a):isCorrect(val,QUESTIONS[i].a)){
+    state[i].correct=true; card.className="box q right"; fb.className="fb good";
+    fb.textContent="✅ "+pick(PRAISE)+(state[i].tries===1?" (first try!)":"");
+  } else {
+    state[i].correct=false; card.className="box q wrong"; fb.className="fb bad";
+    fb.textContent="❌ "+pick(ENCOURAGE);
+    if(state[i].tries>=2) card.querySelector(".sol").style.display="inline-block";
+  }
+  updateScore();
+}
+function hint(i){
+  var q=QUESTIONS[i], s=state[i], hb=document.getElementById("hints"+i);
+  if(s.hints<q.h.length){
+    var p=document.createElement("p"); p.textContent="💡 Hint "+(s.hints+1)+": "+q.h[s.hints]; hb.appendChild(p); s.hints++;
+  }
+  if(s.hints>=q.h.length) document.querySelector("#q"+i+" .hint").disabled=true;
+  updateScore();
+}
+function counts(){
+  var c=0,first=0,h=0;
+  state.forEach(function(s){ if(s.correct){c++; if(s.tries===1)first++;} h+=s.hints; });
+  return {correct:c,first:first,hints:h};
+}
+function updateScore(){
+  var k=counts();
+  document.getElementById("scoreText").textContent="Score: "+k.correct+" / "+QUESTIONS.length+" correct · hints used: "+k.hints;
+}
+function finish(){
+  var k=counts(), n=QUESTIONS.length, pct=Math.round(100*k.correct/n);
+  var msg;
+  if(pct===100) msg="🏆 PERFECT SCORE! Incredible work, Ace. A real codebreaker would be impressed!";
+  else if(pct>=85) msg="🌟 Outstanding, Ace! That's a Grade 6-7 level performance!";
+  else if(pct>=65) msg="💪 Great effort, Ace! Review the ones you missed and try them again.";
+  else if(pct>=40) msg="👍 Good start, Ace! These problems are tough. Use the hints and solutions to learn the tricks, then try again.";
+  else msg="🌱 These are challenge problems, well above grade level. Every codebreaker started as a beginner! Go through the worked examples and try again, Ace!";
+  var f=document.getElementById("final");
+  f.style.display="block";
+  f.innerHTML="<h2 style='border:none;margin-top:0'>Final Score: "+k.correct+" / "+n+" ("+pct+"%)</h2>"+
+    "<p>Correct on the first try: "+k.first+" · Hints used: "+k.hints+"</p><p>"+msg+"</p>"+
+    "<p style='font-size:.85em;color:#546e7a'>Finished on "+new Date().toLocaleString("en-CA")+"</p>";
+  f.scrollIntoView({behavior:"smooth"});
+}
+render();
+updateScore();
+document.getElementById("finishBtn").addEventListener("click",finish);
+</script>
+</body>
+</html>
