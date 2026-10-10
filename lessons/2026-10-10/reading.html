@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reading (Oct. 10): Good Vibrations: How Sound Becomes Music</title>
+<style>
+  body{font-family:"Segoe UI",Verdana,Arial,sans-serif;font-size:20px;line-height:1.65;margin:0;background:#f5f0eb;color:#2c2416}
+  .wrap{max-width:880px;margin:0 auto;padding:20px 18px 80px}
+  a.home{font-size:.9em;color:#bf360c}
+  h1{color:#e65100;font-size:2em;margin:10px 0}
+  h2{color:#ef6c00;margin-top:36px;border-bottom:3px solid #ffcc80;padding-bottom:4px}
+  .box{background:#fff;border-radius:16px;padding:18px 22px;margin:16px 0;box-shadow:0 3px 10px rgba(0,0,0,.07)}
+  .passage{font-family:Georgia,"Times New Roman",serif;font-size:1.1em;line-height:1.8}
+  .passage h3{text-align:center;font-family:"Segoe UI",Verdana,sans-serif;color:#e65100;font-size:1.4em;margin:4px 0 14px}
+  .passage p{text-indent:1.5em;margin:0 0 14px}
+  mark.v{background:#fff59d;padding:0 3px;border-radius:4px;font-weight:bold}
+  .tipbox{background:#fff8e1;border-left:8px solid #ffb300}
+  .q{border-left:8px solid #ffcc80}
+  .q.right{border-left-color:#43a047;background:#f1f8e9}
+  .q.wrong{border-left-color:#e53935;background:#fff5f5}
+  .tag{display:inline-block;font-size:.7em;background:#ef6c00;color:#fff;border-radius:8px;padding:1px 8px;margin-left:6px;vertical-align:middle}
+  .opt{display:block;width:100%;text-align:left;font-size:.95em;background:#fafafa;border:2px solid #e0e0e0;border-radius:10px;padding:8px 14px;margin:8px 0;cursor:pointer;font-family:inherit}
+  .opt:hover{border-color:#ffb74d;background:#fff}
+  .opt.sel-right{background:#c8e6c9;border-color:#43a047}
+  .opt.sel-wrong{background:#ffcdd2;border-color:#e53935}
+  .fb{margin-top:6px;font-weight:bold}
+  .fb.good{color:#2e7d32} .fb.bad{color:#c62828}
+  .explain{color:#e65100;font-weight:normal}
+  select{font-size:.95em;padding:6px 8px;border-radius:8px;border:2px solid #ffb74d;max-width:100%;font-family:inherit}
+  .vrow{display:flex;flex-wrap:wrap;align-items:center;gap:10px;padding:8px 6px;border-bottom:1px dashed #eee}
+  .vrow .w{font-weight:bold;min-width:140px}
+  .vrow.right{background:#f1f8e9} .vrow.wrong{background:#fff5f5}
+  .mark{font-size:1.2em;min-width:30px}
+  button.main{font-size:1em;padding:10px 20px;border:none;border-radius:10px;cursor:pointer;font-weight:bold;background:#ef6c00;color:#fff;margin-top:10px}
+  button.main:hover{background:#e65100}
+  button.sec{font-size:.95em;padding:8px 16px;border:none;border-radius:10px;cursor:pointer;font-weight:bold;background:#ffe082;color:#5d4037}
+  textarea{width:100%;box-sizing:border-box;font-size:1em;font-family:inherit;padding:10px;border:2px solid #ffb74d;border-radius:10px;min-height:120px}
+  #model{display:none;background:#fff3e0;border-radius:10px;padding:10px 14px;margin-top:10px}
+  #scoreBox{position:sticky;bottom:0;background:#e65100;color:#fff;border-radius:16px 16px 0 0;padding:12px 20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-top:30px}
+  #scoreBox button{font-size:.95em;padding:8px 16px;border:none;border-radius:10px;cursor:pointer;font-weight:bold;background:#ffca28;color:#3e2723}
+  #final{display:none;text-align:center;border:4px solid #43a047;font-size:1.1em}
+</style>
+</head>
+<body>
+<div class="wrap">
+<a class="home" href="../../index.html">&larr; Back to all lessons</a>
+<h1>📖 Reading Week 13: Good Vibrations: How Sound Becomes Music</h1>
+
+<div class="box tipbox">
+  <strong>Before you read, Ace:</strong> Today's passage is a <em>hybrid</em> text: the first half explains a scientific process (how sound is made and heard), and the second half travels through history and around the world. Good readers notice when a text <em>switches structure</em>, follow a process step by step, and make <em>inferences</em> by connecting the science to the stories.
+  <ul>
+    <li><strong>Preview:</strong> Read the title. Why might the author have chosen the word <em>vibrations</em>?</li>
+    <li><strong>Pause:</strong> In paragraph 2, trace the journey of a sound from the instrument to the brain. Can you list the steps in order without looking?</li>
+    <li><strong>Root detective:</strong> Sound words are built from Greek and Latin parts:
+      <span style="display:block;margin-top:6px"><strong>phon-</strong> = sound (Greek <em>phōnē</em>) · <strong>sym-</strong> = together · <strong>acous-</strong> = hear (Greek <em>akouein</em>) · <strong>aud-</strong> = hear (Latin <em>audire</em>) · <strong>son-</strong> = sound (Latin <em>sonus</em>) · <strong>re-</strong> = again, back · <strong>-ology</strong> = study of</span></li>
+    <li><strong>Words in <mark class="v">yellow</mark></strong> are vocabulary words. Use the sentence around them (the <em>context</em>) to figure out what they mean.</li>
+  </ul>
+</div>
+
+<div class="box passage" id="passage">
+<h3>Good Vibrations: How Sound Becomes Music</h3>
+<p>Close your eyes and listen. Perhaps you can hear a car passing, a bird outside, or the hum of a fridge. Every one of those sounds began the same way: something, somewhere, was shaking. Sound is a vibration, and music is what happens when people learn to control vibrations on purpose. For tens of thousands of years, in every culture on Earth, humans have found ways to turn shaking air into songs.</p>
+<p>When you pluck a guitar string, it swings back and forth hundreds of times every second. Each swing pushes on the air molecules next to it, squeezing them together, and then pulls away, spreading them apart. Those molecules bump into their neighbours, which bump into theirs, sending a wave of squeezes and stretches rippling outward at about 343 metres per second. The air itself does not travel across the room; only the pattern does, the way a wave moves through a crowd at a hockey game while each fan stays in their seat. When the wave reaches you, it enters your ear canal and makes your eardrum tremble. Three tiny bones, the hammer, the anvil, and the stirrup, pass the vibration along and make it stronger. The stirrup is the smallest bone in your body, about the size of a grain of rice. It pushes on the cochlea, a snail-shaped tube filled with fluid and lined with about 15 000 microscopic hair cells. Different hair cells respond to different pitches, and they turn the motion into electrical signals that race along a nerve to your brain. Only then do you actually <mark class="v">perceive</mark> a sound. The whole journey takes a tiny fraction of a second.</p>
+<p>Two features make one sound <mark class="v">distinct</mark> from another. The first is pitch: fast vibrations make high notes, and slow vibrations make low ones. That is why a short, tight string squeaks while a long, loose one rumbles, and why a tiny piccolo sings far above a giant tuba. The second is loudness: bigger vibrations push the air harder and carry more energy. Hair cells are <mark class="v">fragile</mark>, though. Very loud sounds can damage them, and once they are destroyed, they never grow back. Many people who spent years beside roaring machines or booming speakers without ear protection now struggle to hear quiet voices.</p>
+<p>People discovered how to make music long before they understood any of this science. Some of the oldest instruments ever found are flutes carved from bird bones and mammoth ivory in caves in Germany. They are more than 35 000 years old. In Jiahu, in central China, archaeologists dug up flutes made from the wing bones of cranes about 9000 years ago, and one was still in good enough condition to play a tune. Across the world, cultures shaped music to fit their own lives and languages. In West Africa, the Yoruba talking drum has cords along its sides. When a drummer squeezes the drum under one arm, the cords tighten the drumhead and the pitch rises, so skilled players can copy the rising and falling tones of spoken Yoruba and "speak" through the drum. For many First Nations peoples in Canada, the drum holds deep meaning and is often described as the heartbeat of the community.</p>
+<p>In China, the guzheng, a long plucked instrument usually strung with 21 strings, has been played for more than 2000 years. Each string rests on a movable bridge, and a player can press down on the far side of the bridge to bend a note up and down like a voice. The erhu has only two strings, yet its sound is so expressive that people say it can weep. Its bow is trapped between the strings, and its small sound box is covered with snakeskin, which vibrates like the skin of a drum. In Europe, orchestras grew from small groups of musicians into huge ensembles of string, woodwind, brass, and percussion instruments. By the 1800s, a composer could write a symphony for nearly a hundred players. Each section has a role, and the conductor keeps them all together so that the music can <mark class="v">sustain</mark> a single mood or change it in an instant.</p>
+<p>Today, scientists who study acoustics design concert halls so that every seat hears clearly, and doctors called audiologists test hearing and protect it. Yet the most <mark class="v">profound</mark> discovery about music may be the simplest one. A bone flute, a guzheng, a talking drum, and a full orchestra look nothing alike, but they all do the same <mark class="v">intricate</mark> job: they shake the air in patterns that human brains find beautiful. Perhaps that is why music is found in every culture that has ever existed.</p>
+<p style="text-indent:0;font-size:.8em;color:#546e7a;text-align:right">About 770 words</p>
+</div>
+
+<h2>Part 1: Comprehension</h2>
+<p>Click the best answer. You'll find out right away if you're correct. Only your <strong>first click</strong> counts toward your score, but you can keep trying to find the right answer.</p>
+<div id="mc"></div>
+
+<h2>Part 2: Think Deeper (not scored)</h2>
+<div class="box">
+  <p><strong>The author says a bone flute, a guzheng, a talking drum, and an orchestra "all do the same intricate job." In 3 to 5 sentences, explain what that job is, using the science from paragraphs 2 and 3. Then choose <em>two</em> instruments from the passage and explain how each one controls <em>pitch</em> in a different way. Finish with one reason you think music is found in every culture.</strong></p>
+  <textarea id="openAns" placeholder="Write your answer here, Ace..."></textarea>
+  <p><button type="button" class="sec" id="showModel">Compare with a model answer</button></p>
+  <div id="model"><strong>Model answer:</strong> Every instrument makes something vibrate, and those vibrations push on air molecules and send a sound wave to our ears, where hair cells turn it into signals for the brain. The talking drum changes pitch when the drummer squeezes the cords, which tightens the drumhead so it vibrates faster and sounds higher. The guzheng player presses the string on the far side of the movable bridge, which tightens it and bends the note up. I think music is in every culture because people everywhere have the same kind of ears and brains, and music helps them share feelings and stories together.<br><em>Did you explain the shared "job" using science, compare two different ways of changing pitch with evidence, and add your own idea? If so, excellent work!</em></div>
+</div>
+
+<h2>Part 3: Vocabulary</h2>
+<div class="box">
+  <h3 style="margin-top:0">A. Match each word to its meaning</h3>
+  <p>Choose the meaning that fits how the word is used in the passage.</p>
+  <div id="vmatch"></div>
+  <h3>B. Fill in the blank</h3>
+  <p>Choose the vocabulary word that best completes each sentence.</p>
+  <div id="vfill"></div>
+  <button type="button" class="main" id="checkVocab">Check my vocabulary</button>
+  <div class="fb" id="vocabFb"></div>
+</div>
+
+<div class="box" id="final"></div>
+<div id="scoreBox">
+  <span id="scoreText"></span>
+  <button type="button" id="finishBtn">I'm done! Show my final score</button>
+</div>
+</div>
+
+<script>
+var MC = [
+ {q:"Which sentence best states the <strong>main idea</strong> of the whole passage?",
+  o:["The guzheng usually has 21 strings.",
+     "Hair cells in the ear never grow back once they are destroyed.",
+     "Orchestras became much larger by the 1800s.",
+     "All music, in every culture, works by controlling vibrations that our ears and brains turn into sound."],
+  a:3, e:"A, B and C are single details. D connects the science section and the history section, so it is the main idea of the whole passage."},
+ {q:"How does the passage's structure <strong>change</strong> partway through?", tag:"Text structure",
+  o:["It changes from a description of a scientific process to a tour of music history and cultures.","It changes from a story about one musician to a list of instructions.","It changes from an argument to a poem.","It does not change; it is in time order from start to finish."],
+  a:0, e:"Paragraphs 2 and 3 explain how sound works step by step. Paragraphs 4 and 5 move through history and around the world."},
+ {q:"Put the journey of a sound in the correct order.", tag:"Sequence",
+  o:["Cochlea → eardrum → three tiny bones → brain","Eardrum → three tiny bones → cochlea → nerve to the brain","Three tiny bones → eardrum → brain → cochlea","Nerve → cochlea → eardrum → three tiny bones"],
+  a:1, e:"The wave makes the eardrum tremble, the hammer, anvil and stirrup pass it on, the stirrup pushes on the cochlea, and hair cells send signals along a nerve to the brain."},
+ {q:"Why does the author compare a sound wave to a wave moving through a crowd at a hockey game?", tag:"Author's craft",
+  o:["To show that sound is loudest at hockey games","To prove that fans can hear better than players","To describe how fast hockey players skate","To explain that the pattern travels while each air molecule mostly stays in place"],
+  a:3, e:"Just as each fan stays in their seat while the wave moves around the arena, air molecules only jiggle back and forth while the pattern travels."},
+ {q:"Based on the passage, what would happen to the pitch if a guitarist <strong>loosened</strong> a string?", tag:"Inference",
+  o:["The pitch would go higher.","The pitch would go lower.","The pitch would stay exactly the same.","The string would stop making any sound."],
+  a:1, e:"The passage says a \"long, loose\" string rumbles. Looser strings vibrate more slowly, and slower vibrations make lower notes."},
+ {q:"How is the Yoruba talking drum able to \"speak\"?", tag:"Cause and effect",
+  o:["It is played with a bow trapped between its strings.","It has a snakeskin sound box that weeps.","Squeezing the cords tightens the drumhead, changing the pitch to copy the rising and falling tones of spoken Yoruba.","It is louder than any other instrument."],
+  a:2, e:"Yoruba is a tonal language, and changing the drum's pitch lets drummers imitate those tones. (Cantonese is a tonal language too, which is why tone numbers matter so much!)"},
+ {q:"Why does the author include the warning about loud machines and speakers?", tag:"Author's purpose",
+  o:["To convince readers that all music is dangerous","To explain how speakers are built","To show that the science of the ear has real consequences for people's health","To suggest that people should stop listening to music"],
+  a:2, e:"The author links fragile hair cells to people who lost hearing, showing why ear protection matters, not that music is bad."},
+ {q:"The Greek root <em>sym-</em> means \"together\" and <em>phon-</em> means \"sound.\" What is a <em>symphony</em>?", tag:"Word roots",
+  o:["A single person singing alone","A machine that measures loudness","A doctor who tests hearing","A long piece of music written for many instruments sounding together"],
+  a:3, e:"A symphony is a large piece for an orchestra: many instruments \"sounding together.\""},
+ {q:"Using the roots <em>aud-</em> (\"hear\") and <em>-ology</em> (\"study of\"), what does an <em>audiologist</em> do?", tag:"Word roots",
+  o:["Studies hearing and tests people's ears","Builds concert halls","Writes music for orchestras","Repairs guitars"],
+  a:0, e:"An audiologist is a hearing specialist, one of the many health careers connected to the science of sound."},
+ {q:"What can you infer from the fact that flutes over 35 000 years old have been found?", tag:"Inference",
+  o:["Music has been important to humans for a very long time, even before writing existed.","People in the past did not have voices.","Bone flutes were louder than modern instruments.","Only people in Germany played music long ago."],
+  a:0, e:"Making a flute from bone or ivory took skill and time, so people must have valued music very early in human history. (D is wrong: the passage also mentions ancient flutes in China.)"}
+];
+
+var VOCAB = ["perceive","distinct","fragile","sustain","profound","intricate"];
+var DEFS = {
+ perceive:"to notice or become aware of something through the senses or the mind",
+ distinct:"clearly different from something else; easy to tell apart",
+ fragile:"easily broken or damaged",
+ sustain:"to keep something going over a period of time",
+ profound:"very deep, important, or meaningful",
+ intricate:"having many small parts that fit together in a complicated way"
+};
+var FILL = [
+ {s:"The museum packed the ancient bone flute carefully because it was so ____.", a:"fragile"},
+ {s:"Owls can ____ the tiny rustle of a mouse moving under the snow.", a:"perceive"},
+ {s:"Each bird in the forest has its own ____ song, so experts can name them by sound.", a:"distinct"},
+ {s:"Singers practise breathing so they can ____ a long note without running out of air.", a:"sustain"}
+];
+var FILL_OPTIONS = ["fragile","perceive","distinct","sustain","profound","intricate"];
+
+var PRAISE=["Nice work, Ace!","Correct! Sharp reading, Ace!","Yes! You followed the evidence!","Excellent thinking, Dr. Ace!","Right! You're in perfect harmony! 🎵"];
+function pick(a){return a[Math.floor(Math.random()*a.length)];}
+function shuffled(arr,seed){var a=arr.slice(),s=seed;for(var i=a.length-1;i>0;i--){s=(s*9301+49297)%233280;var j=Math.floor(s/233280*(i+1));var t=a[i];a[i]=a[j];a[j]=t;}return a;}
+
+var mcState=MC.map(function(){return {answered:false,firstRight:false,done:false};});
+var vocabScore=0, vocabChecked=false;
+var VOCAB_TOTAL=VOCAB.length+FILL.length;
+
+function buildMC(){
+  var box=document.getElementById("mc");
+  MC.forEach(function(item,i){
+    var d=document.createElement("div"); d.className="box q"; d.id="mc"+i;
+    var html="<div><strong>"+(i+1)+".</strong> "+item.q+(item.tag?'<span class="tag">'+item.tag+'</span>':"")+"</div>";
+    item.o.forEach(function(opt,j){ html+='<button type="button" class="opt" data-i="'+i+'" data-j="'+j+'">'+String.fromCharCode(65+j)+". "+opt+"</button>"; });
+    html+='<div class="fb" id="mcfb'+i+'"></div>';
+    d.innerHTML=html; box.appendChild(d);
+  });
+  box.addEventListener("click",function(e){
+    var b=e.target.closest?e.target.closest(".opt"):e.target; if(!b||!b.classList.contains("opt"))return;
+    answerMC(+b.getAttribute("data-i"),+b.getAttribute("data-j"),b);
+  });
+}
+function answerMC(i,j,btn){
+  var st=mcState[i], item=MC[i], fb=document.getElementById("mcfb"+i), card=document.getElementById("mc"+i);
+  if(st.done) return;
+  var right=(j===item.a);
+  if(!st.answered){ st.answered=true; st.firstRight=right; }
+  if(right){
+    st.done=true; btn.classList.add("sel-right"); card.className="box q right";
+    fb.className="fb good"; fb.innerHTML="✅ "+pick(PRAISE)+' <span class="explain">'+item.e+"</span>";
+  } else {
+    btn.classList.add("sel-wrong"); card.className="box q wrong";
+    fb.className="fb bad"; fb.innerHTML="❌ Not quite, Ace. Look back at the passage and try another answer.";
+  }
+  updateScore();
+}
+function buildVocab(){
+  var m=document.getElementById("vmatch");
+  var defOrder=shuffled(VOCAB,44);
+  VOCAB.forEach(function(w,i){
+    var row=document.createElement("div"); row.className="vrow"; row.id="vm"+i;
+    var sel='<select id="vsel'+i+'" aria-label="Meaning of '+w+'"><option value="">- choose a meaning -</option>';
+    defOrder.forEach(function(k){ sel+='<option value="'+k+'">'+DEFS[k]+'</option>'; });
+    sel+="</select>";
+    row.innerHTML='<span class="mark" id="vmk'+i+'"></span><span class="w">'+w+'</span>'+sel;
+    m.appendChild(row);
+  });
+  var f=document.getElementById("vfill");
+  FILL.forEach(function(item,i){
+    var row=document.createElement("div"); row.className="vrow"; row.id="vf"+i;
+    var sel='<select id="fsel'+i+'" aria-label="Blank '+(i+1)+'"><option value="">- choose -</option>';
+    FILL_OPTIONS.forEach(function(w){ sel+='<option value="'+w+'">'+w+'</option>'; });
+    sel+="</select>";
+    var parts=item.s.split("____");
+    row.innerHTML='<span class="mark" id="vfk'+i+'"></span><span>'+(i+1)+'. '+parts[0]+sel+parts[1]+'</span>';
+    f.appendChild(row);
+  });
+}
+function checkVocab(){
+  var score=0, blank=0;
+  VOCAB.forEach(function(w,i){
+    var v=document.getElementById("vsel"+i).value, ok=(v===w);
+    if(!v) blank++;
+    if(ok) score++;
+    document.getElementById("vm"+i).className="vrow "+(ok?"right":"wrong");
+    document.getElementById("vmk"+i).textContent=ok?"✅":"❌";
+  });
+  FILL.forEach(function(item,i){
+    var v=document.getElementById("fsel"+i).value, ok=(v===item.a);
+    if(!v) blank++;
+    if(ok) score++;
+    document.getElementById("vf"+i).className="vrow "+(ok?"right":"wrong");
+    document.getElementById("vfk"+i).textContent=ok?"✅":"❌";
+  });
+  vocabScore=score; vocabChecked=true;
+  var fb=document.getElementById("vocabFb");
+  if(score===VOCAB_TOTAL){ fb.className="fb good"; fb.textContent="🌟 "+score+" / "+VOCAB_TOTAL+". Perfect! Every vocabulary word hit the right note, Ace!"; }
+  else { fb.className="fb bad"; fb.textContent=score+" / "+VOCAB_TOTAL+" correct"+(blank?" ("+blank+" left blank)":"")+". Fix the ❌ ones and check again. Try finding the word in the passage for clues!"; }
+  updateScore();
+}
+function scores(){
+  var mc=0,answered=0; mcState.forEach(function(s){ if(s.firstRight) mc++; if(s.answered) answered++; });
+  return {mc:mc,answered:answered,vocab:vocabScore};
+}
+function updateScore(){
+  var s=scores();
+  document.getElementById("scoreText").textContent="Comprehension: "+s.mc+" / "+MC.length+" · Vocabulary: "+(vocabChecked?s.vocab:"-")+" / "+VOCAB_TOTAL;
+}
+function finish(){
+  if(!vocabChecked) checkVocab();
+  var s=scores(), total=MC.length+VOCAB_TOTAL, got=s.mc+s.vocab, pct=Math.round(100*got/total);
+  var msg = pct===100 ? "🏆 A perfect score! Outstanding reading, Ace!" :
+            pct>=80 ? "🌟 Fantastic work, Ace! You read like a Grade 7 student!" :
+            pct>=60 ? "💪 Solid effort, Ace! Reread the paragraphs for the questions you missed." :
+                      "🌱 This was a challenging passage. Read it once more, slowly, and try again. You've got this, Ace!";
+  var f=document.getElementById("final"); f.style.display="block";
+  f.innerHTML="<h2 style='border:none;margin-top:0'>Final Score: "+got+" / "+total+" ("+pct+"%)</h2>"+
+    "<p>Comprehension (first tries): "+s.mc+" / "+MC.length+(s.answered<MC.length?" (you skipped "+(MC.length-s.answered)+")":"")+"<br>Vocabulary: "+s.vocab+" / "+VOCAB_TOTAL+"</p><p>"+msg+"</p>"+
+    "<p style='font-size:.85em;color:#546e7a'>Finished on "+new Date().toLocaleString("en-CA")+"</p>";
+  f.scrollIntoView({behavior:"smooth"});
+}
+buildMC(); buildVocab(); updateScore();
+document.getElementById("checkVocab").addEventListener("click",checkVocab);
+document.getElementById("finishBtn").addEventListener("click",finish);
+document.getElementById("showModel").addEventListener("click",function(){document.getElementById("model").style.display="block";});
+</script>
+</body>
+</html>

@@ -6,7 +6,7 @@ TTS voice (Cantonese): zh-HK-HiuMaanNeural
 TTS voice (English in ALL-words.mp3): en-HK-YanNeural
 Rate: slowed (~-20%) for clear listening practice.
 
-Sources: Ace lessons 2026-09-29 (Greetings) + 2026-09-30 (Family Members) + 2026-10-01 (Food) + 2026-10-02 (School) + 2026-10-03 (Body) + 2026-10-04 (Colours) + 2026-10-05 (Sky & Space) + 2026-10-06 (Numbers 11-100) + 2026-10-07 (At the Doctor) + 2026-10-08 (Nature: Mountains & Volcanoes) + 2026-10-09 (Question Words & Secrets).
+Sources: Ace lessons 2026-09-29 (Greetings) + 2026-09-30 (Family Members) + 2026-10-01 (Food) + 2026-10-02 (School) + 2026-10-03 (Body) + 2026-10-04 (Colours) + 2026-10-05 (Sky & Space) + 2026-10-06 (Numbers 11-100) + 2026-10-07 (At the Doctor) + 2026-10-08 (Nature: Mountains & Volcanoes) + 2026-10-09 (Question Words & Secrets) + 2026-10-10 (Music).
 Numbers 1-10 are already known and not included here.
 
 How to practise:
@@ -462,6 +462,47 @@ Individual files
   Chinese:  估吓
   Jyutping: gu2 haa5
   English:  take a guess
+
+
+89-jam1-ngok6-music.mp3
+  Chinese:  音樂
+  Jyutping: jam1 ngok6
+  English:  music
+
+90-coeng3-go1-sing.mp3
+  Chinese:  唱歌
+  Jyutping: coeng3 go1
+  English:  sing
+
+91-tiu3-mou5-dance.mp3
+  Chinese:  跳舞
+  Jyutping: tiu3 mou5
+  English:  dance
+
+92-teng1-listen.mp3
+  Chinese:  聽
+  Jyutping: teng1
+  English:  listen
+
+93-hou2-teng1-sounds-nice.mp3
+  Chinese:  好聽
+  Jyutping: hou2 teng1
+  English:  sounds nice
+
+94-gong3-kam4-piano.mp3
+  Chinese:  鋼琴
+  Jyutping: gong3 kam4
+  English:  piano
+
+95-git3-taa1-guitar.mp3
+  Chinese:  結他
+  Jyutping: git3 taa1
+  English:  guitar
+
+96-daa2-gu2-play-drums.mp3
+  Chinese:  打鼓
+  Jyutping: daa2 gu2
+  English:  play drums
 
 
 Combined file

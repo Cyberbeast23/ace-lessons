@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Math (Oct. 10): Music &amp; the Science of Sound Math Lab</title>
+<style>
+  body{font-family:"Segoe UI",Verdana,Arial,sans-serif;font-size:20px;line-height:1.6;margin:0;background:#f5f0eb;color:#2c2416}
+  .wrap{max-width:880px;margin:0 auto;padding:20px 18px 80px}
+  a.home{font-size:.9em;color:#bf360c}
+  h1{color:#e65100;font-size:2em;margin:10px 0}
+  h2{color:#ef6c00;margin-top:36px;border-bottom:3px solid #ffcc80;padding-bottom:4px}
+  .box{background:#fff;border-radius:16px;padding:18px 22px;margin:16px 0;box-shadow:0 3px 10px rgba(0,0,0,.07)}
+  .example{border-left:8px solid #ef6c00}
+  .example h3{margin:0 0 6px;color:#e65100}
+  .step{margin:4px 0 4px 10px}
+  code,.mono{font-family:Consolas,"Courier New",monospace;background:#fff3e0;padding:1px 6px;border-radius:5px}
+  .q{border-left:8px solid #90a4ae}
+  .q.right{border-left-color:#43a047;background:#f1f8e9}
+  .q.wrong{border-left-color:#e53935;background:#fff5f5}
+  .qnum{font-weight:bold;color:#e65100}
+  .row{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:10px}
+  input[type=text]{font-size:1.05em;padding:8px 12px;border:2px solid #ffcc80;border-radius:10px;width:190px}
+  input[type=text]:focus{outline:none;border-color:#ef6c00;box-shadow:0 0 0 3px #ffe0b2}
+  button{font-size:.95em;padding:8px 16px;border:none;border-radius:10px;cursor:pointer;font-weight:bold}
+  .check{background:#ef6c00;color:#fff} .check:hover{background:#e65100}
+  .hint{background:#ffe082;color:#5d4037} .hint:hover{background:#ffd54f}
+  .sol{background:#ce93d8;color:#311b92}
+  .unit{color:#546e7a}
+  .fb{margin-top:8px;font-weight:bold;min-height:1em}
+  .fb.good{color:#2e7d32} .fb.bad{color:#c62828}
+  .hints{margin-top:8px;color:#e65100;background:#fff3e0;border-radius:10px;padding:0 12px}
+  .hints p{margin:6px 0;padding:6px 0}
+  .solution{margin-top:8px;background:#f3e5f5;border-radius:10px;padding:8px 12px;display:none}
+  #scoreBox{position:sticky;bottom:0;background:#e65100;color:#fff;border-radius:16px 16px 0 0;padding:12px 20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-top:30px}
+  #scoreBox button{background:#ffca28;color:#3e2723}
+  #final{display:none;font-size:1.15em;text-align:center;border:4px solid #43a047}
+  .tipbox{background:#fff8e1;border-left:8px solid #ffb300}
+</style>
+</head>
+<body>
+<div class="wrap">
+<a class="home" href="../../index.html">&larr; Back to all lessons</a>
+<h1>🎵 Math Week 13: Music &amp; the Science of Sound Lab</h1>
+<p>Ace, every song you have ever heard is secretly a maths problem! Sound is a <strong>vibration</strong> travelling through the air, and musicians, instrument makers and sound engineers use numbers to control it. Today you'll think like an <strong>acoustic scientist</strong> (someone who studies sound) and a <strong>composer</strong>. You'll level up with <strong>frequency in hertz and the time for one vibration, the ratios hidden in octaves and fifths, inverse proportion with string lengths, the speed of sound (thunder, echoes and wavelength), decibels and powers of 10, safe-listening times, note values as fractions, time signatures, tempo, and the mean of a data set from a bar graph</strong>.</p>
+
+<h2>Part 1: Learn the Moves</h2>
+
+<div class="box tipbox">
+  <strong>The 4-Step Problem Solver (your sound scientist's checklist):</strong>
+  <ol>
+    <li><strong>Read</strong>: What is the question actually asking? Underline the numbers and units.</li>
+    <li><strong>Plan</strong>: Which operations do I need, and in what order?</li>
+    <li><strong>Solve</strong>: Do one step at a time and write each step down.</li>
+    <li><strong>Check</strong>: Is my answer reasonable? Did I answer the question that was asked, in the right unit?</li>
+  </ol>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 1: Frequency and the time for one vibration</h3>
+  <p class="step">When a guitar string is plucked, it moves back and forth very quickly. The number of vibrations each second is its <strong>frequency</strong>, measured in <strong>hertz (Hz)</strong>. 1 Hz = 1 vibration per second.</p>
+  <p class="step">A string at 200 Hz makes 200 vibrations every second, so in 3 seconds it makes 200 × 3 = <strong>600 vibrations</strong>.</p>
+  <p class="step">The time for <em>one</em> vibration is called the <strong>period</strong>: period = 1 ÷ frequency. At 200 Hz, one vibration takes 1 ÷ 200 = 0.005 s = <strong>5 milliseconds</strong> (1 s = 1000 ms). Higher frequency = higher pitch = shorter period.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 2: The ratios inside music</h3>
+  <p class="step">Notes that sound good together have frequencies in simple <strong>ratios</strong>. Over 2500 years ago, Greek thinkers (the followers of Pythagoras) and Chinese musicians both discovered this.</p>
+  <p class="step"><strong>Octave = 2 : 1.</strong> Going up one octave <em>doubles</em> the frequency: 220 Hz → 440 Hz. Going down one octave <em>halves</em> it: 220 Hz → 110 Hz.</p>
+  <p class="step"><strong>Perfect fifth = 3 : 2.</strong> Going up a fifth multiplies by 3/2 = 1.5: 220 Hz × 1.5 = <strong>330 Hz</strong>. Going down a fifth multiplies by 2/3.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 3: String length and pitch (inverse proportion)</h3>
+  <p class="step">On the same string, a <strong>shorter</strong> vibrating length gives a <strong>higher</strong> note. Half the length = double the frequency. When one quantity doubles while the other halves, they are <strong>inversely proportional</strong>: frequency × length stays the same.</p>
+  <p class="step">A 50 cm string plays 240 Hz, so frequency × length = 240 × 50 = 12 000. For a 300 Hz note: length = 12 000 ÷ 300 = <strong>40 cm</strong>. Check: 300 × 40 = 12 000 ✔</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 4: The speed of sound</h3>
+  <p class="step">In air at room temperature, sound travels about <strong>343 m/s</strong>. Distance = speed × time, so in 4 s sound travels 343 × 4 = <strong>1372 m</strong>.</p>
+  <p class="step"><strong>Thunder:</strong> you see lightning almost instantly, but the thunder takes time to arrive. Count the seconds and multiply by 343 to find how far away the storm is.</p>
+  <p class="step"><strong>Echo:</strong> an echo travels <em>there and back</em>, so divide the total distance by 2.</p>
+  <p class="step"><strong>Wavelength</strong> (the length of one sound wave) = speed ÷ frequency. A 343 Hz note has a wavelength of 343 ÷ 343 = <strong>1 m</strong>.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 5: Decibels and protecting your ears</h3>
+  <p class="step">Loudness is measured in <strong>decibels (dB)</strong>. The scale grows by <strong>powers of 10</strong>: every +10 dB means the sound carries <strong>10 times</strong> as much energy. So +20 dB = 10 × 10 = <strong>100 times</strong>, and +30 dB = 10³ = <strong>1000 times</strong>.</p>
+  <p class="step">Hearing experts use a safe-listening rule: <strong>8 hours</strong> is the limit at 85 dB, and every <strong>+3 dB halves</strong> the safe time. At 88 dB: 8 ÷ 2 = <strong>4 hours</strong>. (Doctors care about this because the tiny hair cells in your ears do not grow back!)</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 6: Note values, time signatures and tempo</h3>
+  <p class="step">Note lengths are fractions of a <strong>whole note</strong>: half note = 1/2, quarter note = 1/4, eighth note = 1/8. A <strong>dot</strong> adds half the note's value: a dotted half = 1/2 + 1/4 = <strong>3/4</strong>.</p>
+  <p class="step">The <strong>time signature</strong> 4/4 means each bar holds 4 quarter notes (one whole note). In 6/8, each bar holds 6 eighth notes.</p>
+  <p class="step"><strong>Tempo</strong> is measured in <strong>BPM</strong> (beats per minute). At 60 BPM each beat lasts 1 s; at 120 BPM each beat lasts 60 ÷ 120 = <strong>0.5 s</strong>.</p>
+</div>
+
+<h2>Part 2: The Challenge (20 problems)</h2>
+<p>Type your answer and press <strong>Check</strong> (or Enter). Fractions like <span class="mono">3/4</span>, mixed numbers like <span class="mono">1 3/4</span>, or decimals like <span class="mono">1.75</span> are fine. Don't type the units, and you may use spaces or commas in big numbers (1 000 000). Stuck? Press <strong>Hint</strong>. After 2 tries, you can see a full solution.</p>
+
+<div id="questions"></div>
+<div class="box" id="final"></div>
+<div id="scoreBox">
+  <span id="scoreText">Score: 0 / 20 correct</span>
+  <button id="finishBtn" type="button">I'm done! Show my final score</button>
+</div>
+</div>
+
+<script>
+var NAME = "Ace";
+var GRAPH = '<div style="margin:10px 0"><svg viewBox="0 70 680 290" width="100%" style="max-width:680px;background:#fff;border-radius:12px" role="img" aria-label="Bar graph of the sound level in decibels of six everyday sounds"><line x1="60" y1="300.0" x2="620" y2="300.0" stroke="#e0e0e0"/><text x="52" y="304.0" text-anchor="end" font-size="13" fill="#455a64">0</text><line x1="60" y1="258.0" x2="620" y2="258.0" stroke="#e0e0e0"/><text x="52" y="262.0" text-anchor="end" font-size="13" fill="#455a64">30</text><line x1="60" y1="216.0" x2="620" y2="216.0" stroke="#e0e0e0"/><text x="52" y="220.0" text-anchor="end" font-size="13" fill="#455a64">60</text><line x1="60" y1="174.0" x2="620" y2="174.0" stroke="#e0e0e0"/><text x="52" y="178.0" text-anchor="end" font-size="13" fill="#455a64">90</text><line x1="60" y1="132.0" x2="620" y2="132.0" stroke="#e0e0e0"/><text x="52" y="136.0" text-anchor="end" font-size="13" fill="#455a64">120</text><line x1="60" y1="90.0" x2="620" y2="90.0" stroke="#e0e0e0"/><text x="52" y="94.0" text-anchor="end" font-size="13" fill="#455a64">150</text><line x1="60" y1="300.0" x2="620" y2="300.0" stroke="#455a64" stroke-width="2"/><line x1="60" y1="300.0" x2="60" y2="90.0" stroke="#455a64" stroke-width="2"/><rect class="bar" x="78.7" y="258.0" width="56.0" height="42.0" fill="#6a1b9a" rx="4"/><text x="106.7" y="250.0" text-anchor="middle" font-size="13" font-weight="bold" fill="#4a148c">30</text><text x="106.7" y="319.0" text-anchor="middle" font-size="14" font-weight="bold" fill="#263238">Whisper</text><rect class="bar" x="172.0" y="216.0" width="56.0" height="84.0" fill="#6a1b9a" rx="4"/><text x="200.0" y="208.0" text-anchor="middle" font-size="13" font-weight="bold" fill="#4a148c">60</text><text x="200.0" y="319.0" text-anchor="middle" font-size="14" font-weight="bold" fill="#263238">Talking</text><rect class="bar" x="265.3" y="188.0" width="56.0" height="112.0" fill="#6a1b9a" rx="4"/><text x="293.3" y="180.0" text-anchor="middle" font-size="13" font-weight="bold" fill="#4a148c">80</text><text x="293.3" y="319.0" text-anchor="middle" font-size="14" font-weight="bold" fill="#263238">Piano</text><rect class="bar" x="358.7" y="172.6" width="56.0" height="127.4" fill="#6a1b9a" rx="4"/><text x="386.7" y="164.6" text-anchor="middle" font-size="13" font-weight="bold" fill="#4a148c">91</text><text x="386.7" y="319.0" text-anchor="middle" font-size="14" font-weight="bold" fill="#263238">Mower</text><rect class="bar" x="452.0" y="146.0" width="56.0" height="154.0" fill="#6a1b9a" rx="4"/><text x="480.0" y="138.0" text-anchor="middle" font-size="13" font-weight="bold" fill="#4a148c">110</text><text x="480.0" y="319.0" text-anchor="middle" font-size="14" font-weight="bold" fill="#263238">Concert</text><rect class="bar" x="545.3" y="105.4" width="56.0" height="194.6" fill="#6a1b9a" rx="4"/><text x="573.3" y="97.4" text-anchor="middle" font-size="13" font-weight="bold" fill="#4a148c">139</text><text x="573.3" y="319.0" text-anchor="middle" font-size="14" font-weight="bold" fill="#263238">Fireworks</text><text x="340.0" y="342.0" text-anchor="middle" font-size="14" font-weight="bold" fill="#263238">Sound</text><text x="16" y="195.0" text-anchor="middle" font-size="14" font-weight="bold" fill="#263238" transform="rotate(-90 16 195.0)">Sound level (dB)</text></svg></div>';
+var QUESTIONS = [
+ {t:"A tuning fork vibrates at <strong>440 Hz</strong> (the note A that orchestras tune to). How many vibrations does it make in <strong>2.5 seconds</strong>?", a:"1100", u:"vibrations",
+  h:["Hz means vibrations per second.","440 × 2.5 = ?"],
+  s:"440 × 2.5 = 1100 vibrations."},
+ {t:"A cello string vibrates at <strong>250 Hz</strong>. How many <strong>milliseconds</strong> does <em>one</em> vibration take?", a:"4", u:"ms",
+  h:["Period = 1 ÷ frequency.","1 ÷ 250 = 0.004 s. Now change seconds to milliseconds (× 1000)."],
+  s:"1 ÷ 250 = 0.004 s, and 0.004 × 1000 = 4 milliseconds."},
+ {t:"A low A on the piano is <strong>110 Hz</strong>. What is the frequency of the A that is <strong>three octaves higher</strong>?", a:"880", u:"Hz",
+  h:["Each octave up doubles the frequency.","110 × 2 × 2 × 2 = ?"],
+  s:"110 → 220 → 440 → 880 Hz. Three octaves up multiplies by 2³ = 8."},
+ {t:"A note has a frequency of <strong>200 Hz</strong>. What is the frequency of the note a <strong>perfect fifth</strong> higher (ratio 3 : 2)?", a:"300", u:"Hz",
+  h:["Going up a fifth multiplies the frequency by 3/2.","200 × 3 ÷ 2 = ?"],
+  s:"200 × 3/2 = 300 Hz."},
+ {t:"Start at <strong>100 Hz</strong>. Go <strong>up a perfect fifth</strong>, then <strong>up another perfect fifth</strong>, then <strong>down one octave</strong>. What frequency do you end on?", a:"112.5", u:"Hz",
+  h:["Up a fifth means × 1.5. Do it twice: 100 × 1.5 × 1.5.","Down an octave means ÷ 2."],
+  s:"100 × 1.5 = 150, 150 × 1.5 = 225, and 225 ÷ 2 = 112.5 Hz. (That small step, a ratio of 9 : 8, is a whole tone. Ancient musicians built whole scales this way!)"},
+ {t:"A <strong>60 cm</strong> string plays a note of <strong>220 Hz</strong>. With the same tension, how long must the vibrating part be to play <strong>330 Hz</strong>?", a:"40", u:"cm",
+  h:["Frequency and length are inversely proportional: frequency × length stays the same.","220 × 60 = 13 200. Now divide by 330."],
+  s:"220 × 60 = 13 200, and 13 200 ÷ 330 = 40 cm. Check: 330 × 40 = 13 200 ✔ A higher note needs a shorter string."},
+ {t:"Ace's guitar string is <strong>64 cm</strong> long. He wants a note whose frequency is <strong>5/4</strong> of the open string's frequency. How long should the vibrating part be?", a:"51.2", u:"cm",
+  h:["Inverse proportion: if the frequency is multiplied by 5/4, the length is multiplied by 4/5.","64 × 4 ÷ 5 = ?"],
+  s:"64 × 4/5 = 256 ÷ 5 = 51.2 cm. (Pressing the string at a fret shortens the vibrating part. This 5 : 4 ratio is called a major third.)"},
+ {t:"Sound travels at <strong>343 m/s</strong> in air. How many <strong>metres</strong> does a drumbeat travel in <strong>6 seconds</strong>?", a:"2058", u:"m",
+  h:["Distance = speed × time.","343 × 6 = ?"],
+  s:"343 × 6 = 2058 m (just over 2 km)."},
+ {t:"Ace sees a flash of lightning and counts <strong>9 seconds</strong> before he hears the thunder. About how many <strong>kilometres</strong> away is the lightning? Round to the <strong>nearest tenth</strong>.", a:"3.1", u:"km",
+  h:["Distance = 343 × 9 metres.","1 km = 1000 m, so divide your answer by 1000."],
+  s:"343 × 9 = 3087 m = 3.087 km, which rounds to 3.1 km."},
+ {t:"Ace shouts \"Hello!\" towards a cliff and hears the echo <strong>1.2 seconds</strong> later. How many <strong>metres</strong> away is the cliff?", a:"205.8", u:"m",
+  h:["In 1.2 s the sound travels 343 × 1.2 m, but that is <em>there and back</em>.","Divide the total distance by 2."],
+  s:"343 × 1.2 = 411.6 m there and back, so the cliff is 411.6 ÷ 2 = 205.8 m away."},
+ {t:"A flute plays a note of <strong>686 Hz</strong>. Using <span class='mono'>wavelength = speed ÷ frequency</span> with a speed of 343 m/s, how many <strong>centimetres</strong> long is one sound wave?", a:"50", u:"cm",
+  h:["343 ÷ 686 gives the wavelength in metres.","Then change metres to centimetres (× 100)."],
+  s:"343 ÷ 686 = 0.5 m = 50 cm."},
+ {t:"An organ pipe that is closed at one end makes a sound wave <strong>4 times</strong> as long as the pipe. A closed pipe is <strong>0.5 m</strong> long. What frequency does it play? (Use 343 m/s.)", a:"171.5", u:"Hz",
+  h:["Wavelength = 4 × 0.5 m = 2 m.","Rearrange: frequency = speed ÷ wavelength = 343 ÷ 2."],
+  s:"Wavelength = 4 × 0.5 = 2 m, so frequency = 343 ÷ 2 = 171.5 Hz. That's why the lowest notes on a pipe organ need enormous pipes!"},
+ {t:"Sound travels about <strong>1480 m/s</strong> in water and <strong>343 m/s</strong> in air. How many times as fast does sound travel in water? Round to the <strong>nearest tenth</strong>.", a:"4.3", u:"times",
+  h:["Divide the faster speed by the slower speed.","1480 ÷ 343 = 4.31…"],
+  s:"1480 ÷ 343 ≈ 4.31, which rounds to 4.3 times as fast. Whales use this to send songs across huge distances!"},
+ {t:"A waltz is written in <strong>3/4 time</strong> (3 quarter-note beats in every bar). How many <strong>eighth notes</strong> fit in one bar?", a:"6", u:"eighth notes",
+  h:["One quarter note = two eighth notes.","3 × 2 = ?"],
+  s:"3/4 = 6/8, so 6 eighth notes fit in one bar."},
+ {t:"A bar of <strong>4/4 time</strong> holds exactly one whole note. Ace has already written a <strong>half note</strong> and a <strong>dotted quarter note</strong>. What fraction of a whole note is left to fill the bar? (Type a fraction like 1/4.)", a:"1/8", u:"",
+  h:["A dotted quarter = 1/4 + 1/8 = 3/8.","1 − 1/2 − 3/8: use a common denominator of 8."],
+  s:"1 = 8/8. Half note = 4/8 and dotted quarter = 3/8. 8/8 − 4/8 − 3/8 = 1/8, so one eighth note finishes the bar."},
+ {t:"A song has a tempo of <strong>120 BPM</strong> and lasts <strong>3 minutes 30 seconds</strong>. How many beats are in the whole song?", a:"420", u:"beats",
+  h:["3 minutes 30 seconds = 3.5 minutes.","120 × 3.5 = ?"],
+  s:"120 × 3.5 = 420 beats."},
+ {t:"A piece in <strong>4/4 time</strong> has <strong>64 bars</strong> and a tempo of <strong>96 BPM</strong>. How many <strong>seconds</strong> long is it?", a:"160", u:"seconds",
+  h:["Total beats = 64 × 4 = 256.","At 96 BPM, each beat lasts 60 ÷ 96 = 0.625 s."],
+  s:"256 beats × 0.625 s = 160 s (2 minutes 40 seconds). Another way: 256 ÷ 96 = 2⅔ minutes = 160 s."},
+ {t:GRAPH+"The bar graph shows the sound level of six sounds. What is the <strong>mean</strong> (average) sound level, in decibels?", a:"85", u:"dB",
+  h:["Add all six values from the graph: 30 + 60 + 80 + 91 + 110 + 139.","Divide the total by 6."],
+  s:"30 + 60 + 80 + 91 + 110 + 139 = 510, and 510 ÷ 6 = 85 dB. Interesting: that's exactly the level where hearing experts start to worry!"},
+ {t:"Use the graph in question 18 and the safe-listening rule (8 hours at 85 dB, and every +3 dB <strong>halves</strong> the safe time). How many <strong>minutes</strong> can someone safely listen to the lawn mower?", a:"120", u:"minutes",
+  h:["The mower is 91 dB. 91 − 85 = 6 dB, which is two jumps of 3 dB.","Halve 8 hours twice, then change hours to minutes."],
+  s:"91 − 85 = 6 dB = two halvings: 8 h → 4 h → 2 h = 120 minutes. Ear protection is a smart idea!"},
+ {t:"Use the graph in question 18. How many times as much sound energy does the <strong>concert</strong> carry as the <strong>piano</strong>? (Remember: every +10 dB = 10 times.)", a:"1000", u:"times",
+  h:["Concert 110 dB − piano 80 dB = 30 dB.","30 dB = three jumps of 10 dB: 10 × 10 × 10."],
+  s:"110 − 80 = 30 dB, and 10 × 10 × 10 = 1000 times as much energy, even though it only seems a few times louder to our ears."}
+];
+
+var PRAISE = ["Nice work, Ace!","Correct! That answer hits the right note! 🎵","Yes! Maestro Ace strikes again!","Excellent, Ace. That was a tough one!","Right on target! 🎯","Brilliant thinking, future scientist!","Music to my ears! 🎶"];
+var ENCOURAGE = ["Not quite. Check your steps and try again!","Close call. Try again, Ace! Maybe use a hint?","Hmm, not yet. Re-read the question carefully.","Keep going, Ace. Mistakes help your brain grow!"];
+
+function parseAnswer(str){
+  if(str===undefined||str===null) return NaN;
+  var s=String(str).trim().toLowerCase();
+  s=s.replace(/[\u2212\u2013]/g,"-");
+  s=s.replace(/(\d),(?=\d{3}(\D|$))/g,"$1");
+  s=s.replace(/[^0-9.\/\- ]/g," ").replace(/\s+/g," ").trim();
+  s=s.replace(/\s*\/\s*/g,"/");
+  var m;
+  if((m=s.match(/^(-?\d+) (\d+)\/(\d+)$/))){ var w=parseFloat(m[1]),n=parseFloat(m[2]),d=parseFloat(m[3]); if(d===0)return NaN; return w<0? w-n/d : w+n/d; }
+  if((m=s.match(/^(-?\d+(?:\.\d+)?)\/(\d+(?:\.\d+)?)$/))){ var d2=parseFloat(m[2]); if(d2===0)return NaN; return parseFloat(m[1])/d2; }
+  s=s.replace(/ /g,"");
+  if(/^-?(\d+\.?\d*|\.\d+)$/.test(s)) return parseFloat(s);
+  return NaN;
+}
+function isCorrect(input,key){
+  var a=parseAnswer(input), k=parseAnswer(key);
+  if(isNaN(a)) return false;
+  var isInt=Math.abs(k-Math.round(k))<1e-12;
+  var tol=isInt?1e-9:0.005;
+  return Math.abs(a-k)<=tol;
+}
+
+function isRomanCorrect(input,key){ return String(input).replace(/\s+/g,"").toUpperCase()===key; }
+var state=[];
+function render(){
+  var box=document.getElementById("questions");
+  QUESTIONS.forEach(function(q,i){
+    state.push({correct:false,tries:0,hints:0});
+    var d=document.createElement("div");
+    d.className="box q"; d.id="q"+i;
+    d.innerHTML='<div><span class="qnum">'+(i+1)+'.</span> '+q.t+'</div>'+
+      '<div class="row"><input type="text"'+(q.r?' placeholder="e.g. MMXXVI"':'')+' id="in'+i+'" aria-label="Answer to question '+(i+1)+'" autocomplete="off"> <span class="unit">'+q.u+'</span>'+
+      '<button type="button" class="check" data-i="'+i+'">Check</button>'+
+      '<button type="button" class="hint" data-i="'+i+'">Hint 💡</button>'+
+      '<button type="button" class="sol" data-i="'+i+'" style="display:none">Show solution</button></div>'+
+      '<div class="fb" id="fb'+i+'"></div><div class="hints" id="hints'+i+'"></div>'+
+      '<div class="solution" id="sol'+i+'"><strong>Solution:</strong> '+q.s+'</div>';
+    box.appendChild(d);
+  });
+  box.addEventListener("click",function(e){
+    var b=e.target; if(b.tagName!=="BUTTON")return;
+    var i=+b.getAttribute("data-i");
+    if(b.className==="check") check(i);
+    else if(b.className==="hint") hint(i);
+    else if(b.className==="sol") document.getElementById("sol"+i).style.display="block";
+  });
+  box.addEventListener("keydown",function(e){
+    if(e.key==="Enter"&&e.target.tagName==="INPUT"){ check(+e.target.id.slice(2)); }
+  });
+}
+function pick(arr){return arr[Math.floor(Math.random()*arr.length)];}
+function check(i){
+  var val=document.getElementById("in"+i).value;
+  var fb=document.getElementById("fb"+i), card=document.getElementById("q"+i);
+  if(val.trim()===""){fb.className="fb bad";fb.textContent="Type an answer first, Ace!";return;}
+  var isR=!!QUESTIONS[i].r;
+  if(isR&&!/^[ivxlcdm\s]+$/i.test(val)){fb.className="fb bad";fb.textContent="Use only Roman numeral letters: I, V, X, L, C, D, M.";return;}
+  if(!isR&&isNaN(parseAnswer(val))){fb.className="fb bad";fb.textContent="I can't read that as a number. Try something like 42, 3.5, 3/4 or 1 3/4.";return;}
+  state[i].tries++;
+  if(isR?isRomanCorrect(val,QUESTIONS[i].a):isCorrect(val,QUESTIONS[i].a)){
+    state[i].correct=true; card.className="box q right"; fb.className="fb good";
+    fb.textContent="✅ "+pick(PRAISE)+(state[i].tries===1?" (first try!)":"");
+  } else {
+    state[i].correct=false; card.className="box q wrong"; fb.className="fb bad";
+    fb.textContent="❌ "+pick(ENCOURAGE);
+    if(state[i].tries>=2) card.querySelector(".sol").style.display="inline-block";
+  }
+  updateScore();
+}
+function hint(i){
+  var q=QUESTIONS[i], s=state[i], hb=document.getElementById("hints"+i);
+  if(s.hints<q.h.length){
+    var p=document.createElement("p"); p.textContent="💡 Hint "+(s.hints+1)+": "+q.h[s.hints]; hb.appendChild(p); s.hints++;
+  }
+  if(s.hints>=q.h.length) document.querySelector("#q"+i+" .hint").disabled=true;
+  updateScore();
+}
+function counts(){
+  var c=0,first=0,h=0;
+  state.forEach(function(s){ if(s.correct){c++; if(s.tries===1)first++;} h+=s.hints; });
+  return {correct:c,first:first,hints:h};
+}
+function updateScore(){
+  var k=counts();
+  document.getElementById("scoreText").textContent="Score: "+k.correct+" / "+QUESTIONS.length+" correct · hints used: "+k.hints;
+}
+function finish(){
+  var k=counts(), n=QUESTIONS.length, pct=Math.round(100*k.correct/n);
+  var msg;
+  if(pct===100) msg="🏆 PERFECT SCORE! Incredible work, Ace. A real acoustic scientist would be impressed!";
+  else if(pct>=85) msg="🌟 Outstanding, Ace! That's a Grade 6-7 level performance!";
+  else if(pct>=65) msg="💪 Great effort, Ace! Review the ones you missed and try them again.";
+  else if(pct>=40) msg="👍 Good start, Ace! These problems are tough. Use the hints and solutions to learn the tricks, then try again.";
+  else msg="🌱 These are challenge problems, well above grade level. Every musician started as a beginner! Go through the worked examples and try again, Ace!";
+  var f=document.getElementById("final");
+  f.style.display="block";
+  f.innerHTML="<h2 style='border:none;margin-top:0'>Final Score: "+k.correct+" / "+n+" ("+pct+"%)</h2>"+
+    "<p>Correct on the first try: "+k.first+" · Hints used: "+k.hints+"</p><p>"+msg+"</p>"+
+    "<p style='font-size:.85em;color:#546e7a'>Finished on "+new Date().toLocaleString("en-CA")+"</p>";
+  f.scrollIntoView({behavior:"smooth"});
+}
+render();
+updateScore();
+document.getElementById("finishBtn").addEventListener("click",finish);
+</script>
+</body>
+</html>

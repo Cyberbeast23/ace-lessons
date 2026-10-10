@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Writing (Oct. 10): Music Review (Be the Critic) + Grammar Clinic</title>
+<style>
+  body{font-family:"Segoe UI",Verdana,Arial,sans-serif;font-size:20px;line-height:1.6;margin:0;background:#fff8f0;color:#2c2416}
+  .wrap{max-width:880px;margin:0 auto;padding:20px 18px 80px}
+  a.home{font-size:.9em;color:#bf360c}
+  h1{color:#e65100;font-size:2em;margin:10px 0}
+  h2{color:#ef6c00;margin-top:36px;border-bottom:3px solid #ffcc80;padding-bottom:4px}
+  h3{color:#ef6c00}
+  .box{background:#fff;border-radius:16px;padding:18px 22px;margin:16px 0;box-shadow:0 3px 10px rgba(0,0,0,.07)}
+  .tipbox{background:#fff8e1;border-left:8px solid #ffb300}
+  .senses{display:grid;gap:8px;margin:10px 0;grid-template-columns:repeat(auto-fit,minmax(140px,1fr))}
+  .senses .side{border-radius:14px;padding:10px 16px;background:#fff3e0}
+  .ts{background:#ffcc80;border-radius:5px;padding:1px 3px}
+  .ev{background:#c8e6c9;border-radius:5px;padding:1px 3px}
+  .ex{background:#ffe0b2;border-radius:5px;padding:1px 3px}
+  .cs{background:#e1bee7;border-radius:5px;padding:1px 3px}
+  .legend span{display:inline-block;margin:4px 8px 4px 0;font-size:.85em}
+  .model{font-family:Georgia,"Times New Roman",serif;font-size:1.05em;line-height:1.9}
+  .row{padding:10px 6px;border-bottom:1px dashed #ddd}
+  .row.right{background:#f1f8e9} .row.wrong{background:#fff5f5}
+  select{font-size:.9em;padding:5px 8px;border-radius:8px;border:2px solid #ffb74d;font-family:inherit}
+  .q{border-left:8px solid #b0bec5}
+  .q.right{border-left-color:#43a047;background:#f1f8e9}
+  .q.wrong{border-left-color:#e53935;background:#fff5f5}
+  .opt{display:block;width:100%;text-align:left;font-size:.95em;background:#fafafa;border:2px solid #e0e0e0;border-radius:10px;padding:8px 14px;margin:8px 0;cursor:pointer;font-family:inherit}
+  .opt:hover{border-color:#ffb74d;background:#fff}
+  .opt.sel-right{background:#c8e6c9;border-color:#43a047}
+  .opt.sel-wrong{background:#ffcdd2;border-color:#e53935}
+  .fb{margin-top:6px;font-weight:bold}
+  .fb.good{color:#2e7d32} .fb.bad{color:#c62828}
+  .explain{font-weight:normal;color:#e65100}
+  .bad-sent{font-family:Consolas,"Courier New",monospace;background:#ffebee;padding:6px 10px;border-radius:8px;display:inline-block;margin:6px 0}
+  input.fix{width:100%;box-sizing:border-box;font-size:1em;padding:8px 12px;border:2px solid #ffb74d;border-radius:10px;font-family:inherit}
+  button{font-size:.95em;padding:8px 16px;border:none;border-radius:10px;cursor:pointer;font-weight:bold;font-family:inherit}
+  .go{background:#ef6c00;color:#fff} .go:hover{background:#e65100}
+  .hint{background:#ffe082;color:#5d4037}
+  .blue{background:#1e88e5;color:#fff}
+  .purple{background:#8e24aa;color:#fff}
+  .grey{background:#cfd8dc;color:#263238}
+  .btnrow{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px}
+  textarea{width:100%;box-sizing:border-box;min-height:300px;font-size:1.05em;line-height:1.7;font-family:Georgia,"Times New Roman",serif;padding:14px;border:3px solid #ffb74d;border-radius:12px}
+  textarea:focus{outline:none;border-color:#ef6c00}
+  .counter{display:flex;flex-wrap:wrap;gap:20px;align-items:center;margin:8px 0;font-weight:bold}
+  .meter{flex:1;min-width:200px;height:18px;background:#e0e0e0;border-radius:9px;overflow:hidden}
+  .meter div{height:100%;width:0;background:#ffb300;transition:width .2s}
+  .checklist label{display:block;padding:6px 4px;cursor:pointer}
+  .checklist input{transform:scale(1.4);margin-right:10px}
+  .prompts label{display:block;background:#fff3e0;border-radius:10px;padding:10px 14px;margin:8px 0;cursor:pointer}
+  .prompts input{transform:scale(1.3);margin-right:8px}
+  #scoreBox{position:sticky;bottom:0;background:#e65100;color:#fff;border-radius:16px 16px 0 0;padding:12px 20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-top:30px}
+  .w5{display:grid;gap:8px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));margin:10px 0}
+  .w5 label{display:block;font-weight:bold;color:#e65100}
+  .w5 input{width:100%;box-sizing:border-box;font-size:.95em;padding:6px 10px;border:2px solid #ffb74d;border-radius:8px;font-family:inherit}
+  #printArea{display:none}
+  @media print{
+    body{background:#fff;font-size:14pt}
+    .wrap,#scoreBox{display:none !important}
+    #printArea{display:block;font-family:Georgia,serif;line-height:1.8}
+    #printArea h1{font-size:18pt;margin:0 0 6pt}
+    #printArea .meta{font-size:11pt;color:#444}
+    #printArea .text{white-space:pre-wrap;border-top:1px solid #999;padding-top:10pt;margin-top:10pt}
+    #printArea .lines{margin-top:24pt;border-top:1px solid #999;padding-top:6pt;font-size:11pt}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+<a class="home" href="../../index.html">&larr; Back to all lessons</a>
+<h1>✍️ Writing Week 13: Music Review: Be the Critic 🎧</h1>
+<p>Yesterday you wrote clear instructions. Today, Ace, you'll write like a <strong>music critic</strong>. A <strong>review</strong> (also called a <strong>critique</strong>) tells readers what a piece of music is like and whether it's worth their time. A great review does two jobs at once: it <strong>describes</strong> the music so vividly that readers can almost hear it, and it gives an <strong>opinion backed by evidence</strong>. You'll learn how to use music vocabulary, sensory comparisons, and fair criticism. Then you'll review a piece of music yourself.</p>
+
+<h2>Part 1: The Lesson</h2>
+<div class="box">
+  <h3 style="margin-top:0">A music review has five parts 🎼</h3>
+  <p>Readers want to know what the music is, what it sounds like, and whether they should listen:</p>
+  <div class="senses">
+    <div class="side"><strong>1. Title + introduction:</strong> a catchy title, a hook, and the facts: the piece's name, who wrote or performs it, and its genre</div>
+    <div class="side"><strong>2. Description:</strong> what you actually hear: instruments, tempo, dynamics (loud and soft), melody, rhythm, and mood</div>
+    <div class="side"><strong>3. Opinion with evidence:</strong> what works best, and <em>why</em>, pointing to specific moments</div>
+    <div class="side"><strong>4. Criticism:</strong> a fair, respectful point about what could be better</div>
+    <div class="side"><strong>5. Recommendation + rating:</strong> who would enjoy it, and a score such as 4 out of 5 stars</div>
+  </div>
+  <h3>Five critic moves</h3>
+  <ul>
+    <li><strong>Use music words:</strong> <em>tempo</em> (speed), <em>dynamics</em> (loudness), <em>crescendo</em> (getting gradually louder), <em>melody</em> (the tune), <em>rhythm</em> (the pattern of beats), <em>percussion</em>, <em>strings</em>, <em>brass</em>, <em>woodwinds</em>.</li>
+    <li><strong>Show, don't just tell:</strong> replace tired words like <em>good</em>, <em>nice</em> and <em>cool</em> with precise adjectives and comparisons. <em>"The cymbals crashed like waves against rocks"</em> beats <em>"the cymbals were good."</em></li>
+    <li><strong>Back every opinion with evidence:</strong> <em>"The ending is thrilling <strong>because</strong> the tempo speeds up until..."</em> An opinion without a reason is just a guess.</li>
+    <li><strong>Be fair:</strong> even a five-star piece can have a weak moment. A trustworthy critic is honest <em>and</em> respectful: criticize the music, never the people.</li>
+    <li><strong>Format titles correctly:</strong> put the names of <strong>songs and short pieces in quotation marks</strong> (<em>"Northern Lights"</em>) and the names of <strong>albums, operas and long works in italics</strong> (or underline them when writing by hand).</li>
+  </ul>
+  <p><strong>Grown-up words:</strong> a <strong>subjective</strong> statement is an opinion (<em>"the melody is beautiful"</em>); an <strong>objective</strong> statement is a fact anyone can check (<em>"the piece lasts about two and a half minutes"</em>). Strong reviews mix both.</p>
+</div>
+
+<div class="box">
+  <h3 style="margin-top:0">Model Music Review (short version)</h3>
+  <p class="legend"><span class="ts">Title + introduction</span><span class="ev">Description</span><span class="ex">Opinion with evidence + criticism</span><span class="cs">Recommendation + rating</span></p>
+  <p class="model">
+    <span class="ts"><strong>Review: A Sneaky Song That Explodes</strong><br>What if a piece of music could tiptoe and then stampede? "In the Hall of the Mountain King," written by the Norwegian composer Edvard Grieg in the 1870s, is an orchestral piece that does exactly that in under three minutes.</span><br>
+    <span class="ev">It begins with low, sneaky notes in the bassoons and cellos, like trolls creeping through a dark cave. The same short melody repeats again and again, but each time the tempo gets a little faster and the dynamics grow louder. By the end, the whole orchestra is racing, and the crashing cymbals and pounding drums sound like an avalanche.</span><br>
+    <span class="ex">The best part is the enormous crescendo, because you can feel the tension building in your chest. However, the melody repeats so many times that the middle can feel slightly predictable.</span><br>
+    <span class="cs">Overall, I give it four and a half stars out of five. I recommend it to anyone who thinks orchestra music is boring, especially if you like suspenseful movie soundtracks.</span>
+  </p>
+  <p><strong>Notice:</strong> The introduction gives facts (title in quotation marks, composer, genre, length), the description uses music words (<em>tempo, dynamics, crescendo</em>) and a simile, every opinion has a <em>because</em>, and the criticism is fair and specific.</p>
+</div>
+
+<h2>Part 2: Name That Review Part</h2>
+<div class="box">
+  <p>Each line comes from a student's review called <em>Our School Band Rocks the Gym</em>. Choose which <strong>part of the review</strong> it belongs in.</p>
+  <div id="labelRows"></div>
+  <div class="btnrow"><button type="button" class="go" id="checkLabels">Check my answers</button></div>
+  <div class="fb" id="labelFb"></div>
+</div>
+
+<h2>Part 3: Grammar Clinic 🎚️</h2>
+<div class="box tipbox">A sound engineer listens for every wrong note. You're the sound engineer for these sentences! <strong>Section A:</strong> pick the correct sentence. <strong>Section B:</strong> type the sentence again with <em>all</em> mistakes fixed. We use <strong>Canadian spelling</strong> (favourite, theatre, colour, honour). Today, watch <strong>comparative and superlative adjectives</strong> (louder, loudest, more beautiful, never "more louder"), <strong>good vs. well</strong>, <strong>subject–verb agreement</strong> with tricky subjects like <em>each of</em> and <em>the sound of</em>, <strong>quotation marks for song titles</strong>, <strong>hyphens in compound adjectives</strong> (a three-minute song), <strong>than / then</strong>, and <strong>a / an</strong>.</div>
+<h3>Section A: Pick the correct sentence</h3>
+<div id="gmc"></div>
+<h3>Section B: Fix the sentence</h3>
+<p>Retype the whole sentence correctly, with capital letters and punctuation. Each one has <strong>at least two</strong> mistakes.</p>
+<div id="gfix"></div>
+
+<h2>Part 4: Your Turn to Write</h2>
+<div class="box">
+  <h3 style="margin-top:0">Step 1: Choose what to review</h3>
+  <div class="prompts" id="prompts">
+    <label><input type="radio" name="prompt" value="Review A: A song or piece of music I know really well." checked> 🎧 <strong>Review A:</strong> a song or piece of music you know really well (any style: pop, movie soundtrack, video-game music, classical, anything!). Listen to it again carefully before you write.</label>
+    <label><input type="radio" name="prompt" value="Review B: A classical or traditional piece I listened to with Dad."> 🎻 <strong>Review B:</strong> with Dad's help, listen to a classical or traditional piece you've never heard, such as Grieg's "In the Hall of the Mountain King" or a piece played on the erhu or guzheng, and review it.</label>
+    <label><input type="radio" name="prompt" value="Review C: A live performance I have seen or heard."> 🥁 <strong>Review C:</strong> a live performance you've seen or heard: a school concert, a street musician, a family member playing, or a show.</label>
+  </div>
+  <p><strong>Plan your review:</strong> jot down a few words for each box. (These notes save with your writing.)</p>
+  <div class="w5" id="w5">
+    <div><label for="w5piece">Title, composer or performer, genre</label><input id="w5piece" type="text" autocomplete="off"></div>
+    <div><label for="w5sounds">Instruments, tempo, dynamics</label><input id="w5sounds" type="text" autocomplete="off"></div>
+    <div><label for="w5mood">Mood + one simile</label><input id="w5mood" type="text" autocomplete="off"></div>
+    <div><label for="w5best">Best moment + why (evidence)</label><input id="w5best" type="text" autocomplete="off"></div>
+    <div><label for="w5weak">What could be better?</label><input id="w5weak" type="text" autocomplete="off"></div>
+    <div><label for="w5rating">Rating + who would enjoy it</label><input id="w5rating" type="text" autocomplete="off"></div>
+  </div>
+
+  <h3>Step 2: Write your music review</h3>
+  <p><strong>Goal:</strong> a review of <strong>200 to 300 words</strong> with a catchy <strong>title</strong>, an <strong>introduction</strong> with a hook and the facts, a <strong>description</strong> that uses at least <strong>three music words</strong> (tempo, dynamics, melody, rhythm, crescendo...) and <strong>one simile</strong>, an <strong>opinion</strong> backed by evidence (use <em>because</em>), one fair <strong>criticism</strong>, and a <strong>recommendation with a rating</strong>.</p>
+  <p><button type="button" class="hint" id="templateBtn">📋 Add the review headings for me</button></p>
+  <label for="essay"><strong>Write here, Ace:</strong></label>
+  <textarea id="essay" placeholder="Title: Review: ..."></textarea>
+  <div class="counter">
+    <span id="wc">0 words</span>
+    <span id="sc">0 sentences</span>
+    <div class="meter" aria-hidden="true"><div id="meterBar"></div></div>
+  </div>
+  <div class="fb" id="wcMsg">Aim for 200 to 300 words.</div>
+  <p style="font-size:.8em;color:#607d8b" id="saveNote">Your writing is saved automatically in this browser as you type.</p>
+
+  <h3>Self-check before you finish ✅</h3>
+  <div class="checklist" id="checklist">
+    <label><input type="checkbox"> My <strong>title</strong> is catchy, and my <strong>introduction</strong> has a hook plus the piece's name, composer or performer, and genre.</label>
+    <label><input type="checkbox"> I put the song's title in <strong>quotation marks</strong> (or the album's title in italics or underlined).</label>
+    <label><input type="checkbox"> My <strong>description</strong> uses at least <strong>three music words</strong> (tempo, dynamics, melody, rhythm, crescendo...).</label>
+    <label><input type="checkbox"> I used at least <strong>one simile</strong> or sensory comparison instead of words like "good" or "nice."</label>
+    <label><input type="checkbox"> Every <strong>opinion</strong> has <strong>evidence</strong>: a specific moment and a <em>because</em>.</label>
+    <label><input type="checkbox"> I included one <strong>fair, respectful criticism</strong>.</label>
+    <label><input type="checkbox"> I ended with a <strong>recommendation</strong> and a <strong>rating</strong>.</label>
+    <label><input type="checkbox"> I checked <strong>comparatives</strong> (no "more louder"), <strong>good / well</strong>, <strong>than / then</strong>, <strong>hyphens</strong>, and <strong>Canadian spelling</strong> (favourite, theatre).</label>
+  </div>
+  <div class="btnrow">
+    <button type="button" class="blue" id="downloadBtn">⬇️ Download my writing (for Dad)</button>
+    <button type="button" class="purple" id="printBtn">🖨️ Print my writing</button>
+    <button type="button" class="grey" id="clearBtn">Start over</button>
+  </div>
+  <div class="fb" id="doneMsg"></div>
+</div>
+
+<div id="scoreBox"><span id="scoreText"></span><span>Keep going, critic Ace! 🎧</span></div>
+</div>
+
+<div id="printArea"></div>
+
+<script>
+var NAME="Ace";
+var PRAISE=["Nice work, Ace!","Correct! Great editing eye!","Yes! Ace fixed it!","Excellent, critic Ace!","Five stars! ⭐"];
+function pick(a){return a[Math.floor(Math.random()*a.length)];}
+
+var LABELS=["Title","Introduction","Description","Opinion with evidence","Criticism","Recommendation"];
+var LABEL_ITEMS=[
+ {s:"Review: Our School Band Rocks the Gym", a:"Title"},
+ {s:"Last Friday, forty nervous musicians turned our school gym into a concert hall, and the result was surprisingly impressive.", a:"Introduction"},
+ {s:"The concert opened with a slow, gentle melody on the flutes, and then the drums thundered in like a summer storm.", a:"Description"},
+ {s:"The best moment was the final song, because the whole band built a crescendo that made the audience leap to its feet.", a:"Opinion with evidence"},
+ {s:"However, the trumpets were sometimes so loud that they drowned out the soft clarinets.", a:"Criticism"},
+ {s:"I give the concert four stars out of five, and I recommend it to anyone who thinks school music is boring.", a:"Recommendation"}
+];
+var labelScore=0, labelChecked=false;
+function buildLabels(){
+  var box=document.getElementById("labelRows");
+  LABEL_ITEMS.forEach(function(it,i){
+    var d=document.createElement("div"); d.className="row"; d.id="lr"+i;
+    var sel='<select id="ls'+i+'" aria-label="Job of sentence '+(i+1)+'"><option value="">- choose -</option>';
+    LABELS.forEach(function(l){sel+='<option>'+l+'</option>';});
+    sel+='</select>';
+    d.innerHTML='<strong>'+(i+1)+'.</strong> '+it.s+'<br>'+sel+' <span id="lm'+i+'"></span>';
+    box.appendChild(d);
+  });
+}
+function checkLabels(){
+  var sc=0;
+  LABEL_ITEMS.forEach(function(it,i){
+    var ok=document.getElementById("ls"+i).value===it.a; if(ok)sc++;
+    document.getElementById("lr"+i).className="row "+(ok?"right":"wrong");
+    document.getElementById("lm"+i).textContent=ok?"✅":"❌";
+  });
+  labelScore=sc; labelChecked=true;
+  var fb=document.getElementById("labelFb");
+  if(sc===LABEL_ITEMS.length){fb.className="fb good";fb.textContent="🌟 "+sc+" / "+LABEL_ITEMS.length+". "+pick(PRAISE)+" You know exactly how a review is built!";}
+  else{fb.className="fb bad";fb.textContent=sc+" / "+LABEL_ITEMS.length+". Hint: a name with no period = title; the facts about what is being reviewed = introduction; what you can actually hear = description; \u201cthe best\u201d plus \u201cbecause\u201d = opinion with evidence; \u201cHowever\u201d plus a weakness = criticism; stars and who should listen = recommendation. Fix the ❌ ones and check again.";}
+  updateScore();
+}
+
+var GMC=[
+ {q:"Which sentence uses a <strong>comparative adjective</strong> correctly?",
+  o:["The drums were more louder than the piano.","The drums were loudest than the piano.","The drums were louder than the piano.","The drums were more loud then the piano."],
+  a:2,e:"Short adjectives add <em>-er</em> to compare two things: <em>louder than</em>. Never use <em>more</em> and <em>-er</em> together, and use <em>than</em> (not <em>then</em>) for comparing."},
+ {q:"Which sentence uses a <strong>superlative adjective</strong> correctly?",
+  o:["That was the most beautiful song on the whole album.","That was the beautifullest song on the whole album.","That was the most beautifulest song on the whole album.","That was the more beautiful song on the whole album."],
+  a:0,e:"Long adjectives use <em>most</em> (not <em>-est</em>) to compare three or more things: <em>the most beautiful</em>."},
+ {q:"Which sentence uses <em>good</em> and <em>well</em> correctly?",
+  o:["The choir sang good, and the soloist sounded well.","The choir sang well, and the soloist sounded good.","The choir sang good, and the soloist sounded good.","The choir sang well, and the soloist sounded goodly."],
+  a:1,e:"<em>Well</em> is an adverb that describes <em>how</em> someone does an action (sang well). <em>Good</em> is an adjective that follows linking verbs like <em>sounded, seemed, was</em> (sounded good)."},
+ {q:"Which sentence has correct <strong>subject–verb agreement</strong>?",
+  o:["Each of the songs have a catchy chorus.","Each of the songs has a catchy chorus.","Each of the song have a catchy chorus.","Each of the songs are having a catchy chorus."],
+  a:1,e:"The subject is <em>each</em> (one at a time), which is singular, so it takes <em>has</em>. Don't be fooled by <em>songs</em> right before the verb!"},
+ {q:"Which sentence has correct <strong>subject–verb agreement</strong>?",
+  o:["The sound of the drums fill the whole hall.","The sound of the drums are filling the whole hall.","The sound of the drums fills the whole hall.","The sound of the drums filling the whole hall."],
+  a:2,e:"The subject is <em>sound</em> (singular), not <em>drums</em>. The words <em>of the drums</em> are just a phrase describing it, so the verb is <em>fills</em>. Cover up the <em>of</em> phrase to find the real subject!"},
+ {q:"Which sentence punctuates the <strong>song title</strong> correctly?",
+  o:["My favourite song on the album is \"Northern Lights.\"","My favourite song on the album is Northern Lights\".\"","My favourite song on the album is \"northern lights\".","My \"favourite song\" on the album is Northern Lights."],
+  a:0,e:"Song titles go in quotation marks, with each important word capitalized. In Canadian and American style, a period at the end goes <em>inside</em> the closing quotation mark."},
+ {q:"Which sentence uses <strong>hyphens</strong> in compound adjectives correctly?",
+  o:["It is a four minute song with a well known chorus.","It is a four-minute song with a well-known chorus.","It is a four-minutes song with a well known-chorus.","It is a four minute-song with a well-known-chorus."],
+  a:1,e:"When two words work together as one adjective <em>before</em> a noun, join them with a hyphen: <em>a four-minute song, a well-known chorus</em>. (Notice it's <em>minute</em>, not <em>minutes</em>.)"}
+];
+var gmcState=GMC.map(function(){return{answered:false,firstRight:false,done:false};});
+function buildGMC(){
+  var box=document.getElementById("gmc");
+  GMC.forEach(function(it,i){
+    var d=document.createElement("div"); d.className="box q"; d.id="g"+i;
+    var h='<div><strong>'+(i+1)+'.</strong> '+it.q+'</div>';
+    it.o.forEach(function(o,j){h+='<button type="button" class="opt" data-i="'+i+'" data-j="'+j+'">'+String.fromCharCode(65+j)+'. '+o+'</button>';});
+    h+='<div class="fb" id="gfb'+i+'"></div>';
+    d.innerHTML=h; box.appendChild(d);
+  });
+  box.addEventListener("click",function(e){
+    var b=e.target.closest?e.target.closest(".opt"):e.target; if(!b||!b.classList.contains("opt"))return;
+    var i=+b.getAttribute("data-i"), j=+b.getAttribute("data-j"), st=gmcState[i], it=GMC[i];
+    if(st.done)return;
+    var ok=j===it.a; if(!st.answered){st.answered=true;st.firstRight=ok;}
+    var fb=document.getElementById("gfb"+i);
+    if(ok){st.done=true;b.classList.add("sel-right");document.getElementById("g"+i).className="box q right";fb.className="fb good";fb.innerHTML="✅ "+pick(PRAISE)+' <span class="explain">'+it.e+'</span>';}
+    else{b.classList.add("sel-wrong");document.getElementById("g"+i).className="box q wrong";fb.className="fb bad";fb.textContent="❌ Not quite, Ace. Look closely and try again.";}
+    updateScore();
+  });
+}
+
+var GFIX=[
+ {bad:"the band played good, but the singer was more louder then the guitars.",
+  ok:["The band played well, but the singer was louder than the guitars."],
+  hint:"Capitalize the first word. Use the adverb that describes how they played. Fix the double comparative, and use the comparing word \"than.\""},
+ {bad:"Each of the songs on the album have a catchy chorus and a upbeat rhythm.",
+  ok:["Each of the songs on the album has a catchy chorus and an upbeat rhythm."],
+  hint:"The subject is \"each,\" which is singular. Use \"an\" before a word that starts with a vowel sound."},
+ {bad:'My favourite song is "Rain on the Roof", it is a three minute masterpiece.',
+  ok:["My favourite song is \"Rain on the Roof.\" It is a three-minute masterpiece.", "My favourite song is \"Rain on the Roof\"; it is a three-minute masterpiece.", "My favourite song is \"Rain on the Roof,\" and it is a three-minute masterpiece."],
+  hint:"A comma can't join two complete sentences (comma splice): use a period, a semicolon, or \", and.\" The period or comma goes inside the closing quotation mark. Join a compound adjective before a noun with a hyphen."},
+ {bad:"My favorite part was when the hole orchestra filled the theater with sound.",
+  ok:["My favourite part was when the whole orchestra filled the theatre with sound."],
+  hint:"Fix two words to Canadian spelling, and one homophone (a word that sounds the same but means something different)."}
+];
+
+var gfixState=GFIX.map(function(){return{tries:0,correct:false,firstRight:false};});
+function norm(s){return s.replace(/[\u2018\u2019\u02BC]/g,"'").replace(/[\u201C\u201D]/g,'"').replace(/\s+/g," ").trim();}
+function checkFixAnswer(i,val){var v=norm(val);return GFIX[i].ok.some(function(a){return norm(a)===v;});}
+function buildGFix(){
+  var box=document.getElementById("gfix");
+  GFIX.forEach(function(it,i){
+    var d=document.createElement("div"); d.className="box q"; d.id="f"+i;
+    d.innerHTML='<div><strong>'+(i+1)+'.</strong> Fix: <span class="bad-sent">'+it.bad+'</span></div>'+
+     '<input class="fix" type="text" id="fi'+i+'" autocomplete="off" spellcheck="false" aria-label="Corrected sentence '+(i+1)+'">'+
+     '<div class="btnrow"><button type="button" class="go" data-act="check" data-i="'+i+'">Check</button><button type="button" class="hint" data-act="hint" data-i="'+i+'">Hint 💡</button><button type="button" class="grey" data-act="show" data-i="'+i+'" style="display:none">Show answer</button></div>'+
+     '<div class="fb" id="ffb'+i+'"></div>';
+    box.appendChild(d);
+  });
+  box.addEventListener("click",function(e){
+    var b=e.target; if(b.tagName!=="BUTTON")return;
+    var i=+b.getAttribute("data-i"), act=b.getAttribute("data-act"), fb=document.getElementById("ffb"+i);
+    if(act==="hint"){fb.className="fb";fb.style.color="#5d4037";fb.textContent="💡 "+GFIX[i].hint;return;}
+    fb.style.color="";
+    if(act==="show"){fb.className="fb";fb.innerHTML='Answer: <em>'+GFIX[i].ok[0]+'</em>'+(GFIX[i].ok.length>1?' (other correct versions are accepted too)':'');return;}
+    fixCheck(i);
+  });
+  box.addEventListener("keydown",function(e){if(e.key==="Enter"&&e.target.classList.contains("fix"))fixCheck(+e.target.id.slice(2));});
+}
+function fixCheck(i){
+  var val=document.getElementById("fi"+i).value, fb=document.getElementById("ffb"+i), st=gfixState[i];
+  fb.style.color="";
+  if(!val.trim()){fb.className="fb bad";fb.textContent="Type the corrected sentence first, Ace!";return;}
+  st.tries++;
+  if(checkFixAnswer(i,val)){ if(st.tries===1)st.firstRight=true; st.correct=true; document.getElementById("f"+i).className="box q right"; fb.className="fb good"; fb.textContent="✅ "+pick(PRAISE); }
+  else { st.correct=false; document.getElementById("f"+i).className="box q wrong"; fb.className="fb bad"; fb.textContent="❌ Not quite. Check every capital letter, apostrophe, comma, and spelling. Try again!"; if(st.tries>=2)document.querySelector('#f'+i+' [data-act=show]').style.display="inline-block"; }
+  updateScore();
+}
+
+function updateScore(){
+  var g=0; gmcState.forEach(function(s){if(s.firstRight)g++;});
+  var f=0; gfixState.forEach(function(s){if(s.correct)f++;});
+  var total=LABEL_ITEMS.length+GMC.length+GFIX.length, got=labelScore+g+f;
+  document.getElementById("scoreText").textContent="Score: "+got+" / "+total+"  (labels "+(labelChecked?labelScore:"-")+"/"+LABEL_ITEMS.length+" · grammar A "+g+"/"+GMC.length+" · grammar B "+f+"/"+GFIX.length+")";
+}
+
+var W5=["piece","sounds","mood","best","weak","rating"];
+function w5Save(){try{localStorage.setItem(KEY+"-5w",JSON.stringify(W5.map(function(k){return document.getElementById("w5"+k).value;})));}catch(e){}}
+function w5Restore(){try{var d=JSON.parse(localStorage.getItem(KEY+"-5w")||"null");if(d)d.forEach(function(x,i){document.getElementById("w5"+W5[i]).value=x;});}catch(e){}}
+function w5Summary(){return W5.map(function(k){return k.charAt(0).toUpperCase()+k.slice(1)+": "+document.getElementById("w5"+k).value;}).join("\n");}
+function addTemplate(){
+  var t=document.getElementById("essay");
+  var tpl="Title: Review: \n\nIntroduction (hook + title, composer or performer, genre): \n\nDescription (instruments, tempo, dynamics, melody, mood, simile): \n\nOpinion with evidence (best moment + because): \n\nCriticism (what could be better): \n\nRecommendation and rating: ";
+  if(t.value.trim()&&!confirm("Add the headings below what you've already written?"))return;
+  t.value=(t.value.trim()?t.value.replace(/\s+$/,"")+"\n\n":"")+tpl; updateCount(); t.focus();
+}
+var KEY="ace-writing-2026-10-10";
+function countWords(t){var m=t.trim().match(/[A-Za-zÀ-ÿ0-9]+(?:['’\-][A-Za-zÀ-ÿ0-9]+)*/g);return m?m.length:0;}
+function countSentences(t){var m=t.match(/[^.!?]*[A-Za-z0-9][^.!?]*[.!?]+/g);return m?m.length:0;}
+function currentPrompt(){var r=document.querySelector('input[name=prompt]:checked');return r?r.value:"";}
+function updateCount(){
+  var t=document.getElementById("essay").value, w=countWords(t), s=countSentences(t);
+  document.getElementById("wc").textContent=w+(w===1?" word":" words");
+  document.getElementById("sc").textContent=s+(s===1?" sentence":" sentences");
+  var bar=document.getElementById("meterBar"); bar.style.width=Math.min(100,w/300*100)+"%";
+  var msg=document.getElementById("wcMsg");
+  if(w<200){bar.style.background="#ffb300";msg.className="fb";msg.textContent=w===0?"Aim for 200 to 300 words.":"Keep going, Ace! "+(200-w)+" more words to reach the goal.";}
+  else if(w<=300){bar.style.background="#43a047";msg.className="fb good";msg.textContent="🎯 You're in the target zone! Nice work, Ace!";}
+  else{bar.style.background="#1e88e5";msg.className="fb";msg.textContent="Wow, that's a lot of writing! Good critics keep reviews tight. Could any sentences be cut?";}
+  try{localStorage.setItem(KEY,JSON.stringify({text:t,prompt:currentPrompt(),checks:checkStates()}));}catch(e){document.getElementById("saveNote").textContent="(This browser can't auto-save here, so use the Download button before closing!)";}
+}
+function checkStates(){return Array.prototype.map.call(document.querySelectorAll("#checklist input"),function(c){return c.checked;});}
+function checklistText(){
+  return Array.prototype.map.call(document.querySelectorAll("#checklist label"),function(l){return (l.querySelector("input").checked?"[x] ":"[ ] ")+l.textContent.trim();}).join("\n");
+}
+function buildReport(){
+  var t=document.getElementById("essay").value;
+  return "Writing Week 13: "+NAME+"\nDate: "+new Date().toLocaleString("en-CA")+"\nPrompt: "+currentPrompt()+
+    "\nWords: "+countWords(t)+"   Sentences: "+countSentences(t)+"\nPlanning notes:\n"+w5Summary()+
+    "\n\n----- "+NAME+"'s writing -----\n\n"+t+"\n\n----- Self-check -----\n"+checklistText()+
+    "\n\n----- Parent feedback -----\n\n\n";
+}
+function download(){
+  var t=document.getElementById("essay").value;
+  if(!t.trim()){document.getElementById("doneMsg").className="fb bad";document.getElementById("doneMsg").textContent="Write something first, Ace!";return;}
+  var blob=new Blob([buildReport().replace(/\n/g,"\r\n")],{type:"text/plain;charset=utf-8"});
+  var a=document.createElement("a"); a.href=URL.createObjectURL(blob); a.download=NAME+"-writing-2026-10-10"+".txt";
+  document.body.appendChild(a); a.click();
+  setTimeout(function(){URL.revokeObjectURL(a.href);a.remove();},1000);
+  var dm=document.getElementById("doneMsg"); dm.className="fb good"; dm.textContent="📄 Saved! Look in your Downloads folder and show Dad. Great job finishing, Ace!";
+}
+function esc(s){return s.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");}
+function printIt(){
+  var t=document.getElementById("essay").value;
+  if(!t.trim()){document.getElementById("doneMsg").className="fb bad";document.getElementById("doneMsg").textContent="Write something first, Ace!";return;}
+  document.getElementById("printArea").innerHTML="<h1>Writing Week 13: "+NAME+"</h1><div class='meta'>"+esc(new Date().toLocaleString("en-CA"))+"<br><strong>Prompt:</strong> "+esc(currentPrompt())+"<br>Words: "+countWords(t)+" · Sentences: "+countSentences(t)+"</div><div class='text'>"+esc(t)+"</div><div class='lines'><strong>Self-check:</strong><br>"+esc(checklistText()).replace(/\n/g,"<br>")+"</div><div class='lines'><strong>Parent feedback:</strong><br><br><br><br></div>";
+  window.print();
+}
+function restore(){
+  try{var d=JSON.parse(localStorage.getItem(KEY)||"null"); if(!d)return;
+    document.getElementById("essay").value=d.text||"";
+    Array.prototype.forEach.call(document.querySelectorAll("input[name=prompt]"),function(r){r.checked=(r.value===d.prompt);});
+    if(!document.querySelector("input[name=prompt]:checked"))document.querySelector("input[name=prompt]").checked=true;
+    var cs=document.querySelectorAll("#checklist input"); (d.checks||[]).forEach(function(v,i){if(cs[i])cs[i].checked=v;});
+  }catch(e){}
+}
+buildLabels(); buildGMC(); buildGFix(); restore(); w5Restore(); updateCount(); updateScore();
+W5.forEach(function(k){document.getElementById("w5"+k).addEventListener("input",w5Save);});
+document.getElementById("templateBtn").addEventListener("click",addTemplate);
+document.getElementById("checkLabels").addEventListener("click",checkLabels);
+document.getElementById("essay").addEventListener("input",updateCount);
+document.getElementById("checklist").addEventListener("change",function(){updateCount(); if(checkStates().every(Boolean)){var dm=document.getElementById("doneMsg");dm.className="fb good";dm.textContent="✅ All boxes checked! Now download or print it for Dad. Awesome work, Ace!";}});
+document.getElementById("prompts").addEventListener("change",updateCount);
+document.getElementById("downloadBtn").addEventListener("click",download);
+document.getElementById("printBtn").addEventListener("click",printIt);
+document.getElementById("clearBtn").addEventListener("click",function(){ if(confirm("Erase your writing and start over?")){document.getElementById("essay").value="";Array.prototype.forEach.call(document.querySelectorAll("#checklist input"),function(c){c.checked=false;});document.getElementById("doneMsg").textContent="";updateCount();} });
+</script>
+</body>
+</html>
