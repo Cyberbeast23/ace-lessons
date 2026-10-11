@@ -6,7 +6,7 @@ TTS voice (Cantonese): zh-HK-HiuMaanNeural
 TTS voice (English in ALL-words.mp3): en-HK-YanNeural
 Rate: slowed (~-20%) for clear listening practice.
 
-Sources: Ace lessons 2026-09-29 (Greetings) + 2026-09-30 (Family Members) + 2026-10-01 (Food) + 2026-10-02 (School) + 2026-10-03 (Body) + 2026-10-04 (Colours) + 2026-10-05 (Sky & Space) + 2026-10-06 (Numbers 11-100) + 2026-10-07 (At the Doctor) + 2026-10-08 (Nature: Mountains & Volcanoes) + 2026-10-09 (Question Words & Secrets) + 2026-10-10 (Music).
+Sources: Ace lessons 2026-09-29 (Greetings) + 2026-09-30 (Family Members) + 2026-10-01 (Food) + 2026-10-02 (School) + 2026-10-03 (Body) + 2026-10-04 (Colours) + 2026-10-05 (Sky & Space) + 2026-10-06 (Numbers 11-100) + 2026-10-07 (At the Doctor) + 2026-10-08 (Nature: Mountains & Volcanoes) + 2026-10-09 (Question Words & Secrets) + 2026-10-10 (Music) + 2026-10-11 (Trains & Travel).
 Numbers 1-10 are already known and not included here.
 
 How to practise:
@@ -503,6 +503,47 @@ Individual files
   Chinese:  打鼓
   Jyutping: daa2 gu2
   English:  play drums
+
+
+97-fo2-ce1-train.mp3
+  Chinese:  火車
+  Jyutping: fo2 ce1
+  English:  train
+
+98-ce1-zaam6-station.mp3
+  Chinese:  車站
+  Jyutping: ce1 zaam6
+  English:  station
+
+99-co5-ride.mp3
+  Chinese:  坐
+  Jyutping: co5
+  English:  ride (sit on)
+
+100-heoi3-go.mp3
+  Chinese:  去
+  Jyutping: heoi3
+  English:  go
+
+101-kan5-near.mp3
+  Chinese:  近
+  Jyutping: kan5
+  English:  near
+
+102-gaa1-naa4-daai6-canada.mp3
+  Chinese:  加拿大
+  Jyutping: gaa1 naa4 daai6
+  English:  Canada
+
+103-tit3-lou6-railway.mp3
+  Chinese:  鐵路
+  Jyutping: tit3 lou6
+  English:  railway
+
+104-gung1-jan4-worker.mp3
+  Chinese:  工人
+  Jyutping: gung1 jan4
+  English:  worker
 
 
 Combined file

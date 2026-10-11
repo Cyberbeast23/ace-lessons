@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Writing (Oct. 11): Historical Letter (A Voice from the Railway) + Grammar Clinic</title>
+<style>
+  body{font-family:"Segoe UI",Verdana,Arial,sans-serif;font-size:20px;line-height:1.6;margin:0;background:#fff8f0;color:#2c2416}
+  .wrap{max-width:880px;margin:0 auto;padding:20px 18px 80px}
+  a.home{font-size:.9em;color:#bf360c}
+  h1{color:#e65100;font-size:2em;margin:10px 0}
+  h2{color:#ef6c00;margin-top:36px;border-bottom:3px solid #ffcc80;padding-bottom:4px}
+  h3{color:#ef6c00}
+  .box{background:#fff;border-radius:16px;padding:18px 22px;margin:16px 0;box-shadow:0 3px 10px rgba(0,0,0,.07)}
+  .tipbox{background:#fff8e1;border-left:8px solid #ffb300}
+  .senses{display:grid;gap:8px;margin:10px 0;grid-template-columns:repeat(auto-fit,minmax(140px,1fr))}
+  .senses .side{border-radius:14px;padding:10px 16px;background:#fff3e0}
+  .ts{background:#ffcc80;border-radius:5px;padding:1px 3px}
+  .ev{background:#c8e6c9;border-radius:5px;padding:1px 3px}
+  .ex{background:#ffe0b2;border-radius:5px;padding:1px 3px}
+  .cs{background:#e1bee7;border-radius:5px;padding:1px 3px}
+  .legend span{display:inline-block;margin:4px 8px 4px 0;font-size:.85em}
+  .model{font-family:Georgia,"Times New Roman",serif;font-size:1.05em;line-height:1.9}
+  .row{padding:10px 6px;border-bottom:1px dashed #ddd}
+  .row.right{background:#f1f8e9} .row.wrong{background:#fff5f5}
+  select{font-size:.9em;padding:5px 8px;border-radius:8px;border:2px solid #ffb74d;font-family:inherit}
+  .q{border-left:8px solid #b0bec5}
+  .q.right{border-left-color:#43a047;background:#f1f8e9}
+  .q.wrong{border-left-color:#e53935;background:#fff5f5}
+  .opt{display:block;width:100%;text-align:left;font-size:.95em;background:#fafafa;border:2px solid #e0e0e0;border-radius:10px;padding:8px 14px;margin:8px 0;cursor:pointer;font-family:inherit}
+  .opt:hover{border-color:#ffb74d;background:#fff}
+  .opt.sel-right{background:#c8e6c9;border-color:#43a047}
+  .opt.sel-wrong{background:#ffcdd2;border-color:#e53935}
+  .fb{margin-top:6px;font-weight:bold}
+  .fb.good{color:#2e7d32} .fb.bad{color:#c62828}
+  .explain{font-weight:normal;color:#e65100}
+  .bad-sent{font-family:Consolas,"Courier New",monospace;background:#ffebee;padding:6px 10px;border-radius:8px;display:inline-block;margin:6px 0}
+  input.fix{width:100%;box-sizing:border-box;font-size:1em;padding:8px 12px;border:2px solid #ffb74d;border-radius:10px;font-family:inherit}
+  button{font-size:.95em;padding:8px 16px;border:none;border-radius:10px;cursor:pointer;font-weight:bold;font-family:inherit}
+  .go{background:#ef6c00;color:#fff} .go:hover{background:#e65100}
+  .hint{background:#ffe082;color:#5d4037}
+  .blue{background:#1e88e5;color:#fff}
+  .purple{background:#8e24aa;color:#fff}
+  .grey{background:#cfd8dc;color:#263238}
+  .btnrow{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px}
+  textarea{width:100%;box-sizing:border-box;min-height:300px;font-size:1.05em;line-height:1.7;font-family:Georgia,"Times New Roman",serif;padding:14px;border:3px solid #ffb74d;border-radius:12px}
+  textarea:focus{outline:none;border-color:#ef6c00}
+  .counter{display:flex;flex-wrap:wrap;gap:20px;align-items:center;margin:8px 0;font-weight:bold}
+  .meter{flex:1;min-width:200px;height:18px;background:#e0e0e0;border-radius:9px;overflow:hidden}
+  .meter div{height:100%;width:0;background:#ffb300;transition:width .2s}
+  .checklist label{display:block;padding:6px 4px;cursor:pointer}
+  .checklist input{transform:scale(1.4);margin-right:10px}
+  .prompts label{display:block;background:#fff3e0;border-radius:10px;padding:10px 14px;margin:8px 0;cursor:pointer}
+  .prompts input{transform:scale(1.3);margin-right:8px}
+  #scoreBox{position:sticky;bottom:0;background:#e65100;color:#fff;border-radius:16px 16px 0 0;padding:12px 20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-top:30px}
+  .w5{display:grid;gap:8px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));margin:10px 0}
+  .w5 label{display:block;font-weight:bold;color:#e65100}
+  .w5 input{width:100%;box-sizing:border-box;font-size:.95em;padding:6px 10px;border:2px solid #ffb74d;border-radius:8px;font-family:inherit}
+  #printArea{display:none}
+  @media print{
+    body{background:#fff;font-size:14pt}
+    .wrap,#scoreBox{display:none !important}
+    #printArea{display:block;font-family:Georgia,serif;line-height:1.8}
+    #printArea h1{font-size:18pt;margin:0 0 6pt}
+    #printArea .meta{font-size:11pt;color:#444}
+    #printArea .text{white-space:pre-wrap;border-top:1px solid #999;padding-top:10pt;margin-top:10pt}
+    #printArea .lines{margin-top:24pt;border-top:1px solid #999;padding-top:6pt;font-size:11pt}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+<a class="home" href="../../index.html">&larr; Back to all lessons</a>
+<h1>✍️ Writing Week 14: Historical Letter: A Voice from the Railway 🚂</h1>
+<p>Yesterday you wrote like a critic. Today, Ace, you'll write like a <strong>historian and a storyteller at the same time</strong>. You'll step into the shoes of someone who lived through the building of the Canadian Pacific Railway in the 1880s and write a <strong>historical letter</strong> in their voice. This kind of writing is called <strong>historical fiction</strong>: the character is invented, but the <strong>setting, events and facts must be true</strong>. A great historical letter makes readers feel what it was like to be there, and helps them understand a point of view different from their own.</p>
+
+<h2>Part 1: The Lesson</h2>
+<div class="box">
+  <h3 style="margin-top:0">A friendly letter has six parts ✉️</h3>
+  <p>Letters from the 1880s followed the same basic shape that letters still use today:</p>
+  <div class="senses">
+    <div class="side"><strong>1. Heading:</strong> where the writer is and the date, e.g. <em>Camp near Yale, British Columbia, August 14, 1883</em></div>
+    <div class="side"><strong>2. Greeting:</strong> <em>Dear Mother and Father,</em> (capital letters for names, comma at the end)</div>
+    <div class="side"><strong>3. Opening:</strong> who you are, where you are, and why you are writing</div>
+    <div class="side"><strong>4. Body:</strong> what is happening, with <em>true historical details</em> and <em>sensory description</em></div>
+    <div class="side"><strong>5. Feelings and reflection:</strong> your character's thoughts, worries, hopes and opinions</div>
+    <div class="side"><strong>6. Closing + signature:</strong> <em>Your loving son,</em> then the name (comma after the closing)</div>
+  </div>
+  <h3>Five historian-writer moves</h3>
+  <ul>
+    <li><strong>Stay in character:</strong> write in the <em>first person</em> (I, we) and only mention things your character could know in the 1880s: no phones, cars or electric lights in camp!</li>
+    <li><strong>Use real facts:</strong> weave in at least <strong>two accurate historical details</strong> from today's reading (places, dates, jobs, wages, dangers, the head tax).</li>
+    <li><strong>Show with your senses:</strong> what did the canyon sound like, the snow feel like, the camp food taste like? <em>"The explosion shook the canyon like thunder"</em> beats <em>"it was loud."</em></li>
+    <li><strong>Reveal a perspective:</strong> a Chinese worker, a surveyor and a politician would describe the same railway very differently. Let readers hear <em>your character's</em> feelings, including what seems fair or unfair to them.</li>
+    <li><strong>Keep your tenses steady:</strong> tell what already happened in the <strong>past tense</strong> (<em>yesterday we blasted</em>) and use the present for how you feel now (<em>I miss you</em>). Don't switch back and forth by accident.</li>
+  </ul>
+  <p><strong>Grown-up words:</strong> a <strong>primary source</strong> is something made at the time by someone who was there (a real letter, diary or photograph). A <strong>secondary source</strong> is written later about the past (like today's reading passage). Your letter imitates a primary source.</p>
+</div>
+
+<div class="box">
+  <h3 style="margin-top:0">Model Historical Letter (short version)</h3>
+  <p class="legend"><span class="ts">Heading + greeting + opening</span><span class="ev">Body: historical + sensory details</span><span class="ex">Feelings and reflection</span><span class="cs">Closing + signature</span></p>
+  <p class="model">
+    <span class="ts">Camp near Yale, British Columbia<br>August 14, 1883<br><br>Dear Mother and Father,<br>I hope this letter finds you well in our village in Guangdong. It has been almost a year since I crossed the Pacific Ocean to work on the Canadian Pacific Railway.</span><br>
+    <span class="ev">Every day my crew climbs along the cliffs of the Fraser Canyon to drill holes for the blasting powder. When the explosions boom, the whole canyon shakes like thunder, and dust drifts down like grey snow. The river below is the colour of milky tea, and it roars so loudly that we must shout to hear each other. Last week, falling rocks injured two men from our camp.</span><br>
+    <span class="ex">I am tired, and I miss your cooking more than I can say. It does not seem fair that we earn only one dollar a day while other workers earn more for the same work. Still, I am proud of the tunnels we have built, and I am saving every coin I can to send home.</span><br>
+    <span class="cs">Please give my love to my little sister.<br>Your loving son,<br>Wing</span>
+  </p>
+  <p><strong>Notice:</strong> Wing is an invented character, but the facts are real (Yale, the Fraser Canyon, blasting, $1 a day, workers from Guangdong). The body uses <em>similes</em> and sounds, the feelings section shows his point of view, and commas appear in the date, after the greeting, and after the closing.</p>
+</div>
+
+<h2>Part 2: Name That Letter Part</h2>
+<div class="box">
+  <p>Each line comes from a student's historical letter written as a young surveyor in Rogers Pass. Choose which <strong>part of the letter</strong> it belongs in.</p>
+  <div id="labelRows"></div>
+  <div class="btnrow"><button type="button" class="go" id="checkLabels">Check my answers</button></div>
+  <div class="fb" id="labelFb"></div>
+</div>
+
+<h2>Part 3: Grammar Clinic 🛤️</h2>
+<div class="box tipbox">A railway inspector checks every rail and spike before a train can pass. You're the inspector for these sentences! <strong>Section A:</strong> pick the correct sentence. <strong>Section B:</strong> type the sentence again with <em>all</em> mistakes fixed. We use <strong>Canadian spelling</strong> (labour, colour, grey, neighbour). Today, watch <strong>commas in dates</strong> (November 7, 1885,), <strong>capital letters for proper nouns</strong> (the Fraser River, British Columbia), <strong>irregular past-tense verbs</strong> (drove, laid, built), <strong>steady verb tense</strong>, <strong>plural possessive apostrophes</strong> (the workers' tents, the men's tents), <strong>its / it's</strong>, and <strong>commas after introductory clauses</strong>.</div>
+<h3>Section A: Pick the correct sentence</h3>
+<div id="gmc"></div>
+<h3>Section B: Fix the sentence</h3>
+<p>Retype the whole sentence correctly, with capital letters and punctuation. Each one has <strong>at least two</strong> mistakes.</p>
+<div id="gfix"></div>
+
+<h2>Part 4: Your Turn to Write</h2>
+<div class="box">
+  <h3 style="margin-top:0">Step 1: Choose your character</h3>
+  <div class="prompts" id="prompts">
+    <label><input type="radio" name="prompt" value="Letter A: A Chinese railway worker in the Fraser Canyon writes home to his family in Guangdong (1883 or 1884)." checked> ⛰️ <strong>Letter A:</strong> you are a Chinese railway worker in the Fraser Canyon in 1883 or 1884, writing home to your family in Guangdong. Describe the work, the dangers, camp life, and how you feel about being paid less than other workers.</label>
+    <label><input type="radio" name="prompt" value="Letter B: A young surveyor in Rogers Pass writes to a relative back east (winter 1885)."> ❄️ <strong>Letter B:</strong> you are a young surveyor or engineer in Rogers Pass in the winter of 1885, writing to a relative in Ontario. Describe the mountains, the avalanches, the steep grades, and why you think the railway matters.</label>
+    <label><input type="radio" name="prompt" value="Letter C: Someone at Craigellachie writes about the last spike (November 7, 1885)."> 🔨 <strong>Letter C:</strong> you were at Craigellachie on November 7, 1885, when the last spike was driven. Describe the scene, then reflect: who is in the famous photograph, and who is missing?</label>
+  </div>
+  <p><strong>Plan your letter:</strong> jot down a few words for each box. (These notes save with your writing.)</p>
+  <div class="w5" id="w5">
+    <div><label for="w5who">Who am I? (name, age, job)</label><input id="w5who" type="text" autocomplete="off"></div>
+    <div><label for="w5place">Where and when? (heading)</label><input id="w5place" type="text" autocomplete="off"></div>
+    <div><label for="w5facts">Two real historical facts</label><input id="w5facts" type="text" autocomplete="off"></div>
+    <div><label for="w5senses">Sights, sounds, feelings + a simile</label><input id="w5senses" type="text" autocomplete="off"></div>
+    <div><label for="w5feel">My worries, hopes, opinions</label><input id="w5feel" type="text" autocomplete="off"></div>
+    <div><label for="w5closing">Who it's to + my closing</label><input id="w5closing" type="text" autocomplete="off"></div>
+  </div>
+
+  <h3>Step 2: Write your historical letter</h3>
+  <p><strong>Goal:</strong> a letter of <strong>200 to 300 words</strong> with a <strong>heading</strong> (place and date), a <strong>greeting</strong>, an <strong>opening</strong>, a <strong>body</strong> with at least <strong>two true historical facts</strong> and <strong>one simile</strong>, a paragraph of <strong>feelings and reflection</strong> that shows your character's point of view, and a <strong>closing with a signature</strong>.</p>
+  <p><button type="button" class="hint" id="templateBtn">📋 Add the letter headings for me</button></p>
+  <label for="essay"><strong>Write here, Ace:</strong></label>
+  <textarea id="essay" placeholder="Heading: (place), (date) ..."></textarea>
+  <div class="counter">
+    <span id="wc">0 words</span>
+    <span id="sc">0 sentences</span>
+    <div class="meter" aria-hidden="true"><div id="meterBar"></div></div>
+  </div>
+  <div class="fb" id="wcMsg">Aim for 200 to 300 words.</div>
+  <p style="font-size:.8em;color:#607d8b" id="saveNote">Your writing is saved automatically in this browser as you type.</p>
+
+  <h3>Self-check before you finish ✅</h3>
+  <div class="checklist" id="checklist">
+    <label><input type="checkbox"> My <strong>heading</strong> has a real place and a date from the 1880s, with a comma between the day and the year.</label>
+    <label><input type="checkbox"> My <strong>greeting</strong> and <strong>closing</strong> each end with a comma, and I signed my character's name.</label>
+    <label><input type="checkbox"> I stayed <strong>in character</strong> (first person, nothing that didn't exist in the 1880s).</label>
+    <label><input type="checkbox"> I included at least <strong>two true historical facts</strong> from today's reading.</label>
+    <label><input type="checkbox"> I used at least <strong>one simile</strong> and details from more than one sense.</label>
+    <label><input type="checkbox"> My <strong>feelings and reflection</strong> paragraph shows my character's point of view.</label>
+    <label><input type="checkbox"> I capitalized <strong>proper nouns</strong> (Fraser River, Rogers Pass, Canadian Pacific Railway).</label>
+    <label><input type="checkbox"> I checked <strong>verb tense</strong>, <strong>apostrophes</strong>, <strong>its / it's</strong>, and <strong>Canadian spelling</strong> (labour, colour, grey).</label>
+  </div>
+  <div class="btnrow">
+    <button type="button" class="blue" id="downloadBtn">⬇️ Download my writing (for Dad)</button>
+    <button type="button" class="purple" id="printBtn">🖨️ Print my writing</button>
+    <button type="button" class="grey" id="clearBtn">Start over</button>
+  </div>
+  <div class="fb" id="doneMsg"></div>
+</div>
+
+<div id="scoreBox"><span id="scoreText"></span><span>Keep going, inspector Ace! 🚂</span></div>
+</div>
+
+<div id="printArea"></div>
+
+<script>
+var NAME="Ace";
+var PRAISE=["Nice work, Ace!","Correct! Great editing eye!","Yes! Ace fixed it!","Excellent, inspector Ace!","Full steam ahead! 🚂"];
+function pick(a){return a[Math.floor(Math.random()*a.length)];}
+
+var LABELS=["Heading","Greeting","Opening","Body","Feelings and reflection","Closing"];
+var LABEL_ITEMS=[
+ {s:"Rogers Pass, British Columbia, February 3, 1885", a:"Heading"},
+ {s:"Dear Aunt Margaret,", a:"Greeting"},
+ {s:"I am writing to you by lantern light from our survey camp high in the Selkirk Mountains.", a:"Opening"},
+ {s:"Yesterday an avalanche roared down the slope like a freight train and buried the new track under snow taller than a house.", a:"Body"},
+ {s:"I am frightened sometimes, but I believe this railway will join our whole country together.", a:"Feelings and reflection"},
+ {s:"Your affectionate nephew, Thomas", a:"Closing"}
+];
+var labelScore=0, labelChecked=false;
+function buildLabels(){
+  var box=document.getElementById("labelRows");
+  LABEL_ITEMS.forEach(function(it,i){
+    var d=document.createElement("div"); d.className="row"; d.id="lr"+i;
+    var sel='<select id="ls'+i+'" aria-label="Job of sentence '+(i+1)+'"><option value="">- choose -</option>';
+    LABELS.forEach(function(l){sel+='<option>'+l+'</option>';});
+    sel+='</select>';
+    d.innerHTML='<strong>'+(i+1)+'.</strong> '+it.s+'<br>'+sel+' <span id="lm'+i+'"></span>';
+    box.appendChild(d);
+  });
+}
+function checkLabels(){
+  var sc=0;
+  LABEL_ITEMS.forEach(function(it,i){
+    var ok=document.getElementById("ls"+i).value===it.a; if(ok)sc++;
+    document.getElementById("lr"+i).className="row "+(ok?"right":"wrong");
+    document.getElementById("lm"+i).textContent=ok?"✅":"❌";
+  });
+  labelScore=sc; labelChecked=true;
+  var fb=document.getElementById("labelFb");
+  if(sc===LABEL_ITEMS.length){fb.className="fb good";fb.textContent="🌟 "+sc+" / "+LABEL_ITEMS.length+". "+pick(PRAISE)+" You know exactly how a letter is built!";}
+  else{fb.className="fb bad";fb.textContent=sc+" / "+LABEL_ITEMS.length+". Hint: a place and a date = heading; \u201cDear\u201d = greeting; who you are and where you are writing from = opening; what happened, with details = body; \u201cI am frightened\u201d or \u201cI believe\u201d = feelings and reflection; \u201cYour ...\u201d plus a name = closing. Fix the ❌ ones and check again.";}
+  updateScore();
+}
+
+var GMC=[
+ {q:"Which sentence uses <strong>commas in a date</strong> correctly?",
+  o:["On November 7 1885 Donald Smith drove the last spike.","On November 7, 1885 Donald Smith drove, the last spike.","On November, 7 1885, Donald Smith drove the last spike.","On November 7, 1885, Donald Smith drove the last spike."],
+  a:3,e:"Put a comma between the day and the year, and when the date comes in the middle of a sentence, put another comma after the year."},
+ {q:"Which sentence uses <strong>capital letters</strong> correctly?",
+  o:["The workers followed the Fraser River through British Columbia toward the Pacific Ocean.","The workers followed the fraser river through British columbia toward the pacific ocean.","The Workers followed the Fraser river through British Columbia toward the Pacific ocean.","the workers followed the Fraser River through british Columbia toward the Pacific Ocean."],
+  a:0,e:"Proper nouns (names of particular rivers, provinces and oceans) need a capital letter on every important word: <em>Fraser River, British Columbia, Pacific Ocean</em>. Common nouns like <em>workers</em> don't."},
+ {q:"Which sentence uses <strong>irregular past-tense verbs</strong> correctly?",
+  o:["The crew drived the spikes and layed the rails.","The crew drove the spikes and laid the rails.","The crew drove the spikes and layed the rails.","The crew droven the spikes and lain the rails."],
+  a:1,e:"<em>Drive</em> becomes <em>drove</em>, and <em>lay</em> (to put something down) becomes <em>laid</em>. Irregular verbs don't just add <em>-ed</em>."},
+ {q:"Which sentence keeps its <strong>verb tense steady</strong>?",
+  o:["We wake before sunrise, ate our rice, and climb to the cliff.","We woke before sunrise, eat our rice, and climbed to the cliff.","We woke before sunrise, ate our rice, and climbed to the cliff.","We woke before sunrise, ate our rice, and will climb to the cliff."],
+  a:2,e:"All three actions happened in the past, so all three verbs should be past tense: <em>woke, ate, climbed</em>."},
+ {q:"Which sentence uses a <strong>plural possessive apostrophe</strong> correctly?",
+  o:["The worker's tents were cold, so all fifty men slept in their coats.","The workers' tents were cold, so all fifty men slept in their coats.","The workers tent's were cold, so all fifty men slept in their coats.","The workers's tents were cold, so all fifty men slept in their coats."],
+  a:1,e:"Many workers own the tents, so the word is the plural <em>workers</em> with the apostrophe after the <em>s</em>: <em>workers'</em>."},
+ {q:"Which sentence uses <strong>its / it's</strong> correctly?",
+  o:["The locomotive slowed down because its climbing the Big Hill.","Its amazing that the locomotive climbed it's way up the Big Hill.","It's amazing that the locomotive climbed its way up the Big Hill.","It's amazing that the locomotive climbed it's way up the Big Hill."],
+  a:2,e:"<em>It's</em> = <em>it is</em> (It is amazing). <em>Its</em> with no apostrophe shows ownership (its way), just like <em>his</em> or <em>her</em>."},
+ {q:"Which sentence uses a <strong>comma after an introductory clause</strong> correctly?",
+  o:["When the explosion boomed the whole canyon, shook.","When the explosion boomed, the whole canyon shook.","When, the explosion boomed the whole canyon shook.","When the explosion, boomed the whole canyon shook."],
+  a:1,e:"A sentence that starts with a clause like <em>When the explosion boomed</em> needs a comma before the main part of the sentence: <em>the whole canyon shook</em>."}
+];
+var gmcState=GMC.map(function(){return{answered:false,firstRight:false,done:false};});
+function buildGMC(){
+  var box=document.getElementById("gmc");
+  GMC.forEach(function(it,i){
+    var d=document.createElement("div"); d.className="box q"; d.id="g"+i;
+    var h='<div><strong>'+(i+1)+'.</strong> '+it.q+'</div>';
+    it.o.forEach(function(o,j){h+='<button type="button" class="opt" data-i="'+i+'" data-j="'+j+'">'+String.fromCharCode(65+j)+'. '+o+'</button>';});
+    h+='<div class="fb" id="gfb'+i+'"></div>';
+    d.innerHTML=h; box.appendChild(d);
+  });
+  box.addEventListener("click",function(e){
+    var b=e.target.closest?e.target.closest(".opt"):e.target; if(!b||!b.classList.contains("opt"))return;
+    var i=+b.getAttribute("data-i"), j=+b.getAttribute("data-j"), st=gmcState[i], it=GMC[i];
+    if(st.done)return;
+    var ok=j===it.a; if(!st.answered){st.answered=true;st.firstRight=ok;}
+    var fb=document.getElementById("gfb"+i);
+    if(ok){st.done=true;b.classList.add("sel-right");document.getElementById("g"+i).className="box q right";fb.className="fb good";fb.innerHTML="✅ "+pick(PRAISE)+' <span class="explain">'+it.e+'</span>';}
+    else{b.classList.add("sel-wrong");document.getElementById("g"+i).className="box q wrong";fb.className="fb bad";fb.textContent="❌ Not quite, Ace. Look closely and try again.";}
+    updateScore();
+  });
+}
+
+var GFIX=[
+ {bad:"on july 1 1867 four provinces joined together to form canada.",
+  ok:["On July 1, 1867, four provinces joined together to form Canada."],
+  hint:"Capitalize the first word, the month and the country. Put a comma between the day and the year, and another after the year."},
+ {bad:"Yesterday the foreman tell us that the tunnel will be finish soon.",
+  ok:["Yesterday the foreman told us that the tunnel would be finished soon.", "Yesterday, the foreman told us that the tunnel would be finished soon.", "Yesterday the foreman told us that the tunnel will be finished soon.", "Yesterday, the foreman told us that the tunnel will be finished soon."],
+  hint:"\"Yesterday\" means the telling happened in the past, so use the past tense of \"tell.\" A tunnel is not \"finish\"; it is ____ (add the right ending)."},
+ {bad:"The mens tents was cold, there was snow on the roof.",
+  ok:["The men's tents were cold, and there was snow on the roof.", "The men's tents were cold. There was snow on the roof.", "The men's tents were cold; there was snow on the roof."],
+  hint:"\"Men\" is already plural, so its possessive is men + 's. \"Tents\" is plural, so the verb must be plural too. A comma alone can't join two complete sentences (comma splice): use a period, a semicolon, or \", and.\""},
+ {bad:"There labor was hard, and the color of the river was gray.",
+  ok:["Their labour was hard, and the colour of the river was grey."],
+  hint:"Fix one homophone (the word that shows the labour belongs to them) and three words to Canadian spelling."}
+];
+
+var gfixState=GFIX.map(function(){return{tries:0,correct:false,firstRight:false};});
+function norm(s){return s.replace(/[\u2018\u2019\u02BC]/g,"'").replace(/[\u201C\u201D]/g,'"').replace(/\s+/g," ").trim();}
+function checkFixAnswer(i,val){var v=norm(val);return GFIX[i].ok.some(function(a){return norm(a)===v;});}
+function buildGFix(){
+  var box=document.getElementById("gfix");
+  GFIX.forEach(function(it,i){
+    var d=document.createElement("div"); d.className="box q"; d.id="f"+i;
+    d.innerHTML='<div><strong>'+(i+1)+'.</strong> Fix: <span class="bad-sent">'+it.bad+'</span></div>'+
+     '<input class="fix" type="text" id="fi'+i+'" autocomplete="off" spellcheck="false" aria-label="Corrected sentence '+(i+1)+'">'+
+     '<div class="btnrow"><button type="button" class="go" data-act="check" data-i="'+i+'">Check</button><button type="button" class="hint" data-act="hint" data-i="'+i+'">Hint 💡</button><button type="button" class="grey" data-act="show" data-i="'+i+'" style="display:none">Show answer</button></div>'+
+     '<div class="fb" id="ffb'+i+'"></div>';
+    box.appendChild(d);
+  });
+  box.addEventListener("click",function(e){
+    var b=e.target; if(b.tagName!=="BUTTON")return;
+    var i=+b.getAttribute("data-i"), act=b.getAttribute("data-act"), fb=document.getElementById("ffb"+i);
+    if(act==="hint"){fb.className="fb";fb.style.color="#5d4037";fb.textContent="💡 "+GFIX[i].hint;return;}
+    fb.style.color="";
+    if(act==="show"){fb.className="fb";fb.innerHTML='Answer: <em>'+GFIX[i].ok[0]+'</em>'+(GFIX[i].ok.length>1?' (other correct versions are accepted too)':'');return;}
+    fixCheck(i);
+  });
+  box.addEventListener("keydown",function(e){if(e.key==="Enter"&&e.target.classList.contains("fix"))fixCheck(+e.target.id.slice(2));});
+}
+function fixCheck(i){
+  var val=document.getElementById("fi"+i).value, fb=document.getElementById("ffb"+i), st=gfixState[i];
+  fb.style.color="";
+  if(!val.trim()){fb.className="fb bad";fb.textContent="Type the corrected sentence first, Ace!";return;}
+  st.tries++;
+  if(checkFixAnswer(i,val)){ if(st.tries===1)st.firstRight=true; st.correct=true; document.getElementById("f"+i).className="box q right"; fb.className="fb good"; fb.textContent="✅ "+pick(PRAISE); }
+  else { st.correct=false; document.getElementById("f"+i).className="box q wrong"; fb.className="fb bad"; fb.textContent="❌ Not quite. Check every capital letter, apostrophe, comma, and spelling. Try again!"; if(st.tries>=2)document.querySelector('#f'+i+' [data-act=show]').style.display="inline-block"; }
+  updateScore();
+}
+
+function updateScore(){
+  var g=0; gmcState.forEach(function(s){if(s.firstRight)g++;});
+  var f=0; gfixState.forEach(function(s){if(s.correct)f++;});
+  var total=LABEL_ITEMS.length+GMC.length+GFIX.length, got=labelScore+g+f;
+  document.getElementById("scoreText").textContent="Score: "+got+" / "+total+"  (labels "+(labelChecked?labelScore:"-")+"/"+LABEL_ITEMS.length+" · grammar A "+g+"/"+GMC.length+" · grammar B "+f+"/"+GFIX.length+")";
+}
+
+var W5=["who","place","facts","senses","feel","closing"];
+function w5Save(){try{localStorage.setItem(KEY+"-5w",JSON.stringify(W5.map(function(k){return document.getElementById("w5"+k).value;})));}catch(e){}}
+function w5Restore(){try{var d=JSON.parse(localStorage.getItem(KEY+"-5w")||"null");if(d)d.forEach(function(x,i){document.getElementById("w5"+W5[i]).value=x;});}catch(e){}}
+function w5Summary(){return W5.map(function(k){return k.charAt(0).toUpperCase()+k.slice(1)+": "+document.getElementById("w5"+k).value;}).join("\n");}
+function addTemplate(){
+  var t=document.getElementById("essay");
+  var tpl="Heading (place, date): \n\nGreeting: Dear \n\nOpening (who I am, where I am, why I am writing): \n\nBody (what is happening, two true facts, sensory details, a simile): \n\nFeelings and reflection (my worries, hopes and opinions): \n\nClosing and signature: ";
+  if(t.value.trim()&&!confirm("Add the headings below what you've already written?"))return;
+  t.value=(t.value.trim()?t.value.replace(/\s+$/,"")+"\n\n":"")+tpl; updateCount(); t.focus();
+}
+var KEY="ace-writing-2026-10-11";
+function countWords(t){var m=t.trim().match(/[A-Za-zÀ-ÿ0-9]+(?:['’\-][A-Za-zÀ-ÿ0-9]+)*/g);return m?m.length:0;}
+function countSentences(t){var m=t.match(/[^.!?]*[A-Za-z0-9][^.!?]*[.!?]+/g);return m?m.length:0;}
+function currentPrompt(){var r=document.querySelector('input[name=prompt]:checked');return r?r.value:"";}
+function updateCount(){
+  var t=document.getElementById("essay").value, w=countWords(t), s=countSentences(t);
+  document.getElementById("wc").textContent=w+(w===1?" word":" words");
+  document.getElementById("sc").textContent=s+(s===1?" sentence":" sentences");
+  var bar=document.getElementById("meterBar"); bar.style.width=Math.min(100,w/300*100)+"%";
+  var msg=document.getElementById("wcMsg");
+  if(w<200){bar.style.background="#ffb300";msg.className="fb";msg.textContent=w===0?"Aim for 200 to 300 words.":"Keep going, Ace! "+(200-w)+" more words to reach the goal.";}
+  else if(w<=300){bar.style.background="#43a047";msg.className="fb good";msg.textContent="🎯 You're in the target zone! Nice work, Ace!";}
+  else{bar.style.background="#1e88e5";msg.className="fb";msg.textContent="Wow, that's a lot of writing! Real letters from the 1880s were often short because paper and postage cost money. Could any sentences be cut?";}
+  try{localStorage.setItem(KEY,JSON.stringify({text:t,prompt:currentPrompt(),checks:checkStates()}));}catch(e){document.getElementById("saveNote").textContent="(This browser can't auto-save here, so use the Download button before closing!)";}
+}
+function checkStates(){return Array.prototype.map.call(document.querySelectorAll("#checklist input"),function(c){return c.checked;});}
+function checklistText(){
+  return Array.prototype.map.call(document.querySelectorAll("#checklist label"),function(l){return (l.querySelector("input").checked?"[x] ":"[ ] ")+l.textContent.trim();}).join("\n");
+}
+function buildReport(){
+  var t=document.getElementById("essay").value;
+  return "Writing Week 14: "+NAME+"\nDate: "+new Date().toLocaleString("en-CA")+"\nPrompt: "+currentPrompt()+
+    "\nWords: "+countWords(t)+"   Sentences: "+countSentences(t)+"\nPlanning notes:\n"+w5Summary()+
+    "\n\n----- "+NAME+"'s writing -----\n\n"+t+"\n\n----- Self-check -----\n"+checklistText()+
+    "\n\n----- Parent feedback -----\n\n\n";
+}
+function download(){
+  var t=document.getElementById("essay").value;
+  if(!t.trim()){document.getElementById("doneMsg").className="fb bad";document.getElementById("doneMsg").textContent="Write something first, Ace!";return;}
+  var blob=new Blob([buildReport().replace(/\n/g,"\r\n")],{type:"text/plain;charset=utf-8"});
+  var a=document.createElement("a"); a.href=URL.createObjectURL(blob); a.download=NAME+"-writing-2026-10-11"+".txt";
+  document.body.appendChild(a); a.click();
+  setTimeout(function(){URL.revokeObjectURL(a.href);a.remove();},1000);
+  var dm=document.getElementById("doneMsg"); dm.className="fb good"; dm.textContent="📄 Saved! Look in your Downloads folder and show Dad. Great job finishing, Ace!";
+}
+function esc(s){return s.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");}
+function printIt(){
+  var t=document.getElementById("essay").value;
+  if(!t.trim()){document.getElementById("doneMsg").className="fb bad";document.getElementById("doneMsg").textContent="Write something first, Ace!";return;}
+  document.getElementById("printArea").innerHTML="<h1>Writing Week 14: "+NAME+"</h1><div class='meta'>"+esc(new Date().toLocaleString("en-CA"))+"<br><strong>Prompt:</strong> "+esc(currentPrompt())+"<br>Words: "+countWords(t)+" · Sentences: "+countSentences(t)+"</div><div class='text'>"+esc(t)+"</div><div class='lines'><strong>Self-check:</strong><br>"+esc(checklistText()).replace(/\n/g,"<br>")+"</div><div class='lines'><strong>Parent feedback:</strong><br><br><br><br></div>";
+  window.print();
+}
+function restore(){
+  try{var d=JSON.parse(localStorage.getItem(KEY)||"null"); if(!d)return;
+    document.getElementById("essay").value=d.text||"";
+    Array.prototype.forEach.call(document.querySelectorAll("input[name=prompt]"),function(r){r.checked=(r.value===d.prompt);});
+    if(!document.querySelector("input[name=prompt]:checked"))document.querySelector("input[name=prompt]").checked=true;
+    var cs=document.querySelectorAll("#checklist input"); (d.checks||[]).forEach(function(v,i){if(cs[i])cs[i].checked=v;});
+  }catch(e){}
+}
+buildLabels(); buildGMC(); buildGFix(); restore(); w5Restore(); updateCount(); updateScore();
+W5.forEach(function(k){document.getElementById("w5"+k).addEventListener("input",w5Save);});
+document.getElementById("templateBtn").addEventListener("click",addTemplate);
+document.getElementById("checkLabels").addEventListener("click",checkLabels);
+document.getElementById("essay").addEventListener("input",updateCount);
+document.getElementById("checklist").addEventListener("change",function(){updateCount(); if(checkStates().every(Boolean)){var dm=document.getElementById("doneMsg");dm.className="fb good";dm.textContent="✅ All boxes checked! Now download or print it for Dad. Awesome work, Ace!";}});
+document.getElementById("prompts").addEventListener("change",updateCount);
+document.getElementById("downloadBtn").addEventListener("click",download);
+document.getElementById("printBtn").addEventListener("click",printIt);
+document.getElementById("clearBtn").addEventListener("click",function(){ if(confirm("Erase your writing and start over?")){document.getElementById("essay").value="";Array.prototype.forEach.call(document.querySelectorAll("#checklist input"),function(c){c.checked=false;});document.getElementById("doneMsg").textContent="";updateCount();} });
+</script>
+</body>
+</html>
