@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reading (Oct. 12): How Your Brain Talks to Itself (and Why Sleep Matters)</title>
+<style>
+  body{font-family:"Segoe UI",Verdana,Arial,sans-serif;font-size:20px;line-height:1.65;margin:0;background:#f5f0eb;color:#2c2416}
+  .wrap{max-width:880px;margin:0 auto;padding:20px 18px 80px}
+  a.home{font-size:.9em;color:#bf360c}
+  h1{color:#e65100;font-size:2em;margin:10px 0}
+  h2{color:#ef6c00;margin-top:36px;border-bottom:3px solid #ffcc80;padding-bottom:4px}
+  .box{background:#fff;border-radius:16px;padding:18px 22px;margin:16px 0;box-shadow:0 3px 10px rgba(0,0,0,.07)}
+  .passage{font-family:Georgia,"Times New Roman",serif;font-size:1.1em;line-height:1.8}
+  .passage h3{text-align:center;font-family:"Segoe UI",Verdana,sans-serif;color:#e65100;font-size:1.4em;margin:4px 0 14px}
+  .passage p{text-indent:1.5em;margin:0 0 14px}
+  mark.v{background:#fff59d;padding:0 3px;border-radius:4px;font-weight:bold}
+  .tipbox{background:#fff8e1;border-left:8px solid #ffb300}
+  .q{border-left:8px solid #ffcc80}
+  .q.right{border-left-color:#43a047;background:#f1f8e9}
+  .q.wrong{border-left-color:#e53935;background:#fff5f5}
+  .tag{display:inline-block;font-size:.7em;background:#ef6c00;color:#fff;border-radius:8px;padding:1px 8px;margin-left:6px;vertical-align:middle}
+  .opt{display:block;width:100%;text-align:left;font-size:.95em;background:#fafafa;border:2px solid #e0e0e0;border-radius:10px;padding:8px 14px;margin:8px 0;cursor:pointer;font-family:inherit}
+  .opt:hover{border-color:#ffb74d;background:#fff}
+  .opt.sel-right{background:#c8e6c9;border-color:#43a047}
+  .opt.sel-wrong{background:#ffcdd2;border-color:#e53935}
+  .fb{margin-top:6px;font-weight:bold}
+  .fb.good{color:#2e7d32} .fb.bad{color:#c62828}
+  .explain{color:#e65100;font-weight:normal}
+  select{font-size:.95em;padding:6px 8px;border-radius:8px;border:2px solid #ffb74d;max-width:100%;font-family:inherit}
+  .vrow{display:flex;flex-wrap:wrap;align-items:center;gap:10px;padding:8px 6px;border-bottom:1px dashed #eee}
+  .vrow .w{font-weight:bold;min-width:140px}
+  .vrow.right{background:#f1f8e9} .vrow.wrong{background:#fff5f5}
+  .mark{font-size:1.2em;min-width:30px}
+  button.main{font-size:1em;padding:10px 20px;border:none;border-radius:10px;cursor:pointer;font-weight:bold;background:#ef6c00;color:#fff;margin-top:10px}
+  button.main:hover{background:#e65100}
+  button.sec{font-size:.95em;padding:8px 16px;border:none;border-radius:10px;cursor:pointer;font-weight:bold;background:#ffe082;color:#5d4037}
+  textarea{width:100%;box-sizing:border-box;font-size:1em;font-family:inherit;padding:10px;border:2px solid #ffb74d;border-radius:10px;min-height:120px}
+  #model{display:none;background:#fff3e0;border-radius:10px;padding:10px 14px;margin-top:10px}
+  #scoreBox{position:sticky;bottom:0;background:#e65100;color:#fff;border-radius:16px 16px 0 0;padding:12px 20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-top:30px}
+  #scoreBox button{font-size:.95em;padding:8px 16px;border:none;border-radius:10px;cursor:pointer;font-weight:bold;background:#ffca28;color:#3e2723}
+  #final{display:none;text-align:center;border:4px solid #43a047;font-size:1.1em}
+</style>
+</head>
+<body>
+<div class="wrap">
+<a class="home" href="../../index.html">&larr; Back to all lessons</a>
+<h1>📖 Reading Week 15: How Your Brain Talks to Itself (and Why Sleep Matters)</h1>
+
+<div class="box tipbox">
+  <strong>Before you read, Ace:</strong> Today's passage is a <em>science</em> informational text about the nervous system. Scientists explain <em>how</em> things work, then show <em>why</em> that knowledge matters for real life (like wearing a helmet or getting enough sleep). As you read, watch for cause-and-effect links and for Greek and Latin word roots that build medical vocabulary.
+  <ul>
+    <li><strong>Preview:</strong> Read the title. What two big ideas do you expect: communication inside the body, and something about sleep?</li>
+    <li><strong>Pause:</strong> After paragraph 3, ask yourself: why can a reflex save you faster than a thoughtful decision?</li>
+    <li><strong>Root detective:</strong> Many brain words come from Greek and Latin:
+      <span style="display:block;margin-top:6px"><strong>neur-</strong> = nerve (Greek <em>neuron</em>) · <strong>syn-</strong> = together · <strong>cerebr-</strong> = brain · <strong>sens-</strong> = feel (Latin <em>sentire</em>) · <strong>mot-</strong> = move · <strong>concuss-</strong> = shake violently</span></li>
+    <li><strong>Words in <mark class="v">yellow</mark></strong> are vocabulary words. Use the sentence around them (the <em>context</em>) to figure out what they mean.</li>
+  </ul>
+</div>
+
+<div class="box passage" id="passage">
+<h3>How Your Brain Talks to Itself (and Why Sleep Matters)</h3>
+<p>Press your fingertip to this screen. Before you even finish reading this sentence, a rush of information has already raced from your skin to your spinal cord and up into your brain. That journey happens because of <mark class="v">neurons</mark>, the specialised cells that form the nervous system. A typical neuron has bushy branches called dendrites that collect incoming messages, a long cable called an axon that carries the signal onward, and a fatty coating called myelin that works like insulation on a wire. Myelinated axons can send impulses at astonishing speeds—sometimes around 100 metres per second, fast enough to cross a soccer pitch in the blink of an eye.</p>
+<p>Neurons do not quite touch. Between one axon tip and the next cell sits a tiny gap called a <mark class="v">synapse</mark>. When an electrical impulse reaches the end of an axon, the neuron releases chemical messengers that float across the gap and spark a new electrical signal in the neighbour. Your thoughts, memories, and feelings are patterns of these hand-offs cascading through networks of billions of cells. Scientists estimate that a human brain holds roughly 86 billion neurons, linked by trillions of synapses—more connections than there are stars visible in the night sky.</p>
+<p>Not every message needs a long debate in the thinking brain. Touch a hot pan, and your hand jerks back before you consciously shout "Ow!" That <mark class="v">reflex</mark> is a shortcut: sensory neurons alert the spinal cord, which instantly orders motor neurons to pull the muscle. Only afterward does the signal reach the cerebrum—the large, wrinkled top of the brain—so you can notice the heat and learn not to touch the pan again. Reflexes are life-saving because they skip the slower route through careful decision-making.</p>
+<p>Different brain regions specialise. The cerebrum handles language, planning, imagination, and voluntary movement. Tucked under the back of the cerebrum, the cerebellum helps with balance and the smooth <mark class="v">coordination</mark> that lets you catch a ball or ride a bike. Deep inside, smaller structures help store memories and manage emotions. Damage from a hard knock to the head—a <mark class="v">concussion</mark>—can scramble these networks temporarily, which is why helmets matter for cycling, skiing, and contact sports. A helmet cannot make you invincible, but it spreads out the force of a blow and greatly lowers the chance of serious injury.</p>
+<p>Here is a surprise many future doctors love: the brain keeps changing. When Ace practises a spelling word or a Cantonese phrase, synapses that fire together grow stronger—a process scientists summarise as "cells that fire together, wire together." Sleep is not wasted time. During deep sleep and dreaming, the brain replays the day's patterns, strengthens useful connections, and clears chemical waste. Children and teens who regularly lose sleep often find memory and focus harder the next day, not because they are lazy, but because their brains missed a night of essential maintenance.</p>
+<p>So the nervous system is both a high-speed messaging network and a learning machine. Sensory nerves bring the world in; the spinal cord and brain decide what matters; motor nerves send commands out. Protect that system with helmets and seat belts, feed it with curiosity and practice, and give it the sleep it needs. The more carefully you look after your brain, the more brilliantly it can look after you—a truth every doctor, athlete, and student eventually discovers.</p>
+<p style="text-indent:0;font-size:.8em;color:#546e7a;text-align:right">About 550 words</p>
+</div>
+
+<h2>Part 1: Comprehension</h2>
+<p>Click the best answer. You'll find out right away if you're correct. Only your <strong>first click</strong> counts toward your score, but you can keep trying to find the right answer.</p>
+<div id="mc"></div>
+
+<h2>Part 2: Think Deeper (not scored)</h2>
+<div class="box">
+  <p><strong>The author says sleep is "essential maintenance" for the brain, not wasted time. In 3 to 5 sentences, explain what the passage claims happens during sleep, then connect it to your own life: describe one way a good (or poor) night's sleep might change how well you learn tomorrow. Use at least one detail from the passage as evidence.</strong></p>
+  <textarea id="openAns" placeholder="Write your answer here, Ace..."></textarea>
+  <p><button type="button" class="sec" id="showModel">Compare with a model answer</button></p>
+  <div id="model"><strong>Model answer:</strong> The passage says that during deep sleep and dreaming, the brain replays the day's patterns, strengthens useful synapses, and clears chemical waste. That means practice from today can stick better overnight. If I stay up too late, my memory and focus may be weaker tomorrow, not because I am lazy, but because my brain missed that maintenance. If I sleep well after learning Cantonese words or spelling, those connections should be stronger. That is why protecting sleep is part of protecting the brain, just like wearing a helmet.<br><em>Did you explain what sleep does, use a passage detail, and connect it to your own learning? If so, excellent work!</em></div>
+</div>
+
+<h2>Part 3: Vocabulary</h2>
+<div class="box">
+  <h3 style="margin-top:0">A. Match each word to its meaning</h3>
+  <p>Choose the meaning that fits how the word is used in the passage.</p>
+  <div id="vmatch"></div>
+  <h3>B. Fill in the blank</h3>
+  <p>Choose the vocabulary word that best completes each sentence.</p>
+  <div id="vfill"></div>
+  <button type="button" class="main" id="checkVocab">Check my vocabulary</button>
+  <div class="fb" id="vocabFb"></div>
+</div>
+
+<div class="box" id="final"></div>
+<div id="scoreBox">
+  <span id="scoreText"></span>
+  <button type="button" id="finishBtn">I'm done! Show my final score</button>
+</div>
+</div>
+
+<script>
+var MC = [
+ {q:"Which sentence best states the <strong>main idea</strong> of the whole passage?",
+  o:["Myelin is a fatty coating on axons.",
+     "The nervous system is a high-speed messaging and learning network that we should protect with helmets, practice, and sleep.",
+     "Reflexes happen in the spinal cord.",
+     "A human brain has about 86 billion neurons."],
+  a:1, e:"A, C and D are single details. B covers messaging, learning, and protection, which is what the whole passage is about."},
+ {q:"According to the passage, what is the job of <em>myelin</em>?", tag:"Key detail",
+  o:["It stores dreams overnight.","It works like insulation on a wire and helps signals travel faster.","It is the gap between two neurons.","It is another name for the cerebrum."],
+  a:1, e:"Paragraph 1 compares myelin to insulation on a wire that speeds the impulse."},
+ {q:"Why can a reflex pull your hand from a hot pan before you consciously feel the pain?", tag:"Cause and effect",
+  o:["The cerebrum decides first, then the spinal cord.","Sensory neurons skip the body and go straight to dreams.","The spinal cord can order motor neurons immediately, before the signal finishes its longer trip to the thinking brain.","Myelin blocks all pain signals."],
+  a:2, e:"Paragraph 3 explains the spinal shortcut that makes reflexes faster than thoughtful decisions."},
+ {q:"The work of catching a ball needs smooth <em>coordination</em>. Which brain part does the passage credit most for that skill?", tag:"Key detail",
+  o:["Only the eyes","The cerebellum","The stomach","Myelin alone"],
+  a:1, e:"Paragraph 4 says the cerebellum helps with balance and smooth coordination for skills like catching a ball."},
+ {q:"What can you <strong>infer</strong> from the advice to wear a helmet?", tag:"Inference",
+  o:["Helmets make people invincible in every crash.","A hard knock can scramble brain networks, so reducing the force of a blow is worth the hassle.","Concussions only happen to adults.","The cerebrum is located in the helmet."],
+  a:1, e:"The passage links concussions to scrambled networks and says helmets spread out force and lower serious injury risk—but do not make you invincible."},
+ {q:"\"Cells that fire together, wire together\" is mainly about which idea?", tag:"Vocabulary in context",
+  o:["Neurons that activate at the same time strengthen their connections through practice.","Wires inside computers invent new games.","Sleep deletes all memories every night.","Reflexes never change."],
+  a:0, e:"Paragraph 5 explains that practising strengthens synapses that fire together—how the brain learns."},
+ {q:"Why does the author call sleep \"essential maintenance\"?", tag:"Author's purpose",
+  o:["Because sleeping is the same as being lazy.","Because during sleep the brain strengthens useful connections and clears chemical waste.","Because dreams replace the need for school.","Because myelin only forms at noon."],
+  a:1, e:"Paragraph 5 describes replay, strengthening connections, and clearing waste during sleep."},
+ {q:"The Greek root <em>neur-</em> means \"nerve.\" What does <em>neurology</em> most likely mean?", tag:"Word roots",
+  o:["The study of clouds","The medical study of the nervous system","A type of bicycle helmet","A reflex in the foot only"],
+  a:1, e:"Neur- points to nerves; -ology means the study of. Neurology is the study of the nervous system."},
+ {q:"Which detail best supports the claim that the brain has an enormous number of connections?", tag:"Evidence",
+  o:["A reflex can happen in the spinal cord.","Scientists estimate roughly 86 billion neurons linked by trillions of synapses—more connections than stars visible at night.","Helmets spread out force.","Taste is one of the five senses."],
+  a:1, e:"Paragraph 2 gives the huge neuron and synapse counts and the stars comparison."},
+ {q:"Which sentence best describes the <strong>author's point of view</strong>?", tag:"Author's purpose",
+  o:["The brain is fragile and should never be challenged with hard thinking.","Looking after the brain (helmets, practice, sleep) helps it look after you.","Only doctors need to know how neurons work.","Reflexes are more important than learning."],
+  a:1, e:"The closing paragraph urges protection, curiosity, practice, and sleep so the brain can serve you well."}
+];
+
+var VOCAB = ["neurons","synapse","reflex","coordination","concussion","maintenance"];
+var DEFS = {
+ neurons:"nerve cells that carry electrical and chemical messages",
+ synapse:"the tiny gap between neurons where a chemical message jumps across",
+ reflex:"a fast, automatic response that happens without thinking first",
+ coordination:"using different body parts together smoothly and accurately",
+ concussion:"a brain injury caused by a hard bump or jolt to the head",
+ maintenance:"careful upkeep that keeps something working well"
+};
+var FILL = [
+ {s:"Pulling your hand from a flame before you think is a ____.", a:"reflex"},
+ {s:"A signal crosses the ____ between two nerve cells.", a:"synapse"},
+ {s:"A bike helmet helps lower the risk of a ____.", a:"concussion"},
+ {s:"Catching a ball takes careful ____ between eyes, brain, and hands.", a:"coordination"}
+];
+var FILL_OPTIONS = ["reflex","synapse","concussion","coordination","neurons","maintenance"];
+
+var PRAISE=["Nice work, Ace!","Correct! Sharp reading, Ace!","Yes! You followed the evidence!","Excellent thinking, Dr. Ace!","Right! Your neurons are firing! 🧠"];
+function pick(a){return a[Math.floor(Math.random()*a.length)];}
+function shuffled(arr,seed){var a=arr.slice(),s=seed;for(var i=a.length-1;i>0;i--){s=(s*9301+49297)%233280;var j=Math.floor(s/233280*(i+1));var t=a[i];a[i]=a[j];a[j]=t;}return a;}
+
+var mcState=MC.map(function(){return {answered:false,firstRight:false,done:false};});
+var vocabScore=0, vocabChecked=false;
+var VOCAB_TOTAL=VOCAB.length+FILL.length;
+
+function buildMC(){
+  var box=document.getElementById("mc");
+  MC.forEach(function(item,i){
+    var d=document.createElement("div"); d.className="box q"; d.id="mc"+i;
+    var html="<div><strong>"+(i+1)+".</strong> "+item.q+(item.tag?'<span class="tag">'+item.tag+'</span>':"")+"</div>";
+    item.o.forEach(function(opt,j){ html+='<button type="button" class="opt" data-i="'+i+'" data-j="'+j+'">'+String.fromCharCode(65+j)+". "+opt+"</button>"; });
+    html+='<div class="fb" id="mcfb'+i+'"></div>';
+    d.innerHTML=html; box.appendChild(d);
+  });
+  box.addEventListener("click",function(e){
+    var b=e.target.closest?e.target.closest(".opt"):e.target; if(!b||!b.classList.contains("opt"))return;
+    answerMC(+b.getAttribute("data-i"),+b.getAttribute("data-j"),b);
+  });
+}
+function answerMC(i,j,btn){
+  var st=mcState[i], item=MC[i], fb=document.getElementById("mcfb"+i), card=document.getElementById("mc"+i);
+  if(st.done) return;
+  var right=(j===item.a);
+  if(!st.answered){ st.answered=true; st.firstRight=right; }
+  if(right){
+    st.done=true; btn.classList.add("sel-right"); card.className="box q right";
+    fb.className="fb good"; fb.innerHTML="✅ "+pick(PRAISE)+' <span class="explain">'+item.e+"</span>";
+  } else {
+    btn.classList.add("sel-wrong"); card.className="box q wrong";
+    fb.className="fb bad"; fb.innerHTML="❌ Not quite, Ace. Look back at the passage and try another answer.";
+  }
+  updateScore();
+}
+function buildVocab(){
+  var m=document.getElementById("vmatch");
+  var defOrder=shuffled(VOCAB,44);
+  VOCAB.forEach(function(w,i){
+    var row=document.createElement("div"); row.className="vrow"; row.id="vm"+i;
+    var sel='<select id="vsel'+i+'" aria-label="Meaning of '+w+'"><option value="">- choose a meaning -</option>';
+    defOrder.forEach(function(k){ sel+='<option value="'+k+'">'+DEFS[k]+'</option>'; });
+    sel+="</select>";
+    row.innerHTML='<span class="mark" id="vmk'+i+'"></span><span class="w">'+w+'</span>'+sel;
+    m.appendChild(row);
+  });
+  var f=document.getElementById("vfill");
+  FILL.forEach(function(item,i){
+    var row=document.createElement("div"); row.className="vrow"; row.id="vf"+i;
+    var sel='<select id="fsel'+i+'" aria-label="Blank '+(i+1)+'"><option value="">- choose -</option>';
+    FILL_OPTIONS.forEach(function(w){ sel+='<option value="'+w+'">'+w+'</option>'; });
+    sel+="</select>";
+    var parts=item.s.split("____");
+    row.innerHTML='<span class="mark" id="vfk'+i+'"></span><span>'+(i+1)+'. '+parts[0]+sel+parts[1]+'</span>';
+    f.appendChild(row);
+  });
+}
+function checkVocab(){
+  var score=0, blank=0;
+  VOCAB.forEach(function(w,i){
+    var v=document.getElementById("vsel"+i).value, ok=(v===w);
+    if(!v) blank++;
+    if(ok) score++;
+    document.getElementById("vm"+i).className="vrow "+(ok?"right":"wrong");
+    document.getElementById("vmk"+i).textContent=ok?"✅":"❌";
+  });
+  FILL.forEach(function(item,i){
+    var v=document.getElementById("fsel"+i).value, ok=(v===item.a);
+    if(!v) blank++;
+    if(ok) score++;
+    document.getElementById("vf"+i).className="vrow "+(ok?"right":"wrong");
+    document.getElementById("vfk"+i).textContent=ok?"✅":"❌";
+  });
+  vocabScore=score; vocabChecked=true;
+  var fb=document.getElementById("vocabFb");
+  if(score===VOCAB_TOTAL){ fb.className="fb good"; fb.textContent="🌟 "+score+" / "+VOCAB_TOTAL+". Perfect! Every vocabulary word connected across the synapse, Ace!"; }
+  else { fb.className="fb bad"; fb.textContent=score+" / "+VOCAB_TOTAL+" correct"+(blank?" ("+blank+" left blank)":"")+". Fix the ❌ ones and check again. Try finding the word in the passage for clues!"; }
+  updateScore();
+}
+function scores(){
+  var mc=0,answered=0; mcState.forEach(function(s){ if(s.firstRight) mc++; if(s.answered) answered++; });
+  return {mc:mc,answered:answered,vocab:vocabScore};
+}
+function updateScore(){
+  var s=scores();
+  document.getElementById("scoreText").textContent="Comprehension: "+s.mc+" / "+MC.length+" · Vocabulary: "+(vocabChecked?s.vocab:"-")+" / "+VOCAB_TOTAL;
+}
+function finish(){
+  if(!vocabChecked) checkVocab();
+  var s=scores(), total=MC.length+VOCAB_TOTAL, got=s.mc+s.vocab, pct=Math.round(100*got/total);
+  var msg = pct===100 ? "🏆 A perfect score! Outstanding reading, Ace!" :
+            pct>=80 ? "🌟 Fantastic work, Ace! You read like a Grade 7 student!" :
+            pct>=60 ? "💪 Solid effort, Ace! Reread the paragraphs for the questions you missed." :
+                      "🌱 This was a challenging passage. Read it once more, slowly, and try again. You've got this, Ace!";
+  var f=document.getElementById("final"); f.style.display="block";
+  f.innerHTML="<h2 style='border:none;margin-top:0'>Final Score: "+got+" / "+total+" ("+pct+"%)</h2>"+
+    "<p>Comprehension (first tries): "+s.mc+" / "+MC.length+(s.answered<MC.length?" (you skipped "+(MC.length-s.answered)+")":"")+"<br>Vocabulary: "+s.vocab+" / "+VOCAB_TOTAL+"</p><p>"+msg+"</p>"+
+    "<p style='font-size:.85em;color:#546e7a'>Finished on "+new Date().toLocaleString("en-CA")+"</p>";
+  f.scrollIntoView({behavior:"smooth"});
+}
+buildMC(); buildVocab(); updateScore();
+document.getElementById("checkVocab").addEventListener("click",checkVocab);
+document.getElementById("finishBtn").addEventListener("click",finish);
+document.getElementById("showModel").addEventListener("click",function(){document.getElementById("model").style.display="block";});
+</script>
+</body>
+</html>
