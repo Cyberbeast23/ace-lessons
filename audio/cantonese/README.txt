@@ -2,11 +2,11 @@ Ace Cantonese Pronunciation Audio
 =================================
 
 For Ace (beginner). Hong Kong Cantonese, Traditional Chinese characters.
-TTS voice (Cantonese): zh-HK-HiuMaanNeural
+TTS voice (Cantonese): zh-HK-HiuMaanNeural when available; 2026-10-12+ often gTTS lang=yue (Edge 403 fallback)
 TTS voice (English in ALL-words.mp3): en-HK-YanNeural
 Rate: slowed (~-20%) for clear listening practice.
 
-Sources: Ace lessons 2026-09-29 (Greetings) + 2026-09-30 (Family Members) + 2026-10-01 (Food) + 2026-10-02 (School) + 2026-10-03 (Body) + 2026-10-04 (Colours) + 2026-10-05 (Sky & Space) + 2026-10-06 (Numbers 11-100) + 2026-10-07 (At the Doctor) + 2026-10-08 (Nature: Mountains & Volcanoes) + 2026-10-09 (Question Words & Secrets) + 2026-10-10 (Music) + 2026-10-11 (Trains & Travel).
+Sources: Ace lessons 2026-09-29 (Greetings) + 2026-09-30 (Family Members) + 2026-10-01 (Food) + 2026-10-02 (School) + 2026-10-03 (Body) + 2026-10-04 (Colours) + 2026-10-05 (Sky & Space) + 2026-10-06 (Numbers 11-100) + 2026-10-07 (At the Doctor) + 2026-10-08 (Nature: Mountains & Volcanoes) + 2026-10-09 (Question Words & Secrets) + 2026-10-10 (Music) + 2026-10-11 (Trains & Travel) + 2026-10-12 (Brain & Sleep) + 2026-10-13 (Bees & Gardens).
 Numbers 1-10 are already known and not included here.
 
 How to practise:
@@ -544,6 +544,87 @@ Individual files
   Chinese:  工人
   Jyutping: gung1 jan4
   English:  worker
+
+
+112-sing2-awake.mp3
+  Chinese:  醒
+  Jyutping: sing2
+  English:  awake / wake up
+
+111-leoi6-tired.mp3
+  Chinese:  累
+  Jyutping: leoi6
+  English:  tired
+
+110-cung1-ming4-clever.mp3
+  Chinese:  聰明
+  Jyutping: cung1 ming4
+  English:  clever / smart
+
+109-mung6-dream.mp3
+  Chinese:  夢
+  Jyutping: mung6
+  English:  dream
+
+108-fan3-gaau3-sleep.mp3
+  Chinese:  瞓覺
+  Jyutping: fan3 gaau3
+  English:  sleep
+
+107-gei3-dak1-remember.mp3
+  Chinese:  記得
+  Jyutping: gei3 dak1
+  English:  remember
+
+106-nam2-think.mp3
+  Chinese:  諗
+  Jyutping: nam2
+  English:  think
+
+105-nou5-brain.mp3
+  Chinese:  腦
+  Jyutping: nou5
+  English:  brain
+
+113-mat6-fung1-honeybee.mp3
+  Chinese:  蜜蜂
+  Jyutping: mat6 fung1
+  English:  honeybee
+
+114-faa1-flower.mp3
+  Chinese:  花
+  Jyutping: faa1
+  English:  flower
+
+115-fei1-fly.mp3
+  Chinese:  飛
+  Jyutping: fei1
+  English:  to fly
+
+116-tim4-sweet.mp3
+  Chinese:  甜
+  Jyutping: tim4
+  English:  sweet
+
+117-fung1-mat6-honey.mp3
+  Chinese:  蜂蜜
+  Jyutping: fung1 mat6
+  English:  honey
+
+118-cung4-insect.mp3
+  Chinese:  蟲
+  Jyutping: cung4
+  English:  insect / bug
+
+119-faa1-jyun4-garden.mp3
+  Chinese:  花園
+  Jyutping: faa1 jyun4
+  English:  garden
+
+120-mong4-busy.mp3
+  Chinese:  忙
+  Jyutping: mong4
+  English:  busy
 
 
 Combined file

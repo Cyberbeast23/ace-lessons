@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Math (Oct. 13): Honeybees, Hives &amp; Pollination Math Lab</title>
+<style>
+  body{font-family:"Segoe UI",Verdana,Arial,sans-serif;font-size:20px;line-height:1.6;margin:0;background:#f5f0eb;color:#2c2416}
+  .wrap{max-width:880px;margin:0 auto;padding:20px 18px 80px}
+  a.home{font-size:.9em;color:#bf360c}
+  h1{color:#e65100;font-size:2em;margin:10px 0}
+  h2{color:#ef6c00;margin-top:36px;border-bottom:3px solid #ffcc80;padding-bottom:4px}
+  .box{background:#fff;border-radius:16px;padding:18px 22px;margin:16px 0;box-shadow:0 3px 10px rgba(0,0,0,.07)}
+  .example{border-left:8px solid #ef6c00}
+  .example h3{margin:0 0 6px;color:#e65100}
+  .step{margin:4px 0 4px 10px}
+  code,.mono{font-family:Consolas,"Courier New",monospace;background:#fff3e0;padding:1px 6px;border-radius:5px}
+  .q{border-left:8px solid #90a4ae}
+  .q.right{border-left-color:#43a047;background:#f1f8e9}
+  .q.wrong{border-left-color:#e53935;background:#fff5f5}
+  .qnum{font-weight:bold;color:#e65100}
+  .row{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:10px}
+  input[type=text]{font-size:1.05em;padding:8px 12px;border:2px solid #ffcc80;border-radius:10px;width:190px}
+  input[type=text]:focus{outline:none;border-color:#ef6c00;box-shadow:0 0 0 3px #ffe0b2}
+  button{font-size:.95em;padding:8px 16px;border:none;border-radius:10px;cursor:pointer;font-weight:bold}
+  .check{background:#ef6c00;color:#fff} .check:hover{background:#e65100}
+  .hint{background:#ffe082;color:#5d4037} .hint:hover{background:#ffd54f}
+  .sol{background:#ce93d8;color:#311b92}
+  .unit{color:#546e7a}
+  .fb{margin-top:8px;font-weight:bold;min-height:1em}
+  .fb.good{color:#2e7d32} .fb.bad{color:#c62828}
+  .hints{margin-top:8px;color:#e65100;background:#fff3e0;border-radius:10px;padding:0 12px}
+  .hints p{margin:6px 0;padding:6px 0}
+  .solution{margin-top:8px;background:#f3e5f5;border-radius:10px;padding:8px 12px;display:none}
+  #scoreBox{position:sticky;bottom:0;background:#e65100;color:#fff;border-radius:16px 16px 0 0;padding:12px 20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-top:30px}
+  #scoreBox button{background:#ffca28;color:#3e2723}
+  #final{display:none;font-size:1.15em;text-align:center;border:4px solid #43a047}
+  .tipbox{background:#fff8e1;border-left:8px solid #ffb300}
+</style>
+</head>
+<body>
+<div class="wrap">
+<a class="home" href="../../index.html">&larr; Back to all lessons</a>
+<h1>🐝 Math Week 16: Honeybees, Hives &amp; Pollination Lab</h1>
+<p>Ace, honeybees are tiny mathematicians of the garden. Their honeycomb is built from perfect <strong>hexagons</strong>, colonies run on careful <strong>ratios</strong>, and farmers track <strong>unit rates</strong> of flowers visited and litres of honey stored. Today you'll think like a future scientist of pollination. You'll level up with <strong>hexagon area and perimeter, worker:drone:queen ratios, colony-loss percents, flowers-per-hour unit rates, honey volume in litres and millilitres, multi-step word problems, and reading a honey-harvest bar graph</strong>.</p>
+
+<h2>Part 1: Learn the Moves</h2>
+
+<div class="box tipbox">
+  <strong>The 4-Step Problem Solver (your beekeeper's checklist):</strong>
+  <ol>
+    <li><strong>Read</strong>: What is the question actually asking? Underline the numbers and units.</li>
+    <li><strong>Plan</strong>: Which operations do I need, and in what order?</li>
+    <li><strong>Solve</strong>: Do one step at a time and write each step down.</li>
+    <li><strong>Check</strong>: Is my answer reasonable? Did I answer the question that was asked, in the right unit?</li>
+  </ol>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 1: Hexagon perimeter and area</h3>
+  <p class="step">A regular hexagon has <strong>6 equal sides</strong>. Perimeter = <strong>6 × side length</strong>.</p>
+  <p class="step">A honeycomb cell with side 4 mm has perimeter 6 × 4 = <strong>24 mm</strong>.</p>
+  <p class="step">Area of a regular hexagon ≈ <strong>(3√3 / 2) × side²</strong>. Using √3 ≈ 1.732: for side 4 mm, area ≈ (3 × 1.732 / 2) × 16 ≈ 2.598 × 16 ≈ <strong>41.6 mm²</strong>.</p>
+  <p class="step">Shortcut often used in Grade 6–7: area = <strong>(3√3 / 2) s²</strong>, or think of a hexagon as 6 equilateral triangles.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 2: Colony ratios</h3>
+  <p class="step">A summer hive might have about <strong>50 000 workers</strong>, <strong>500 drones</strong>, and <strong>1 queen</strong>.</p>
+  <p class="step">Worker : drone = 50 000 : 500 = <strong>100 : 1</strong> (divide both by 500).</p>
+  <p class="step">If 4 out of every 5 foraging trips succeed: 4 ÷ 5 × 100 = <strong>80%</strong>.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 3: Unit rates (flowers per hour)</h3>
+  <p class="step">Unit rate = amount ÷ time. A bee visits <strong>150 flowers in 30 minutes</strong>.</p>
+  <p class="step">30 minutes = 0.5 hour, so rate = 150 ÷ 0.5 = <strong>300 flowers per hour</strong>. Or: 150 ÷ 30 = 5 flowers per minute, then 5 × 60 = 300 per hour.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 4: Honey volume (L and mL)</h3>
+  <p class="step">1 litre (L) = <strong>1000 millilitres (mL)</strong>. A jar holds 750 mL = <strong>0.75 L</strong>.</p>
+  <p class="step">If a hive yields 18 L and Ace bottles it in 0.5 L jars: 18 ÷ 0.5 = <strong>36 jars</strong>.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 5: Percent colony loss</h3>
+  <p class="step">Percent change = (new − old) ÷ old × 100. A colony of 40 000 bees falls to 28 000 over winter.</p>
+  <p class="step">Loss = 12 000; percent loss = 12 000 ÷ 40 000 × 100 = <strong>30% loss</strong>.</p>
+</div>
+
+<h2>Part 2: The Challenge (20 problems)</h2>
+<p>Type your answer and press <strong>Check</strong> (or Enter). Fractions like <span class="mono">3/4</span>, mixed numbers like <span class="mono">1 3/4</span>, or decimals like <span class="mono">1.75</span> are fine. Don't type the units, and you may use spaces or commas in big numbers (1 000 000). Stuck? Press <strong>Hint</strong>. After 2 tries, you can see a full solution.</p>
+
+<div id="questions"></div>
+<div class="box" id="final"></div>
+<div id="scoreBox">
+  <span id="scoreText">Score: 0 / 20 correct</span>
+  <button id="finishBtn" type="button">I'm done! Show my final score</button>
+</div>
+</div>
+
+<script>
+var NAME = "Ace";
+var GRAPH = '<div style="margin:10px 0"><svg viewBox="0 70 680 290" width="100%" style="max-width:680px;background:#fff;border-radius:12px" role="img" aria-label="Bar graph of honey harvested in litres from five hives"><line x1="60" y1="300.0" x2="620" y2="300.0" stroke="#e0e0e0"/><text x="52" y="304.0" text-anchor="end" font-size="13" fill="#455a64">0</text><line x1="60" y1="273.8" x2="620" y2="273.8" stroke="#e0e0e0"/><text x="52" y="277.8" text-anchor="end" font-size="13" fill="#455a64">3</text><line x1="60" y1="247.5" x2="620" y2="247.5" stroke="#e0e0e0"/><text x="52" y="251.5" text-anchor="end" font-size="13" fill="#455a64">6</text><line x1="60" y1="221.2" x2="620" y2="221.2" stroke="#e0e0e0"/><text x="52" y="225.2" text-anchor="end" font-size="13" fill="#455a64">9</text><line x1="60" y1="195.0" x2="620" y2="195.0" stroke="#e0e0e0"/><text x="52" y="199.0" text-anchor="end" font-size="13" fill="#455a64">12</text><line x1="60" y1="168.8" x2="620" y2="168.8" stroke="#e0e0e0"/><text x="52" y="172.8" text-anchor="end" font-size="13" fill="#455a64">15</text><line x1="60" y1="142.5" x2="620" y2="142.5" stroke="#e0e0e0"/><text x="52" y="146.5" text-anchor="end" font-size="13" fill="#455a64">18</text><line x1="60" y1="116.2" x2="620" y2="116.2" stroke="#e0e0e0"/><text x="52" y="120.2" text-anchor="end" font-size="13" fill="#455a64">21</text><line x1="60" y1="90.0" x2="620" y2="90.0" stroke="#e0e0e0"/><text x="52" y="94.0" text-anchor="end" font-size="13" fill="#455a64">24</text><line x1="60" y1="300.0" x2="620" y2="300.0" stroke="#455a64" stroke-width="2"/><line x1="60" y1="300.0" x2="60" y2="90.0" stroke="#455a64" stroke-width="2"/><rect class="bar" x="82.4" y="195.0" width="67.2" height="105.0" fill="#f9a825" rx="4"/><text x="116.0" y="187.0" text-anchor="middle" font-size="13" font-weight="bold" fill="#e65100">12</text><text x="116.0" y="319.0" text-anchor="middle" font-size="14" font-weight="bold" fill="#263238">H1</text><rect class="bar" x="194.4" y="142.5" width="67.2" height="157.5" fill="#f9a825" rx="4"/><text x="228.0" y="134.5" text-anchor="middle" font-size="13" font-weight="bold" fill="#e65100">18</text><text x="228.0" y="319.0" text-anchor="middle" font-size="14" font-weight="bold" fill="#263238">H2</text><rect class="bar" x="306.4" y="168.8" width="67.2" height="131.2" fill="#f9a825" rx="4"/><text x="340.0" y="160.8" text-anchor="middle" font-size="13" font-weight="bold" fill="#e65100">15</text><text x="340.0" y="319.0" text-anchor="middle" font-size="14" font-weight="bold" fill="#263238">H3</text><rect class="bar" x="418.4" y="221.2" width="67.2" height="78.8" fill="#f9a825" rx="4"/><text x="452.0" y="213.2" text-anchor="middle" font-size="13" font-weight="bold" fill="#e65100">9</text><text x="452.0" y="319.0" text-anchor="middle" font-size="14" font-weight="bold" fill="#263238">H4</text><rect class="bar" x="530.4" y="116.2" width="67.2" height="183.8" fill="#f9a825" rx="4"/><text x="564.0" y="108.2" text-anchor="middle" font-size="13" font-weight="bold" fill="#e65100">21</text><text x="564.0" y="319.0" text-anchor="middle" font-size="14" font-weight="bold" fill="#263238">H5</text><text x="340.0" y="342.0" text-anchor="middle" font-size="14" font-weight="bold" fill="#263238">Hive</text><text x="16" y="195.0" text-anchor="middle" font-size="14" font-weight="bold" fill="#263238" transform="rotate(-90 16 195.0)">Honey (L)</text></svg></div>';
+var QUESTIONS = [
+ {t:"A regular honeycomb cell has side length <strong>5 mm</strong>. What is its <strong>perimeter</strong>?", a:"30", u:"mm",
+  h:["Perimeter of a regular hexagon = 6 × side.","6 × 5 = ?"],
+  s:"6 × 5 = 30 mm."},
+ {t:"A regular hexagon has side <strong>3 cm</strong>. What is its perimeter?", a:"18", u:"cm",
+  h:["6 × side length.","6 × 3 = ?"],
+  s:"6 × 3 = 18 cm."},
+ {t:"Using √3 ≈ 1.732, estimate the <strong>area</strong> of a regular hexagon with side <strong>2 mm</strong>. Area = (3√3 / 2) × side². Round to the nearest whole mm².", a:"10", u:"mm²",
+  h:["side² = 4.","(3 × 1.732 / 2) × 4 = 2.598 × 4 ≈ 10.4 → 10."],
+  s:"(3 × 1.732 / 2) × 4 ≈ 2.598 × 4 ≈ 10.392, which rounds to 10 mm²."},
+ {t:"A colony has <strong>45 000 workers</strong> and <strong>450 drones</strong>. Simplify the ratio workers : drones.", a:"100:1", u:"",
+  h:["Divide both by 450.","45 000 ÷ 450 = 100."],
+  s:"45 000 : 450 = 100 : 1. (Type 100:1)"},
+ {t:"In one yard there is <strong>1 queen</strong>, <strong>200 drones</strong>, and <strong>19 800 workers</strong>. How many bees are in the colony altogether?", a:"20001", u:"bees",
+  h:["Add all three groups.","1 + 200 + 19 800 = ?"],
+  s:"1 + 200 + 19 800 = 20 001 bees."},
+ {t:"A worker bee visits <strong>120 flowers in 20 minutes</strong>. What is her rate in <strong>flowers per hour</strong>?", a:"360", u:"flowers/h",
+  h:["20 minutes = 1/3 hour, or find per-minute then × 60.","120 ÷ 20 = 6 flowers/min; 6 × 60 = ?"],
+  s:"120 ÷ 20 = 6 per minute; 6 × 60 = 360 flowers per hour."},
+ {t:"Another bee visits <strong>90 flowers in 15 minutes</strong>. Flowers per hour?", a:"360", u:"flowers/h",
+  h:["90 ÷ 15 = 6 per minute.","6 × 60 = ?"],
+  s:"90 ÷ 15 = 6/min; 6 × 60 = 360 flowers/h. Same unit rate as the previous bee!"},
+ {t:"A hive produces <strong>24 L</strong> of honey. How many <strong>millilitres</strong> is that?", a:"24000", u:"mL",
+  h:["1 L = 1000 mL.","24 × 1000 = ?"],
+  s:"24 × 1000 = 24 000 mL."},
+ {t:"Ace bottles <strong>12 L</strong> of honey into jars that each hold <strong>250 mL</strong>. How many jars does he need?", a:"48", u:"jars",
+  h:["12 L = 12 000 mL.","12 000 ÷ 250 = ?"],
+  s:"12 000 ÷ 250 = 48 jars."},
+ {t:"A blueberry farm needs <strong>2 bee colonies per hectare</strong>. How many colonies for a <strong>35-hectare</strong> field?", a:"70", u:"colonies",
+  h:["Multiply hectares by colonies per hectare.","35 × 2 = ?"],
+  s:"35 × 2 = 70 colonies."},
+ {t:"Last year a beekeeper had <strong>50</strong> healthy hives. This spring only <strong>35</strong> survived. What was the <strong>percent loss</strong>?", a:"30", u:"%",
+  h:["Loss = 50 − 35 = 15.","15 ÷ 50 × 100 = ?"],
+  s:"15 ÷ 50 × 100 = 30% loss."},
+ {t:"Of 200 foraging bees, <strong>160</strong> returned with nectar. What <strong>percent</strong> succeeded?", a:"80", u:"%",
+  h:["Part ÷ whole × 100.","160 ÷ 200 × 100 = ?"],
+  s:"160 ÷ 200 × 100 = 80%."},
+ {t:"Honey denser tip: one jar holds <strong>0.5 L</strong>. How many jars to store <strong>17.5 L</strong>?", a:"35", u:"jars",
+  h:["Divide total volume by jar size.","17.5 ÷ 0.5 = ?"],
+  s:"17.5 ÷ 0.5 = 35 jars."},
+ {t:"A hexagon tile path uses tiles with perimeter <strong>48 cm</strong> each. What is one side length?", a:"8", u:"cm",
+  h:["Perimeter = 6 × side, so side = perimeter ÷ 6.","48 ÷ 6 = ?"],
+  s:"48 ÷ 6 = 8 cm."},
+ {t:"Ace's observation: bees visit a patch of <strong>480 flowers</strong> in <strong>2 hours</strong>. What is the average rate in flowers per hour?", a:"240", u:"flowers/h",
+  h:["Divide flowers by hours.","480 ÷ 2 = ?"],
+  s:"480 ÷ 2 = 240 flowers/h."},
+ {t:"A colony of <strong>60 000</strong> bees loses <strong>25%</strong> over a harsh month. How many bees remain?", a:"45000", u:"bees",
+  h:["25% of 60 000 = 15 000 lost.","60 000 − 15 000 = ?"],
+  s:"0.25 × 60 000 = 15 000 lost; 60 000 − 15 000 = 45 000 remain."},
+ {t:"Two hives yield <strong>9.6 L</strong> and <strong>14.4 L</strong>. What is the <strong>mean</strong> yield?", a:"12", u:"L",
+  h:["Mean = sum ÷ 2.","(9.6 + 14.4) ÷ 2 = ?"],
+  s:"24 ÷ 2 = 12 L."},
+ {t:"A regular hexagon is made of <strong>6 equilateral triangles</strong>. If each triangle has area <strong>7 cm²</strong>, what is the hexagon's area?", a:"42", u:"cm²",
+  h:["Multiply the triangle area by 6.","7 × 6 = ?"],
+  s:"7 × 6 = 42 cm²."},
+ {t:GRAPH+"The bar graph shows honey harvested (L) from five hives. What is the <strong>mean</strong> harvest?", a:"15", u:"L",
+  h:["Add the five bar heights: 12 + 18 + 15 + 9 + 21.","Divide the total by 5."],
+  s:"12 + 18 + 15 + 9 + 21 = 75, and 75 ÷ 5 = 15 L."},
+ {t:"Use the graph in question 19. What is the <strong>range</strong> of honey harvested?", a:"12", u:"L",
+  h:["Highest bar − lowest bar.","21 − 9 = ?"],
+  s:"21 − 9 = 12 L."}
+];
+
+var PRAISE = ["Nice work, Ace!","Correct! Buzz-worthy! 🐝","Yes! Future beekeeper Ace!","Excellent, Ace. That was a tough one!","Right on target! 🎯","Brilliant thinking, Ace!","Hive high-five! 🍯"];
+var ENCOURAGE = ["Not quite. Check your steps and try again!","Close call. Try again, Ace! Maybe use a hint?","Hmm, not yet. Re-read the question carefully.","Keep going, Ace. Mistakes help your brain grow!"];
+
+function parseAnswer(str){
+  if(str===undefined||str===null) return NaN;
+  var s=String(str).trim().toLowerCase();
+  s=s.replace(/[\u2212\u2013]/g,"-");
+  s=s.replace(/(\d),(?=\d{3}(\D|$))/g,"$1");
+  s=s.replace(/[^0-9.\/\- ]/g," ").replace(/\s+/g," ").trim();
+  s=s.replace(/\s*\/\s*/g,"/");
+  var m;
+  if((m=s.match(/^(-?\d+) (\d+)\/(\d+)$/))){ var w=parseFloat(m[1]),n=parseFloat(m[2]),d=parseFloat(m[3]); if(d===0)return NaN; return w<0? w-n/d : w+n/d; }
+  if((m=s.match(/^(-?\d+(?:\.\d+)?)\/(\d+(?:\.\d+)?)$/))){ var d2=parseFloat(m[2]); if(d2===0)return NaN; return parseFloat(m[1])/d2; }
+  s=s.replace(/ /g,"");
+  if(/^-?(\d+\.?\d*|\.\d+)$/.test(s)) return parseFloat(s);
+  return NaN;
+}
+function isCorrect(input,key){
+  var a=parseAnswer(input), k=parseAnswer(key);
+  if(isNaN(a)) return false;
+  var isInt=Math.abs(k-Math.round(k))<1e-12;
+  var tol=isInt?1e-9:0.005;
+  return Math.abs(a-k)<=tol;
+}
+
+function isRomanCorrect(input,key){ return String(input).replace(/\s+/g,"").toUpperCase()===key; }
+var state=[];
+function render(){
+  var box=document.getElementById("questions");
+  QUESTIONS.forEach(function(q,i){
+    state.push({correct:false,tries:0,hints:0});
+    var d=document.createElement("div");
+    d.className="box q"; d.id="q"+i;
+    d.innerHTML='<div><span class="qnum">'+(i+1)+'.</span> '+q.t+'</div>'+
+      '<div class="row"><input type="text"'+(q.r?' placeholder="e.g. MMXXVI"':'')+' id="in'+i+'" aria-label="Answer to question '+(i+1)+'" autocomplete="off"> <span class="unit">'+q.u+'</span>'+
+      '<button type="button" class="check" data-i="'+i+'">Check</button>'+
+      '<button type="button" class="hint" data-i="'+i+'">Hint 💡</button>'+
+      '<button type="button" class="sol" data-i="'+i+'" style="display:none">Show solution</button></div>'+
+      '<div class="fb" id="fb'+i+'"></div><div class="hints" id="hints'+i+'"></div>'+
+      '<div class="solution" id="sol'+i+'"><strong>Solution:</strong> '+q.s+'</div>';
+    box.appendChild(d);
+  });
+  box.addEventListener("click",function(e){
+    var b=e.target; if(b.tagName!=="BUTTON")return;
+    var i=+b.getAttribute("data-i");
+    if(b.className==="check") check(i);
+    else if(b.className==="hint") hint(i);
+    else if(b.className==="sol") document.getElementById("sol"+i).style.display="block";
+  });
+  box.addEventListener("keydown",function(e){
+    if(e.key==="Enter"&&e.target.tagName==="INPUT"){ check(+e.target.id.slice(2)); }
+  });
+}
+function pick(arr){return arr[Math.floor(Math.random()*arr.length)];}
+function check(i){
+  var val=document.getElementById("in"+i).value;
+  var fb=document.getElementById("fb"+i), card=document.getElementById("q"+i);
+  if(val.trim()===""){fb.className="fb bad";fb.textContent="Type an answer first, Ace!";return;}
+  var isR=!!QUESTIONS[i].r;
+  if(isR&&!/^[ivxlcdm\s]+$/i.test(val)){fb.className="fb bad";fb.textContent="Use only Roman numeral letters: I, V, X, L, C, D, M.";return;}
+  if(!isR&&isNaN(parseAnswer(val))){fb.className="fb bad";fb.textContent="I can't read that as a number. Try something like 42, 3.5, 3/4 or 1 3/4.";return;}
+  state[i].tries++;
+  if(isR?isRomanCorrect(val,QUESTIONS[i].a):isCorrect(val,QUESTIONS[i].a)){
+    state[i].correct=true; card.className="box q right"; fb.className="fb good";
+    fb.textContent="✅ "+pick(PRAISE)+(state[i].tries===1?" (first try!)":"");
+  } else {
+    state[i].correct=false; card.className="box q wrong"; fb.className="fb bad";
+    fb.textContent="❌ "+pick(ENCOURAGE);
+    if(state[i].tries>=2) card.querySelector(".sol").style.display="inline-block";
+  }
+  updateScore();
+}
+function hint(i){
+  var q=QUESTIONS[i], s=state[i], hb=document.getElementById("hints"+i);
+  if(s.hints<q.h.length){
+    var p=document.createElement("p"); p.textContent="💡 Hint "+(s.hints+1)+": "+q.h[s.hints]; hb.appendChild(p); s.hints++;
+  }
+  if(s.hints>=q.h.length) document.querySelector("#q"+i+" .hint").disabled=true;
+  updateScore();
+}
+function counts(){
+  var c=0,first=0,h=0;
+  state.forEach(function(s){ if(s.correct){c++; if(s.tries===1)first++;} h+=s.hints; });
+  return {correct:c,first:first,hints:h};
+}
+function updateScore(){
+  var k=counts();
+  document.getElementById("scoreText").textContent="Score: "+k.correct+" / "+QUESTIONS.length+" correct · hints used: "+k.hints;
+}
+function finish(){
+  var k=counts(), n=QUESTIONS.length, pct=Math.round(100*k.correct/n);
+  var msg;
+  if(pct===100) msg="🏆 PERFECT SCORE! Incredible work, Ace. A real beekeeper-scientist would be impressed!";
+  else if(pct>=85) msg="🌟 Outstanding, Ace! That's a Grade 6-7 level performance!";
+  else if(pct>=65) msg="💪 Great effort, Ace! Review the ones you missed and try them again.";
+  else if(pct>=40) msg="👍 Good start, Ace! These problems are tough. Use the hints and solutions to learn the tricks, then try again.";
+  else msg="🌱 These are challenge problems, well above grade level. Every scientist started as a beginner! Go through the worked examples and try again, Ace!";
+  var f=document.getElementById("final");
+  f.style.display="block";
+  f.innerHTML="<h2 style='border:none;margin-top:0'>Final Score: "+k.correct+" / "+n+" ("+pct+"%)</h2>"+
+    "<p>Correct on the first try: "+k.first+" · Hints used: "+k.hints+"</p><p>"+msg+"</p>"+
+    "<p style='font-size:.85em;color:#546e7a'>Finished on "+new Date().toLocaleString("en-CA")+"</p>";
+  f.scrollIntoView({behavior:"smooth"});
+}
+render();
+updateScore();
+document.getElementById("finishBtn").addEventListener("click",finish);
+</script>
+</body>
+</html>
