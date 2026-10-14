@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reading (Oct. 14): Closed Loops: How Circuits Light Up British Columbia</title>
+<style>
+  body{font-family:"Segoe UI",Verdana,Arial,sans-serif;font-size:20px;line-height:1.65;margin:0;background:#f5f0eb;color:#2c2416}
+  .wrap{max-width:880px;margin:0 auto;padding:20px 18px 80px}
+  a.home{font-size:.9em;color:#bf360c}
+  h1{color:#e65100;font-size:2em;margin:10px 0}
+  h2{color:#ef6c00;margin-top:36px;border-bottom:3px solid #ffcc80;padding-bottom:4px}
+  .box{background:#fff;border-radius:16px;padding:18px 22px;margin:16px 0;box-shadow:0 3px 10px rgba(0,0,0,.07)}
+  .passage{font-family:Georgia,"Times New Roman",serif;font-size:1.1em;line-height:1.8}
+  .passage h3{text-align:center;font-family:"Segoe UI",Verdana,sans-serif;color:#e65100;font-size:1.4em;margin:4px 0 14px}
+  .passage p{text-indent:1.5em;margin:0 0 14px}
+  mark.v{background:#fff59d;padding:0 3px;border-radius:4px;font-weight:bold}
+  .tipbox{background:#fff8e1;border-left:8px solid #ffb300}
+  .q{border-left:8px solid #ffcc80}
+  .q.right{border-left-color:#43a047;background:#f1f8e9}
+  .q.wrong{border-left-color:#e53935;background:#fff5f5}
+  .tag{display:inline-block;font-size:.7em;background:#ef6c00;color:#fff;border-radius:8px;padding:1px 8px;margin-left:6px;vertical-align:middle}
+  .opt{display:block;width:100%;text-align:left;font-size:.95em;background:#fafafa;border:2px solid #e0e0e0;border-radius:10px;padding:8px 14px;margin:8px 0;cursor:pointer;font-family:inherit}
+  .opt:hover{border-color:#ffb74d;background:#fff}
+  .opt.sel-right{background:#c8e6c9;border-color:#43a047}
+  .opt.sel-wrong{background:#ffcdd2;border-color:#e53935}
+  .fb{margin-top:6px;font-weight:bold}
+  .fb.good{color:#2e7d32} .fb.bad{color:#c62828}
+  .explain{color:#e65100;font-weight:normal}
+  select{font-size:.95em;padding:6px 8px;border-radius:8px;border:2px solid #ffb74d;max-width:100%;font-family:inherit}
+  .vrow{display:flex;flex-wrap:wrap;align-items:center;gap:10px;padding:8px 6px;border-bottom:1px dashed #eee}
+  .vrow .w{font-weight:bold;min-width:140px}
+  .vrow.right{background:#f1f8e9} .vrow.wrong{background:#fff5f5}
+  .mark{font-size:1.2em;min-width:30px}
+  button.main{font-size:1em;padding:10px 20px;border:none;border-radius:10px;cursor:pointer;font-weight:bold;background:#ef6c00;color:#fff;margin-top:10px}
+  button.main:hover{background:#e65100}
+  button.sec{font-size:.95em;padding:8px 16px;border:none;border-radius:10px;cursor:pointer;font-weight:bold;background:#ffe082;color:#5d4037}
+  textarea{width:100%;box-sizing:border-box;font-size:1em;font-family:inherit;padding:10px;border:2px solid #ffb74d;border-radius:10px;min-height:120px}
+  #model{display:none;background:#fff3e0;border-radius:10px;padding:10px 14px;margin-top:10px}
+  #scoreBox{position:sticky;bottom:0;background:#e65100;color:#fff;border-radius:16px 16px 0 0;padding:12px 20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-top:30px}
+  #scoreBox button{font-size:.95em;padding:8px 16px;border:none;border-radius:10px;cursor:pointer;font-weight:bold;background:#ffca28;color:#3e2723}
+  #final{display:none;text-align:center;border:4px solid #43a047;font-size:1.1em}
+</style>
+</head>
+<body>
+<div class="wrap">
+<a class="home" href="../../index.html">&larr; Back to all lessons</a>
+<h1>📖 Reading Week 17: Closed Loops: How Circuits Light Up British Columbia</h1>
+
+<div class="box tipbox">
+  <strong>Before you read, Ace:</strong> Today's passage is a <em>science / engineering</em> informational text about electricity, circuits, and hydroelectric power in British Columbia. Engineers explain <em>how</em> a simple circuit works, then show <em>why</em> safety devices and clean power matter. As you read, watch for cause-and-effect links and for vocabulary built from Latin and Greek roots.
+  <ul>
+    <li><strong>Preview:</strong> Read the title. What two big ideas do you expect: how a loop of wire can light a bulb, and where BC gets much of its power?</li>
+    <li><strong>Pause:</strong> After paragraph 3, ask yourself: why would a broken wire or a missing switch matter for safety?</li>
+    <li><strong>Root detective:</strong> Useful word roots:
+      <span style="display:block;margin-top:6px"><strong>circ-</strong> = around / go around · <strong>duct-</strong> / <strong>conduc-</strong> = lead · <strong>volt-</strong> = electric push · <strong>hydro-</strong> = water · <strong>insul-</strong> = island / separate</span></li>
+    <li><strong>Words in <mark class="v">yellow</mark></strong> are vocabulary words. Use the sentence around them (the <em>context</em>) to figure out what they mean.</li>
+  </ul>
+</div>
+
+<div class="box passage" id="passage">
+<h3>Closed Loops: How Circuits Light Up British Columbia</h3>
+<p>Flip a light switch in a Canadian kitchen and something almost magical happens: a dark room wakes up. The magic is not magic at all—it is a completed <mark class="v">circuit</mark>, a closed loop that lets electric charge travel from a power source, through a load (like a bulb), and back again. Inside copper wires, countless tiny <mark class="v">electron</mark>s drift along. The "push" that moves them is called <mark class="v">voltage</mark>, measured in volts. A typical Canadian wall outlet supplies about 120 volts—plenty of push for lamps, chargers, and fridge motors.</p>
+<p>Not every material welcomes those travelling charges. Metals such as copper are excellent <mark class="v">conductor</mark>s: they let charge flow easily. Plastic, rubber, and glass are <mark class="v">insulator</mark>s: they resist flow and wrap wires so your fingers stay safer. A <mark class="v">switch</mark> is a tiny drawbridge in the loop. When you open it, the path breaks and the bulb goes dark. When you close it, the loop is whole again and light returns. A portable <mark class="v">battery</mark> can play the same role as a wall outlet for a flashlight or toy, storing chemical energy that becomes electrical push on demand.</p>
+<p>Engineers measure how hard a device works in watts. One <mark class="v">watt</mark> equals one joule of energy used each second. Power (watts) equals voltage times current, so a kettle that draws a large current from 120 volts can heat water quickly—but it also demands careful wiring. That is why homes use circuit breakers. If too much current tries to squeeze through a wire, the breaker opens the circuit on purpose, like a safety gate slamming shut before the wire overheats.</p>
+<p>Where does the electricity in British Columbia come from? Much of it is <mark class="v">hydroelectric</mark>: falling or flowing water spins turbines in dams, and those turbines turn generators that push charge into the grid. Mountain reservoirs and rivers give BC a clean, renewable advantage compared with places that burn coal for most of their power. Still, the same safety rules travel with every electron: never poke metal into outlets, keep cords dry, and respect warning labels on appliances.</p>
+<p>Think of a circuit as a team sport. The battery or outlet supplies the push. Conductors carry the charge. The load does useful work—light, heat, or motion. Insulators and breakers protect people and property. Miss one teammate and the play fails: an open switch keeps a room dark; a missing insulator can turn a wire into a hazard; an overloaded circuit can trip a breaker and save a house from fire.</p>
+<p>So the next time a lamp snaps on at dusk, picture the invisible loop. Voltage pushes, electrons move, watts of power become visible light, and somewhere upstream a hydroelectric dam may be spinning water into electricity for a whole province. Understanding circuits is not only school science—it is the language of the engineers who keep Canadian homes bright, warm, and safe.</p>
+<p style="text-indent:0;font-size:.8em;color:#546e7a;text-align:right">About 480 words</p>
+</div>
+
+<h2>Part 1: Comprehension</h2>
+<p>Click the best answer. You'll find out right away if you're correct. Only your <strong>first click</strong> counts toward your score, but you can keep trying to find the right answer.</p>
+<div id="mc"></div>
+
+<h2>Part 2: Think Deeper (not scored)</h2>
+<div class="box">
+  <p><strong>The author compares a circuit to a "team sport." In 3 to 5 sentences, name at least three "teammates" from the passage (for example battery/outlet, conductor, load, insulator, breaker) and explain what each does. Then connect it to your own life: describe one safe habit you already use—or will start using—around electricity at home. Use at least one detail from the passage as evidence.</strong></p>
+  <textarea id="openAns" placeholder="Write your answer here, Ace..."></textarea>
+  <p><button type="button" class="sec" id="showModel">Compare with a model answer</button></p>
+  <div id="model"><strong>Model answer:</strong> The passage says a battery or outlet supplies the push (voltage), conductors like copper carry the charge, and the load (a bulb) turns that energy into light. Insulators wrap wires so fingers stay safer, and circuit breakers open if too much current flows—like a safety gate. I already unplug chargers with dry hands and never poke anything into outlets; after reading about hydroelectric power and breakers, I will also tell Dad if a cord looks frayed. That way the "team" stays safe while lights and laptops keep working.<br><em>Did you name teammates, use a passage detail, and connect it to a real safety habit? If so, excellent work!</em></div>
+</div>
+
+<h2>Part 3: Vocabulary</h2>
+<div class="box">
+  <h3 style="margin-top:0">A. Match each word to its meaning</h3>
+  <p>Choose the meaning that fits how the word is used in the passage.</p>
+  <div id="vmatch"></div>
+  <h3>B. Fill in the blank</h3>
+  <p>Choose the vocabulary word that best completes each sentence.</p>
+  <div id="vfill"></div>
+  <button type="button" class="main" id="checkVocab">Check my vocabulary</button>
+  <div class="fb" id="vocabFb"></div>
+</div>
+
+<div class="box" id="final"></div>
+<div id="scoreBox">
+  <span id="scoreText"></span>
+  <button type="button" id="finishBtn">I'm done! Show my final score</button>
+</div>
+</div>
+
+<script>
+var MC = [
+ {q:"Which sentence best states the <strong>main idea</strong> of the whole passage?",
+  o:["Batteries store chemical energy.",
+     "Circuits are closed loops that move charge to do useful work, and BC often powers them with hydroelectric dams—plus safety devices protect people.",
+     "Plastic is an insulator.",
+     "Kettles heat water quickly."],
+  a:1, e:"A, C and D are single details. B covers circuits, BC hydro power, and safety, which is what the whole passage is about."},
+ {q:"According to the passage, what is a <em>circuit</em>?", tag:"Key detail",
+  o:["A type of dam.","A closed loop that lets electric charge travel from a power source through a load and back.","A kind of plastic coating.","A Canadian province."],
+  a:1, e:"Paragraph 1 defines a circuit as a closed loop for charge from source through load and back."},
+ {q:"Why do homes use circuit breakers?", tag:"Cause and effect",
+  o:["To make bulbs brighter.","To open the circuit on purpose if too much current flows, before a wire overheats.","To store hydroelectric water.","To add voltage to batteries."],
+  a:1, e:"Paragraph 3 explains breakers as safety gates that open when current is too high."},
+ {q:"What does hydroelectric power mainly use to make electricity?", tag:"Key detail",
+  o:["Burning coal only.","Falling or flowing water that spins turbines and generators.","Solar panels on every roof.","Wind only."],
+  a:1, e:"Paragraph 4 says falling or flowing water spins turbines that turn generators."},
+ {q:"What can you <strong>infer</strong> from the advice to keep cords dry and never poke metal into outlets?", tag:"Inference",
+  o:["Water and metal can create unsafe paths for charge that may harm people.","Electricity only works underwater.","Outlets need metal toys to function.","Insulators attract water."],
+  a:1, e:"Paragraph 4 links dry cords and respecting outlets to safety; water and stray metal can complete dangerous paths."},
+ {q:"In this passage, <em>conductor</em> mainly means:", tag:"Vocabulary in context",
+  o:["A person who leads an orchestra.","A material that lets electric charge flow easily, such as copper.","A type of dam.","A light switch cover."],
+  a:1, e:"Paragraph 2 says metals such as copper are excellent conductors that let charge flow easily."},
+ {q:"Why does the author call a switch a \"tiny drawbridge\"?", tag:"Author's purpose",
+  o:["Because switches are made of wood.","Because opening a switch breaks the path (like raising a bridge) and closing it completes the loop again.","Because switches float on water.","Because drawbridges make voltage."],
+  a:1, e:"Paragraph 2 explains that opening the switch breaks the path and closing it completes the loop."},
+ {q:"The root <em>hydro-</em> relates to water. What does <em>hydroelectric</em> most likely mean here?", tag:"Word roots",
+  o:["Power from burning oil","Electricity produced from the energy of falling or flowing water","A kind of insulator","A battery brand"],
+  a:1, e:"Hydro- points to water; the passage defines hydroelectric as power from falling or flowing water."},
+ {q:"Which detail best supports the claim that BC has a clean-power advantage?", tag:"Evidence",
+  o:["Plastic wraps wires.","Much of BC's electricity comes from hydroelectric dams using mountain reservoirs and rivers, unlike places that burn coal for most power.","Switches open and close.","Watts equal joules per second."],
+  a:1, e:"Paragraph 4 contrasts BC hydro with places that burn coal."},
+ {q:"Which sentence best describes the <strong>author's point of view</strong>?", tag:"Author's purpose",
+  o:["Electricity is too dangerous to learn about.","Understanding circuits and safety helps keep Canadian homes bright, warm, and safe.","Only dams matter, not home wiring.","Batteries should replace all dams."],
+  a:1, e:"The closing paragraph urges understanding circuits as the language of engineers who keep homes bright, warm, and safe."}
+];
+
+var VOCAB = ["circuit","electron","voltage","conductor","insulator","switch","battery","watt","hydroelectric"];
+var DEFS = {
+ circuit:"a closed loop that lets electric charge travel from a power source through a load and back",
+ electron:"a tiny negatively charged particle that moves through a conductor",
+ voltage:"the electric push that moves charges, measured in volts",
+ conductor:"a material that lets electric charge flow easily",
+ insulator:"a material that resists the flow of electric charge",
+ switch:"a device that opens or closes a circuit",
+ battery:"a portable power source that stores chemical energy",
+ watt:"the SI unit of power; one joule of energy per second",
+ hydroelectric:"producing electricity from falling or flowing water"
+};
+var FILL = [
+ {s:"A closed loop for electric charge is called a ____.", a:"circuit"},
+ {s:"Copper is an excellent ____ because charge flows through it easily.", a:"conductor"},
+ {s:"Plastic coating on a wire acts as an ____.", a:"insulator"},
+ {s:"BC gets much of its power from ____ dams.", a:"hydroelectric"}
+];
+var FILL_OPTIONS = ["circuit","conductor","insulator","hydroelectric","voltage","battery","switch","watt","electron"];
+
+var PRAISE=["Nice work, Ace!","Correct! Sharp reading, Ace!","Yes! You followed the evidence!","Excellent thinking, Dr. Ace!","Right! Fully charged! ⚡"];
+function pick(a){return a[Math.floor(Math.random()*a.length)];}
+function shuffled(arr,seed){var a=arr.slice(),s=seed;for(var i=a.length-1;i>0;i--){s=(s*9301+49297)%233280;var j=Math.floor(s/233280*(i+1));var t=a[i];a[i]=a[j];a[j]=t;}return a;}
+
+var mcState=MC.map(function(){return {answered:false,firstRight:false,done:false};});
+var vocabScore=0, vocabChecked=false;
+var VOCAB_TOTAL=VOCAB.length+FILL.length;
+
+function buildMC(){
+  var box=document.getElementById("mc");
+  MC.forEach(function(item,i){
+    var d=document.createElement("div"); d.className="box q"; d.id="mc"+i;
+    var html="<div><strong>"+(i+1)+".</strong> "+item.q+(item.tag?'<span class="tag">'+item.tag+'</span>':"")+"</div>";
+    item.o.forEach(function(opt,j){ html+='<button type="button" class="opt" data-i="'+i+'" data-j="'+j+'">'+String.fromCharCode(65+j)+". "+opt+"</button>"; });
+    html+='<div class="fb" id="mcfb'+i+'"></div>';
+    d.innerHTML=html; box.appendChild(d);
+  });
+  box.addEventListener("click",function(e){
+    var b=e.target.closest?e.target.closest(".opt"):e.target; if(!b||!b.classList.contains("opt"))return;
+    answerMC(+b.getAttribute("data-i"),+b.getAttribute("data-j"),b);
+  });
+}
+function answerMC(i,j,btn){
+  var st=mcState[i], item=MC[i], fb=document.getElementById("mcfb"+i), card=document.getElementById("mc"+i);
+  if(st.done) return;
+  var right=(j===item.a);
+  if(!st.answered){ st.answered=true; st.firstRight=right; }
+  if(right){
+    st.done=true; btn.classList.add("sel-right"); card.className="box q right";
+    fb.className="fb good"; fb.innerHTML="✅ "+pick(PRAISE)+' <span class="explain">'+item.e+"</span>";
+  } else {
+    btn.classList.add("sel-wrong"); card.className="box q wrong";
+    fb.className="fb bad"; fb.innerHTML="❌ Not quite, Ace. Look back at the passage and try another answer.";
+  }
+  updateScore();
+}
+function buildVocab(){
+  var m=document.getElementById("vmatch");
+  var defOrder=shuffled(VOCAB,44);
+  VOCAB.forEach(function(w,i){
+    var row=document.createElement("div"); row.className="vrow"; row.id="vm"+i;
+    var sel='<select id="vsel'+i+'" aria-label="Meaning of '+w+'"><option value="">- choose a meaning -</option>';
+    defOrder.forEach(function(k){ sel+='<option value="'+k+'">'+DEFS[k]+'</option>'; });
+    sel+="</select>";
+    row.innerHTML='<span class="mark" id="vmk'+i+'"></span><span class="w">'+w+'</span>'+sel;
+    m.appendChild(row);
+  });
+  var f=document.getElementById("vfill");
+  FILL.forEach(function(item,i){
+    var row=document.createElement("div"); row.className="vrow"; row.id="vf"+i;
+    var sel='<select id="fsel'+i+'" aria-label="Blank '+(i+1)+'"><option value="">- choose -</option>';
+    FILL_OPTIONS.forEach(function(w){ sel+='<option value="'+w+'">'+w+'</option>'; });
+    sel+="</select>";
+    var parts=item.s.split("____");
+    row.innerHTML='<span class="mark" id="vfk'+i+'"></span><span>'+(i+1)+'. '+parts[0]+sel+parts[1]+'</span>';
+    f.appendChild(row);
+  });
+}
+function checkVocab(){
+  var score=0, blank=0;
+  VOCAB.forEach(function(w,i){
+    var v=document.getElementById("vsel"+i).value, ok=(v===w);
+    if(!v) blank++;
+    if(ok) score++;
+    document.getElementById("vm"+i).className="vrow "+(ok?"right":"wrong");
+    document.getElementById("vmk"+i).textContent=ok?"✅":"❌";
+  });
+  FILL.forEach(function(item,i){
+    var v=document.getElementById("fsel"+i).value, ok=(v===item.a);
+    if(!v) blank++;
+    if(ok) score++;
+    document.getElementById("vf"+i).className="vrow "+(ok?"right":"wrong");
+    document.getElementById("vfk"+i).textContent=ok?"✅":"❌";
+  });
+  vocabScore=score; vocabChecked=true;
+  var fb=document.getElementById("vocabFb");
+  if(score===VOCAB_TOTAL){ fb.className="fb good"; fb.textContent="🌟 "+score+" / "+VOCAB_TOTAL+". Perfect! Every vocabulary word completed the circuit, Ace!"; }
+  else { fb.className="fb bad"; fb.textContent=score+" / "+VOCAB_TOTAL+" correct"+(blank?" ("+blank+" left blank)":"")+". Fix the ❌ ones and check again. Try finding the word in the passage for clues!"; }
+  updateScore();
+}
+function scores(){
+  var mc=0,answered=0; mcState.forEach(function(s){ if(s.firstRight) mc++; if(s.answered) answered++; });
+  return {mc:mc,answered:answered,vocab:vocabScore};
+}
+function updateScore(){
+  var s=scores();
+  document.getElementById("scoreText").textContent="Comprehension: "+s.mc+" / "+MC.length+" · Vocabulary: "+(vocabChecked?s.vocab:"-")+" / "+VOCAB_TOTAL;
+}
+function finish(){
+  if(!vocabChecked) checkVocab();
+  var s=scores(), total=MC.length+VOCAB_TOTAL, got=s.mc+s.vocab, pct=Math.round(100*got/total);
+  var msg = pct===100 ? "🏆 A perfect score! Outstanding reading, Ace!" :
+            pct>=80 ? "🌟 Fantastic work, Ace! You read like a Grade 7 student!" :
+            pct>=60 ? "💪 Solid effort, Ace! Reread the paragraphs for the questions you missed." :
+                      "🌱 This was a challenging passage. Read it once more, slowly, and try again. You've got this, Ace!";
+  var f=document.getElementById("final"); f.style.display="block";
+  f.innerHTML="<h2 style='border:none;margin-top:0'>Final Score: "+got+" / "+total+" ("+pct+"%)</h2>"+
+    "<p>Comprehension (first tries): "+s.mc+" / "+MC.length+(s.answered<MC.length?" (you skipped "+(MC.length-s.answered)+")":"")+"<br>Vocabulary: "+s.vocab+" / "+VOCAB_TOTAL+"</p><p>"+msg+"</p>"+
+    "<p style='font-size:.85em;color:#546e7a'>Finished on "+new Date().toLocaleString("en-CA")+"</p>";
+  f.scrollIntoView({behavior:"smooth"});
+}
+buildMC(); buildVocab(); updateScore();
+document.getElementById("checkVocab").addEventListener("click",checkVocab);
+document.getElementById("finishBtn").addEventListener("click",finish);
+document.getElementById("showModel").addEventListener("click",function(){document.getElementById("model").style.display="block";});
+</script>
+</body>
+</html>
