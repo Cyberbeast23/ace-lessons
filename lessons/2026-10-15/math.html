@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Math (Oct. 15): First Nations of BC: Land, Canoes &amp; Salmon Math Lab</title>
+<style>
+  body{font-family:"Segoe UI",Verdana,Arial,sans-serif;font-size:20px;line-height:1.6;margin:0;background:#f5f0eb;color:#2c2416}
+  .wrap{max-width:880px;margin:0 auto;padding:20px 18px 80px}
+  a.home{font-size:.9em;color:#bf360c}
+  h1{color:#e65100;font-size:2em;margin:10px 0}
+  h2{color:#ef6c00;margin-top:36px;border-bottom:3px solid #ffcc80;padding-bottom:4px}
+  .box{background:#fff;border-radius:16px;padding:18px 22px;margin:16px 0;box-shadow:0 3px 10px rgba(0,0,0,.07)}
+  .example{border-left:8px solid #ef6c00}
+  .example h3{margin:0 0 6px;color:#e65100}
+  .step{margin:4px 0 4px 10px}
+  code,.mono{font-family:Consolas,"Courier New",monospace;background:#fff3e0;padding:1px 6px;border-radius:5px}
+  .q{border-left:8px solid #90a4ae}
+  .q.right{border-left-color:#43a047;background:#f1f8e9}
+  .q.wrong{border-left-color:#e53935;background:#fff5f5}
+  .qnum{font-weight:bold;color:#e65100}
+  .row{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:10px}
+  input[type=text]{font-size:1.05em;padding:8px 12px;border:2px solid #ffcc80;border-radius:10px;width:190px}
+  input[type=text]:focus{outline:none;border-color:#ef6c00;box-shadow:0 0 0 3px #ffe0b2}
+  button{font-size:.95em;padding:8px 16px;border:none;border-radius:10px;cursor:pointer;font-weight:bold}
+  .check{background:#ef6c00;color:#fff} .check:hover{background:#e65100}
+  .hint{background:#ffe082;color:#5d4037} .hint:hover{background:#ffd54f}
+  .sol{background:#ce93d8;color:#311b92}
+  .unit{color:#546e7a}
+  .fb{margin-top:8px;font-weight:bold;min-height:1em}
+  .fb.good{color:#2e7d32} .fb.bad{color:#c62828}
+  .hints{margin-top:8px;color:#e65100;background:#fff3e0;border-radius:10px;padding:0 12px}
+  .hints p{margin:6px 0;padding:6px 0}
+  .solution{margin-top:8px;background:#f3e5f5;border-radius:10px;padding:8px 12px;display:none}
+  #scoreBox{position:sticky;bottom:0;background:#e65100;color:#fff;border-radius:16px 16px 0 0;padding:12px 20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-top:30px}
+  #scoreBox button{background:#ffca28;color:#3e2723}
+  #final{display:none;font-size:1.15em;text-align:center;border:4px solid #43a047}
+  .tipbox{background:#fff8e1;border-left:8px solid #ffb300}
+</style>
+</head>
+<body>
+<div class="wrap">
+<a class="home" href="../../index.html">&larr; Back to all lessons</a>
+<h1>🛶 Math Week 17: First Nations of BC: Land, Canoes &amp; Salmon Lab</h1>
+<p>Ace, for thousands of years the First Nations of British Columbia have travelled the coast and rivers by cedar canoe, built longhouses, followed the salmon runs, and passed knowledge from elders to children. Many communities still count salmon, map their traditional territories, and plan travel by water today. Today you'll use math the way a canoe navigator, a fisheries counter, or a land planner would. You'll level up with <strong>map scales (cm → km), distance-speed-time in km/h, ratios, percents, mean and median, elapsed years, longhouse floor areas in m², metric conversions, integers, and reading a salmon-count bar graph</strong>.</p>
+
+<h2>Part 1: Learn the Moves</h2>
+
+<div class="box tipbox">
+  <strong>The 4-Step Problem Solver (your canoe navigator's checklist):</strong>
+  <ol>
+    <li><strong>Read</strong>: What is the question actually asking? Underline the numbers and units.</li>
+    <li><strong>Plan</strong>: Which operations do I need, and in what order?</li>
+    <li><strong>Solve</strong>: Do one step at a time and write each step down.</li>
+    <li><strong>Check</strong>: Is my answer reasonable? Did I answer the question that was asked, in the right unit?</li>
+  </ol>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 1: Map scale (cm → km)</h3>
+  <p class="step">A map scale of <strong>1 cm : 5 km</strong> means every 1 cm on the map stands for 5 km of real land or water.</p>
+  <p class="step">Two points 6.4 cm apart on the map are 6.4 × 5 = <strong>32 km</strong> apart in real life.</p>
+  <p class="step">Going backwards: a real distance of 45 km on that map is 45 ÷ 5 = <strong>9 cm</strong>.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 2: Distance, speed, and time</h3>
+  <p class="step">Distance = speed × time. Speed = distance ÷ time. Time = distance ÷ speed.</p>
+  <p class="step">A canoe paddled at <strong>6 km/h</strong> for <strong>3 h 30 min</strong> (3.5 h) travels 6 × 3.5 = <strong>21 km</strong>.</p>
+  <p class="step">Watch the minutes! 30 min = 0.5 h, 15 min = 0.25 h, 20 min = 1/3 h, 40 min = 2/3 h.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 3: Ratios and percents</h3>
+  <p class="step">If the ratio of pink salmon to chum salmon is <strong>3 : 2</strong>, there are 3 + 2 = 5 "parts." In 500 fish, one part = 500 ÷ 5 = 100, so pink = 3 × 100 = <strong>300</strong>.</p>
+  <p class="step">Percent change = (new − old) ÷ old × 100. From 800 fish to 1000 fish: 200 ÷ 800 × 100 = <strong>25% increase</strong>.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 4: Mean and median</h3>
+  <p class="step"><strong>Mean</strong> = add all values, then divide by how many there are. For 4, 7, 10: (4 + 7 + 10) ÷ 3 = <strong>7</strong>.</p>
+  <p class="step"><strong>Median</strong> = the middle value after sorting. With an even number of values, average the two middle ones: 3, 5, 9, 11 → (5 + 9) ÷ 2 = <strong>7</strong>.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 5: Area of a longhouse floor (m²)</h3>
+  <p class="step">Area of a rectangle = length × width. A floor 15 m long and 10 m wide = 15 × 10 = <strong>150 m²</strong>.</p>
+  <p class="step">If a 3 m × 2 m fire area in the centre stays clear, the remaining floor is 150 − 6 = <strong>144 m²</strong>.</p>
+</div>
+
+<h2>Part 2: The Challenge (20 problems)</h2>
+<p>Type your answer and press <strong>Check</strong> (or Enter). Fractions like <span class="mono">3/4</span>, mixed numbers like <span class="mono">1 3/4</span>, or decimals like <span class="mono">1.75</span> are fine. Don't type the units, and you may use spaces or commas in big numbers (1 000 000). Stuck? Press <strong>Hint</strong>. After 2 tries, you can see a full solution.</p>
+
+<div id="questions"></div>
+<div class="box" id="final"></div>
+<div id="scoreBox">
+  <span id="scoreText">Score: 0 / 20 correct</span>
+  <button id="finishBtn" type="button">I'm done! Show my final score</button>
+</div>
+</div>
+
+<script>
+var NAME = "Ace";
+var GRAPH = '<div style="margin:10px 0"><svg viewBox="0 70 680 290" width="100%" style="max-width:680px;background:#fff;border-radius:12px" role="img" aria-label="Bar graph of salmon counted at a river fish fence over five weeks"><line x1="60" y1="300.0" x2="620" y2="300.0" stroke="#e0e0e0"/><text x="52" y="304.0" text-anchor="end" font-size="12" fill="#455a64">0</text><line x1="60" y1="270.0" x2="620" y2="270.0" stroke="#e0e0e0"/><text x="52" y="274.0" text-anchor="end" font-size="12" fill="#455a64">100</text><line x1="60" y1="240.0" x2="620" y2="240.0" stroke="#e0e0e0"/><text x="52" y="244.0" text-anchor="end" font-size="12" fill="#455a64">200</text><line x1="60" y1="210.0" x2="620" y2="210.0" stroke="#e0e0e0"/><text x="52" y="214.0" text-anchor="end" font-size="12" fill="#455a64">300</text><line x1="60" y1="180.0" x2="620" y2="180.0" stroke="#e0e0e0"/><text x="52" y="184.0" text-anchor="end" font-size="12" fill="#455a64">400</text><line x1="60" y1="150.0" x2="620" y2="150.0" stroke="#e0e0e0"/><text x="52" y="154.0" text-anchor="end" font-size="12" fill="#455a64">500</text><line x1="60" y1="120.0" x2="620" y2="120.0" stroke="#e0e0e0"/><text x="52" y="124.0" text-anchor="end" font-size="12" fill="#455a64">600</text><line x1="60" y1="90.0" x2="620" y2="90.0" stroke="#e0e0e0"/><text x="52" y="94.0" text-anchor="end" font-size="12" fill="#455a64">700</text><line x1="60" y1="300.0" x2="620" y2="300.0" stroke="#455a64" stroke-width="2"/><line x1="60" y1="300.0" x2="60" y2="90.0" stroke="#455a64" stroke-width="2"/><rect class="bar" x="82.4" y="255.0" width="67.2" height="45.0" fill="#ef6c00" rx="4"/><text x="116.0" y="247.0" text-anchor="middle" font-size="12" font-weight="bold" fill="#bf360c">150</text><text x="116.0" y="319.0" text-anchor="middle" font-size="13" font-weight="bold" fill="#263238">Week 1</text><rect class="bar" x="194.4" y="210.0" width="67.2" height="90.0" fill="#ef6c00" rx="4"/><text x="228.0" y="202.0" text-anchor="middle" font-size="12" font-weight="bold" fill="#bf360c">300</text><text x="228.0" y="319.0" text-anchor="middle" font-size="13" font-weight="bold" fill="#263238">Week 2</text><rect class="bar" x="306.4" y="120.0" width="67.2" height="180.0" fill="#ef6c00" rx="4"/><text x="340.0" y="112.0" text-anchor="middle" font-size="12" font-weight="bold" fill="#bf360c">600</text><text x="340.0" y="319.0" text-anchor="middle" font-size="13" font-weight="bold" fill="#263238">Week 3</text><rect class="bar" x="418.4" y="165.0" width="67.2" height="135.0" fill="#ef6c00" rx="4"/><text x="452.0" y="157.0" text-anchor="middle" font-size="12" font-weight="bold" fill="#bf360c">450</text><text x="452.0" y="319.0" text-anchor="middle" font-size="13" font-weight="bold" fill="#263238">Week 4</text><rect class="bar" x="530.4" y="225.0" width="67.2" height="75.0" fill="#ef6c00" rx="4"/><text x="564.0" y="217.0" text-anchor="middle" font-size="12" font-weight="bold" fill="#bf360c">250</text><text x="564.0" y="319.0" text-anchor="middle" font-size="13" font-weight="bold" fill="#263238">Week 5</text><text x="340.0" y="342.0" text-anchor="middle" font-size="14" font-weight="bold" fill="#263238">Week of the salmon run</text><text x="16" y="195.0" text-anchor="middle" font-size="14" font-weight="bold" fill="#263238" transform="rotate(-90 16 195.0)">Salmon counted</text></svg></div>';
+var QUESTIONS = [
+ {t:"On a map of the BC coast, the scale is <strong>1 cm : 4 km</strong>. Two villages are <strong>7.5 cm</strong> apart on the map. How far apart are they in real life?", a:"30", u:"km",
+  h:["Each centimetre stands for 4 km.","7.5 × 4 = ?"],
+  s:"7.5 × 4 = 30 km."},
+ {t:"A different map uses the scale <strong>1 cm : 25 km</strong>. A river trip is <strong>175 km</strong> long. How long is that trip on the map?", a:"7", u:"cm",
+  h:["Divide the real distance by the km per cm.","175 ÷ 25 = ?"],
+  s:"175 ÷ 25 = 7 cm."},
+ {t:"A cedar canoe crew paddles <strong>36 km</strong> in <strong>4.5 hours</strong>. What is their average speed?", a:"8", u:"km/h",
+  h:["Speed = distance ÷ time.","36 ÷ 4.5 = ?"],
+  s:"36 ÷ 4.5 = 8 km/h."},
+ {t:"Paddlers travel <strong>54 km</strong> at <strong>6 km/h</strong>. They also stop for rests that add up to <strong>1.5 hours</strong>. How many hours does the whole journey take?", a:"10.5", u:"hours",
+  h:["First find paddling time: distance ÷ speed.","54 ÷ 6 = 9 hours, then add the rest time."],
+  s:"54 ÷ 6 = 9 h of paddling, plus 1.5 h of rests = 10.5 hours."},
+ {t:"A canoe moves at <strong>7.5 km/h</strong> for <strong>2 hours 40 minutes</strong>. How many kilometres does it travel?", a:"20", u:"km",
+  h:["40 minutes = 40/60 = 2/3 of an hour, so the time is 2 2/3 h = 8/3 h.","7.5 × 8 ÷ 3 = ?"],
+  s:"2 h 40 min = 8/3 h. 7.5 × 8/3 = 60 ÷ 3 = 20 km."},
+ {t:"At a river counting fence, the ratio of sockeye to coho salmon is <strong>5 : 3</strong>. If <strong>2400</strong> of these two kinds were counted, how many were sockeye?", a:"1500", u:"sockeye",
+  h:["5 + 3 = 8 parts in total.","2400 ÷ 8 = 300 per part. Sockeye has 5 parts."],
+  s:"2400 ÷ 8 = 300; 5 × 300 = 1500 sockeye."},
+ {t:"Four years ago, <strong>12 000</strong> salmon returned to a creek. This year, after a stream clean-up led by the local First Nation, <strong>15 000</strong> returned. What is the percent increase?", a:"25", u:"%",
+  h:["Increase = 15 000 − 12 000 = 3000.","3000 ÷ 12 000 × 100 = ?"],
+  s:"3000 ÷ 12 000 = 0.25 = 25% increase."},
+ {t:"Of <strong>640</strong> salmon counted in one day, <strong>35%</strong> were chinook. How many chinook were counted?", a:"224", u:"chinook",
+  h:["35% = 0.35.","0.35 × 640 = ?"],
+  s:"0.35 × 640 = 224 chinook."},
+ {t:"A family gathers baskets of berries on five days: <strong>14, 9, 17, 12, 13</strong>. What is the <strong>mean</strong> number of baskets per day?", a:"13", u:"baskets",
+  h:["Add the five numbers.","14 + 9 + 17 + 12 + 13 = 65, then divide by 5."],
+  s:"65 ÷ 5 = 13 baskets."},
+ {t:"Six fishing trips brought home these numbers of fish: <strong>8, 15, 11, 20, 6, 13</strong>. What is the <strong>median</strong>?", a:"12", u:"fish",
+  h:["Sort first: 6, 8, 11, 13, 15, 20.","Six values, so average the two middle ones: 11 and 13."],
+  s:"Sorted: 6, 8, 11, 13, 15, 20. Median = (11 + 13) ÷ 2 = 12."},
+ {t:"A cedar tree near the coast has a scar where bark was carefully stripped for weaving without cutting the tree down. The scar is dated to <strong>1846</strong>. How many years before <strong>2026</strong> was the bark stripped?", a:"180", u:"years",
+  h:["Elapsed years = later year − earlier year.","2026 − 1846 = ?"],
+  s:"2026 − 1846 = 180 years."},
+ {t:"Canadian law banned the potlatch from <strong>1884</strong> until the ban was dropped in <strong>1951</strong>. Many families kept the tradition alive in secret. How many years did the ban last?", a:"67", u:"years",
+  h:["Subtract the start year from the end year.","1951 − 1884 = ?"],
+  s:"1951 − 1884 = 67 years."},
+ {t:"A cedar plank longhouse has a rectangular floor <strong>18 m</strong> long and <strong>12 m</strong> wide. What is its floor area?", a:"216", u:"m²",
+  h:["Area = length × width.","18 × 12 = ?"],
+  s:"18 × 12 = 216 m²."},
+ {t:"A bigger longhouse floor is <strong>20 m × 15 m</strong>. A <strong>4 m × 3 m</strong> fire area in the centre stays clear. How many square metres of floor are left for sleeping platforms and storage?", a:"288", u:"m²",
+  h:["Find the whole area, then subtract the fire area.","20 × 15 = 300 and 4 × 3 = 12."],
+  s:"300 − 12 = 288 m²."},
+ {t:"A family hosting a potlatch prepares <strong>18</strong> boxes of smoked salmon with <strong>24</strong> pieces in each box. Each guest receives <strong>4</strong> pieces. How many guests can receive salmon?", a:"108", u:"guests",
+  h:["Total pieces = 18 × 24.","18 × 24 = 432, then divide by 4."],
+  s:"18 × 24 = 432 pieces; 432 ÷ 4 = 108 guests."},
+ {t:"A carver has a cedar plank <strong>3.6 m</strong> long. She cuts it into pieces <strong>45 cm</strong> long. How many pieces does she get?", a:"8", u:"pieces",
+  h:["Change metres to centimetres first: 1 m = 100 cm.","3.6 m = 360 cm. 360 ÷ 45 = ?"],
+  s:"360 cm ÷ 45 cm = 8 pieces."},
+ {t:"A drying rack holds <strong>85 kg</strong> of dried salmon, tied in bundles of <strong>250 g</strong>. How many bundles is that?", a:"340", u:"bundles",
+  h:["1 kg = 1000 g, so 85 kg = 85 000 g.","85 000 ÷ 250 = ?"],
+  s:"85 000 g ÷ 250 g = 340 bundles."},
+ {t:"On a beach, the water level at low tide is <strong>−3 m</strong> compared with a marker rock. At high tide it is <strong>+5 m</strong>. By how many metres did the water rise?", a:"8", u:"m",
+  h:["Rise = high − low.","5 − (−3) = 5 + 3 = ?"],
+  s:"5 − (−3) = 8 m."},
+ {t:GRAPH+"The bar graph shows salmon counted at a river fish fence over five weeks. What is the <strong>mean</strong> number of salmon per week?", a:"350", u:"salmon",
+  h:["Add the five bar heights: 150 + 300 + 600 + 450 + 250.","The total is 1750. Divide by 5."],
+  s:"150 + 300 + 600 + 450 + 250 = 1750, and 1750 ÷ 5 = 350 salmon."},
+ {t:"Use the graph in question 19. First find the <strong>median</strong> weekly count. How many salmon <strong>greater</strong> is the mean than the median?", a:"50", u:"salmon",
+  h:["Sort the counts: 150, 250, 300, 450, 600. The middle one is the median.","Median = 300. Mean (from question 19) = 350. Subtract."],
+  s:"Median = 300, mean = 350, so the mean is 350 − 300 = 50 greater."}
+];
+
+var PRAISE = ["Nice work, Ace!","Correct! Smooth paddling! 🛶","Yes! Navigator Ace!","Excellent, Ace. That was a tough one!","Right on target! 🎯","Brilliant thinking, Ace!","Strong as a cedar! 🌲"];
+var ENCOURAGE = ["Not quite. Check your steps and try again!","Close call. Try again, Ace! Maybe use a hint?","Hmm, not yet. Re-read the question carefully.","Keep going, Ace. Mistakes help your brain grow!"];
+
+function parseAnswer(str){
+  if(str===undefined||str===null) return NaN;
+  var s=String(str).trim().toLowerCase();
+  s=s.replace(/[\u2212\u2013]/g,"-");
+  s=s.replace(/(\d),(?=\d{3}(\D|$))/g,"$1");
+  s=s.replace(/[^0-9.\/\- ]/g," ").replace(/\s+/g," ").trim();
+  s=s.replace(/\s*\/\s*/g,"/");
+  var m;
+  if((m=s.match(/^(-?\d+) (\d+)\/(\d+)$/))){ var w=parseFloat(m[1]),n=parseFloat(m[2]),d=parseFloat(m[3]); if(d===0)return NaN; return w<0? w-n/d : w+n/d; }
+  if((m=s.match(/^(-?\d+(?:\.\d+)?)\/(\d+(?:\.\d+)?)$/))){ var d2=parseFloat(m[2]); if(d2===0)return NaN; return parseFloat(m[1])/d2; }
+  s=s.replace(/ /g,"");
+  if(/^-?(\d+\.?\d*|\.\d+)$/.test(s)) return parseFloat(s);
+  return NaN;
+}
+function isCorrect(input,key){
+  var a=parseAnswer(input), k=parseAnswer(key);
+  if(isNaN(a)) return false;
+  var isInt=Math.abs(k-Math.round(k))<1e-12;
+  var tol=isInt?1e-9:0.005;
+  return Math.abs(a-k)<=tol;
+}
+
+function isRomanCorrect(input,key){ return String(input).replace(/\s+/g,"").toUpperCase()===key; }
+var state=[];
+function render(){
+  var box=document.getElementById("questions");
+  QUESTIONS.forEach(function(q,i){
+    state.push({correct:false,tries:0,hints:0});
+    var d=document.createElement("div");
+    d.className="box q"; d.id="q"+i;
+    d.innerHTML='<div><span class="qnum">'+(i+1)+'.</span> '+q.t+'</div>'+
+      '<div class="row"><input type="text"'+(q.r?' placeholder="e.g. MMXXVI"':'')+' id="in'+i+'" aria-label="Answer to question '+(i+1)+'" autocomplete="off"> <span class="unit">'+q.u+'</span>'+
+      '<button type="button" class="check" data-i="'+i+'">Check</button>'+
+      '<button type="button" class="hint" data-i="'+i+'">Hint 💡</button>'+
+      '<button type="button" class="sol" data-i="'+i+'" style="display:none">Show solution</button></div>'+
+      '<div class="fb" id="fb'+i+'"></div><div class="hints" id="hints'+i+'"></div>'+
+      '<div class="solution" id="sol'+i+'"><strong>Solution:</strong> '+q.s+'</div>';
+    box.appendChild(d);
+  });
+  box.addEventListener("click",function(e){
+    var b=e.target; if(b.tagName!=="BUTTON")return;
+    var i=+b.getAttribute("data-i");
+    if(b.className==="check") check(i);
+    else if(b.className==="hint") hint(i);
+    else if(b.className==="sol") document.getElementById("sol"+i).style.display="block";
+  });
+  box.addEventListener("keydown",function(e){
+    if(e.key==="Enter"&&e.target.tagName==="INPUT"){ check(+e.target.id.slice(2)); }
+  });
+}
+function pick(arr){return arr[Math.floor(Math.random()*arr.length)];}
+function check(i){
+  var val=document.getElementById("in"+i).value;
+  var fb=document.getElementById("fb"+i), card=document.getElementById("q"+i);
+  if(val.trim()===""){fb.className="fb bad";fb.textContent="Type an answer first, Ace!";return;}
+  var isR=!!QUESTIONS[i].r;
+  if(isR&&!/^[ivxlcdm\s]+$/i.test(val)){fb.className="fb bad";fb.textContent="Use only Roman numeral letters: I, V, X, L, C, D, M.";return;}
+  if(!isR&&isNaN(parseAnswer(val))){fb.className="fb bad";fb.textContent="I can't read that as a number. Try something like 42, 3.5, 3/4 or 1 3/4.";return;}
+  state[i].tries++;
+  if(isR?isRomanCorrect(val,QUESTIONS[i].a):isCorrect(val,QUESTIONS[i].a)){
+    state[i].correct=true; card.className="box q right"; fb.className="fb good";
+    fb.textContent="✅ "+pick(PRAISE)+(state[i].tries===1?" (first try!)":"");
+  } else {
+    state[i].correct=false; card.className="box q wrong"; fb.className="fb bad";
+    fb.textContent="❌ "+pick(ENCOURAGE);
+    if(state[i].tries>=2) card.querySelector(".sol").style.display="inline-block";
+  }
+  updateScore();
+}
+function hint(i){
+  var q=QUESTIONS[i], s=state[i], hb=document.getElementById("hints"+i);
+  if(s.hints<q.h.length){
+    var p=document.createElement("p"); p.textContent="💡 Hint "+(s.hints+1)+": "+q.h[s.hints]; hb.appendChild(p); s.hints++;
+  }
+  if(s.hints>=q.h.length) document.querySelector("#q"+i+" .hint").disabled=true;
+  updateScore();
+}
+function counts(){
+  var c=0,first=0,h=0;
+  state.forEach(function(s){ if(s.correct){c++; if(s.tries===1)first++;} h+=s.hints; });
+  return {correct:c,first:first,hints:h};
+}
+function updateScore(){
+  var k=counts();
+  document.getElementById("scoreText").textContent="Score: "+k.correct+" / "+QUESTIONS.length+" correct · hints used: "+k.hints;
+}
+function finish(){
+  var k=counts(), n=QUESTIONS.length, pct=Math.round(100*k.correct/n);
+  var msg;
+  if(pct===100) msg="🏆 PERFECT SCORE! Incredible work, Ace. A real canoe navigator would be impressed!";
+  else if(pct>=85) msg="🌟 Outstanding, Ace! That's a Grade 6-7 level performance!";
+  else if(pct>=65) msg="💪 Great effort, Ace! Review the ones you missed and try them again.";
+  else if(pct>=40) msg="👍 Good start, Ace! These problems are tough. Use the hints and solutions to learn the tricks, then try again.";
+  else msg="🌱 These are challenge problems, well above grade level. Every expert paddler started as a beginner! Go through the worked examples and try again, Ace!";
+  var f=document.getElementById("final");
+  f.style.display="block";
+  f.innerHTML="<h2 style='border:none;margin-top:0'>Final Score: "+k.correct+" / "+n+" ("+pct+"%)</h2>"+
+    "<p>Correct on the first try: "+k.first+" · Hints used: "+k.hints+"</p><p>"+msg+"</p>"+
+    "<p style='font-size:.85em;color:#546e7a'>Finished on "+new Date().toLocaleString("en-CA")+"</p>";
+  f.scrollIntoView({behavior:"smooth"});
+}
+render();
+updateScore();
+document.getElementById("finishBtn").addEventListener("click",finish);
+</script>
+</body>
+</html>

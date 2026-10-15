@@ -6,7 +6,7 @@ TTS voice (Cantonese): zh-HK-HiuMaanNeural when available; 2026-10-12+ often gTT
 TTS voice (English in ALL-words.mp3): en-HK-YanNeural
 Rate: slowed (~-20%) for clear listening practice.
 
-Sources: Ace lessons 2026-09-29 (Greetings) + 2026-09-30 (Family Members) + 2026-10-01 (Food) + 2026-10-02 (School) + 2026-10-03 (Body) + 2026-10-04 (Colours) + 2026-10-05 (Sky & Space) + 2026-10-06 (Numbers 11-100) + 2026-10-07 (At the Doctor) + 2026-10-08 (Nature: Mountains & Volcanoes) + 2026-10-09 (Question Words & Secrets) + 2026-10-10 (Music) + 2026-10-11 (Trains & Travel) + 2026-10-12 (Brain & Sleep) + 2026-10-13 (Bees & Gardens).
+Sources: Ace lessons 2026-09-29 (Greetings) + 2026-09-30 (Family Members) + 2026-10-01 (Food) + 2026-10-02 (School) + 2026-10-03 (Body) + 2026-10-04 (Colours) + 2026-10-05 (Sky & Space) + 2026-10-06 (Numbers 11-100) + 2026-10-07 (At the Doctor) + 2026-10-08 (Nature: Mountains & Volcanoes) + 2026-10-09 (Question Words & Secrets) + 2026-10-10 (Music) + 2026-10-11 (Trains & Travel) + 2026-10-12 (Brain & Sleep) + 2026-10-13 (Bees & Gardens) + 2026-10-14 (Electricity & Lights) + 2026-10-15 (Land, People & Respect).
 Numbers 1-10 are already known and not included here.
 
 How to practise:
@@ -625,6 +625,86 @@ Individual files
   Chinese:  忙
   Jyutping: mong4
   English:  busy
+
+121-din6-electricity.mp3
+  Chinese:  電
+  Jyutping: din6
+  English:  electricity
+
+122-dang1-lamp.mp3
+  Chinese:  燈
+  Jyutping: dang1
+  English:  lamp / light
+
+123-hoi1-turn-on.mp3
+  Chinese:  開
+  Jyutping: hoi1
+  English:  turn on / open
+
+124-gwaan1-turn-off.mp3
+  Chinese:  關
+  Jyutping: gwaan1
+  English:  turn off / close
+
+125-loeng6-bright.mp3
+  Chinese:  亮
+  Jyutping: loeng6
+  English:  bright
+
+126-am3-dark.mp3
+  Chinese:  暗
+  Jyutping: am3
+  English:  dark
+
+127-sin3-wire.mp3
+  Chinese:  線
+  Jyutping: sin3
+  English:  wire / line
+
+128-ngai4-him2-danger.mp3
+  Chinese:  危險
+  Jyutping: ngai4 him2
+  English:  danger / dangerous
+
+129-jan4-person.mp3
+  Chinese:  人
+  Jyutping: jan4
+  English:  person / people
+
+130-ho4-river.mp3
+  Chinese:  河
+  Jyutping: ho4
+  English:  river
+
+131-syun4-boat.mp3
+  Chinese:  船
+  Jyutping: syun4
+  English:  boat
+
+132-jyu4-fish.mp3
+  Chinese:  魚
+  Jyutping: jyu4
+  English:  fish
+
+133-gu3-si6-story.mp3
+  Chinese:  故事
+  Jyutping: gu3 si6
+  English:  story
+
+134-zyun1-ging3-respect.mp3
+  Chinese:  尊敬
+  Jyutping: zyun1 ging3
+  English:  respect
+
+135-tou2-dei6-land.mp3
+  Chinese:  土地
+  Jyutping: tou2 dei6
+  English:  land
+
+136-cyun4-tung2-tradition.mp3
+  Chinese:  傳統
+  Jyutping: cyun4 tung2
+  English:  tradition
 
 
 Combined file

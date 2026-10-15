@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Writing (Oct. 15): Problem-Solution Essay (Caring for the Land Like Stewards) + Grammar Clinic</title>
+<style>
+  body{font-family:"Segoe UI",Verdana,Arial,sans-serif;font-size:20px;line-height:1.6;margin:0;background:#fff8f0;color:#2c2416}
+  .wrap{max-width:880px;margin:0 auto;padding:20px 18px 80px}
+  a.home{font-size:.9em;color:#bf360c}
+  h1{color:#e65100;font-size:2em;margin:10px 0}
+  h2{color:#ef6c00;margin-top:36px;border-bottom:3px solid #ffcc80;padding-bottom:4px}
+  h3{color:#ef6c00}
+  .box{background:#fff;border-radius:16px;padding:18px 22px;margin:16px 0;box-shadow:0 3px 10px rgba(0,0,0,.07)}
+  .tipbox{background:#fff8e1;border-left:8px solid #ffb300}
+  .senses{display:grid;gap:8px;margin:10px 0;grid-template-columns:repeat(auto-fit,minmax(140px,1fr))}
+  .senses .side{border-radius:14px;padding:10px 16px;background:#fff3e0}
+  .ts{background:#ffcc80;border-radius:5px;padding:1px 3px}
+  .ev{background:#c8e6c9;border-radius:5px;padding:1px 3px}
+  .ex{background:#ffe0b2;border-radius:5px;padding:1px 3px}
+  .cs{background:#e1bee7;border-radius:5px;padding:1px 3px}
+  .legend span{display:inline-block;margin:4px 8px 4px 0;font-size:.85em}
+  .model{font-family:Georgia,"Times New Roman",serif;font-size:1.05em;line-height:1.9}
+  .row{padding:10px 6px;border-bottom:1px dashed #ddd}
+  .row.right{background:#f1f8e9} .row.wrong{background:#fff5f5}
+  select{font-size:.9em;padding:5px 8px;border-radius:8px;border:2px solid #ffb74d;font-family:inherit}
+  .q{border-left:8px solid #b0bec5}
+  .q.right{border-left-color:#43a047;background:#f1f8e9}
+  .q.wrong{border-left-color:#e53935;background:#fff5f5}
+  .opt{display:block;width:100%;text-align:left;font-size:.95em;background:#fafafa;border:2px solid #e0e0e0;border-radius:10px;padding:8px 14px;margin:8px 0;cursor:pointer;font-family:inherit}
+  .opt:hover{border-color:#ffb74d;background:#fff}
+  .opt.sel-right{background:#c8e6c9;border-color:#43a047}
+  .opt.sel-wrong{background:#ffcdd2;border-color:#e53935}
+  .fb{margin-top:6px;font-weight:bold}
+  .fb.good{color:#2e7d32} .fb.bad{color:#c62828}
+  .explain{font-weight:normal;color:#e65100}
+  .bad-sent{font-family:Consolas,"Courier New",monospace;background:#ffebee;padding:6px 10px;border-radius:8px;display:inline-block;margin:6px 0}
+  input.fix{width:100%;box-sizing:border-box;font-size:1em;padding:8px 12px;border:2px solid #ffb74d;border-radius:10px;font-family:inherit}
+  button{font-size:.95em;padding:8px 16px;border:none;border-radius:10px;cursor:pointer;font-weight:bold;font-family:inherit}
+  .go{background:#ef6c00;color:#fff} .go:hover{background:#e65100}
+  .hint{background:#ffe082;color:#5d4037}
+  .blue{background:#1e88e5;color:#fff}
+  .purple{background:#8e24aa;color:#fff}
+  .grey{background:#cfd8dc;color:#263238}
+  .btnrow{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px}
+  textarea{width:100%;box-sizing:border-box;min-height:300px;font-size:1.05em;line-height:1.7;font-family:Georgia,"Times New Roman",serif;padding:14px;border:3px solid #ffb74d;border-radius:12px}
+  textarea:focus{outline:none;border-color:#ef6c00}
+  .counter{display:flex;flex-wrap:wrap;gap:20px;align-items:center;margin:8px 0;font-weight:bold}
+  .meter{flex:1;min-width:200px;height:18px;background:#e0e0e0;border-radius:9px;overflow:hidden}
+  .meter div{height:100%;width:0;background:#ffb300;transition:width .2s}
+  .checklist label{display:block;padding:6px 4px;cursor:pointer}
+  .checklist input{transform:scale(1.4);margin-right:10px}
+  .prompts label{display:block;background:#fff3e0;border-radius:10px;padding:10px 14px;margin:8px 0;cursor:pointer}
+  .prompts input{transform:scale(1.3);margin-right:8px}
+  #scoreBox{position:sticky;bottom:0;background:#e65100;color:#fff;border-radius:16px 16px 0 0;padding:12px 20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-top:30px}
+  .w5{display:grid;gap:8px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));margin:10px 0}
+  .w5 label{display:block;font-weight:bold;color:#e65100}
+  .w5 input{width:100%;box-sizing:border-box;font-size:.95em;padding:6px 10px;border:2px solid #ffb74d;border-radius:8px;font-family:inherit}
+  #printArea{display:none}
+  @media print{
+    body{background:#fff;font-size:14pt}
+    .wrap,#scoreBox{display:none !important}
+    #printArea{display:block;font-family:Georgia,serif;line-height:1.8}
+    #printArea h1{font-size:18pt;margin:0 0 6pt}
+    #printArea .meta{font-size:11pt;color:#444}
+    #printArea .text{white-space:pre-wrap;border-top:1px solid #999;padding-top:10pt;margin-top:10pt}
+    #printArea .lines{margin-top:24pt;border-top:1px solid #999;padding-top:6pt;font-size:11pt}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+<a class="home" href="../../index.html">&larr; Back to all lessons</a>
+<h1>✍️ Writing Week 17: Problem-Solution Essay: Caring for the Land Like Stewards 🌲🐟</h1>
+<p>Yesterday you wrote about electrical safety. Today, Ace, you'll write like a <strong>problem-solver</strong> again—this time for the land and water around us. A <strong>problem-solution essay</strong> names a real problem, explains why it matters, and proposes a clear solution with reasons. In today's reading you learned how many First Nations practised <strong>stewardship</strong>: taking only what they needed, letting salmon pass upstream, and peeling cedar bark without cutting the tree down. Your topic today: <strong>how young people can learn from that idea and care for a creek, beach, or forest near home</strong>.</p>
+
+<h2>Part 1: The Lesson</h2>
+<div class="box">
+  <h3 style="margin-top:0">A problem-solution essay has six parts 🧩</h3>
+  <p>Readers need to understand the trouble <em>before</em> they will accept your fix:</p>
+  <div class="senses">
+    <div class="side"><strong>1. Hook + topic:</strong> grab attention and name the issue in one clear sentence</div>
+    <div class="side"><strong>2. Problem:</strong> what is going wrong? Who is affected?</div>
+    <div class="side"><strong>3. Why it matters:</strong> effects / consequences (use facts or logical reasons)</div>
+    <div class="side"><strong>4. Solution:</strong> your clear plan (be specific, not vague)</div>
+    <div class="side"><strong>5. How / why it works:</strong> evidence, steps, or answers to "but what if…?"</div>
+    <div class="side"><strong>6. Call to action:</strong> tell the reader what to do next</div>
+  </div>
+  <h3>Five problem-solver moves</h3>
+  <ul>
+    <li><strong>Be precise:</strong> "Join a monthly creek clean-up and stay on marked trails" beats "be nicer to nature."</li>
+    <li><strong>Show the harm:</strong> litter and plastic wash into streams; trampled banks crumble into the water and bury the gravel where salmon lay their eggs.</li>
+    <li><strong>Offer a realistic solution:</strong> clean-ups, planting native plants along creeks, and learning from local First Nations stewardship programs and elders who share their knowledge.</li>
+    <li><strong>Answer an objection:</strong> "Some people say one kid can't make a difference, but salmon runs grow when many small actions add up."</li>
+    <li><strong>End with action:</strong> tell the reader one thing to do this week.</li>
+  </ul>
+  <p><strong>Grown-up words:</strong> a <strong>problem</strong> is the unwanted situation; a <strong>solution</strong> is the plan that reduces or removes it. <strong>Evidence</strong> is a fact or reason that supports your claim. A <strong>call to action</strong> tells the reader what to do. <strong>Respectful writing</strong> tip: when you write about a First Nation, use its own name (for example, Musqueam or Secwépemc) and describe its ideas accurately.</p>
+</div>
+
+<div class="box">
+  <h3 style="margin-top:0">Model Problem-Solution Essay (short version)</h3>
+  <p class="legend"><span class="ts">Hook + problem</span><span class="ev">Why it matters + solution</span><span class="ex">How it works / objection</span><span class="cs">Call to action</span></p>
+  <p class="model">
+    <span class="ts">Every autumn, salmon swim hundreds of kilometres home to the very creek where they hatched—but some of them arrive to find plastic bags and muddy, broken banks. The problem is that many people treat nearby creeks as if they belong only to us, today.</span><br>
+    <span class="ev">When litter and mud fill a stream, salmon eggs can be smothered, and fewer fish return to feed bears, eagles, and people. A clear solution is to act like stewards: join a creek clean-up, plant native shrubs along the banks, and learn from local First Nations stewardship programs that have cared for these waters for thousands of years.</span><br>
+    <span class="ex">Plant roots hold the soil in place, and clean gravel gives salmon eggs room to breathe. Some people say one kid can't change a whole river, but every bag of litter removed is one less problem for the fish.</span><br>
+    <span class="cs">This week, ask a grown-up to walk with you to the nearest creek or beach, pick up ten pieces of litter, and find out whose traditional territory it is.</span>
+  </p>
+  <p><strong>Notice:</strong> the model names a specific problem (litter and damaged creek banks), explains harm (smothered eggs, fewer salmon), offers a concrete solution (clean-ups, planting, learning from First Nations stewardship), answers an objection (one kid can't help), and ends with a clear action.</p>
+</div>
+
+<h2>Part 2: Name That Essay Part</h2>
+<div class="box">
+  <p>Each line comes from a student's problem-solution essay about caring for a salmon creek. Choose which <strong>part of the essay</strong> it belongs in.</p>
+  <div id="labelRows"></div>
+  <div class="btnrow"><button type="button" class="go" id="checkLabels">Check my answers</button></div>
+  <div class="fb" id="labelFb"></div>
+</div>
+
+<h2>Part 3: Grammar Clinic 🛶</h2>
+<div class="box tipbox">A careful storyteller checks every sentence before sharing it! <strong>Section A:</strong> pick the correct sentence. <strong>Section B:</strong> type the sentence again with <em>all</em> mistakes fixed. We use <strong>Canadian spelling</strong> (labour, colour, grey, neighbour, practise as a verb, metre, honour). Today, watch <strong>capital letters for names of peoples and places</strong>, <strong>commas after introductory words</strong>, <strong>subject–verb agreement</strong>, <strong>its / it's</strong>, <strong>plural possessives</strong>, <strong>homophones</strong> (their / there / they're), and <strong>steady verb tense</strong>.</div>
+<h3>Section A: Pick the correct sentence</h3>
+<div id="gmc"></div>
+<h3>Section B: Fix the sentence</h3>
+<p>Retype the whole sentence correctly, with capital letters and punctuation. Each one has <strong>at least two</strong> mistakes.</p>
+<div id="gfix"></div>
+
+<h2>Part 4: Your Turn to Write</h2>
+<div class="box">
+  <h3 style="margin-top:0">Step 1: Choose your angle</h3>
+  <div class="prompts" id="prompts">
+    <label><input type="radio" name="prompt" value="Essay A: Caring for the Land Like Stewards: saving a salmon creek." checked> 🐟 <strong>Essay A:</strong> convince your class to care for a local creek so salmon can return, using ideas of stewardship from today's reading.</label>
+    <label><input type="radio" name="prompt" value="Essay B: Why Oral History Matters: keeping elders' stories alive."> 🗣️ <strong>Essay B:</strong> problem: stories and languages can be lost when no one listens. Solution: ways schools and families can listen to and honour elders' knowledge.</label>
+    <label><input type="radio" name="prompt" value="Essay C: Respecting traditional territories at our school."> 🌲 <strong>Essay C:</strong> problem: many students don't know whose traditional territory their school is on. Solution: a respectful plan to learn the local Nation's name, history, and place names.</label>
+  </div>
+  <p><strong>Plan your essay:</strong> jot a few words for each box. (These notes save with your writing.)</p>
+  <div class="w5" id="w5">
+    <div><label for="w5who">Hook idea (surprising fact or question)</label><input id="w5who" type="text" autocomplete="off"></div>
+    <div><label for="w5place">The problem in one sentence</label><input id="w5place" type="text" autocomplete="off"></div>
+    <div><label for="w5facts">Why it matters (2 harms / effects)</label><input id="w5facts" type="text" autocomplete="off"></div>
+    <div><label for="w5senses">My solution (be specific)</label><input id="w5senses" type="text" autocomplete="off"></div>
+    <div><label for="w5feel">Objection + my answer</label><input id="w5feel" type="text" autocomplete="off"></div>
+    <div><label for="w5closing">Call to action (what to do this week)</label><input id="w5closing" type="text" autocomplete="off"></div>
+  </div>
+
+  <h3>Step 2: Write your problem-solution essay</h3>
+  <p><strong>Goal:</strong> an essay of <strong>200 to 300 words</strong> with a <strong>hook</strong>, a clear <strong>problem</strong>, at least <strong>two reasons why it matters</strong>, a <strong>specific solution</strong>, an answer to <strong>one objection</strong>, and a <strong>call to action</strong>. Use at least one fact or idea from today's reading (traditional territory, elders and oral history, cedar, canoes, salmon weirs, the first-salmon ceremony, stewardship, the potlatch, or treaties).</p>
+  <p><button type="button" class="hint" id="templateBtn">📋 Add the essay headings for me</button></p>
+  <label for="essay"><strong>Write here, Ace:</strong></label>
+  <textarea id="essay" placeholder="Hook: ..."></textarea>
+  <div class="counter">
+    <span id="wc">0 words</span>
+    <span id="sc">0 sentences</span>
+    <div class="meter" aria-hidden="true"><div id="meterBar"></div></div>
+  </div>
+  <div class="fb" id="wcMsg">Aim for 200 to 300 words.</div>
+  <p style="font-size:.8em;color:#607d8b" id="saveNote">Your writing is saved automatically in this browser as you type.</p>
+
+  <h3>Self-check before you finish ✅</h3>
+  <div class="checklist" id="checklist">
+    <label><input type="checkbox"> My <strong>hook</strong> grabs attention and my <strong>problem</strong> is named clearly.</label>
+    <label><input type="checkbox"> I explained <strong>why it matters</strong> with at least two effects or reasons.</label>
+    <label><input type="checkbox"> My <strong>solution</strong> is specific (who should do what, when).</label>
+    <label><input type="checkbox"> I answered at least <strong>one objection</strong> ("some people say… but…").</label>
+    <label><input type="checkbox"> I ended with a clear <strong>call to action</strong>.</label>
+    <label><input type="checkbox"> I used at least <strong>one idea from today's reading</strong> and wrote about First Nations respectfully and accurately.</label>
+    <label><input type="checkbox"> I checked <strong>grammar</strong>, <strong>capital letters</strong>, <strong>its / it's</strong>, and <strong>Canadian spelling</strong> (labour, colour, honour, metre).</label>
+  </div>
+  <div class="btnrow">
+    <button type="button" class="blue" id="downloadBtn">⬇️ Download my writing (for Dad)</button>
+    <button type="button" class="purple" id="printBtn">🖨️ Print my writing</button>
+    <button type="button" class="grey" id="clearBtn">Start over</button>
+  </div>
+  <div class="fb" id="doneMsg"></div>
+</div>
+
+<div id="scoreBox"><span id="scoreText"></span><span>Keep going, land steward Ace! 🌲</span></div>
+</div>
+
+<div id="printArea"></div>
+
+<script>
+var NAME="Ace";
+var PRAISE=["Nice work, Ace!","Correct! Great editing eye!","Yes! Ace fixed it!","Excellent, land steward Ace!","Smooth paddling! 🛶"];
+function pick(a){return a[Math.floor(Math.random()*a.length)];}
+
+var LABELS=["Hook + topic","Problem","Why it matters","Solution","How it works / objection","Call to action"];
+var LABEL_ITEMS=[
+ {s:"Every autumn, salmon swim hundreds of kilometres home to the creek where they hatched.", a:"Hook + topic"},
+ {s:"Our neighbourhood creek is full of litter, and its banks are trampled into mud.", a:"Problem"},
+ {s:"Mud and plastic can smother salmon eggs, so fewer fish return for bears, eagles, and people.", a:"Why it matters"},
+ {s:"Our class should adopt the creek, hold a monthly clean-up, and plant native shrubs along the banks.", a:"Solution"},
+ {s:"Some people say one class can't help a whole river, but every cleared metre of creek gives eggs a better chance.", a:"How it works / objection"},
+ {s:"This week, ask a grown-up to visit a creek with you and pick up ten pieces of litter.", a:"Call to action"}
+];
+var labelScore=0, labelChecked=false;
+function buildLabels(){
+  var box=document.getElementById("labelRows");
+  LABEL_ITEMS.forEach(function(it,i){
+    var d=document.createElement("div"); d.className="row"; d.id="lr"+i;
+    var sel='<select id="ls'+i+'" aria-label="Job of sentence '+(i+1)+'"><option value="">- choose -</option>';
+    LABELS.forEach(function(l){sel+='<option>'+l+'</option>';});
+    sel+='</select>';
+    d.innerHTML='<strong>'+(i+1)+'.</strong> '+it.s+'<br>'+sel+' <span id="lm'+i+'"></span>';
+    box.appendChild(d);
+  });
+}
+function checkLabels(){
+  var sc=0;
+  LABEL_ITEMS.forEach(function(it,i){
+    var ok=document.getElementById("ls"+i).value===it.a; if(ok)sc++;
+    document.getElementById("lr"+i).className="row "+(ok?"right":"wrong");
+    document.getElementById("lm"+i).textContent=ok?"✅":"❌";
+  });
+  labelScore=sc; labelChecked=true;
+  var fb=document.getElementById("labelFb");
+  if(sc===LABEL_ITEMS.length){fb.className="fb good";fb.textContent="🌟 "+sc+" / "+LABEL_ITEMS.length+". "+pick(PRAISE)+" You know exactly how a problem-solution essay is built!";}
+  else{fb.className="fb bad";fb.textContent=sc+" / "+LABEL_ITEMS.length+". Hint: a grabby opener = hook + topic; naming what is going wrong at the creek = problem; harms/effects = why it matters; the plan = solution; answering \"but what if\" = how it works / objection; \"this week, do X\" = call to action. Fix the ❌ ones and check again.";}
+  updateScore();
+}
+
+var GMC=[
+ {q:"Which sentence uses <strong>capital letters</strong> correctly for names of peoples and places?",
+  o:["The haida live on haida gwaii.","The Haida live on Haida gwaii.","The Haida live on Haida Gwaii.","the Haida Live on Haida Gwaii."],
+  a:2,e:"Names of Nations and places are proper nouns, so every part gets a capital: <em>Haida</em>, <em>Haida Gwaii</em>."},
+ {q:"Which sentence uses a <strong>comma after an introductory phrase</strong> correctly?",
+  o:["Every autumn, the salmon return to the river.","Every autumn the salmon, return to the river.","Every, autumn the salmon return to the river.","Every autumn the salmon return, to the river."],
+  a:0,e:"When a sentence starts with a phrase like <em>Every autumn</em>, put a comma before the main clause."},
+ {q:"Which sentence keeps <strong>subject–verb agreement</strong>?",
+  o:["The elders tells the story at the feast.","The elder tell the story at the feast.","The elders telling the story at the feast.","The elders tell the story at the feast."],
+  a:3,e:"Plural subject <em>elders</em> needs the plural verb <em>tell</em>."},
+ {q:"Which sentence uses <strong>its / it's</strong> correctly?",
+  o:["It's bark was woven into a basket.","The cedar keeps growing because its bark was peeled in strips, and it's still standing today.","Its still standing because it's bark was peeled carefully.","The cedar keeps growing because it's bark was peeled in strips."],
+  a:1,e:"<em>It's</em> = it is. <em>Its</em> (no apostrophe) shows ownership, like <em>his</em>."},
+ {q:"Which sentence uses a <strong>plural possessive</strong> correctly?",
+  o:["The paddlers's canoe glided across the bay.","The paddlers' canoe glided across the bay.","The paddler's canoe glided across the bay (many paddlers).","The paddlers canoe's glided across the bay."],
+  a:1,e:"Many paddlers share the canoe, so use <em>paddlers'</em> (apostrophe after the plural s)."},
+ {q:"Which sentence uses <strong>their / there / they're</strong> correctly?",
+  o:["They're carving their canoe over there.","There carving they're canoe over their.","Their carving there canoe over they're.","They're carving there canoe over their."],
+  a:0,e:"<em>They're</em> = they are; <em>their</em> shows ownership; <em>there</em> points to a place."},
+ {q:"Which sentence uses <strong>Canadian spelling</strong> correctly?",
+  o:["The neighbor's family honored the guests with a colorful dance.","The neighbour's family honoured the guests with a colourful dance.","The neighbour's family honored the guests with a colourful dance.","The neighbor's family honoured the guests with a colorful dance."],
+  a:1,e:"In Canadian English, prefer <em>neighbour</em>, <em>honoured</em>, and <em>colourful</em>."}
+];
+var gmcState=GMC.map(function(){return{answered:false,firstRight:false,done:false};});
+function buildGMC(){
+  var box=document.getElementById("gmc");
+  GMC.forEach(function(it,i){
+    var d=document.createElement("div"); d.className="box q"; d.id="g"+i;
+    var h='<div><strong>'+(i+1)+'.</strong> '+it.q+'</div>';
+    it.o.forEach(function(o,j){h+='<button type="button" class="opt" data-i="'+i+'" data-j="'+j+'">'+String.fromCharCode(65+j)+'. '+o+'</button>';});
+    h+='<div class="fb" id="gfb'+i+'"></div>';
+    d.innerHTML=h; box.appendChild(d);
+  });
+  box.addEventListener("click",function(e){
+    var b=e.target.closest?e.target.closest(".opt"):e.target; if(!b||!b.classList.contains("opt"))return;
+    var i=+b.getAttribute("data-i"), j=+b.getAttribute("data-j"), st=gmcState[i], it=GMC[i];
+    if(st.done)return;
+    var ok=j===it.a; if(!st.answered){st.answered=true;st.firstRight=ok;}
+    var fb=document.getElementById("gfb"+i);
+    if(ok){st.done=true;b.classList.add("sel-right");document.getElementById("g"+i).className="box q right";fb.className="fb good";fb.innerHTML="✅ "+pick(PRAISE)+' <span class="explain">'+it.e+'</span>';}
+    else{b.classList.add("sel-wrong");document.getElementById("g"+i).className="box q wrong";fb.className="fb bad";fb.textContent="❌ Not quite, Ace. Look closely and try again.";}
+    updateScore();
+  });
+}
+
+var GFIX=[
+ {bad:"every year the salmon returns to the fraser river.",
+  ok:["Every year, the salmon return to the Fraser River.","Every year the salmon return to the Fraser River."],
+  hint:"Capitalize the first word and the river's name (Fraser River). Use the plural verb <em>return</em> for many salmon. A comma after <em>Every year</em> is preferred."},
+ {bad:"Last spring the elders tell the story and the children listen closely.",
+  ok:["Last spring, the elders told the story and the children listened closely.", "Last spring the elders told the story and the children listened closely."],
+  hint:"Keep past tense steady after \"Last spring\" (told, listened). A comma after the introductory phrase is preferred."},
+ {bad:"The fishers weir let some salmon pass, there eggs were safe upstream.",
+  ok:["The fishers' weir let some salmon pass, and their eggs were safe upstream.", "The fishers' weir let some salmon pass. Their eggs were safe upstream.", "The fishers' weir let some salmon pass; their eggs were safe upstream."],
+  hint:"Use the plural possessive fishers'. Fix the homophone for ownership (their), and the comma splice."},
+ {bad:"There neighbor carved a cedar box because its important to practise you're family's traditions.",
+  ok:["Their neighbour carved a cedar box because it's important to practise your family's traditions."],
+  hint:"Fix their/there, Canadian spelling of neighbour, it's (= it is), practise (verb), and your/you're."}
+];
+
+var gfixState=GFIX.map(function(){return{tries:0,correct:false,firstRight:false};});
+function norm(s){return s.replace(/[\u2018\u2019\u02BC]/g,"'").replace(/[\u201C\u201D]/g,'"').replace(/\s+/g," ").trim();}
+function checkFixAnswer(i,val){var v=norm(val);return GFIX[i].ok.some(function(a){return norm(a)===v;});}
+function buildGFix(){
+  var box=document.getElementById("gfix");
+  GFIX.forEach(function(it,i){
+    var d=document.createElement("div"); d.className="box q"; d.id="f"+i;
+    d.innerHTML='<div><strong>'+(i+1)+'.</strong> Fix: <span class="bad-sent">'+it.bad+'</span></div>'+
+     '<input class="fix" type="text" id="fi'+i+'" autocomplete="off" spellcheck="false" aria-label="Corrected sentence '+(i+1)+'">'+
+     '<div class="btnrow"><button type="button" class="go" data-act="check" data-i="'+i+'">Check</button><button type="button" class="hint" data-act="hint" data-i="'+i+'">Hint 💡</button><button type="button" class="grey" data-act="show" data-i="'+i+'" style="display:none">Show answer</button></div>'+
+     '<div class="fb" id="ffb'+i+'"></div>';
+    box.appendChild(d);
+  });
+  box.addEventListener("click",function(e){
+    var b=e.target; if(b.tagName!=="BUTTON")return;
+    var i=+b.getAttribute("data-i"), act=b.getAttribute("data-act"), fb=document.getElementById("ffb"+i);
+    if(act==="hint"){fb.className="fb";fb.style.color="#5d4037";fb.textContent="💡 "+GFIX[i].hint;return;}
+    fb.style.color="";
+    if(act==="show"){fb.className="fb";fb.innerHTML='Answer: <em>'+GFIX[i].ok[0]+'</em>'+(GFIX[i].ok.length>1?' (other correct versions are accepted too)':'');return;}
+    fixCheck(i);
+  });
+  box.addEventListener("keydown",function(e){if(e.key==="Enter"&&e.target.classList.contains("fix"))fixCheck(+e.target.id.slice(2));});
+}
+function fixCheck(i){
+  var val=document.getElementById("fi"+i).value, fb=document.getElementById("ffb"+i), st=gfixState[i];
+  fb.style.color="";
+  if(!val.trim()){fb.className="fb bad";fb.textContent="Type the corrected sentence first, Ace!";return;}
+  st.tries++;
+  if(checkFixAnswer(i,val)){ if(st.tries===1)st.firstRight=true; st.correct=true; document.getElementById("f"+i).className="box q right"; fb.className="fb good"; fb.textContent="✅ "+pick(PRAISE); }
+  else { st.correct=false; document.getElementById("f"+i).className="box q wrong"; fb.className="fb bad"; fb.textContent="❌ Not quite. Check every capital letter, apostrophe, comma, and spelling. Try again!"; if(st.tries>=2)document.querySelector('#f'+i+' [data-act=show]').style.display="inline-block"; }
+  updateScore();
+}
+
+function updateScore(){
+  var g=0; gmcState.forEach(function(s){if(s.firstRight)g++;});
+  var f=0; gfixState.forEach(function(s){if(s.correct)f++;});
+  var total=LABEL_ITEMS.length+GMC.length+GFIX.length, got=labelScore+g+f;
+  document.getElementById("scoreText").textContent="Score: "+got+" / "+total+"  (labels "+(labelChecked?labelScore:"-")+"/"+LABEL_ITEMS.length+" · grammar A "+g+"/"+GMC.length+" · grammar B "+f+"/"+GFIX.length+")";
+}
+
+var W5=["who","place","facts","senses","feel","closing"];
+function w5Save(){try{localStorage.setItem(KEY+"-5w",JSON.stringify(W5.map(function(k){return document.getElementById("w5"+k).value;})));}catch(e){}}
+function w5Restore(){try{var d=JSON.parse(localStorage.getItem(KEY+"-5w")||"null");if(d)d.forEach(function(x,i){document.getElementById("w5"+W5[i]).value=x;});}catch(e){}}
+function w5Summary(){return W5.map(function(k){return k.charAt(0).toUpperCase()+k.slice(1)+": "+document.getElementById("w5"+k).value;}).join("\n");}
+function addTemplate(){
+  var t=document.getElementById("essay");
+  var tpl="Hook + topic: \n\nProblem: \n\nWhy it matters (effects): \n\nSolution (be specific): \n\nHow it works / answer an objection: \n\nCall to action: ";
+  if(t.value.trim()&&!confirm("Add the headings below what you've already written?"))return;
+  t.value=(t.value.trim()?t.value.replace(/\s+$/,"")+"\n\n":"")+tpl; updateCount(); t.focus();
+}
+var KEY="ace-writing-2026-10-15";
+function countWords(t){var m=t.trim().match(/[A-Za-zÀ-ÿ0-9]+(?:['’\-][A-Za-zÀ-ÿ0-9]+)*/g);return m?m.length:0;}
+function countSentences(t){var m=t.match(/[^.!?]*[A-Za-z0-9][^.!?]*[.!?]+/g);return m?m.length:0;}
+function currentPrompt(){var r=document.querySelector('input[name=prompt]:checked');return r?r.value:"";}
+function updateCount(){
+  var t=document.getElementById("essay").value, w=countWords(t), s=countSentences(t);
+  document.getElementById("wc").textContent=w+(w===1?" word":" words");
+  document.getElementById("sc").textContent=s+(s===1?" sentence":" sentences");
+  var bar=document.getElementById("meterBar"); bar.style.width=Math.min(100,w/300*100)+"%";
+  var msg=document.getElementById("wcMsg");
+  if(w<200){bar.style.background="#ffb300";msg.className="fb";msg.textContent=w===0?"Aim for 200 to 300 words.":"Keep going, Ace! "+(200-w)+" more words to reach the goal.";}
+  else if(w<=300){bar.style.background="#43a047";msg.className="fb good";msg.textContent="🎯 You're in the target zone! Nice work, Ace!";}
+  else{bar.style.background="#1e88e5";msg.className="fb";msg.textContent="Wow, that's a lot of writing! Strong problem-solution essays stay focused. Could any sentences be cut?";}
+  try{localStorage.setItem(KEY,JSON.stringify({text:t,prompt:currentPrompt(),checks:checkStates()}));}catch(e){document.getElementById("saveNote").textContent="(This browser can't auto-save here, so use the Download button before closing!)";}
+}
+function checkStates(){return Array.prototype.map.call(document.querySelectorAll("#checklist input"),function(c){return c.checked;});}
+function checklistText(){
+  return Array.prototype.map.call(document.querySelectorAll("#checklist label"),function(l){return (l.querySelector("input").checked?"[x] ":"[ ] ")+l.textContent.trim();}).join("\n");
+}
+function buildReport(){
+  var t=document.getElementById("essay").value;
+  return "Writing Week 17: "+NAME+"\nDate: "+new Date().toLocaleString("en-CA")+"\nPrompt: "+currentPrompt()+
+    "\nWords: "+countWords(t)+"   Sentences: "+countSentences(t)+"\nPlanning notes:\n"+w5Summary()+
+    "\n\n----- "+NAME+"'s writing -----\n\n"+t+"\n\n----- Self-check -----\n"+checklistText()+
+    "\n\n----- Parent feedback -----\n\n\n";
+}
+function download(){
+  var t=document.getElementById("essay").value;
+  if(!t.trim()){document.getElementById("doneMsg").className="fb bad";document.getElementById("doneMsg").textContent="Write something first, Ace!";return;}
+  var blob=new Blob([buildReport().replace(/\n/g,"\r\n")],{type:"text/plain;charset=utf-8"});
+  var a=document.createElement("a"); a.href=URL.createObjectURL(blob); a.download=NAME+"-writing-2026-10-15"+".txt";
+  document.body.appendChild(a); a.click();
+  setTimeout(function(){URL.revokeObjectURL(a.href);a.remove();},1000);
+  var dm=document.getElementById("doneMsg"); dm.className="fb good"; dm.textContent="📄 Saved! Look in your Downloads folder and show Dad. Great job finishing, Ace!";
+}
+function esc(s){return s.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");}
+function printIt(){
+  var t=document.getElementById("essay").value;
+  if(!t.trim()){document.getElementById("doneMsg").className="fb bad";document.getElementById("doneMsg").textContent="Write something first, Ace!";return;}
+  document.getElementById("printArea").innerHTML="<h1>Writing Week 17: "+NAME+"</h1><div class='meta'>"+esc(new Date().toLocaleString("en-CA"))+"<br><strong>Prompt:</strong> "+esc(currentPrompt())+"<br>Words: "+countWords(t)+" · Sentences: "+countSentences(t)+"</div><div class='text'>"+esc(t)+"</div><div class='lines'><strong>Self-check:</strong><br>"+esc(checklistText()).replace(/\n/g,"<br>")+"</div><div class='lines'><strong>Parent feedback:</strong><br><br><br><br></div>";
+  window.print();
+}
+function restore(){
+  try{var d=JSON.parse(localStorage.getItem(KEY)||"null"); if(!d)return;
+    document.getElementById("essay").value=d.text||"";
+    Array.prototype.forEach.call(document.querySelectorAll("input[name=prompt]"),function(r){r.checked=(r.value===d.prompt);});
+    if(!document.querySelector("input[name=prompt]:checked"))document.querySelector("input[name=prompt]").checked=true;
+    var cs=document.querySelectorAll("#checklist input"); (d.checks||[]).forEach(function(v,i){if(cs[i])cs[i].checked=v;});
+  }catch(e){}
+}
+buildLabels(); buildGMC(); buildGFix(); restore(); w5Restore(); updateCount(); updateScore();
+W5.forEach(function(k){document.getElementById("w5"+k).addEventListener("input",w5Save);});
+document.getElementById("templateBtn").addEventListener("click",addTemplate);
+document.getElementById("checkLabels").addEventListener("click",checkLabels);
+document.getElementById("essay").addEventListener("input",updateCount);
+document.getElementById("checklist").addEventListener("change",function(){updateCount(); if(checkStates().every(Boolean)){var dm=document.getElementById("doneMsg");dm.className="fb good";dm.textContent="✅ All boxes checked! Now download or print it for Dad. Awesome work, Ace!";}});
+document.getElementById("prompts").addEventListener("change",updateCount);
+document.getElementById("downloadBtn").addEventListener("click",download);
+document.getElementById("printBtn").addEventListener("click",printIt);
+document.getElementById("clearBtn").addEventListener("click",function(){ if(confirm("Erase your writing and start over?")){document.getElementById("essay").value="";Array.prototype.forEach.call(document.querySelectorAll("#checklist input"),function(c){c.checked=false;});document.getElementById("doneMsg").textContent="";updateCount();} });
+</script>
+</body>
+</html>
