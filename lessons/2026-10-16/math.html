@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Math (Oct. 16): The Ice Age &amp; Its Giant Mammals Math Lab</title>
+<style>
+  body{font-family:"Segoe UI",Verdana,Arial,sans-serif;font-size:20px;line-height:1.6;margin:0;background:#f5f0eb;color:#2c2416}
+  .wrap{max-width:880px;margin:0 auto;padding:20px 18px 80px}
+  a.home{font-size:.9em;color:#bf360c}
+  h1{color:#e65100;font-size:2em;margin:10px 0}
+  h2{color:#ef6c00;margin-top:36px;border-bottom:3px solid #ffcc80;padding-bottom:4px}
+  .box{background:#fff;border-radius:16px;padding:18px 22px;margin:16px 0;box-shadow:0 3px 10px rgba(0,0,0,.07)}
+  .example{border-left:8px solid #ef6c00}
+  .example h3{margin:0 0 6px;color:#e65100}
+  .step{margin:4px 0 4px 10px}
+  code,.mono{font-family:Consolas,"Courier New",monospace;background:#fff3e0;padding:1px 6px;border-radius:5px}
+  .q{border-left:8px solid #90a4ae}
+  .q.right{border-left-color:#43a047;background:#f1f8e9}
+  .q.wrong{border-left-color:#e53935;background:#fff5f5}
+  .qnum{font-weight:bold;color:#e65100}
+  .row{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:10px}
+  input[type=text]{font-size:1.05em;padding:8px 12px;border:2px solid #ffcc80;border-radius:10px;width:190px}
+  input[type=text]:focus{outline:none;border-color:#ef6c00;box-shadow:0 0 0 3px #ffe0b2}
+  button{font-size:.95em;padding:8px 16px;border:none;border-radius:10px;cursor:pointer;font-weight:bold}
+  .check{background:#ef6c00;color:#fff} .check:hover{background:#e65100}
+  .hint{background:#ffe082;color:#5d4037} .hint:hover{background:#ffd54f}
+  .sol{background:#ce93d8;color:#311b92}
+  .unit{color:#546e7a}
+  .fb{margin-top:8px;font-weight:bold;min-height:1em}
+  .fb.good{color:#2e7d32} .fb.bad{color:#c62828}
+  .hints{margin-top:8px;color:#e65100;background:#fff3e0;border-radius:10px;padding:0 12px}
+  .hints p{margin:6px 0;padding:6px 0}
+  .solution{margin-top:8px;background:#f3e5f5;border-radius:10px;padding:8px 12px;display:none}
+  #scoreBox{position:sticky;bottom:0;background:#e65100;color:#fff;border-radius:16px 16px 0 0;padding:12px 20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-top:30px}
+  #scoreBox button{background:#ffca28;color:#3e2723}
+  #final{display:none;font-size:1.15em;text-align:center;border:4px solid #43a047}
+  .tipbox{background:#fff8e1;border-left:8px solid #ffb300}
+</style>
+</head>
+<body>
+<div class="wrap">
+<a class="home" href="../../index.html">&larr; Back to all lessons</a>
+<h1>🦣 Math Week 19: The Ice Age &amp; Its Giant Mammals Lab</h1>
+<p>Ace, about 20 000 years ago almost all of British Columbia was buried under a sheet of ice more than a kilometre thick. Woolly mammoths, mastodons, giant ground sloths, and sabre-toothed cats roamed the cold lands south and north of the ice. Today scientists called palaeontologists and glaciologists use math to measure tusks, track how fast glaciers move, read layers in ice cores, and work out how long ago an animal died. You'll level up with <strong>scale factors, scale drawings and area, rates (m per day and m per year), negative temperatures and their means, half-life (repeated halving), huge numbers and powers of ten, percents, unit conversions, and reading a line graph with values below zero</strong>.</p>
+
+<h2>Part 1: Learn the Moves</h2>
+
+<div class="box tipbox">
+  <strong>The 4-Step Problem Solver (your Ice Age scientist's checklist):</strong>
+  <ol>
+    <li><strong>Read</strong>: What is the question actually asking? Underline the numbers and units.</li>
+    <li><strong>Plan</strong>: Which operations do I need, and in what order?</li>
+    <li><strong>Solve</strong>: Do one step at a time and write each step down.</li>
+    <li><strong>Check</strong>: Is my answer reasonable? Did I answer the question that was asked, in the right unit?</li>
+  </ol>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 1: Scale factor (mammoth vs elephant)</h3>
+  <p class="step">A <strong>scale factor</strong> tells you how many times as big one thing is than another. Divide: big ÷ small.</p>
+  <p class="step">A mammoth 3.5 m tall at the shoulder compared with an elephant 2.8 m tall: 3.5 ÷ 2.8 = <strong>1.25</strong>. The mammoth is 1.25 times as tall (25% taller).</p>
+  <p class="step">In a <strong>1 : 20</strong> museum model, every real length is divided by 20. A 3 m tusk becomes 300 cm ÷ 20 = <strong>15 cm</strong>.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 2: Scale and area</h3>
+  <p class="step">If every <em>length</em> in a drawing is doubled to get the real object, the <em>area</em> is not doubled. It is multiplied by 2 × 2 = <strong>4</strong>.</p>
+  <p class="step">A drawn footprint 4 cm × 3 cm (12 cm²) at scale 1 : 2 is really 8 cm × 6 cm = <strong>48 cm²</strong>, which is 4 × 12.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 3: Rates (how fast does a glacier move?)</h3>
+  <p class="step">Distance = rate × time. Time = distance ÷ rate. Rate = distance ÷ time.</p>
+  <p class="step">A glacier creeping <strong>0.2 m per day</strong> moves 0.2 × 365 = <strong>73 m per year</strong>.</p>
+  <p class="step">To travel 3 km = 3000 m at 50 m per year takes 3000 ÷ 50 = <strong>60 years</strong>. Always make the units match first!</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 4: Negative temperatures</h3>
+  <p class="step">The <strong>difference</strong> between −30 °C and −8 °C is −8 − (−30) = −8 + 30 = <strong>22 °C</strong>.</p>
+  <p class="step">The <strong>mean</strong> of −10, −4, and 2: add them (−10 + −4 + 2 = −12), then divide by 3 to get <strong>−4 °C</strong>.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 5: Half-life (how scientists date bones)</h3>
+  <p class="step">Living things contain a tiny amount of <strong>carbon-14</strong>. After an animal dies, half of its carbon-14 disappears about every <strong>5730 years</strong>. That time is called a <strong>half-life</strong>.</p>
+  <p class="step">Start with 1, then 1/2 after one half-life, 1/4 after two, 1/8 after three. A bone with 1/8 left is about 3 × 5730 = <strong>17 190 years</strong> old.</p>
+  <p class="step">Big numbers: 2 600 000 = 2.6 × 1 000 000 = <strong>2.6 × 10<sup>6</sup></strong> (the 6 counts the places the decimal point moves).</p>
+</div>
+
+<h2>Part 2: The Challenge (20 problems)</h2>
+<p>Type your answer and press <strong>Check</strong> (or Enter). Fractions like <span class="mono">3/4</span>, mixed numbers like <span class="mono">1 3/4</span>, or decimals like <span class="mono">1.75</span> are fine. Don't type the units, and you may use spaces or commas in big numbers (1 000 000). Stuck? Press <strong>Hint</strong>. After 2 tries, you can see a full solution.</p>
+
+<div id="questions"></div>
+<div class="box" id="final"></div>
+<div id="scoreBox">
+  <span id="scoreText">Score: 0 / 20 correct</span>
+  <button id="finishBtn" type="button">I'm done! Show my final score</button>
+</div>
+</div>
+
+<script>
+var NAME = "Ace";
+var GRAPH = '<div style="margin:10px 0"><svg viewBox="0 70 680 290" width="100%" style="max-width:680px;background:#fff;border-radius:12px" role="img" aria-label="Line graph of estimated average yearly temperature at a BC valley site from 25 000 to 5 000 years ago"><line x1="60" y1="300.0" x2="620" y2="300.0" stroke="#e0e0e0"/><text x="52" y="304.0" text-anchor="end" font-size="12" fill="#455a64">−12</text><line x1="60" y1="279.0" x2="620" y2="279.0" stroke="#e0e0e0"/><text x="52" y="283.0" text-anchor="end" font-size="12" fill="#455a64">−10</text><line x1="60" y1="258.0" x2="620" y2="258.0" stroke="#e0e0e0"/><text x="52" y="262.0" text-anchor="end" font-size="12" fill="#455a64">−8</text><line x1="60" y1="237.0" x2="620" y2="237.0" stroke="#e0e0e0"/><text x="52" y="241.0" text-anchor="end" font-size="12" fill="#455a64">−6</text><line x1="60" y1="216.0" x2="620" y2="216.0" stroke="#e0e0e0"/><text x="52" y="220.0" text-anchor="end" font-size="12" fill="#455a64">−4</text><line x1="60" y1="195.0" x2="620" y2="195.0" stroke="#e0e0e0"/><text x="52" y="199.0" text-anchor="end" font-size="12" fill="#455a64">−2</text><line x1="60" y1="174.0" x2="620" y2="174.0" stroke="#90a4ae" stroke-width="2"/><text x="52" y="178.0" text-anchor="end" font-size="12" fill="#455a64">0</text><line x1="60" y1="153.0" x2="620" y2="153.0" stroke="#e0e0e0"/><text x="52" y="157.0" text-anchor="end" font-size="12" fill="#455a64">2</text><line x1="60" y1="132.0" x2="620" y2="132.0" stroke="#e0e0e0"/><text x="52" y="136.0" text-anchor="end" font-size="12" fill="#455a64">4</text><line x1="60" y1="111.0" x2="620" y2="111.0" stroke="#e0e0e0"/><text x="52" y="115.0" text-anchor="end" font-size="12" fill="#455a64">6</text><line x1="60" y1="90.0" x2="620" y2="90.0" stroke="#e0e0e0"/><text x="52" y="94.0" text-anchor="end" font-size="12" fill="#455a64">8</text><line x1="60" y1="300.0" x2="620" y2="300.0" stroke="#455a64" stroke-width="2"/><line x1="60" y1="300.0" x2="60" y2="90.0" stroke="#455a64" stroke-width="2"/><polyline fill="none" stroke="#0277bd" stroke-width="3" points="116.0,237.0 228.0,279.0 340.0,226.5 452.0,163.5 564.0,121.5"/><circle class="pt" cx="116.0" cy="237.0" r="6" fill="#0277bd"/><text x="116.0" y="225.0" text-anchor="middle" font-size="13" font-weight="bold" fill="#01579b">−6</text><text x="116.0" y="319.0" text-anchor="middle" font-size="13" font-weight="bold" fill="#263238">25 000</text><circle class="pt" cx="228.0" cy="279.0" r="6" fill="#0277bd"/><text x="228.0" y="267.0" text-anchor="middle" font-size="13" font-weight="bold" fill="#01579b">−10</text><text x="228.0" y="319.0" text-anchor="middle" font-size="13" font-weight="bold" fill="#263238">20 000</text><circle class="pt" cx="340.0" cy="226.5" r="6" fill="#0277bd"/><text x="340.0" y="214.5" text-anchor="middle" font-size="13" font-weight="bold" fill="#01579b">−5</text><text x="340.0" y="319.0" text-anchor="middle" font-size="13" font-weight="bold" fill="#263238">15 000</text><circle class="pt" cx="452.0" cy="163.5" r="6" fill="#0277bd"/><text x="452.0" y="151.5" text-anchor="middle" font-size="13" font-weight="bold" fill="#01579b">1</text><text x="452.0" y="319.0" text-anchor="middle" font-size="13" font-weight="bold" fill="#263238">10 000</text><circle class="pt" cx="564.0" cy="121.5" r="6" fill="#0277bd"/><text x="564.0" y="109.5" text-anchor="middle" font-size="13" font-weight="bold" fill="#01579b">5</text><text x="564.0" y="319.0" text-anchor="middle" font-size="13" font-weight="bold" fill="#263238">5 000</text><text x="340.0" y="342.0" text-anchor="middle" font-size="14" font-weight="bold" fill="#263238">Years ago</text><text x="16" y="195.0" text-anchor="middle" font-size="14" font-weight="bold" fill="#263238" transform="rotate(-90 16 195.0)">Average temp. (°C)</text></svg></div>';
+var QUESTIONS = [
+ {t:"A Columbian mammoth stood about <strong>4 m</strong> tall at the shoulder. A modern African elephant stands about <strong>3.2 m</strong>. How many times as tall as the elephant was the mammoth? (Give a decimal.)", a:"1.25", u:"times as tall",
+  h:["Scale factor = bigger ÷ smaller.","4 ÷ 3.2 = 40 ÷ 32 = ?"],
+  s:"4 ÷ 3.2 = 40 ÷ 32 = 1.25 times as tall."},
+ {t:"A museum builds a <strong>1 : 20</strong> scale model of a woolly mammoth. The real tusk was <strong>4.2 m</strong> long. How long is the model's tusk?", a:"21", u:"cm",
+  h:["Change 4.2 m to centimetres first: × 100.","420 cm ÷ 20 = ?"],
+  s:"4.2 m = 420 cm, and 420 ÷ 20 = 21 cm."},
+ {t:"A drawing of a sabre-toothed cat's paw print uses the scale <strong>1 : 2</strong> (the drawing is half size). On the drawing, the print fits in a rectangle <strong>6 cm × 5 cm</strong>. What is the area of the rectangle around the <strong>real</strong> print?", a:"120", u:"cm²",
+  h:["Double each length to get the real size: 12 cm and 10 cm.","Area = 12 × 10. (Notice it is 4 times the drawing's 30 cm²!)"],
+  s:"Real size = 12 cm × 10 cm = 120 cm², which is 2 × 2 = 4 times the drawing's 30 cm²."},
+ {t:"A valley glacier flows <strong>0.4 m per day</strong>. How many metres does it move in one year of <strong>365 days</strong>?", a:"146", u:"m",
+  h:["Distance = rate × time.","0.4 × 365 = ?"],
+  s:"0.4 × 365 = 146 m."},
+ {t:"As the climate warmed, the front of a BC glacier melted back (retreated) <strong>1.8 km</strong> in <strong>60 years</strong>. What was its average retreat rate in <strong>metres per year</strong>?", a:"30", u:"m per year",
+  h:["Change km to m first: 1.8 km = 1800 m.","1800 ÷ 60 = ?"],
+  s:"1.8 km = 1800 m, and 1800 ÷ 60 = 30 m per year."},
+ {t:"Near the start of the last ice age, the edge of an ice sheet spread south at about <strong>75 m per year</strong>. How many years would it take to advance <strong>120 km</strong>?", a:"1600", u:"years",
+  h:["Make the units match: 120 km = 120 000 m.","Time = distance ÷ rate = 120 000 ÷ 75."],
+  s:"120 000 ÷ 75 = 1600 years."},
+ {t:"On top of the ice sheet, a winter night reached <strong>−42 °C</strong>. The warmest summer afternoon reached only <strong>−9 °C</strong>. What is the difference between the two temperatures?", a:"33", u:"°C",
+  h:["Difference = warmer − colder.","−9 − (−42) = −9 + 42 = ?"],
+  s:"−9 − (−42) = −9 + 42 = 33 °C."},
+ {t:"A mammoth herd's grazing ground had these noon temperatures over five winter days: <strong>−18, −25, −11, −30, −16</strong> (°C). What was the <strong>mean</strong> temperature? (Type a negative number, like −5.)", a:"-20", u:"°C",
+  h:["Add the five numbers: they are all negative, so the total is negative.","−18 + −25 + −11 + −30 + −16 = −100. Now divide by 5."],
+  s:"The total is −100, and −100 ÷ 5 = −20 °C."},
+ {t:"Today a BC valley has an average yearly temperature of <strong>9 °C</strong>. Scientists estimate that during the coldest part of the last ice age, it was <strong>14 °C colder</strong>. What was the average yearly temperature then?", a:"-5", u:"°C",
+  h:["Colder means subtract.","9 − 14 = ? (You will go below zero.)"],
+  s:"9 − 14 = −5 °C."},
+ {t:"A fresh sample has <strong>800</strong> units of carbon-14. The amount halves every half-life. How many units are left after <strong>3 half-lives</strong>?", a:"100", u:"units",
+  h:["Halve it three times.","800 → 400 → 200 → ?"],
+  s:"800 → 400 → 200 → 100 units."},
+ {t:"A mammoth bone has <strong>1/4</strong> of the carbon-14 it had when the animal was alive. The half-life of carbon-14 is about <strong>5730 years</strong>. About how many years ago did the mammoth die?", a:"11460", u:"years ago",
+  h:["How many halvings turn 1 into 1/4? 1 → 1/2 → 1/4.","That is 2 half-lives: 2 × 5730."],
+  s:"1/4 means 2 half-lives, so 2 × 5730 = 11 460 years ago."},
+ {t:"A museum list includes <strong>40</strong> kinds of large Ice Age mammals from North America. By the end of the ice age, <strong>28</strong> of them had died out. What percent of the kinds on the list died out?", a:"70", u:"%",
+  h:["Percent = part ÷ whole × 100.","28 ÷ 40 = 0.7"],
+  s:"28 ÷ 40 = 0.70 = 70%."},
+ {t:"The Ice Age period called the Pleistocene began about <strong>2 580 000</strong> years ago and ended about <strong>11 700</strong> years ago. How many years did it last?", a:"2568300", u:"years",
+  h:["Subtract the smaller number of years ago from the larger.","2 580 000 − 11 700 = ?"],
+  s:"2 580 000 − 11 700 = 2 568 300 years."},
+ {t:"Written in scientific notation, 2 580 000 = 2.58 × 10<sup>n</sup>. What number is <strong>n</strong>?", a:"6", u:"",
+  h:["Count how many places the decimal point moves from 2 580 000 to 2.58.","2 580 000 = 2.58 × 1 000 000. How many zeros does 1 000 000 have?"],
+  s:"2 580 000 = 2.58 × 1 000 000 = 2.58 × 10<sup>6</sup>, so n = 6."},
+ {t:"British Columbia covers about <strong>945 000 km²</strong>. Twenty thousand years ago, ice covered almost all of it. Today, glaciers cover only about <strong>3%</strong> of BC. About how many square kilometres is that?", a:"28350", u:"km²",
+  h:["3% = 0.03.","0.03 × 945 000 = ?"],
+  s:"0.03 × 945 000 = 28 350 km²."},
+ {t:"An ice core drilled from a glacier shows one thin layer for each year of snow. A <strong>2.4 m</strong> section holds <strong>160</strong> yearly layers. What is the average thickness of one layer?", a:"1.5", u:"cm",
+  h:["Change 2.4 m to centimetres: 240 cm.","240 ÷ 160 = ?"],
+  s:"2.4 m = 240 cm, and 240 ÷ 160 = 1.5 cm per layer."},
+ {t:"Deeper in the same ice core, the weight of ice above has squeezed each yearly layer to only <strong>0.8 cm</strong>. How many years of snow are recorded in a <strong>12 m</strong> section?", a:"1500", u:"years",
+  h:["12 m = 1200 cm.","1200 ÷ 0.8 = 12 000 ÷ 8 = ?"],
+  s:"1200 cm ÷ 0.8 cm = 1500 layers, so 1500 years."},
+ {t:"A woolly mammoth may have eaten about <strong>180 kg</strong> of grasses and plants every day. How many <strong>tonnes</strong> is that in <strong>30 days</strong>? (1 t = 1000 kg)", a:"5.4", u:"t",
+  h:["First find the kilograms: 180 × 30.","180 × 30 = 5400 kg. Divide by 1000 to get tonnes."],
+  s:"180 × 30 = 5400 kg = 5.4 t."},
+ {t:GRAPH+"The line graph shows scientists' estimates of the average yearly temperature at one BC valley site. What is the <strong>mean</strong> of the five temperatures shown?", a:"-3", u:"°C",
+  h:["Add the five values: −6 + (−10) + (−5) + 1 + 5.","The total is −15. Divide by 5."],
+  s:"−6 − 10 − 5 + 1 + 5 = −15, and −15 ÷ 5 = −3 °C."},
+ {t:"Use the graph in question 19. Moving forward in time (left to right), what was the <strong>greatest rise</strong> in temperature between two neighbouring points?", a:"6", u:"°C",
+  h:["Find each change: −6 to −10, −10 to −5, −5 to 1, and 1 to 5.","The changes are −4, +5, +6, and +4. Which rise is biggest?"],
+  s:"From 15 000 to 10 000 years ago the temperature rose from −5 °C to 1 °C: 1 − (−5) = 6 °C, the greatest rise."}
+];
+
+var PRAISE = ["Nice work, Ace!","Correct! Mammoth-sized thinking! 🦣","Yes! Ice Age scientist Ace!","Excellent, Ace. That was a tough one!","Right on target! 🎯","Brilliant thinking, Ace!","Cool as a glacier! 🧊"];
+var ENCOURAGE = ["Not quite. Check your steps and try again!","Close call. Try again, Ace! Maybe use a hint?","Hmm, not yet. Re-read the question carefully.","Keep going, Ace. Mistakes help your brain grow!"];
+
+function parseAnswer(str){
+  if(str===undefined||str===null) return NaN;
+  var s=String(str).trim().toLowerCase();
+  s=s.replace(/[\u2212\u2013]/g,"-");
+  s=s.replace(/(\d),(?=\d{3}(\D|$))/g,"$1");
+  s=s.replace(/[^0-9.\/\- ]/g," ").replace(/\s+/g," ").trim();
+  s=s.replace(/\s*\/\s*/g,"/");
+  var m;
+  if((m=s.match(/^(-?\d+) (\d+)\/(\d+)$/))){ var w=parseFloat(m[1]),n=parseFloat(m[2]),d=parseFloat(m[3]); if(d===0)return NaN; return w<0? w-n/d : w+n/d; }
+  if((m=s.match(/^(-?\d+(?:\.\d+)?)\/(\d+(?:\.\d+)?)$/))){ var d2=parseFloat(m[2]); if(d2===0)return NaN; return parseFloat(m[1])/d2; }
+  s=s.replace(/ /g,"");
+  if(/^-?(\d+\.?\d*|\.\d+)$/.test(s)) return parseFloat(s);
+  return NaN;
+}
+function isCorrect(input,key){
+  var a=parseAnswer(input), k=parseAnswer(key);
+  if(isNaN(a)) return false;
+  var isInt=Math.abs(k-Math.round(k))<1e-12;
+  var tol=isInt?1e-9:0.005;
+  return Math.abs(a-k)<=tol;
+}
+
+function isRomanCorrect(input,key){ return String(input).replace(/\s+/g,"").toUpperCase()===key; }
+var state=[];
+function render(){
+  var box=document.getElementById("questions");
+  QUESTIONS.forEach(function(q,i){
+    state.push({correct:false,tries:0,hints:0});
+    var d=document.createElement("div");
+    d.className="box q"; d.id="q"+i;
+    d.innerHTML='<div><span class="qnum">'+(i+1)+'.</span> '+q.t+'</div>'+
+      '<div class="row"><input type="text"'+(q.r?' placeholder="e.g. MMXXVI"':'')+' id="in'+i+'" aria-label="Answer to question '+(i+1)+'" autocomplete="off"> <span class="unit">'+q.u+'</span>'+
+      '<button type="button" class="check" data-i="'+i+'">Check</button>'+
+      '<button type="button" class="hint" data-i="'+i+'">Hint 💡</button>'+
+      '<button type="button" class="sol" data-i="'+i+'" style="display:none">Show solution</button></div>'+
+      '<div class="fb" id="fb'+i+'"></div><div class="hints" id="hints'+i+'"></div>'+
+      '<div class="solution" id="sol'+i+'"><strong>Solution:</strong> '+q.s+'</div>';
+    box.appendChild(d);
+  });
+  box.addEventListener("click",function(e){
+    var b=e.target; if(b.tagName!=="BUTTON")return;
+    var i=+b.getAttribute("data-i");
+    if(b.className==="check") check(i);
+    else if(b.className==="hint") hint(i);
+    else if(b.className==="sol") document.getElementById("sol"+i).style.display="block";
+  });
+  box.addEventListener("keydown",function(e){
+    if(e.key==="Enter"&&e.target.tagName==="INPUT"){ check(+e.target.id.slice(2)); }
+  });
+}
+function pick(arr){return arr[Math.floor(Math.random()*arr.length)];}
+function check(i){
+  var val=document.getElementById("in"+i).value;
+  var fb=document.getElementById("fb"+i), card=document.getElementById("q"+i);
+  if(val.trim()===""){fb.className="fb bad";fb.textContent="Type an answer first, Ace!";return;}
+  var isR=!!QUESTIONS[i].r;
+  if(isR&&!/^[ivxlcdm\s]+$/i.test(val)){fb.className="fb bad";fb.textContent="Use only Roman numeral letters: I, V, X, L, C, D, M.";return;}
+  if(!isR&&isNaN(parseAnswer(val))){fb.className="fb bad";fb.textContent="I can't read that as a number. Try something like 42, 3.5, 3/4 or 1 3/4.";return;}
+  state[i].tries++;
+  if(isR?isRomanCorrect(val,QUESTIONS[i].a):isCorrect(val,QUESTIONS[i].a)){
+    state[i].correct=true; card.className="box q right"; fb.className="fb good";
+    fb.textContent="✅ "+pick(PRAISE)+(state[i].tries===1?" (first try!)":"");
+  } else {
+    state[i].correct=false; card.className="box q wrong"; fb.className="fb bad";
+    fb.textContent="❌ "+pick(ENCOURAGE);
+    if(state[i].tries>=2) card.querySelector(".sol").style.display="inline-block";
+  }
+  updateScore();
+}
+function hint(i){
+  var q=QUESTIONS[i], s=state[i], hb=document.getElementById("hints"+i);
+  if(s.hints<q.h.length){
+    var p=document.createElement("p"); p.textContent="💡 Hint "+(s.hints+1)+": "+q.h[s.hints]; hb.appendChild(p); s.hints++;
+  }
+  if(s.hints>=q.h.length) document.querySelector("#q"+i+" .hint").disabled=true;
+  updateScore();
+}
+function counts(){
+  var c=0,first=0,h=0;
+  state.forEach(function(s){ if(s.correct){c++; if(s.tries===1)first++;} h+=s.hints; });
+  return {correct:c,first:first,hints:h};
+}
+function updateScore(){
+  var k=counts();
+  document.getElementById("scoreText").textContent="Score: "+k.correct+" / "+QUESTIONS.length+" correct · hints used: "+k.hints;
+}
+function finish(){
+  var k=counts(), n=QUESTIONS.length, pct=Math.round(100*k.correct/n);
+  var msg;
+  if(pct===100) msg="🏆 PERFECT SCORE! Incredible work, Ace. A real palaeontologist would be impressed!";
+  else if(pct>=85) msg="🌟 Outstanding, Ace! That's a Grade 6-7 level performance!";
+  else if(pct>=65) msg="💪 Great effort, Ace! Review the ones you missed and try them again.";
+  else if(pct>=40) msg="👍 Good start, Ace! These problems are tough. Use the hints and solutions to learn the tricks, then try again.";
+  else msg="🌱 These are challenge problems, well above grade level. Every great scientist started as a beginner! Go through the worked examples and try again, Ace!";
+  var f=document.getElementById("final");
+  f.style.display="block";
+  f.innerHTML="<h2 style='border:none;margin-top:0'>Final Score: "+k.correct+" / "+n+" ("+pct+"%)</h2>"+
+    "<p>Correct on the first try: "+k.first+" · Hints used: "+k.hints+"</p><p>"+msg+"</p>"+
+    "<p style='font-size:.85em;color:#546e7a'>Finished on "+new Date().toLocaleString("en-CA")+"</p>";
+  f.scrollIntoView({behavior:"smooth"});
+}
+render();
+updateScore();
+document.getElementById("finishBtn").addEventListener("click",finish);
+</script>
+</body>
+</html>

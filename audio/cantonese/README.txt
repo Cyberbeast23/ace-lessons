@@ -6,7 +6,7 @@ TTS voice (Cantonese): zh-HK-HiuMaanNeural when available; 2026-10-12+ often gTT
 TTS voice (English in ALL-words.mp3): en-HK-YanNeural
 Rate: slowed (~-20%) for clear listening practice.
 
-Sources: Ace lessons 2026-09-29 (Greetings) + 2026-09-30 (Family Members) + 2026-10-01 (Food) + 2026-10-02 (School) + 2026-10-03 (Body) + 2026-10-04 (Colours) + 2026-10-05 (Sky & Space) + 2026-10-06 (Numbers 11-100) + 2026-10-07 (At the Doctor) + 2026-10-08 (Nature: Mountains & Volcanoes) + 2026-10-09 (Question Words & Secrets) + 2026-10-10 (Music) + 2026-10-11 (Trains & Travel) + 2026-10-12 (Brain & Sleep) + 2026-10-13 (Bees & Gardens) + 2026-10-14 (Electricity & Lights) + 2026-10-15 (Land, People & Respect).
+Sources: Ace lessons 2026-09-29 (Greetings) + 2026-09-30 (Family Members) + 2026-10-01 (Food) + 2026-10-02 (School) + 2026-10-03 (Body) + 2026-10-04 (Colours) + 2026-10-05 (Sky & Space) + 2026-10-06 (Numbers 11-100) + 2026-10-07 (At the Doctor) + 2026-10-08 (Nature: Mountains & Volcanoes) + 2026-10-09 (Question Words & Secrets) + 2026-10-10 (Music) + 2026-10-11 (Trains & Travel) + 2026-10-12 (Brain & Sleep) + 2026-10-13 (Bees & Gardens) + 2026-10-14 (Electricity & Lights) + 2026-10-15 (Land, People & Respect) + 2026-10-16 (Ice, Snow & Giant Animals).
 Numbers 1-10 are already known and not included here.
 
 How to practise:
@@ -705,6 +705,46 @@ Individual files
   Chinese:  傳統
   Jyutping: cyun4 tung2
   English:  tradition
+
+137-bing1-ice.mp3
+  Chinese:  冰
+  Jyutping: bing1
+  English:  ice
+
+138-syut3-snow.mp3
+  Chinese:  雪
+  Jyutping: syut3
+  English:  snow
+
+139-dung3-cold.mp3
+  Chinese:  凍
+  Jyutping: dung3
+  English:  cold (to the touch / weather)
+
+140-mou4-fur.mp3
+  Chinese:  毛
+  Jyutping: mou4
+  English:  fur / hair
+
+141-daai6-zoeng6-elephant.mp3
+  Chinese:  大象
+  Jyutping: daai6 zoeng6
+  English:  elephant
+
+142-ngaa4-tooth-tusk.mp3
+  Chinese:  牙
+  Jyutping: ngaa4
+  English:  tooth / tusk
+
+143-hou2-daai6-very-big.mp3
+  Chinese:  好大
+  Jyutping: hou2 daai6
+  English:  very big
+
+144-hou2-noi6-ji5-cin4-long-ago.mp3
+  Chinese:  好耐以前
+  Jyutping: hou2 noi6 ji5 cin4
+  English:  a long time ago
 
 
 Combined file

@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Writing (Oct. 16): Argument Essay (What Wiped Out the Mammoths?) + Grammar Clinic</title>
+<style>
+  body{font-family:"Segoe UI",Verdana,Arial,sans-serif;font-size:20px;line-height:1.6;margin:0;background:#fff8f0;color:#2c2416}
+  .wrap{max-width:880px;margin:0 auto;padding:20px 18px 80px}
+  a.home{font-size:.9em;color:#bf360c}
+  h1{color:#e65100;font-size:2em;margin:10px 0}
+  h2{color:#ef6c00;margin-top:36px;border-bottom:3px solid #ffcc80;padding-bottom:4px}
+  h3{color:#ef6c00}
+  .box{background:#fff;border-radius:16px;padding:18px 22px;margin:16px 0;box-shadow:0 3px 10px rgba(0,0,0,.07)}
+  .tipbox{background:#fff8e1;border-left:8px solid #ffb300}
+  .senses{display:grid;gap:8px;margin:10px 0;grid-template-columns:repeat(auto-fit,minmax(140px,1fr))}
+  .senses .side{border-radius:14px;padding:10px 16px;background:#fff3e0}
+  .ts{background:#ffcc80;border-radius:5px;padding:1px 3px}
+  .ev{background:#c8e6c9;border-radius:5px;padding:1px 3px}
+  .ex{background:#ffe0b2;border-radius:5px;padding:1px 3px}
+  .cs{background:#e1bee7;border-radius:5px;padding:1px 3px}
+  .legend span{display:inline-block;margin:4px 8px 4px 0;font-size:.85em}
+  .model{font-family:Georgia,"Times New Roman",serif;font-size:1.05em;line-height:1.9}
+  .row{padding:10px 6px;border-bottom:1px dashed #ddd}
+  .row.right{background:#f1f8e9} .row.wrong{background:#fff5f5}
+  select{font-size:.9em;padding:5px 8px;border-radius:8px;border:2px solid #ffb74d;font-family:inherit}
+  .q{border-left:8px solid #b0bec5}
+  .q.right{border-left-color:#43a047;background:#f1f8e9}
+  .q.wrong{border-left-color:#e53935;background:#fff5f5}
+  .opt{display:block;width:100%;text-align:left;font-size:.95em;background:#fafafa;border:2px solid #e0e0e0;border-radius:10px;padding:8px 14px;margin:8px 0;cursor:pointer;font-family:inherit}
+  .opt:hover{border-color:#ffb74d;background:#fff}
+  .opt.sel-right{background:#c8e6c9;border-color:#43a047}
+  .opt.sel-wrong{background:#ffcdd2;border-color:#e53935}
+  .fb{margin-top:6px;font-weight:bold}
+  .fb.good{color:#2e7d32} .fb.bad{color:#c62828}
+  .explain{font-weight:normal;color:#e65100}
+  .bad-sent{font-family:Consolas,"Courier New",monospace;background:#ffebee;padding:6px 10px;border-radius:8px;display:inline-block;margin:6px 0}
+  input.fix{width:100%;box-sizing:border-box;font-size:1em;padding:8px 12px;border:2px solid #ffb74d;border-radius:10px;font-family:inherit}
+  button{font-size:.95em;padding:8px 16px;border:none;border-radius:10px;cursor:pointer;font-weight:bold;font-family:inherit}
+  .go{background:#ef6c00;color:#fff} .go:hover{background:#e65100}
+  .hint{background:#ffe082;color:#5d4037}
+  .blue{background:#1e88e5;color:#fff}
+  .purple{background:#8e24aa;color:#fff}
+  .grey{background:#cfd8dc;color:#263238}
+  .btnrow{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px}
+  textarea{width:100%;box-sizing:border-box;min-height:300px;font-size:1.05em;line-height:1.7;font-family:Georgia,"Times New Roman",serif;padding:14px;border:3px solid #ffb74d;border-radius:12px}
+  textarea:focus{outline:none;border-color:#ef6c00}
+  .counter{display:flex;flex-wrap:wrap;gap:20px;align-items:center;margin:8px 0;font-weight:bold}
+  .meter{flex:1;min-width:200px;height:18px;background:#e0e0e0;border-radius:9px;overflow:hidden}
+  .meter div{height:100%;width:0;background:#ffb300;transition:width .2s}
+  .checklist label{display:block;padding:6px 4px;cursor:pointer}
+  .checklist input{transform:scale(1.4);margin-right:10px}
+  .prompts label{display:block;background:#fff3e0;border-radius:10px;padding:10px 14px;margin:8px 0;cursor:pointer}
+  .prompts input{transform:scale(1.3);margin-right:8px}
+  #scoreBox{position:sticky;bottom:0;background:#e65100;color:#fff;border-radius:16px 16px 0 0;padding:12px 20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-top:30px}
+  .w5{display:grid;gap:8px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));margin:10px 0}
+  .w5 label{display:block;font-weight:bold;color:#e65100}
+  .w5 input{width:100%;box-sizing:border-box;font-size:.95em;padding:6px 10px;border:2px solid #ffb74d;border-radius:8px;font-family:inherit}
+  #printArea{display:none}
+  @media print{
+    body{background:#fff;font-size:14pt}
+    .wrap,#scoreBox{display:none !important}
+    #printArea{display:block;font-family:Georgia,serif;line-height:1.8}
+    #printArea h1{font-size:18pt;margin:0 0 6pt}
+    #printArea .meta{font-size:11pt;color:#444}
+    #printArea .text{white-space:pre-wrap;border-top:1px solid #999;padding-top:10pt;margin-top:10pt}
+    #printArea .lines{margin-top:24pt;border-top:1px solid #999;padding-top:6pt;font-size:11pt}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+<a class="home" href="../../index.html">&larr; Back to all lessons</a>
+<h1>✍️ Writing Week 19: Argument Essay: What Wiped Out the Mammoths? 🦣🧊</h1>
+<p>For the past four days you've written problem-solution essays. Today, Ace, you'll level up to an <strong>argument essay</strong>, the kind scientists, lawyers, and judges write. An argument essay takes a clear <strong>position</strong> (your <em>claim</em>) on a question that people really disagree about, backs it with <strong>reasons and evidence</strong>, and then does something brave: it explains the <strong>other side</strong> (the <em>counterclaim</em>) and shows why your claim is still stronger (the <em>rebuttal</em>). Today's big question comes straight from your reading: <strong>why did the woolly mammoths and other Ice Age giants disappear?</strong></p>
+
+<h2>Part 1: The Lesson</h2>
+<div class="box">
+  <h3 style="margin-top:0">An argument essay has six parts 🧩</h3>
+  <p>Think of it like a scientist presenting a case to other scientists who might not agree yet:</p>
+  <div class="senses">
+    <div class="side"><strong>1. Hook + claim:</strong> grab attention, then state your position in one clear sentence</div>
+    <div class="side"><strong>2. Background:</strong> the facts a reader needs to understand the debate</div>
+    <div class="side"><strong>3. Reason 1 + evidence:</strong> your first reason, backed by a fact or example</div>
+    <div class="side"><strong>4. Reason 2 + evidence:</strong> a second, different reason with its own evidence</div>
+    <div class="side"><strong>5. Counterclaim + rebuttal:</strong> "Some people argue… but…"</div>
+    <div class="side"><strong>6. Conclusion:</strong> restate the claim in new words and say why it matters</div>
+  </div>
+  <h3>Five arguer's moves</h3>
+  <ul>
+    <li><strong>Make a claim someone could disagree with:</strong> "Mammoths were big" is a fact, not a claim. "Human hunters were the main reason mammoths vanished" is a claim.</li>
+    <li><strong>Separate reasons from evidence:</strong> the <em>reason</em> is <em>why</em> you believe it; the <em>evidence</em> is the fact that proves it (a date, a measurement, a discovery).</li>
+    <li><strong>Use signal words:</strong> <em>First, Second, In addition, For example, According to scientists, This shows that…</em></li>
+    <li><strong>Be fair to the other side:</strong> explain the counterclaim honestly, then rebut it with evidence, not insults.</li>
+    <li><strong>Use careful, scientific language:</strong> "scientists think," "the evidence suggests," and "probably" are honest when the answer isn't 100% certain.</li>
+  </ul>
+  <p><strong>Grown-up words:</strong> a <strong>claim</strong> is your position; <strong>evidence</strong> is a fact or example that supports it; a <strong>counterclaim</strong> is the opposing view; a <strong>rebuttal</strong> is your answer to it, explaining why your claim still holds.</p>
+</div>
+
+<div class="box">
+  <h3 style="margin-top:0">Model Argument Essay (short version)</h3>
+  <p class="legend"><span class="ts">Hook + claim + background</span><span class="ev">Reasons + evidence</span><span class="ex">Counterclaim + rebuttal</span><span class="cs">Conclusion</span></p>
+  <p class="model">
+    <span class="ts">Picture a hairy giant taller than an elephant, sweeping snow aside with its tusks; now picture every last one of them gone. About 13 000 to 11 000 years ago, as the Ice Age ended, most of North America's giant mammals disappeared. I believe a warming climate and human hunters worked together to wipe out the woolly mammoth.</span><br>
+    <span class="ev">First, as the world warmed, the cold grasslands that mammoths grazed turned into forests and wetlands, so their food supply shrank. Second, people armed with stone-tipped spears arrived at about the same time. Because a mammoth mother raised only one calf every few years, herds could not replace the animals that were hunted.</span><br>
+    <span class="ex">Some people argue that climate change alone was to blame. However, mammoths had already survived earlier warm periods between glaciations, before people arrived, so warming by itself probably was not enough.</span><br>
+    <span class="cs">In the end, hungry, shrinking herds plus skilled hunters were too much for the mammoths. Their story reminds us that when the climate changes and people put extra pressure on animals, even giants can vanish.</span>
+  </p>
+  <p><strong>Notice:</strong> the model states a clear claim, gives two <em>different</em> reasons with evidence (lost grasslands; hunting and slow births), treats the opposing view fairly before rebutting it with evidence (mammoths survived earlier warm periods), and ends by explaining why the argument matters today.</p>
+</div>
+
+<h2>Part 2: Name That Essay Part</h2>
+<div class="box">
+  <p>Each line comes from a student's argument essay about what wiped out the mammoths. Choose which <strong>part of the essay</strong> it belongs in.</p>
+  <div id="labelRows"></div>
+  <div class="btnrow"><button type="button" class="go" id="checkLabels">Check my answers</button></div>
+  <div class="fb" id="labelFb"></div>
+</div>
+
+<h2>Part 3: Grammar Clinic 🧊</h2>
+<div class="box tipbox">A careful scientist checks every sentence before publishing it! <strong>Section A:</strong> pick the correct sentence. <strong>Section B:</strong> type the sentence again with <em>all</em> mistakes fixed. We use <strong>Canadian spelling</strong> (colour, grey, centre, metre, neighbour, practise as a verb). Today, watch <strong>commas around appositives</strong> (extra "naming" phrases), <strong>commas in a series</strong>, <strong>subject–verb agreement with "each of"</strong>, <strong>affect / effect</strong>, <strong>than / then</strong>, <strong>comparatives and superlatives</strong> (bigger, biggest), <strong>plural possessives</strong>, and <strong>capital letters for places and time periods</strong>.</div>
+<h3>Section A: Pick the correct sentence</h3>
+<div id="gmc"></div>
+<h3>Section B: Fix the sentence</h3>
+<p>Retype the whole sentence correctly, with capital letters and punctuation. Each one has <strong>at least two</strong> mistakes.</p>
+<div id="gfix"></div>
+
+<h2>Part 4: Your Turn to Write</h2>
+<div class="box">
+  <h3 style="margin-top:0">Step 1: Choose your question</h3>
+  <div class="prompts" id="prompts">
+    <label><input type="radio" name="prompt" value="Essay A: What wiped out the mammoths? Climate, hunting, or both?" checked> 🦣 <strong>Essay A:</strong> What wiped out the mammoths? Argue for climate change, human hunting, or both working together, using evidence from today's reading.</label>
+    <label><input type="radio" name="prompt" value="Essay B: Should scientists try to bring back the woolly mammoth?"> 🧬 <strong>Essay B:</strong> Some scientists hope to use DNA from frozen mammoths to bring back a mammoth-like animal. Should they? Argue yes or no, and rebut the other side.</label>
+    <label><input type="radio" name="prompt" value="Essay C: Which Ice Age animal was the best survivor?"> 🐾 <strong>Essay C:</strong> Which Ice Age animal was best adapted to its world: the woolly mammoth, the mastodon, the giant ground sloth, or the sabre-toothed cat? Use adaptations as your evidence.</label>
+  </div>
+  <p><strong>Plan your essay:</strong> jot a few words for each box. (These notes save with your writing.)</p>
+  <div class="w5" id="w5">
+    <div><label for="w5who">Hook + my claim (one clear sentence)</label><input id="w5who" type="text" autocomplete="off"></div>
+    <div><label for="w5place">Background facts the reader needs</label><input id="w5place" type="text" autocomplete="off"></div>
+    <div><label for="w5facts">Reason 1 + evidence</label><input id="w5facts" type="text" autocomplete="off"></div>
+    <div><label for="w5senses">Reason 2 + evidence</label><input id="w5senses" type="text" autocomplete="off"></div>
+    <div><label for="w5feel">Counterclaim + my rebuttal</label><input id="w5feel" type="text" autocomplete="off"></div>
+    <div><label for="w5closing">Conclusion (why it matters)</label><input id="w5closing" type="text" autocomplete="off"></div>
+  </div>
+
+  <h3>Step 2: Write your argument essay</h3>
+  <p><strong>Goal:</strong> an essay of <strong>200 to 300 words</strong> with a <strong>hook</strong>, a clear <strong>claim</strong>, short <strong>background</strong>, <strong>two different reasons</strong> each backed by <strong>evidence</strong>, a fair <strong>counterclaim</strong> with your <strong>rebuttal</strong>, and a <strong>conclusion</strong>. Use at least two facts from today's reading (glaciers and the ice sheet, Beringia, tundra and permafrost, mammoth adaptations, mastodon teeth, the Yukon baby mammoth, radiocarbon dating, ice cores, or the extinction theories).</p>
+  <p><button type="button" class="hint" id="templateBtn">📋 Add the essay headings for me</button></p>
+  <label for="essay"><strong>Write here, Ace:</strong></label>
+  <textarea id="essay" placeholder="Hook + claim: ..."></textarea>
+  <div class="counter">
+    <span id="wc">0 words</span>
+    <span id="sc">0 sentences</span>
+    <div class="meter" aria-hidden="true"><div id="meterBar"></div></div>
+  </div>
+  <div class="fb" id="wcMsg">Aim for 200 to 300 words.</div>
+  <p style="font-size:.8em;color:#607d8b" id="saveNote">Your writing is saved automatically in this browser as you type.</p>
+
+  <h3>Self-check before you finish ✅</h3>
+  <div class="checklist" id="checklist">
+    <label><input type="checkbox"> My <strong>hook</strong> grabs attention and my <strong>claim</strong> is a position someone could disagree with.</label>
+    <label><input type="checkbox"> I gave short <strong>background</strong> so the reader understands the question.</label>
+    <label><input type="checkbox"> I gave <strong>two different reasons</strong>, each backed by <strong>evidence</strong> (a fact, date, or discovery).</label>
+    <label><input type="checkbox"> I explained a <strong>counterclaim</strong> fairly and <strong>rebutted</strong> it with evidence.</label>
+    <label><input type="checkbox"> My <strong>conclusion</strong> restates my claim in new words and says why it matters.</label>
+    <label><input type="checkbox"> I used signal words (<em>First, Second, However, This shows that</em>) and careful science words (<em>probably, the evidence suggests</em>).</label>
+    <label><input type="checkbox"> I checked <strong>commas</strong>, <strong>affect / effect</strong>, <strong>than / then</strong>, capital letters, and <strong>Canadian spelling</strong> (colour, grey, centre, metre).</label>
+  </div>
+  <div class="btnrow">
+    <button type="button" class="blue" id="downloadBtn">⬇️ Download my writing (for Dad)</button>
+    <button type="button" class="purple" id="printBtn">🖨️ Print my writing</button>
+    <button type="button" class="grey" id="clearBtn">Start over</button>
+  </div>
+  <div class="fb" id="doneMsg"></div>
+</div>
+
+<div id="scoreBox"><span id="scoreText"></span><span>Keep going, Ice Age scientist Ace! 🦣</span></div>
+</div>
+
+<div id="printArea"></div>
+
+<script>
+var NAME="Ace";
+var PRAISE=["Nice work, Ace!","Correct! Great editing eye!","Yes! Ace fixed it!","Excellent, Ice Age scientist Ace!","Mammoth-sized thinking! 🦣"];
+function pick(a){return a[Math.floor(Math.random()*a.length)];}
+
+var LABELS=["Hook + claim","Background","Reason 1 + evidence","Reason 2 + evidence","Counterclaim + rebuttal","Conclusion"];
+var LABEL_ITEMS=[
+ {s:"Imagine a hairy giant taller than an elephant vanishing forever; I believe warming weather and human hunters together wiped out the mammoths.", a:"Hook + claim"},
+ {s:"About 13 000 to 11 000 years ago, the Ice Age ended and most of North America's giant mammals disappeared.", a:"Background"},
+ {s:"First, as the world warmed, the grasslands that mammoths grazed turned into forests and wetlands, so their food shrank.", a:"Reason 1 + evidence"},
+ {s:"Second, people with stone-tipped spears arrived, and because mothers raised only one calf every few years, herds could not replace the animals that were hunted.", a:"Reason 2 + evidence"},
+ {s:"Some people argue that climate alone was to blame; however, mammoths had survived earlier warm periods before people arrived.", a:"Counterclaim + rebuttal"},
+ {s:"In the end, hungry herds plus skilled hunters were too much for the mammoths, and their story is a warning as our climate changes today.", a:"Conclusion"}
+];
+var labelScore=0, labelChecked=false;
+function buildLabels(){
+  var box=document.getElementById("labelRows");
+  LABEL_ITEMS.forEach(function(it,i){
+    var d=document.createElement("div"); d.className="row"; d.id="lr"+i;
+    var sel='<select id="ls'+i+'" aria-label="Job of sentence '+(i+1)+'"><option value="">- choose -</option>';
+    LABELS.forEach(function(l){sel+='<option>'+l+'</option>';});
+    sel+='</select>';
+    d.innerHTML='<strong>'+(i+1)+'.</strong> '+it.s+'<br>'+sel+' <span id="lm'+i+'"></span>';
+    box.appendChild(d);
+  });
+}
+function checkLabels(){
+  var sc=0;
+  LABEL_ITEMS.forEach(function(it,i){
+    var ok=document.getElementById("ls"+i).value===it.a; if(ok)sc++;
+    document.getElementById("lr"+i).className="row "+(ok?"right":"wrong");
+    document.getElementById("lm"+i).textContent=ok?"✅":"❌";
+  });
+  labelScore=sc; labelChecked=true;
+  var fb=document.getElementById("labelFb");
+  if(sc===LABEL_ITEMS.length){fb.className="fb good";fb.textContent="🌟 "+sc+" / "+LABEL_ITEMS.length+". "+pick(PRAISE)+" You know exactly how an argument essay is built!";}
+  else{fb.className="fb bad";fb.textContent=sc+" / "+LABEL_ITEMS.length+". Hint: a grabby opener with \"I believe\" = hook + claim; facts that set the scene = background; \"First\" = reason 1; \"Second\" = reason 2; \"Some people argue… however\" = counterclaim + rebuttal; \"In the end\" = conclusion. Fix the ❌ ones and check again.";}
+  updateScore();
+}
+
+var GMC=[
+ {q:"Which sentence uses <strong>commas around an appositive</strong> correctly?",
+  o:["Nun cho ga a baby woolly mammoth, was found in Yukon.","Nun cho ga, a baby woolly mammoth, was found in Yukon.","Nun cho ga, a baby woolly mammoth was found, in Yukon.","Nun cho ga a baby, woolly mammoth was found in Yukon."],
+  a:1,e:"<em>a baby woolly mammoth</em> is an appositive: an extra phrase that renames the noun. Put a comma on <em>both</em> sides of it."},
+ {q:"Which sentence uses <strong>commas in a series</strong> correctly?",
+  o:["Mammoths, mastodons, and giant ground sloths lived during the Ice Age.","Mammoths mastodons, and giant ground sloths, lived during the Ice Age.","Mammoths, mastodons and, giant ground sloths lived during the Ice Age.","Mammoths mastodons and giant, ground sloths lived during the Ice Age."],
+  a:0,e:"Separate the items in a list with commas: <em>mammoths, mastodons, and giant ground sloths</em>. Don't put a comma between the subject and its verb."},
+ {q:"Which sentence keeps <strong>subject–verb agreement</strong>?",
+  o:["Each of the mammoths have a thick coat of fur.","Each of the mammoths are covered in fur.","Each of the mammoths has a thick coat of fur.","Each of the mammoths having a thick coat of fur."],
+  a:2,e:"The subject is <em>Each</em> (one at a time), not <em>mammoths</em>, so it takes the singular verb <em>has</em>."},
+ {q:"Which sentence uses <strong>affect / effect</strong> correctly?",
+  o:["The warming climate had a huge affect on the grasslands.","The warming climate effected the grasslands.","Hunting may have effected the herds.","The warming climate had a huge effect on the grasslands, and hunting may also have affected the herds."],
+  a:3,e:"<em>Affect</em> is usually a verb (to change something). <em>Effect</em> is usually a noun (the result)."},
+ {q:"Which sentence uses <strong>than / then</strong> correctly?",
+  o:["A mammoth was taller than a mastodon, and then the ice melted.","A mammoth was taller then a mastodon, and than the ice melted.","A mammoth was taller then a mastodon, and then the ice melted.","A mammoth was taller than a mastodon, and than the ice melted."],
+  a:0,e:"Use <em>than</em> to compare (taller than). Use <em>then</em> for time (and then)."},
+ {q:"Which sentence uses <strong>comparatives and superlatives</strong> correctly?",
+  o:["The mastodon was more bigger than the sloth, but the mammoth was the most biggest.","The mastodon was bigger than the sloth, but the mammoth was the biggest of all.","The mastodon was biggest than the sloth, but the mammoth was the bigger of all.","The mastodon was more big than the sloth, but the mammoth was the bigger of all."],
+  a:1,e:"Compare two things with <em>-er</em> (bigger than). Compare three or more with <em>-est</em> (the biggest). Never use <em>more</em> or <em>most</em> together with <em>-er</em> or <em>-est</em>."},
+ {q:"Which sentence uses <strong>Canadian spelling</strong> correctly?",
+  o:["The gray skeleton in the center of the museum is four meters tall.","The grey skeleton in the center of the museum is four metres tall.","The grey skeleton in the centre of the museum is four metres tall.","The gray skeleton in the centre of the museum is four meters tall."],
+  a:2,e:"In Canadian English, prefer <em>grey</em>, <em>centre</em>, and <em>metres</em>."}
+];
+var gmcState=GMC.map(function(){return{answered:false,firstRight:false,done:false};});
+function buildGMC(){
+  var box=document.getElementById("gmc");
+  GMC.forEach(function(it,i){
+    var d=document.createElement("div"); d.className="box q"; d.id="g"+i;
+    var h='<div><strong>'+(i+1)+'.</strong> '+it.q+'</div>';
+    it.o.forEach(function(o,j){h+='<button type="button" class="opt" data-i="'+i+'" data-j="'+j+'">'+String.fromCharCode(65+j)+'. '+o+'</button>';});
+    h+='<div class="fb" id="gfb'+i+'"></div>';
+    d.innerHTML=h; box.appendChild(d);
+  });
+  box.addEventListener("click",function(e){
+    var b=e.target.closest?e.target.closest(".opt"):e.target; if(!b||!b.classList.contains("opt"))return;
+    var i=+b.getAttribute("data-i"), j=+b.getAttribute("data-j"), st=gmcState[i], it=GMC[i];
+    if(st.done)return;
+    var ok=j===it.a; if(!st.answered){st.answered=true;st.firstRight=ok;}
+    var fb=document.getElementById("gfb"+i);
+    if(ok){st.done=true;b.classList.add("sel-right");document.getElementById("g"+i).className="box q right";fb.className="fb good";fb.innerHTML="✅ "+pick(PRAISE)+' <span class="explain">'+it.e+'</span>';}
+    else{b.classList.add("sel-wrong");document.getElementById("g"+i).className="box q wrong";fb.className="fb bad";fb.textContent="❌ Not quite, Ace. Look closely and try again.";}
+    updateScore();
+  });
+}
+
+var GFIX=[
+ {bad:"the woolly mammoth lived in yukon during the pleistocene.",
+  ok:["The woolly mammoth lived in Yukon during the Pleistocene.", "The woolly mammoth lived in the Yukon during the Pleistocene."],
+  hint:"Capitalize the first word, the territory (Yukon), and the name of the time period (Pleistocene)."},
+ {bad:"Scientists thinks the climate effected the mammoths food.",
+  ok:["Scientists think the climate affected the mammoths' food."],
+  hint:"Plural subject <em>Scientists</em> needs <em>think</em>. The verb meaning \"changed\" is <em>affected</em>. The food belongs to many mammoths, so use the plural possessive <em>mammoths'</em>."},
+ {bad:"Nun cho ga a baby mammoth was found in 2022 its skin was still there.",
+  ok:["Nun cho ga, a baby mammoth, was found in 2022, and its skin was still there.", "Nun cho ga, a baby mammoth, was found in 2022. Its skin was still there.", "Nun cho ga, a baby mammoth, was found in 2022; its skin was still there."],
+  hint:"Put commas around the appositive (a baby mammoth). Then fix the run-on: add \", and\", a period, or a semicolon before <em>its</em>."},
+ {bad:"The glacier was more bigger then the hole valley and it's colour was gray.",
+  ok:["The glacier was bigger than the whole valley, and its colour was grey.", "The glacier was bigger than the whole valley and its colour was grey."],
+  hint:"Fix the comparative (bigger, not more bigger), than/then, the homophone hole/whole, its/it's (ownership), and the Canadian spelling of grey."}
+];
+
+var gfixState=GFIX.map(function(){return{tries:0,correct:false,firstRight:false};});
+function norm(s){return s.replace(/[\u2018\u2019\u02BC]/g,"'").replace(/[\u201C\u201D]/g,'"').replace(/\s+/g," ").trim();}
+function checkFixAnswer(i,val){var v=norm(val);return GFIX[i].ok.some(function(a){return norm(a)===v;});}
+function buildGFix(){
+  var box=document.getElementById("gfix");
+  GFIX.forEach(function(it,i){
+    var d=document.createElement("div"); d.className="box q"; d.id="f"+i;
+    d.innerHTML='<div><strong>'+(i+1)+'.</strong> Fix: <span class="bad-sent">'+it.bad+'</span></div>'+
+     '<input class="fix" type="text" id="fi'+i+'" autocomplete="off" spellcheck="false" aria-label="Corrected sentence '+(i+1)+'">'+
+     '<div class="btnrow"><button type="button" class="go" data-act="check" data-i="'+i+'">Check</button><button type="button" class="hint" data-act="hint" data-i="'+i+'">Hint 💡</button><button type="button" class="grey" data-act="show" data-i="'+i+'" style="display:none">Show answer</button></div>'+
+     '<div class="fb" id="ffb'+i+'"></div>';
+    box.appendChild(d);
+  });
+  box.addEventListener("click",function(e){
+    var b=e.target; if(b.tagName!=="BUTTON")return;
+    var i=+b.getAttribute("data-i"), act=b.getAttribute("data-act"), fb=document.getElementById("ffb"+i);
+    if(act==="hint"){fb.className="fb";fb.style.color="#5d4037";fb.textContent="💡 "+GFIX[i].hint;return;}
+    fb.style.color="";
+    if(act==="show"){fb.className="fb";fb.innerHTML='Answer: <em>'+GFIX[i].ok[0]+'</em>'+(GFIX[i].ok.length>1?' (other correct versions are accepted too)':'');return;}
+    fixCheck(i);
+  });
+  box.addEventListener("keydown",function(e){if(e.key==="Enter"&&e.target.classList.contains("fix"))fixCheck(+e.target.id.slice(2));});
+}
+function fixCheck(i){
+  var val=document.getElementById("fi"+i).value, fb=document.getElementById("ffb"+i), st=gfixState[i];
+  fb.style.color="";
+  if(!val.trim()){fb.className="fb bad";fb.textContent="Type the corrected sentence first, Ace!";return;}
+  st.tries++;
+  if(checkFixAnswer(i,val)){ if(st.tries===1)st.firstRight=true; st.correct=true; document.getElementById("f"+i).className="box q right"; fb.className="fb good"; fb.textContent="✅ "+pick(PRAISE); }
+  else { st.correct=false; document.getElementById("f"+i).className="box q wrong"; fb.className="fb bad"; fb.textContent="❌ Not quite. Check every capital letter, apostrophe, comma, and spelling. Try again!"; if(st.tries>=2)document.querySelector('#f'+i+' [data-act=show]').style.display="inline-block"; }
+  updateScore();
+}
+
+function updateScore(){
+  var g=0; gmcState.forEach(function(s){if(s.firstRight)g++;});
+  var f=0; gfixState.forEach(function(s){if(s.correct)f++;});
+  var total=LABEL_ITEMS.length+GMC.length+GFIX.length, got=labelScore+g+f;
+  document.getElementById("scoreText").textContent="Score: "+got+" / "+total+"  (labels "+(labelChecked?labelScore:"-")+"/"+LABEL_ITEMS.length+" · grammar A "+g+"/"+GMC.length+" · grammar B "+f+"/"+GFIX.length+")";
+}
+
+var W5=["who","place","facts","senses","feel","closing"];
+function w5Save(){try{localStorage.setItem(KEY+"-5w",JSON.stringify(W5.map(function(k){return document.getElementById("w5"+k).value;})));}catch(e){}}
+function w5Restore(){try{var d=JSON.parse(localStorage.getItem(KEY+"-5w")||"null");if(d)d.forEach(function(x,i){document.getElementById("w5"+W5[i]).value=x;});}catch(e){}}
+function w5Summary(){return W5.map(function(k){return k.charAt(0).toUpperCase()+k.slice(1)+": "+document.getElementById("w5"+k).value;}).join("\n");}
+function addTemplate(){
+  var t=document.getElementById("essay");
+  var tpl="Hook + claim: \n\nBackground: \n\nReason 1 + evidence: \n\nReason 2 + evidence: \n\nCounterclaim + rebuttal: \n\nConclusion: ";
+  if(t.value.trim()&&!confirm("Add the headings below what you've already written?"))return;
+  t.value=(t.value.trim()?t.value.replace(/\s+$/,"")+"\n\n":"")+tpl; updateCount(); t.focus();
+}
+var KEY="ace-writing-2026-10-16";
+function countWords(t){var m=t.trim().match(/[A-Za-zÀ-ÿ0-9]+(?:['’\-][A-Za-zÀ-ÿ0-9]+)*/g);return m?m.length:0;}
+function countSentences(t){var m=t.match(/[^.!?]*[A-Za-z0-9][^.!?]*[.!?]+/g);return m?m.length:0;}
+function currentPrompt(){var r=document.querySelector('input[name=prompt]:checked');return r?r.value:"";}
+function updateCount(){
+  var t=document.getElementById("essay").value, w=countWords(t), s=countSentences(t);
+  document.getElementById("wc").textContent=w+(w===1?" word":" words");
+  document.getElementById("sc").textContent=s+(s===1?" sentence":" sentences");
+  var bar=document.getElementById("meterBar"); bar.style.width=Math.min(100,w/300*100)+"%";
+  var msg=document.getElementById("wcMsg");
+  if(w<200){bar.style.background="#ffb300";msg.className="fb";msg.textContent=w===0?"Aim for 200 to 300 words.":"Keep going, Ace! "+(200-w)+" more words to reach the goal.";}
+  else if(w<=300){bar.style.background="#43a047";msg.className="fb good";msg.textContent="🎯 You're in the target zone! Nice work, Ace!";}
+  else{bar.style.background="#1e88e5";msg.className="fb";msg.textContent="Wow, that's a lot of writing! Strong argument essays stay focused. Could any sentences be cut?";}
+  try{localStorage.setItem(KEY,JSON.stringify({text:t,prompt:currentPrompt(),checks:checkStates()}));}catch(e){document.getElementById("saveNote").textContent="(This browser can't auto-save here, so use the Download button before closing!)";}
+}
+function checkStates(){return Array.prototype.map.call(document.querySelectorAll("#checklist input"),function(c){return c.checked;});}
+function checklistText(){
+  return Array.prototype.map.call(document.querySelectorAll("#checklist label"),function(l){return (l.querySelector("input").checked?"[x] ":"[ ] ")+l.textContent.trim();}).join("\n");
+}
+function buildReport(){
+  var t=document.getElementById("essay").value;
+  return "Writing Week 19: "+NAME+"\nDate: "+new Date().toLocaleString("en-CA")+"\nPrompt: "+currentPrompt()+
+    "\nWords: "+countWords(t)+"   Sentences: "+countSentences(t)+"\nPlanning notes:\n"+w5Summary()+
+    "\n\n----- "+NAME+"'s writing -----\n\n"+t+"\n\n----- Self-check -----\n"+checklistText()+
+    "\n\n----- Parent feedback -----\n\n\n";
+}
+function download(){
+  var t=document.getElementById("essay").value;
+  if(!t.trim()){document.getElementById("doneMsg").className="fb bad";document.getElementById("doneMsg").textContent="Write something first, Ace!";return;}
+  var blob=new Blob([buildReport().replace(/\n/g,"\r\n")],{type:"text/plain;charset=utf-8"});
+  var a=document.createElement("a"); a.href=URL.createObjectURL(blob); a.download=NAME+"-writing-2026-10-16"+".txt";
+  document.body.appendChild(a); a.click();
+  setTimeout(function(){URL.revokeObjectURL(a.href);a.remove();},1000);
+  var dm=document.getElementById("doneMsg"); dm.className="fb good"; dm.textContent="📄 Saved! Look in your Downloads folder and show Dad. Great job finishing, Ace!";
+}
+function esc(s){return s.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");}
+function printIt(){
+  var t=document.getElementById("essay").value;
+  if(!t.trim()){document.getElementById("doneMsg").className="fb bad";document.getElementById("doneMsg").textContent="Write something first, Ace!";return;}
+  document.getElementById("printArea").innerHTML="<h1>Writing Week 19: "+NAME+"</h1><div class='meta'>"+esc(new Date().toLocaleString("en-CA"))+"<br><strong>Prompt:</strong> "+esc(currentPrompt())+"<br>Words: "+countWords(t)+" · Sentences: "+countSentences(t)+"</div><div class='text'>"+esc(t)+"</div><div class='lines'><strong>Self-check:</strong><br>"+esc(checklistText()).replace(/\n/g,"<br>")+"</div><div class='lines'><strong>Parent feedback:</strong><br><br><br><br></div>";
+  window.print();
+}
+function restore(){
+  try{var d=JSON.parse(localStorage.getItem(KEY)||"null"); if(!d)return;
+    document.getElementById("essay").value=d.text||"";
+    Array.prototype.forEach.call(document.querySelectorAll("input[name=prompt]"),function(r){r.checked=(r.value===d.prompt);});
+    if(!document.querySelector("input[name=prompt]:checked"))document.querySelector("input[name=prompt]").checked=true;
+    var cs=document.querySelectorAll("#checklist input"); (d.checks||[]).forEach(function(v,i){if(cs[i])cs[i].checked=v;});
+  }catch(e){}
+}
+buildLabels(); buildGMC(); buildGFix(); restore(); w5Restore(); updateCount(); updateScore();
+W5.forEach(function(k){document.getElementById("w5"+k).addEventListener("input",w5Save);});
+document.getElementById("templateBtn").addEventListener("click",addTemplate);
+document.getElementById("checkLabels").addEventListener("click",checkLabels);
+document.getElementById("essay").addEventListener("input",updateCount);
+document.getElementById("checklist").addEventListener("change",function(){updateCount(); if(checkStates().every(Boolean)){var dm=document.getElementById("doneMsg");dm.className="fb good";dm.textContent="✅ All boxes checked! Now download or print it for Dad. Awesome work, Ace!";}});
+document.getElementById("prompts").addEventListener("change",updateCount);
+document.getElementById("downloadBtn").addEventListener("click",download);
+document.getElementById("printBtn").addEventListener("click",printIt);
+document.getElementById("clearBtn").addEventListener("click",function(){ if(confirm("Erase your writing and start over?")){document.getElementById("essay").value="";Array.prototype.forEach.call(document.querySelectorAll("#checklist input"),function(c){c.checked=false;});document.getElementById("doneMsg").textContent="";updateCount();} });
+</script>
+</body>
+</html>
