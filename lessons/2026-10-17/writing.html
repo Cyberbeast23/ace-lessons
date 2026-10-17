@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Writing (Oct. 17): Persuasive Letter to a City Councillor + Grammar Clinic</title>
+<style>
+  body{font-family:"Segoe UI",Verdana,Arial,sans-serif;font-size:20px;line-height:1.6;margin:0;background:#fff8f0;color:#2c2416}
+  .wrap{max-width:880px;margin:0 auto;padding:20px 18px 80px}
+  a.home{font-size:.9em;color:#bf360c}
+  h1{color:#e65100;font-size:2em;margin:10px 0}
+  h2{color:#ef6c00;margin-top:36px;border-bottom:3px solid #ffcc80;padding-bottom:4px}
+  h3{color:#ef6c00}
+  .box{background:#fff;border-radius:16px;padding:18px 22px;margin:16px 0;box-shadow:0 3px 10px rgba(0,0,0,.07)}
+  .tipbox{background:#fff8e1;border-left:8px solid #ffb300}
+  .senses{display:grid;gap:8px;margin:10px 0;grid-template-columns:repeat(auto-fit,minmax(140px,1fr))}
+  .senses .side{border-radius:14px;padding:10px 16px;background:#fff3e0}
+  .ts{background:#ffcc80;border-radius:5px;padding:1px 3px}
+  .ev{background:#c8e6c9;border-radius:5px;padding:1px 3px}
+  .ex{background:#ffe0b2;border-radius:5px;padding:1px 3px}
+  .cs{background:#e1bee7;border-radius:5px;padding:1px 3px}
+  .legend span{display:inline-block;margin:4px 8px 4px 0;font-size:.85em}
+  .model{font-family:Georgia,"Times New Roman",serif;font-size:1.05em;line-height:1.9}
+  .row{padding:10px 6px;border-bottom:1px dashed #ddd}
+  .row.right{background:#f1f8e9} .row.wrong{background:#fff5f5}
+  select{font-size:.9em;padding:5px 8px;border-radius:8px;border:2px solid #ffb74d;font-family:inherit}
+  .q{border-left:8px solid #b0bec5}
+  .q.right{border-left-color:#43a047;background:#f1f8e9}
+  .q.wrong{border-left-color:#e53935;background:#fff5f5}
+  .opt{display:block;width:100%;text-align:left;font-size:.95em;background:#fafafa;border:2px solid #e0e0e0;border-radius:10px;padding:8px 14px;margin:8px 0;cursor:pointer;font-family:inherit}
+  .opt:hover{border-color:#ffb74d;background:#fff}
+  .opt.sel-right{background:#c8e6c9;border-color:#43a047}
+  .opt.sel-wrong{background:#ffcdd2;border-color:#e53935}
+  .fb{margin-top:6px;font-weight:bold}
+  .fb.good{color:#2e7d32} .fb.bad{color:#c62828}
+  .explain{font-weight:normal;color:#e65100}
+  .bad-sent{font-family:Consolas,"Courier New",monospace;background:#ffebee;padding:6px 10px;border-radius:8px;display:inline-block;margin:6px 0}
+  input.fix{width:100%;box-sizing:border-box;font-size:1em;padding:8px 12px;border:2px solid #ffb74d;border-radius:10px;font-family:inherit}
+  button{font-size:.95em;padding:8px 16px;border:none;border-radius:10px;cursor:pointer;font-weight:bold;font-family:inherit}
+  .go{background:#ef6c00;color:#fff} .go:hover{background:#e65100}
+  .hint{background:#ffe082;color:#5d4037}
+  .blue{background:#1e88e5;color:#fff}
+  .purple{background:#8e24aa;color:#fff}
+  .grey{background:#cfd8dc;color:#263238}
+  .btnrow{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px}
+  textarea{width:100%;box-sizing:border-box;min-height:300px;font-size:1.05em;line-height:1.7;font-family:Georgia,"Times New Roman",serif;padding:14px;border:3px solid #ffb74d;border-radius:12px}
+  textarea:focus{outline:none;border-color:#ef6c00}
+  .counter{display:flex;flex-wrap:wrap;gap:20px;align-items:center;margin:8px 0;font-weight:bold}
+  .meter{flex:1;min-width:200px;height:18px;background:#e0e0e0;border-radius:9px;overflow:hidden}
+  .meter div{height:100%;width:0;background:#ffb300;transition:width .2s}
+  .checklist label{display:block;padding:6px 4px;cursor:pointer}
+  .checklist input{transform:scale(1.4);margin-right:10px}
+  .prompts label{display:block;background:#fff3e0;border-radius:10px;padding:10px 14px;margin:8px 0;cursor:pointer}
+  .prompts input{transform:scale(1.3);margin-right:8px}
+  #scoreBox{position:sticky;bottom:0;background:#e65100;color:#fff;border-radius:16px 16px 0 0;padding:12px 20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-top:30px}
+  .w5{display:grid;gap:8px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));margin:10px 0}
+  .w5 label{display:block;font-weight:bold;color:#e65100}
+  .w5 input{width:100%;box-sizing:border-box;font-size:.95em;padding:6px 10px;border:2px solid #ffb74d;border-radius:8px;font-family:inherit}
+  #printArea{display:none}
+  @media print{
+    body{background:#fff;font-size:14pt}
+    .wrap,#scoreBox{display:none !important}
+    #printArea{display:block;font-family:Georgia,serif;line-height:1.8}
+    #printArea h1{font-size:18pt;margin:0 0 6pt}
+    #printArea .meta{font-size:11pt;color:#444}
+    #printArea .text{white-space:pre-wrap;border-top:1px solid #999;padding-top:10pt;margin-top:10pt}
+    #printArea .lines{margin-top:24pt;border-top:1px solid #999;padding-top:6pt;font-size:11pt}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+<a class="home" href="../../index.html">&larr; Back to all lessons</a>
+<h1>✍️ Writing Week 20: Persuasive Letter: Dear Councillor... 🏛️✉️</h1>
+<p>Yesterday you wrote an argument essay for any reader. Today, Ace, you'll aim your argument at <strong>one real person who has the power to say yes</strong>: a city councillor. Today is general voting day for local elections across BC, so in a few weeks newly elected councillors will start making decisions about parks, roads, crosswalks, and libraries. A <strong>persuasive letter</strong> uses everything you know about claims, reasons, evidence, and rebuttals, and adds two new skills: writing for a specific <strong>audience</strong> and using the polite, clear <strong>format</strong> of a formal letter. Your goal is to convince your councillor to take one specific action.</p>
+
+<h2>Part 1: The Lesson</h2>
+<div class="box">
+  <h3 style="margin-top:0">A persuasive letter has six parts 🧩</h3>
+  <p>Think of it like making your case to a busy, important person who reads many letters every week:</p>
+  <div class="senses">
+    <div class="side"><strong>1. Greeting + introduction:</strong> "Dear Councillor ___," then who you are and why you care</div>
+    <div class="side"><strong>2. My request (claim):</strong> one clear sentence saying exactly what you want done</div>
+    <div class="side"><strong>3. Reason 1 + evidence:</strong> your strongest reason, backed by a fact, count, or example</div>
+    <div class="side"><strong>4. Reason 2 + evidence:</strong> a second, different reason with its own evidence</div>
+    <div class="side"><strong>5. Answering a concern:</strong> "Some people may worry that… however…"</div>
+    <div class="side"><strong>6. Call to action + closing:</strong> what you want them to do and when, a thank-you, then "Sincerely," and your name</div>
+  </div>
+  <h3>Five persuader's moves</h3>
+  <ul>
+    <li><strong>Know your audience:</strong> a councillor cares about the whole community, the budget, and safety. Explain how your idea helps <em>many</em> people, not just you.</li>
+    <li><strong>Be specific:</strong> "Make the park better" is vague. "Replace the two broken swings at Riverside Park before summer" is a request someone can vote on.</li>
+    <li><strong>Bring evidence:</strong> counts, measurements, a class survey, or a short true story. Numbers are hard to argue with!</li>
+    <li><strong>Answer the "but…":</strong> think about what might stop the councillor from saying yes (cost, time, other needs) and answer it respectfully.</li>
+    <li><strong>Stay polite and formal:</strong> no slang, no exclamation-mark storms, no insults. Respect makes readers want to help you.</li>
+  </ul>
+  <p><strong>Grown-up words:</strong> persuasive writers use three kinds of appeals, named by the ancient Greek thinker Aristotle: <strong>logos</strong> (logic: facts and numbers), <strong>pathos</strong> (emotion: a story that makes the reader care), and <strong>ethos</strong> (trust: showing you are informed, fair, and respectful). The best letters use all three.</p>
+</div>
+
+<div class="box">
+  <h3 style="margin-top:0">Model Persuasive Letter (short version)</h3>
+  <p class="legend"><span class="ts">Greeting + introduction + request</span><span class="ev">Reasons + evidence</span><span class="ex">Answering a concern</span><span class="cs">Call to action + closing</span></p>
+  <p class="model">
+    <span class="ts">October 17, 2026<br>Dear Councillor Patel,<br>My name is Ace, and I am a Grade 5 student who walks to school along Maple Street every morning. I am writing to ask council to install a crosswalk with flashing lights at the corner of Maple Street and Fourth Avenue.</span><br>
+    <span class="ev">First, the corner is dangerous. Last week my class counted 214 cars passing in just 30 minutes before the morning bell, and many drivers did not slow down. Second, a safe crossing would help the whole neighbourhood. In our class survey, 18 of 26 students said they would walk or bike to school if the corner were safer, which would mean less traffic and cleaner air around the school.</span><br>
+    <span class="ex">Some people may worry that flashing lights cost too much. However, the cost is small compared with keeping children safe, and our parent group has offered to help raise money.</span><br>
+    <span class="cs">Please vote for a Maple Street crosswalk when council plans next year's budget. Thank you for taking the time to listen to young people in our community.<br>Sincerely,<br>Ace</span>
+  </p>
+  <p><strong>Notice:</strong> the model names the exact place and action, uses logos (a car count and a survey), a touch of pathos (children's safety), and ethos (a polite tone and a fair answer to the cost concern), and ends with a clear call to action tied to a real decision: the budget.</p>
+</div>
+
+<h2>Part 2: Name That Letter Part</h2>
+<div class="box">
+  <p>Each line comes from a student's persuasive letter to a city councillor asking for a safer crosswalk. Choose which <strong>part of the letter</strong> it belongs in.</p>
+  <div id="labelRows"></div>
+  <div class="btnrow"><button type="button" class="go" id="checkLabels">Check my answers</button></div>
+  <div class="fb" id="labelFb"></div>
+</div>
+
+<h2>Part 3: Grammar Clinic 🏛️</h2>
+<div class="box tipbox">A careful letter writer checks every sentence before mailing it! <strong>Section A:</strong> pick the correct sentence. <strong>Section B:</strong> type the sentence again with <em>all</em> mistakes fixed. We use <strong>Canadian spelling</strong> (neighbour, centre, colour, practise as a verb). Today, watch <strong>letter greetings</strong>, <strong>capital letters for titles and government names</strong> (Mayor Chen, the House of Commons), <strong>collective nouns</strong> (the council <em>is</em>), <strong>their / there / they're</strong>, <strong>affect / effect</strong>, <strong>commas before "but" and in a series</strong>, <strong>plurals</strong>, and a <strong>formal tone</strong>.</div>
+<h3>Section A: Pick the correct sentence</h3>
+<div id="gmc"></div>
+<h3>Section B: Fix the sentence</h3>
+<p>Retype the whole sentence correctly, with capital letters and punctuation. Each one has <strong>at least two</strong> mistakes.</p>
+<div id="gfix"></div>
+
+<h2>Part 4: Your Turn to Write</h2>
+<div class="box">
+  <h3 style="margin-top:0">Step 1: Choose your letter</h3>
+  <div class="prompts" id="prompts">
+    <label><input type="radio" name="prompt" value="Letter A: Dear Councillor, please make this change in our community" checked> 🏙️ <strong>Letter A:</strong> Write to a newly elected city councillor asking for <em>one</em> specific change in your community (a crosswalk, a bike lane, a park repair, longer library hours, more trees, a splash pad...).</label>
+    <label><input type="radio" name="prompt" value="Letter B: Should the voting age be lowered to 16?"> 🗳️ <strong>Letter B:</strong> Some people think Canadians should be allowed to vote at 16 instead of 18. Write to your Member of Parliament (MP) arguing yes or no, and answer the other side's best concern.</label>
+    <label><input type="radio" name="prompt" value="Letter C: Vote for me! A student council campaign letter"> 📣 <strong>Letter C:</strong> You are running for student council president. Write a campaign letter (or speech) to your classmates: make one big promise, give two reasons it will help the school, and answer a classmate's doubt.</label>
+  </div>
+  <p><strong>Plan your letter:</strong> jot a few words for each box. (These notes save with your writing.)</p>
+  <div class="w5" id="w5">
+    <div><label for="w5who">Who I'm writing to + who I am</label><input id="w5who" type="text" autocomplete="off"></div>
+    <div><label for="w5place">My request (one clear, specific sentence)</label><input id="w5place" type="text" autocomplete="off"></div>
+    <div><label for="w5facts">Reason 1 + evidence</label><input id="w5facts" type="text" autocomplete="off"></div>
+    <div><label for="w5senses">Reason 2 + evidence</label><input id="w5senses" type="text" autocomplete="off"></div>
+    <div><label for="w5feel">A concern they might have + my answer</label><input id="w5feel" type="text" autocomplete="off"></div>
+    <div><label for="w5closing">Call to action (what and when) + thank-you</label><input id="w5closing" type="text" autocomplete="off"></div>
+  </div>
+
+  <h3>Step 2: Write your persuasive letter</h3>
+  <p><strong>Goal:</strong> a letter of <strong>200 to 300 words</strong> with a <strong>date</strong>, a <strong>greeting</strong>, a short <strong>introduction</strong>, one clear <strong>request</strong>, <strong>two different reasons</strong> each backed by <strong>evidence</strong>, an answer to a <strong>concern</strong>, a <strong>call to action</strong>, and a formal <strong>closing</strong> ("Sincerely," then your first name). Use at least one fact from today's reading (the three levels of government, how councils listen to residents, how a bill becomes law, or rights and responsibilities).</p>
+  <p><button type="button" class="hint" id="templateBtn">📋 Add the letter headings for me</button></p>
+  <label for="essay"><strong>Write here, Ace:</strong></label>
+  <textarea id="essay" placeholder="Dear Councillor ..."></textarea>
+  <div class="counter">
+    <span id="wc">0 words</span>
+    <span id="sc">0 sentences</span>
+    <div class="meter" aria-hidden="true"><div id="meterBar"></div></div>
+  </div>
+  <div class="fb" id="wcMsg">Aim for 200 to 300 words.</div>
+  <p style="font-size:.8em;color:#607d8b" id="saveNote">Your writing is saved automatically in this browser as you type.</p>
+
+  <h3>Self-check before you finish ✅</h3>
+  <div class="checklist" id="checklist">
+    <label><input type="checkbox"> I wrote the <strong>date</strong>, a correct <strong>greeting</strong> (Dear ___,) and introduced myself.</label>
+    <label><input type="checkbox"> My <strong>request</strong> is one clear, specific sentence that someone could vote yes or no on.</label>
+    <label><input type="checkbox"> I gave <strong>two different reasons</strong>, each backed by <strong>evidence</strong> (a count, a fact, a survey, or an example).</label>
+    <label><input type="checkbox"> I answered a <strong>concern</strong> my reader might have, politely and with evidence.</label>
+    <label><input type="checkbox"> I ended with a <strong>call to action</strong>, a thank-you, and a formal closing (Sincerely, Ace).</label>
+    <label><input type="checkbox"> I used <strong>logos</strong> (facts), a little <strong>pathos</strong> (why people should care), and a respectful tone (<strong>ethos</strong>).</label>
+    <label><input type="checkbox"> I checked <strong>capital letters</strong> for titles and names, <strong>their / there / they're</strong>, <strong>affect / effect</strong>, commas, and <strong>Canadian spelling</strong> (neighbour, centre, colour).</label>
+  </div>
+  <div class="btnrow">
+    <button type="button" class="blue" id="downloadBtn">⬇️ Download my writing (for Dad)</button>
+    <button type="button" class="purple" id="printBtn">🖨️ Print my writing</button>
+    <button type="button" class="grey" id="clearBtn">Start over</button>
+  </div>
+  <div class="fb" id="doneMsg"></div>
+</div>
+
+<div id="scoreBox"><span id="scoreText"></span><span>Keep going, future councillor Ace! 🏛️</span></div>
+</div>
+
+<div id="printArea"></div>
+
+<script>
+var NAME="Ace";
+var PRAISE=["Nice work, Ace!","Correct! Great editing eye!","Yes! Ace fixed it!","Excellent, future councillor Ace!","Motion passed! 🗳️"];
+function pick(a){return a[Math.floor(Math.random()*a.length)];}
+
+var LABELS=["Greeting + introduction","My request (claim)","Reason 1 + evidence","Reason 2 + evidence","Answering a concern","Call to action + closing"];
+var LABEL_ITEMS=[
+ {s:"Dear Councillor Patel, my name is Ace, I am in Grade 5, and I walk to school along Maple Street every morning.", a:"Greeting + introduction"},
+ {s:"I am writing to ask council to install a crosswalk with flashing lights at Maple Street and Fourth Avenue.", a:"My request (claim)"},
+ {s:"First, the corner is dangerous: our class counted 214 cars passing in just 30 minutes before the morning bell.", a:"Reason 1 + evidence"},
+ {s:"Second, 18 of 26 students in our survey said they would walk or bike if the corner were safe, which means less traffic and cleaner air.", a:"Reason 2 + evidence"},
+ {s:"Some people may worry that flashing lights cost too much; however, a parent group has offered to help raise the money.", a:"Answering a concern"},
+ {s:"Please vote for the crosswalk when council plans next year's budget. Thank you for listening. Sincerely, Ace", a:"Call to action + closing"}
+];
+var labelScore=0, labelChecked=false;
+function buildLabels(){
+  var box=document.getElementById("labelRows");
+  LABEL_ITEMS.forEach(function(it,i){
+    var d=document.createElement("div"); d.className="row"; d.id="lr"+i;
+    var sel='<select id="ls'+i+'" aria-label="Job of sentence '+(i+1)+'"><option value="">- choose -</option>';
+    LABELS.forEach(function(l){sel+='<option>'+l+'</option>';});
+    sel+='</select>';
+    d.innerHTML='<strong>'+(i+1)+'.</strong> '+it.s+'<br>'+sel+' <span id="lm'+i+'"></span>';
+    box.appendChild(d);
+  });
+}
+function checkLabels(){
+  var sc=0;
+  LABEL_ITEMS.forEach(function(it,i){
+    var ok=document.getElementById("ls"+i).value===it.a; if(ok)sc++;
+    document.getElementById("lr"+i).className="row "+(ok?"right":"wrong");
+    document.getElementById("lm"+i).textContent=ok?"✅":"❌";
+  });
+  labelScore=sc; labelChecked=true;
+  var fb=document.getElementById("labelFb");
+  if(sc===LABEL_ITEMS.length){fb.className="fb good";fb.textContent="🌟 "+sc+" / "+LABEL_ITEMS.length+". "+pick(PRAISE)+" You know exactly how a persuasive letter is built!";}
+  else{fb.className="fb bad";fb.textContent=sc+" / "+LABEL_ITEMS.length+". Hint: \"Dear… my name is\" = greeting + introduction; \"I am writing to ask\" = request; \"First\" = reason 1; \"Second\" = reason 2; \"Some people may worry… however\" = answering a concern; \"Please vote… Sincerely\" = call to action + closing. Fix the ❌ ones and check again.";}
+  updateScore();
+}
+
+var GMC=[
+ {q:"Which <strong>greeting</strong> is capitalized and punctuated correctly for a formal letter?",
+  o:["dear councillor Patel,","Dear Councillor Patel,","Dear councillor patel","Dear, Councillor Patel"],
+  a:1,e:"Capitalize <em>Dear</em>, the title, and the name, and put a comma after the greeting: <em>Dear Councillor Patel,</em>"},
+ {q:"Which sentence uses capital letters for <strong>titles</strong> correctly?",
+  o:["I met Mayor Chen at the council meeting, and the mayor listened carefully.","I met mayor Chen at the council meeting, and the Mayor listened carefully.","I met Mayor Chen at the Council Meeting, and the Mayor listened carefully.","I met mayor chen at the council meeting, and the mayor listened carefully."],
+  a:0,e:"Capitalize a title when it comes right before a name (<em>Mayor Chen</em>). When the title is used on its own with <em>the</em>, it is usually lowercase (<em>the mayor</em>)."},
+ {q:"Which sentence keeps <strong>subject–verb agreement</strong> with a collective noun?",
+  o:["The council are voting on the bike lane tonight.","The council is voting on the bike lane tonight.","The council were votes on the bike lane tonight.","The council be voting on the bike lane tonight."],
+  a:1,e:"<em>Council</em> names one group acting together, so in Canadian English it usually takes a singular verb: <em>the council is</em>."},
+ {q:"Which sentence uses <strong>their / there / they're</strong> correctly?",
+  o:["There going to put the crosswalk over their.","They're going to put the crosswalk over there, near their school.","Their going to put the crosswalk over they're, near there school.","They're going to put the crosswalk over their, near there school."],
+  a:1,e:"<em>They're</em> = they are. <em>There</em> = a place. <em>Their</em> = belonging to them."},
+ {q:"Which sentence has the best <strong>tone</strong> for a letter to a city councillor?",
+  o:["Hey, fix the park already!!!","The park is, like, totally gross.","I respectfully ask that council repair the broken swings at Riverside Park.","You never do anything about the park."],
+  a:2,e:"A formal letter is polite, specific, and calm. Respect (ethos) makes your reader more likely to say yes."},
+ {q:"Which sentence uses capital letters correctly for <strong>government names</strong>?",
+  o:["The house of commons meets in ottawa, and the Senate meets there too.","The House of Commons meets in Ottawa, and the Senate meets there too.","The House Of Commons meets in Ottawa, and the senate meets There too.","the House of Commons meets in Ottawa, and The Senate meets there too."],
+  a:1,e:"Official names are proper nouns: <em>House of Commons</em>, <em>Senate</em>, <em>Ottawa</em>. Small words like <em>of</em> stay lowercase inside a name."},
+ {q:"Which sentence uses <strong>Canadian spelling</strong> correctly?",
+  o:["My neighbors want a new community center.","My neighbours want a new community center.","My neighbours want a new community centre.","My neighbors want a new community centre."],
+  a:2,e:"In Canadian English, prefer <em>neighbours</em> and <em>centre</em>."}
+];
+var gmcState=GMC.map(function(){return{answered:false,firstRight:false,done:false};});
+function buildGMC(){
+  var box=document.getElementById("gmc");
+  GMC.forEach(function(it,i){
+    var d=document.createElement("div"); d.className="box q"; d.id="g"+i;
+    var h='<div><strong>'+(i+1)+'.</strong> '+it.q+'</div>';
+    it.o.forEach(function(o,j){h+='<button type="button" class="opt" data-i="'+i+'" data-j="'+j+'">'+String.fromCharCode(65+j)+'. '+o+'</button>';});
+    h+='<div class="fb" id="gfb'+i+'"></div>';
+    d.innerHTML=h; box.appendChild(d);
+  });
+  box.addEventListener("click",function(e){
+    var b=e.target.closest?e.target.closest(".opt"):e.target; if(!b||!b.classList.contains("opt"))return;
+    var i=+b.getAttribute("data-i"), j=+b.getAttribute("data-j"), st=gmcState[i], it=GMC[i];
+    if(st.done)return;
+    var ok=j===it.a; if(!st.answered){st.answered=true;st.firstRight=ok;}
+    var fb=document.getElementById("gfb"+i);
+    if(ok){st.done=true;b.classList.add("sel-right");document.getElementById("g"+i).className="box q right";fb.className="fb good";fb.innerHTML="✅ "+pick(PRAISE)+' <span class="explain">'+it.e+'</span>';}
+    else{b.classList.add("sel-wrong");document.getElementById("g"+i).className="box q wrong";fb.className="fb bad";fb.textContent="❌ Not quite, Ace. Look closely and try again.";}
+    updateScore();
+  });
+}
+
+var GFIX=[
+ {bad:"dear mayor lee, my name is Ace and I live in riverbend.",
+  ok:["Dear Mayor Lee, my name is Ace and I live in Riverbend.", "Dear Mayor Lee, my name is Ace, and I live in Riverbend.", "Dear Mayor Lee, My name is Ace and I live in Riverbend.", "Dear Mayor Lee, My name is Ace, and I live in Riverbend."],
+  hint:"Capitalize <em>Dear</em>, the title and name together (<em>Mayor Lee</em>), and the name of the town (<em>Riverbend</em>)."},
+ {bad:"The council have to make sure there plan is fair to everyone.",
+  ok:["The council has to make sure its plan is fair to everyone.", "The council has to make sure their plan is fair to everyone."],
+  hint:"<em>Council</em> is one group, so use <em>has</em>. <em>There</em> is a place; for ownership use <em>its</em> (or <em>their</em>)."},
+ {bad:"Kids cant vote but we can still write letters speak at meetings and join student council.",
+  ok:["Kids can't vote, but we can still write letters, speak at meetings, and join student council.", "Kids can't vote, but we can still write letters, speak at meetings and join student council."],
+  hint:"Add the apostrophe in <em>can't</em>, a comma before <em>but</em> (it joins two complete sentences), and commas between the items in the list."},
+ {bad:"the new crosswalk would effect alot of familys in our neighborhood.",
+  ok:["The new crosswalk would affect a lot of families in our neighbourhood."],
+  hint:"Capitalize the first word. The verb meaning \"change\" is <em>affect</em>. <em>A lot</em> is two words. The plural of <em>family</em> is <em>families</em>. Use the Canadian spelling of <em>neighbourhood</em>."}
+];
+
+var gfixState=GFIX.map(function(){return{tries:0,correct:false,firstRight:false};});
+function norm(s){return s.replace(/[\u2018\u2019\u02BC]/g,"'").replace(/[\u201C\u201D]/g,'"').replace(/\s+/g," ").trim();}
+function checkFixAnswer(i,val){var v=norm(val);return GFIX[i].ok.some(function(a){return norm(a)===v;});}
+function buildGFix(){
+  var box=document.getElementById("gfix");
+  GFIX.forEach(function(it,i){
+    var d=document.createElement("div"); d.className="box q"; d.id="f"+i;
+    d.innerHTML='<div><strong>'+(i+1)+'.</strong> Fix: <span class="bad-sent">'+it.bad+'</span></div>'+
+     '<input class="fix" type="text" id="fi'+i+'" autocomplete="off" spellcheck="false" aria-label="Corrected sentence '+(i+1)+'">'+
+     '<div class="btnrow"><button type="button" class="go" data-act="check" data-i="'+i+'">Check</button><button type="button" class="hint" data-act="hint" data-i="'+i+'">Hint 💡</button><button type="button" class="grey" data-act="show" data-i="'+i+'" style="display:none">Show answer</button></div>'+
+     '<div class="fb" id="ffb'+i+'"></div>';
+    box.appendChild(d);
+  });
+  box.addEventListener("click",function(e){
+    var b=e.target; if(b.tagName!=="BUTTON")return;
+    var i=+b.getAttribute("data-i"), act=b.getAttribute("data-act"), fb=document.getElementById("ffb"+i);
+    if(act==="hint"){fb.className="fb";fb.style.color="#5d4037";fb.textContent="💡 "+GFIX[i].hint;return;}
+    fb.style.color="";
+    if(act==="show"){fb.className="fb";fb.innerHTML='Answer: <em>'+GFIX[i].ok[0]+'</em>'+(GFIX[i].ok.length>1?' (other correct versions are accepted too)':'');return;}
+    fixCheck(i);
+  });
+  box.addEventListener("keydown",function(e){if(e.key==="Enter"&&e.target.classList.contains("fix"))fixCheck(+e.target.id.slice(2));});
+}
+function fixCheck(i){
+  var val=document.getElementById("fi"+i).value, fb=document.getElementById("ffb"+i), st=gfixState[i];
+  fb.style.color="";
+  if(!val.trim()){fb.className="fb bad";fb.textContent="Type the corrected sentence first, Ace!";return;}
+  st.tries++;
+  if(checkFixAnswer(i,val)){ if(st.tries===1)st.firstRight=true; st.correct=true; document.getElementById("f"+i).className="box q right"; fb.className="fb good"; fb.textContent="✅ "+pick(PRAISE); }
+  else { st.correct=false; document.getElementById("f"+i).className="box q wrong"; fb.className="fb bad"; fb.textContent="❌ Not quite. Check every capital letter, apostrophe, comma, and spelling. Try again!"; if(st.tries>=2)document.querySelector('#f'+i+' [data-act=show]').style.display="inline-block"; }
+  updateScore();
+}
+
+function updateScore(){
+  var g=0; gmcState.forEach(function(s){if(s.firstRight)g++;});
+  var f=0; gfixState.forEach(function(s){if(s.correct)f++;});
+  var total=LABEL_ITEMS.length+GMC.length+GFIX.length, got=labelScore+g+f;
+  document.getElementById("scoreText").textContent="Score: "+got+" / "+total+"  (labels "+(labelChecked?labelScore:"-")+"/"+LABEL_ITEMS.length+" · grammar A "+g+"/"+GMC.length+" · grammar B "+f+"/"+GFIX.length+")";
+}
+
+var W5=["who","place","facts","senses","feel","closing"];
+function w5Save(){try{localStorage.setItem(KEY+"-5w",JSON.stringify(W5.map(function(k){return document.getElementById("w5"+k).value;})));}catch(e){}}
+function w5Restore(){try{var d=JSON.parse(localStorage.getItem(KEY+"-5w")||"null");if(d)d.forEach(function(x,i){document.getElementById("w5"+W5[i]).value=x;});}catch(e){}}
+function w5Summary(){return W5.map(function(k){return k.charAt(0).toUpperCase()+k.slice(1)+": "+document.getElementById("w5"+k).value;}).join("\n");}
+function addTemplate(){
+  var t=document.getElementById("essay");
+  var tpl="Date: \n\nDear Councillor ___,\n\nWho I am: \n\nMy request: \n\nReason 1 + evidence: \n\nReason 2 + evidence: \n\nAnswering a concern: \n\nCall to action + thank-you: \n\nSincerely,\n"+NAME;
+  if(t.value.trim()&&!confirm("Add the headings below what you've already written?"))return;
+  t.value=(t.value.trim()?t.value.replace(/\s+$/,"")+"\n\n":"")+tpl; updateCount(); t.focus();
+}
+var KEY="ace-writing-2026-10-17";
+function countWords(t){var m=t.trim().match(/[A-Za-zÀ-ÿ0-9]+(?:['’\-][A-Za-zÀ-ÿ0-9]+)*/g);return m?m.length:0;}
+function countSentences(t){var m=t.match(/[^.!?]*[A-Za-z0-9][^.!?]*[.!?]+/g);return m?m.length:0;}
+function currentPrompt(){var r=document.querySelector('input[name=prompt]:checked');return r?r.value:"";}
+function updateCount(){
+  var t=document.getElementById("essay").value, w=countWords(t), s=countSentences(t);
+  document.getElementById("wc").textContent=w+(w===1?" word":" words");
+  document.getElementById("sc").textContent=s+(s===1?" sentence":" sentences");
+  var bar=document.getElementById("meterBar"); bar.style.width=Math.min(100,w/300*100)+"%";
+  var msg=document.getElementById("wcMsg");
+  if(w<200){bar.style.background="#ffb300";msg.className="fb";msg.textContent=w===0?"Aim for 200 to 300 words.":"Keep going, Ace! "+(200-w)+" more words to reach the goal.";}
+  else if(w<=300){bar.style.background="#43a047";msg.className="fb good";msg.textContent="🎯 You're in the target zone! Nice work, Ace!";}
+  else{bar.style.background="#1e88e5";msg.className="fb";msg.textContent="Wow, that's a lot of writing! Strong persuasive letters stay short and focused. Could any sentences be cut?";}
+  try{localStorage.setItem(KEY,JSON.stringify({text:t,prompt:currentPrompt(),checks:checkStates()}));}catch(e){document.getElementById("saveNote").textContent="(This browser can't auto-save here, so use the Download button before closing!)";}
+}
+function checkStates(){return Array.prototype.map.call(document.querySelectorAll("#checklist input"),function(c){return c.checked;});}
+function checklistText(){
+  return Array.prototype.map.call(document.querySelectorAll("#checklist label"),function(l){return (l.querySelector("input").checked?"[x] ":"[ ] ")+l.textContent.trim();}).join("\n");
+}
+function buildReport(){
+  var t=document.getElementById("essay").value;
+  return "Writing Week 20: "+NAME+"\nDate: "+new Date().toLocaleString("en-CA")+"\nPrompt: "+currentPrompt()+
+    "\nWords: "+countWords(t)+"   Sentences: "+countSentences(t)+"\nPlanning notes:\n"+w5Summary()+
+    "\n\n----- "+NAME+"'s writing -----\n\n"+t+"\n\n----- Self-check -----\n"+checklistText()+
+    "\n\n----- Parent feedback -----\n\n\n";
+}
+function download(){
+  var t=document.getElementById("essay").value;
+  if(!t.trim()){document.getElementById("doneMsg").className="fb bad";document.getElementById("doneMsg").textContent="Write something first, Ace!";return;}
+  var blob=new Blob([buildReport().replace(/\n/g,"\r\n")],{type:"text/plain;charset=utf-8"});
+  var a=document.createElement("a"); a.href=URL.createObjectURL(blob); a.download=NAME+"-writing-2026-10-17"+".txt";
+  document.body.appendChild(a); a.click();
+  setTimeout(function(){URL.revokeObjectURL(a.href);a.remove();},1000);
+  var dm=document.getElementById("doneMsg"); dm.className="fb good"; dm.textContent="📄 Saved! Look in your Downloads folder and show Dad. Great job finishing, Ace!";
+}
+function esc(s){return s.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");}
+function printIt(){
+  var t=document.getElementById("essay").value;
+  if(!t.trim()){document.getElementById("doneMsg").className="fb bad";document.getElementById("doneMsg").textContent="Write something first, Ace!";return;}
+  document.getElementById("printArea").innerHTML="<h1>Writing Week 20: "+NAME+"</h1><div class='meta'>"+esc(new Date().toLocaleString("en-CA"))+"<br><strong>Prompt:</strong> "+esc(currentPrompt())+"<br>Words: "+countWords(t)+" · Sentences: "+countSentences(t)+"</div><div class='text'>"+esc(t)+"</div><div class='lines'><strong>Self-check:</strong><br>"+esc(checklistText()).replace(/\n/g,"<br>")+"</div><div class='lines'><strong>Parent feedback:</strong><br><br><br><br></div>";
+  window.print();
+}
+function restore(){
+  try{var d=JSON.parse(localStorage.getItem(KEY)||"null"); if(!d)return;
+    document.getElementById("essay").value=d.text||"";
+    Array.prototype.forEach.call(document.querySelectorAll("input[name=prompt]"),function(r){r.checked=(r.value===d.prompt);});
+    if(!document.querySelector("input[name=prompt]:checked"))document.querySelector("input[name=prompt]").checked=true;
+    var cs=document.querySelectorAll("#checklist input"); (d.checks||[]).forEach(function(v,i){if(cs[i])cs[i].checked=v;});
+  }catch(e){}
+}
+buildLabels(); buildGMC(); buildGFix(); restore(); w5Restore(); updateCount(); updateScore();
+W5.forEach(function(k){document.getElementById("w5"+k).addEventListener("input",w5Save);});
+document.getElementById("templateBtn").addEventListener("click",addTemplate);
+document.getElementById("checkLabels").addEventListener("click",checkLabels);
+document.getElementById("essay").addEventListener("input",updateCount);
+document.getElementById("checklist").addEventListener("change",function(){updateCount(); if(checkStates().every(Boolean)){var dm=document.getElementById("doneMsg");dm.className="fb good";dm.textContent="✅ All boxes checked! Now download or print it for Dad. Awesome work, Ace!";}});
+document.getElementById("prompts").addEventListener("change",updateCount);
+document.getElementById("downloadBtn").addEventListener("click",download);
+document.getElementById("printBtn").addEventListener("click",printIt);
+document.getElementById("clearBtn").addEventListener("click",function(){ if(confirm("Erase your writing and start over?")){document.getElementById("essay").value="";Array.prototype.forEach.call(document.querySelectorAll("#checklist input"),function(c){c.checked=false;});document.getElementById("doneMsg").textContent="";updateCount();} });
+</script>
+</body>
+</html>

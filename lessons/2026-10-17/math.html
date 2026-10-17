@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Math (Oct. 17): How Canada&#39;s Government Works Math Lab</title>
+<style>
+  body{font-family:"Segoe UI",Verdana,Arial,sans-serif;font-size:20px;line-height:1.6;margin:0;background:#f5f0eb;color:#2c2416}
+  .wrap{max-width:880px;margin:0 auto;padding:20px 18px 80px}
+  a.home{font-size:.9em;color:#bf360c}
+  h1{color:#e65100;font-size:2em;margin:10px 0}
+  h2{color:#ef6c00;margin-top:36px;border-bottom:3px solid #ffcc80;padding-bottom:4px}
+  .box{background:#fff;border-radius:16px;padding:18px 22px;margin:16px 0;box-shadow:0 3px 10px rgba(0,0,0,.07)}
+  .example{border-left:8px solid #ef6c00}
+  .example h3{margin:0 0 6px;color:#e65100}
+  .step{margin:4px 0 4px 10px}
+  code,.mono{font-family:Consolas,"Courier New",monospace;background:#fff3e0;padding:1px 6px;border-radius:5px}
+  .q{border-left:8px solid #90a4ae}
+  .q.right{border-left-color:#43a047;background:#f1f8e9}
+  .q.wrong{border-left-color:#e53935;background:#fff5f5}
+  .qnum{font-weight:bold;color:#e65100}
+  .row{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:10px}
+  input[type=text]{font-size:1.05em;padding:8px 12px;border:2px solid #ffcc80;border-radius:10px;width:190px}
+  input[type=text]:focus{outline:none;border-color:#ef6c00;box-shadow:0 0 0 3px #ffe0b2}
+  button{font-size:.95em;padding:8px 16px;border:none;border-radius:10px;cursor:pointer;font-weight:bold}
+  .check{background:#ef6c00;color:#fff} .check:hover{background:#e65100}
+  .hint{background:#ffe082;color:#5d4037} .hint:hover{background:#ffd54f}
+  .sol{background:#ce93d8;color:#311b92}
+  .unit{color:#546e7a}
+  .fb{margin-top:8px;font-weight:bold;min-height:1em}
+  .fb.good{color:#2e7d32} .fb.bad{color:#c62828}
+  .hints{margin-top:8px;color:#e65100;background:#fff3e0;border-radius:10px;padding:0 12px}
+  .hints p{margin:6px 0;padding:6px 0}
+  .solution{margin-top:8px;background:#f3e5f5;border-radius:10px;padding:8px 12px;display:none}
+  #scoreBox{position:sticky;bottom:0;background:#e65100;color:#fff;border-radius:16px 16px 0 0;padding:12px 20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-top:30px}
+  #scoreBox button{background:#ffca28;color:#3e2723}
+  #final{display:none;font-size:1.15em;text-align:center;border:4px solid #43a047}
+  .tipbox{background:#fff8e1;border-left:8px solid #ffb300}
+</style>
+</head>
+<body>
+<div class="wrap">
+<a class="home" href="../../index.html">&larr; Back to all lessons</a>
+<h1>🗳️ Math Week 20: How Canada's Government Works Lab</h1>
+<p>Ace, Canada has three main levels of government: the <strong>federal</strong> government in Ottawa (Parliament), the <strong>provincial</strong> government in Victoria (the Legislative Assembly of BC), and your <strong>municipal</strong> government (a city or town council led by a mayor). Every one of them runs on numbers: votes are counted, seats are added up, majorities are calculated, and budgets worth millions of dollars are shared out. Today you'll think like an election officer and a town council treasurer with <strong>percentages and vote shares, voter turnout, majority and two-thirds thresholds, ratios, mean and median, budgets, percent increase, tax rates, big-number division, and reading a bar graph</strong>.</p>
+
+<h2>Part 1: Learn the Moves</h2>
+
+<div class="box tipbox">
+  <strong>The 4-Step Problem Solver (your election officer's checklist):</strong>
+  <ol>
+    <li><strong>Read</strong>: What is the question actually asking? Underline the numbers and units.</li>
+    <li><strong>Plan</strong>: Which operations do I need, and in what order?</li>
+    <li><strong>Solve</strong>: Do one step at a time and write each step down.</li>
+    <li><strong>Check</strong>: Is my answer reasonable? Did I answer the question that was asked?</li>
+  </ol>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 1: Vote share as a percent</h3>
+  <p class="step">Percent = part ÷ whole × 100.</p>
+  <p class="step">In a class election, 30 students vote and Sam gets 12 votes: 12 ÷ 30 = 0.4 = <strong>40%</strong> of the vote.</p>
+  <p class="step"><strong>Voter turnout</strong> is the percent of people who were allowed to vote that actually did. If 8000 people could vote and 5000 did: 5000 ÷ 8000 = 0.625 = <strong>62.5%</strong>.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 2: What counts as a majority?</h3>
+  <p class="step">A <strong>majority</strong> means <em>more than half</em>. Exactly half is a tie, not a majority!</p>
+  <p class="step">With <strong>9</strong> council members: half is 4.5, so a majority is the next whole number, <strong>5</strong>. With <strong>10</strong> members: half is 5, so a majority is <strong>6</strong>.</p>
+  <p class="step">Some big decisions need a <strong>two-thirds</strong> vote. With 12 members: 2/3 × 12 = <strong>8</strong> yes votes are needed. If 2/3 is not a whole number, round <em>up</em>.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 3: Ratios</h3>
+  <p class="step">If council votes 6 in favour and 3 against, the ratio for : against is 6 : 3, which simplifies to <strong>2 : 1</strong> (divide both by 3).</p>
+  <p class="step">A ratio of 2 : 1 means 2 out of every 3 votes are "for." In a group of 30 voting the same way: 2/3 × 30 = <strong>20</strong> for and 10 against.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 4: Mean and median</h3>
+  <p class="step">The <strong>mean</strong> is the total ÷ how many. Mean of 40, 50, 60, 70 = 220 ÷ 4 = <strong>55</strong>.</p>
+  <p class="step">The <strong>median</strong> is the middle value once the numbers are <em>sorted</em>. With an even count, it is halfway between the two middle numbers: for 3, 8, 10, 15 the median is (8 + 10) ÷ 2 = <strong>9</strong>.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 5: Budgets and percent change</h3>
+  <p class="step">A town spends 20% of a $50 000 000 budget on roads: 0.20 × 50 000 000 = <strong>$10 000 000</strong>.</p>
+  <p class="step"><strong>Percent increase</strong> = (new − old) ÷ old × 100. Going from 400 votes to 500 votes: 100 ÷ 400 = 0.25 = <strong>25% more</strong>.</p>
+  <p class="step">A <strong>tax rate</strong> "per $1000" means: divide the value by 1000, then multiply by the rate. $200 000 at $4 per $1000: 200 × 4 = <strong>$800</strong>.</p>
+</div>
+
+<h2>Part 2: The Challenge (20 problems)</h2>
+<p>Type your answer and press <strong>Check</strong> (or Enter). Fractions like <span class="mono">3/4</span>, mixed numbers like <span class="mono">1 3/4</span>, or decimals like <span class="mono">1.75</span> are fine. Don't type the units, $ signs, or % signs, and you may use spaces or commas in big numbers (1 000 000). Stuck? Press <strong>Hint</strong>. After 2 tries, you can see a full solution.</p>
+
+<div id="questions"></div>
+<div class="box" id="final"></div>
+<div id="scoreBox">
+  <span id="scoreText">Score: 0 / 20 correct</span>
+  <button id="finishBtn" type="button">I'm done! Show my final score</button>
+</div>
+</div>
+
+<script>
+var NAME = "Ace";
+var GRAPH = '<div style="margin:10px 0"><svg viewBox="0 70 680 290" width="100%" style="max-width:680px;background:#fff;border-radius:12px" role="img" aria-label="Bar graph of votes for four mayor candidates: Ahmed 4200, Bains 3600, Chen 1800, Dubois 2400"><line x1="70" y1="300.0" x2="620" y2="300.0" stroke="#e0e0e0"/><text x="62" y="304.0" text-anchor="end" font-size="12" fill="#455a64">0</text><line x1="70" y1="258.0" x2="620" y2="258.0" stroke="#e0e0e0"/><text x="62" y="262.0" text-anchor="end" font-size="12" fill="#455a64">1 000</text><line x1="70" y1="216.0" x2="620" y2="216.0" stroke="#e0e0e0"/><text x="62" y="220.0" text-anchor="end" font-size="12" fill="#455a64">2 000</text><line x1="70" y1="174.0" x2="620" y2="174.0" stroke="#e0e0e0"/><text x="62" y="178.0" text-anchor="end" font-size="12" fill="#455a64">3 000</text><line x1="70" y1="132.0" x2="620" y2="132.0" stroke="#e0e0e0"/><text x="62" y="136.0" text-anchor="end" font-size="12" fill="#455a64">4 000</text><line x1="70" y1="90.0" x2="620" y2="90.0" stroke="#e0e0e0"/><text x="62" y="94.0" text-anchor="end" font-size="12" fill="#455a64">5 000</text><line x1="70" y1="300.0" x2="620" y2="300.0" stroke="#455a64" stroke-width="2"/><line x1="70" y1="300.0" x2="70" y2="90.0" stroke="#455a64" stroke-width="2"/><rect class="bar" x="97.5" y="123.6" width="82.5" height="176.4" fill="#c62828" rx="4"/><text x="138.8" y="115.6" text-anchor="middle" font-size="13" font-weight="bold" fill="#263238">4 200</text><text x="138.8" y="319.0" text-anchor="middle" font-size="13" font-weight="bold" fill="#263238">Ahmed</text><rect class="bar" x="235.0" y="148.8" width="82.5" height="151.2" fill="#1565c0" rx="4"/><text x="276.2" y="140.8" text-anchor="middle" font-size="13" font-weight="bold" fill="#263238">3 600</text><text x="276.2" y="319.0" text-anchor="middle" font-size="13" font-weight="bold" fill="#263238">Bains</text><rect class="bar" x="372.5" y="224.4" width="82.5" height="75.6" fill="#2e7d32" rx="4"/><text x="413.8" y="216.4" text-anchor="middle" font-size="13" font-weight="bold" fill="#263238">1 800</text><text x="413.8" y="319.0" text-anchor="middle" font-size="13" font-weight="bold" fill="#263238">Chen</text><rect class="bar" x="510.0" y="199.2" width="82.5" height="100.8" fill="#6a1b9a" rx="4"/><text x="551.2" y="191.2" text-anchor="middle" font-size="13" font-weight="bold" fill="#263238">2 400</text><text x="551.2" y="319.0" text-anchor="middle" font-size="13" font-weight="bold" fill="#263238">Dubois</text><text x="345.0" y="342.0" text-anchor="middle" font-size="14" font-weight="bold" fill="#263238">Candidate for mayor</text><text x="16" y="195.0" text-anchor="middle" font-size="14" font-weight="bold" fill="#263238" transform="rotate(-90 16 195.0)">Votes</text></svg></div>';
+var TABLE = '<table style="border-collapse:collapse;margin:10px 0;font-size:.95em;background:#fff"><caption style="font-weight:bold;text-align:left;padding-bottom:4px">Riverbend Town Council: yearly budget of $60 000 000</caption><tr><th style="border:1px solid #bdbdbd;padding:4px 10px;background:#fff3e0">Service</th><th style="border:1px solid #bdbdbd;padding:4px 10px;background:#fff3e0">Share of budget</th></tr><tr><td style="border:1px solid #bdbdbd;padding:4px 10px">Police &amp; fire</td><td style="border:1px solid #bdbdbd;padding:4px 10px;text-align:right">30%</td></tr><tr><td style="border:1px solid #bdbdbd;padding:4px 10px">Water &amp; sewer</td><td style="border:1px solid #bdbdbd;padding:4px 10px;text-align:right">20%</td></tr><tr><td style="border:1px solid #bdbdbd;padding:4px 10px">Roads &amp; transit</td><td style="border:1px solid #bdbdbd;padding:4px 10px;text-align:right">25%</td></tr><tr><td style="border:1px solid #bdbdbd;padding:4px 10px">Parks &amp; recreation</td><td style="border:1px solid #bdbdbd;padding:4px 10px;text-align:right">15%</td></tr><tr><td style="border:1px solid #bdbdbd;padding:4px 10px">Libraries &amp; everything else</td><td style="border:1px solid #bdbdbd;padding:4px 10px;text-align:right">10%</td></tr></table>';
+var QUESTIONS = [
+ {t:"In Ace's class election for student council president, <strong>25</strong> students vote. Maya gets <strong>11</strong> votes, Leo gets 8, and Priya gets 6. What percent of the vote did Maya win?", a:"44", u:"%",
+  h:["Percent = part ÷ whole × 100.","11 ÷ 25 = 0.44"],
+  s:"11 ÷ 25 = 0.44 = 44%."},
+ {t:"In a town election, <strong>24 000</strong> people were allowed to vote and <strong>15 600</strong> of them actually voted. What was the <strong>voter turnout</strong> as a percent?", a:"65", u:"%",
+  h:["Turnout = people who voted ÷ people allowed to vote × 100.","15 600 ÷ 24 000 = 156 ÷ 240 = ?"],
+  s:"15 600 ÷ 24 000 = 0.65 = 65%."},
+ {t:"Canada's <strong>House of Commons</strong> has <strong>343</strong> seats, one for each Member of Parliament (MP). A party needs a <strong>majority</strong> (more than half of the seats) to form a majority government. What is the <strong>smallest</strong> number of seats that is a majority?", a:"172", u:"seats",
+  h:["Half of 343 is 171.5.","A majority must be MORE than half, so go up to the next whole number."],
+  s:"343 ÷ 2 = 171.5, so the smallest majority is 172 seats."},
+ {t:"After an election, one party won <strong>158</strong> of the 343 seats. How many <strong>more</strong> seats would it have needed for a majority?", a:"14", u:"seats",
+  h:["Use your answer from question 3: a majority is 172 seats.","172 − 158 = ?"],
+  s:"172 − 158 = 14 more seats. (With fewer than 172, it forms a <em>minority</em> government and needs support from other parties to pass laws.)"},
+ {t:"A town council voted <strong>6</strong> in favour of a new skate park and <strong>3</strong> against. Suppose a citizens' meeting of <strong>27</strong> people voted in the <strong>same ratio</strong>. How many of them voted in favour?", a:"18", u:"people",
+  h:["6 : 3 simplifies to 2 : 1, so 2 out of every 3 votes are in favour.","2/3 × 27 = ?"],
+  s:"6 : 3 = 2 : 1, so 2/3 of the votes are in favour: 2/3 × 27 = 18 people."},
+ {t:"A school's student council has <strong>15</strong> members. Changing the council's own rules needs <strong>at least two-thirds</strong> of the members to vote yes. What is the smallest number of yes votes needed?", a:"10", u:"votes",
+  h:["Find 2/3 of 15.","15 ÷ 3 = 5, and 5 × 2 = ?"],
+  s:"2/3 × 15 = 10, so at least 10 yes votes are needed."},
+ {t:"Voter turnout in five BC ridings was <strong>62%, 58%, 71%, 66%</strong>, and <strong>63%</strong>. What was the <strong>mean</strong> turnout?", a:"64", u:"%",
+  h:["Add the five percents.","62 + 58 + 71 + 66 + 63 = 320. Now divide by 5."],
+  s:"The total is 320, and 320 ÷ 5 = 64%."},
+ {t:"Six candidates ran for <strong>city councillor</strong>. Their vote totals were <strong>1240, 980, 1575, 860, 1310</strong>, and <strong>1105</strong>. What is the <strong>median</strong> number of votes?", a:"1172.5", u:"votes",
+  h:["Sort them first: 860, 980, 1105, 1240, 1310, 1575.","There are 6 numbers, so the median is halfway between the 3rd and 4th: (1105 + 1240) ÷ 2."],
+  s:"Sorted: 860, 980, 1105, 1240, 1310, 1575. Median = (1105 + 1240) ÷ 2 = 2345 ÷ 2 = 1172.5 votes."},
+ {t:TABLE+"The table shows how the Riverbend Town Council plans to spend its <strong>$60 000 000</strong> budget. How many dollars go to <strong>parks &amp; recreation</strong>?", a:"9000000", u:"dollars",
+  h:["Parks &amp; recreation get 15% of the budget. 15% = 0.15.","0.15 × 60 000 000 = ?"],
+  s:"0.15 × 60 000 000 = $9 000 000."},
+ {t:"Use the table in question 9. Citizens ask council to increase the parks &amp; recreation budget by <strong>10%</strong>. What would the new parks budget be, in <strong>millions</strong> of dollars? (Type a decimal, like 4.5.)", a:"9.9", u:"million dollars",
+  h:["The parks budget is $9 million now. 10% of 9 million is 0.9 million.","9 + 0.9 = ?"],
+  s:"10% of $9 million = $0.9 million, so the new budget is 9 + 0.9 = $9.9 million."},
+ {t:"Use the table in question 9. Riverbend has <strong>75 000</strong> residents. How many dollars of the whole $60 000 000 budget is that <strong>per resident</strong>?", a:"800", u:"dollars per person",
+  h:["Per resident means divide by the number of people.","60 000 000 ÷ 75 000 = 60 000 ÷ 75 = ?"],
+  s:"60 000 000 ÷ 75 000 = 800, so $800 per resident."},
+ {t:"Towns raise much of their money with <strong>property tax</strong>. Riverbend's tax rate is <strong>$3.20 for every $1000</strong> a home is worth. How much tax is paid on a home worth <strong>$500 000</strong>?", a:"1600", u:"dollars",
+  h:["How many thousands are in 500 000? That's 500.","500 × 3.20 = ?"],
+  s:"500 000 ÷ 1000 = 500, and 500 × $3.20 = $1600."},
+ {t:"Suppose Canada had <strong>41 160 000</strong> people shared equally among its <strong>343</strong> federal ridings (electoral districts). How many people would live in each riding?", a:"120000", u:"people",
+  h:["Divide the population by the number of ridings.","Try it: does 343 × 120 000 work out to 41 160 000?"],
+  s:"41 160 000 ÷ 343 = 120 000 people per riding (check: 343 × 120 000 = 41 160 000)."},
+ {t:"A candidate for mayor got <strong>2400</strong> votes in the last election and <strong>3000</strong> votes in this election. By what <strong>percent</strong> did her vote count increase?", a:"25", u:"%",
+  h:["Percent increase = (new − old) ÷ old × 100.","(3000 − 2400) ÷ 2400 = 600 ÷ 2400 = ?"],
+  s:"600 ÷ 2400 = 0.25 = 25% increase."},
+ {t:"In a federal election, about <strong>18 000 000</strong> votes were cast. One party won <strong>38%</strong> of them. About how many votes did that party get?", a:"6840000", u:"votes",
+  h:["38% = 0.38.","0.38 × 18 000 000 = ?"],
+  s:"0.38 × 18 000 000 = 6 840 000 votes."},
+ {t:"To become a federal law, a <strong>bill</strong> must pass three readings in the House of Commons and three in the Senate, and then get <strong>Royal Assent</strong>. One bill spent <strong>14 weeks</strong> in the House of Commons and <strong>5/7</strong> as long in the Senate. How many weeks did it spend in Parliament altogether?", a:"24", u:"weeks",
+  h:["First find 5/7 of 14: 14 ÷ 7 = 2, and 2 × 5 = 10 weeks in the Senate.","Now add the House time: 14 + 10."],
+  s:"Senate: 5/7 × 14 = 10 weeks. Total: 14 + 10 = 24 weeks."},
+ {t:"At one polling station, <strong>2160</strong> paper ballots must be counted by hand. <strong>3</strong> election workers each count <strong>6</strong> ballots per minute. How many <strong>hours</strong> will the count take?", a:"2", u:"hours",
+  h:["Together they count 3 × 6 = 18 ballots per minute.","2160 ÷ 18 = 120 minutes. How many hours is that?"],
+  s:"3 × 6 = 18 ballots per minute; 2160 ÷ 18 = 120 minutes = 2 hours."},
+ {t:GRAPH+"The bar graph shows the votes for the four candidates in a town's election for <strong>mayor</strong>. What percent of all the votes did the winner get?", a:"35", u:"%",
+  h:["First find the total: 4200 + 3600 + 1800 + 2400.","The total is 12 000. The winner (Ahmed) got 4200. 4200 ÷ 12 000 = ?"],
+  s:"Total = 12 000 votes. 4200 ÷ 12 000 = 0.35 = 35%."},
+ {t:"Use the graph in question 18. The winner did not have a <strong>majority</strong> of the votes. How many <strong>more</strong> votes would Ahmed have needed for a majority (more than half of all 12 000 votes)?", a:"1801", u:"votes",
+  h:["Half of 12 000 is 6000, but exactly half is NOT a majority.","A majority is at least 6001 votes. 6001 − 4200 = ?"],
+  s:"A majority of 12 000 is at least 6001 votes. 6001 − 4200 = 1801 more votes. (Mayors in BC win by getting the most votes, even without a majority.)"},
+ {t:"Use the graph in question 18. What <strong>fraction</strong> of all the votes went to Chen? Write it in lowest terms (like 2/7).", a:"3/20", u:"",
+  h:["Chen got 1800 of 12 000 votes: 1800/12 000.","Divide top and bottom by 600 (or simplify step by step: ÷100, then ÷6)."],
+  s:"1800/12 000 = 18/120 = 3/20 (which is 0.15, or 15%)."}
+];
+
+var PRAISE = ["Nice work, Ace!","Correct! That gets my vote! 🗳️","Yes! Election officer Ace!","Excellent, Ace. That was a tough one!","Right on target! 🎯","Brilliant thinking, Ace!","Motion passed! 🏛️"];
+var ENCOURAGE = ["Not quite. Check your steps and try again!","Close call. Try again, Ace! Maybe use a hint?","Hmm, not yet. Re-read the question carefully.","Keep going, Ace. Mistakes help your brain grow!"];
+
+function parseAnswer(str){
+  if(str===undefined||str===null) return NaN;
+  var s=String(str).trim().toLowerCase();
+  s=s.replace(/[\u2212\u2013]/g,"-");
+  s=s.replace(/(\d),(?=\d{3}(\D|$))/g,"$1");
+  s=s.replace(/[^0-9.\/\- ]/g," ").replace(/\s+/g," ").trim();
+  s=s.replace(/\s*\/\s*/g,"/");
+  var m;
+  if((m=s.match(/^(-?\d+) (\d+)\/(\d+)$/))){ var w=parseFloat(m[1]),n=parseFloat(m[2]),d=parseFloat(m[3]); if(d===0)return NaN; return w<0? w-n/d : w+n/d; }
+  if((m=s.match(/^(-?\d+(?:\.\d+)?)\/(\d+(?:\.\d+)?)$/))){ var d2=parseFloat(m[2]); if(d2===0)return NaN; return parseFloat(m[1])/d2; }
+  s=s.replace(/ /g,"");
+  if(/^-?(\d+\.?\d*|\.\d+)$/.test(s)) return parseFloat(s);
+  return NaN;
+}
+function isCorrect(input,key){
+  var a=parseAnswer(input), k=parseAnswer(key);
+  if(isNaN(a)) return false;
+  var isInt=Math.abs(k-Math.round(k))<1e-12;
+  var tol=isInt?1e-9:0.005;
+  return Math.abs(a-k)<=tol;
+}
+
+function isRomanCorrect(input,key){ return String(input).replace(/\s+/g,"").toUpperCase()===key; }
+var state=[];
+function render(){
+  var box=document.getElementById("questions");
+  QUESTIONS.forEach(function(q,i){
+    state.push({correct:false,tries:0,hints:0});
+    var d=document.createElement("div");
+    d.className="box q"; d.id="q"+i;
+    d.innerHTML='<div><span class="qnum">'+(i+1)+'.</span> '+q.t+'</div>'+
+      '<div class="row"><input type="text"'+(q.r?' placeholder="e.g. MMXXVI"':'')+' id="in'+i+'" aria-label="Answer to question '+(i+1)+'" autocomplete="off"> <span class="unit">'+q.u+'</span>'+
+      '<button type="button" class="check" data-i="'+i+'">Check</button>'+
+      '<button type="button" class="hint" data-i="'+i+'">Hint 💡</button>'+
+      '<button type="button" class="sol" data-i="'+i+'" style="display:none">Show solution</button></div>'+
+      '<div class="fb" id="fb'+i+'"></div><div class="hints" id="hints'+i+'"></div>'+
+      '<div class="solution" id="sol'+i+'"><strong>Solution:</strong> '+q.s+'</div>';
+    box.appendChild(d);
+  });
+  box.addEventListener("click",function(e){
+    var b=e.target; if(b.tagName!=="BUTTON")return;
+    var i=+b.getAttribute("data-i");
+    if(b.className==="check") check(i);
+    else if(b.className==="hint") hint(i);
+    else if(b.className==="sol") document.getElementById("sol"+i).style.display="block";
+  });
+  box.addEventListener("keydown",function(e){
+    if(e.key==="Enter"&&e.target.tagName==="INPUT"){ check(+e.target.id.slice(2)); }
+  });
+}
+function pick(arr){return arr[Math.floor(Math.random()*arr.length)];}
+function check(i){
+  var val=document.getElementById("in"+i).value;
+  var fb=document.getElementById("fb"+i), card=document.getElementById("q"+i);
+  if(val.trim()===""){fb.className="fb bad";fb.textContent="Type an answer first, Ace!";return;}
+  var isR=!!QUESTIONS[i].r;
+  if(isR&&!/^[ivxlcdm\s]+$/i.test(val)){fb.className="fb bad";fb.textContent="Use only Roman numeral letters: I, V, X, L, C, D, M.";return;}
+  if(!isR&&isNaN(parseAnswer(val))){fb.className="fb bad";fb.textContent="I can't read that as a number. Try something like 42, 3.5, 3/4 or 1 3/4.";return;}
+  state[i].tries++;
+  if(isR?isRomanCorrect(val,QUESTIONS[i].a):isCorrect(val,QUESTIONS[i].a)){
+    state[i].correct=true; card.className="box q right"; fb.className="fb good";
+    fb.textContent="✅ "+pick(PRAISE)+(state[i].tries===1?" (first try!)":"");
+  } else {
+    state[i].correct=false; card.className="box q wrong"; fb.className="fb bad";
+    fb.textContent="❌ "+pick(ENCOURAGE);
+    if(state[i].tries>=2) card.querySelector(".sol").style.display="inline-block";
+  }
+  updateScore();
+}
+function hint(i){
+  var q=QUESTIONS[i], s=state[i], hb=document.getElementById("hints"+i);
+  if(s.hints<q.h.length){
+    var p=document.createElement("p"); p.textContent="💡 Hint "+(s.hints+1)+": "+q.h[s.hints]; hb.appendChild(p); s.hints++;
+  }
+  if(s.hints>=q.h.length) document.querySelector("#q"+i+" .hint").disabled=true;
+  updateScore();
+}
+function counts(){
+  var c=0,first=0,h=0;
+  state.forEach(function(s){ if(s.correct){c++; if(s.tries===1)first++;} h+=s.hints; });
+  return {correct:c,first:first,hints:h};
+}
+function updateScore(){
+  var k=counts();
+  document.getElementById("scoreText").textContent="Score: "+k.correct+" / "+QUESTIONS.length+" correct · hints used: "+k.hints;
+}
+function finish(){
+  var k=counts(), n=QUESTIONS.length, pct=Math.round(100*k.correct/n);
+  var msg;
+  if(pct===100) msg="🏆 PERFECT SCORE! Incredible work, Ace. The whole town council would vote for you!";
+  else if(pct>=85) msg="🌟 Outstanding, Ace! That's a Grade 6-7 level performance!";
+  else if(pct>=65) msg="💪 Great effort, Ace! Review the ones you missed and try them again.";
+  else if(pct>=40) msg="👍 Good start, Ace! These problems are tough. Use the hints and solutions to learn the tricks, then try again.";
+  else msg="🌱 These are challenge problems, well above grade level. Every prime minister and mayor started as a beginner! Go through the worked examples and try again, Ace!";
+  var f=document.getElementById("final");
+  f.style.display="block";
+  f.innerHTML="<h2 style='border:none;margin-top:0'>Final Score: "+k.correct+" / "+n+" ("+pct+"%)</h2>"+
+    "<p>Correct on the first try: "+k.first+" · Hints used: "+k.hints+"</p><p>"+msg+"</p>"+
+    "<p style='font-size:.85em;color:#546e7a'>Finished on "+new Date().toLocaleString("en-CA")+"</p>";
+  f.scrollIntoView({behavior:"smooth"});
+}
+render();
+updateScore();
+document.getElementById("finishBtn").addEventListener("click",finish);
+</script>
+</body>
+</html>

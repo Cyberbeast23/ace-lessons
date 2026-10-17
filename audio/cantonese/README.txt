@@ -6,7 +6,7 @@ TTS voice (Cantonese): zh-HK-HiuMaanNeural when available; 2026-10-12+ often gTT
 TTS voice (English in ALL-words.mp3): en-HK-YanNeural
 Rate: slowed (~-20%) for clear listening practice.
 
-Sources: Ace lessons 2026-09-29 (Greetings) + 2026-09-30 (Family Members) + 2026-10-01 (Food) + 2026-10-02 (School) + 2026-10-03 (Body) + 2026-10-04 (Colours) + 2026-10-05 (Sky & Space) + 2026-10-06 (Numbers 11-100) + 2026-10-07 (At the Doctor) + 2026-10-08 (Nature: Mountains & Volcanoes) + 2026-10-09 (Question Words & Secrets) + 2026-10-10 (Music) + 2026-10-11 (Trains & Travel) + 2026-10-12 (Brain & Sleep) + 2026-10-13 (Bees & Gardens) + 2026-10-14 (Electricity & Lights) + 2026-10-15 (Land, People & Respect) + 2026-10-16 (Ice, Snow & Giant Animals).
+Sources: Ace lessons 2026-09-29 (Greetings) + 2026-09-30 (Family Members) + 2026-10-01 (Food) + 2026-10-02 (School) + 2026-10-03 (Body) + 2026-10-04 (Colours) + 2026-10-05 (Sky & Space) + 2026-10-06 (Numbers 11-100) + 2026-10-07 (At the Doctor) + 2026-10-08 (Nature: Mountains & Volcanoes) + 2026-10-09 (Question Words & Secrets) + 2026-10-10 (Music) + 2026-10-11 (Trains & Travel) + 2026-10-12 (Brain & Sleep) + 2026-10-13 (Bees & Gardens) + 2026-10-14 (Electricity & Lights) + 2026-10-15 (Land, People & Respect) + 2026-10-16 (Ice, Snow & Giant Animals) + 2026-10-17 (Community, Rules & Voting).
 Numbers 1-10 are already known and not included here.
 
 How to practise:
@@ -745,6 +745,46 @@ Individual files
   Chinese:  好耐以前
   Jyutping: hou2 noi6 ji5 cin4
   English:  a long time ago
+
+145-gwok3-gaa1-country.mp3
+  Chinese:  國家
+  Jyutping: gwok3 gaa1
+  English:  country
+
+146-zing3-fu2-government.mp3
+  Chinese:  政府
+  Jyutping: zing3 fu2
+  English:  government
+
+147-tau4-piu3-vote.mp3
+  Chinese:  投票
+  Jyutping: tau4 piu3
+  English:  to vote
+
+148-syun2-zaak6-choose.mp3
+  Chinese:  選擇
+  Jyutping: syun2 zaak6
+  English:  to choose / a choice
+
+149-kwai1-zak1-rules.mp3
+  Chinese:  規則
+  Jyutping: kwai1 zak1
+  English:  rules
+
+150-se5-keoi1-community.mp3
+  Chinese:  社區
+  Jyutping: se5 keoi1
+  English:  community
+
+151-bong1-sau2-help.mp3
+  Chinese:  幫手
+  Jyutping: bong1 sau2
+  English:  to help
+
+152-gung1-ping4-fair.mp3
+  Chinese:  公平
+  Jyutping: gung1 ping4
+  English:  fair
 
 
 Combined file
