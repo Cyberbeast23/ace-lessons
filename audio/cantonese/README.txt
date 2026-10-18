@@ -6,7 +6,7 @@ TTS voice (Cantonese): zh-HK-HiuMaanNeural when available; 2026-10-12+ often gTT
 TTS voice (English in ALL-words.mp3): en-HK-YanNeural
 Rate: slowed (~-20%) for clear listening practice.
 
-Sources: Ace lessons 2026-09-29 (Greetings) + 2026-09-30 (Family Members) + 2026-10-01 (Food) + 2026-10-02 (School) + 2026-10-03 (Body) + 2026-10-04 (Colours) + 2026-10-05 (Sky & Space) + 2026-10-06 (Numbers 11-100) + 2026-10-07 (At the Doctor) + 2026-10-08 (Nature: Mountains & Volcanoes) + 2026-10-09 (Question Words & Secrets) + 2026-10-10 (Music) + 2026-10-11 (Trains & Travel) + 2026-10-12 (Brain & Sleep) + 2026-10-13 (Bees & Gardens) + 2026-10-14 (Electricity & Lights) + 2026-10-15 (Land, People & Respect) + 2026-10-16 (Ice, Snow & Giant Animals) + 2026-10-17 (Community, Rules & Voting).
+Sources: Ace lessons 2026-09-29 (Greetings) + 2026-09-30 (Family Members) + 2026-10-01 (Food) + 2026-10-02 (School) + 2026-10-03 (Body) + 2026-10-04 (Colours) + 2026-10-05 (Sky & Space) + 2026-10-06 (Numbers 11-100) + 2026-10-07 (At the Doctor) + 2026-10-08 (Nature: Mountains & Volcanoes) + 2026-10-09 (Question Words & Secrets) + 2026-10-10 (Music) + 2026-10-11 (Trains & Travel) + 2026-10-12 (Brain & Sleep) + 2026-10-13 (Bees & Gardens) + 2026-10-14 (Electricity & Lights) + 2026-10-15 (Land, People & Respect) + 2026-10-16 (Ice, Snow & Giant Animals) + 2026-10-17 (Community, Rules & Voting) + 2026-10-18 (Weather & Storms).
 Numbers 1-10 are already known and not included here.
 
 How to practise:
@@ -785,6 +785,46 @@ Individual files
   Chinese:  公平
   Jyutping: gung1 ping4
   English:  fair
+
+153-tin1-hei3-weather.mp3
+  Chinese:  天氣
+  Jyutping: tin1 hei3
+  English:  weather
+
+154-lok6-jyu5-rain.mp3
+  Chinese:  落雨
+  Jyutping: lok6 jyu5
+  English:  to rain
+
+155-fung1-wind.mp3
+  Chinese:  風
+  Jyutping: fung1
+  English:  wind
+
+156-wan4-cloud.mp3
+  Chinese:  雲
+  Jyutping: wan4
+  English:  cloud
+
+157-ze1-umbrella.mp3
+  Chinese:  遮
+  Jyutping: ze1
+  English:  umbrella
+
+158-daa2-fung1-storm.mp3
+  Chinese:  打風
+  Jyutping: daa2 fung1
+  English:  a big storm / typhoon
+
+159-haang4-leoi4-thunder.mp3
+  Chinese:  行雷
+  Jyutping: haang4 leoi4
+  English:  thunder
+
+160-sap1-wet.mp3
+  Chinese:  濕
+  Jyutping: sap1
+  English:  wet
 
 
 Combined file

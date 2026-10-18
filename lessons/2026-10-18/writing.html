@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Writing (Oct. 18): Weather Report: Storm Warning! + Grammar Clinic</title>
+<style>
+  body{font-family:"Segoe UI",Verdana,Arial,sans-serif;font-size:20px;line-height:1.6;margin:0;background:#fff8f0;color:#2c2416}
+  .wrap{max-width:880px;margin:0 auto;padding:20px 18px 80px}
+  a.home{font-size:.9em;color:#bf360c}
+  h1{color:#e65100;font-size:2em;margin:10px 0}
+  h2{color:#ef6c00;margin-top:36px;border-bottom:3px solid #ffcc80;padding-bottom:4px}
+  h3{color:#ef6c00}
+  .box{background:#fff;border-radius:16px;padding:18px 22px;margin:16px 0;box-shadow:0 3px 10px rgba(0,0,0,.07)}
+  .tipbox{background:#fff8e1;border-left:8px solid #ffb300}
+  .senses{display:grid;gap:8px;margin:10px 0;grid-template-columns:repeat(auto-fit,minmax(140px,1fr))}
+  .senses .side{border-radius:14px;padding:10px 16px;background:#fff3e0}
+  .ts{background:#ffcc80;border-radius:5px;padding:1px 3px}
+  .ev{background:#c8e6c9;border-radius:5px;padding:1px 3px}
+  .ex{background:#ffe0b2;border-radius:5px;padding:1px 3px}
+  .cs{background:#e1bee7;border-radius:5px;padding:1px 3px}
+  .legend span{display:inline-block;margin:4px 8px 4px 0;font-size:.85em}
+  .model{font-family:Georgia,"Times New Roman",serif;font-size:1.05em;line-height:1.9}
+  .row{padding:10px 6px;border-bottom:1px dashed #ddd}
+  .row.right{background:#f1f8e9} .row.wrong{background:#fff5f5}
+  select{font-size:.9em;padding:5px 8px;border-radius:8px;border:2px solid #ffb74d;font-family:inherit}
+  .q{border-left:8px solid #b0bec5}
+  .q.right{border-left-color:#43a047;background:#f1f8e9}
+  .q.wrong{border-left-color:#e53935;background:#fff5f5}
+  .opt{display:block;width:100%;text-align:left;font-size:.95em;background:#fafafa;border:2px solid #e0e0e0;border-radius:10px;padding:8px 14px;margin:8px 0;cursor:pointer;font-family:inherit}
+  .opt:hover{border-color:#ffb74d;background:#fff}
+  .opt.sel-right{background:#c8e6c9;border-color:#43a047}
+  .opt.sel-wrong{background:#ffcdd2;border-color:#e53935}
+  .fb{margin-top:6px;font-weight:bold}
+  .fb.good{color:#2e7d32} .fb.bad{color:#c62828}
+  .explain{font-weight:normal;color:#e65100}
+  .bad-sent{font-family:Consolas,"Courier New",monospace;background:#ffebee;padding:6px 10px;border-radius:8px;display:inline-block;margin:6px 0}
+  input.fix{width:100%;box-sizing:border-box;font-size:1em;padding:8px 12px;border:2px solid #ffb74d;border-radius:10px;font-family:inherit}
+  button{font-size:.95em;padding:8px 16px;border:none;border-radius:10px;cursor:pointer;font-weight:bold;font-family:inherit}
+  .go{background:#ef6c00;color:#fff} .go:hover{background:#e65100}
+  .hint{background:#ffe082;color:#5d4037}
+  .blue{background:#1e88e5;color:#fff}
+  .purple{background:#8e24aa;color:#fff}
+  .grey{background:#cfd8dc;color:#263238}
+  .btnrow{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px}
+  textarea{width:100%;box-sizing:border-box;min-height:300px;font-size:1.05em;line-height:1.7;font-family:Georgia,"Times New Roman",serif;padding:14px;border:3px solid #ffb74d;border-radius:12px}
+  textarea:focus{outline:none;border-color:#ef6c00}
+  .counter{display:flex;flex-wrap:wrap;gap:20px;align-items:center;margin:8px 0;font-weight:bold}
+  .meter{flex:1;min-width:200px;height:18px;background:#e0e0e0;border-radius:9px;overflow:hidden}
+  .meter div{height:100%;width:0;background:#ffb300;transition:width .2s}
+  .checklist label{display:block;padding:6px 4px;cursor:pointer}
+  .checklist input{transform:scale(1.4);margin-right:10px}
+  .prompts label{display:block;background:#fff3e0;border-radius:10px;padding:10px 14px;margin:8px 0;cursor:pointer}
+  .prompts input{transform:scale(1.3);margin-right:8px}
+  #scoreBox{position:sticky;bottom:0;background:#e65100;color:#fff;border-radius:16px 16px 0 0;padding:12px 20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-top:30px}
+  .w5{display:grid;gap:8px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));margin:10px 0}
+  .w5 label{display:block;font-weight:bold;color:#e65100}
+  .w5 input{width:100%;box-sizing:border-box;font-size:.95em;padding:6px 10px;border:2px solid #ffb74d;border-radius:8px;font-family:inherit}
+  #printArea{display:none}
+  @media print{
+    body{background:#fff;font-size:14pt}
+    .wrap,#scoreBox{display:none !important}
+    #printArea{display:block;font-family:Georgia,serif;line-height:1.8}
+    #printArea h1{font-size:18pt;margin:0 0 6pt}
+    #printArea .meta{font-size:11pt;color:#444}
+    #printArea .text{white-space:pre-wrap;border-top:1px solid #999;padding-top:10pt;margin-top:10pt}
+    #printArea .lines{margin-top:24pt;border-top:1px solid #999;padding-top:6pt;font-size:11pt}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+<a class="home" href="../../index.html">&larr; Back to all lessons</a>
+<h1>✍️ Writing Week 21: Weather Report: Storm Warning! 🌧️📰</h1>
+<p>Yesterday you wrote a persuasive letter to change one reader's mind. Today, Ace, you'll write to <strong>inform a whole community</strong>, like a meteorologist on the evening news or a reporter at a newspaper's weather desk. A <strong>weather report</strong> is a kind of <strong>explanatory, news-style writing</strong>: it tells people what is happening, uses exact numbers and units, explains <em>why</em> it is happening with real science, predicts what will happen next, and tells people how to stay safe. Your goal is to write a report so clear that every reader knows what is coming and what to do.</p>
+
+<h2>Part 1: The Lesson</h2>
+<div class="box">
+  <h3 style="margin-top:0">A weather report has six parts 🧩</h3>
+  <p>Think of it like a news story with a science lesson tucked inside:</p>
+  <div class="senses">
+    <div class="side"><strong>1. Headline + lead:</strong> a short, strong headline, then one sentence that answers <em>who, what, when, where</em></div>
+    <div class="side"><strong>2. Current conditions:</strong> what is happening now, with exact numbers and units (mm, °C, km/h, kPa, %)</div>
+    <div class="side"><strong>3. The science:</strong> <em>why</em> it is happening, explained with cause-and-effect words (because, so, as a result)</div>
+    <div class="side"><strong>4. The forecast:</strong> what will happen next, in the future tense, with ranges or chances</div>
+    <div class="side"><strong>5. Safety advice:</strong> two or three clear things readers should do</div>
+    <div class="side"><strong>6. Sign-off:</strong> a short closing line and your name, like a TV forecaster</div>
+  </div>
+  <h3>Five forecaster's moves</h3>
+  <ul>
+    <li><strong>Most important first:</strong> news writers use the <strong>inverted pyramid</strong>. The biggest, most useful facts go at the top, and smaller details come later, so a busy reader who stops after one sentence still knows what is coming.</li>
+    <li><strong>Be precise:</strong> "lots of rain" is vague. "60 to 120 mm of rain by Monday morning" is a fact readers can use. Always write a space between the number and the unit: 12 °C, 70 km/h.</li>
+    <li><strong>Explain the cause:</strong> link facts with <em>because</em>, <em>so</em>, <em>as a result</em>, and <em>this means</em>. A great report teaches readers something.</li>
+    <li><strong>Translate science words:</strong> if you use a word like <em>condensation</em> or <em>rain shadow</em>, explain it in a few words for readers who don't know it.</li>
+    <li><strong>Be honest about uncertainty:</strong> forecasts can change, so use careful words: <em>likely</em>, <em>up to</em>, <em>a 70% chance</em>. Use the <strong>future tense</strong> for forecasts (will arrive) and the <strong>past tense</strong> for storms that already happened (arrived).</li>
+  </ul>
+  <p><strong>Grown-up words:</strong> journalists call the first sentence the <strong>lead</strong> (sometimes spelled <em>lede</em>). Writing that explains how or why something happens is called <strong>expository</strong> (explanatory) writing, and an <strong>objective</strong> report sticks to facts instead of opinions.</p>
+</div>
+
+<div class="box">
+  <h3 style="margin-top:0">Model Weather Report (short version)</h3>
+  <p class="legend"><span class="ts">Headline + lead</span><span class="ev">Conditions + the science</span><span class="ex">The forecast</span><span class="cs">Safety advice + sign-off</span></p>
+  <p class="model">
+    <span class="ts">PINEAPPLE EXPRESS TO SOAK THE SOUTH COAST<br>A powerful atmospheric river will reach the BC coast on Saturday night, bringing heavy rain to the mountains and strong winds to the islands, forecasters warned on Friday.</span><br>
+    <span class="ev">Right now, the air pressure at coastal weather stations is 101.2 kPa and falling, and the humidity is already 92%. The storm is a long, narrow band of warm, moist air flowing from near Hawaii. When it hits the Coast Mountains, the air will be forced upward and cool. As a result, its water vapour will condense, or turn into droplets, and pour down as rain on the windward slopes.</span><br>
+    <span class="ex">Rain will begin Saturday evening and become heavy overnight, with 60 to 120 mm likely by Monday morning. Because the air is so warm, around 12 °C, snow will only fall above about 2000 m. On Monday afternoon, a cold front will sweep through with gusts of up to 70 km/h, followed by cooler, clearer air.</span><br>
+    <span class="cs">Clear leaves from the drains near your home, stay away from fast-flowing creeks, and check road reports before driving through mountain passes. Stay safe and stay dry! This is Ace, reporting from the Weather Desk.</span>
+  </p>
+  <p><strong>Notice:</strong> the lead answers who, what, when, and where in one sentence; every measurement has a number and a unit; the science paragraph uses cause-and-effect words and explains <em>condense</em>; the forecast uses the future tense, a range (60 to 120 mm), and careful words (likely, up to); and the safety advice is short and easy to follow.</p>
+</div>
+
+<h2>Part 2: Name That Report Part</h2>
+<div class="box">
+  <p>Each line comes from a student's weather report about an atmospheric river. Choose which <strong>part of the report</strong> it belongs in.</p>
+  <div id="labelRows"></div>
+  <div class="btnrow"><button type="button" class="go" id="checkLabels">Check my answers</button></div>
+  <div class="fb" id="labelFb"></div>
+</div>
+
+<h2>Part 3: Grammar Clinic ⛈️</h2>
+<div class="box tipbox">A careful reporter checks every sentence before it goes on the air! <strong>Section A:</strong> pick the correct sentence. <strong>Section B:</strong> type the sentence again with <em>all</em> mistakes fixed. We use <strong>Canadian spelling</strong> (metre, centimetre, litre, colour). Today, watch <strong>numbers and unit symbols</strong> (45 mm, never 45mms), <strong>verb tense</strong> (future for forecasts), <strong>comparatives and superlatives</strong> (wetter, wettest, never "more wetter"), <strong>its / it's</strong>, <strong>capital letters for place names</strong> (the Pacific Ocean, the Coast Mountains), and <strong>commas after introductory words and clauses</strong>.</div>
+<h3>Section A: Pick the correct sentence</h3>
+<div id="gmc"></div>
+<h3>Section B: Fix the sentence</h3>
+<p>Retype the whole sentence correctly, with capital letters and punctuation. Each one has <strong>at least two</strong> mistakes.</p>
+<div id="gfix"></div>
+
+<h2>Part 4: Your Turn to Write</h2>
+<div class="box">
+  <h3 style="margin-top:0">Step 1: Choose your report</h3>
+  <div class="prompts" id="prompts">
+    <label><input type="radio" name="prompt" value="Report A: Storm warning! A Pineapple Express is on its way" checked> 🌧️ <strong>Report A:</strong> You are the forecaster. Write a <em>storm warning</em> for a Pineapple Express that will arrive on the BC coast this weekend: current conditions, why it will be so rainy, a forecast with numbers, and safety advice. (Future tense!)</label>
+    <label><input type="radio" name="prompt" value="Report B: News story: the day the river in the sky arrived"> 📰 <strong>Report B:</strong> You are a newspaper reporter. Write a <em>news story</em> about an atmospheric river that already hit a (made-up) BC town: what happened, how much rain fell, why it happened, what happens next, and a quote from a meteorologist. (Past tense for what happened!)</label>
+    <label><input type="radio" name="prompt" value="Report C: Weather-show script: why is one side of the mountains so wet?"> 🎬 <strong>Report C:</strong> Write a script for a kids' weather show explaining the <em>rain shadow</em>: why the windward side of the Coast Mountains is so rainy while the leeward side can be dry enough for cactus. Include numbers and tell viewers how to spot it on a map.</label>
+  </div>
+  <p><strong>Plan your report:</strong> jot a few words for each box. (These notes save with your writing.)</p>
+  <div class="w5" id="w5">
+    <div><label for="w5who">Headline + lead (who, what, when, where)</label><input id="w5who" type="text" autocomplete="off"></div>
+    <div><label for="w5place">Current conditions (numbers + units)</label><input id="w5place" type="text" autocomplete="off"></div>
+    <div><label for="w5facts">The science: why is it happening?</label><input id="w5facts" type="text" autocomplete="off"></div>
+    <div><label for="w5senses">The forecast: what happens next?</label><input id="w5senses" type="text" autocomplete="off"></div>
+    <div><label for="w5feel">Safety advice (2 or 3 tips)</label><input id="w5feel" type="text" autocomplete="off"></div>
+    <div><label for="w5closing">Sign-off line</label><input id="w5closing" type="text" autocomplete="off"></div>
+  </div>
+
+  <h3>Step 2: Write your weather report</h3>
+  <p><strong>Goal:</strong> a report of <strong>200 to 300 words</strong> with a <strong>headline</strong>, a <strong>lead</strong> that answers who, what, when, and where, <strong>at least four measurements</strong> with the right metric units (mm, cm, °C, km/h, kPa, %), a <strong>cause-and-effect explanation</strong> that uses at least <strong>two science words</strong> from today's reading (humidity, saturated, condensation, air pressure, front, windward, leeward, rain shadow), a <strong>forecast</strong> or "what happens next" section, <strong>safety advice</strong>, and a <strong>sign-off</strong> with your first name.</p>
+  <p><button type="button" class="hint" id="templateBtn">📋 Add the report headings for me</button></p>
+  <label for="essay"><strong>Write here, Ace:</strong></label>
+  <textarea id="essay" placeholder="HEADLINE: ..."></textarea>
+  <div class="counter">
+    <span id="wc">0 words</span>
+    <span id="sc">0 sentences</span>
+    <div class="meter" aria-hidden="true"><div id="meterBar"></div></div>
+  </div>
+  <div class="fb" id="wcMsg">Aim for 200 to 300 words.</div>
+  <p style="font-size:.8em;color:#607d8b" id="saveNote">Your writing is saved automatically in this browser as you type.</p>
+
+  <h3>Self-check before you finish ✅</h3>
+  <div class="checklist" id="checklist">
+    <label><input type="checkbox"> I wrote a short, strong <strong>headline</strong> and a <strong>lead</strong> that answers who, what, when, and where.</label>
+    <label><input type="checkbox"> I used <strong>at least four measurements</strong>, each with a number, a space, and the right unit (like 85 mm or −3 °C).</label>
+    <label><input type="checkbox"> I explained <strong>why</strong> the weather is happening, using cause-and-effect words (because, so, as a result).</label>
+    <label><input type="checkbox"> I used at least <strong>two science words</strong> from today's reading and explained them for my readers.</label>
+    <label><input type="checkbox"> My <strong>forecast</strong> uses the future tense and careful words (likely, up to, a 60% chance), or my news story uses the past tense for what already happened.</label>
+    <label><input type="checkbox"> I gave clear <strong>safety advice</strong> and a <strong>sign-off</strong> with my first name.</label>
+    <label><input type="checkbox"> I checked <strong>its / it's</strong>, comparatives (wetter, not "more wetter"), capital letters for place names, commas, and <strong>Canadian spelling</strong> (metre, centimetre, litre).</label>
+  </div>
+  <div class="btnrow">
+    <button type="button" class="blue" id="downloadBtn">⬇️ Download my writing (for Dad)</button>
+    <button type="button" class="purple" id="printBtn">🖨️ Print my writing</button>
+    <button type="button" class="grey" id="clearBtn">Start over</button>
+  </div>
+  <div class="fb" id="doneMsg"></div>
+</div>
+
+<div id="scoreBox"><span id="scoreText"></span><span>Keep going, meteorologist Ace! ⛈️</span></div>
+</div>
+
+<div id="printArea"></div>
+
+<script>
+var NAME="Ace";
+var PRAISE=["Nice work, Ace!","Correct! Great editing eye!","Yes! Ace fixed it!","Excellent, meteorologist Ace!","Clear skies ahead! 🌤️"];
+function pick(a){return a[Math.floor(Math.random()*a.length)];}
+
+var LABELS=["Headline + lead","Current conditions","The science","The forecast","Safety advice","Sign-off"];
+var LABEL_ITEMS=[
+ {s:"RIVER IN THE SKY TAKES AIM AT THE COAST: an atmospheric river will reach the BC coast on Sunday night, forecasters said today.", a:"Headline + lead"},
+ {s:"At 4 p.m., it was 11 °C, the humidity was 94%, and the barometer read 99.8 kPa and was still falling.", a:"Current conditions"},
+ {s:"Because the moist air will be pushed up the Coast Mountains, it will cool and condense, so the windward slopes will get the heaviest rain.", a:"The science"},
+ {s:"Up to 100 mm of rain will likely fall by Tuesday, and there is a 90% chance of showers on Wednesday.", a:"The forecast"},
+ {s:"Keep storm drains clear, stay away from swollen creeks, and never drive through a flooded road.", a:"Safety advice"},
+ {s:"Keep your umbrella handy! This is Ace, reporting from the Weather Desk.", a:"Sign-off"}
+];
+var labelScore=0, labelChecked=false;
+function buildLabels(){
+  var box=document.getElementById("labelRows");
+  LABEL_ITEMS.forEach(function(it,i){
+    var d=document.createElement("div"); d.className="row"; d.id="lr"+i;
+    var sel='<select id="ls'+i+'" aria-label="Job of sentence '+(i+1)+'"><option value="">- choose -</option>';
+    LABELS.forEach(function(l){sel+='<option>'+l+'</option>';});
+    sel+='</select>';
+    d.innerHTML='<strong>'+(i+1)+'.</strong> '+it.s+'<br>'+sel+' <span id="lm'+i+'"></span>';
+    box.appendChild(d);
+  });
+}
+function checkLabels(){
+  var sc=0;
+  LABEL_ITEMS.forEach(function(it,i){
+    var ok=document.getElementById("ls"+i).value===it.a; if(ok)sc++;
+    document.getElementById("lr"+i).className="row "+(ok?"right":"wrong");
+    document.getElementById("lm"+i).textContent=ok?"✅":"❌";
+  });
+  labelScore=sc; labelChecked=true;
+  var fb=document.getElementById("labelFb");
+  if(sc===LABEL_ITEMS.length){fb.className="fb good";fb.textContent="🌟 "+sc+" / "+LABEL_ITEMS.length+". "+pick(PRAISE)+" You know exactly how a weather report is built!";}
+  else{fb.className="fb bad";fb.textContent=sc+" / "+LABEL_ITEMS.length+". Hint: the ALL-CAPS line with who/what/when/where = headline + lead; numbers about right now = current conditions; \"Because… so…\" = the science; \"will likely… chance\" = the forecast; instructions to readers = safety advice; \"This is Ace, reporting\" = sign-off. Fix the ❌ ones and check again.";}
+  updateScore();
+}
+
+var GMC=[
+ {q:"Which sentence writes the <strong>measurement</strong> correctly?",
+  o:["The storm dropped 45 mm of rain.","The storm dropped 45mms of rain.","The storm dropped 45 MM of rain.","The storm dropped 45 mm's of rain."],
+  a:0,e:"Write the number, a space, then the unit symbol in lowercase. Symbols never take an <em>s</em> or an apostrophe: <em>45 mm</em>."},
+ {q:"Which sentence uses the correct <strong>verb tense</strong> for a forecast?",
+  o:["Tomorrow, the cold front arrived and brings thunder.","Tomorrow, the cold front will arrive and bring thunder.","Tomorrow, the cold front arrive and brought thunder.","Tomorrow, the cold front arriving and bring thunder."],
+  a:1,e:"A forecast is about the future, so keep both verbs in the future tense: <em>will arrive and (will) bring</em>."},
+ {q:"Which sentence uses a <strong>comparative</strong> correctly?",
+  o:["The coast is more wetter than the Okanagan.","The coast is wettest than the Okanagan.","The coast is wetter than the Okanagan.","The coast is more wet-er than the Okanagan."],
+  a:2,e:"Short adjectives add <em>-er</em> to compare two things (<em>wetter</em>) and <em>-est</em> for three or more (<em>wettest</em>). Never use <em>more</em> and <em>-er</em> together."},
+ {q:"Which sentence uses <strong>its / it's</strong> correctly?",
+  o:["Its raining, and the storm has lost it's power.","It's raining, and the storm has lost it's power.","Its raining, and the storm has lost its power.","It's raining, and the storm has lost its power."],
+  a:3,e:"<em>It's</em> = it is. <em>Its</em> (no apostrophe) = belonging to it: the storm lost <em>its</em> power."},
+ {q:"Which sentence uses capital letters correctly for <strong>place names</strong>?",
+  o:["Moist air from the pacific ocean hits the coast mountains.","Moist air from the Pacific ocean hits the Coast mountains.","Moist air from the Pacific Ocean hits the Coast Mountains.","Moist Air from the Pacific Ocean hits the Coast Mountains."],
+  a:2,e:"The whole name of a specific place is a proper noun: <em>Pacific Ocean</em>, <em>Coast Mountains</em>. Ordinary nouns like <em>air</em> stay lowercase."},
+ {q:"Which sentence uses a <strong>comma after an introductory clause</strong> correctly?",
+  o:["After the cold front passes, the air will feel cooler.","After the cold front passes the air, will feel cooler.","After, the cold front passes the air will feel cooler.","After the cold front, passes the air will feel cooler."],
+  a:0,e:"Put the comma right after the introductory clause (<em>After the cold front passes,</em>). Without it, readers might think the front \"passes the air\"!"},
+ {q:"Which sentence uses <strong>Canadian spelling</strong> correctly?",
+  o:["The forecaster measured 3 centimeters of snow on the meter stick.","The forecaster measured 3 centimetres of snow on the metre stick.","The forecaster measured 3 centimetres of snow on the meter stick.","The forecaster measured 3 centimeters of snow on the metre stick."],
+  a:1,e:"In Canadian English, units of length end in <em>-re</em>: <em>metre</em>, <em>centimetre</em>. (A <em>meter</em> is a device that measures, like a parking meter.)"}
+];
+var gmcState=GMC.map(function(){return{answered:false,firstRight:false,done:false};});
+function buildGMC(){
+  var box=document.getElementById("gmc");
+  GMC.forEach(function(it,i){
+    var d=document.createElement("div"); d.className="box q"; d.id="g"+i;
+    var h='<div><strong>'+(i+1)+'.</strong> '+it.q+'</div>';
+    it.o.forEach(function(o,j){h+='<button type="button" class="opt" data-i="'+i+'" data-j="'+j+'">'+String.fromCharCode(65+j)+'. '+o+'</button>';});
+    h+='<div class="fb" id="gfb'+i+'"></div>';
+    d.innerHTML=h; box.appendChild(d);
+  });
+  box.addEventListener("click",function(e){
+    var b=e.target.closest?e.target.closest(".opt"):e.target; if(!b||!b.classList.contains("opt"))return;
+    var i=+b.getAttribute("data-i"), j=+b.getAttribute("data-j"), st=gmcState[i], it=GMC[i];
+    if(st.done)return;
+    var ok=j===it.a; if(!st.answered){st.answered=true;st.firstRight=ok;}
+    var fb=document.getElementById("gfb"+i);
+    if(ok){st.done=true;b.classList.add("sel-right");document.getElementById("g"+i).className="box q right";fb.className="fb good";fb.innerHTML="✅ "+pick(PRAISE)+' <span class="explain">'+it.e+'</span>';}
+    else{b.classList.add("sel-wrong");document.getElementById("g"+i).className="box q wrong";fb.className="fb bad";fb.textContent="❌ Not quite, Ace. Look closely and try again.";}
+    updateScore();
+  });
+}
+
+var GFIX=[
+ {bad:"its going to be more windier on the coast tonight.",
+  ok:["It's going to be windier on the coast tonight."],
+  hint:"Start with a capital letter. <em>It's</em> = it is, so it needs an apostrophe. Use <em>windier</em> on its own, never <em>more windier</em>."},
+ {bad:"Tomorrow the storm hit the coast and brings 80mm of rain.",
+  ok:["Tomorrow, the storm will hit the coast and bring 80 mm of rain.", "Tomorrow the storm will hit the coast and bring 80 mm of rain.", "Tomorrow, the storm will hit the coast and will bring 80 mm of rain.", "Tomorrow the storm will hit the coast and will bring 80 mm of rain."],
+  hint:"<em>Tomorrow</em> is the future, so use <em>will hit</em> and <em>(will) bring</em>. Put a space between the number and the unit: <em>80 mm</em>."},
+ {bad:"moist air from the pacific ocean rises over the coast mountains and cools.",
+  ok:["Moist air from the Pacific Ocean rises over the Coast Mountains and cools."],
+  hint:"Capitalize the first word and every word of the place names: <em>Pacific Ocean</em>, <em>Coast Mountains</em>."},
+ {bad:"thursday was the most wettest day, with 85 millimeters of rain.",
+  ok:["Thursday was the wettest day, with 85 millimetres of rain.", "Thursday was the wettest day, with 85 mm of rain."],
+  hint:"Days of the week are capitalized. Use <em>wettest</em> on its own, never <em>most wettest</em>. Use the Canadian spelling <em>millimetres</em> (or the symbol <em>mm</em>)."}
+];
+
+var gfixState=GFIX.map(function(){return{tries:0,correct:false,firstRight:false};});
+function norm(s){return s.replace(/[\u2018\u2019\u02BC]/g,"'").replace(/[\u201C\u201D]/g,'"').replace(/\s+/g," ").trim();}
+function checkFixAnswer(i,val){var v=norm(val);return GFIX[i].ok.some(function(a){return norm(a)===v;});}
+function buildGFix(){
+  var box=document.getElementById("gfix");
+  GFIX.forEach(function(it,i){
+    var d=document.createElement("div"); d.className="box q"; d.id="f"+i;
+    d.innerHTML='<div><strong>'+(i+1)+'.</strong> Fix: <span class="bad-sent">'+it.bad+'</span></div>'+
+     '<input class="fix" type="text" id="fi'+i+'" autocomplete="off" spellcheck="false" aria-label="Corrected sentence '+(i+1)+'">'+
+     '<div class="btnrow"><button type="button" class="go" data-act="check" data-i="'+i+'">Check</button><button type="button" class="hint" data-act="hint" data-i="'+i+'">Hint 💡</button><button type="button" class="grey" data-act="show" data-i="'+i+'" style="display:none">Show answer</button></div>'+
+     '<div class="fb" id="ffb'+i+'"></div>';
+    box.appendChild(d);
+  });
+  box.addEventListener("click",function(e){
+    var b=e.target; if(b.tagName!=="BUTTON")return;
+    var i=+b.getAttribute("data-i"), act=b.getAttribute("data-act"), fb=document.getElementById("ffb"+i);
+    if(act==="hint"){fb.className="fb";fb.style.color="#5d4037";fb.textContent="💡 "+GFIX[i].hint;return;}
+    fb.style.color="";
+    if(act==="show"){fb.className="fb";fb.innerHTML='Answer: <em>'+GFIX[i].ok[0]+'</em>'+(GFIX[i].ok.length>1?' (other correct versions are accepted too)':'');return;}
+    fixCheck(i);
+  });
+  box.addEventListener("keydown",function(e){if(e.key==="Enter"&&e.target.classList.contains("fix"))fixCheck(+e.target.id.slice(2));});
+}
+function fixCheck(i){
+  var val=document.getElementById("fi"+i).value, fb=document.getElementById("ffb"+i), st=gfixState[i];
+  fb.style.color="";
+  if(!val.trim()){fb.className="fb bad";fb.textContent="Type the corrected sentence first, Ace!";return;}
+  st.tries++;
+  if(checkFixAnswer(i,val)){ if(st.tries===1)st.firstRight=true; st.correct=true; document.getElementById("f"+i).className="box q right"; fb.className="fb good"; fb.textContent="✅ "+pick(PRAISE); }
+  else { st.correct=false; document.getElementById("f"+i).className="box q wrong"; fb.className="fb bad"; fb.textContent="❌ Not quite. Check every capital letter, apostrophe, comma, and spelling. Try again!"; if(st.tries>=2)document.querySelector('#f'+i+' [data-act=show]').style.display="inline-block"; }
+  updateScore();
+}
+
+function updateScore(){
+  var g=0; gmcState.forEach(function(s){if(s.firstRight)g++;});
+  var f=0; gfixState.forEach(function(s){if(s.correct)f++;});
+  var total=LABEL_ITEMS.length+GMC.length+GFIX.length, got=labelScore+g+f;
+  document.getElementById("scoreText").textContent="Score: "+got+" / "+total+"  (labels "+(labelChecked?labelScore:"-")+"/"+LABEL_ITEMS.length+" · grammar A "+g+"/"+GMC.length+" · grammar B "+f+"/"+GFIX.length+")";
+}
+
+var W5=["who","place","facts","senses","feel","closing"];
+function w5Save(){try{localStorage.setItem(KEY+"-5w",JSON.stringify(W5.map(function(k){return document.getElementById("w5"+k).value;})));}catch(e){}}
+function w5Restore(){try{var d=JSON.parse(localStorage.getItem(KEY+"-5w")||"null");if(d)d.forEach(function(x,i){document.getElementById("w5"+W5[i]).value=x;});}catch(e){}}
+function w5Summary(){return W5.map(function(k){return k.charAt(0).toUpperCase()+k.slice(1)+": "+document.getElementById("w5"+k).value;}).join("\n");}
+function addTemplate(){
+  var t=document.getElementById("essay");
+  var tpl="HEADLINE: \n\nLead (who, what, when, where): \n\nCurrent conditions: \n\nThe science (why it is happening): \n\nThe forecast (what happens next): \n\nSafety advice: \n\nSign-off: This is "+NAME+", reporting from the Weather Desk.";
+  if(t.value.trim()&&!confirm("Add the headings below what you've already written?"))return;
+  t.value=(t.value.trim()?t.value.replace(/\s+$/,"")+"\n\n":"")+tpl; updateCount(); t.focus();
+}
+var KEY="ace-writing-2026-10-18";
+function countWords(t){var m=t.trim().match(/[A-Za-zÀ-ÿ0-9]+(?:['’\-][A-Za-zÀ-ÿ0-9]+)*/g);return m?m.length:0;}
+function countSentences(t){var m=t.match(/[^.!?]*[A-Za-z0-9][^.!?]*[.!?]+/g);return m?m.length:0;}
+function currentPrompt(){var r=document.querySelector('input[name=prompt]:checked');return r?r.value:"";}
+function updateCount(){
+  var t=document.getElementById("essay").value, w=countWords(t), s=countSentences(t);
+  document.getElementById("wc").textContent=w+(w===1?" word":" words");
+  document.getElementById("sc").textContent=s+(s===1?" sentence":" sentences");
+  var bar=document.getElementById("meterBar"); bar.style.width=Math.min(100,w/300*100)+"%";
+  var msg=document.getElementById("wcMsg");
+  if(w<200){bar.style.background="#ffb300";msg.className="fb";msg.textContent=w===0?"Aim for 200 to 300 words.":"Keep going, Ace! "+(200-w)+" more words to reach the goal.";}
+  else if(w<=300){bar.style.background="#43a047";msg.className="fb good";msg.textContent="🎯 You're in the target zone! Nice work, Ace!";}
+  else{bar.style.background="#1e88e5";msg.className="fb";msg.textContent="Wow, that's a lot of writing! Strong weather reports stay short and focused. Could any sentences be cut?";}
+  try{localStorage.setItem(KEY,JSON.stringify({text:t,prompt:currentPrompt(),checks:checkStates()}));}catch(e){document.getElementById("saveNote").textContent="(This browser can't auto-save here, so use the Download button before closing!)";}
+}
+function checkStates(){return Array.prototype.map.call(document.querySelectorAll("#checklist input"),function(c){return c.checked;});}
+function checklistText(){
+  return Array.prototype.map.call(document.querySelectorAll("#checklist label"),function(l){return (l.querySelector("input").checked?"[x] ":"[ ] ")+l.textContent.trim();}).join("\n");
+}
+function buildReport(){
+  var t=document.getElementById("essay").value;
+  return "Writing Week 21: "+NAME+"\nDate: "+new Date().toLocaleString("en-CA")+"\nPrompt: "+currentPrompt()+
+    "\nWords: "+countWords(t)+"   Sentences: "+countSentences(t)+"\nPlanning notes:\n"+w5Summary()+
+    "\n\n----- "+NAME+"'s writing -----\n\n"+t+"\n\n----- Self-check -----\n"+checklistText()+
+    "\n\n----- Parent feedback -----\n\n\n";
+}
+function download(){
+  var t=document.getElementById("essay").value;
+  if(!t.trim()){document.getElementById("doneMsg").className="fb bad";document.getElementById("doneMsg").textContent="Write something first, Ace!";return;}
+  var blob=new Blob([buildReport().replace(/\n/g,"\r\n")],{type:"text/plain;charset=utf-8"});
+  var a=document.createElement("a"); a.href=URL.createObjectURL(blob); a.download=NAME+"-writing-2026-10-18"+".txt";
+  document.body.appendChild(a); a.click();
+  setTimeout(function(){URL.revokeObjectURL(a.href);a.remove();},1000);
+  var dm=document.getElementById("doneMsg"); dm.className="fb good"; dm.textContent="📄 Saved! Look in your Downloads folder and show Dad. Great job finishing, Ace!";
+}
+function esc(s){return s.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");}
+function printIt(){
+  var t=document.getElementById("essay").value;
+  if(!t.trim()){document.getElementById("doneMsg").className="fb bad";document.getElementById("doneMsg").textContent="Write something first, Ace!";return;}
+  document.getElementById("printArea").innerHTML="<h1>Writing Week 21: "+NAME+"</h1><div class='meta'>"+esc(new Date().toLocaleString("en-CA"))+"<br><strong>Prompt:</strong> "+esc(currentPrompt())+"<br>Words: "+countWords(t)+" · Sentences: "+countSentences(t)+"</div><div class='text'>"+esc(t)+"</div><div class='lines'><strong>Self-check:</strong><br>"+esc(checklistText()).replace(/\n/g,"<br>")+"</div><div class='lines'><strong>Parent feedback:</strong><br><br><br><br></div>";
+  window.print();
+}
+function restore(){
+  try{var d=JSON.parse(localStorage.getItem(KEY)||"null"); if(!d)return;
+    document.getElementById("essay").value=d.text||"";
+    Array.prototype.forEach.call(document.querySelectorAll("input[name=prompt]"),function(r){r.checked=(r.value===d.prompt);});
+    if(!document.querySelector("input[name=prompt]:checked"))document.querySelector("input[name=prompt]").checked=true;
+    var cs=document.querySelectorAll("#checklist input"); (d.checks||[]).forEach(function(v,i){if(cs[i])cs[i].checked=v;});
+  }catch(e){}
+}
+buildLabels(); buildGMC(); buildGFix(); restore(); w5Restore(); updateCount(); updateScore();
+W5.forEach(function(k){document.getElementById("w5"+k).addEventListener("input",w5Save);});
+document.getElementById("templateBtn").addEventListener("click",addTemplate);
+document.getElementById("checkLabels").addEventListener("click",checkLabels);
+document.getElementById("essay").addEventListener("input",updateCount);
+document.getElementById("checklist").addEventListener("change",function(){updateCount(); if(checkStates().every(Boolean)){var dm=document.getElementById("doneMsg");dm.className="fb good";dm.textContent="✅ All boxes checked! Now download or print it for Dad. Awesome work, Ace!";}});
+document.getElementById("prompts").addEventListener("change",updateCount);
+document.getElementById("downloadBtn").addEventListener("click",download);
+document.getElementById("printBtn").addEventListener("click",printIt);
+document.getElementById("clearBtn").addEventListener("click",function(){ if(confirm("Erase your writing and start over?")){document.getElementById("essay").value="";Array.prototype.forEach.call(document.querySelectorAll("#checklist input"),function(c){c.checked=false;});document.getElementById("doneMsg").textContent="";updateCount();} });
+</script>
+</body>
+</html>
