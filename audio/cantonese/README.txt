@@ -6,7 +6,7 @@ TTS voice (Cantonese): zh-HK-HiuMaanNeural when available; 2026-10-12+ often gTT
 TTS voice (English in ALL-words.mp3): en-HK-YanNeural
 Rate: slowed (~-20%) for clear listening practice.
 
-Sources: Ace lessons 2026-09-29 (Greetings) + 2026-09-30 (Family Members) + 2026-10-01 (Food) + 2026-10-02 (School) + 2026-10-03 (Body) + 2026-10-04 (Colours) + 2026-10-05 (Sky & Space) + 2026-10-06 (Numbers 11-100) + 2026-10-07 (At the Doctor) + 2026-10-08 (Nature: Mountains & Volcanoes) + 2026-10-09 (Question Words & Secrets) + 2026-10-10 (Music) + 2026-10-11 (Trains & Travel) + 2026-10-12 (Brain & Sleep) + 2026-10-13 (Bees & Gardens) + 2026-10-14 (Electricity & Lights) + 2026-10-15 (Land, People & Respect) + 2026-10-16 (Ice, Snow & Giant Animals) + 2026-10-17 (Community, Rules & Voting) + 2026-10-18 (Weather & Storms).
+Sources: Ace lessons 2026-09-29 (Greetings) + 2026-09-30 (Family Members) + 2026-10-01 (Food) + 2026-10-02 (School) + 2026-10-03 (Body) + 2026-10-04 (Colours) + 2026-10-05 (Sky & Space) + 2026-10-06 (Numbers 11-100) + 2026-10-07 (At the Doctor) + 2026-10-08 (Nature: Mountains & Volcanoes) + 2026-10-09 (Question Words & Secrets) + 2026-10-10 (Music) + 2026-10-11 (Trains & Travel) + 2026-10-12 (Brain & Sleep) + 2026-10-13 (Bees & Gardens) + 2026-10-14 (Electricity & Lights) + 2026-10-15 (Land, People & Respect) + 2026-10-16 (Ice, Snow & Giant Animals) + 2026-10-17 (Community, Rules & Voting) + 2026-10-18 (Weather & Storms) + 2026-10-19 (Germs, Vaccines & Staying Healthy).
 Numbers 1-10 are already known and not included here.
 
 How to practise:
@@ -825,6 +825,46 @@ Individual files
   Chinese:  濕
   Jyutping: sap1
   English:  wet
+
+161-sai3-kwan2-germs.mp3
+  Chinese:  細菌
+  Jyutping: sai3 kwan2
+  English:  germs / bacteria
+
+162-beng6-duk6-virus.mp3
+  Chinese:  病毒
+  Jyutping: beng6 duk6
+  English:  virus
+
+163-jik6-miu4-vaccine.mp3
+  Chinese:  疫苗
+  Jyutping: jik6 miu4
+  English:  vaccine
+
+164-daa2-zam1-get-a-shot.mp3
+  Chinese:  打針
+  Jyutping: daa2 zam1
+  English:  to get a shot (injection)
+
+165-kat1-cough.mp3
+  Chinese:  咳
+  Jyutping: kat1
+  English:  to cough
+
+166-faan1-gaan2-soap.mp3
+  Chinese:  番梘
+  Jyutping: faan1 gaan2
+  English:  soap
+
+167-hau2-zaau3-mask.mp3
+  Chinese:  口罩
+  Jyutping: hau2 zaau3
+  English:  face mask
+
+168-gin6-hong1-healthy.mp3
+  Chinese:  健康
+  Jyutping: gin6 hong1
+  English:  healthy
 
 
 Combined file

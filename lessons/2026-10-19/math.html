@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Math (Oct. 19): Germ Fighters: Immune System &amp; Vaccines Math Lab</title>
+<style>
+  body{font-family:"Segoe UI",Verdana,Arial,sans-serif;font-size:20px;line-height:1.6;margin:0;background:#f5f0eb;color:#2c2416}
+  .wrap{max-width:880px;margin:0 auto;padding:20px 18px 80px}
+  a.home{font-size:.9em;color:#bf360c}
+  h1{color:#e65100;font-size:2em;margin:10px 0}
+  h2{color:#ef6c00;margin-top:36px;border-bottom:3px solid #ffcc80;padding-bottom:4px}
+  .box{background:#fff;border-radius:16px;padding:18px 22px;margin:16px 0;box-shadow:0 3px 10px rgba(0,0,0,.07)}
+  .example{border-left:8px solid #ef6c00}
+  .example h3{margin:0 0 6px;color:#e65100}
+  .step{margin:4px 0 4px 10px}
+  code,.mono{font-family:Consolas,"Courier New",monospace;background:#fff3e0;padding:1px 6px;border-radius:5px}
+  .q{border-left:8px solid #90a4ae}
+  .q.right{border-left-color:#43a047;background:#f1f8e9}
+  .q.wrong{border-left-color:#e53935;background:#fff5f5}
+  .qnum{font-weight:bold;color:#e65100}
+  .row{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:10px}
+  input[type=text]{font-size:1.05em;padding:8px 12px;border:2px solid #ffcc80;border-radius:10px;width:190px}
+  input[type=text]:focus{outline:none;border-color:#ef6c00;box-shadow:0 0 0 3px #ffe0b2}
+  button{font-size:.95em;padding:8px 16px;border:none;border-radius:10px;cursor:pointer;font-weight:bold}
+  .check{background:#ef6c00;color:#fff} .check:hover{background:#e65100}
+  .hint{background:#ffe082;color:#5d4037} .hint:hover{background:#ffd54f}
+  .sol{background:#ce93d8;color:#311b92}
+  .unit{color:#546e7a}
+  .fb{margin-top:8px;font-weight:bold;min-height:1em}
+  .fb.good{color:#2e7d32} .fb.bad{color:#c62828}
+  .hints{margin-top:8px;color:#e65100;background:#fff3e0;border-radius:10px;padding:0 12px}
+  .hints p{margin:6px 0;padding:6px 0}
+  .solution{margin-top:8px;background:#f3e5f5;border-radius:10px;padding:8px 12px;display:none}
+  #scoreBox{position:sticky;bottom:0;background:#e65100;color:#fff;border-radius:16px 16px 0 0;padding:12px 20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-top:30px}
+  #scoreBox button{background:#ffca28;color:#3e2723}
+  #final{display:none;font-size:1.15em;text-align:center;border:4px solid #43a047}
+  .tipbox{background:#fff8e1;border-left:8px solid #ffb300}
+</style>
+</head>
+<body>
+<div class="wrap">
+<a class="home" href="../../index.html">&larr; Back to all lessons</a>
+<h1>🦠 Math Week 22: Germ Fighters: Immune System &amp; Vaccines Lab</h1>
+<p>Ace, your body is defended every second by an army of white blood cells, and doctors, nurses, and scientists use math to understand the germs they fight. Germs are tiny, so we measure them in <strong>micrometres</strong> (µm), and some bacteria can split in two every 20 minutes, so their numbers grow <strong>exponentially</strong>: faster and faster. Today you'll think like a future doctor and a public-health scientist with <strong>powers and exponents, doubling and halving, exponential growth tables, micrometres and microscope magnification, ratios, rates, percents of a population, herd immunity, and reading a line graph of antibodies after a vaccine</strong>.</p>
+
+<h2>Part 1: Learn the Moves</h2>
+
+<div class="box tipbox">
+  <strong>The 4-Step Problem Solver (your lab scientist's checklist):</strong>
+  <ol>
+    <li><strong>Read</strong>: What is the question actually asking? Underline the numbers and units.</li>
+    <li><strong>Plan</strong>: Which operations do I need, and in what order?</li>
+    <li><strong>Solve</strong>: Do one step at a time and write each step down.</li>
+    <li><strong>Check</strong>: Is my answer reasonable? Did I answer the question that was asked, in the right units?</li>
+  </ol>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 1: Powers and exponents</h3>
+  <p class="step">A <strong>power</strong> is a short way to write repeated multiplication. 2<sup>5</sup> means 2 × 2 × 2 × 2 × 2 = <strong>32</strong>. The small raised 5 is the <strong>exponent</strong>: it tells you how many 2s to multiply.</p>
+  <p class="step">3<sup>3</sup> = 3 × 3 × 3 = <strong>27</strong>. Careful: 3<sup>3</sup> is <em>not</em> 3 × 3 = 9!</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 2: Doubling (exponential growth)</h3>
+  <p class="step">Some bacteria split into 2 every 20 minutes. Start with 1. After 1 hour there have been 60 ÷ 20 = 3 doublings, so there are 2<sup>3</sup> = <strong>8</strong> bacteria.</p>
+  <p class="step">If you start with 30 bacteria and they double 4 times: 30 × 2<sup>4</sup> = 30 × 16 = <strong>480</strong>. Each step multiplies by 2, so the numbers grow faster and faster. That is called <strong>exponential growth</strong>.</p>
+  <p class="step">Halving works the same way backwards: 80 halved 3 times is 80 × ½ × ½ × ½ = 80 ÷ 8 = <strong>10</strong>.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 3: Tiny units and magnification</h3>
+  <p class="step">1 millimetre (mm) = 1000 <strong>micrometres</strong> (µm). So 3 µm = 3 ÷ 1000 = <strong>0.003 mm</strong>.</p>
+  <p class="step">A microscope that magnifies <strong>100×</strong> makes things look 100 times bigger. A 5 µm cell would look 5 × 100 = 500 µm = <strong>0.5 mm</strong> wide.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 4: Percents of a population</h3>
+  <p class="step">If 85% of 600 students have had a flu shot: 0.85 × 600 = <strong>510</strong> students. The rest, 100% − 85% = 15%, is 0.15 × 600 = <strong>90</strong> students.</p>
+  <p class="step"><strong>Percent increase</strong> = change ÷ starting amount × 100. Going from 40 to 60 is a change of 20, and 20 ÷ 40 × 100 = <strong>50%</strong>.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 5: Rates from a graph</h3>
+  <p class="step">If a line on a graph goes from 20 on day 2 to 60 on day 10, it rose 60 − 20 = 40 units in 10 − 2 = 8 days. The <strong>average rate</strong> is 40 ÷ 8 = <strong>5 units per day</strong>.</p>
+</div>
+
+<h2>Part 2: The Challenge (20 problems)</h2>
+<p>Type your answer and press <strong>Check</strong> (or Enter). Fractions like <span class="mono">3/4</span>, mixed numbers like <span class="mono">1 3/4</span>, or decimals like <span class="mono">1.75</span> are fine. Don't type the units, $ signs, or % signs, and you may use spaces or commas in big numbers (1 000 000). Stuck? Press <strong>Hint</strong>. After 2 tries, you can see a full solution.</p>
+
+<div id="questions"></div>
+<div class="box" id="final"></div>
+<div id="scoreBox">
+  <span id="scoreText">Score: 0 / 20 correct</span>
+  <button id="finishBtn" type="button">I'm done! Show my final score</button>
+</div>
+</div>
+
+<script>
+var NAME = "Ace";
+var GRAPH = '<div style="margin:10px 0"><svg viewBox="0 60 680 300" width="100%" style="max-width:680px;background:#fff;border-radius:12px" role="img" aria-label="Line graph of antibody level after a vaccine: day 0 0, day 7 10, day 14 80, day 21 150, day 28 160, day 35 148, day 42 136, day 49 124, day 56 112 units"><text x="360" y="78" text-anchor="middle" font-size="14" font-weight="bold" fill="#263238">Antibody level in the blood after one vaccine dose</text><line x1="80" y1="300.0" x2="640" y2="300.0" stroke="#e0e0e0"/><text x="72" y="304.0" text-anchor="end" font-size="12" fill="#455a64">0</text><line x1="80" y1="276.7" x2="640" y2="276.7" stroke="#e0e0e0"/><text x="72" y="280.7" text-anchor="end" font-size="12" fill="#455a64">20</text><line x1="80" y1="253.3" x2="640" y2="253.3" stroke="#e0e0e0"/><text x="72" y="257.3" text-anchor="end" font-size="12" fill="#455a64">40</text><line x1="80" y1="230.0" x2="640" y2="230.0" stroke="#e0e0e0"/><text x="72" y="234.0" text-anchor="end" font-size="12" fill="#455a64">60</text><line x1="80" y1="206.7" x2="640" y2="206.7" stroke="#e0e0e0"/><text x="72" y="210.7" text-anchor="end" font-size="12" fill="#455a64">80</text><line x1="80" y1="183.3" x2="640" y2="183.3" stroke="#e0e0e0"/><text x="72" y="187.3" text-anchor="end" font-size="12" fill="#455a64">100</text><line x1="80" y1="160.0" x2="640" y2="160.0" stroke="#e0e0e0"/><text x="72" y="164.0" text-anchor="end" font-size="12" fill="#455a64">120</text><line x1="80" y1="136.7" x2="640" y2="136.7" stroke="#e0e0e0"/><text x="72" y="140.7" text-anchor="end" font-size="12" fill="#455a64">140</text><line x1="80" y1="113.3" x2="640" y2="113.3" stroke="#e0e0e0"/><text x="72" y="117.3" text-anchor="end" font-size="12" fill="#455a64">160</text><line x1="80" y1="90.0" x2="640" y2="90.0" stroke="#e0e0e0"/><text x="72" y="94.0" text-anchor="end" font-size="12" fill="#455a64">180</text><line x1="80.0" y1="90.0" x2="80.0" y2="300.0" stroke="#f0f0f0"/><text x="80.0" y="318.0" text-anchor="middle" font-size="12" fill="#455a64">0</text><line x1="150.0" y1="90.0" x2="150.0" y2="300.0" stroke="#f0f0f0"/><text x="150.0" y="318.0" text-anchor="middle" font-size="12" fill="#455a64">7</text><line x1="220.0" y1="90.0" x2="220.0" y2="300.0" stroke="#f0f0f0"/><text x="220.0" y="318.0" text-anchor="middle" font-size="12" fill="#455a64">14</text><line x1="290.0" y1="90.0" x2="290.0" y2="300.0" stroke="#f0f0f0"/><text x="290.0" y="318.0" text-anchor="middle" font-size="12" fill="#455a64">21</text><line x1="360.0" y1="90.0" x2="360.0" y2="300.0" stroke="#f0f0f0"/><text x="360.0" y="318.0" text-anchor="middle" font-size="12" fill="#455a64">28</text><line x1="430.0" y1="90.0" x2="430.0" y2="300.0" stroke="#f0f0f0"/><text x="430.0" y="318.0" text-anchor="middle" font-size="12" fill="#455a64">35</text><line x1="500.0" y1="90.0" x2="500.0" y2="300.0" stroke="#f0f0f0"/><text x="500.0" y="318.0" text-anchor="middle" font-size="12" fill="#455a64">42</text><line x1="570.0" y1="90.0" x2="570.0" y2="300.0" stroke="#f0f0f0"/><text x="570.0" y="318.0" text-anchor="middle" font-size="12" fill="#455a64">49</text><line x1="640.0" y1="90.0" x2="640.0" y2="300.0" stroke="#f0f0f0"/><text x="640.0" y="318.0" text-anchor="middle" font-size="12" fill="#455a64">56</text><line x1="80" y1="300.0" x2="640" y2="300.0" stroke="#455a64" stroke-width="2"/><line x1="80" y1="300.0" x2="80" y2="90.0" stroke="#455a64" stroke-width="2"/><polyline fill="none" stroke="#2e7d32" stroke-width="3" points="80.0,300.0 150.0,288.3 220.0,206.7 290.0,125.0 360.0,113.3 430.0,127.3 500.0,141.3 570.0,155.3 640.0,169.3"/><circle class="pt" cx="80.0" cy="300.0" r="5" fill="#2e7d32"/><text x="80.0" y="290.0" text-anchor="middle" font-size="12" font-weight="bold" fill="#263238">0</text><circle class="pt" cx="150.0" cy="288.3" r="5" fill="#2e7d32"/><text x="150.0" y="278.3" text-anchor="middle" font-size="12" font-weight="bold" fill="#263238">10</text><circle class="pt" cx="220.0" cy="206.7" r="5" fill="#2e7d32"/><text x="220.0" y="196.7" text-anchor="middle" font-size="12" font-weight="bold" fill="#263238">80</text><circle class="pt" cx="290.0" cy="125.0" r="5" fill="#2e7d32"/><text x="290.0" y="115.0" text-anchor="middle" font-size="12" font-weight="bold" fill="#263238">150</text><circle class="pt" cx="360.0" cy="113.3" r="5" fill="#2e7d32"/><text x="360.0" y="103.3" text-anchor="middle" font-size="12" font-weight="bold" fill="#263238">160</text><circle class="pt" cx="430.0" cy="127.3" r="5" fill="#2e7d32"/><text x="430.0" y="117.3" text-anchor="middle" font-size="12" font-weight="bold" fill="#263238">148</text><circle class="pt" cx="500.0" cy="141.3" r="5" fill="#2e7d32"/><text x="500.0" y="131.3" text-anchor="middle" font-size="12" font-weight="bold" fill="#263238">136</text><circle class="pt" cx="570.0" cy="155.3" r="5" fill="#2e7d32"/><text x="570.0" y="145.3" text-anchor="middle" font-size="12" font-weight="bold" fill="#263238">124</text><circle class="pt" cx="640.0" cy="169.3" r="5" fill="#2e7d32"/><text x="640.0" y="159.3" text-anchor="middle" font-size="12" font-weight="bold" fill="#263238">112</text><text x="360.0" y="350" text-anchor="middle" font-size="14" font-weight="bold" fill="#263238">Days after the vaccine</text><text x="18" y="195.0" text-anchor="middle" font-size="14" font-weight="bold" fill="#263238" transform="rotate(-90 18 195.0)">Antibody level (units)</text></svg></div>';
+var TABLE = '<table style="border-collapse:collapse;margin:10px 0;font-size:.95em;background:#fff"><caption style="font-weight:bold;text-align:left;padding-bottom:4px">Lab dish: bacteria counted every hour</caption><tr><th style="border:1px solid #bdbdbd;padding:4px 10px;background:#e8f5e9">Time (hours)</th><th style="border:1px solid #bdbdbd;padding:4px 10px;background:#e8f5e9">Number of bacteria</th></tr><tr><td style="border:1px solid #bdbdbd;padding:4px 10px;text-align:center">0</td><td style="border:1px solid #bdbdbd;padding:4px 10px;text-align:right">50</td></tr><tr><td style="border:1px solid #bdbdbd;padding:4px 10px;text-align:center">1</td><td style="border:1px solid #bdbdbd;padding:4px 10px;text-align:right">100</td></tr><tr><td style="border:1px solid #bdbdbd;padding:4px 10px;text-align:center">2</td><td style="border:1px solid #bdbdbd;padding:4px 10px;text-align:right">200</td></tr><tr><td style="border:1px solid #bdbdbd;padding:4px 10px;text-align:center">3</td><td style="border:1px solid #bdbdbd;padding:4px 10px;text-align:right">400</td></tr><tr><td style="border:1px solid #bdbdbd;padding:4px 10px;text-align:center">4</td><td style="border:1px solid #bdbdbd;padding:4px 10px;text-align:right">800</td></tr><tr><td style="border:1px solid #bdbdbd;padding:4px 10px;text-align:center">5</td><td style="border:1px solid #bdbdbd;padding:4px 10px;text-align:right">1600</td></tr></table>';
+var QUESTIONS = [
+ {t:TABLE+"A scientist put <strong>50</strong> bacteria in a lab dish full of food. The table shows the count every hour: the number doubles each hour. If the pattern continues, how many bacteria will there be at <strong>8 hours</strong>?", a:"12800", u:"bacteria",
+  h:["Keep doubling: 1600 at 5 h, then 6 h, 7 h, 8 h.","Or use a power: 50 × 2<sup>8</sup> = 50 × 256."],
+  s:"5 h: 1600, 6 h: 3200, 7 h: 6400, 8 h: 12 800. (Check: 50 × 2<sup>8</sup> = 50 × 256 = 12 800.)"},
+ {t:"Use the table in question 1. What is the <strong>percent increase</strong> from 3 hours to 4 hours?", a:"100", u:"%",
+  h:["Percent increase = change ÷ starting amount × 100.","The change is 800 − 400 = 400. Now 400 ÷ 400 × 100."],
+  s:"800 − 400 = 400. 400 ÷ 400 × 100 = 100%. Doubling is always a 100% increase!"},
+ {t:"Use the table in question 1. How many <strong>times as many</strong> bacteria are there at 5 hours as at 0 hours?", a:"32", u:"times",
+  h:["\"How many times as many\" means divide: 1600 ÷ 50.","There were 5 doublings, so it should be 2<sup>5</sup>."],
+  s:"1600 ÷ 50 = 32 = 2<sup>5</sup>, because the number doubled 5 times."},
+ {t:"One bacterium splits into 2 every <strong>20 minutes</strong>. Starting with <strong>1</strong> bacterium, how many will there be after <strong>2 hours</strong>?", a:"64", u:"bacteria",
+  h:["2 hours = 120 minutes. How many 20-minute doublings is that?","120 ÷ 20 = 6 doublings, so find 2<sup>6</sup>."],
+  s:"120 ÷ 20 = 6 doublings. 2<sup>6</sup> = 2 × 2 × 2 × 2 × 2 × 2 = 64 bacteria."},
+ {t:"Write 2<sup>10</sup> as an ordinary number.", a:"1024", u:"",
+  h:["2<sup>5</sup> = 32 (Worked Example 1).","2<sup>10</sup> = 2<sup>5</sup> × 2<sup>5</sup> = 32 × 32."],
+  s:"2<sup>10</sup> = 32 × 32 = 1024."},
+ {t:"Use the bacterium from question 4 (doubling every 20 minutes, starting with 1). How many <strong>minutes</strong> will it take until there are <strong>more than 1000</strong> bacteria for the first time?", a:"200", u:"minutes",
+  h:["Find the smallest power of 2 that is bigger than 1000. 2<sup>9</sup> = 512 is not enough.","2<sup>10</sup> = 1024 is the first one over 1000, so that's 10 doublings of 20 minutes each."],
+  s:"2<sup>9</sup> = 512 and 2<sup>10</sup> = 1024, so 10 doublings are needed. 10 × 20 = 200 minutes (3 hours and 20 minutes). Over a thousand from just one cell, in an afternoon!"},
+ {t:"A typical rod-shaped bacterium is about <strong>2 µm</strong> long. Remember, 1 mm = 1000 µm. How many of these bacteria lined up end to end would make a line <strong>1 mm</strong> long?", a:"500", u:"bacteria",
+  h:["1 mm = 1000 µm.","1000 ÷ 2 = ?"],
+  s:"1000 µm ÷ 2 µm = 500 bacteria in a 1 mm line."},
+ {t:"A flu virus is only about <strong>0.1 µm</strong> across. How many <strong>times longer</strong> is the 2 µm bacterium than the flu virus?", a:"20", u:"times",
+  h:["Divide the bigger length by the smaller one: 2 ÷ 0.1.","Dividing by 0.1 is the same as multiplying by 10."],
+  s:"2 ÷ 0.1 = 20. The bacterium is 20 times longer. Viruses are so small that you need an electron microscope to see them!"},
+ {t:"A school microscope magnifies <strong>400×</strong>. How long will the 2 µm bacterium <strong>appear</strong> under it, in <strong>millimetres</strong>?", a:"0.8", u:"mm",
+  h:["Magnified length = 2 µm × 400.","That gives 800 µm. Change µm to mm by dividing by 1000."],
+  s:"2 × 400 = 800 µm. 800 ÷ 1000 = 0.8 mm."},
+ {t:"A white blood cell called a neutrophil is about <strong>12 µm</strong> wide, and a red blood cell is about <strong>8 µm</strong> wide. How many <strong>times as wide</strong> is the white blood cell?", a:"1.5", u:"times",
+  h:["Divide: 12 ÷ 8.","12 ÷ 8 = 3 ÷ 2."],
+  s:"12 ÷ 8 = 1.5 times as wide."},
+ {t:"Doctors recommend scrubbing your hands with soap for at least <strong>20 seconds</strong>. If Ace washes his hands <strong>6 times a day</strong> for 20 seconds each, how many <strong>minutes</strong> of hand-washing is that in <strong>one week</strong>?", a:"14", u:"minutes",
+  h:["Seconds per day: 6 × 20 = 120 seconds.","For 7 days: 120 × 7 = 840 seconds. Now change seconds to minutes."],
+  s:"6 × 20 = 120 s per day. 120 × 7 = 840 s. 840 ÷ 60 = 14 minutes a week, a small price for fewer colds!"},
+ {t:"In a classroom experiment, a student's hands had about <strong>30 000</strong> germs. Washing well with soap and water removed <strong>99%</strong> of them. About how many germs were <strong>left</strong>?", a:"300", u:"germs",
+  h:["If 99% were removed, what percent are left?","1% of 30 000 = 30 000 ÷ 100."],
+  s:"100% − 99% = 1% left. 1% of 30 000 = 300 germs."},
+ {t:"A school has <strong>480</strong> students, and <strong>90%</strong> of them are vaccinated against measles. How many students are <strong>not</strong> vaccinated?", a:"48", u:"students",
+  h:["100% − 90% = 10% are not vaccinated.","10% of 480 = 480 ÷ 10."],
+  s:"10% of 480 = 48 students."},
+ {t:"<strong>Herd immunity:</strong> when enough people are immune, a germ has trouble spreading, which also protects people who can't get vaccinated. For measles, about <strong>95%</strong> of people need to be immune. A town has <strong>24 000</strong> people. How many need to be immune?", a:"22800", u:"people",
+  h:["95% = 0.95.","0.95 × 24 000 = ? (Or: 5% of 24 000 is 1200, so 24 000 − 1200.)"],
+  s:"0.95 × 24 000 = 22 800 people. (5% of 24 000 = 1200, and 24 000 − 1200 = 22 800.)"},
+ {t:"A new cold virus spreads in <strong>rounds</strong>. In round 0, one person is sick. In each round, every newly sick person passes the virus to <strong>3</strong> others. How many <strong>new</strong> cases are there in <strong>round 4</strong>?", a:"81", u:"new cases",
+  h:["Round 1: 3. Round 2: 3 × 3 = 9. Keep multiplying by 3.","That's 3<sup>4</sup> = 3 × 3 × 3 × 3."],
+  s:"Round 1: 3, round 2: 9, round 3: 27, round 4: 81 new cases. That's 3<sup>4</sup> = 81."},
+ {t:"Use question 15. How many people have been sick <strong>in total</strong> from round 0 to round 4 (including the first person)?", a:"121", u:"people",
+  h:["Add every round: 1 + 3 + 9 + 27 + 81.","1 + 3 + 9 + 27 = 40. Now add 81."],
+  s:"1 + 3 + 9 + 27 + 81 = 121 people."},
+ {t:"Vaccines and hand-washing slow the spread. Now each sick person passes the virus to only <strong>0.5</strong> people on average (half a person, on average). One round has <strong>64</strong> new cases. How many new cases will there be <strong>3 rounds later</strong>?", a:"8", u:"new cases",
+  h:["Multiplying by 0.5 is the same as halving.","Halve 64 three times: 64 → 32 → 16 → ?"],
+  s:"64 × 0.5 × 0.5 × 0.5 = 64 ÷ 8 = 8 new cases. Multiplying by less than 1 each round makes the outbreak shrink: that's exponential decay!"},
+ {t:GRAPH+"After a vaccine, the immune system makes <strong>antibodies</strong>, proteins that stick to a germ and help destroy it. The line graph shows the antibody level in a person's blood after one dose. On which <strong>day</strong> was the antibody level the <strong>highest</strong>?", a:"28", u:"day",
+  h:["Find the highest point on the line.","The highest point is 160 units. Read the day below it."],
+  s:"The peak is 160 units on day 28."},
+ {t:"Use the graph in question 18. What was the <strong>average rate</strong> of increase from <strong>day 7</strong> to <strong>day 21</strong>, in units per day?", a:"10", u:"units per day",
+  h:["Rise: 150 − 10 = 140 units.","Time: 21 − 7 = 14 days. 140 ÷ 14 = ?"],
+  s:"(150 − 10) ÷ (21 − 7) = 140 ÷ 14 = 10 units per day."},
+ {t:"Use the graph in question 18. On day 56, what <strong>percent</strong> of the peak antibody level was still in the blood?", a:"70", u:"%",
+  h:["Day 56 level ÷ peak level × 100.","112 ÷ 160 = 0.7"],
+  s:"112 ÷ 160 = 0.7 = 70% of the peak. Antibody levels slowly fall, but <em>memory cells</em> remember the germ for years, which is why some vaccines need a booster."}
+];
+
+var PRAISE = ["Nice work, Ace!","Correct! Germs defeated! 🦠","Yes! Dr. Ace!","Excellent, Ace. That was a tough one!","Right on target! 🎯","Brilliant thinking, Ace!","Immune-system-level smart! 🛡️"];
+var ENCOURAGE = ["Not quite. Check your steps and try again!","Close call. Try again, Ace! Maybe use a hint?","Hmm, not yet. Re-read the question carefully.","Keep going, Ace. Mistakes help your brain grow!"];
+
+function parseAnswer(str){
+  if(str===undefined||str===null) return NaN;
+  var s=String(str).trim().toLowerCase();
+  s=s.replace(/[\u2212\u2013]/g,"-");
+  s=s.replace(/(\d),(?=\d{3}(\D|$))/g,"$1");
+  s=s.replace(/[^0-9.\/\- ]/g," ").replace(/\s+/g," ").trim();
+  s=s.replace(/\s*\/\s*/g,"/");
+  var m;
+  if((m=s.match(/^(-?\d+) (\d+)\/(\d+)$/))){ var w=parseFloat(m[1]),n=parseFloat(m[2]),d=parseFloat(m[3]); if(d===0)return NaN; return w<0? w-n/d : w+n/d; }
+  if((m=s.match(/^(-?\d+(?:\.\d+)?)\/(\d+(?:\.\d+)?)$/))){ var d2=parseFloat(m[2]); if(d2===0)return NaN; return parseFloat(m[1])/d2; }
+  s=s.replace(/ /g,"");
+  if(/^-?(\d+\.?\d*|\.\d+)$/.test(s)) return parseFloat(s);
+  return NaN;
+}
+function isCorrect(input,key){
+  var a=parseAnswer(input), k=parseAnswer(key);
+  if(isNaN(a)) return false;
+  var isInt=Math.abs(k-Math.round(k))<1e-12;
+  var tol=isInt?1e-9:0.005;
+  return Math.abs(a-k)<=tol;
+}
+
+function isRomanCorrect(input,key){ return String(input).replace(/\s+/g,"").toUpperCase()===key; }
+var state=[];
+function render(){
+  var box=document.getElementById("questions");
+  QUESTIONS.forEach(function(q,i){
+    state.push({correct:false,tries:0,hints:0});
+    var d=document.createElement("div");
+    d.className="box q"; d.id="q"+i;
+    d.innerHTML='<div><span class="qnum">'+(i+1)+'.</span> '+q.t+'</div>'+
+      '<div class="row"><input type="text"'+(q.r?' placeholder="e.g. MMXXVI"':'')+' id="in'+i+'" aria-label="Answer to question '+(i+1)+'" autocomplete="off"> <span class="unit">'+q.u+'</span>'+
+      '<button type="button" class="check" data-i="'+i+'">Check</button>'+
+      '<button type="button" class="hint" data-i="'+i+'">Hint 💡</button>'+
+      '<button type="button" class="sol" data-i="'+i+'" style="display:none">Show solution</button></div>'+
+      '<div class="fb" id="fb'+i+'"></div><div class="hints" id="hints'+i+'"></div>'+
+      '<div class="solution" id="sol'+i+'"><strong>Solution:</strong> '+q.s+'</div>';
+    box.appendChild(d);
+  });
+  box.addEventListener("click",function(e){
+    var b=e.target; if(b.tagName!=="BUTTON")return;
+    var i=+b.getAttribute("data-i");
+    if(b.className==="check") check(i);
+    else if(b.className==="hint") hint(i);
+    else if(b.className==="sol") document.getElementById("sol"+i).style.display="block";
+  });
+  box.addEventListener("keydown",function(e){
+    if(e.key==="Enter"&&e.target.tagName==="INPUT"){ check(+e.target.id.slice(2)); }
+  });
+}
+function pick(arr){return arr[Math.floor(Math.random()*arr.length)];}
+function check(i){
+  var val=document.getElementById("in"+i).value;
+  var fb=document.getElementById("fb"+i), card=document.getElementById("q"+i);
+  if(val.trim()===""){fb.className="fb bad";fb.textContent="Type an answer first, Ace!";return;}
+  var isR=!!QUESTIONS[i].r;
+  if(isR&&!/^[ivxlcdm\s]+$/i.test(val)){fb.className="fb bad";fb.textContent="Use only Roman numeral letters: I, V, X, L, C, D, M.";return;}
+  if(!isR&&isNaN(parseAnswer(val))){fb.className="fb bad";fb.textContent="I can't read that as a number. Try something like 42, 3.5, 3/4 or 1 3/4.";return;}
+  state[i].tries++;
+  if(isR?isRomanCorrect(val,QUESTIONS[i].a):isCorrect(val,QUESTIONS[i].a)){
+    state[i].correct=true; card.className="box q right"; fb.className="fb good";
+    fb.textContent="✅ "+pick(PRAISE)+(state[i].tries===1?" (first try!)":"");
+  } else {
+    state[i].correct=false; card.className="box q wrong"; fb.className="fb bad";
+    fb.textContent="❌ "+pick(ENCOURAGE);
+    if(state[i].tries>=2) card.querySelector(".sol").style.display="inline-block";
+  }
+  updateScore();
+}
+function hint(i){
+  var q=QUESTIONS[i], s=state[i], hb=document.getElementById("hints"+i);
+  if(s.hints<q.h.length){
+    var p=document.createElement("p"); p.textContent="💡 Hint "+(s.hints+1)+": "+q.h[s.hints]; hb.appendChild(p); s.hints++;
+  }
+  if(s.hints>=q.h.length) document.querySelector("#q"+i+" .hint").disabled=true;
+  updateScore();
+}
+function counts(){
+  var c=0,first=0,h=0;
+  state.forEach(function(s){ if(s.correct){c++; if(s.tries===1)first++;} h+=s.hints; });
+  return {correct:c,first:first,hints:h};
+}
+function updateScore(){
+  var k=counts();
+  document.getElementById("scoreText").textContent="Score: "+k.correct+" / "+QUESTIONS.length+" correct · hints used: "+k.hints;
+}
+function finish(){
+  var k=counts(), n=QUESTIONS.length, pct=Math.round(100*k.correct/n);
+  var msg;
+  if(pct===100) msg="🏆 PERFECT SCORE! Incredible work, Ace. A real doctor would be impressed!";
+  else if(pct>=85) msg="🌟 Outstanding, Ace! That's a Grade 6-7 level performance!";
+  else if(pct>=65) msg="💪 Great effort, Ace! Review the ones you missed and try them again.";
+  else if(pct>=40) msg="👍 Good start, Ace! These problems are tough. Use the hints and solutions to learn the tricks, then try again.";
+  else msg="🌱 These are challenge problems, well above grade level. Every great doctor started as a beginner! Go through the worked examples and try again, Ace!";
+  var f=document.getElementById("final");
+  f.style.display="block";
+  f.innerHTML="<h2 style='border:none;margin-top:0'>Final Score: "+k.correct+" / "+n+" ("+pct+"%)</h2>"+
+    "<p>Correct on the first try: "+k.first+" · Hints used: "+k.hints+"</p><p>"+msg+"</p>"+
+    "<p style='font-size:.85em;color:#546e7a'>Finished on "+new Date().toLocaleString("en-CA")+"</p>";
+  f.scrollIntoView({behavior:"smooth"});
+}
+render();
+updateScore();
+document.getElementById("finishBtn").addEventListener("click",finish);
+</script>
+</body>
+</html>

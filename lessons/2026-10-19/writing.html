@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Writing (Oct. 19): Science Adventure Story (The Germ Wars) + Grammar Clinic</title>
+<style>
+  body{font-family:"Segoe UI",Verdana,Arial,sans-serif;font-size:20px;line-height:1.6;margin:0;background:#fff8f0;color:#2c2416}
+  .wrap{max-width:880px;margin:0 auto;padding:20px 18px 80px}
+  a.home{font-size:.9em;color:#bf360c}
+  h1{color:#e65100;font-size:2em;margin:10px 0}
+  h2{color:#ef6c00;margin-top:36px;border-bottom:3px solid #ffcc80;padding-bottom:4px}
+  h3{color:#ef6c00}
+  .box{background:#fff;border-radius:16px;padding:18px 22px;margin:16px 0;box-shadow:0 3px 10px rgba(0,0,0,.07)}
+  .tipbox{background:#fff8e1;border-left:8px solid #ffb300}
+  .senses{display:grid;gap:8px;margin:10px 0;grid-template-columns:repeat(auto-fit,minmax(140px,1fr))}
+  .senses .side{border-radius:14px;padding:10px 16px;background:#fff3e0}
+  .ts{background:#ffcc80;border-radius:5px;padding:1px 3px}
+  .ev{background:#c8e6c9;border-radius:5px;padding:1px 3px}
+  .ex{background:#ffe0b2;border-radius:5px;padding:1px 3px}
+  .cs{background:#e1bee7;border-radius:5px;padding:1px 3px}
+  .legend span{display:inline-block;margin:4px 8px 4px 0;font-size:.85em}
+  .model{font-family:Georgia,"Times New Roman",serif;font-size:1.05em;line-height:1.9}
+  .row{padding:10px 6px;border-bottom:1px dashed #ddd}
+  .row.right{background:#f1f8e9} .row.wrong{background:#fff5f5}
+  select{font-size:.9em;padding:5px 8px;border-radius:8px;border:2px solid #ffb74d;font-family:inherit}
+  .q{border-left:8px solid #b0bec5}
+  .q.right{border-left-color:#43a047;background:#f1f8e9}
+  .q.wrong{border-left-color:#e53935;background:#fff5f5}
+  .opt{display:block;width:100%;text-align:left;font-size:.95em;background:#fafafa;border:2px solid #e0e0e0;border-radius:10px;padding:8px 14px;margin:8px 0;cursor:pointer;font-family:inherit}
+  .opt:hover{border-color:#ffb74d;background:#fff}
+  .opt.sel-right{background:#c8e6c9;border-color:#43a047}
+  .opt.sel-wrong{background:#ffcdd2;border-color:#e53935}
+  .fb{margin-top:6px;font-weight:bold}
+  .fb.good{color:#2e7d32} .fb.bad{color:#c62828}
+  .explain{font-weight:normal;color:#e65100}
+  .bad-sent{font-family:Consolas,"Courier New",monospace;background:#ffebee;padding:6px 10px;border-radius:8px;display:inline-block;margin:6px 0}
+  input.fix{width:100%;box-sizing:border-box;font-size:1em;padding:8px 12px;border:2px solid #ffb74d;border-radius:10px;font-family:inherit}
+  button{font-size:.95em;padding:8px 16px;border:none;border-radius:10px;cursor:pointer;font-weight:bold;font-family:inherit}
+  .go{background:#ef6c00;color:#fff} .go:hover{background:#e65100}
+  .hint{background:#ffe082;color:#5d4037}
+  .blue{background:#1e88e5;color:#fff}
+  .purple{background:#8e24aa;color:#fff}
+  .grey{background:#cfd8dc;color:#263238}
+  .btnrow{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px}
+  textarea{width:100%;box-sizing:border-box;min-height:300px;font-size:1.05em;line-height:1.7;font-family:Georgia,"Times New Roman",serif;padding:14px;border:3px solid #ffb74d;border-radius:12px}
+  textarea:focus{outline:none;border-color:#ef6c00}
+  .counter{display:flex;flex-wrap:wrap;gap:20px;align-items:center;margin:8px 0;font-weight:bold}
+  .meter{flex:1;min-width:200px;height:18px;background:#e0e0e0;border-radius:9px;overflow:hidden}
+  .meter div{height:100%;width:0;background:#ffb300;transition:width .2s}
+  .checklist label{display:block;padding:6px 4px;cursor:pointer}
+  .checklist input{transform:scale(1.4);margin-right:10px}
+  .prompts label{display:block;background:#fff3e0;border-radius:10px;padding:10px 14px;margin:8px 0;cursor:pointer}
+  .prompts input{transform:scale(1.3);margin-right:8px}
+  #scoreBox{position:sticky;bottom:0;background:#e65100;color:#fff;border-radius:16px 16px 0 0;padding:12px 20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-top:30px}
+  .w5{display:grid;gap:8px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));margin:10px 0}
+  .w5 label{display:block;font-weight:bold;color:#e65100}
+  .w5 input{width:100%;box-sizing:border-box;font-size:.95em;padding:6px 10px;border:2px solid #ffb74d;border-radius:8px;font-family:inherit}
+  #printArea{display:none}
+  @media print{
+    body{background:#fff;font-size:14pt}
+    .wrap,#scoreBox{display:none !important}
+    #printArea{display:block;font-family:Georgia,serif;line-height:1.8}
+    #printArea h1{font-size:18pt;margin:0 0 6pt}
+    #printArea .meta{font-size:11pt;color:#444}
+    #printArea .text{white-space:pre-wrap;border-top:1px solid #999;padding-top:10pt;margin-top:10pt}
+    #printArea .lines{margin-top:24pt;border-top:1px solid #999;padding-top:6pt;font-size:11pt}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+<a class="home" href="../../index.html">&larr; Back to all lessons</a>
+<h1>✍️ Writing Week 22: Science Adventure Story: The Germ Wars 🦠🛡️</h1>
+<p>Yesterday you wrote a news-style weather report that stuck to the facts. Today, Ace, you'll use real science in a completely different way: you'll write a <strong>science adventure story</strong> told from <em>inside the human body</em>. Your narrator might be a white blood cell, a B cell, or a memory cell, and the villain is an invading germ. A great science story does two jobs at once: it <strong>entertains</strong> readers with a hook, a problem, rising action, and an exciting climax, and it <strong>teaches</strong> them how the immune system really works. By the end, a reader should be on the edge of their seat <em>and</em> know what an antibody does.</p>
+
+<h2>Part 1: The Lesson</h2>
+<div class="box">
+  <h3 style="margin-top:0">A science adventure story has six parts 🧩</h3>
+  <p>Think of it as a story mountain: you climb up to the most exciting moment, then come back down.</p>
+  <div class="senses">
+    <div class="side"><strong>1. Hook:</strong> a first line that grabs the reader: a sound, a surprise, a line of dialogue, or a question</div>
+    <div class="side"><strong>2. Narrator + setting:</strong> who is telling the story and <em>where</em> in the body it happens</div>
+    <div class="side"><strong>3. The problem:</strong> the germ invades. How does it get in, and why is it dangerous?</div>
+    <div class="side"><strong>4. Rising action:</strong> two or three events that build tension as the defenders fight back and things get harder</div>
+    <div class="side"><strong>5. Climax:</strong> the turning point, the biggest and most exciting moment of the battle</div>
+    <div class="side"><strong>6. Resolution:</strong> how things settle down and what changed (healing, memory cells, a lesson learned)</div>
+  </div>
+  <h3>Five storyteller's moves</h3>
+  <ul>
+    <li><strong>Pick a point of view and keep it:</strong> a <strong>first-person</strong> narrator uses <em>I, me, we, our</em>. Don't switch to "he" or "you" halfway through. Stay in the <strong>past tense</strong> for the whole story (I squeezed, I swallowed, we won).</li>
+    <li><strong>Show, don't tell:</strong> instead of "it was scary," write what the narrator <em>sees, hears, and feels</em>: "The bacteria wriggled through the torn skin, splitting in two again and again."</li>
+    <li><strong>Use dialogue:</strong> a few lines of speech bring characters to life. Start a new line for each new speaker, and put the punctuation <em>inside</em> the quotation marks: "Follow me!" shouted the phagocyte.</li>
+    <li><strong>Make the science real:</strong> weave in true facts from today's reading: skin as a wall, mucus, inflammation, phagocytes, antibodies fitting a germ like a key in a lock, memory cells, and vaccines. Readers should learn something!</li>
+    <li><strong>Control the pace:</strong> use short, punchy sentences for action ("It split. Then it split again.") and longer sentences for description and calm moments.</li>
+  </ul>
+  <p><strong>Grown-up words:</strong> the character who tells the story is the <strong>narrator</strong>, and the angle it is told from is the <strong>point of view</strong>. Giving human feelings and actions to something that isn't human, like a brave white blood cell, is called <strong>personification</strong>. The <strong>climax</strong> is the peak of the story mountain, and the <strong>resolution</strong> is how the problem is solved.</p>
+</div>
+
+<div class="box">
+  <h3 style="margin-top:0">Model Science Adventure Story (short version)</h3>
+  <p class="legend"><span class="ts">Hook + narrator + setting</span><span class="ev">Problem + rising action</span><span class="ex">Climax</span><span class="cs">Resolution</span></p>
+  <p class="model">
+    <span class="ts">BEEP! BEEP! BEEP! The danger signal blasted through the bloodstream just after recess. I am Phaggy, a phagocyte, one of the white blood cells that patrol a ten-year-old's body, and I was drifting through a tiny blood vessel in his right knee when the alarm went off.</span><br>
+    <span class="ev">My boy had slid into second base, and the wall of skin was torn open. Through the scrape poured an army of bacteria, wriggling and splitting in two. "Defenders, follow me!" I shouted. I squeezed out of the blood vessel and swallowed the first bacterium whole. More blood rushed in behind me, so the knee turned red, warm, and puffy. That inflammation meant help was on the way, but the bacteria kept doubling, faster and faster.</span><br>
+    <span class="ex">Just when I thought we would be overrun, a cloud of Y-shaped antibodies drifted in from the B cells. They clamped onto the germs like keys in locks. The germs froze. We charged, and we swallowed every last one.</span><br>
+    <span class="cs">A week later, a pink new layer of skin covered the scrape. Deep inside the body, a memory cell quietly saved a picture of the invaders. "If you ever come back," it whispered, "we'll be ready."</span>
+  </p>
+  <p><strong>Notice:</strong> the hook is a sound that grabs you; the narrator (I, a phagocyte) stays in first person and the past tense the whole way; the dialogue has its punctuation inside the quotation marks; real science (skin as a wall, inflammation, antibodies like keys, memory cells) is woven into the action; and the short sentences "The germs froze. We charged." speed up the climax.</p>
+</div>
+
+<h2>Part 2: Name That Story Part</h2>
+<div class="box">
+  <p>Each line comes from a student's science adventure story about the immune system. Choose which <strong>part of the story</strong> it belongs in.</p>
+  <div id="labelRows"></div>
+  <div class="btnrow"><button type="button" class="go" id="checkLabels">Check my answers</button></div>
+  <div class="fb" id="labelFb"></div>
+</div>
+
+<h2>Part 3: Grammar Clinic 🦠</h2>
+<div class="box tipbox">A careful author checks every sentence before the story goes to readers! <strong>Section A:</strong> pick the correct sentence. <strong>Section B:</strong> type the sentence again with <em>all</em> mistakes fixed. We use <strong>Canadian spelling</strong> (defence, colour, centre, metre). Today, watch <strong>dialogue punctuation</strong> (punctuation goes inside the quotation marks), <strong>consistent past tense</strong>, <strong>plural possessives</strong> (cells' vs. cell's), <strong>there / their / they're</strong>, <strong>who's / whose</strong>, <strong>commas in a series</strong>, and homophones like <strong>whole / hole</strong>.</div>
+<h3>Section A: Pick the correct sentence</h3>
+<div id="gmc"></div>
+<h3>Section B: Fix the sentence</h3>
+<p>Retype the whole sentence correctly, with capital letters and punctuation. Each one has <strong>at least two</strong> mistakes.</p>
+<div id="gfix"></div>
+
+<h2>Part 4: Your Turn to Write</h2>
+<div class="box">
+  <h3 style="margin-top:0">Step 1: Choose your story</h3>
+  <div class="prompts" id="prompts">
+    <label><input type="radio" name="prompt" value="Story A: A day in the life of a white blood cell" checked> 🛡️ <strong>Story A:</strong> Write a first-person story told by a <em>white blood cell</em> (a phagocyte) on the day its kid gets a scrape at the playground. Show how germs get in, how inflammation calls for help, and how the battle is won.</label>
+    <label><input type="radio" name="prompt" value="Story B: The memory cell who remembered"> 🧠 <strong>Story B:</strong> Write a story told by a <em>memory cell</em>. Years ago, a vaccine gave it a "practice drill" with a harmless piece of a virus. Today the real virus finally attacks. Show how the memory cell recognizes it and how the body wins before the kid even feels sick.</label>
+    <label><input type="radio" name="prompt" value="Story C: The cold that tried to take over Room 12"> 🏫 <strong>Story C:</strong> Write a story about a <em>contagious</em> cold virus that tries to spread through a Grade 5 classroom, told from the virus's point of view. Show how hand-washing, coughing into elbows, and strong immune systems stop it. (The villain loses!)</label>
+  </div>
+  <p><strong>Plan your story:</strong> jot a few words for each box. (These notes save with your writing.)</p>
+  <div class="w5" id="w5">
+    <div><label for="w5who">Hook (a sound, surprise, dialogue, or question)</label><input id="w5who" type="text" autocomplete="off"></div>
+    <div><label for="w5place">Narrator + setting (who? where in the body?)</label><input id="w5place" type="text" autocomplete="off"></div>
+    <div><label for="w5facts">The problem: what germ invades, and how?</label><input id="w5facts" type="text" autocomplete="off"></div>
+    <div><label for="w5senses">Rising action (2 or 3 events)</label><input id="w5senses" type="text" autocomplete="off"></div>
+    <div><label for="w5feel">Climax: the turning point</label><input id="w5feel" type="text" autocomplete="off"></div>
+    <div><label for="w5closing">Resolution: what changed?</label><input id="w5closing" type="text" autocomplete="off"></div>
+  </div>
+
+  <h3>Step 2: Write your story</h3>
+  <p><strong>Goal:</strong> a story of <strong>200 to 300 words</strong> with a <strong>title</strong>, a <strong>hook</strong>, a <strong>narrator</strong> whose point of view stays the same, a clear <strong>setting</strong> inside the body, a <strong>problem</strong>, <strong>rising action</strong>, a <strong>climax</strong>, and a <strong>resolution</strong>. Use <strong>at least two lines of dialogue</strong>, at least <strong>three true science facts</strong> from today's reading (skin, mucus, inflammation, phagocytes, antibodies, memory cells, immunity, vaccines), and stay in the <strong>past tense</strong>.</p>
+  <p><button type="button" class="hint" id="templateBtn">📋 Add the story headings for me</button></p>
+  <label for="essay"><strong>Write here, Ace:</strong></label>
+  <textarea id="essay" placeholder="TITLE: ..."></textarea>
+  <div class="counter">
+    <span id="wc">0 words</span>
+    <span id="sc">0 sentences</span>
+    <div class="meter" aria-hidden="true"><div id="meterBar"></div></div>
+  </div>
+  <div class="fb" id="wcMsg">Aim for 200 to 300 words.</div>
+  <p style="font-size:.8em;color:#607d8b" id="saveNote">Your writing is saved automatically in this browser as you type.</p>
+
+  <h3>Self-check before you finish ✅</h3>
+  <div class="checklist" id="checklist">
+    <label><input type="checkbox"> My story has a <strong>title</strong> and a <strong>hook</strong> that grabs the reader in the first line.</label>
+    <label><input type="checkbox"> My <strong>narrator</strong> and <strong>setting</strong> are clear, and I kept the same <strong>point of view</strong> the whole time.</label>
+    <label><input type="checkbox"> My story climbs the story mountain: <strong>problem</strong>, <strong>rising action</strong>, <strong>climax</strong>, and <strong>resolution</strong>.</label>
+    <label><input type="checkbox"> I used at least <strong>three true science facts</strong> from today's reading.</label>
+    <label><input type="checkbox"> I used at least <strong>two lines of dialogue</strong>, with punctuation inside the quotation marks.</label>
+    <label><input type="checkbox"> I showed instead of told, and I used short sentences to speed up the action.</label>
+    <label><input type="checkbox"> I checked the <strong>past tense</strong>, there / their / they're, apostrophes, commas, and <strong>Canadian spelling</strong> (defence, colour, centre).</label>
+  </div>
+  <div class="btnrow">
+    <button type="button" class="blue" id="downloadBtn">⬇️ Download my writing (for Dad)</button>
+    <button type="button" class="purple" id="printBtn">🖨️ Print my writing</button>
+    <button type="button" class="grey" id="clearBtn">Start over</button>
+  </div>
+  <div class="fb" id="doneMsg"></div>
+</div>
+
+<div id="scoreBox"><span id="scoreText"></span><span>Keep going, Dr. Ace! 🦠</span></div>
+</div>
+
+<div id="printArea"></div>
+
+<script>
+var NAME="Ace";
+var PRAISE=["Nice work, Ace!","Correct! Great editing eye!","Yes! Ace fixed it!","Excellent, Dr. Ace!","Germs defeated! 🛡️"];
+function pick(a){return a[Math.floor(Math.random()*a.length)];}
+
+var LABELS=["Hook", "Narrator + setting", "The problem", "Rising action", "Climax", "Resolution"];
+var LABEL_ITEMS=[
+ {s:"BEEP! BEEP! The alarm signal blasted through the bloodstream, and every white blood cell in the left leg woke up at once.", a:"Hook"},
+ {s:"I am Rex, a phagocyte, and I patrol the tiny blood vessels just under the skin of a ten-year-old's knee.", a:"Narrator + setting"},
+ {s:"The kid had tripped on the soccer field, and thousands of bacteria were pouring through the scrape in his skin.", a:"The problem"},
+ {s:"I squeezed out of the blood vessel, swallowed three bacteria, and sent out a chemical signal for help as the knee turned red and swollen.", a:"Rising action"},
+ {s:"Just when we were outnumbered, a wave of antibodies arrived, locked onto the last bacteria, and we destroyed every one of them.", a:"Climax"},
+ {s:"By the next week, the scrape had healed, and our memory cells were storing a picture of the invaders in case they ever came back.", a:"Resolution"}
+];
+var labelScore=0, labelChecked=false;
+function buildLabels(){
+  var box=document.getElementById("labelRows");
+  LABEL_ITEMS.forEach(function(it,i){
+    var d=document.createElement("div"); d.className="row"; d.id="lr"+i;
+    var sel='<select id="ls'+i+'" aria-label="Job of sentence '+(i+1)+'"><option value="">- choose -</option>';
+    LABELS.forEach(function(l){sel+='<option>'+l+'</option>';});
+    sel+='</select>';
+    d.innerHTML='<strong>'+(i+1)+'.</strong> '+it.s+'<br>'+sel+' <span id="lm'+i+'"></span>';
+    box.appendChild(d);
+  });
+}
+function checkLabels(){
+  var sc=0;
+  LABEL_ITEMS.forEach(function(it,i){
+    var ok=document.getElementById("ls"+i).value===it.a; if(ok)sc++;
+    document.getElementById("lr"+i).className="row "+(ok?"right":"wrong");
+    document.getElementById("lm"+i).textContent=ok?"✅":"❌";
+  });
+  labelScore=sc; labelChecked=true;
+  var fb=document.getElementById("labelFb");
+  if(sc===LABEL_ITEMS.length){fb.className="fb good";fb.textContent="🌟 "+sc+" / "+LABEL_ITEMS.length+". "+pick(PRAISE)+" You know exactly how a science adventure story is built!";}
+  else{fb.className="fb bad";fb.textContent=sc+" / "+LABEL_ITEMS.length+". Hint: the line that grabs you with a sound = hook; \"I am…\" plus where it happens = narrator + setting; how the germs got in = the problem; events that build as the fight gets harder = rising action; the biggest turning-point moment = climax; healing and memory cells = resolution. Fix the ❌ ones and check again.";}
+  updateScore();
+}
+
+var GMC=[
+ {q:"Which sentence punctuates the <strong>dialogue</strong> correctly?",
+  o:["\"Follow me\" shouted the phagocyte!", "\"Follow me!\" shouted the phagocyte.", "\"Follow me!\" Shouted the phagocyte.", "Follow me! \"shouted the phagocyte.\""],
+  a:1,e:"The words that are spoken go inside the quotation marks, along with their punctuation (<em>!</em>). The speaker tag <em>shouted the phagocyte</em> continues the same sentence, so <em>shouted</em> stays lowercase."},
+ {q:"Which sentence keeps the <strong>past tense</strong> consistent?",
+  o:["I squeeze through the wall and grabbed the germ.", "I squeezed through the wall and grab the germ.", "I squeezed through the wall and grabbed the germ.", "I squeezing through the wall and grabbed the germ."],
+  a:2,e:"A story told in the past tense keeps <em>every</em> action in the past: <em>squeezed</em> and <em>grabbed</em>."},
+ {q:"Which sentence uses a <strong>plural possessive</strong> correctly? (The alarms belong to many cells.)",
+  o:["All of the white blood cell's alarms went off at once.", "All of the white blood cells alarms went off at once.", "All of the white blood cells's alarms went off at once.", "All of the white blood cells' alarms went off at once."],
+  a:3,e:"For a plural noun ending in <em>s</em>, add only an apostrophe: <em>cells'</em>. (<em>cell's</em> would mean the alarms of just one cell.)"},
+ {q:"Which sentence uses <strong>there / their / they're</strong> correctly?",
+  o:["They're coming through the scrape, and their spikes are sharp, so stay over there!", "Their coming through the scrape, and they're spikes are sharp, so stay over there!", "There coming through the scrape, and their spikes are sharp, so stay over they're!", "They're coming through the scrape, and there spikes are sharp, so stay over their!"],
+  a:0,e:"<em>They're</em> = they are. <em>Their</em> = belonging to them. <em>There</em> = a place."},
+ {q:"Which sentence uses <strong>commas in a series</strong> correctly?",
+  o:["Our defenders include phagocytes B cells, and memory cells.", "Our defenders include, phagocytes, B cells, and memory cells.", "Our defenders include phagocytes, B cells, and memory cells.", "Our defenders include phagocytes, B cells and, memory cells."],
+  a:2,e:"Put a comma after each item in a list of three or more: <em>phagocytes, B cells, and memory cells</em>. Never put a comma right after <em>include</em> or right after <em>and</em>."},
+ {q:"Which sentence uses <strong>who's / whose</strong> correctly?",
+  o:["The cell who's job is to make antibodies is called a B cell.", "The cell whose job is to make antibodies is called a B cell.", "The cell whos job is to make antibodies is called a B cell.", "The cell who is job is to make antibodies is called a B cell."],
+  a:1,e:"<em>Whose</em> shows that something belongs to someone (the cell's job). <em>Who's</em> means <em>who is</em>, which doesn't make sense here."},
+ {q:"Which sentence uses <strong>Canadian spelling</strong> correctly?",
+  o:["Our defence team gathered in the centre of the cut as the skin changed colour.", "Our defense team gathered in the center of the cut as the skin changed color.", "Our defence team gathered in the center of the cut as the skin changed colour.", "Our defense team gathered in the centre of the cut as the skin changed color."],
+  a:0,e:"Canadian English uses <em>defence</em>, <em>centre</em>, and <em>colour</em>. (Americans write defense, center, color.)"}
+];
+var gmcState=GMC.map(function(){return{answered:false,firstRight:false,done:false};});
+function buildGMC(){
+  var box=document.getElementById("gmc");
+  GMC.forEach(function(it,i){
+    var d=document.createElement("div"); d.className="box q"; d.id="g"+i;
+    var h='<div><strong>'+(i+1)+'.</strong> '+it.q+'</div>';
+    it.o.forEach(function(o,j){h+='<button type="button" class="opt" data-i="'+i+'" data-j="'+j+'">'+String.fromCharCode(65+j)+'. '+o+'</button>';});
+    h+='<div class="fb" id="gfb'+i+'"></div>';
+    d.innerHTML=h; box.appendChild(d);
+  });
+  box.addEventListener("click",function(e){
+    var b=e.target.closest?e.target.closest(".opt"):e.target; if(!b||!b.classList.contains("opt"))return;
+    var i=+b.getAttribute("data-i"), j=+b.getAttribute("data-j"), st=gmcState[i], it=GMC[i];
+    if(st.done)return;
+    var ok=j===it.a; if(!st.answered){st.answered=true;st.firstRight=ok;}
+    var fb=document.getElementById("gfb"+i);
+    if(ok){st.done=true;b.classList.add("sel-right");document.getElementById("g"+i).className="box q right";fb.className="fb good";fb.innerHTML="✅ "+pick(PRAISE)+' <span class="explain">'+it.e+'</span>';}
+    else{b.classList.add("sel-wrong");document.getElementById("g"+i).className="box q wrong";fb.className="fb bad";fb.textContent="❌ Not quite, Ace. Look closely and try again.";}
+    updateScore();
+  });
+}
+
+var GFIX=[
+ {bad:"\"watch out\" yelled the phagocyte.",
+  ok:["\"Watch out!\" yelled the phagocyte.", "\"Watch out,\" yelled the phagocyte."],
+  hint:"Capitalize the first spoken word: <em>Watch</em>. Put punctuation (an exclamation mark or a comma) <em>inside</em> the closing quotation mark, before the speaker tag."},
+ {bad:"yesterday I swallow ten bacteria and then I rest.",
+  ok:["Yesterday I swallowed ten bacteria, and then I rested.", "Yesterday, I swallowed ten bacteria, and then I rested.", "Yesterday I swallowed ten bacteria and then I rested.", "Yesterday, I swallowed ten bacteria and then I rested."],
+  hint:"Start with a capital letter. <em>Yesterday</em> means the past, so both verbs need the past tense: <em>swallowed</em>, <em>rested</em>."},
+ {bad:"their are germs in the cut on aces knee.",
+  ok:["There are germs in the cut on Ace's knee."],
+  hint:"Use <em>There</em> (a place / there are), with a capital letter. Names are capitalized, and the knee belongs to Ace, so it needs an apostrophe: <em>Ace's</em>."},
+ {bad:"our defense team is the best in the hole body.",
+  ok:["Our defence team is the best in the whole body."],
+  hint:"Capitalize the first word. Use the Canadian spelling <em>defence</em>. A <em>hole</em> is an opening; <em>whole</em> means all of it."}
+];
+
+var gfixState=GFIX.map(function(){return{tries:0,correct:false,firstRight:false};});
+function norm(s){return s.replace(/[\u2018\u2019\u02BC]/g,"'").replace(/[\u201C\u201D]/g,'"').replace(/\s+/g," ").trim();}
+function checkFixAnswer(i,val){var v=norm(val);return GFIX[i].ok.some(function(a){return norm(a)===v;});}
+function buildGFix(){
+  var box=document.getElementById("gfix");
+  GFIX.forEach(function(it,i){
+    var d=document.createElement("div"); d.className="box q"; d.id="f"+i;
+    d.innerHTML='<div><strong>'+(i+1)+'.</strong> Fix: <span class="bad-sent">'+it.bad+'</span></div>'+
+     '<input class="fix" type="text" id="fi'+i+'" autocomplete="off" spellcheck="false" aria-label="Corrected sentence '+(i+1)+'">'+
+     '<div class="btnrow"><button type="button" class="go" data-act="check" data-i="'+i+'">Check</button><button type="button" class="hint" data-act="hint" data-i="'+i+'">Hint 💡</button><button type="button" class="grey" data-act="show" data-i="'+i+'" style="display:none">Show answer</button></div>'+
+     '<div class="fb" id="ffb'+i+'"></div>';
+    box.appendChild(d);
+  });
+  box.addEventListener("click",function(e){
+    var b=e.target; if(b.tagName!=="BUTTON")return;
+    var i=+b.getAttribute("data-i"), act=b.getAttribute("data-act"), fb=document.getElementById("ffb"+i);
+    if(act==="hint"){fb.className="fb";fb.style.color="#5d4037";fb.textContent="💡 "+GFIX[i].hint;return;}
+    fb.style.color="";
+    if(act==="show"){fb.className="fb";fb.innerHTML='Answer: <em>'+GFIX[i].ok[0]+'</em>'+(GFIX[i].ok.length>1?' (other correct versions are accepted too)':'');return;}
+    fixCheck(i);
+  });
+  box.addEventListener("keydown",function(e){if(e.key==="Enter"&&e.target.classList.contains("fix"))fixCheck(+e.target.id.slice(2));});
+}
+function fixCheck(i){
+  var val=document.getElementById("fi"+i).value, fb=document.getElementById("ffb"+i), st=gfixState[i];
+  fb.style.color="";
+  if(!val.trim()){fb.className="fb bad";fb.textContent="Type the corrected sentence first, Ace!";return;}
+  st.tries++;
+  if(checkFixAnswer(i,val)){ if(st.tries===1)st.firstRight=true; st.correct=true; document.getElementById("f"+i).className="box q right"; fb.className="fb good"; fb.textContent="✅ "+pick(PRAISE); }
+  else { st.correct=false; document.getElementById("f"+i).className="box q wrong"; fb.className="fb bad"; fb.textContent="❌ Not quite. Check every capital letter, apostrophe, comma, and spelling. Try again!"; if(st.tries>=2)document.querySelector('#f'+i+' [data-act=show]').style.display="inline-block"; }
+  updateScore();
+}
+
+function updateScore(){
+  var g=0; gmcState.forEach(function(s){if(s.firstRight)g++;});
+  var f=0; gfixState.forEach(function(s){if(s.correct)f++;});
+  var total=LABEL_ITEMS.length+GMC.length+GFIX.length, got=labelScore+g+f;
+  document.getElementById("scoreText").textContent="Score: "+got+" / "+total+"  (labels "+(labelChecked?labelScore:"-")+"/"+LABEL_ITEMS.length+" · grammar A "+g+"/"+GMC.length+" · grammar B "+f+"/"+GFIX.length+")";
+}
+
+var W5=["who","place","facts","senses","feel","closing"];
+function w5Save(){try{localStorage.setItem(KEY+"-5w",JSON.stringify(W5.map(function(k){return document.getElementById("w5"+k).value;})));}catch(e){}}
+function w5Restore(){try{var d=JSON.parse(localStorage.getItem(KEY+"-5w")||"null");if(d)d.forEach(function(x,i){document.getElementById("w5"+W5[i]).value=x;});}catch(e){}}
+function w5Summary(){return W5.map(function(k){return k.charAt(0).toUpperCase()+k.slice(1)+": "+document.getElementById("w5"+k).value;}).join("\n");}
+function addTemplate(){
+  var t=document.getElementById("essay");
+  var tpl="TITLE: \n\nHook: \n\nNarrator + setting: \n\nThe problem: \n\nRising action: \n\nClimax: \n\nResolution: \n\nWritten by "+NAME;
+  if(t.value.trim()&&!confirm("Add the headings below what you've already written?"))return;
+  t.value=(t.value.trim()?t.value.replace(/\s+$/,"")+"\n\n":"")+tpl; updateCount(); t.focus();
+}
+var KEY="ace-writing-2026-10-19";
+function countWords(t){var m=t.trim().match(/[A-Za-zÀ-ÿ0-9]+(?:['’\-][A-Za-zÀ-ÿ0-9]+)*/g);return m?m.length:0;}
+function countSentences(t){var m=t.match(/[^.!?]*[A-Za-z0-9][^.!?]*[.!?]+/g);return m?m.length:0;}
+function currentPrompt(){var r=document.querySelector('input[name=prompt]:checked');return r?r.value:"";}
+function updateCount(){
+  var t=document.getElementById("essay").value, w=countWords(t), s=countSentences(t);
+  document.getElementById("wc").textContent=w+(w===1?" word":" words");
+  document.getElementById("sc").textContent=s+(s===1?" sentence":" sentences");
+  var bar=document.getElementById("meterBar"); bar.style.width=Math.min(100,w/300*100)+"%";
+  var msg=document.getElementById("wcMsg");
+  if(w<200){bar.style.background="#ffb300";msg.className="fb";msg.textContent=w===0?"Aim for 200 to 300 words.":"Keep going, Ace! "+(200-w)+" more words to reach the goal.";}
+  else if(w<=300){bar.style.background="#43a047";msg.className="fb good";msg.textContent="🎯 You're in the target zone! Nice work, Ace!";}
+  else{bar.style.background="#1e88e5";msg.className="fb";msg.textContent="Wow, that's a lot of writing! Strong short stories stay focused. Could any sentences be cut?";}
+  try{localStorage.setItem(KEY,JSON.stringify({text:t,prompt:currentPrompt(),checks:checkStates()}));}catch(e){document.getElementById("saveNote").textContent="(This browser can't auto-save here, so use the Download button before closing!)";}
+}
+function checkStates(){return Array.prototype.map.call(document.querySelectorAll("#checklist input"),function(c){return c.checked;});}
+function checklistText(){
+  return Array.prototype.map.call(document.querySelectorAll("#checklist label"),function(l){return (l.querySelector("input").checked?"[x] ":"[ ] ")+l.textContent.trim();}).join("\n");
+}
+function buildReport(){
+  var t=document.getElementById("essay").value;
+  return "Writing Week 22: "+NAME+"\nDate: "+new Date().toLocaleString("en-CA")+"\nPrompt: "+currentPrompt()+
+    "\nWords: "+countWords(t)+"   Sentences: "+countSentences(t)+"\nPlanning notes:\n"+w5Summary()+
+    "\n\n----- "+NAME+"'s writing -----\n\n"+t+"\n\n----- Self-check -----\n"+checklistText()+
+    "\n\n----- Parent feedback -----\n\n\n";
+}
+function download(){
+  var t=document.getElementById("essay").value;
+  if(!t.trim()){document.getElementById("doneMsg").className="fb bad";document.getElementById("doneMsg").textContent="Write something first, Ace!";return;}
+  var blob=new Blob([buildReport().replace(/\n/g,"\r\n")],{type:"text/plain;charset=utf-8"});
+  var a=document.createElement("a"); a.href=URL.createObjectURL(blob); a.download=NAME+"-writing-2026-10-19"+".txt";
+  document.body.appendChild(a); a.click();
+  setTimeout(function(){URL.revokeObjectURL(a.href);a.remove();},1000);
+  var dm=document.getElementById("doneMsg"); dm.className="fb good"; dm.textContent="📄 Saved! Look in your Downloads folder and show Dad. Great job finishing, Ace!";
+}
+function esc(s){return s.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");}
+function printIt(){
+  var t=document.getElementById("essay").value;
+  if(!t.trim()){document.getElementById("doneMsg").className="fb bad";document.getElementById("doneMsg").textContent="Write something first, Ace!";return;}
+  document.getElementById("printArea").innerHTML="<h1>Writing Week 22: "+NAME+"</h1><div class='meta'>"+esc(new Date().toLocaleString("en-CA"))+"<br><strong>Prompt:</strong> "+esc(currentPrompt())+"<br>Words: "+countWords(t)+" · Sentences: "+countSentences(t)+"</div><div class='text'>"+esc(t)+"</div><div class='lines'><strong>Self-check:</strong><br>"+esc(checklistText()).replace(/\n/g,"<br>")+"</div><div class='lines'><strong>Parent feedback:</strong><br><br><br><br></div>";
+  window.print();
+}
+function restore(){
+  try{var d=JSON.parse(localStorage.getItem(KEY)||"null"); if(!d)return;
+    document.getElementById("essay").value=d.text||"";
+    Array.prototype.forEach.call(document.querySelectorAll("input[name=prompt]"),function(r){r.checked=(r.value===d.prompt);});
+    if(!document.querySelector("input[name=prompt]:checked"))document.querySelector("input[name=prompt]").checked=true;
+    var cs=document.querySelectorAll("#checklist input"); (d.checks||[]).forEach(function(v,i){if(cs[i])cs[i].checked=v;});
+  }catch(e){}
+}
+buildLabels(); buildGMC(); buildGFix(); restore(); w5Restore(); updateCount(); updateScore();
+W5.forEach(function(k){document.getElementById("w5"+k).addEventListener("input",w5Save);});
+document.getElementById("templateBtn").addEventListener("click",addTemplate);
+document.getElementById("checkLabels").addEventListener("click",checkLabels);
+document.getElementById("essay").addEventListener("input",updateCount);
+document.getElementById("checklist").addEventListener("change",function(){updateCount(); if(checkStates().every(Boolean)){var dm=document.getElementById("doneMsg");dm.className="fb good";dm.textContent="✅ All boxes checked! Now download or print it for Dad. Awesome work, Ace!";}});
+document.getElementById("prompts").addEventListener("change",updateCount);
+document.getElementById("downloadBtn").addEventListener("click",download);
+document.getElementById("printBtn").addEventListener("click",printIt);
+document.getElementById("clearBtn").addEventListener("click",function(){ if(confirm("Erase your writing and start over?")){document.getElementById("essay").value="";Array.prototype.forEach.call(document.querySelectorAll("#checklist input"),function(c){c.checked=false;});document.getElementById("doneMsg").textContent="";updateCount();} });
+</script>
+</body>
+</html>
