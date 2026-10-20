@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Math (Oct. 20): Ancient China &amp; Its Great Inventions Math Lab</title>
+<style>
+  body{font-family:"Segoe UI",Verdana,Arial,sans-serif;font-size:20px;line-height:1.6;margin:0;background:#f5f0eb;color:#2c2416}
+  .wrap{max-width:880px;margin:0 auto;padding:20px 18px 80px}
+  a.home{font-size:.9em;color:#bf360c}
+  h1{color:#e65100;font-size:2em;margin:10px 0}
+  h2{color:#ef6c00;margin-top:36px;border-bottom:3px solid #ffcc80;padding-bottom:4px}
+  .box{background:#fff;border-radius:16px;padding:18px 22px;margin:16px 0;box-shadow:0 3px 10px rgba(0,0,0,.07)}
+  .example{border-left:8px solid #ef6c00}
+  .example h3{margin:0 0 6px;color:#e65100}
+  .step{margin:4px 0 4px 10px}
+  code,.mono{font-family:Consolas,"Courier New",monospace;background:#fff3e0;padding:1px 6px;border-radius:5px}
+  .q{border-left:8px solid #90a4ae}
+  .q.right{border-left-color:#43a047;background:#f1f8e9}
+  .q.wrong{border-left-color:#e53935;background:#fff5f5}
+  .qnum{font-weight:bold;color:#e65100}
+  .row{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:10px}
+  input[type=text]{font-size:1.05em;padding:8px 12px;border:2px solid #ffcc80;border-radius:10px;width:190px}
+  input[type=text]:focus{outline:none;border-color:#ef6c00;box-shadow:0 0 0 3px #ffe0b2}
+  button{font-size:.95em;padding:8px 16px;border:none;border-radius:10px;cursor:pointer;font-weight:bold}
+  .check{background:#ef6c00;color:#fff} .check:hover{background:#e65100}
+  .hint{background:#ffe082;color:#5d4037} .hint:hover{background:#ffd54f}
+  .sol{background:#ce93d8;color:#311b92}
+  .unit{color:#546e7a}
+  .fb{margin-top:8px;font-weight:bold;min-height:1em}
+  .fb.good{color:#2e7d32} .fb.bad{color:#c62828}
+  .hints{margin-top:8px;color:#e65100;background:#fff3e0;border-radius:10px;padding:0 12px}
+  .hints p{margin:6px 0;padding:6px 0}
+  .solution{margin-top:8px;background:#f3e5f5;border-radius:10px;padding:8px 12px;display:none}
+  #scoreBox{position:sticky;bottom:0;background:#e65100;color:#fff;border-radius:16px 16px 0 0;padding:12px 20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-top:30px}
+  #scoreBox button{background:#ffca28;color:#3e2723}
+  #final{display:none;font-size:1.15em;text-align:center;border:4px solid #43a047}
+  .tipbox{background:#fff8e1;border-left:8px solid #ffb300}
+</style>
+</head>
+<body>
+<div class="wrap">
+<a class="home" href="../../index.html">&larr; Back to all lessons</a>
+<h1>🏯 Math Week 23: Ancient China &amp; Its Great Inventions Lab</h1>
+<p>Ace, more than 2000 years ago, Chinese emperors, engineers, and inventors gave the world the Great Wall, paper, printing, the magnetic compass, and silk that travelled thousands of kilometres along the Silk Road. Historians, archaeologists, and navigators all use math to understand that world. Today you'll think like all three with <strong>BCE/CE timelines (including the tricky jump across the year 1), map scales and scale models, area and perimeter of the Terracotta Army pits, hectares, estimating with density, unit rates, percent increase and tax, compass bearings, and volume</strong>.</p>
+
+<h2>Part 1: Learn the Moves</h2>
+
+<div class="box tipbox">
+  <strong>The 4-Step Problem Solver (your historian's checklist):</strong>
+  <ol>
+    <li><strong>Read</strong>: What is the question actually asking? Underline the numbers and units.</li>
+    <li><strong>Plan</strong>: Which operations do I need, and in what order?</li>
+    <li><strong>Solve</strong>: Do one step at a time and write each step down.</li>
+    <li><strong>Check</strong>: Is my answer reasonable? Did I answer the question that was asked, in the right units?</li>
+  </ol>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 1: BCE and CE timelines</h3>
+  <p class="step"><strong>CE</strong> (Common Era) years count up from the year 1. <strong>BCE</strong> (Before the Common Era) years count <em>backwards</em>, so 300 BCE is <em>earlier</em> than 250 BCE. Think of BCE years like negative numbers on a number line.</p>
+  <p class="step"><strong>Both BCE:</strong> subtract. From 300 BCE to 250 BCE is 300 − 250 = <strong>50 years</strong>.</p>
+  <p class="step"><strong>Across the middle:</strong> there was <strong>no year 0</strong>! The year 1 BCE was followed straight away by 1 CE. So add the two numbers, then subtract 1. From 50 BCE to 50 CE is 50 + 50 − 1 = <strong>99 years</strong>.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 2: Map scales and scale models</h3>
+  <p class="step">On a map with the scale <strong>1 cm : 200 km</strong>, every centimetre stands for 200 km. A road 700 km long is drawn 700 ÷ 200 = <strong>3.5 cm</strong> long.</p>
+  <p class="step">A scale of <strong>1 : 20</strong> means the real thing is 20 times bigger than the model. A 15 cm model stands for 15 × 20 = 300 cm = <strong>3 m</strong> in real life.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 3: Area, perimeter, and hectares</h3>
+  <p class="step">Rectangle: <strong>area</strong> = length × width, and <strong>perimeter</strong> = 2 × (length + width). For a field 10 m by 8 m: area = 80 m², perimeter = 36 m.</p>
+  <p class="step"><strong>L-shapes:</strong> find the area of the big rectangle and subtract the missing corner. If a 3 m by 2 m corner is cut out of the 10 m by 8 m field, the area is 80 − 6 = <strong>74 m²</strong>. Surprise: the <strong>perimeter stays 36 m</strong>, because the two edges around the missing corner add up to exactly the same lengths as the edges that were removed!</p>
+  <p class="step">Big areas are measured in <strong>hectares</strong>: 1 ha = 100 m × 100 m = <strong>10 000 m²</strong>. So 25 000 m² = 25 000 ÷ 10 000 = <strong>2.5 ha</strong>.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 4: Unit rates and percent increase</h3>
+  <p class="step">A camel caravan walks 90 km in 3 days. Its <strong>unit rate</strong> is 90 ÷ 3 = <strong>30 km per day</strong>. In 10 days it would walk 30 × 10 = 300 km.</p>
+  <p class="step"><strong>Percent increase</strong> = change ÷ starting amount × 100. A merchant buys tea for 20 coins and sells it for 70 coins: the change is 50, and 50 ÷ 20 × 100 = <strong>250%</strong>.</p>
+</div>
+
+<div class="box example">
+  <svg viewBox="-42 0 304 226" width="240" style="float:right;margin:0 0 8px 12px;background:#fff;border-radius:16px" role="img" aria-label="Compass rose: North 000, East 090, South 180, West 270">
+    <circle cx="110" cy="113" r="86" fill="#fffaf3" stroke="#bf360c" stroke-width="3"/>
+    <polygon points="110,33 119,113 110,193 101,113" fill="#ffcc80" stroke="#bf360c"/>
+    <polygon points="30,113 110,104 190,113 110,122" fill="#ffe0b2" stroke="#bf360c"/>
+    <polygon points="110,33 119,113 101,113" fill="#e53935"/>
+    <text x="110" y="20" text-anchor="middle" font-size="15" font-weight="bold">N 000°</text>
+    <text x="202" y="118" text-anchor="start" font-size="15" font-weight="bold">E 090°</text>
+    <text x="110" y="220" text-anchor="middle" font-size="15" font-weight="bold">S 180°</text>
+    <text x="18" y="118" text-anchor="end" font-size="15" font-weight="bold">W 270°</text>
+  </svg>
+  <h3>Worked Example 5: Compass bearings</h3>
+  <p class="step">A <strong>bearing</strong> is an angle measured <strong>clockwise from North</strong>, written with three digits. North is 000°, East is 090°, South is 180°, and West is 270°. Northeast is halfway between North and East: <strong>045°</strong>.</p>
+  <p class="step">Turning clockwise <strong>adds</strong> to the bearing. If the total goes past 360°, subtract 360°. A ship on 300° that turns 100° clockwise ends up on 400° − 360° = <strong>040°</strong>.</p>
+  <p class="step">To go back the way you came (the <strong>back bearing</strong>), add 180° if the bearing is less than 180°, or subtract 180° if it is 180° or more. The back bearing of 060° is <strong>240°</strong>; the back bearing of 300° is <strong>120°</strong>.</p>
+  <div style="clear:both"></div>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 6: Volume</h3>
+  <p class="step">Volume of a box (rectangular prism) = length × width × height. A block 30 cm × 10 cm × 5 cm has a volume of <strong>1500 cm³</strong>.</p>
+  <p class="step">1 m = 100 cm, so 1 m³ = 100 × 100 × 100 = <strong>1 000 000 cm³</strong>. Change metres to centimetres <em>before</em> you multiply when the units don't match!</p>
+</div>
+
+<h2>Part 2: The Challenge (20 problems)</h2>
+<p>Type your answer and press <strong>Check</strong> (or Enter). Fractions like <span class="mono">3/4</span>, mixed numbers like <span class="mono">1 3/4</span>, or decimals like <span class="mono">1.75</span> are fine. Don't type the units, $ signs, or % signs, and you may use spaces or commas in big numbers (1 000 000). Stuck? Press <strong>Hint</strong>. After 2 tries, you can see a full solution.</p>
+
+<div id="questions"></div>
+<div class="box" id="final"></div>
+<div id="scoreBox">
+  <span id="scoreText">Score: 0 / 20 correct</span>
+  <button id="finishBtn" type="button">I'm done! Show my final score</button>
+</div>
+</div>
+
+<script>
+var NAME = "Ace";
+var GRAPH = '<div style="margin:10px 0"><svg viewBox="0 20 560 450" width="100%" style="max-width:560px;background:#fff;border-radius:12px" role="img" aria-label="Simplified L-shaped pit plan: bottom edge 96 m, left edge 84 m, a 48 m by 42 m corner missing from the top right"><polygon class="pit" points="70.0,40.0 271.6,40.0 271.6,216.4 473.2,216.4 473.2,392.8 70.0,392.8" fill="#ffe0b2" stroke="#bf360c" stroke-width="3"/><rect x="271.6" y="40.0" width="201.6" height="176.4" fill="none" stroke="#9e9e9e" stroke-width="1.5" stroke-dasharray="6 5"/><text x="372.4" y="133.2" text-anchor="middle" font-size="14" fill="#757575">missing corner</text><text x="271.6" y="416.8" text-anchor="middle" font-size="16" font-weight="bold" fill="#263238">96 m</text><text x="60.0" y="221.4" text-anchor="end" font-size="16" font-weight="bold" fill="#263238">84 m</text><text x="372.4" y="236.4" text-anchor="middle" font-size="16" font-weight="bold" fill="#263238">48 m</text><text x="279.6" y="158.2" text-anchor="start" font-size="16" font-weight="bold" fill="#263238">42 m</text><text x="170.8" y="250.0" text-anchor="middle" font-size="15" fill="#5d4037">Pit (simplified plan)</text><text x="280" y="458" text-anchor="middle" font-size="12" fill="#757575">Not drawn exactly to scale. All corners are right angles.</text></svg></div>';
+var TABLE = '<table style="border-collapse:collapse;margin:10px 0;font-size:.95em;background:#fff"><caption style="font-weight:bold;text-align:left;padding-bottom:4px">Timeline: Ancient China and its inventions</caption><tr><th style="border:1px solid #bdbdbd;padding:4px 10px;background:#fff3e0">Event</th><th style="border:1px solid #bdbdbd;padding:4px 10px;background:#fff3e0">Year</th></tr><tr><td style="border:1px solid #bdbdbd;padding:4px 10px">Qin Shi Huang unites China and becomes its first emperor</td><td style="border:1px solid #bdbdbd;padding:4px 10px;text-align:right;white-space:nowrap">221 BCE</td></tr><tr><td style="border:1px solid #bdbdbd;padding:4px 10px">Qin Shi Huang dies and is buried with the Terracotta Army</td><td style="border:1px solid #bdbdbd;padding:4px 10px;text-align:right;white-space:nowrap">210 BCE</td></tr><tr><td style="border:1px solid #bdbdbd;padding:4px 10px">Cai Lun presents his improved paper to the Han emperor</td><td style="border:1px solid #bdbdbd;padding:4px 10px;text-align:right;white-space:nowrap">105 CE</td></tr><tr><td style="border:1px solid #bdbdbd;padding:4px 10px">The <em>Diamond Sutra</em>, the oldest printed book with a date, is printed with carved woodblocks</td><td style="border:1px solid #bdbdbd;padding:4px 10px;text-align:right;white-space:nowrap">868 CE</td></tr><tr><td style="border:1px solid #bdbdbd;padding:4px 10px">Bi Sheng invents movable type made of baked clay</td><td style="border:1px solid #bdbdbd;padding:4px 10px;text-align:right;white-space:nowrap">about 1040 CE</td></tr><tr><td style="border:1px solid #bdbdbd;padding:4px 10px">Johannes Gutenberg builds his printing press in Europe</td><td style="border:1px solid #bdbdbd;padding:4px 10px;text-align:right;white-space:nowrap">about 1450 CE</td></tr><tr><td style="border:1px solid #bdbdbd;padding:4px 10px">Farmers digging a well discover the Terracotta Army</td><td style="border:1px solid #bdbdbd;padding:4px 10px;text-align:right;white-space:nowrap">1974 CE</td></tr></table>';
+var QUESTIONS = [
+ {t:TABLE+"Use the timeline. Qin Shi Huang ruled as China's first emperor from 221 BCE until he died. For how many <strong>years</strong> did he rule as first emperor?", a:"11", u:"years",
+  h:["Both years are BCE, so subtract the smaller number from the bigger one.","221 − 210 = ?"],
+  s:"Both dates are BCE: 221 − 210 = 11 years. (Remember, BCE years count down, so 210 BCE comes after 221 BCE.)"},
+ {t:"Use the timeline in question 1. How many years passed between Qin Shi Huang uniting China and Cai Lun presenting his improved paper?", a:"325", u:"years",
+  h:["One date is BCE and one is CE, so you cross the middle of the timeline.","There is no year 0: add 221 + 105, then subtract 1."],
+  s:"221 + 105 − 1 = 325 years. We subtract 1 because 1 BCE is followed straight away by 1 CE, with no year 0."},
+ {t:"Use the timeline in question 1. The Terracotta Army was buried in 210 BCE. For how many years did it stay hidden underground before farmers found it?", a:"2183", u:"years",
+  h:["Again you cross from BCE to CE: add, then subtract 1.","210 + 1974 − 1 = ?"],
+  s:"210 + 1974 − 1 = 2183 years underground!"},
+ {t:"<strong>Challenge:</strong> In what year CE was the 2000th anniversary of Qin Shi Huang's burial in 210 BCE? (Remember, there was no year 0.)", a:"1791", u:"CE",
+  h:["210 years after 210 BCE would be year 0, but year 0 doesn't exist. Count carefully: 210 years after 210 BCE is 1 CE.","After reaching 1 CE you have used 210 of the 2000 years. 2000 − 210 = 1790 more years to go from 1 CE."],
+  s:"From 210 BCE to 1 CE is 210 years. 2000 − 210 = 1790 more years, and 1 + 1790 = 1791 CE. Check with the rule: 210 + 1791 − 1 = 2000 ✔."},
+ {t:"The Great Wall built during the Ming dynasty is about <strong>8850 km</strong> long. On a map with the scale <strong>1 cm : 250 km</strong>, how long would it be drawn?", a:"35.4", u:"cm",
+  h:["Each centimetre on the map stands for 250 km.","8850 ÷ 250 = ?"],
+  s:"8850 ÷ 250 = 35.4 cm. That's longer than a ruler!"},
+ {t:"A survey in 2012 measured <strong>all</strong> the walls built by every dynasty and found they total about <strong>21 196 km</strong>. Earth's circumference around the equator is about <strong>40 075 km</strong>. To the nearest whole percent, what <strong>percent</strong> of the way around Earth would all the walls reach if they were laid end to end?", a:"53", u:"%",
+  h:["Percent = part ÷ whole × 100.","21 196 ÷ 40 075 is about 0.529. Now multiply by 100 and round."],
+  s:"21 196 ÷ 40 075 ≈ 0.5289, and 0.5289 × 100 ≈ 52.9%, which rounds to 53%. All the walls together would stretch more than halfway around the planet!"},
+ {t:"Ace builds a model of a Great Wall watchtower at a scale of <strong>1 : 50</strong>. His model is <strong>24 cm</strong> tall. How tall is the real watchtower, in <strong>metres</strong>?", a:"12", u:"m",
+  h:["The real tower is 50 times as tall as the model: 24 × 50 cm.","That gives 1200 cm. Change cm to m by dividing by 100."],
+  s:"24 × 50 = 1200 cm, and 1200 ÷ 100 = 12 m."},
+ {t:"Pit 1 of the Terracotta Army is a rectangle about <strong>230 m</strong> long and <strong>62 m</strong> wide. What is its <strong>area</strong>?", a:"14260", u:"m²",
+  h:["Area of a rectangle = length × width.","230 × 62 = 230 × 60 + 230 × 2."],
+  s:"230 × 62 = 13 800 + 460 = 14 260 m²."},
+ {t:"What is the <strong>perimeter</strong> of Pit 1 (230 m by 62 m)?", a:"584", u:"m",
+  h:["Perimeter = 2 × (length + width).","230 + 62 = 292. Now double it."],
+  s:"2 × (230 + 62) = 2 × 292 = 584 m."},
+ {t:"Write the area of Pit 1 from question 8 in <strong>hectares</strong>. (1 ha = 10 000 m²)", a:"1.426", u:"ha",
+  h:["Divide the area in m² by 10 000.","14 260 ÷ 10 000: move the decimal point 4 places to the left."],
+  s:"14 260 ÷ 10 000 = 1.426 ha. That's about the size of two soccer fields."},
+ {t:"Archaeologists dig up a test section of a pit that is <strong>20 m by 15 m</strong> and find <strong>120</strong> clay warriors. If the warriors are packed the same way everywhere, about how many warriors would they find in a section that is <strong>60 m by 45 m</strong>?", a:"1080", u:"warriors",
+  h:["Find the density: warriors per square metre. The test section is 20 × 15 = 300 m².","120 ÷ 300 = 0.4 warriors per m². The big section is 60 × 45 = 2700 m²."],
+  s:"Test section: 300 m², so 120 ÷ 300 = 0.4 warriors per m². Big section: 60 × 45 = 2700 m², and 2700 × 0.4 = 1080 warriors. (Shortcut: each side is 3 times as long, so the area is 3 × 3 = 9 times as big, and 120 × 9 = 1080.)"},
+ {t:GRAPH+"Another pit is shaped like an <strong>L</strong>. The plan above is simplified: it is a 96 m by 84 m rectangle with a 48 m by 42 m corner missing. What is the <strong>area</strong> of the L-shaped pit?", a:"6048", u:"m²",
+  h:["Area of the big rectangle: 96 × 84.","Subtract the missing corner: 48 × 42."],
+  s:"96 × 84 = 8064 m². The missing corner is 48 × 42 = 2016 m². 8064 − 2016 = 6048 m²."},
+ {t:"Use the plan in question 12. What is the <strong>perimeter</strong> of the L-shaped pit?", a:"360", u:"m",
+  h:["The two missing edges are 96 − 48 = 48 m and 84 − 42 = 42 m. Add all six edges.","Or use the L-shape trick from Worked Example 3: the perimeter is the same as the big rectangle's."],
+  s:"Six edges: 96 + 84 + 48 + 42 + 48 + 42 = 360 m. The trick gives the same answer: 2 × (96 + 84) = 360 m."},
+ {t:"A merchant's camel caravan travels the Silk Road from the city of Chang'an toward the Mediterranean Sea, a journey of about <strong>6400 km</strong>. If the caravan averages <strong>32 km per day</strong>, how many <strong>days</strong> will the trip take?", a:"200", u:"days",
+  h:["Distance ÷ rate = time.","6400 ÷ 32 = ? (Try 64 ÷ 32 first.)"],
+  s:"6400 ÷ 32 = 200 days, more than half a year on the road! That's why most goods were passed from trader to trader instead of one caravan going the whole way."},
+ {t:"A different caravan covers <strong>96 km in 3 days</strong>. At that same rate, how far will it travel in <strong>2 weeks</strong>?", a:"448", u:"km",
+  h:["Find the unit rate: 96 ÷ 3 = km per day.","2 weeks = 14 days. Multiply the unit rate by 14."],
+  s:"96 ÷ 3 = 32 km per day. 32 × 14 = 448 km."},
+ {t:"A merchant buys a roll of silk in Chang'an for <strong>40 silver coins</strong> and sells it far to the west for <strong>150 silver coins</strong>. What is the <strong>percent increase</strong> in the price?", a:"275", u:"%",
+  h:["Change = 150 − 40 = 110 coins.","Percent increase = 110 ÷ 40 × 100."],
+  s:"110 ÷ 40 = 2.75, and 2.75 × 100 = 275%. Silk was so valuable in the West that prices soared."},
+ {t:"At a busy oasis city, the merchant from question 16 must pay a tax of <strong>12%</strong> of his selling price of 150 coins. How many coins does he <strong>keep</strong>?", a:"132", u:"coins",
+  h:["12% of 150 = 0.12 × 150.","That's 18 coins of tax. Subtract it from 150. (Or keep 88%: 0.88 × 150.)"],
+  s:"0.12 × 150 = 18 coins of tax. 150 − 18 = 132 coins. (Check: 0.88 × 150 = 132.)"},
+ {t:"Chinese sailors were among the first to steer ships with a magnetic compass. A ship is sailing on a bearing of <strong>070°</strong>. The captain turns <strong>125° clockwise</strong>. What is the ship's new bearing?", a:"195", u:"°",
+  h:["Turning clockwise adds to the bearing.","70 + 125 = ? Is it more than 360?"],
+  s:"070° + 125° = 195°, a little west of due south."},
+ {t:"After a long voyage on a bearing of <strong>195°</strong>, the fleet wants to sail straight back home along the same path. What bearing should it steer? (Type the number of degrees.)", a:"15", u:"°",
+  h:["You need the back bearing: turn around 180°.","195 is 180 or more, so subtract: 195 − 180."],
+  s:"195° − 180° = 015°, just a little east of north."},
+ {t:"A Ming dynasty wall brick is about <strong>40 cm long, 20 cm wide, and 10 cm tall</strong>. About how many bricks would it take to build a solid block of wall <strong>4 m long, 1 m wide, and 2 m tall</strong>? (Ignore the mortar between the bricks.)", a:"1000", u:"bricks",
+  h:["Brick volume: 40 × 20 × 10 cm³. Wall volume: change metres to centimetres first (400 cm × 100 cm × 200 cm).","Divide the wall's volume by one brick's volume."],
+  s:"One brick: 40 × 20 × 10 = 8000 cm³. Wall: 400 × 100 × 200 = 8 000 000 cm³ (that's 8 m³). 8 000 000 ÷ 8000 = 1000 bricks for just 4 m of wall. Imagine thousands of kilometres!"}
+];
+
+var PRAISE = ["Nice work, Ace!","Correct! Emperor-level thinking! 👑","Yes! Historian Ace!","Excellent, Ace. That was a tough one!","Right on target! 🎯","Brilliant thinking, Ace!","Strong as the Great Wall! 🏯"];
+var ENCOURAGE = ["Not quite. Check your steps and try again!","Close call. Try again, Ace! Maybe use a hint?","Hmm, not yet. Re-read the question carefully.","Keep going, Ace. Mistakes help your brain grow!"];
+
+function parseAnswer(str){
+  if(str===undefined||str===null) return NaN;
+  var s=String(str).trim().toLowerCase();
+  s=s.replace(/[\u2212\u2013]/g,"-");
+  s=s.replace(/(\d),(?=\d{3}(\D|$))/g,"$1");
+  s=s.replace(/[^0-9.\/\- ]/g," ").replace(/\s+/g," ").trim();
+  s=s.replace(/\s*\/\s*/g,"/");
+  var m;
+  if((m=s.match(/^(-?\d+) (\d+)\/(\d+)$/))){ var w=parseFloat(m[1]),n=parseFloat(m[2]),d=parseFloat(m[3]); if(d===0)return NaN; return w<0? w-n/d : w+n/d; }
+  if((m=s.match(/^(-?\d+(?:\.\d+)?)\/(\d+(?:\.\d+)?)$/))){ var d2=parseFloat(m[2]); if(d2===0)return NaN; return parseFloat(m[1])/d2; }
+  s=s.replace(/ /g,"");
+  if(/^-?(\d+\.?\d*|\.\d+)$/.test(s)) return parseFloat(s);
+  return NaN;
+}
+function isCorrect(input,key){
+  var a=parseAnswer(input), k=parseAnswer(key);
+  if(isNaN(a)) return false;
+  var isInt=Math.abs(k-Math.round(k))<1e-12;
+  var tol=isInt?1e-9:0.005;
+  return Math.abs(a-k)<=tol;
+}
+
+function isRomanCorrect(input,key){ return String(input).replace(/\s+/g,"").toUpperCase()===key; }
+var state=[];
+function render(){
+  var box=document.getElementById("questions");
+  QUESTIONS.forEach(function(q,i){
+    state.push({correct:false,tries:0,hints:0});
+    var d=document.createElement("div");
+    d.className="box q"; d.id="q"+i;
+    d.innerHTML='<div><span class="qnum">'+(i+1)+'.</span> '+q.t+'</div>'+
+      '<div class="row"><input type="text"'+(q.r?' placeholder="e.g. MMXXVI"':'')+' id="in'+i+'" aria-label="Answer to question '+(i+1)+'" autocomplete="off"> <span class="unit">'+q.u+'</span>'+
+      '<button type="button" class="check" data-i="'+i+'">Check</button>'+
+      '<button type="button" class="hint" data-i="'+i+'">Hint 💡</button>'+
+      '<button type="button" class="sol" data-i="'+i+'" style="display:none">Show solution</button></div>'+
+      '<div class="fb" id="fb'+i+'"></div><div class="hints" id="hints'+i+'"></div>'+
+      '<div class="solution" id="sol'+i+'"><strong>Solution:</strong> '+q.s+'</div>';
+    box.appendChild(d);
+  });
+  box.addEventListener("click",function(e){
+    var b=e.target; if(b.tagName!=="BUTTON")return;
+    var i=+b.getAttribute("data-i");
+    if(b.className==="check") check(i);
+    else if(b.className==="hint") hint(i);
+    else if(b.className==="sol") document.getElementById("sol"+i).style.display="block";
+  });
+  box.addEventListener("keydown",function(e){
+    if(e.key==="Enter"&&e.target.tagName==="INPUT"){ check(+e.target.id.slice(2)); }
+  });
+}
+function pick(arr){return arr[Math.floor(Math.random()*arr.length)];}
+function check(i){
+  var val=document.getElementById("in"+i).value;
+  var fb=document.getElementById("fb"+i), card=document.getElementById("q"+i);
+  if(val.trim()===""){fb.className="fb bad";fb.textContent="Type an answer first, Ace!";return;}
+  var isR=!!QUESTIONS[i].r;
+  if(isR&&!/^[ivxlcdm\s]+$/i.test(val)){fb.className="fb bad";fb.textContent="Use only Roman numeral letters: I, V, X, L, C, D, M.";return;}
+  if(!isR&&isNaN(parseAnswer(val))){fb.className="fb bad";fb.textContent="I can't read that as a number. Try something like 42, 3.5, 3/4 or 1 3/4.";return;}
+  state[i].tries++;
+  if(isR?isRomanCorrect(val,QUESTIONS[i].a):isCorrect(val,QUESTIONS[i].a)){
+    state[i].correct=true; card.className="box q right"; fb.className="fb good";
+    fb.textContent="✅ "+pick(PRAISE)+(state[i].tries===1?" (first try!)":"");
+  } else {
+    state[i].correct=false; card.className="box q wrong"; fb.className="fb bad";
+    fb.textContent="❌ "+pick(ENCOURAGE);
+    if(state[i].tries>=2) card.querySelector(".sol").style.display="inline-block";
+  }
+  updateScore();
+}
+function hint(i){
+  var q=QUESTIONS[i], s=state[i], hb=document.getElementById("hints"+i);
+  if(s.hints<q.h.length){
+    var p=document.createElement("p"); p.textContent="💡 Hint "+(s.hints+1)+": "+q.h[s.hints]; hb.appendChild(p); s.hints++;
+  }
+  if(s.hints>=q.h.length) document.querySelector("#q"+i+" .hint").disabled=true;
+  updateScore();
+}
+function counts(){
+  var c=0,first=0,h=0;
+  state.forEach(function(s){ if(s.correct){c++; if(s.tries===1)first++;} h+=s.hints; });
+  return {correct:c,first:first,hints:h};
+}
+function updateScore(){
+  var k=counts();
+  document.getElementById("scoreText").textContent="Score: "+k.correct+" / "+QUESTIONS.length+" correct · hints used: "+k.hints;
+}
+function finish(){
+  var k=counts(), n=QUESTIONS.length, pct=Math.round(100*k.correct/n);
+  var msg;
+  if(pct===100) msg="🏆 PERFECT SCORE! Incredible work, Ace. A real archaeologist would be impressed!";
+  else if(pct>=85) msg="🌟 Outstanding, Ace! That's a Grade 6-7 level performance!";
+  else if(pct>=65) msg="💪 Great effort, Ace! Review the ones you missed and try them again.";
+  else if(pct>=40) msg="👍 Good start, Ace! These problems are tough. Use the hints and solutions to learn the tricks, then try again.";
+  else msg="🌱 These are challenge problems, well above grade level. Every great inventor started as a beginner! Go through the worked examples and try again, Ace!";
+  var f=document.getElementById("final");
+  f.style.display="block";
+  f.innerHTML="<h2 style='border:none;margin-top:0'>Final Score: "+k.correct+" / "+n+" ("+pct+"%)</h2>"+
+    "<p>Correct on the first try: "+k.first+" · Hints used: "+k.hints+"</p><p>"+msg+"</p>"+
+    "<p style='font-size:.85em;color:#546e7a'>Finished on "+new Date().toLocaleString("en-CA")+"</p>";
+  f.scrollIntoView({behavior:"smooth"});
+}
+render();
+updateScore();
+document.getElementById("finishBtn").addEventListener("click",finish);
+</script>
+</body>
+</html>

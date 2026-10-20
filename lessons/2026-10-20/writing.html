@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Writing (Oct. 20): Compare-and-Contrast Essay (Then and Now) + Grammar Clinic</title>
+<style>
+  body{font-family:"Segoe UI",Verdana,Arial,sans-serif;font-size:20px;line-height:1.6;margin:0;background:#fff8f0;color:#2c2416}
+  .wrap{max-width:880px;margin:0 auto;padding:20px 18px 80px}
+  a.home{font-size:.9em;color:#bf360c}
+  h1{color:#e65100;font-size:2em;margin:10px 0}
+  h2{color:#ef6c00;margin-top:36px;border-bottom:3px solid #ffcc80;padding-bottom:4px}
+  h3{color:#ef6c00}
+  .box{background:#fff;border-radius:16px;padding:18px 22px;margin:16px 0;box-shadow:0 3px 10px rgba(0,0,0,.07)}
+  .tipbox{background:#fff8e1;border-left:8px solid #ffb300}
+  .senses{display:grid;gap:8px;margin:10px 0;grid-template-columns:repeat(auto-fit,minmax(140px,1fr))}
+  .senses .side{border-radius:14px;padding:10px 16px;background:#fff3e0}
+  .ts{background:#ffcc80;border-radius:5px;padding:1px 3px}
+  .ev{background:#c8e6c9;border-radius:5px;padding:1px 3px}
+  .ex{background:#ffe0b2;border-radius:5px;padding:1px 3px}
+  .cs{background:#e1bee7;border-radius:5px;padding:1px 3px}
+  .legend span{display:inline-block;margin:4px 8px 4px 0;font-size:.85em}
+  .model{font-family:Georgia,"Times New Roman",serif;font-size:1.05em;line-height:1.9}
+  .row{padding:10px 6px;border-bottom:1px dashed #ddd}
+  .row.right{background:#f1f8e9} .row.wrong{background:#fff5f5}
+  select{font-size:.9em;padding:5px 8px;border-radius:8px;border:2px solid #ffb74d;font-family:inherit}
+  .q{border-left:8px solid #b0bec5}
+  .q.right{border-left-color:#43a047;background:#f1f8e9}
+  .q.wrong{border-left-color:#e53935;background:#fff5f5}
+  .opt{display:block;width:100%;text-align:left;font-size:.95em;background:#fafafa;border:2px solid #e0e0e0;border-radius:10px;padding:8px 14px;margin:8px 0;cursor:pointer;font-family:inherit}
+  .opt:hover{border-color:#ffb74d;background:#fff}
+  .opt.sel-right{background:#c8e6c9;border-color:#43a047}
+  .opt.sel-wrong{background:#ffcdd2;border-color:#e53935}
+  .fb{margin-top:6px;font-weight:bold}
+  .fb.good{color:#2e7d32} .fb.bad{color:#c62828}
+  .explain{font-weight:normal;color:#e65100}
+  .bad-sent{font-family:Consolas,"Courier New",monospace;background:#ffebee;padding:6px 10px;border-radius:8px;display:inline-block;margin:6px 0}
+  input.fix{width:100%;box-sizing:border-box;font-size:1em;padding:8px 12px;border:2px solid #ffb74d;border-radius:10px;font-family:inherit}
+  button{font-size:.95em;padding:8px 16px;border:none;border-radius:10px;cursor:pointer;font-weight:bold;font-family:inherit}
+  .go{background:#ef6c00;color:#fff} .go:hover{background:#e65100}
+  .hint{background:#ffe082;color:#5d4037}
+  .blue{background:#1e88e5;color:#fff}
+  .purple{background:#8e24aa;color:#fff}
+  .grey{background:#cfd8dc;color:#263238}
+  .btnrow{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px}
+  textarea{width:100%;box-sizing:border-box;min-height:300px;font-size:1.05em;line-height:1.7;font-family:Georgia,"Times New Roman",serif;padding:14px;border:3px solid #ffb74d;border-radius:12px}
+  textarea:focus{outline:none;border-color:#ef6c00}
+  .counter{display:flex;flex-wrap:wrap;gap:20px;align-items:center;margin:8px 0;font-weight:bold}
+  .meter{flex:1;min-width:200px;height:18px;background:#e0e0e0;border-radius:9px;overflow:hidden}
+  .meter div{height:100%;width:0;background:#ffb300;transition:width .2s}
+  .checklist label{display:block;padding:6px 4px;cursor:pointer}
+  .checklist input{transform:scale(1.4);margin-right:10px}
+  .prompts label{display:block;background:#fff3e0;border-radius:10px;padding:10px 14px;margin:8px 0;cursor:pointer}
+  .prompts input{transform:scale(1.3);margin-right:8px}
+  #scoreBox{position:sticky;bottom:0;background:#e65100;color:#fff;border-radius:16px 16px 0 0;padding:12px 20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-top:30px}
+  .w5{display:grid;gap:8px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));margin:10px 0}
+  .w5 label{display:block;font-weight:bold;color:#e65100}
+  .w5 input{width:100%;box-sizing:border-box;font-size:.95em;padding:6px 10px;border:2px solid #ffb74d;border-radius:8px;font-family:inherit}
+  #printArea{display:none}
+  @media print{
+    body{background:#fff;font-size:14pt}
+    .wrap,#scoreBox{display:none !important}
+    #printArea{display:block;font-family:Georgia,serif;line-height:1.8}
+    #printArea h1{font-size:18pt;margin:0 0 6pt}
+    #printArea .meta{font-size:11pt;color:#444}
+    #printArea .text{white-space:pre-wrap;border-top:1px solid #999;padding-top:10pt;margin-top:10pt}
+    #printArea .lines{margin-top:24pt;border-top:1px solid #999;padding-top:6pt;font-size:11pt}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+<a class="home" href="../../index.html">&larr; Back to all lessons</a>
+<h1>✍️ Writing Week 23: Compare-and-Contrast Essay: Then and Now 📜📱</h1>
+<p>Yesterday you wrote an adventure story to entertain your reader. Today, Ace, you'll write like a historian: a <strong>compare-and-contrast essay</strong> that puts an invention from ancient China side by side with the thing that replaced it or grew out of it. A strong compare-and-contrast essay does more than list facts. It shows how two things are <strong>alike</strong>, how they are <strong>different</strong>, and then makes a smart judgment: <strong>which one changed the world more, and why?</strong></p>
+
+<h2>Part 1: The Lesson</h2>
+<div class="box">
+  <h3 style="margin-top:0">A compare-and-contrast essay has six parts 🧩</h3>
+  <p>We'll use the <strong>point-by-point</strong> plan: instead of writing everything about one thing and then everything about the other, each body paragraph compares <em>both</em> things on one point.</p>
+  <div class="senses">
+    <div class="side"><strong>1. Hook:</strong> a surprising fact, a question, or a "picture this" moment that makes the reader curious</div>
+    <div class="side"><strong>2. Thesis statement:</strong> one sentence that names <em>both</em> things and previews your big idea</div>
+    <div class="side"><strong>3. Similarities:</strong> a body paragraph about how the two things are alike</div>
+    <div class="side"><strong>4. Differences:</strong> a body paragraph about how they are different (materials, speed, cost, who could use them)</div>
+    <div class="side"><strong>5. Impact:</strong> a body paragraph that judges which one changed the world more, with reasons and evidence</div>
+    <div class="side"><strong>6. Conclusion:</strong> restate the thesis in new words and end with a thought that sticks</div>
+  </div>
+  <h3>Five essay-writer's moves</h3>
+  <ul>
+    <li><strong>Use signal words:</strong> to show things are <em>alike</em>, use <em>both, similarly, likewise, in the same way, also</em>. To show they are <em>different</em>, use <em>however, whereas, unlike, on the other hand, in contrast</em>. Put a comma after a signal word that starts a sentence: "However, paper was light."</li>
+    <li><strong>Compare on the same points:</strong> if you say how heavy bamboo strips were, say how heavy paper was too. A Venn diagram (planner below) keeps you balanced.</li>
+    <li><strong>Use comparatives correctly:</strong> short words add <em>-er</em> (light → lighter); longer words use <em>more</em> (durable → more durable). Never both: <s>more lighter</s>.</li>
+    <li><strong>Back up your judgment:</strong> in the impact paragraph, give at least two reasons with real facts from today's reading (dates, numbers, who used it, what it led to).</li>
+    <li><strong>Stay formal:</strong> no "I think" in every sentence, no slang. Write in the third person in the body paragraphs, and save your own voice for the hook and the final thought.</li>
+  </ul>
+  <p><strong>Grown-up words:</strong> to <strong>compare</strong> is to show how things are alike; to <strong>contrast</strong> is to show how they differ. The <strong>thesis statement</strong> is your essay's main claim. A word like <em>however</em> that links ideas is a <strong>transition</strong>, and <em>lighter</em> or <em>more durable</em> is a <strong>comparative</strong>.</p>
+</div>
+
+<div class="box">
+  <h3 style="margin-top:0">Model Compare-and-Contrast Essay (short version)</h3>
+  <p class="legend"><span class="ts">Hook + thesis</span><span class="ev">Similarities + differences</span><span class="ex">Impact</span><span class="cs">Conclusion</span></p>
+  <p class="model">
+    <span class="ts">Picture a book so heavy that you needed a cart to carry it. In ancient China, that was normal. Bamboo strips and paper were both ways to record words, but paper was so much lighter and cheaper that it changed how the whole world learns.</span><br>
+    <span class="ev">Both materials were made from plants, and both let people keep laws, stories, and history for later generations. Similarly, writers used ink and brushes on each one. However, bamboo strips were bulky and had to be tied together with string, whereas paper, improved by Cai Lun around 105 CE, could be folded, stacked, and carried easily. Unlike silk, paper was also cheap, because it was made from bark, rags, and old fishing nets.</span><br>
+    <span class="ex">Paper changed the world more because it led straight to printing. Carved woodblocks, and later Bi Sheng's movable type around 1040, needed cheap paper to print many copies. In the same way, paper later spread along the Silk Road, so ideas could travel farther than ever before.</span><br>
+    <span class="cs">Bamboo strips helped ancient China remember its past, but paper helped the whole world share its future. Every time you open a notebook, you are holding a 2000-year-old idea.</span>
+  </p>
+  <p><strong>Notice:</strong> the hook paints a picture; the thesis names both things and gives the big idea; signal words (<em>both, similarly, however, whereas, unlike, in the same way</em>) are everywhere; the writer compares the two things on the <em>same</em> points (material, weight, cost); the impact paragraph gives two reasons with real dates; and the conclusion says the thesis in new words.</p>
+</div>
+
+<h2>Part 2: Name That Essay Part</h2>
+<div class="box">
+  <p>Each line comes from a student's compare-and-contrast essay about the compass then and now. Choose which <strong>part of the essay</strong> it belongs in.</p>
+  <div id="labelRows"></div>
+  <div class="btnrow"><button type="button" class="go" id="checkLabels">Check my answers</button></div>
+  <div class="fb" id="labelFb"></div>
+</div>
+
+<h2>Part 3: Grammar Clinic 🏯</h2>
+<div class="box tipbox">A careful historian checks every sentence before the essay goes to readers! <strong>Section A:</strong> pick the correct sentence. <strong>Section B:</strong> type the sentence again with <em>all</em> mistakes fixed. We use <strong>Canadian spelling</strong> (travelled, kilometres, colour, favourite). Today, watch <strong>compare/contrast transitions</strong>, <strong>comparatives</strong> (cheaper, not more cheaper), <strong>than / then</strong>, <strong>its / it's</strong>, <strong>capitals for proper nouns</strong> (the Silk Road, the Great Wall), <strong>commas after introductory words</strong>, and <strong>subject-verb agreement</strong>.</div>
+<h3>Section A: Pick the correct sentence</h3>
+<div id="gmc"></div>
+<h3>Section B: Fix the sentence</h3>
+<p>Retype the whole sentence correctly, with capital letters and punctuation. Each one has <strong>at least two</strong> mistakes.</p>
+<div id="gfix"></div>
+
+<h2>Part 4: Your Turn to Write</h2>
+<div class="box">
+  <h3 style="margin-top:0">Step 1: Choose your pair</h3>
+  <div class="prompts" id="prompts">
+    <label><input type="radio" name="prompt" value="Essay A: Bamboo strips vs. paper" checked> 📜 <strong>Essay A:</strong> Compare and contrast <em>bamboo strips</em> (the old way of writing in China) with <em>paper</em>. Which one changed the world more, and why?</label>
+    <label><input type="radio" name="prompt" value="Essay B: Woodblock printing vs. movable type"> 🖨️ <strong>Essay B:</strong> Compare and contrast <em>woodblock printing</em> with <em>movable type</em>. Think about speed, cost, and the thousands of Chinese characters. Which one mattered more, in China and in the world?</label>
+    <label><input type="radio" name="prompt" value="Essay C: The ancient compass vs. a phone map"> 🧭 <strong>Essay C:</strong> Compare and contrast an ancient Chinese <em>magnetic compass</em> with the <em>map and compass app</em> on a modern phone. Which one changed the world more, and why?</label>
+  </div>
+  <p><strong>Plan your essay (Venn diagram style):</strong> jot a few words for each box. (These notes save with your writing.)</p>
+  <div class="w5" id="w5">
+    <div><label for="w5who">Hook (surprising fact, question, or "picture this")</label><input id="w5who" type="text" autocomplete="off"></div>
+    <div><label for="w5place">Thesis: both things + your big idea</label><input id="w5place" type="text" autocomplete="off"></div>
+    <div><label for="w5facts">Alike: how are they the same? (middle of the Venn)</label><input id="w5facts" type="text" autocomplete="off"></div>
+    <div><label for="w5senses">Different: thing 1 vs. thing 2 on the same points</label><input id="w5senses" type="text" autocomplete="off"></div>
+    <div><label for="w5feel">Impact: which changed the world more? 2 reasons</label><input id="w5feel" type="text" autocomplete="off"></div>
+    <div><label for="w5closing">Conclusion: thesis in new words + final thought</label><input id="w5closing" type="text" autocomplete="off"></div>
+  </div>
+
+  <h3>Step 2: Write your essay</h3>
+  <p><strong>Goal:</strong> an essay of <strong>250 to 350 words</strong> with a <strong>title</strong> and <strong>five paragraphs</strong>: an introduction with a <strong>hook</strong> and a <strong>thesis statement</strong>, a <strong>similarities</strong> paragraph, a <strong>differences</strong> paragraph, an <strong>impact</strong> paragraph that makes a judgment, and a <strong>conclusion</strong>. Use at least <strong>four different signal words</strong> (two for alike, two for different), at least <strong>two comparatives</strong>, and at least <strong>three true facts</strong> from today's reading.</p>
+  <p><button type="button" class="hint" id="templateBtn">📋 Add the essay headings for me</button></p>
+  <label for="essay"><strong>Write here, Ace:</strong></label>
+  <textarea id="essay" placeholder="TITLE: ..."></textarea>
+  <div class="counter">
+    <span id="wc">0 words</span>
+    <span id="sc">0 sentences</span>
+    <div class="meter" aria-hidden="true"><div id="meterBar"></div></div>
+  </div>
+  <div class="fb" id="wcMsg">Aim for 250 to 350 words.</div>
+  <p style="font-size:.8em;color:#607d8b" id="saveNote">Your writing is saved automatically in this browser as you type.</p>
+
+  <h3>Self-check before you finish ✅</h3>
+  <div class="checklist" id="checklist">
+    <label><input type="checkbox"> My essay has a <strong>title</strong>, a <strong>hook</strong>, and a <strong>thesis statement</strong> that names both things.</label>
+    <label><input type="checkbox"> I wrote <strong>five paragraphs</strong>: introduction, similarities, differences, impact, and conclusion.</label>
+    <label><input type="checkbox"> I compared both things on the <strong>same points</strong> (like weight, cost, or speed).</label>
+    <label><input type="checkbox"> I used at least <strong>four signal words</strong> (both, similarly, however, whereas, unlike, in contrast…).</label>
+    <label><input type="checkbox"> My impact paragraph makes a clear <strong>judgment</strong> with at least <strong>two reasons</strong> and <strong>three true facts</strong> from today's reading.</label>
+    <label><input type="checkbox"> I used comparatives correctly (lighter, more durable) and kept a formal tone.</label>
+    <label><input type="checkbox"> I checked than / then, its / it's, capitals for proper nouns, commas after signal words, and <strong>Canadian spelling</strong> (travelled, kilometres, colour).</label>
+  </div>
+  <div class="btnrow">
+    <button type="button" class="blue" id="downloadBtn">⬇️ Download my writing (for Dad)</button>
+    <button type="button" class="purple" id="printBtn">🖨️ Print my writing</button>
+    <button type="button" class="grey" id="clearBtn">Start over</button>
+  </div>
+  <div class="fb" id="doneMsg"></div>
+</div>
+
+<div id="scoreBox"><span id="scoreText"></span><span>Keep going, historian Ace! 🏯</span></div>
+</div>
+
+<div id="printArea"></div>
+
+<script>
+var NAME="Ace";
+var PRAISE=["Nice work, Ace!","Correct! Great editing eye!","Yes! Ace fixed it!","Excellent, historian Ace!","Strong as the Great Wall! 🏯"];
+function pick(a){return a[Math.floor(Math.random()*a.length)];}
+
+var LABELS=["Hook", "Thesis statement", "Similarities", "Differences", "Impact", "Conclusion"];
+var LABEL_ITEMS=[
+ {s:"Imagine sailing into thick fog with no stars, no coastline, and no way to tell which direction is home.", a:"Hook"},
+ {s:"The ancient Chinese compass and a modern phone map both help travellers find their way, but the compass changed the world more because it made long ocean voyages possible.", a:"Thesis statement"},
+ {s:"Both tools use Earth's magnetism to show direction, and similarly, both made travel safer for the people who used them.", a:"Similarities"},
+ {s:"However, a lodestone compass needed no power at all, whereas a phone map stops working when its battery runs out.", a:"Differences"},
+ {s:"The compass mattered more because, by about 1100 CE, sailors could navigate even when clouds hid the stars, which opened up trade across whole oceans.", a:"Impact"},
+ {s:"A phone map helps one person find one street, but the compass helped the whole world find each other.", a:"Conclusion"}
+];
+var labelScore=0, labelChecked=false;
+function buildLabels(){
+  var box=document.getElementById("labelRows");
+  LABEL_ITEMS.forEach(function(it,i){
+    var d=document.createElement("div"); d.className="row"; d.id="lr"+i;
+    var sel='<select id="ls'+i+'" aria-label="Job of sentence '+(i+1)+'"><option value="">- choose -</option>';
+    LABELS.forEach(function(l){sel+='<option>'+l+'</option>';});
+    sel+='</select>';
+    d.innerHTML='<strong>'+(i+1)+'.</strong> '+it.s+'<br>'+sel+' <span id="lm'+i+'"></span>';
+    box.appendChild(d);
+  });
+}
+function checkLabels(){
+  var sc=0;
+  LABEL_ITEMS.forEach(function(it,i){
+    var ok=document.getElementById("ls"+i).value===it.a; if(ok)sc++;
+    document.getElementById("lr"+i).className="row "+(ok?"right":"wrong");
+    document.getElementById("lm"+i).textContent=ok?"✅":"❌";
+  });
+  labelScore=sc; labelChecked=true;
+  var fb=document.getElementById("labelFb");
+  if(sc===LABEL_ITEMS.length){fb.className="fb good";fb.textContent="🌟 "+sc+" / "+LABEL_ITEMS.length+". "+pick(PRAISE)+" You know exactly how a compare-and-contrast essay is built!";}
+  else{fb.className="fb bad";fb.textContent=sc+" / "+LABEL_ITEMS.length+". Hint: the \"imagine\" line = hook; the sentence naming both tools plus the big idea = thesis statement; \"both\" and \"similarly\" = similarities; \"however\" and \"whereas\" = differences; the sentence judging which mattered more, with a date = impact; the final memorable thought = conclusion. Fix the ❌ ones and check again.";}
+  updateScore();
+}
+
+var GMC=[
+ {q:"Which sentence uses a <strong>contrast</strong> signal word correctly?",
+  o:["Bamboo strips were heavy. Similarly, paper was light.", "Bamboo strips were heavy. However, paper was light.", "Bamboo strips were heavy. For example, paper was light.", "Bamboo strips were heavy. Likewise, paper was light."],
+  a:1,e:"The two ideas are <em>different</em> (heavy vs. light), so you need a contrast word like <em>However</em>. <em>Similarly</em> and <em>Likewise</em> show things are alike."},
+ {q:"Which sentence uses a <strong>comparative</strong> correctly?",
+  o:["Paper was more cheaper than silk.", "Paper was cheapest than silk.", "Paper was cheaper than silk.", "Paper was more cheap than silk."],
+  a:2,e:"A short word like <em>cheap</em> just adds <em>-er</em>: <em>cheaper</em>. Never use <em>more</em> and <em>-er</em> together, and use <em>-est</em> only when comparing three or more things."},
+ {q:"Which sentence uses <strong>than / then</strong> correctly?",
+  o:["Movable type was faster then carving a new block, and than printers reused the pieces.", "Movable type was faster than carving a new block, and than printers reused the pieces.", "Movable type was faster then carving a new block, and then printers reused the pieces.", "Movable type was faster than carving a new block, and then printers reused the pieces."],
+  a:3,e:"<em>Than</em> compares (faster <em>than</em>). <em>Then</em> tells about time or order (and <em>then</em> printers reused them)."},
+ {q:"Which sentence uses <strong>its / it's</strong> correctly?",
+  o:["It's amazing that the compass needle still points the same way after all its travels.", "Its amazing that the compass needle still points the same way after all it's travels.", "It's amazing that the compass needle still points the same way after all it's travels.", "Its amazing that the compass needle still points the same way after all its travels."],
+  a:0,e:"<em>It's</em> = it is (It is amazing). <em>Its</em> shows that something belongs to it (its travels), with no apostrophe."},
+ {q:"Which sentence capitalizes the <strong>proper nouns</strong> correctly?",
+  o:["Merchants travelled the silk road to reach the great wall.", "Merchants travelled the Silk road to reach the Great wall.", "Merchants travelled the Silk Road to reach the Great Wall.", "merchants Travelled the Silk Road to reach the Great Wall."],
+  a:2,e:"Names of specific places are proper nouns, so every important word is capitalized: <em>Silk Road</em>, <em>Great Wall</em>. The sentence also starts with a capital letter, and ordinary words like <em>travelled</em> stay lowercase."},
+ {q:"Which sentence uses a <strong>comma after a signal word</strong> correctly?",
+  o:["On the other hand a phone map needs a battery.", "On the other hand, a phone map needs a battery.", "On the other, hand a phone map needs a battery.", "On the other hand a phone map, needs a battery."],
+  a:1,e:"Put a comma right after the whole introductory phrase <em>On the other hand</em>, and never between a subject and its verb."},
+ {q:"Which sentence uses <strong>Canadian spelling</strong> correctly?",
+  o:["The merchants travelled many kilometres to trade brightly coloured silk.", "The merchants traveled many kilometers to trade brightly colored silk.", "The merchants travelled many kilometers to trade brightly colored silk.", "The merchants traveled many kilometres to trade brightly coloured silk."],
+  a:0,e:"Canadian English uses <em>travelled</em> (double l), <em>kilometres</em> (-re), and <em>coloured</em> (-our). (Americans write traveled, kilometers, colored.)"}
+];
+var gmcState=GMC.map(function(){return{answered:false,firstRight:false,done:false};});
+function buildGMC(){
+  var box=document.getElementById("gmc");
+  GMC.forEach(function(it,i){
+    var d=document.createElement("div"); d.className="box q"; d.id="g"+i;
+    var h='<div><strong>'+(i+1)+'.</strong> '+it.q+'</div>';
+    it.o.forEach(function(o,j){h+='<button type="button" class="opt" data-i="'+i+'" data-j="'+j+'">'+String.fromCharCode(65+j)+'. '+o+'</button>';});
+    h+='<div class="fb" id="gfb'+i+'"></div>';
+    d.innerHTML=h; box.appendChild(d);
+  });
+  box.addEventListener("click",function(e){
+    var b=e.target.closest?e.target.closest(".opt"):e.target; if(!b||!b.classList.contains("opt"))return;
+    var i=+b.getAttribute("data-i"), j=+b.getAttribute("data-j"), st=gmcState[i], it=GMC[i];
+    if(st.done)return;
+    var ok=j===it.a; if(!st.answered){st.answered=true;st.firstRight=ok;}
+    var fb=document.getElementById("gfb"+i);
+    if(ok){st.done=true;b.classList.add("sel-right");document.getElementById("g"+i).className="box q right";fb.className="fb good";fb.innerHTML="✅ "+pick(PRAISE)+' <span class="explain">'+it.e+'</span>';}
+    else{b.classList.add("sel-wrong");document.getElementById("g"+i).className="box q wrong";fb.className="fb bad";fb.textContent="❌ Not quite, Ace. Look closely and try again.";}
+    updateScore();
+  });
+}
+
+var GFIX=[
+ {bad:"both inventions was important but paper is more cheaper.",
+  ok:["Both inventions were important, but paper is cheaper.", "Both inventions were important but paper is cheaper.", "Both inventions were important, but paper was cheaper.", "Both inventions were important but paper was cheaper."],
+  hint:"Start with a capital letter. <em>Both inventions</em> is plural, so use <em>were</em>, not <em>was</em>. And <em>more cheaper</em> is a double comparative: just say <em>cheaper</em>."},
+ {bad:"unlike bamboo strips paper is light thin and easy to carry.",
+  ok:["Unlike bamboo strips, paper is light, thin, and easy to carry.", "Unlike bamboo strips, paper is light, thin and easy to carry."],
+  hint:"Capitalize <em>Unlike</em>, and put a comma after the introductory phrase <em>Unlike bamboo strips</em>. Then separate the items in the list with commas: <em>light, thin, and easy to carry</em>."},
+ {bad:"the compass pointed south and than the sailors new which way to go.",
+  ok:["The compass pointed south, and then the sailors knew which way to go.", "The compass pointed south and then the sailors knew which way to go."],
+  hint:"Capitalize the first word. <em>Then</em> tells what happened next (<em>than</em> is for comparing). <em>New</em> means not old; <em>knew</em> is the past tense of know."},
+ {bad:"the merchants traveled along the silk road to sell there silk.",
+  ok:["The merchants travelled along the Silk Road to sell their silk."],
+  hint:"Capitalize the first word and the proper noun <em>Silk Road</em>. Use the Canadian spelling <em>travelled</em>. The silk belongs to them, so use <em>their</em>, not <em>there</em>."}
+];
+
+var gfixState=GFIX.map(function(){return{tries:0,correct:false,firstRight:false};});
+function norm(s){return s.replace(/[\u2018\u2019\u02BC]/g,"'").replace(/[\u201C\u201D]/g,'"').replace(/\s+/g," ").trim();}
+function checkFixAnswer(i,val){var v=norm(val);return GFIX[i].ok.some(function(a){return norm(a)===v;});}
+function buildGFix(){
+  var box=document.getElementById("gfix");
+  GFIX.forEach(function(it,i){
+    var d=document.createElement("div"); d.className="box q"; d.id="f"+i;
+    d.innerHTML='<div><strong>'+(i+1)+'.</strong> Fix: <span class="bad-sent">'+it.bad+'</span></div>'+
+     '<input class="fix" type="text" id="fi'+i+'" autocomplete="off" spellcheck="false" aria-label="Corrected sentence '+(i+1)+'">'+
+     '<div class="btnrow"><button type="button" class="go" data-act="check" data-i="'+i+'">Check</button><button type="button" class="hint" data-act="hint" data-i="'+i+'">Hint 💡</button><button type="button" class="grey" data-act="show" data-i="'+i+'" style="display:none">Show answer</button></div>'+
+     '<div class="fb" id="ffb'+i+'"></div>';
+    box.appendChild(d);
+  });
+  box.addEventListener("click",function(e){
+    var b=e.target; if(b.tagName!=="BUTTON")return;
+    var i=+b.getAttribute("data-i"), act=b.getAttribute("data-act"), fb=document.getElementById("ffb"+i);
+    if(act==="hint"){fb.className="fb";fb.style.color="#5d4037";fb.textContent="💡 "+GFIX[i].hint;return;}
+    fb.style.color="";
+    if(act==="show"){fb.className="fb";fb.innerHTML='Answer: <em>'+GFIX[i].ok[0]+'</em>'+(GFIX[i].ok.length>1?' (other correct versions are accepted too)':'');return;}
+    fixCheck(i);
+  });
+  box.addEventListener("keydown",function(e){if(e.key==="Enter"&&e.target.classList.contains("fix"))fixCheck(+e.target.id.slice(2));});
+}
+function fixCheck(i){
+  var val=document.getElementById("fi"+i).value, fb=document.getElementById("ffb"+i), st=gfixState[i];
+  fb.style.color="";
+  if(!val.trim()){fb.className="fb bad";fb.textContent="Type the corrected sentence first, Ace!";return;}
+  st.tries++;
+  if(checkFixAnswer(i,val)){ if(st.tries===1)st.firstRight=true; st.correct=true; document.getElementById("f"+i).className="box q right"; fb.className="fb good"; fb.textContent="✅ "+pick(PRAISE); }
+  else { st.correct=false; document.getElementById("f"+i).className="box q wrong"; fb.className="fb bad"; fb.textContent="❌ Not quite. Check every capital letter, apostrophe, comma, and spelling. Try again!"; if(st.tries>=2)document.querySelector('#f'+i+' [data-act=show]').style.display="inline-block"; }
+  updateScore();
+}
+
+function updateScore(){
+  var g=0; gmcState.forEach(function(s){if(s.firstRight)g++;});
+  var f=0; gfixState.forEach(function(s){if(s.correct)f++;});
+  var total=LABEL_ITEMS.length+GMC.length+GFIX.length, got=labelScore+g+f;
+  document.getElementById("scoreText").textContent="Score: "+got+" / "+total+"  (labels "+(labelChecked?labelScore:"-")+"/"+LABEL_ITEMS.length+" · grammar A "+g+"/"+GMC.length+" · grammar B "+f+"/"+GFIX.length+")";
+}
+
+var W5=["who","place","facts","senses","feel","closing"];
+function w5Save(){try{localStorage.setItem(KEY+"-5w",JSON.stringify(W5.map(function(k){return document.getElementById("w5"+k).value;})));}catch(e){}}
+function w5Restore(){try{var d=JSON.parse(localStorage.getItem(KEY+"-5w")||"null");if(d)d.forEach(function(x,i){document.getElementById("w5"+W5[i]).value=x;});}catch(e){}}
+function w5Summary(){return W5.map(function(k){return k.charAt(0).toUpperCase()+k.slice(1)+": "+document.getElementById("w5"+k).value;}).join("\n");}
+function addTemplate(){
+  var t=document.getElementById("essay");
+  var tpl="TITLE: \n\nIntroduction (hook + thesis statement): \n\nBody 1 (similarities): \n\nBody 2 (differences): \n\nBody 3 (impact: which changed the world more?): \n\nConclusion: \n\nWritten by "+NAME;
+  if(t.value.trim()&&!confirm("Add the headings below what you've already written?"))return;
+  t.value=(t.value.trim()?t.value.replace(/\s+$/,"")+"\n\n":"")+tpl; updateCount(); t.focus();
+}
+var KEY="ace-writing-2026-10-20";
+function countWords(t){var m=t.trim().match(/[A-Za-zÀ-ÿ0-9]+(?:['’\-][A-Za-zÀ-ÿ0-9]+)*/g);return m?m.length:0;}
+function countSentences(t){var m=t.match(/[^.!?]*[A-Za-z0-9][^.!?]*[.!?]+/g);return m?m.length:0;}
+function currentPrompt(){var r=document.querySelector('input[name=prompt]:checked');return r?r.value:"";}
+function updateCount(){
+  var t=document.getElementById("essay").value, w=countWords(t), s=countSentences(t);
+  document.getElementById("wc").textContent=w+(w===1?" word":" words");
+  document.getElementById("sc").textContent=s+(s===1?" sentence":" sentences");
+  var bar=document.getElementById("meterBar"); bar.style.width=Math.min(100,w/350*100)+"%";
+  var msg=document.getElementById("wcMsg");
+  if(w<250){bar.style.background="#ffb300";msg.className="fb";msg.textContent=w===0?"Aim for 250 to 350 words.":"Keep going, Ace! "+(250-w)+" more words to reach the goal.";}
+  else if(w<=350){bar.style.background="#43a047";msg.className="fb good";msg.textContent="🎯 You're in the target zone! Nice work, Ace!";}
+  else{bar.style.background="#1e88e5";msg.className="fb";msg.textContent="Wow, that's a lot of writing! Strong essays stay focused. Could any sentences be cut?";}
+  try{localStorage.setItem(KEY,JSON.stringify({text:t,prompt:currentPrompt(),checks:checkStates()}));}catch(e){document.getElementById("saveNote").textContent="(This browser can't auto-save here, so use the Download button before closing!)";}
+}
+function checkStates(){return Array.prototype.map.call(document.querySelectorAll("#checklist input"),function(c){return c.checked;});}
+function checklistText(){
+  return Array.prototype.map.call(document.querySelectorAll("#checklist label"),function(l){return (l.querySelector("input").checked?"[x] ":"[ ] ")+l.textContent.trim();}).join("\n");
+}
+function buildReport(){
+  var t=document.getElementById("essay").value;
+  return "Writing Week 23: "+NAME+"\nDate: "+new Date().toLocaleString("en-CA")+"\nPrompt: "+currentPrompt()+
+    "\nWords: "+countWords(t)+"   Sentences: "+countSentences(t)+"\nPlanning notes:\n"+w5Summary()+
+    "\n\n----- "+NAME+"'s writing -----\n\n"+t+"\n\n----- Self-check -----\n"+checklistText()+
+    "\n\n----- Parent feedback -----\n\n\n";
+}
+function download(){
+  var t=document.getElementById("essay").value;
+  if(!t.trim()){document.getElementById("doneMsg").className="fb bad";document.getElementById("doneMsg").textContent="Write something first, Ace!";return;}
+  var blob=new Blob([buildReport().replace(/\n/g,"\r\n")],{type:"text/plain;charset=utf-8"});
+  var a=document.createElement("a"); a.href=URL.createObjectURL(blob); a.download=NAME+"-writing-2026-10-20"+".txt";
+  document.body.appendChild(a); a.click();
+  setTimeout(function(){URL.revokeObjectURL(a.href);a.remove();},1000);
+  var dm=document.getElementById("doneMsg"); dm.className="fb good"; dm.textContent="📄 Saved! Look in your Downloads folder and show Dad. Great job finishing, Ace!";
+}
+function esc(s){return s.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");}
+function printIt(){
+  var t=document.getElementById("essay").value;
+  if(!t.trim()){document.getElementById("doneMsg").className="fb bad";document.getElementById("doneMsg").textContent="Write something first, Ace!";return;}
+  document.getElementById("printArea").innerHTML="<h1>Writing Week 23: "+NAME+"</h1><div class='meta'>"+esc(new Date().toLocaleString("en-CA"))+"<br><strong>Prompt:</strong> "+esc(currentPrompt())+"<br>Words: "+countWords(t)+" · Sentences: "+countSentences(t)+"</div><div class='text'>"+esc(t)+"</div><div class='lines'><strong>Self-check:</strong><br>"+esc(checklistText()).replace(/\n/g,"<br>")+"</div><div class='lines'><strong>Parent feedback:</strong><br><br><br><br></div>";
+  window.print();
+}
+function restore(){
+  try{var d=JSON.parse(localStorage.getItem(KEY)||"null"); if(!d)return;
+    document.getElementById("essay").value=d.text||"";
+    Array.prototype.forEach.call(document.querySelectorAll("input[name=prompt]"),function(r){r.checked=(r.value===d.prompt);});
+    if(!document.querySelector("input[name=prompt]:checked"))document.querySelector("input[name=prompt]").checked=true;
+    var cs=document.querySelectorAll("#checklist input"); (d.checks||[]).forEach(function(v,i){if(cs[i])cs[i].checked=v;});
+  }catch(e){}
+}
+buildLabels(); buildGMC(); buildGFix(); restore(); w5Restore(); updateCount(); updateScore();
+W5.forEach(function(k){document.getElementById("w5"+k).addEventListener("input",w5Save);});
+document.getElementById("templateBtn").addEventListener("click",addTemplate);
+document.getElementById("checkLabels").addEventListener("click",checkLabels);
+document.getElementById("essay").addEventListener("input",updateCount);
+document.getElementById("checklist").addEventListener("change",function(){updateCount(); if(checkStates().every(Boolean)){var dm=document.getElementById("doneMsg");dm.className="fb good";dm.textContent="✅ All boxes checked! Now download or print it for Dad. Awesome work, Ace!";}});
+document.getElementById("prompts").addEventListener("change",updateCount);
+document.getElementById("downloadBtn").addEventListener("click",download);
+document.getElementById("printBtn").addEventListener("click",printIt);
+document.getElementById("clearBtn").addEventListener("click",function(){ if(confirm("Erase your writing and start over?")){document.getElementById("essay").value="";Array.prototype.forEach.call(document.querySelectorAll("#checklist input"),function(c){c.checked=false;});document.getElementById("doneMsg").textContent="";updateCount();} });
+</script>
+</body>
+</html>

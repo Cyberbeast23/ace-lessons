@@ -6,7 +6,7 @@ TTS voice (Cantonese): zh-HK-HiuMaanNeural when available; 2026-10-12+ often gTT
 TTS voice (English in ALL-words.mp3): en-HK-YanNeural
 Rate: slowed (~-20%) for clear listening practice.
 
-Sources: Ace lessons 2026-09-29 (Greetings) + 2026-09-30 (Family Members) + 2026-10-01 (Food) + 2026-10-02 (School) + 2026-10-03 (Body) + 2026-10-04 (Colours) + 2026-10-05 (Sky & Space) + 2026-10-06 (Numbers 11-100) + 2026-10-07 (At the Doctor) + 2026-10-08 (Nature: Mountains & Volcanoes) + 2026-10-09 (Question Words & Secrets) + 2026-10-10 (Music) + 2026-10-11 (Trains & Travel) + 2026-10-12 (Brain & Sleep) + 2026-10-13 (Bees & Gardens) + 2026-10-14 (Electricity & Lights) + 2026-10-15 (Land, People & Respect) + 2026-10-16 (Ice, Snow & Giant Animals) + 2026-10-17 (Community, Rules & Voting) + 2026-10-18 (Weather & Storms) + 2026-10-19 (Germs, Vaccines & Staying Healthy).
+Sources: Ace lessons 2026-09-29 (Greetings) + 2026-09-30 (Family Members) + 2026-10-01 (Food) + 2026-10-02 (School) + 2026-10-03 (Body) + 2026-10-04 (Colours) + 2026-10-05 (Sky & Space) + 2026-10-06 (Numbers 11-100) + 2026-10-07 (At the Doctor) + 2026-10-08 (Nature: Mountains & Volcanoes) + 2026-10-09 (Question Words & Secrets) + 2026-10-10 (Music) + 2026-10-11 (Trains & Travel) + 2026-10-12 (Brain & Sleep) + 2026-10-13 (Bees & Gardens) + 2026-10-14 (Electricity & Lights) + 2026-10-15 (Land, People & Respect) + 2026-10-16 (Ice, Snow & Giant Animals) + 2026-10-17 (Community, Rules & Voting) + 2026-10-18 (Weather & Storms) + 2026-10-19 (Germs, Vaccines & Staying Healthy) + 2026-10-20 (Ancient China: Paper, Books & Emperors).
 Numbers 1-10 are already known and not included here.
 
 How to practise:
@@ -865,6 +865,46 @@ Individual files
   Chinese:  健康
   Jyutping: gin6 hong1
   English:  healthy
+
+169-zung1-gwok3-china.mp3
+  Chinese:  中國
+  Jyutping: zung1 gwok3
+  English:  China
+
+170-coeng4-sing4-great-wall.mp3
+  Chinese:  長城
+  Jyutping: coeng4 sing4
+  English:  the Great Wall
+
+171-zi2-paper.mp3
+  Chinese:  紙
+  Jyutping: zi2
+  English:  paper
+
+172-bat1-pen.mp3
+  Chinese:  筆
+  Jyutping: bat1
+  English:  pen / writing brush
+
+173-se2-zi6-write.mp3
+  Chinese:  寫字
+  Jyutping: se2 zi6
+  English:  to write (characters)
+
+174-syu1-book.mp3
+  Chinese:  書
+  Jyutping: syu1
+  English:  book
+
+175-wong4-dai3-emperor.mp3
+  Chinese:  皇帝
+  Jyutping: wong4 dai3
+  English:  emperor
+
+176-ji5-cin4-before.mp3
+  Chinese:  以前
+  Jyutping: ji5 cin4
+  English:  before / in the past
 
 
 Combined file
