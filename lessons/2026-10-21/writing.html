@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Writing (Oct. 21): Procedural &amp; Explanatory Writing (How to Build and Test a Paper Airplane) + Grammar Clinic</title>
+<style>
+  body{font-family:"Segoe UI",Verdana,Arial,sans-serif;font-size:20px;line-height:1.6;margin:0;background:#fff8f0;color:#2c2416}
+  .wrap{max-width:880px;margin:0 auto;padding:20px 18px 80px}
+  a.home{font-size:.9em;color:#bf360c}
+  h1{color:#e65100;font-size:2em;margin:10px 0}
+  h2{color:#ef6c00;margin-top:36px;border-bottom:3px solid #ffcc80;padding-bottom:4px}
+  h3{color:#ef6c00}
+  .box{background:#fff;border-radius:16px;padding:18px 22px;margin:16px 0;box-shadow:0 3px 10px rgba(0,0,0,.07)}
+  .tipbox{background:#fff8e1;border-left:8px solid #ffb300}
+  .senses{display:grid;gap:8px;margin:10px 0;grid-template-columns:repeat(auto-fit,minmax(140px,1fr))}
+  .senses .side{border-radius:14px;padding:10px 16px;background:#fff3e0}
+  .ts{background:#ffcc80;border-radius:5px;padding:1px 3px}
+  .ev{background:#c8e6c9;border-radius:5px;padding:1px 3px}
+  .ex{background:#ffe0b2;border-radius:5px;padding:1px 3px}
+  .cs{background:#e1bee7;border-radius:5px;padding:1px 3px}
+  .legend span{display:inline-block;margin:4px 8px 4px 0;font-size:.85em}
+  .model{font-family:Georgia,"Times New Roman",serif;font-size:1.05em;line-height:1.9}
+  .row{padding:10px 6px;border-bottom:1px dashed #ddd}
+  .row.right{background:#f1f8e9} .row.wrong{background:#fff5f5}
+  select{font-size:.9em;padding:5px 8px;border-radius:8px;border:2px solid #ffb74d;font-family:inherit}
+  .q{border-left:8px solid #b0bec5}
+  .q.right{border-left-color:#43a047;background:#f1f8e9}
+  .q.wrong{border-left-color:#e53935;background:#fff5f5}
+  .opt{display:block;width:100%;text-align:left;font-size:.95em;background:#fafafa;border:2px solid #e0e0e0;border-radius:10px;padding:8px 14px;margin:8px 0;cursor:pointer;font-family:inherit}
+  .opt:hover{border-color:#ffb74d;background:#fff}
+  .opt.sel-right{background:#c8e6c9;border-color:#43a047}
+  .opt.sel-wrong{background:#ffcdd2;border-color:#e53935}
+  .fb{margin-top:6px;font-weight:bold}
+  .fb.good{color:#2e7d32} .fb.bad{color:#c62828}
+  .explain{font-weight:normal;color:#e65100}
+  .bad-sent{font-family:Consolas,"Courier New",monospace;background:#ffebee;padding:6px 10px;border-radius:8px;display:inline-block;margin:6px 0}
+  input.fix{width:100%;box-sizing:border-box;font-size:1em;padding:8px 12px;border:2px solid #ffb74d;border-radius:10px;font-family:inherit}
+  button{font-size:.95em;padding:8px 16px;border:none;border-radius:10px;cursor:pointer;font-weight:bold;font-family:inherit}
+  .go{background:#ef6c00;color:#fff} .go:hover{background:#e65100}
+  .hint{background:#ffe082;color:#5d4037}
+  .blue{background:#1e88e5;color:#fff}
+  .purple{background:#8e24aa;color:#fff}
+  .grey{background:#cfd8dc;color:#263238}
+  .btnrow{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px}
+  textarea{width:100%;box-sizing:border-box;min-height:300px;font-size:1.05em;line-height:1.7;font-family:Georgia,"Times New Roman",serif;padding:14px;border:3px solid #ffb74d;border-radius:12px}
+  textarea:focus{outline:none;border-color:#ef6c00}
+  .counter{display:flex;flex-wrap:wrap;gap:20px;align-items:center;margin:8px 0;font-weight:bold}
+  .meter{flex:1;min-width:200px;height:18px;background:#e0e0e0;border-radius:9px;overflow:hidden}
+  .meter div{height:100%;width:0;background:#ffb300;transition:width .2s}
+  .checklist label{display:block;padding:6px 4px;cursor:pointer}
+  .checklist input{transform:scale(1.4);margin-right:10px}
+  .prompts label{display:block;background:#fff3e0;border-radius:10px;padding:10px 14px;margin:8px 0;cursor:pointer}
+  .prompts input{transform:scale(1.3);margin-right:8px}
+  #scoreBox{position:sticky;bottom:0;background:#e65100;color:#fff;border-radius:16px 16px 0 0;padding:12px 20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-top:30px}
+  .w5{display:grid;gap:8px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));margin:10px 0}
+  .w5 label{display:block;font-weight:bold;color:#e65100}
+  .w5 input{width:100%;box-sizing:border-box;font-size:.95em;padding:6px 10px;border:2px solid #ffb74d;border-radius:8px;font-family:inherit}
+  #printArea{display:none}
+  @media print{
+    body{background:#fff;font-size:14pt}
+    .wrap,#scoreBox{display:none !important}
+    #printArea{display:block;font-family:Georgia,serif;line-height:1.8}
+    #printArea h1{font-size:18pt;margin:0 0 6pt}
+    #printArea .meta{font-size:11pt;color:#444}
+    #printArea .text{white-space:pre-wrap;border-top:1px solid #999;padding-top:10pt;margin-top:10pt}
+    #printArea .lines{margin-top:24pt;border-top:1px solid #999;padding-top:6pt;font-size:11pt}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+<a class="home" href="../../index.html">&larr; Back to all lessons</a>
+<h1>✍️ Writing Week 24: Procedural &amp; Explanatory Writing: How to Build and Test a Paper Airplane ✈️📐</h1>
+<p>Yesterday you wrote a compare-and-contrast essay that made a judgment. Today, Ace, you'll write like an engineer writing a test manual: a <strong>procedural and explanatory text</strong>. Procedural writing tells a reader exactly <strong>how to do</strong> something, step by step, so clearly that a stranger could follow it without asking a single question. Explanatory writing tells <strong>why it works</strong>. Today you'll do both: teach your reader how to build a paper airplane, how to test it fairly, and the science of why it flies.</p>
+
+<h2>Part 1: The Lesson</h2>
+<div class="box">
+  <h3 style="margin-top:0">A procedural + explanatory text has six parts 🧩</h3>
+  <p>Think of the instructions that come with a model kit or a recipe card, plus a short "how it works" section at the end.</p>
+  <div class="senses">
+    <div class="side"><strong>1. Goal (introduction):</strong> a title and 1 to 2 sentences that tell the reader what they will make and why it's worth doing</div>
+    <div class="side"><strong>2. Materials:</strong> a complete list of everything needed, with exact sizes and amounts</div>
+    <div class="side"><strong>3. Steps:</strong> numbered, in order, one main action per step, each starting with a command verb</div>
+    <div class="side"><strong>4. Test:</strong> how to try it out <em>fairly</em> and measure the results</div>
+    <div class="side"><strong>5. The science:</strong> an explanation of <em>why</em> it works, using cause-and-effect words</div>
+    <div class="side"><strong>6. Tips + conclusion:</strong> troubleshooting ("If it… then…") and a final encouraging thought</div>
+  </div>
+  <h3>Five technical-writer's moves</h3>
+  <ul>
+    <li><strong>Start steps with command verbs</strong> (imperative mood): <em>Fold, Crease, Line up, Measure, Launch, Record</em>. Not "You should maybe fold…" Just: "Fold the paper in half."</li>
+    <li><strong>Be precise:</strong> give exact measurements and positions in metric units. "Fold the top corners down to the centre crease" beats "fold the top bit." Write numbers with units like <em>2 cm</em> and <em>1.5 m</em> (a space, and no period after the unit).</li>
+    <li><strong>Use sequence words</strong> to guide the reader: <em>first, next, then, after that, once, finally</em>. Put a comma after a sequence word or phrase that starts a sentence: "Next, flip the plane over."</li>
+    <li><strong>Plan a fair test:</strong> change only <strong>one variable</strong> at a time (like the wing shape), keep everything else the same (the same paper, the same launch height, the same throw), repeat each trial at least three times, and calculate the <strong>mean</strong>.</li>
+    <li><strong>Explain with cause and effect:</strong> use <em>because, so, as a result, this causes, which means</em> to connect each design feature to one of the four forces (lift, weight, thrust, drag).</li>
+  </ul>
+  <p><strong>Grown-up words:</strong> a <strong>procedure</strong> is a set of steps; a command like "Fold the paper" is an <strong>imperative sentence</strong>. The thing you change in a test is the <strong>independent variable</strong>, the thing you measure is the <strong>dependent variable</strong>, and everything you keep the same is a <strong>controlled variable</strong>.</p>
+</div>
+
+<div class="box">
+  <h3 style="margin-top:0">Model Procedural + Explanatory Text (short version)</h3>
+  <p class="legend"><span class="ts">Goal + materials</span><span class="ev">Steps</span><span class="ex">Test + science</span><span class="cs">Tips + conclusion</span></p>
+  <p class="model">
+    <span class="ts"><strong>The Classic Dart: How to Build and Test a Paper Airplane.</strong> In ten minutes, you can build a paper dart that flies more than 8 m and learn the science of flight at the same time. You will need one sheet of A4 or letter-size paper, a ruler, a metre tape, a pencil, and a notebook.</span><br>
+    <span class="ev">1. Fold the paper in half the long way, crease it sharply, and unfold it. 2. Fold the two top corners down so that their edges meet at the centre crease. 3. Fold the new slanted edges to the centre crease again to make a sharp point. 4. Fold the plane in half along the first crease. 5. Fold each side down to make a wing, lining up the top edge of the wing with the bottom of the body.</span><br>
+    <span class="ex">To test your dart fairly, stand behind a tape line and launch it at shoulder height with a gentle, level push. Measure from the line to where the nose first touches the floor, then repeat for three trials and find the mean. Next, change only one thing, such as bending the back edges of the wings up by 2 mm, and run three more trials. Your throw provides the thrust, and the air pushing back causes drag. Because the wings are tilted slightly into the oncoming air, they deflect air downward, which creates lift to fight the plane's weight.</span><br>
+    <span class="cs">If your dart dives straight down, bend the back edges of the wings up a little. If it climbs and then stalls, bend them down. Every crease is an experiment, so keep testing, keep recording, and keep improving.</span>
+  </p>
+  <p><strong>Notice:</strong> the title and goal tell exactly what you'll make; the materials are complete and specific; every step starts with a command verb and gives an exact position; the test changes only <em>one</em> variable and repeats three trials; the science uses cause-and-effect words (<em>because, which creates, causes</em>) and names the four forces; and the tips use "If… then…" troubleshooting.</p>
+</div>
+
+<h2>Part 2: Name That Text Part</h2>
+<div class="box">
+  <p>Each line comes from a student's instructions for building and testing a paper helicopter (a "whirlybird"). Choose which <strong>part of the text</strong> it belongs in.</p>
+  <div id="labelRows"></div>
+  <div class="btnrow"><button type="button" class="go" id="checkLabels">Check my answers</button></div>
+  <div class="fb" id="labelFb"></div>
+</div>
+
+<h2>Part 3: Grammar Clinic ✈️</h2>
+<div class="box tipbox">A careful engineer checks every instruction before anyone tries to follow it! <strong>Section A:</strong> pick the correct sentence. <strong>Section B:</strong> type the sentence again with <em>all</em> mistakes fixed. We use <strong>Canadian spelling</strong> (centre, metre, colour, practise as a verb). Today, watch <strong>command verbs</strong>, <strong>commas after sequence words</strong>, <strong>metric units</strong> (2 cm, not 2cm. or 2 Cm), <strong>parallel structure</strong> in lists, <strong>affect / effect</strong>, <strong>fewer / less</strong>, and <strong>there / their / they're</strong>.</div>
+<h3>Section A: Pick the correct sentence</h3>
+<div id="gmc"></div>
+<h3>Section B: Fix the sentence</h3>
+<p>Retype the whole sentence correctly, with capital letters and punctuation. Each one has <strong>at least two</strong> mistakes.</p>
+<div id="gfix"></div>
+
+<h2>Part 4: Your Turn to Write</h2>
+<div class="box">
+  <h3 style="margin-top:0">Step 1: Choose your project</h3>
+  <div class="prompts" id="prompts">
+    <label><input type="radio" name="prompt" value="Text A: How to build and test a paper airplane" checked> ✈️ <strong>Text A:</strong> Write instructions for building <em>your own favourite paper airplane</em> (a dart, a glider, or your own design), a fair test to find out which wing shape flies farthest, and an explanation of the science.</label>
+    <label><input type="radio" name="prompt" value="Text B: How to build and test a paper helicopter"> 🚁 <strong>Text B:</strong> Write instructions for building a <em>paper helicopter</em> (whirlybird), a fair test to find out whether longer blades make it fall more slowly, and an explanation of why it spins.</label>
+    <label><input type="radio" name="prompt" value="Text C: How a wing makes lift (explanatory)"> 📐 <strong>Text C:</strong> Write an explanation for a Grade 2 student called <em>"How Does a Wing Hold Up a Plane?"</em> Include a simple hands-on demonstration with steps (like blowing over a strip of paper or holding your flat hand out a car window with a grown-up) and explain the four forces.</label>
+  </div>
+  <p><strong>Plan your text:</strong> jot a few words for each box. (These notes save with your writing.)</p>
+  <div class="w5" id="w5">
+    <div><label for="w5who">Goal: what will the reader make or learn, and why?</label><input id="w5who" type="text" autocomplete="off"></div>
+    <div><label for="w5place">Materials: everything needed (exact sizes)</label><input id="w5place" type="text" autocomplete="off"></div>
+    <div><label for="w5facts">Steps: list your command verbs in order</label><input id="w5facts" type="text" autocomplete="off"></div>
+    <div><label for="w5senses">Fair test: change ONE variable; measure what? how many trials?</label><input id="w5senses" type="text" autocomplete="off"></div>
+    <div><label for="w5feel">The science: which of the four forces? cause → effect</label><input id="w5feel" type="text" autocomplete="off"></div>
+    <div><label for="w5closing">Tips ("If it…, then…") + final thought</label><input id="w5closing" type="text" autocomplete="off"></div>
+  </div>
+
+  <h3>Step 2: Write your text</h3>
+  <p><strong>Goal:</strong> a text of <strong>250 to 350 words</strong> with a <strong>title</strong> and all <strong>six parts</strong>: a goal, a materials list, at least <strong>six numbered steps</strong> that each start with a command verb, a <strong>fair test</strong> (one variable changed, three trials, a mean), a <strong>science explanation</strong> that names at least <strong>two of the four forces</strong>, and <strong>tips + a conclusion</strong>. Use at least <strong>four sequence words</strong> and at least <strong>three cause-and-effect words</strong> (because, so, as a result, causes, which means).</p>
+  <p><button type="button" class="hint" id="templateBtn">📋 Add the headings for me</button></p>
+  <label for="essay"><strong>Write here, Ace:</strong></label>
+  <textarea id="essay" placeholder="TITLE: ..."></textarea>
+  <div class="counter">
+    <span id="wc">0 words</span>
+    <span id="sc">0 sentences</span>
+    <div class="meter" aria-hidden="true"><div id="meterBar"></div></div>
+  </div>
+  <div class="fb" id="wcMsg">Aim for 250 to 350 words.</div>
+  <p style="font-size:.8em;color:#607d8b" id="saveNote">Your writing is saved automatically in this browser as you type.</p>
+
+  <h3>Self-check before you finish ✅</h3>
+  <div class="checklist" id="checklist">
+    <label><input type="checkbox"> My text has a <strong>title</strong> and a <strong>goal</strong> that tells the reader what they'll make and why.</label>
+    <label><input type="checkbox"> My <strong>materials list</strong> is complete, with exact sizes in metric units.</label>
+    <label><input type="checkbox"> I wrote at least <strong>six numbered steps</strong>, in order, each starting with a <strong>command verb</strong>.</label>
+    <label><input type="checkbox"> My <strong>fair test</strong> changes only one variable, repeats three trials, and finds the mean.</label>
+    <label><input type="checkbox"> My <strong>science explanation</strong> names at least two of the four forces and uses three cause-and-effect words.</label>
+    <label><input type="checkbox"> I used at least <strong>four sequence words</strong> with commas after them, and added "If…, then…" tips.</label>
+    <label><input type="checkbox"> I checked metric units (2 cm), affect / effect, fewer / less, there / their / they're, and <strong>Canadian spelling</strong> (centre, metre, colour).</label>
+  </div>
+  <div class="btnrow">
+    <button type="button" class="blue" id="downloadBtn">⬇️ Download my writing (for Dad)</button>
+    <button type="button" class="purple" id="printBtn">🖨️ Print my writing</button>
+    <button type="button" class="grey" id="clearBtn">Start over</button>
+  </div>
+  <div class="fb" id="doneMsg"></div>
+</div>
+
+<div id="scoreBox"><span id="scoreText"></span><span>Keep going, Captain Ace! ✈️</span></div>
+</div>
+
+<div id="printArea"></div>
+
+<script>
+var NAME="Ace";
+var PRAISE=["Nice work, Ace!","Correct! Great editing eye!","Yes! Ace fixed it!","Excellent, Captain Ace!","Cleared for take-off! ✈️"];
+function pick(a){return a[Math.floor(Math.random()*a.length)];}
+
+var LABELS=["Goal", "Materials", "Steps", "Test", "The science", "Tips + conclusion"];
+var LABEL_ITEMS=[
+ {s:"Build a paper helicopter that spins like a maple seed and find out whether longer blades make it fall more slowly.", a:"Goal"},
+ {s:"You will need one strip of paper 21 cm by 7 cm, scissors, one paper clip, a ruler, a stopwatch, and a pencil.", a:"Materials"},
+ {s:"Next, cut along the centre line from the top down to the 10 cm mark, and fold one blade forward and the other back.", a:"Steps"},
+ {s:"Drop the helicopter from exactly 2 m three times, time each fall, and find the mean before you trim the blades shorter.", a:"Test"},
+ {s:"Because the falling helicopter pushes against the air, drag slows it down, and the tilted blades deflect air so that the whole thing spins.", a:"The science"},
+ {s:"If your helicopter tumbles instead of spinning, add a second paper clip, then keep experimenting until it twirls every time.", a:"Tips + conclusion"}
+];
+var labelScore=0, labelChecked=false;
+function buildLabels(){
+  var box=document.getElementById("labelRows");
+  LABEL_ITEMS.forEach(function(it,i){
+    var d=document.createElement("div"); d.className="row"; d.id="lr"+i;
+    var sel='<select id="ls'+i+'" aria-label="Job of sentence '+(i+1)+'"><option value="">- choose -</option>';
+    LABELS.forEach(function(l){sel+='<option>'+l+'</option>';});
+    sel+='</select>';
+    d.innerHTML='<strong>'+(i+1)+'.</strong> '+it.s+'<br>'+sel+' <span id="lm'+i+'"></span>';
+    box.appendChild(d);
+  });
+}
+function checkLabels(){
+  var sc=0;
+  LABEL_ITEMS.forEach(function(it,i){
+    var ok=document.getElementById("ls"+i).value===it.a; if(ok)sc++;
+    document.getElementById("lr"+i).className="row "+(ok?"right":"wrong");
+    document.getElementById("lm"+i).textContent=ok?"✅":"❌";
+  });
+  labelScore=sc; labelChecked=true;
+  var fb=document.getElementById("labelFb");
+  if(sc===LABEL_ITEMS.length){fb.className="fb good";fb.textContent="🌟 "+sc+" / "+LABEL_ITEMS.length+". "+pick(PRAISE)+" You know exactly how a procedural text is built!";}
+  else{fb.className="fb bad";fb.textContent=sc+" / "+LABEL_ITEMS.length+". Hint: what you will build and why = goal; the list of things you need = materials; a command verb with \"next\" = steps; dropping it three times and finding the mean = test; \"because\" and the forces = the science; \"if… then\" advice = tips + conclusion. Fix the ❌ ones and check again.";}
+  updateScore();
+}
+
+var GMC=[
+ {q:"Which step is written as a clear <strong>command</strong> (imperative sentence)?",
+  o:["You should probably fold the paper in half or something.", "The paper gets folded in half.", "Fold the paper in half the long way.", "Maybe the paper could be folded in half?"],
+  a:2,e:"A procedure step starts with a command verb and says exactly what to do: <em>Fold the paper in half the long way.</em> The others are vague, passive, or sound like a question."},
+ {q:"Which sentence uses a <strong>comma after a sequence word</strong> correctly?",
+  o:["After that, fold each wing down to the bottom of the body.", "After that fold, each wing down to the bottom of the body.", "After, that fold each wing down to the bottom of the body.", "After that fold each wing, down to the bottom of the body."],
+  a:0,e:"Put the comma right after the whole introductory phrase <em>After that</em>, then give the command."},
+ {q:"Which sentence writes the <strong>metric units</strong> correctly?",
+  o:["Bend the flaps up 2mm. and launch from 1.5M.", "Bend the flaps up 2 Mm and launch from 1.5 Metres.", "Bend the flaps up 2 mm. and launch from 1.5 m.", "Bend the flaps up 2 mm and launch from 1.5 m."],
+  a:3,e:"Metric symbols are lowercase (<em>mm</em>, <em>m</em>), have a space after the number, and never get a period unless they end the sentence."},
+ {q:"Which sentence has <strong>parallel structure</strong> (all list items in the same form)?",
+  o:["To test fairly, use the same paper, launching from the same height, and you should throw the same way.", "To test fairly, use the same paper, launch from the same height, and throw the same way.", "To test fairly, the same paper, launching from the same height, and throw the same way.", "To test fairly, using the same paper, launch from the same height, and throwing the same way."],
+  a:1,e:"Each item in the list should start the same way. Here all three are commands: <em>use… launch… throw…</em>"},
+ {q:"Which sentence uses <strong>affect / effect</strong> correctly?",
+  o:["Does the wing shape effect how far the plane flies? The affect was surprising.", "Does the wing shape affect how far the plane flies? The affect was surprising.", "Does the wing shape affect how far the plane flies? The effect was surprising.", "Does the wing shape effect how far the plane flies? The effect was surprising."],
+  a:2,e:"<em>Affect</em> is usually a verb (to change something). <em>Effect</em> is usually a noun (the result). Memory trick: <strong>A</strong>ffect = <strong>A</strong>ction, <strong>E</strong>ffect = <strong>E</strong>nd result."},
+ {q:"Which sentence uses <strong>fewer / less</strong> correctly?",
+  o:["A plane with fewer folds has less drag.", "A plane with less folds has fewer drag.", "A plane with fewer folds has fewer drag.", "A plane with less folds has less drag."],
+  a:0,e:"Use <em>fewer</em> for things you can count (folds) and <em>less</em> for things you can't count one by one (drag, air, water)."},
+ {q:"Which sentence uses <strong>there / their / they're</strong> correctly?",
+  o:["Their going to test there planes over their.", "They're going to test their planes over there.", "There going to test they're planes over their.", "They're going to test there planes over their."],
+  a:1,e:"<em>They're</em> = they are. <em>Their</em> shows belonging (their planes). <em>There</em> is a place (over there)."}
+];
+var gmcState=GMC.map(function(){return{answered:false,firstRight:false,done:false};});
+function buildGMC(){
+  var box=document.getElementById("gmc");
+  GMC.forEach(function(it,i){
+    var d=document.createElement("div"); d.className="box q"; d.id="g"+i;
+    var h='<div><strong>'+(i+1)+'.</strong> '+it.q+'</div>';
+    it.o.forEach(function(o,j){h+='<button type="button" class="opt" data-i="'+i+'" data-j="'+j+'">'+String.fromCharCode(65+j)+'. '+o+'</button>';});
+    h+='<div class="fb" id="gfb'+i+'"></div>';
+    d.innerHTML=h; box.appendChild(d);
+  });
+  box.addEventListener("click",function(e){
+    var b=e.target.closest?e.target.closest(".opt"):e.target; if(!b||!b.classList.contains("opt"))return;
+    var i=+b.getAttribute("data-i"), j=+b.getAttribute("data-j"), st=gmcState[i], it=GMC[i];
+    if(st.done)return;
+    var ok=j===it.a; if(!st.answered){st.answered=true;st.firstRight=ok;}
+    var fb=document.getElementById("gfb"+i);
+    if(ok){st.done=true;b.classList.add("sel-right");document.getElementById("g"+i).className="box q right";fb.className="fb good";fb.innerHTML="✅ "+pick(PRAISE)+' <span class="explain">'+it.e+'</span>';}
+    else{b.classList.add("sel-wrong");document.getElementById("g"+i).className="box q wrong";fb.className="fb bad";fb.textContent="❌ Not quite, Ace. Look closely and try again.";}
+    updateScore();
+  });
+}
+
+var GFIX=[
+ {bad:"first fold the paper in half and crease it to the center.",
+  ok:["First, fold the paper in half and crease it to the centre.", "First, fold the paper in half, and crease it to the centre."],
+  hint:"Capitalize <em>First</em> and put a comma after it, because it is a sequence word starting the sentence. Use the Canadian spelling <em>centre</em>."},
+ {bad:"next launch the plane from a height of 1.5M.",
+  ok:["Next, launch the plane from a height of 1.5 m."],
+  hint:"Capitalize <em>Next</em> and add a comma after it. The metric symbol for metres is a lowercase <em>m</em> with a space after the number."},
+ {bad:"bending the wing flaps up will effect how high the plane climbs",
+  ok:["Bending the wing flaps up will affect how high the plane climbs."],
+  hint:"Capitalize the first word. Here you need the verb <em>affect</em> (to change), not the noun <em>effect</em>. End the sentence with a period."},
+ {bad:"the students measured there planes flights in metres and they're results were amazing.",
+  ok:["The students measured their planes' flights in metres, and their results were amazing.", "The students measured their planes' flights in metres and their results were amazing.", "The students measured their plane's flights in metres, and their results were amazing.", "The students measured their plane's flights in metres and their results were amazing."],
+  hint:"Capitalize the first word. The planes belong to the students, so use <em>their</em> both times (not <em>there</em> or <em>they're</em>). The flights belong to the planes, so add an apostrophe: <em>planes'</em>. A comma before <em>and</em> joins the two complete sentences."}
+];
+
+var gfixState=GFIX.map(function(){return{tries:0,correct:false,firstRight:false};});
+function norm(s){return s.replace(/[\u2018\u2019\u02BC]/g,"'").replace(/[\u201C\u201D]/g,'"').replace(/\s+/g," ").trim();}
+function checkFixAnswer(i,val){var v=norm(val);return GFIX[i].ok.some(function(a){return norm(a)===v;});}
+function buildGFix(){
+  var box=document.getElementById("gfix");
+  GFIX.forEach(function(it,i){
+    var d=document.createElement("div"); d.className="box q"; d.id="f"+i;
+    d.innerHTML='<div><strong>'+(i+1)+'.</strong> Fix: <span class="bad-sent">'+it.bad+'</span></div>'+
+     '<input class="fix" type="text" id="fi'+i+'" autocomplete="off" spellcheck="false" aria-label="Corrected sentence '+(i+1)+'">'+
+     '<div class="btnrow"><button type="button" class="go" data-act="check" data-i="'+i+'">Check</button><button type="button" class="hint" data-act="hint" data-i="'+i+'">Hint 💡</button><button type="button" class="grey" data-act="show" data-i="'+i+'" style="display:none">Show answer</button></div>'+
+     '<div class="fb" id="ffb'+i+'"></div>';
+    box.appendChild(d);
+  });
+  box.addEventListener("click",function(e){
+    var b=e.target; if(b.tagName!=="BUTTON")return;
+    var i=+b.getAttribute("data-i"), act=b.getAttribute("data-act"), fb=document.getElementById("ffb"+i);
+    if(act==="hint"){fb.className="fb";fb.style.color="#5d4037";fb.textContent="💡 "+GFIX[i].hint;return;}
+    fb.style.color="";
+    if(act==="show"){fb.className="fb";fb.innerHTML='Answer: <em>'+GFIX[i].ok[0]+'</em>'+(GFIX[i].ok.length>1?' (other correct versions are accepted too)':'');return;}
+    fixCheck(i);
+  });
+  box.addEventListener("keydown",function(e){if(e.key==="Enter"&&e.target.classList.contains("fix"))fixCheck(+e.target.id.slice(2));});
+}
+function fixCheck(i){
+  var val=document.getElementById("fi"+i).value, fb=document.getElementById("ffb"+i), st=gfixState[i];
+  fb.style.color="";
+  if(!val.trim()){fb.className="fb bad";fb.textContent="Type the corrected sentence first, Ace!";return;}
+  st.tries++;
+  if(checkFixAnswer(i,val)){ if(st.tries===1)st.firstRight=true; st.correct=true; document.getElementById("f"+i).className="box q right"; fb.className="fb good"; fb.textContent="✅ "+pick(PRAISE); }
+  else { st.correct=false; document.getElementById("f"+i).className="box q wrong"; fb.className="fb bad"; fb.textContent="❌ Not quite. Check every capital letter, apostrophe, comma, and spelling. Try again!"; if(st.tries>=2)document.querySelector('#f'+i+' [data-act=show]').style.display="inline-block"; }
+  updateScore();
+}
+
+function updateScore(){
+  var g=0; gmcState.forEach(function(s){if(s.firstRight)g++;});
+  var f=0; gfixState.forEach(function(s){if(s.correct)f++;});
+  var total=LABEL_ITEMS.length+GMC.length+GFIX.length, got=labelScore+g+f;
+  document.getElementById("scoreText").textContent="Score: "+got+" / "+total+"  (labels "+(labelChecked?labelScore:"-")+"/"+LABEL_ITEMS.length+" · grammar A "+g+"/"+GMC.length+" · grammar B "+f+"/"+GFIX.length+")";
+}
+
+var W5=["who","place","facts","senses","feel","closing"];
+function w5Save(){try{localStorage.setItem(KEY+"-5w",JSON.stringify(W5.map(function(k){return document.getElementById("w5"+k).value;})));}catch(e){}}
+function w5Restore(){try{var d=JSON.parse(localStorage.getItem(KEY+"-5w")||"null");if(d)d.forEach(function(x,i){document.getElementById("w5"+W5[i]).value=x;});}catch(e){}}
+function w5Summary(){return W5.map(function(k){return k.charAt(0).toUpperCase()+k.slice(1)+": "+document.getElementById("w5"+k).value;}).join("\n");}
+function addTemplate(){
+  var t=document.getElementById("essay");
+  var tpl="TITLE: \n\nGoal: \n\nMaterials:\n- \n- \n- \n\nSteps:\n1. \n2. \n3. \n4. \n5. \n6. \n\nFair test: \n\nThe science (why it works): \n\nTips + conclusion: \n\nWritten by "+NAME;
+  if(t.value.trim()&&!confirm("Add the headings below what you've already written?"))return;
+  t.value=(t.value.trim()?t.value.replace(/\s+$/,"")+"\n\n":"")+tpl; updateCount(); t.focus();
+}
+var KEY="ace-writing-2026-10-21";
+function countWords(t){var m=t.trim().match(/[A-Za-zÀ-ÿ0-9]+(?:['’\-][A-Za-zÀ-ÿ0-9]+)*/g);return m?m.length:0;}
+function countSentences(t){var m=t.match(/[^.!?]*[A-Za-z0-9][^.!?]*[.!?]+/g);return m?m.length:0;}
+function currentPrompt(){var r=document.querySelector('input[name=prompt]:checked');return r?r.value:"";}
+function updateCount(){
+  var t=document.getElementById("essay").value, w=countWords(t), s=countSentences(t);
+  document.getElementById("wc").textContent=w+(w===1?" word":" words");
+  document.getElementById("sc").textContent=s+(s===1?" sentence":" sentences");
+  var bar=document.getElementById("meterBar"); bar.style.width=Math.min(100,w/350*100)+"%";
+  var msg=document.getElementById("wcMsg");
+  if(w<250){bar.style.background="#ffb300";msg.className="fb";msg.textContent=w===0?"Aim for 250 to 350 words.":"Keep going, Ace! "+(250-w)+" more words to reach the goal.";}
+  else if(w<=350){bar.style.background="#43a047";msg.className="fb good";msg.textContent="🎯 You're in the target zone! Nice work, Ace!";}
+  else{bar.style.background="#1e88e5";msg.className="fb";msg.textContent="Wow, that's a lot of writing! Strong instructions stay focused. Could any sentences be cut?";}
+  try{localStorage.setItem(KEY,JSON.stringify({text:t,prompt:currentPrompt(),checks:checkStates()}));}catch(e){document.getElementById("saveNote").textContent="(This browser can't auto-save here, so use the Download button before closing!)";}
+}
+function checkStates(){return Array.prototype.map.call(document.querySelectorAll("#checklist input"),function(c){return c.checked;});}
+function checklistText(){
+  return Array.prototype.map.call(document.querySelectorAll("#checklist label"),function(l){return (l.querySelector("input").checked?"[x] ":"[ ] ")+l.textContent.trim();}).join("\n");
+}
+function buildReport(){
+  var t=document.getElementById("essay").value;
+  return "Writing Week 24: "+NAME+"\nDate: "+new Date().toLocaleString("en-CA")+"\nPrompt: "+currentPrompt()+
+    "\nWords: "+countWords(t)+"   Sentences: "+countSentences(t)+"\nPlanning notes:\n"+w5Summary()+
+    "\n\n----- "+NAME+"'s writing -----\n\n"+t+"\n\n----- Self-check -----\n"+checklistText()+
+    "\n\n----- Parent feedback -----\n\n\n";
+}
+function download(){
+  var t=document.getElementById("essay").value;
+  if(!t.trim()){document.getElementById("doneMsg").className="fb bad";document.getElementById("doneMsg").textContent="Write something first, Ace!";return;}
+  var blob=new Blob([buildReport().replace(/\n/g,"\r\n")],{type:"text/plain;charset=utf-8"});
+  var a=document.createElement("a"); a.href=URL.createObjectURL(blob); a.download=NAME+"-writing-2026-10-21"+".txt";
+  document.body.appendChild(a); a.click();
+  setTimeout(function(){URL.revokeObjectURL(a.href);a.remove();},1000);
+  var dm=document.getElementById("doneMsg"); dm.className="fb good"; dm.textContent="📄 Saved! Look in your Downloads folder and show Dad. Great job finishing, Ace!";
+}
+function esc(s){return s.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");}
+function printIt(){
+  var t=document.getElementById("essay").value;
+  if(!t.trim()){document.getElementById("doneMsg").className="fb bad";document.getElementById("doneMsg").textContent="Write something first, Ace!";return;}
+  document.getElementById("printArea").innerHTML="<h1>Writing Week 24: "+NAME+"</h1><div class='meta'>"+esc(new Date().toLocaleString("en-CA"))+"<br><strong>Prompt:</strong> "+esc(currentPrompt())+"<br>Words: "+countWords(t)+" · Sentences: "+countSentences(t)+"</div><div class='text'>"+esc(t)+"</div><div class='lines'><strong>Self-check:</strong><br>"+esc(checklistText()).replace(/\n/g,"<br>")+"</div><div class='lines'><strong>Parent feedback:</strong><br><br><br><br></div>";
+  window.print();
+}
+function restore(){
+  try{var d=JSON.parse(localStorage.getItem(KEY)||"null"); if(!d)return;
+    document.getElementById("essay").value=d.text||"";
+    Array.prototype.forEach.call(document.querySelectorAll("input[name=prompt]"),function(r){r.checked=(r.value===d.prompt);});
+    if(!document.querySelector("input[name=prompt]:checked"))document.querySelector("input[name=prompt]").checked=true;
+    var cs=document.querySelectorAll("#checklist input"); (d.checks||[]).forEach(function(v,i){if(cs[i])cs[i].checked=v;});
+  }catch(e){}
+}
+buildLabels(); buildGMC(); buildGFix(); restore(); w5Restore(); updateCount(); updateScore();
+W5.forEach(function(k){document.getElementById("w5"+k).addEventListener("input",w5Save);});
+document.getElementById("templateBtn").addEventListener("click",addTemplate);
+document.getElementById("checkLabels").addEventListener("click",checkLabels);
+document.getElementById("essay").addEventListener("input",updateCount);
+document.getElementById("checklist").addEventListener("change",function(){updateCount(); if(checkStates().every(Boolean)){var dm=document.getElementById("doneMsg");dm.className="fb good";dm.textContent="✅ All boxes checked! Now download or print it for Dad. Awesome work, Ace!";}});
+document.getElementById("prompts").addEventListener("change",updateCount);
+document.getElementById("downloadBtn").addEventListener("click",download);
+document.getElementById("printBtn").addEventListener("click",printIt);
+document.getElementById("clearBtn").addEventListener("click",function(){ if(confirm("Erase your writing and start over?")){document.getElementById("essay").value="";Array.prototype.forEach.call(document.querySelectorAll("#checklist input"),function(c){c.checked=false;});document.getElementById("doneMsg").textContent="";updateCount();} });
+</script>
+</body>
+</html>

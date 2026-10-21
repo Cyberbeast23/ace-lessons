@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Math (Oct. 21): Flight: How Airplanes Fly Math Lab</title>
+<style>
+  body{font-family:"Segoe UI",Verdana,Arial,sans-serif;font-size:20px;line-height:1.6;margin:0;background:#f5f0eb;color:#2c2416}
+  .wrap{max-width:880px;margin:0 auto;padding:20px 18px 80px}
+  a.home{font-size:.9em;color:#bf360c}
+  h1{color:#e65100;font-size:2em;margin:10px 0}
+  h2{color:#ef6c00;margin-top:36px;border-bottom:3px solid #ffcc80;padding-bottom:4px}
+  .box{background:#fff;border-radius:16px;padding:18px 22px;margin:16px 0;box-shadow:0 3px 10px rgba(0,0,0,.07)}
+  .example{border-left:8px solid #ef6c00}
+  .example h3{margin:0 0 6px;color:#e65100}
+  .step{margin:4px 0 4px 10px}
+  code,.mono{font-family:Consolas,"Courier New",monospace;background:#fff3e0;padding:1px 6px;border-radius:5px}
+  .q{border-left:8px solid #90a4ae}
+  .q.right{border-left-color:#43a047;background:#f1f8e9}
+  .q.wrong{border-left-color:#e53935;background:#fff5f5}
+  .qnum{font-weight:bold;color:#e65100}
+  .row{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:10px}
+  input[type=text]{font-size:1.05em;padding:8px 12px;border:2px solid #ffcc80;border-radius:10px;width:190px}
+  input[type=text]:focus{outline:none;border-color:#ef6c00;box-shadow:0 0 0 3px #ffe0b2}
+  button{font-size:.95em;padding:8px 16px;border:none;border-radius:10px;cursor:pointer;font-weight:bold}
+  .check{background:#ef6c00;color:#fff} .check:hover{background:#e65100}
+  .hint{background:#ffe082;color:#5d4037} .hint:hover{background:#ffd54f}
+  .sol{background:#ce93d8;color:#311b92}
+  .unit{color:#546e7a}
+  .fb{margin-top:8px;font-weight:bold;min-height:1em}
+  .fb.good{color:#2e7d32} .fb.bad{color:#c62828}
+  .hints{margin-top:8px;color:#e65100;background:#fff3e0;border-radius:10px;padding:0 12px}
+  .hints p{margin:6px 0;padding:6px 0}
+  .solution{margin-top:8px;background:#f3e5f5;border-radius:10px;padding:8px 12px;display:none}
+  #scoreBox{position:sticky;bottom:0;background:#e65100;color:#fff;border-radius:16px 16px 0 0;padding:12px 20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-top:30px}
+  #scoreBox button{background:#ffca28;color:#3e2723}
+  #final{display:none;font-size:1.15em;text-align:center;border:4px solid #43a047}
+  .tipbox{background:#fff8e1;border-left:8px solid #ffb300}
+</style>
+</head>
+<body>
+<div class="wrap">
+<a class="home" href="../../index.html">&larr; Back to all lessons</a>
+<h1>✈️ Math Week 24: Flight: How Airplanes Fly Lab</h1>
+<p>Ace, every airplane in the sky is a flying math problem. Pilots, engineers, and air traffic controllers use numbers every second to keep planes safe: How fast are we going? How far can we glide? How cold is it up here? Today you'll work like an aerospace engineer with <strong>speed, distance, and time; converting between km/h and m/s; headwinds and tailwinds; glide ratios and scale models; negative temperatures at high altitude; reading a line graph and finding rates; means (averages) and a missing value; angle of attack; and multi-step fuel planning</strong>.</p>
+
+<h2>Part 1: Learn the Moves</h2>
+
+<div class="box tipbox">
+  <strong>The 4-Step Problem Solver (your pilot's pre-flight checklist):</strong>
+  <ol>
+    <li><strong>Read</strong>: What is the question actually asking? Underline the numbers and units.</li>
+    <li><strong>Plan</strong>: Which operations do I need, and in what order? Do the units match?</li>
+    <li><strong>Solve</strong>: Do one step at a time and write each step down.</li>
+    <li><strong>Check</strong>: Is my answer reasonable? Did I answer the question that was asked, in the right units?</li>
+  </ol>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 1: Speed, distance, and time</h3>
+  <p class="step"><strong>Speed = distance ÷ time.</strong> Rearrange it when you need something else: <strong>distance = speed × time</strong> and <strong>time = distance ÷ speed</strong>.</p>
+  <p class="step">A floatplane flies 450 km in 2.5 hours. Its average speed is 450 ÷ 2.5 = <strong>180 km/h</strong>. At that speed, 4 hours would take it 180 × 4 = 720 km.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 2: km/h and m/s</h3>
+  <p class="step">1 km = 1000 m and 1 h = 3600 s, so 1 km/h = 1000 ÷ 3600 m/s. That's the same as dividing by <strong>3.6</strong>.</p>
+  <p class="step"><strong>km/h → m/s: divide by 3.6.</strong> 72 km/h ÷ 3.6 = <strong>20 m/s</strong>.<br><strong>m/s → km/h: multiply by 3.6.</strong> 15 m/s × 3.6 = <strong>54 km/h</strong>.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 3: Headwinds and tailwinds</h3>
+  <p class="step">A plane's <strong>airspeed</strong> is how fast it moves through the air. Its <strong>ground speed</strong> is how fast it moves over the ground. Wind changes the ground speed.</p>
+  <p class="step"><strong>Headwind</strong> (blowing against you): subtract. <strong>Tailwind</strong> (blowing from behind): add. Airspeed 500 km/h with a 50 km/h headwind gives a ground speed of 450 km/h, so 900 km takes 900 ÷ 450 = <strong>2 h</strong>.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 4: Glide ratios and scale</h3>
+  <p class="step">A <strong>glide ratio</strong> compares how far forward something glides to how far it drops. A glide ratio of <strong>20 : 1</strong> means it travels 20 m forward for every 1 m it sinks. From 2 km up, it could glide 20 × 2 = <strong>40 km</strong>.</p>
+  <p class="step">Glide ratio = distance forward ÷ height dropped. A paper plane that drops 2 m while gliding 12 m has a glide ratio of 12 ÷ 2 = <strong>6 : 1</strong>.</p>
+  <p class="step"><strong>Scale models:</strong> on a 1 : 50 model, every real length is divided by 50. A real wing 10 m (1000 cm) long becomes 1000 ÷ 50 = <strong>20 cm</strong>.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 5: Negative temperatures with altitude</h3>
+  <p class="step">In the lower atmosphere, the air gets colder as you go up, by about <strong>6.5 °C for every 1000 m</strong> (on average).</p>
+  <p class="step">If it is 20 °C on the ground, at 4000 m it is about 20 − 6.5 × 4 = 20 − 26 = <strong>−6 °C</strong>. Going below zero is just like moving left past 0 on a number line. (Type negative answers with a minus sign, like <span class="mono">-6</span>.)</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 6: Rates from a line graph</h3>
+  <p class="step">On a graph of altitude against time, a <strong>steeper</strong> line means the plane is climbing faster. A <strong>flat</strong> line means the altitude is not changing.</p>
+  <p class="step"><strong>Rate = change in altitude ÷ change in time.</strong> If a plane goes from 1000 m at 2 min to 3400 m at 8 min, its rate of climb is (3400 − 1000) ÷ (8 − 2) = 2400 ÷ 6 = <strong>400 m per minute</strong>.</p>
+</div>
+
+<div class="box example">
+  <svg viewBox="0 0 300 220" width="250" style="float:right;margin:0 0 8px 12px;background:#fff;border-radius:16px" role="img" aria-label="Four forces on an airplane: lift up, weight down, thrust forward, drag backward">
+    <defs><marker id="ah" markerUnits="userSpaceOnUse" markerWidth="14" markerHeight="14" refX="10" refY="7" orient="auto"><path d="M0,0 L14,7 L0,14 z" fill="#263238"/></marker></defs>
+    <ellipse cx="150" cy="110" rx="70" ry="14" fill="#90caf9" stroke="#1565c0" stroke-width="2"/>
+    <polygon points="135,110 165,110 150,84" fill="#bbdefb" stroke="#1565c0"/>
+    <polygon points="135,110 165,110 150,136" fill="#bbdefb" stroke="#1565c0"/>
+    <polygon points="80,110 86,90 94,110" fill="#bbdefb" stroke="#1565c0"/>
+    <line x1="150" y1="84" x2="150" y2="34" stroke="#2e7d32" stroke-width="4" marker-end="url(#ah)"/>
+    <line x1="150" y1="136" x2="150" y2="186" stroke="#c62828" stroke-width="4" marker-end="url(#ah)"/>
+    <line x1="220" y1="110" x2="270" y2="110" stroke="#1565c0" stroke-width="4" marker-end="url(#ah)"/>
+    <line x1="80" y1="110" x2="30" y2="110" stroke="#6a1b9a" stroke-width="4" marker-end="url(#ah)"/>
+    <text x="150" y="24" text-anchor="middle" font-size="15" font-weight="bold" fill="#2e7d32">LIFT</text>
+    <text x="150" y="206" text-anchor="middle" font-size="15" font-weight="bold" fill="#c62828">WEIGHT</text>
+    <text x="272" y="96" text-anchor="end" font-size="15" font-weight="bold" fill="#1565c0">THRUST</text>
+    <text x="28" y="96" text-anchor="start" font-size="15" font-weight="bold" fill="#6a1b9a">DRAG</text>
+  </svg>
+  <h3>Worked Example 7: Angles, averages, and the four forces</h3>
+  <p class="step">Four forces act on every airplane: <strong>lift</strong> (up), <strong>weight</strong> (down), <strong>thrust</strong> (forward), and <strong>drag</strong> (backward). In steady, level flight, lift balances weight and thrust balances drag.</p>
+  <p class="step">The <strong>angle of attack</strong> is the angle between the wing and the oncoming air. If the wing is tilted up 10° from horizontal but the plane is climbing along a path 6° above horizontal, the air meets the wing at 10 − 6 = <strong>4°</strong>.</p>
+  <p class="step"><strong>Mean (average)</strong> = total ÷ number of values. To find a missing value when you know the new mean: new total = new mean × new count, then subtract the old total.</p>
+  <div style="clear:both"></div>
+</div>
+
+<h2>Part 2: The Challenge (20 problems)</h2>
+<p>Type your answer and press <strong>Check</strong> (or Enter). Fractions like <span class="mono">3/4</span>, mixed numbers like <span class="mono">1 3/4</span>, or decimals like <span class="mono">1.75</span> are fine. Don't type the units, $ signs, or % signs, and you may use spaces or commas in big numbers (1 000 000). For temperatures below zero, type a minus sign first, like <span class="mono">-12</span>. Stuck? Press <strong>Hint</strong>. After 2 tries, you can see a full solution.</p>
+
+<div id="questions"></div>
+<div class="box" id="final"></div>
+<div id="scoreBox">
+  <span id="scoreText">Score: 0 / 20 correct</span>
+  <button id="finishBtn" type="button">I'm done! Show my final score</button>
+</div>
+</div>
+
+<script>
+var NAME = "Ace";
+var GRAPH = '<div style="margin:10px 0"><svg viewBox="0 0 560 390" width="100%" style="max-width:560px;background:#fff;border-radius:12px" role="img" aria-label="Line graph of a flight: altitude in metres against time in minutes. Points at 0 min 0 m, 8 min 4000 m, 20 min 6000 m, 40 min 6000 m, 64 min 0 m."><text x="280" y="24" text-anchor="middle" font-size="16" font-weight="bold" fill="#263238">Flight altitude over time</text><line x1="70" y1="330.0" x2="520" y2="330.0" stroke="#e0e0e0" stroke-width="1"/><text x="62" y="335.0" text-anchor="end" font-size="13" fill="#455a64">0</text><line x1="70" y1="290.0" x2="520" y2="290.0" stroke="#e0e0e0" stroke-width="1"/><text x="62" y="295.0" text-anchor="end" font-size="13" fill="#455a64">1000</text><line x1="70" y1="250.0" x2="520" y2="250.0" stroke="#e0e0e0" stroke-width="1"/><text x="62" y="255.0" text-anchor="end" font-size="13" fill="#455a64">2000</text><line x1="70" y1="210.0" x2="520" y2="210.0" stroke="#e0e0e0" stroke-width="1"/><text x="62" y="215.0" text-anchor="end" font-size="13" fill="#455a64">3000</text><line x1="70" y1="170.0" x2="520" y2="170.0" stroke="#e0e0e0" stroke-width="1"/><text x="62" y="175.0" text-anchor="end" font-size="13" fill="#455a64">4000</text><line x1="70" y1="130.0" x2="520" y2="130.0" stroke="#e0e0e0" stroke-width="1"/><text x="62" y="135.0" text-anchor="end" font-size="13" fill="#455a64">5000</text><line x1="70" y1="90.0" x2="520" y2="90.0" stroke="#e0e0e0" stroke-width="1"/><text x="62" y="95.0" text-anchor="end" font-size="13" fill="#455a64">6000</text><line x1="70" y1="50.0" x2="520" y2="50.0" stroke="#e0e0e0" stroke-width="1"/><text x="62" y="55.0" text-anchor="end" font-size="13" fill="#455a64">7000</text><line x1="70.0" y1="330" x2="70.0" y2="50" stroke="#eeeeee" stroke-width="1"/><text x="70.0" y="350" text-anchor="middle" font-size="13" fill="#455a64">0</text><line x1="134.3" y1="330" x2="134.3" y2="50" stroke="#eeeeee" stroke-width="1"/><text x="134.3" y="350" text-anchor="middle" font-size="13" fill="#455a64">10</text><line x1="198.6" y1="330" x2="198.6" y2="50" stroke="#eeeeee" stroke-width="1"/><text x="198.6" y="350" text-anchor="middle" font-size="13" fill="#455a64">20</text><line x1="262.9" y1="330" x2="262.9" y2="50" stroke="#eeeeee" stroke-width="1"/><text x="262.9" y="350" text-anchor="middle" font-size="13" fill="#455a64">30</text><line x1="327.1" y1="330" x2="327.1" y2="50" stroke="#eeeeee" stroke-width="1"/><text x="327.1" y="350" text-anchor="middle" font-size="13" fill="#455a64">40</text><line x1="391.4" y1="330" x2="391.4" y2="50" stroke="#eeeeee" stroke-width="1"/><text x="391.4" y="350" text-anchor="middle" font-size="13" fill="#455a64">50</text><line x1="455.7" y1="330" x2="455.7" y2="50" stroke="#eeeeee" stroke-width="1"/><text x="455.7" y="350" text-anchor="middle" font-size="13" fill="#455a64">60</text><line x1="520.0" y1="330" x2="520.0" y2="50" stroke="#eeeeee" stroke-width="1"/><text x="520.0" y="350" text-anchor="middle" font-size="13" fill="#455a64">70</text><line x1="70" y1="330" x2="520" y2="330" stroke="#263238" stroke-width="2"/><line x1="70" y1="330" x2="70" y2="50" stroke="#263238" stroke-width="2"/><polyline class="flight" points="70.0,330.0 121.4,170.0 198.6,90.0 327.1,90.0 481.4,330.0" fill="none" stroke="#1565c0" stroke-width="4" stroke-linejoin="round"/><circle cx="70.0" cy="330.0" r="5" fill="#e65100"/><text x="78.0" y="320.0" text-anchor="start" font-size="12" fill="#bf360c">(0, 0)</text><circle cx="121.4" cy="170.0" r="5" fill="#e65100"/><text x="121.4" y="158.0" text-anchor="middle" font-size="12" fill="#bf360c">(8, 4000)</text><circle cx="198.6" cy="90.0" r="5" fill="#e65100"/><text x="198.6" y="78.0" text-anchor="middle" font-size="12" fill="#bf360c">(20, 6000)</text><circle cx="327.1" cy="90.0" r="5" fill="#e65100"/><text x="327.1" y="78.0" text-anchor="middle" font-size="12" fill="#bf360c">(40, 6000)</text><circle cx="481.4" cy="330.0" r="5" fill="#e65100"/><text x="489.4" y="320.0" text-anchor="start" font-size="12" fill="#bf360c">(64, 0)</text><text x="295" y="374" text-anchor="middle" font-size="14" fill="#263238">Time since take-off (minutes)</text><text x="18" y="190" text-anchor="middle" font-size="14" fill="#263238" transform="rotate(-90 18 190)">Altitude (m)</text></svg></div>';
+var TABLE = '<table style="border-collapse:collapse;margin:10px 0;font-size:.95em;background:#fff"><caption style="font-weight:bold;text-align:left;padding-bottom:4px">The Wright brothers&#8217; four flights, December 17, 1903 (rounded)</caption><tr><th style="border:1px solid #bdbdbd;padding:4px 10px;background:#e3f2fd">Flight</th><th style="border:1px solid #bdbdbd;padding:4px 10px;background:#e3f2fd">Pilot</th><th style="border:1px solid #bdbdbd;padding:4px 10px;background:#e3f2fd">Distance (m)</th><th style="border:1px solid #bdbdbd;padding:4px 10px;background:#e3f2fd">Time in the air (s)</th></tr><tr><td style="border:1px solid #bdbdbd;padding:4px 10px;text-align:center">1</td><td style="border:1px solid #bdbdbd;padding:4px 10px">Orville</td><td style="border:1px solid #bdbdbd;padding:4px 10px;text-align:right">36.6</td><td style="border:1px solid #bdbdbd;padding:4px 10px;text-align:right">12</td></tr><tr><td style="border:1px solid #bdbdbd;padding:4px 10px;text-align:center">2</td><td style="border:1px solid #bdbdbd;padding:4px 10px">Wilbur</td><td style="border:1px solid #bdbdbd;padding:4px 10px;text-align:right">53</td><td style="border:1px solid #bdbdbd;padding:4px 10px;text-align:right">12</td></tr><tr><td style="border:1px solid #bdbdbd;padding:4px 10px;text-align:center">3</td><td style="border:1px solid #bdbdbd;padding:4px 10px">Orville</td><td style="border:1px solid #bdbdbd;padding:4px 10px;text-align:right">61</td><td style="border:1px solid #bdbdbd;padding:4px 10px;text-align:right">15</td></tr><tr><td style="border:1px solid #bdbdbd;padding:4px 10px;text-align:center">4</td><td style="border:1px solid #bdbdbd;padding:4px 10px">Wilbur</td><td style="border:1px solid #bdbdbd;padding:4px 10px;text-align:right">260</td><td style="border:1px solid #bdbdbd;padding:4px 10px;text-align:right">59</td></tr></table>';
+var QUESTIONS = [
+ {t:"A de Havilland Canada Beaver, a famous Canadian bush plane, flies <strong>270 km</strong> from a lake in northern B.C. to a fishing camp in <strong>1.5 hours</strong>. What is its average speed?", a:"180", u:"km/h",
+  h:["Speed = distance ÷ time.","270 ÷ 1.5 is the same as 540 ÷ 3."],
+  s:"270 ÷ 1.5 = 180 km/h."},
+ {t:"Change the Beaver's speed of <strong>180 km/h</strong> into <strong>metres per second</strong>.", a:"50", u:"m/s",
+  h:["km/h → m/s: divide by 3.6.","180 ÷ 3.6 is the same as 1800 ÷ 36."],
+  s:"180 ÷ 3.6 = 50 m/s. (Check: 50 m/s × 3600 s = 180 000 m = 180 km in one hour ✔)"},
+ {t:"A passenger jet cruises at about <strong>250 m/s</strong>. How fast is that in <strong>km/h</strong>?", a:"900", u:"km/h",
+  h:["m/s → km/h: multiply by 3.6.","250 × 3.6 = 250 × 3 + 250 × 0.6."],
+  s:"250 × 3.6 = 750 + 150 = 900 km/h."},
+ {t:"A jet with an airspeed of <strong>900 km/h</strong> flies from Vancouver to Toronto, about <strong>3360 km</strong>, into a <strong>60 km/h headwind</strong>. How many <strong>hours</strong> does the flight take?", a:"4", u:"hours",
+  h:["A headwind slows you down: ground speed = 900 − 60.","Time = distance ÷ ground speed = 3360 ÷ 840."],
+  s:"Ground speed = 900 − 60 = 840 km/h. Time = 3360 ÷ 840 = 4 hours."},
+ {t:"On the way home, the same jet (airspeed 900 km/h) flies the same 3360 km with a <strong>60 km/h tailwind</strong>. How many <strong>minutes</strong> does the flight take?", a:"210", u:"minutes",
+  h:["A tailwind speeds you up: ground speed = 900 + 60 = 960 km/h.","3360 ÷ 960 = 3.5 hours. Now change hours to minutes."],
+  s:"Ground speed = 960 km/h. 3360 ÷ 960 = 3.5 h, and 3.5 × 60 = 210 minutes (3 h 30 min). That's 30 minutes faster than the trip with the headwind!"},
+ {t:TABLE+"Use the table. On the very first powered airplane flight, how fast did Orville Wright travel on average, in <strong>metres per second</strong>? (Give your answer to the nearest hundredth.)", a:"3.05", u:"m/s",
+  h:["Speed = distance ÷ time for Flight 1.","36.6 ÷ 12 = ?"],
+  s:"36.6 ÷ 12 = 3.05 m/s. (The plane flew into a strong headwind, so its speed through the air was much faster than its speed over the ground.)"},
+ {t:"Change Orville's average speed from question 6 (3.05 m/s) into <strong>km/h</strong>. (Give your answer to the nearest hundredth.)", a:"10.98", u:"km/h",
+  h:["m/s → km/h: multiply by 3.6.","3.05 × 3.6 = 3 × 3.6 + 0.05 × 3.6."],
+  s:"3.05 × 3.6 = 10.8 + 0.18 = 10.98 km/h, about as fast as a kid on a bike!"},
+ {t:"A sailplane (a glider with no engine) has a glide ratio of <strong>40 : 1</strong>. If it is <strong>1.5 km</strong> above the ground and the air is calm, how far forward can it glide before it lands?", a:"60", u:"km",
+  h:["A 40 : 1 glide ratio means 40 km forward for every 1 km of height.","40 × 1.5 = ?"],
+  s:"40 × 1.5 = 60 km, without any engine at all!"},
+ {t:"Ace launches a paper airplane from a height of <strong>1.8 m</strong>. It glides <strong>9 m</strong> forward before it touches the floor. What is its glide ratio? (Type the first number of the ratio, the ? in ? : 1.)", a:"5", u:": 1",
+  h:["Glide ratio = distance forward ÷ height dropped.","9 ÷ 1.8 is the same as 90 ÷ 18."],
+  s:"9 ÷ 1.8 = 5, so the glide ratio is 5 : 1."},
+ {t:"The real Beaver has a wingspan of about <strong>14.6 m</strong>. Ace builds a <strong>1 : 40</strong> scale model. What is the model's wingspan, in <strong>centimetres</strong>?", a:"36.5", u:"cm",
+  h:["Change metres to centimetres first: 14.6 m = 1460 cm.","Divide by 40."],
+  s:"14.6 m = 1460 cm. 1460 ÷ 40 = 36.5 cm."},
+ {t:"It is <strong>15 °C</strong> at sea level. The air cools by about <strong>6.5 °C for every 1000 m</strong> you climb. About what is the temperature outside a jet cruising at <strong>11 000 m</strong>?", a:"-56.5", u:"°C",
+  h:["How much does it cool? 6.5 × 11 = ?","Start at 15 and subtract 71.5. You will go below zero, so type a minus sign."],
+  s:"6.5 × 11 = 71.5 °C of cooling. 15 − 71.5 = −56.5 °C. That's colder than the coldest night ever recorded in most of Canada!"},
+ {t:GRAPH+"The line graph shows one flight. What was the plane's average rate of climb during the <strong>first 8 minutes</strong>?", a:"500", u:"m per minute",
+  h:["Read the two points: (0, 0) and (8, 4000).","Rate = change in altitude ÷ change in time = 4000 ÷ 8."],
+  s:"(4000 − 0) ÷ (8 − 0) = 500 m per minute."},
+ {t:"Use the graph in question 12. For how many <strong>minutes</strong> did the plane cruise at its highest altitude?", a:"20", u:"minutes",
+  h:["Look for the flat part of the line at the top.","It is flat from 20 min to 40 min."],
+  s:"The line is flat at 6000 m from 20 min to 40 min: 40 − 20 = 20 minutes."},
+ {t:"Use the graph in question 12. What was the plane's average rate of <strong>descent</strong> (how fast it came down) from 40 minutes until it landed?", a:"250", u:"m per minute",
+  h:["The plane goes from (40, 6000) down to (64, 0).","It drops 6000 m in 64 − 40 = 24 minutes."],
+  s:"6000 ÷ 24 = 250 m per minute. Notice the descent line is less steep than the first climb (500 m per minute), because the plane came down more slowly than it went up."},
+ {t:"On the day of the flight in question 12, it was <strong>12 °C</strong> on the ground. Using a cooling rate of <strong>6.5 °C per 1000 m</strong>, about what was the temperature at the plane's <strong>cruising altitude</strong>?", a:"-27", u:"°C",
+  h:["Read the cruising altitude from the graph: 6000 m.","Cooling = 6.5 × 6 = 39 °C. Now 12 − 39 = ?"],
+  s:"Cruising altitude = 6000 m. 6.5 × 6 = 39 °C of cooling. 12 − 39 = −27 °C."},
+ {t:"Ace tests a paper airplane five times. The distances are <strong>7.2 m, 8.5 m, 6.9 m, 9.4 m, and 8.0 m</strong>. What is the <strong>mean</strong> distance?", a:"8", u:"m",
+  h:["Add all five distances.","The total is 40.0 m. Divide by 5."],
+  s:"7.2 + 8.5 + 6.9 + 9.4 + 8.0 = 40.0 m. 40.0 ÷ 5 = 8 m."},
+ {t:"<strong>Challenge:</strong> Ace folds a better nose and throws a <strong>sixth</strong> time. Now the mean of all six throws is <strong>8.5 m</strong>. How long was the sixth throw?", a:"11", u:"m",
+  h:["The new total of all six throws = 8.5 × 6.","Subtract the old total of the first five throws (40 m)."],
+  s:"New total = 8.5 × 6 = 51 m. 51 − 40 = 11 m. One great throw raised the mean by half a metre!"},
+ {t:"A plane's wing is tilted up <strong>13°</strong> from horizontal, but the plane is climbing along a path that is <strong>8°</strong> above horizontal. What is the wing's <strong>angle of attack</strong> (the angle between the wing and the oncoming air)?", a:"5", u:"°",
+  h:["The oncoming air comes straight along the flight path.","Angle of attack = wing angle − flight path angle."],
+  s:"13° − 8° = 5°. If the angle of attack gets too big (usually around 15° or more), the air stops flowing smoothly over the wing and the wing can lose lift. Pilots call that a stall."},
+ {t:"Engineers compare planes using <strong>wing loading</strong>: the plane's mass divided by its wing area. A loaded bush plane has a mass of <strong>2300 kg</strong> and a wing area of <strong>23 m²</strong>. What is its wing loading?", a:"100", u:"kg per m²",
+  h:["Wing loading = mass ÷ wing area.","2300 ÷ 23 = ?"],
+  s:"2300 ÷ 23 = 100 kg per m². Each square metre of wing holds up 100 kg. A low wing loading helps a bush plane take off from short lakes and gravel strips."},
+ {t:"<strong>Multi-step:</strong> A bush plane's tank holds <strong>360 L</strong> of fuel. The engine burns <strong>80 L per hour</strong>, and the pilot must always land with <strong>45 minutes</strong> of fuel left as a safety reserve. Flying at <strong>200 km/h</strong>, what is the farthest the pilot can plan to fly?", a:"750", u:"km",
+  h:["Reserve fuel: 45 min = 0.75 h, and 0.75 × 80 = 60 L. Usable fuel = 360 − 60.","300 L ÷ 80 L per hour = 3.75 h of flying. Distance = speed × time."],
+  s:"Reserve = 0.75 × 80 = 60 L. Usable fuel = 360 − 60 = 300 L. Flying time = 300 ÷ 80 = 3.75 h. Distance = 200 × 3.75 = 750 km."}
+];
+
+var PRAISE = ["Nice work, Ace!","Correct! Cleared for take-off! ✈️","Yes! Captain Ace!","Excellent, Ace. That was a tough one!","Right on target! 🎯","Brilliant thinking, Ace!","Smooth landing! 🛬"];
+var ENCOURAGE = ["Not quite. Check your steps and try again!","Close call. Try again, Ace! Maybe use a hint?","Hmm, not yet. Re-read the question carefully.","Keep going, Ace. Mistakes help your brain grow!"];
+
+function parseAnswer(str){
+  if(str===undefined||str===null) return NaN;
+  var s=String(str).trim().toLowerCase();
+  s=s.replace(/[\u2212\u2013]/g,"-");
+  s=s.replace(/(\d),(?=\d{3}(\D|$))/g,"$1");
+  s=s.replace(/[^0-9.\/\- ]/g," ").replace(/\s+/g," ").trim();
+  s=s.replace(/\s*\/\s*/g,"/");
+  var m;
+  if((m=s.match(/^(-?\d+) (\d+)\/(\d+)$/))){ var w=parseFloat(m[1]),n=parseFloat(m[2]),d=parseFloat(m[3]); if(d===0)return NaN; return w<0? w-n/d : w+n/d; }
+  if((m=s.match(/^(-?\d+(?:\.\d+)?)\/(\d+(?:\.\d+)?)$/))){ var d2=parseFloat(m[2]); if(d2===0)return NaN; return parseFloat(m[1])/d2; }
+  s=s.replace(/ /g,"");
+  if(/^-?(\d+\.?\d*|\.\d+)$/.test(s)) return parseFloat(s);
+  return NaN;
+}
+function isCorrect(input,key){
+  var a=parseAnswer(input), k=parseAnswer(key);
+  if(isNaN(a)) return false;
+  var isInt=Math.abs(k-Math.round(k))<1e-12;
+  var tol=isInt?1e-9:0.005;
+  return Math.abs(a-k)<=tol;
+}
+
+function isRomanCorrect(input,key){ return String(input).replace(/\s+/g,"").toUpperCase()===key; }
+var state=[];
+function render(){
+  var box=document.getElementById("questions");
+  QUESTIONS.forEach(function(q,i){
+    state.push({correct:false,tries:0,hints:0});
+    var d=document.createElement("div");
+    d.className="box q"; d.id="q"+i;
+    d.innerHTML='<div><span class="qnum">'+(i+1)+'.</span> '+q.t+'</div>'+
+      '<div class="row"><input type="text"'+(q.r?' placeholder="e.g. MMXXVI"':'')+' id="in'+i+'" aria-label="Answer to question '+(i+1)+'" autocomplete="off"> <span class="unit">'+q.u+'</span>'+
+      '<button type="button" class="check" data-i="'+i+'">Check</button>'+
+      '<button type="button" class="hint" data-i="'+i+'">Hint 💡</button>'+
+      '<button type="button" class="sol" data-i="'+i+'" style="display:none">Show solution</button></div>'+
+      '<div class="fb" id="fb'+i+'"></div><div class="hints" id="hints'+i+'"></div>'+
+      '<div class="solution" id="sol'+i+'"><strong>Solution:</strong> '+q.s+'</div>';
+    box.appendChild(d);
+  });
+  box.addEventListener("click",function(e){
+    var b=e.target; if(b.tagName!=="BUTTON")return;
+    var i=+b.getAttribute("data-i");
+    if(b.className==="check") check(i);
+    else if(b.className==="hint") hint(i);
+    else if(b.className==="sol") document.getElementById("sol"+i).style.display="block";
+  });
+  box.addEventListener("keydown",function(e){
+    if(e.key==="Enter"&&e.target.tagName==="INPUT"){ check(+e.target.id.slice(2)); }
+  });
+}
+function pick(arr){return arr[Math.floor(Math.random()*arr.length)];}
+function check(i){
+  var val=document.getElementById("in"+i).value;
+  var fb=document.getElementById("fb"+i), card=document.getElementById("q"+i);
+  if(val.trim()===""){fb.className="fb bad";fb.textContent="Type an answer first, Ace!";return;}
+  var isR=!!QUESTIONS[i].r;
+  if(isR&&!/^[ivxlcdm\s]+$/i.test(val)){fb.className="fb bad";fb.textContent="Use only Roman numeral letters: I, V, X, L, C, D, M.";return;}
+  if(!isR&&isNaN(parseAnswer(val))){fb.className="fb bad";fb.textContent="I can't read that as a number. Try something like 42, 3.5, 3/4 or 1 3/4.";return;}
+  state[i].tries++;
+  if(isR?isRomanCorrect(val,QUESTIONS[i].a):isCorrect(val,QUESTIONS[i].a)){
+    state[i].correct=true; card.className="box q right"; fb.className="fb good";
+    fb.textContent="✅ "+pick(PRAISE)+(state[i].tries===1?" (first try!)":"");
+  } else {
+    state[i].correct=false; card.className="box q wrong"; fb.className="fb bad";
+    fb.textContent="❌ "+pick(ENCOURAGE);
+    if(state[i].tries>=2) card.querySelector(".sol").style.display="inline-block";
+  }
+  updateScore();
+}
+function hint(i){
+  var q=QUESTIONS[i], s=state[i], hb=document.getElementById("hints"+i);
+  if(s.hints<q.h.length){
+    var p=document.createElement("p"); p.textContent="💡 Hint "+(s.hints+1)+": "+q.h[s.hints]; hb.appendChild(p); s.hints++;
+  }
+  if(s.hints>=q.h.length) document.querySelector("#q"+i+" .hint").disabled=true;
+  updateScore();
+}
+function counts(){
+  var c=0,first=0,h=0;
+  state.forEach(function(s){ if(s.correct){c++; if(s.tries===1)first++;} h+=s.hints; });
+  return {correct:c,first:first,hints:h};
+}
+function updateScore(){
+  var k=counts();
+  document.getElementById("scoreText").textContent="Score: "+k.correct+" / "+QUESTIONS.length+" correct · hints used: "+k.hints;
+}
+function finish(){
+  var k=counts(), n=QUESTIONS.length, pct=Math.round(100*k.correct/n);
+  var msg;
+  if(pct===100) msg="🏆 PERFECT SCORE! Incredible work, Ace. A real aerospace engineer would be impressed!";
+  else if(pct>=85) msg="🌟 Outstanding, Ace! That's a Grade 6-7 level performance!";
+  else if(pct>=65) msg="💪 Great effort, Ace! Review the ones you missed and try them again.";
+  else if(pct>=40) msg="👍 Good start, Ace! These problems are tough. Use the hints and solutions to learn the tricks, then try again.";
+  else msg="🌱 These are challenge problems, well above grade level. Every great pilot started as a beginner! Go through the worked examples and try again, Ace!";
+  var f=document.getElementById("final");
+  f.style.display="block";
+  f.innerHTML="<h2 style='border:none;margin-top:0'>Final Score: "+k.correct+" / "+n+" ("+pct+"%)</h2>"+
+    "<p>Correct on the first try: "+k.first+" · Hints used: "+k.hints+"</p><p>"+msg+"</p>"+
+    "<p style='font-size:.85em;color:#546e7a'>Finished on "+new Date().toLocaleString("en-CA")+"</p>";
+  f.scrollIntoView({behavior:"smooth"});
+}
+render();
+updateScore();
+document.getElementById("finishBtn").addEventListener("click",finish);
+</script>
+</body>
+</html>

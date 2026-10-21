@@ -6,7 +6,7 @@ TTS voice (Cantonese): zh-HK-HiuMaanNeural when available; 2026-10-12+ often gTT
 TTS voice (English in ALL-words.mp3): en-HK-YanNeural
 Rate: slowed (~-20%) for clear listening practice.
 
-Sources: Ace lessons 2026-09-29 (Greetings) + 2026-09-30 (Family Members) + 2026-10-01 (Food) + 2026-10-02 (School) + 2026-10-03 (Body) + 2026-10-04 (Colours) + 2026-10-05 (Sky & Space) + 2026-10-06 (Numbers 11-100) + 2026-10-07 (At the Doctor) + 2026-10-08 (Nature: Mountains & Volcanoes) + 2026-10-09 (Question Words & Secrets) + 2026-10-10 (Music) + 2026-10-11 (Trains & Travel) + 2026-10-12 (Brain & Sleep) + 2026-10-13 (Bees & Gardens) + 2026-10-14 (Electricity & Lights) + 2026-10-15 (Land, People & Respect) + 2026-10-16 (Ice, Snow & Giant Animals) + 2026-10-17 (Community, Rules & Voting) + 2026-10-18 (Weather & Storms) + 2026-10-19 (Germs, Vaccines & Staying Healthy) + 2026-10-20 (Ancient China: Paper, Books & Emperors).
+Sources: Ace lessons 2026-09-29 (Greetings) + 2026-09-30 (Family Members) + 2026-10-01 (Food) + 2026-10-02 (School) + 2026-10-03 (Body) + 2026-10-04 (Colours) + 2026-10-05 (Sky & Space) + 2026-10-06 (Numbers 11-100) + 2026-10-07 (At the Doctor) + 2026-10-08 (Nature: Mountains & Volcanoes) + 2026-10-09 (Question Words & Secrets) + 2026-10-10 (Music) + 2026-10-11 (Trains & Travel) + 2026-10-12 (Brain & Sleep) + 2026-10-13 (Bees & Gardens) + 2026-10-14 (Electricity & Lights) + 2026-10-15 (Land, People & Respect) + 2026-10-16 (Ice, Snow & Giant Animals) + 2026-10-17 (Community, Rules & Voting) + 2026-10-18 (Weather & Storms) + 2026-10-19 (Germs, Vaccines & Staying Healthy) + 2026-10-20 (Ancient China: Paper, Books & Emperors) + 2026-10-21 (Flight: Airplanes, Pilots & Birds).
 Numbers 1-10 are already known and not included here.
 
 How to practise:
@@ -905,6 +905,46 @@ Individual files
   Chinese:  以前
   Jyutping: ji5 cin4
   English:  before / in the past
+
+177-fei1-gei1-airplane.mp3
+  Chinese:  飛機
+  Jyutping: fei1 gei1
+  English:  airplane
+
+178-gei1-coeng4-airport.mp3
+  Chinese:  機場
+  Jyutping: gei1 coeng4
+  English:  airport
+
+179-gei1-si1-pilot.mp3
+  Chinese:  機師
+  Jyutping: gei1 si1
+  English:  pilot
+
+180-zoek3-zai2-bird.mp3
+  Chinese:  雀仔
+  Jyutping: zoek3 zai2
+  English:  bird
+
+181-jik6-wing.mp3
+  Chinese:  翼
+  Jyutping: jik6
+  English:  wing
+
+182-hei2-fei1-take-off.mp3
+  Chinese:  起飛
+  Jyutping: hei2 fei1
+  English:  to take off
+
+183-hou2-faai3-very-fast.mp3
+  Chinese:  好快
+  Jyutping: hou2 faai3
+  English:  very fast
+
+184-hou2-gou1-very-high.mp3
+  Chinese:  好高
+  Jyutping: hou2 gou1
+  English:  very high / very tall
 
 
 Combined file
