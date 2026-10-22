@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Math (Oct. 22): The Cariboo Gold Rush Math Lab</title>
+<style>
+  body{font-family:"Segoe UI",Verdana,Arial,sans-serif;font-size:20px;line-height:1.6;margin:0;background:#f5f0eb;color:#2c2416}
+  .wrap{max-width:880px;margin:0 auto;padding:20px 18px 80px}
+  a.home{font-size:.9em;color:#bf360c}
+  h1{color:#e65100;font-size:2em;margin:10px 0}
+  h2{color:#ef6c00;margin-top:36px;border-bottom:3px solid #ffcc80;padding-bottom:4px}
+  .box{background:#fff;border-radius:16px;padding:18px 22px;margin:16px 0;box-shadow:0 3px 10px rgba(0,0,0,.07)}
+  .example{border-left:8px solid #ef6c00}
+  .example h3{margin:0 0 6px;color:#e65100}
+  .step{margin:4px 0 4px 10px}
+  code,.mono{font-family:Consolas,"Courier New",monospace;background:#fff3e0;padding:1px 6px;border-radius:5px}
+  .q{border-left:8px solid #90a4ae}
+  .q.right{border-left-color:#43a047;background:#f1f8e9}
+  .q.wrong{border-left-color:#e53935;background:#fff5f5}
+  .qnum{font-weight:bold;color:#e65100}
+  .row{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:10px}
+  input[type=text]{font-size:1.05em;padding:8px 12px;border:2px solid #ffcc80;border-radius:10px;width:190px}
+  input[type=text]:focus{outline:none;border-color:#ef6c00;box-shadow:0 0 0 3px #ffe0b2}
+  button{font-size:.95em;padding:8px 16px;border:none;border-radius:10px;cursor:pointer;font-weight:bold}
+  .check{background:#ef6c00;color:#fff} .check:hover{background:#e65100}
+  .hint{background:#ffe082;color:#5d4037} .hint:hover{background:#ffd54f}
+  .sol{background:#ce93d8;color:#311b92}
+  .unit{color:#546e7a}
+  .fb{margin-top:8px;font-weight:bold;min-height:1em}
+  .fb.good{color:#2e7d32} .fb.bad{color:#c62828}
+  .hints{margin-top:8px;color:#e65100;background:#fff3e0;border-radius:10px;padding:0 12px}
+  .hints p{margin:6px 0;padding:6px 0}
+  .solution{margin-top:8px;background:#f3e5f5;border-radius:10px;padding:8px 12px;display:none}
+  #scoreBox{position:sticky;bottom:0;background:#e65100;color:#fff;border-radius:16px 16px 0 0;padding:12px 20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-top:30px}
+  #scoreBox button{background:#ffca28;color:#3e2723}
+  #final{display:none;font-size:1.15em;text-align:center;border:4px solid #43a047}
+  .tipbox{background:#fff8e1;border-left:8px solid #ffb300}
+</style>
+</head>
+<body>
+<div class="wrap">
+<a class="home" href="../../index.html">&larr; Back to all lessons</a>
+<h1>⛏️ Math Week 25: The Cariboo Gold Rush Lab</h1>
+<p>Ace, in the 1850s and 1860s, tens of thousands of people rushed to British Columbia hoping to strike it rich. Every miner had to be a mathematician: How much is this nugget worth? How much gravel do I need to wash? Will I earn more than I spend? Today you'll work like a gold-rush assayer and shopkeeper with <strong>density (mass ÷ volume), unit conversions, money, percent increase, proportions and map scales, mean and median, perimeter, volume of a rectangular prism, sharing in a ratio, and solving equations</strong>.</p>
+
+<h2>Part 1: Learn the Moves</h2>
+
+<div class="box tipbox">
+  <strong>The 4-Step Problem Solver (your prospector's checklist):</strong>
+  <ol>
+    <li><strong>Read</strong>: What is the question actually asking? Underline the numbers and units.</li>
+    <li><strong>Plan</strong>: Which operations do I need, and in what order? Do the units match?</li>
+    <li><strong>Solve</strong>: Do one step at a time and write each step down.</li>
+    <li><strong>Check</strong>: Is my answer reasonable? Did I answer the question that was asked, in the right units?</li>
+  </ol>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 1: Density</h3>
+  <p class="step"><strong>Density = mass ÷ volume.</strong> It tells you how much mass is packed into each cubic centimetre (cm³). Gold is one of the densest metals on Earth, which is why it sinks to the bottom of a miner's pan while sand and gravel wash away.</p>
+  <p class="step">A lump of iron has a mass of 39 g and a volume of 5 cm³. Its density is 39 ÷ 5 = <strong>7.8 g per cm³</strong>. Turn it around: mass = density × volume, so 2 cm³ of iron has a mass of 7.8 × 2 = 15.6 g.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 2: Troy ounces and money</h3>
+  <p class="step">Gold is still weighed in <strong>troy ounces</strong>. One troy ounce is about <strong>31.1 g</strong>. To change grams into troy ounces, divide by 31.1: 93.3 g ÷ 31.1 = <strong>3 troy ounces</strong>.</p>
+  <p class="step">To find the value, multiply: if gold sells for $17 per ounce, 3 ounces are worth 3 × 17 = <strong>$51</strong>.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 3: Percent increase</h3>
+  <p class="step"><strong>Percent increase = (new − old) ÷ old × 100.</strong></p>
+  <p class="step">A shovel costs $2 in Victoria but $5 in a gold-rush town. The increase is 5 − 2 = $3, and 3 ÷ 2 × 100 = <strong>150%</strong>. (Notice: you always divide by the <em>old</em> price.)</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 4: Proportions and map scales</h3>
+  <p class="step">A <strong>proportion</strong> says two ratios are equal. If 2 pans of gravel give 0.5 g of gold, then 10 pans (5 times as many) give 0.5 × 5 = <strong>2.5 g</strong>. Find the multiplier, then use it on both parts.</p>
+  <p class="step"><strong>Map scale:</strong> a scale of 1 cm : 25 km means each centimetre on the map stands for 25 km in real life. A trail that measures 6 cm on the map is 6 × 25 = <strong>150 km</strong> long.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 5: Mean and median</h3>
+  <p class="step"><strong>Mean</strong> = total ÷ number of values. <strong>Median</strong> = the middle value once the numbers are put <em>in order</em>.</p>
+  <p class="step">For 4, 10, 3, 7, 21: the total is 45, so the mean is 45 ÷ 5 = <strong>9</strong>. In order: 3, 4, <strong>7</strong>, 10, 21, so the median is <strong>7</strong>. One very big value (21) pulls the mean up, but the median stays put.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 6: Sharing in a ratio</h3>
+  <p class="step">Three partners share 30 g of gold in the ratio <strong>3 : 2 : 1</strong>. Add the parts: 3 + 2 + 1 = 6 parts. One part = 30 ÷ 6 = 5 g.</p>
+  <p class="step">So the shares are 3 × 5 = <strong>15 g</strong>, 2 × 5 = <strong>10 g</strong>, and 1 × 5 = <strong>5 g</strong>. (Check: 15 + 10 + 5 = 30 ✔)</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 7: Volume, perimeter, and equations</h3>
+  <p class="step"><strong>Volume of a rectangular prism = length × width × height.</strong> A box 3 m by 2 m by 4 m holds 3 × 2 × 4 = <strong>24 m³</strong>.</p>
+  <p class="step"><strong>Perimeter of a rectangle = 2 × (length + width).</strong> If the perimeter is 60 m and the length is 18 m, then 2 × (18 + w) = 60, so 18 + w = 30 and <strong>w = 12 m</strong>.</p>
+  <p class="step"><strong>Solving an equation:</strong> "A number times 3, plus 5, is 26" becomes 3n + 5 = 26. Undo each step in reverse: subtract 5 (3n = 21), then divide by 3 (<strong>n = 7</strong>).</p>
+</div>
+
+<h2>Part 2: The Challenge (15 problems)</h2>
+<p>Type your answer and press <strong>Check</strong> (or Enter). Fractions like <span class="mono">3/4</span>, mixed numbers like <span class="mono">1 3/4</span>, or decimals like <span class="mono">1.75</span> are fine. Don't type the units, $ signs, or % signs, and you may use spaces or commas in big numbers (1 000 000). Stuck? Press <strong>Hint</strong>. After 2 tries, you can see a full solution.</p>
+
+<div id="questions"></div>
+<div class="box" id="final"></div>
+<div id="scoreBox">
+  <span id="scoreText">Score: 0 / 15 correct</span>
+  <button id="finishBtn" type="button">I'm done! Show my final score</button>
+</div>
+</div>
+
+<script>
+var NAME = "Ace";
+var GRAPH = '<div style="margin:10px 0"><svg viewBox="0 0 360 300" width="100%" style="max-width:360px;background:#fff;border-radius:12px" role="img" aria-label="A mine shaft shaped like a rectangular prism: 2 m long, 1.5 m wide, and 16 m deep."><polygon points="110,40 230,40 270,15 150,15" fill="#d7ccc8" stroke="#4e342e" stroke-width="2"/><polygon points="110,40 230,40 230,270 110,270" fill="#a1887f" stroke="#4e342e" stroke-width="2"/><polygon points="230,40 270,15 270,245 230,270" fill="#8d6e63" stroke="#4e342e" stroke-width="2"/><text x="170" y="60" text-anchor="middle" font-size="14" font-weight="bold" fill="#fff">2 m</text><text x="262" y="34" text-anchor="start" font-size="14" font-weight="bold" fill="#3e2723">1.5 m</text><line x1="95" y1="40" x2="95" y2="270" stroke="#bf360c" stroke-width="2"/><text x="88" y="160" text-anchor="end" font-size="14" font-weight="bold" fill="#bf360c">16 m deep</text><text x="170" y="292" text-anchor="middle" font-size="13" fill="#3e2723">Shaft shaped like a rectangular prism (not to scale)</text></svg></div>';
+var TABLE = '<table style="border-collapse:collapse;margin:10px 0;font-size:.95em;background:#fff"><caption style="font-weight:bold;text-align:left;padding-bottom:4px">Gold found by one miner in one week on Williams Creek</caption><tr><th style="border:1px solid #bdbdbd;padding:4px 10px;background:#fff8e1">Day</th><th style="border:1px solid #bdbdbd;padding:4px 10px;background:#fff8e1">Gold found (g)</th></tr><tr><td style="border:1px solid #bdbdbd;padding:4px 10px">Monday</td><td style="border:1px solid #bdbdbd;padding:4px 10px;text-align:right">7</td></tr><tr><td style="border:1px solid #bdbdbd;padding:4px 10px">Tuesday</td><td style="border:1px solid #bdbdbd;padding:4px 10px;text-align:right">22</td></tr><tr><td style="border:1px solid #bdbdbd;padding:4px 10px">Wednesday</td><td style="border:1px solid #bdbdbd;padding:4px 10px;text-align:right">9</td></tr><tr><td style="border:1px solid #bdbdbd;padding:4px 10px">Thursday</td><td style="border:1px solid #bdbdbd;padding:4px 10px;text-align:right">15</td></tr><tr><td style="border:1px solid #bdbdbd;padding:4px 10px">Friday</td><td style="border:1px solid #bdbdbd;padding:4px 10px;text-align:right">32</td></tr><tr><td style="border:1px solid #bdbdbd;padding:4px 10px">Saturday</td><td style="border:1px solid #bdbdbd;padding:4px 10px;text-align:right">8</td></tr><tr><td style="border:1px solid #bdbdbd;padding:4px 10px">Sunday</td><td style="border:1px solid #bdbdbd;padding:4px 10px;text-align:right">12</td></tr></table>';
+var QUESTIONS = [
+ {t:"A miner pulls a gold nugget out of a creek in the Cariboo. It has a mass of <strong>96.5 g</strong> and a volume of <strong>5 cm³</strong>. What is the density of gold?", a:"19.3", u:"g per cm³",
+  h:["Density = mass ÷ volume.","96.5 ÷ 5 is the same as 193 ÷ 10."],
+  s:"96.5 ÷ 5 = 19.3 g per cm³. Every cubic centimetre of gold has a mass of about 19.3 g, more than seven times as much as most rock!"},
+ {t:"Quartz, a common white rock that miners often found around gold, has a density of about <strong>2.6 g per cm³</strong>. A piece of quartz is exactly the same size as the nugget (<strong>5 cm³</strong>). How many grams <strong>heavier</strong> is the gold nugget (96.5 g) than the quartz?", a:"83.5", u:"g",
+  h:["Mass = density × volume, so the quartz has a mass of 2.6 × 5.","Subtract the quartz mass from 96.5 g."],
+  s:"Quartz: 2.6 × 5 = 13 g. 96.5 − 13 = 83.5 g heavier. That huge difference is why gold sinks to the bottom of a pan while lighter rock washes away."},
+ {t:"One <strong>troy ounce</strong> of gold is about <strong>31.1 g</strong>. A miner collects <strong>124.4 g</strong> of gold dust. How many troy ounces is that?", a:"4", u:"troy ounces",
+  h:["Grams → troy ounces: divide by 31.1.","Try multiplying instead: 31.1 × 4 = ?"],
+  s:"124.4 ÷ 31.1 = 4 troy ounces. (Check: 31.1 × 4 = 124.4 ✔)"},
+ {t:"Miners carried gold dust in a small leather bag called a <strong>poke</strong>. Suppose a gold buyer pays <strong>$16 per ounce</strong>. How much is a poke holding <strong>12.5 ounces</strong> worth?", a:"200", u:"dollars",
+  h:["Value = number of ounces × price per ounce.","12.5 × 16 = 12 × 16 + 0.5 × 16."],
+  s:"12.5 × 16 = 192 + 8 = $200. In the 1860s, that was more than many workers earned in months!"},
+ {t:"Everything had to be hauled hundreds of kilometres to the gold fields, so prices soared. Suppose a sack of flour cost <strong>$8</strong> in Victoria but <strong>$40</strong> in Barkerville. What was the <strong>percent increase</strong>?", a:"400", u:"%",
+  h:["Increase = 40 − 8 = 32 dollars.","Percent increase = increase ÷ OLD price × 100 = 32 ÷ 8 × 100."],
+  s:"40 − 8 = 32. 32 ÷ 8 = 4, and 4 × 100 = 400%. The price was five times as high, which is an increase of 400% (not 500%!)."},
+ {t:"A long wooden trough called a <strong>sluice box</strong> traps <strong>3 g</strong> of gold from every <strong>8 buckets</strong> of gravel. How many buckets of gravel must a team wash to collect <strong>45 g</strong> of gold?", a:"120", u:"buckets",
+  h:["How many times bigger is 45 than 3?","45 ÷ 3 = 15, so multiply the 8 buckets by 15 too."],
+  s:"45 ÷ 3 = 15. 15 × 8 = 120 buckets. (Ratio check: 3 : 8 = 45 : 120 ✔)"},
+ {t:"The Cariboo Wagon Road, built in the 1860s, ran from Yale on the Fraser River north to Barkerville. On a map with a scale of <strong>1 cm : 40 km</strong>, the road measures <strong>16 cm</strong>. About how long was the real road?", a:"640", u:"km",
+  h:["Each centimetre on the map stands for 40 km.","16 × 40 = ?"],
+  s:"16 × 40 = 640 km. Imagine walking that far with a heavy pack!"},
+ {t:"On the 640 km road, a slow freight wagon pulled by oxen travels about <strong>20 km per day</strong>, while a fast stagecoach covers about <strong>160 km per day</strong>. How many <strong>more days</strong> does the ox wagon take than the stagecoach?", a:"28", u:"days",
+  h:["Time = distance ÷ speed. Find the time for each one first.","Ox wagon: 640 ÷ 20 = 32 days. Stagecoach: 640 ÷ 160 = 4 days."],
+  s:"Ox wagon: 640 ÷ 20 = 32 days. Stagecoach: 640 ÷ 160 = 4 days. 32 − 4 = 28 more days."},
+ {t:TABLE+"Use the table. What is the <strong>mean</strong> mass of gold the miner found per day?", a:"15", u:"g",
+  h:["Add all seven daily amounts.","The total is 105 g. Divide by 7."],
+  s:"7 + 22 + 9 + 15 + 32 + 8 + 12 = 105 g. 105 ÷ 7 = 15 g per day."},
+ {t:"Use the same table. What is the <strong>median</strong> mass of gold found per day?", a:"12", u:"g",
+  h:["Put the seven values in order from smallest to largest.","7, 8, 9, 12, 15, 22, 32. Which one is in the middle?"],
+  s:"In order: 7, 8, 9, <strong>12</strong>, 15, 22, 32. The 4th value is the middle: 12 g. The median is lower than the mean (15 g) because the one big day (32 g) pulls the mean up."},
+ {t:"A miner's claim is a rectangle marked with wooden stakes. Its <strong>perimeter</strong> is <strong>100 m</strong>, and the side along the creek is <strong>30 m</strong> long. How wide is the claim?", a:"20", u:"m",
+  h:["Perimeter = 2 × (length + width), so 2 × (30 + w) = 100.","Divide by 2 first: 30 + w = 50."],
+  s:"2 × (30 + w) = 100, so 30 + w = 50 and w = 20 m. (Check: 30 + 20 + 30 + 20 = 100 ✔)"},
+ {t:GRAPH+"In 1862, a miner named Billy Barker and his crew dug a shaft about <strong>16 m</strong> deep before they struck rich gold, and the town of Barkerville grew up around the spot. If a shaft is shaped like the rectangular prism above, <strong>2 m</strong> long and <strong>1.5 m</strong> wide, how many cubic metres of earth had to be dug out?", a:"48", u:"m³",
+  h:["Volume = length × width × height (depth).","2 × 1.5 = 3 m² for the opening. Now multiply by the depth."],
+  s:"2 × 1.5 × 16 = 3 × 16 = 48 m³ of earth and rock, all dug by hand with picks and shovels!"},
+ {t:"<strong>Multi-step:</strong> A miner hires <strong>3 workers</strong> for <strong>6 days</strong> and pays each worker <strong>$10 per day</strong>. He also spends <strong>$35</strong> on supplies. At the end of the week he sells <strong>15 ounces</strong> of gold at <strong>$16 per ounce</strong>. What is his <strong>profit</strong> (money earned minus money spent)?", a:"25", u:"dollars",
+  h:["Earned: 15 × 16. Spent on wages: 3 × 10 × 6.","Profit = earned − wages − supplies."],
+  s:"Earned: 15 × 16 = $240. Wages: 3 × 10 × 6 = $180. Profit = 240 − 180 − 35 = $25. A whole week of hard work for a small profit: most miners did not get rich!"},
+ {t:"Four partners agree to share <strong>72 ounces</strong> of gold in the ratio <strong>3 : 2 : 2 : 1</strong>, based on how many days each one worked. How many ounces does the partner with the <strong>largest</strong> share get?", a:"27", u:"ounces",
+  h:["Add the parts: 3 + 2 + 2 + 1 = 8 parts.","One part = 72 ÷ 8 = 9 ounces. The largest share is 3 parts."],
+  s:"8 parts in total. 72 ÷ 8 = 9 ounces per part. Largest share = 3 × 9 = 27 ounces. (All shares: 27 + 18 + 18 + 9 = 72 ✔)"},
+ {t:"<strong>Challenge (equation):</strong> Two partners pan a creek. Lee finds <strong>4 g more than 3 times</strong> as much gold as Sam. Together they find <strong>84 g</strong>. How many grams did <strong>Sam</strong> find? (Hint: let Sam's amount be <span class=\"mono\">n</span>.)", a:"20", u:"g",
+  h:["Sam = n and Lee = 3n + 4. Together: n + 3n + 4 = 84.","Combine: 4n + 4 = 84. Subtract 4, then divide by 4."],
+  s:"n + (3n + 4) = 84, so 4n + 4 = 84, 4n = 80, and n = 20 g. Lee found 3 × 20 + 4 = 64 g. (Check: 20 + 64 = 84 ✔)"}
+];
+
+var PRAISE = ["Nice work, Ace!","Correct! You struck gold! ⛏️","Yes! Prospector Ace!","Excellent, Ace. That was a tough one!","Right on target! 🎯","Brilliant thinking, Ace!","Pure gold! 🥇"];
+var ENCOURAGE = ["Not quite. Check your steps and try again!","Close call. Try again, Ace! Maybe use a hint?","Hmm, not yet. Re-read the question carefully.","Keep going, Ace. Mistakes help your brain grow!"];
+
+function parseAnswer(str){
+  if(str===undefined||str===null) return NaN;
+  var s=String(str).trim().toLowerCase();
+  s=s.replace(/[\u2212\u2013]/g,"-");
+  s=s.replace(/(\d),(?=\d{3}(\D|$))/g,"$1");
+  s=s.replace(/[^0-9.\/\- ]/g," ").replace(/\s+/g," ").trim();
+  s=s.replace(/\s*\/\s*/g,"/");
+  var m;
+  if((m=s.match(/^(-?\d+) (\d+)\/(\d+)$/))){ var w=parseFloat(m[1]),n=parseFloat(m[2]),d=parseFloat(m[3]); if(d===0)return NaN; return w<0? w-n/d : w+n/d; }
+  if((m=s.match(/^(-?\d+(?:\.\d+)?)\/(\d+(?:\.\d+)?)$/))){ var d2=parseFloat(m[2]); if(d2===0)return NaN; return parseFloat(m[1])/d2; }
+  s=s.replace(/ /g,"");
+  if(/^-?(\d+\.?\d*|\.\d+)$/.test(s)) return parseFloat(s);
+  return NaN;
+}
+function isCorrect(input,key){
+  var a=parseAnswer(input), k=parseAnswer(key);
+  if(isNaN(a)) return false;
+  var isInt=Math.abs(k-Math.round(k))<1e-12;
+  var tol=isInt?1e-9:0.005;
+  return Math.abs(a-k)<=tol;
+}
+
+function isRomanCorrect(input,key){ return String(input).replace(/\s+/g,"").toUpperCase()===key; }
+var state=[];
+function render(){
+  var box=document.getElementById("questions");
+  QUESTIONS.forEach(function(q,i){
+    state.push({correct:false,tries:0,hints:0});
+    var d=document.createElement("div");
+    d.className="box q"; d.id="q"+i;
+    d.innerHTML='<div><span class="qnum">'+(i+1)+'.</span> '+q.t+'</div>'+
+      '<div class="row"><input type="text"'+(q.r?' placeholder="e.g. MMXXVI"':'')+' id="in'+i+'" aria-label="Answer to question '+(i+1)+'" autocomplete="off"> <span class="unit">'+q.u+'</span>'+
+      '<button type="button" class="check" data-i="'+i+'">Check</button>'+
+      '<button type="button" class="hint" data-i="'+i+'">Hint 💡</button>'+
+      '<button type="button" class="sol" data-i="'+i+'" style="display:none">Show solution</button></div>'+
+      '<div class="fb" id="fb'+i+'"></div><div class="hints" id="hints'+i+'"></div>'+
+      '<div class="solution" id="sol'+i+'"><strong>Solution:</strong> '+q.s+'</div>';
+    box.appendChild(d);
+  });
+  box.addEventListener("click",function(e){
+    var b=e.target; if(b.tagName!=="BUTTON")return;
+    var i=+b.getAttribute("data-i");
+    if(b.className==="check") check(i);
+    else if(b.className==="hint") hint(i);
+    else if(b.className==="sol") document.getElementById("sol"+i).style.display="block";
+  });
+  box.addEventListener("keydown",function(e){
+    if(e.key==="Enter"&&e.target.tagName==="INPUT"){ check(+e.target.id.slice(2)); }
+  });
+}
+function pick(arr){return arr[Math.floor(Math.random()*arr.length)];}
+function check(i){
+  var val=document.getElementById("in"+i).value;
+  var fb=document.getElementById("fb"+i), card=document.getElementById("q"+i);
+  if(val.trim()===""){fb.className="fb bad";fb.textContent="Type an answer first, Ace!";return;}
+  var isR=!!QUESTIONS[i].r;
+  if(isR&&!/^[ivxlcdm\s]+$/i.test(val)){fb.className="fb bad";fb.textContent="Use only Roman numeral letters: I, V, X, L, C, D, M.";return;}
+  if(!isR&&isNaN(parseAnswer(val))){fb.className="fb bad";fb.textContent="I can't read that as a number. Try something like 42, 3.5, 3/4 or 1 3/4.";return;}
+  state[i].tries++;
+  if(isR?isRomanCorrect(val,QUESTIONS[i].a):isCorrect(val,QUESTIONS[i].a)){
+    state[i].correct=true; card.className="box q right"; fb.className="fb good";
+    fb.textContent="✅ "+pick(PRAISE)+(state[i].tries===1?" (first try!)":"");
+  } else {
+    state[i].correct=false; card.className="box q wrong"; fb.className="fb bad";
+    fb.textContent="❌ "+pick(ENCOURAGE);
+    if(state[i].tries>=2) card.querySelector(".sol").style.display="inline-block";
+  }
+  updateScore();
+}
+function hint(i){
+  var q=QUESTIONS[i], s=state[i], hb=document.getElementById("hints"+i);
+  if(s.hints<q.h.length){
+    var p=document.createElement("p"); p.textContent="💡 Hint "+(s.hints+1)+": "+q.h[s.hints]; hb.appendChild(p); s.hints++;
+  }
+  if(s.hints>=q.h.length) document.querySelector("#q"+i+" .hint").disabled=true;
+  updateScore();
+}
+function counts(){
+  var c=0,first=0,h=0;
+  state.forEach(function(s){ if(s.correct){c++; if(s.tries===1)first++;} h+=s.hints; });
+  return {correct:c,first:first,hints:h};
+}
+function updateScore(){
+  var k=counts();
+  document.getElementById("scoreText").textContent="Score: "+k.correct+" / "+QUESTIONS.length+" correct · hints used: "+k.hints;
+}
+function finish(){
+  var k=counts(), n=QUESTIONS.length, pct=Math.round(100*k.correct/n);
+  var msg;
+  if(pct===100) msg="🏆 PERFECT SCORE! Incredible work, Ace. A real gold-rush assayer would be impressed!";
+  else if(pct>=85) msg="🌟 Outstanding, Ace! That's a Grade 6-7 level performance!";
+  else if(pct>=65) msg="💪 Great effort, Ace! Review the ones you missed and try them again.";
+  else if(pct>=40) msg="👍 Good start, Ace! These problems are tough. Use the hints and solutions to learn the tricks, then try again.";
+  else msg="🌱 These are challenge problems, well above grade level. Every great prospector started as a beginner! Go through the worked examples and try again, Ace!";
+  var f=document.getElementById("final");
+  f.style.display="block";
+  f.innerHTML="<h2 style='border:none;margin-top:0'>Final Score: "+k.correct+" / "+n+" ("+pct+"%)</h2>"+
+    "<p>Correct on the first try: "+k.first+" · Hints used: "+k.hints+"</p><p>"+msg+"</p>"+
+    "<p style='font-size:.85em;color:#546e7a'>Finished on "+new Date().toLocaleString("en-CA")+"</p>";
+  f.scrollIntoView({behavior:"smooth"});
+}
+render();
+updateScore();
+document.getElementById("finishBtn").addEventListener("click",finish);
+</script>
+<script src="../../assets/autosave.js"></script>
+</body>
+</html>

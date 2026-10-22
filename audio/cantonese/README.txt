@@ -6,7 +6,7 @@ TTS voice (Cantonese): zh-HK-HiuMaanNeural when available; 2026-10-12+ often gTT
 TTS voice (English in ALL-words.mp3): en-HK-YanNeural
 Rate: slowed (~-20%) for clear listening practice.
 
-Sources: Ace lessons 2026-09-29 (Greetings) + 2026-09-30 (Family Members) + 2026-10-01 (Food) + 2026-10-02 (School) + 2026-10-03 (Body) + 2026-10-04 (Colours) + 2026-10-05 (Sky & Space) + 2026-10-06 (Numbers 11-100) + 2026-10-07 (At the Doctor) + 2026-10-08 (Nature: Mountains & Volcanoes) + 2026-10-09 (Question Words & Secrets) + 2026-10-10 (Music) + 2026-10-11 (Trains & Travel) + 2026-10-12 (Brain & Sleep) + 2026-10-13 (Bees & Gardens) + 2026-10-14 (Electricity & Lights) + 2026-10-15 (Land, People & Respect) + 2026-10-16 (Ice, Snow & Giant Animals) + 2026-10-17 (Community, Rules & Voting) + 2026-10-18 (Weather & Storms) + 2026-10-19 (Germs, Vaccines & Staying Healthy) + 2026-10-20 (Ancient China: Paper, Books & Emperors) + 2026-10-21 (Flight: Airplanes, Pilots & Birds).
+Sources: Ace lessons 2026-09-29 (Greetings) + 2026-09-30 (Family Members) + 2026-10-01 (Food) + 2026-10-02 (School) + 2026-10-03 (Body) + 2026-10-04 (Colours) + 2026-10-05 (Sky & Space) + 2026-10-06 (Numbers 11-100) + 2026-10-07 (At the Doctor) + 2026-10-08 (Nature: Mountains & Volcanoes) + 2026-10-09 (Question Words & Secrets) + 2026-10-10 (Music) + 2026-10-11 (Trains & Travel) + 2026-10-12 (Brain & Sleep) + 2026-10-13 (Bees & Gardens) + 2026-10-14 (Electricity & Lights) + 2026-10-15 (Land, People & Respect) + 2026-10-16 (Ice, Snow & Giant Animals) + 2026-10-17 (Community, Rules & Voting) + 2026-10-18 (Weather & Storms) + 2026-10-19 (Germs, Vaccines & Staying Healthy) + 2026-10-20 (Ancient China: Paper, Books & Emperors) + 2026-10-21 (Flight: Airplanes, Pilots & Birds) + 2026-10-22 (Gold Mountain: Gold, Miners & Money).
 Numbers 1-10 are already known and not included here.
 
 How to practise:
@@ -945,6 +945,46 @@ Individual files
   Chinese:  好高
   Jyutping: hou2 gou1
   English:  very high / very tall
+
+185-gam1-gold.mp3
+  Chinese:  金
+  Jyutping: gam1
+  English:  gold
+
+186-gam1-saan1-gold-mountain.mp3
+  Chinese:  金山
+  Jyutping: gam1 saan1
+  English:  Gold Mountain (what Cantonese-speaking miners called North America)
+
+187-saa1-sand.mp3
+  Chinese:  沙
+  Jyutping: saa1
+  English:  sand
+
+188-wan2-look-for.mp3
+  Chinese:  搵
+  Jyutping: wan2
+  English:  to look for / to find
+
+189-kwong3-gung1-miner.mp3
+  Chinese:  礦工
+  Jyutping: kwong3 gung1
+  English:  miner
+
+190-hou2-cung5-very-heavy.mp3
+  Chinese:  好重
+  Jyutping: hou2 cung5
+  English:  very heavy
+
+191-cin2-money.mp3
+  Chinese:  錢
+  Jyutping: cin2
+  English:  money
+
+192-faat3-daat6-strike-it-rich.mp3
+  Chinese:  發達
+  Jyutping: faat3 daat6
+  English:  to strike it rich / get rich
 
 
 Combined file
