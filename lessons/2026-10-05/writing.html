@@ -357,5 +357,6 @@ document.getElementById("downloadBtn").addEventListener("click",download);
 document.getElementById("printBtn").addEventListener("click",printIt);
 document.getElementById("clearBtn").addEventListener("click",function(){ if(confirm("Erase your writing and start over?")){document.getElementById("essay").value="";Array.prototype.forEach.call(document.querySelectorAll("#checklist input"),function(c){c.checked=false;});document.getElementById("doneMsg").textContent="";updateCount();} });
 </script>
+<script src="../../assets/autosave.js"></script>
 </body>
 </html>

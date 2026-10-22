@@ -10,6 +10,15 @@ Daily practice lessons (math, reading, writing, and sometimes Cantonese). Each f
    `<!-- LESSONS-START -->` comment (newest first).
 3. Commit and push to `main`; GitHub Pages redeploys automatically.
 
+## Autosave (required for every lesson page)
+`assets/autosave.js` saves every text/number/textarea input, select, radio and checkbox to `localStorage`
+(keyed by page path + field id/name/DOM index), restores answers on load, and shows a small "✓ Saved" badge.
+Reset/"Start over" buttons must confirm before wiping; confirmed resets also clear the saved answers.
+**Every new lesson page must include, as the last line before `</body>` (after the page's own scripts):**
+```html
+<script src="../../assets/autosave.js"></script>
+```
+Add `data-no-autosave` to any field that should not be saved.
 
 ## Cantonese pronunciation audio
 Shared clips live in `audio/cantonese/` (Hong Kong TTS: `zh-HK-HiuMaanNeural`).
