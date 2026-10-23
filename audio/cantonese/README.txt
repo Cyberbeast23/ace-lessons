@@ -6,7 +6,7 @@ TTS voice (Cantonese): zh-HK-HiuMaanNeural when available; 2026-10-12+ often gTT
 TTS voice (English in ALL-words.mp3): en-HK-YanNeural
 Rate: slowed (~-20%) for clear listening practice.
 
-Sources: Ace lessons 2026-09-29 (Greetings) + 2026-09-30 (Family Members) + 2026-10-01 (Food) + 2026-10-02 (School) + 2026-10-03 (Body) + 2026-10-04 (Colours) + 2026-10-05 (Sky & Space) + 2026-10-06 (Numbers 11-100) + 2026-10-07 (At the Doctor) + 2026-10-08 (Nature: Mountains & Volcanoes) + 2026-10-09 (Question Words & Secrets) + 2026-10-10 (Music) + 2026-10-11 (Trains & Travel) + 2026-10-12 (Brain & Sleep) + 2026-10-13 (Bees & Gardens) + 2026-10-14 (Electricity & Lights) + 2026-10-15 (Land, People & Respect) + 2026-10-16 (Ice, Snow & Giant Animals) + 2026-10-17 (Community, Rules & Voting) + 2026-10-18 (Weather & Storms) + 2026-10-19 (Germs, Vaccines & Staying Healthy) + 2026-10-20 (Ancient China: Paper, Books & Emperors) + 2026-10-21 (Flight: Airplanes, Pilots & Birds) + 2026-10-22 (Gold Mountain: Gold, Miners & Money).
+Sources: Ace lessons 2026-09-29 (Greetings) + 2026-09-30 (Family Members) + 2026-10-01 (Food) + 2026-10-02 (School) + 2026-10-03 (Body) + 2026-10-04 (Colours) + 2026-10-05 (Sky & Space) + 2026-10-06 (Numbers 11-100) + 2026-10-07 (At the Doctor) + 2026-10-08 (Nature: Mountains & Volcanoes) + 2026-10-09 (Question Words & Secrets) + 2026-10-10 (Music) + 2026-10-11 (Trains & Travel) + 2026-10-12 (Brain & Sleep) + 2026-10-13 (Bees & Gardens) + 2026-10-14 (Electricity & Lights) + 2026-10-15 (Land, People & Respect) + 2026-10-16 (Ice, Snow & Giant Animals) + 2026-10-17 (Community, Rules & Voting) + 2026-10-18 (Weather & Storms) + 2026-10-19 (Germs, Vaccines & Staying Healthy) + 2026-10-20 (Ancient China: Paper, Books & Emperors) + 2026-10-21 (Flight: Airplanes, Pilots & Birds) + 2026-10-22 (Gold Mountain: Gold, Miners & Money) + 2026-10-23 (In the Kitchen: Cooking & Flavours).
 Numbers 1-10 are already known and not included here.
 
 How to practise:
@@ -985,6 +985,46 @@ Individual files
   Chinese:  發達
   Jyutping: faat3 daat6
   English:  to strike it rich / get rich
+
+193-cyu4-fong2-kitchen.mp3
+  Chinese:  廚房
+  Jyutping: cyu4 fong2
+  English:  kitchen
+
+194-zyu2-cook.mp3
+  Chinese:  煮
+  Jyutping: zyu2
+  English:  to cook / to boil
+
+195-syun1-sour.mp3
+  Chinese:  酸
+  Jyutping: syun1
+  English:  sour
+
+196-haam4-salty.mp3
+  Chinese:  鹹
+  Jyutping: haam4
+  English:  salty
+
+197-jim4-salt.mp3
+  Chinese:  鹽
+  Jyutping: jim4
+  English:  salt
+
+198-cou3-vinegar.mp3
+  Chinese:  醋
+  Jyutping: cou3
+  English:  vinegar
+
+199-tong4-sugar.mp3
+  Chinese:  糖
+  Jyutping: tong4
+  English:  sugar
+
+200-hou2-mei6-tasty.mp3
+  Chinese:  好味
+  Jyutping: hou2 mei6
+  English:  tasty / delicious
 
 
 Combined file

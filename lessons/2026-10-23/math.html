@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Math (Oct. 23): Kitchen Chemistry: Acids, Bases &amp; Reactions Math Lab</title>
+<style>
+  body{font-family:"Segoe UI",Verdana,Arial,sans-serif;font-size:20px;line-height:1.6;margin:0;background:#f5f0eb;color:#2c2416}
+  .wrap{max-width:880px;margin:0 auto;padding:20px 18px 80px}
+  a.home{font-size:.9em;color:#bf360c}
+  h1{color:#e65100;font-size:2em;margin:10px 0}
+  h2{color:#ef6c00;margin-top:36px;border-bottom:3px solid #ffcc80;padding-bottom:4px}
+  .box{background:#fff;border-radius:16px;padding:18px 22px;margin:16px 0;box-shadow:0 3px 10px rgba(0,0,0,.07)}
+  .example{border-left:8px solid #ef6c00}
+  .example h3{margin:0 0 6px;color:#e65100}
+  .step{margin:4px 0 4px 10px}
+  code,.mono{font-family:Consolas,"Courier New",monospace;background:#fff3e0;padding:1px 6px;border-radius:5px}
+  .q{border-left:8px solid #90a4ae}
+  .q.right{border-left-color:#43a047;background:#f1f8e9}
+  .q.wrong{border-left-color:#e53935;background:#fff5f5}
+  .qnum{font-weight:bold;color:#e65100}
+  .row{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:10px}
+  input[type=text]{font-size:1.05em;padding:8px 12px;border:2px solid #ffcc80;border-radius:10px;width:190px}
+  input[type=text]:focus{outline:none;border-color:#ef6c00;box-shadow:0 0 0 3px #ffe0b2}
+  button{font-size:.95em;padding:8px 16px;border:none;border-radius:10px;cursor:pointer;font-weight:bold}
+  .check{background:#ef6c00;color:#fff} .check:hover{background:#e65100}
+  .hint{background:#ffe082;color:#5d4037} .hint:hover{background:#ffd54f}
+  .sol{background:#ce93d8;color:#311b92}
+  .unit{color:#546e7a}
+  .fb{margin-top:8px;font-weight:bold;min-height:1em}
+  .fb.good{color:#2e7d32} .fb.bad{color:#c62828}
+  .hints{margin-top:8px;color:#e65100;background:#fff3e0;border-radius:10px;padding:0 12px}
+  .hints p{margin:6px 0;padding:6px 0}
+  .solution{margin-top:8px;background:#f3e5f5;border-radius:10px;padding:8px 12px;display:none}
+  #scoreBox{position:sticky;bottom:0;background:#e65100;color:#fff;border-radius:16px 16px 0 0;padding:12px 20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-top:30px}
+  #scoreBox button{background:#ffca28;color:#3e2723}
+  #final{display:none;font-size:1.15em;text-align:center;border:4px solid #43a047}
+  .tipbox{background:#fff8e1;border-left:8px solid #ffb300}
+</style>
+</head>
+<body>
+<div class="wrap">
+<a class="home" href="../../index.html">&larr; Back to all lessons</a>
+<h1>🧪 Math Week 26: Kitchen Chemistry Lab</h1>
+<p>Ace, your kitchen is secretly a chemistry lab! Every time someone bakes a cake, squeezes a lemon, or drops baking soda into vinegar, chemistry is happening. Real chemists use math all the time: How much of each ingredient? How strong is this solution? How much gas did the reaction make? Today you'll work like a lab chemist with <strong>ratios and recipe scaling, millilitres and litres, percent concentration, the pH scale (where every step is 10 times stronger), reading a line graph, rates, the mean, dilution, fractions, conservation of mass, volume, and solving an equation</strong>.</p>
+
+<h2>Part 1: Learn the Moves</h2>
+
+<div class="box tipbox">
+  <strong>The 4-Step Problem Solver (your lab checklist):</strong>
+  <ol>
+    <li><strong>Read</strong>: What is the question actually asking? Underline the numbers and units.</li>
+    <li><strong>Plan</strong>: Which operations do I need, and in what order? Do the units match (mL with mL, g with g)?</li>
+    <li><strong>Solve</strong>: Do one step at a time and write each step down.</li>
+    <li><strong>Check</strong>: Is my answer reasonable? Did I answer the question that was asked, in the right units?</li>
+  </ol>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 1: Scaling a recipe (ratios)</h3>
+  <p class="step">A ratio compares two amounts. If a recipe uses <strong>2 mL of food colouring for every 50 mL of water</strong>, then for 200 mL of water (4 times as much), you need 2 × 4 = <strong>8 mL</strong> of colouring. Find the multiplier, then use it on both parts.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 2: Millilitres and litres</h3>
+  <p class="step"><strong>1 L = 1000 mL.</strong> To change litres to millilitres, multiply by 1000: 2.5 L = <strong>2500 mL</strong>. To change millilitres to litres, divide by 1000: 750 mL = <strong>0.75 L</strong>.</p>
+  <p class="step">Also useful: <strong>1 cm³ holds exactly 1 mL</strong>. A box 10 cm × 10 cm × 10 cm holds 1000 cm³ = 1000 mL = 1 L.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 3: Percent concentration</h3>
+  <p class="step">A <strong>solution</strong> is one substance dissolved in another. Its <strong>concentration</strong> tells you how much of it is the dissolved stuff. A drink that is <strong>10% juice</strong> has 10 mL of juice in every 100 mL.</p>
+  <p class="step">In 300 mL of that drink: 10% of 300 = 0.10 × 300 = <strong>30 mL</strong> of juice.</p>
+  <p class="step">Going the other way: 8 g of salt dissolved in 32 g of water makes 8 + 32 = 40 g of solution, and 8 ÷ 40 × 100 = <strong>20% salt</strong>. (Divide by the <em>whole solution</em>, not just the water!)</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 4: The pH scale (powers of 10)</h3>
+  <p class="step">The <strong>pH scale</strong> runs from 0 to 14. <strong>7 is neutral</strong> (pure water). Below 7 is <strong>acidic</strong>; above 7 is <strong>basic</strong> (also called alkaline).</p>
+  <p class="step">Here's the amazing part: <strong>each step is 10 times stronger</strong>. pH 5 is 10 times more acidic than pH 6. pH 4 is 10 × 10 = <strong>100 times</strong> more acidic than pH 6. Count the steps, then multiply that many 10s together: 3 steps = 10 × 10 × 10 = <strong>1000 times</strong>.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 5: Reading a line graph and finding a rate</h3>
+  <p class="step">To find how much something changed between two times, read both values from the graph and <strong>subtract</strong>: if a balloon held 20 mL at 5 s and 50 mL at 15 s, it gained 50 − 20 = <strong>30 mL</strong>.</p>
+  <p class="step">A <strong>rate</strong> is a change divided by the time it took: 30 mL in 10 s is 30 ÷ 10 = <strong>3 mL per second</strong>.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 6: Dilution in parts</h3>
+  <p class="step">"Mix <strong>1 part</strong> juice concentrate with <strong>4 parts</strong> water" means the whole drink has 1 + 4 = 5 parts. To make 1000 mL, one part = 1000 ÷ 5 = 200 mL, so use <strong>200 mL</strong> concentrate and 800 mL water.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 7: Conservation of mass and equations</h3>
+  <p class="step">In a chemical reaction, atoms are never created or destroyed, so <strong>the total mass stays the same</strong>. If a reaction makes a gas that floats away, the leftover mass is smaller by exactly the mass of the gas. Start with 50 g, end with 48.5 g: <strong>1.5 g</strong> of gas escaped.</p>
+  <p class="step"><strong>Solving an equation:</strong> "A number times 2, plus 15, is 75" becomes 2n + 15 = 75. Undo each step in reverse: subtract 15 (2n = 60), then divide by 2 (<strong>n = 30</strong>).</p>
+</div>
+
+<h2>Part 2: The Challenge (15 problems)</h2>
+<p>Type your answer and press <strong>Check</strong> (or Enter). Fractions like <span class="mono">3/4</span>, mixed numbers like <span class="mono">1 3/4</span>, or decimals like <span class="mono">1.75</span> are fine. Don't type the units, $ signs, or % signs, and you may use spaces or commas in big numbers (1 000 000). Stuck? Press <strong>Hint</strong>. After 2 tries, you can see a full solution.</p>
+
+<div id="questions"></div>
+<div class="box" id="final"></div>
+<div id="scoreBox">
+  <span id="scoreText">Score: 0 / 15 correct</span>
+  <button id="finishBtn" type="button">I'm done! Show my final score</button>
+</div>
+</div>
+
+<script>
+var NAME = "Ace";
+var GRAPH = '<div style="margin:10px 0"><svg viewBox="0 0 360 300" width="100%" style="max-width:420px;background:#fff;border-radius:12px" role="img" aria-label="Line graph of carbon dioxide gas collected over time: 0 mL at 0 s, 30 mL at 10 s, 55 mL at 20 s, 70 mL at 30 s, 78 mL at 40 s, 80 mL at 50 s, 80 mL at 60 s."><text x="195" y="22" text-anchor="middle" font-size="13" font-weight="bold" fill="#4a148c">Gas collected from baking soda + vinegar</text><line x1="55.0" y1="40" x2="55.0" y2="250" stroke="#e0e0e0"/><text x="55.0" y="266" text-anchor="middle" font-size="11" fill="#37474f">0</text><line x1="101.7" y1="40" x2="101.7" y2="250" stroke="#e0e0e0"/><text x="101.7" y="266" text-anchor="middle" font-size="11" fill="#37474f">10</text><line x1="148.3" y1="40" x2="148.3" y2="250" stroke="#e0e0e0"/><text x="148.3" y="266" text-anchor="middle" font-size="11" fill="#37474f">20</text><line x1="195.0" y1="40" x2="195.0" y2="250" stroke="#e0e0e0"/><text x="195.0" y="266" text-anchor="middle" font-size="11" fill="#37474f">30</text><line x1="241.7" y1="40" x2="241.7" y2="250" stroke="#e0e0e0"/><text x="241.7" y="266" text-anchor="middle" font-size="11" fill="#37474f">40</text><line x1="288.3" y1="40" x2="288.3" y2="250" stroke="#e0e0e0"/><text x="288.3" y="266" text-anchor="middle" font-size="11" fill="#37474f">50</text><line x1="335.0" y1="40" x2="335.0" y2="250" stroke="#e0e0e0"/><text x="335.0" y="266" text-anchor="middle" font-size="11" fill="#37474f">60</text><line x1="55" y1="250.0" x2="335" y2="250.0" stroke="#e0e0e0"/><text x="49" y="254.0" text-anchor="end" font-size="11" fill="#37474f">0</text><line x1="55" y1="226.7" x2="335" y2="226.7" stroke="#e0e0e0"/><text x="49" y="230.7" text-anchor="end" font-size="11" fill="#37474f">10</text><line x1="55" y1="203.3" x2="335" y2="203.3" stroke="#e0e0e0"/><text x="49" y="207.3" text-anchor="end" font-size="11" fill="#37474f">20</text><line x1="55" y1="180.0" x2="335" y2="180.0" stroke="#e0e0e0"/><text x="49" y="184.0" text-anchor="end" font-size="11" fill="#37474f">30</text><line x1="55" y1="156.7" x2="335" y2="156.7" stroke="#e0e0e0"/><text x="49" y="160.7" text-anchor="end" font-size="11" fill="#37474f">40</text><line x1="55" y1="133.3" x2="335" y2="133.3" stroke="#e0e0e0"/><text x="49" y="137.3" text-anchor="end" font-size="11" fill="#37474f">50</text><line x1="55" y1="110.0" x2="335" y2="110.0" stroke="#e0e0e0"/><text x="49" y="114.0" text-anchor="end" font-size="11" fill="#37474f">60</text><line x1="55" y1="86.7" x2="335" y2="86.7" stroke="#e0e0e0"/><text x="49" y="90.7" text-anchor="end" font-size="11" fill="#37474f">70</text><line x1="55" y1="63.3" x2="335" y2="63.3" stroke="#e0e0e0"/><text x="49" y="67.3" text-anchor="end" font-size="11" fill="#37474f">80</text><line x1="55" y1="40.0" x2="335" y2="40.0" stroke="#e0e0e0"/><text x="49" y="44.0" text-anchor="end" font-size="11" fill="#37474f">90</text><line x1="55" y1="250" x2="335" y2="250" stroke="#263238" stroke-width="2"/><line x1="55" y1="250" x2="55" y2="40" stroke="#263238" stroke-width="2"/><polyline points="55.0,250.0 101.7,180.0 148.3,121.7 195.0,86.7 241.7,68.0 288.3,63.3 335.0,63.3" fill="none" stroke="#8e24aa" stroke-width="3"/><circle cx="55.0" cy="250.0" r="4" fill="#6a1b9a"/><circle cx="101.7" cy="180.0" r="4" fill="#6a1b9a"/><circle cx="148.3" cy="121.7" r="4" fill="#6a1b9a"/><circle cx="195.0" cy="86.7" r="4" fill="#6a1b9a"/><circle cx="241.7" cy="68.0" r="4" fill="#6a1b9a"/><circle cx="288.3" cy="63.3" r="4" fill="#6a1b9a"/><circle cx="335.0" cy="63.3" r="4" fill="#6a1b9a"/><text x="195" y="290" text-anchor="middle" font-size="12" fill="#263238">Time (seconds)</text><text x="14" y="145" text-anchor="middle" font-size="12" fill="#263238" transform="rotate(-90 14 145)">Gas collected (mL)</text></svg></div>';
+var TABLE = '<table style="border-collapse:collapse;margin:10px 0;font-size:.95em;background:#fff"><caption style="font-weight:bold;text-align:left;padding-bottom:4px">Carbon dioxide gas collected by each lab group (same recipe)</caption><tr><th style="border:1px solid #bdbdbd;padding:4px 10px;background:#f3e5f5">Group</th><th style="border:1px solid #bdbdbd;padding:4px 10px;background:#f3e5f5">Gas collected (mL)</th></tr><tr><td style="border:1px solid #bdbdbd;padding:4px 10px">A</td><td style="border:1px solid #bdbdbd;padding:4px 10px;text-align:right">62</td></tr><tr><td style="border:1px solid #bdbdbd;padding:4px 10px">B</td><td style="border:1px solid #bdbdbd;padding:4px 10px;text-align:right">58</td></tr><tr><td style="border:1px solid #bdbdbd;padding:4px 10px">C</td><td style="border:1px solid #bdbdbd;padding:4px 10px;text-align:right">71</td></tr><tr><td style="border:1px solid #bdbdbd;padding:4px 10px">D</td><td style="border:1px solid #bdbdbd;padding:4px 10px;text-align:right">58</td></tr><tr><td style="border:1px solid #bdbdbd;padding:4px 10px">E</td><td style="border:1px solid #bdbdbd;padding:4px 10px;text-align:right">69</td></tr><tr><td style="border:1px solid #bdbdbd;padding:4px 10px">F</td><td style="border:1px solid #bdbdbd;padding:4px 10px;text-align:right">75</td></tr><tr><td style="border:1px solid #bdbdbd;padding:4px 10px">G</td><td style="border:1px solid #bdbdbd;padding:4px 10px;text-align:right">55</td></tr></table>';
+var QUESTIONS = [
+ {t:"A fizzy \"volcano\" recipe uses <strong>45 mL of vinegar</strong> for every <strong>15 g of baking soda</strong>. Ace wants a giant eruption using <strong>60 g</strong> of baking soda. How much vinegar should he use to keep the same ratio?", a:"180", u:"mL",
+  h:["How many times bigger is 60 g than 15 g?","60 ÷ 15 = 4, so multiply the 45 mL by 4 too."],
+  s:"60 ÷ 15 = 4. 45 × 4 = 180 mL of vinegar. (Ratio check: 45 : 15 = 180 : 60, both are 3 : 1 ✔)"},
+ {t:"A bottle holds <strong>1.5 L</strong> of vinegar. Each giant volcano uses <strong>180 mL</strong>. How many <strong>complete</strong> volcanoes can Ace make from one bottle?", a:"8", u:"volcanoes",
+  h:["Change litres to millilitres first: 1.5 L = 1500 mL.","1500 ÷ 180 = 8 with some left over. Can you make part of a volcano count?"],
+  s:"1.5 L = 1500 mL. 1500 ÷ 180 = 8 remainder 60 (8 × 180 = 1440). Only <strong>8</strong> complete volcanoes; the leftover 60 mL isn't enough for a ninth."},
+ {t:"Kitchen vinegar is a solution that is about <strong>5% acetic acid</strong> (the acid that makes it sour) and 95% water. How many millilitres of acetic acid are in a <strong>500 mL</strong> bottle?", a:"25", u:"mL",
+  h:["5% means 5 out of every 100.","500 mL is 5 groups of 100 mL. Or: 0.05 × 500."],
+  s:"5% of 500 = 0.05 × 500 = 25 mL of acetic acid. The other 475 mL is water."},
+ {t:"Ace dissolves <strong>30 g of sugar</strong> in <strong>170 g of water</strong>. What <strong>percent</strong> of the sugar solution's mass is sugar?", a:"15", u:"%",
+  h:["First find the mass of the whole solution: sugar + water.","Percent = sugar ÷ whole solution × 100 = 30 ÷ 200 × 100."],
+  s:"Whole solution: 30 + 170 = 200 g. 30 ÷ 200 = 0.15, and 0.15 × 100 = 15%. (A common mistake is 30 ÷ 170. Always divide by the whole!)"},
+ {t:"Lemon juice has a pH of about <strong>2</strong>. Tomato juice has a pH of about <strong>4</strong>. Remember, each step on the pH scale is <strong>10 times</strong> stronger. How many times more acidic is lemon juice than tomato juice?", a:"100", u:"times",
+  h:["How many steps apart are pH 2 and pH 4?","2 steps means 10 × 10."],
+  s:"4 − 2 = 2 steps. 10 × 10 = 100 times more acidic. (Not 2 times! The pH scale grows by powers of 10.)"},
+ {t:"Vinegar has a pH of about <strong>3</strong>. Pure water is neutral, with a pH of <strong>7</strong>. How many times more acidic is vinegar than pure water?", a:"10000", u:"times",
+  h:["Count the steps: 7 − 3.","4 steps means 10 × 10 × 10 × 10."],
+  s:"7 − 3 = 4 steps. 10 × 10 × 10 × 10 = 10 000 times more acidic. That's why a small splash of vinegar tastes so sour!"},
+ {t:"Bases can <strong>neutralize</strong> acids (cancel them out). In a test, it took <strong>4 mL</strong> of baking soda solution to neutralize <strong>10 mL</strong> of vinegar. At the same rate, how many millilitres of baking soda solution would neutralize <strong>35 mL</strong> of vinegar?", a:"14", u:"mL",
+  h:["Find how much is needed for 1 mL of vinegar: 4 ÷ 10 = 0.4 mL.","Multiply 0.4 by 35."],
+  s:"4 ÷ 10 = 0.4 mL for each millilitre of vinegar. 0.4 × 35 = 14 mL. (Check: 10 : 4 = 35 : 14, both are 5 : 2 ✔)"},
+ {t:GRAPH+"Ace mixes baking soda and vinegar in a bottle and collects the <strong>carbon dioxide (CO₂) gas</strong> in a measuring tube. The graph shows how much gas he has collected. How many millilitres of gas were produced <strong>between 10 s and 30 s</strong>?", a:"40", u:"mL",
+  h:["Read the graph at 10 s and at 30 s.","At 10 s there are 30 mL; at 30 s there are 70 mL. Subtract."],
+  s:"At 30 s: 70 mL. At 10 s: 30 mL. 70 − 30 = 40 mL of gas were produced in those 20 seconds."},
+ {t:"Use the same graph. What was the <strong>average rate</strong> of gas production during the <strong>first 20 seconds</strong>? (Give your answer in mL per second.)", a:"2.75", u:"mL per second",
+  h:["How much gas was there at 20 s? It started at 0 mL.","Rate = change in gas ÷ time = 55 ÷ 20."],
+  s:"At 20 s the tube held 55 mL. 55 ÷ 20 = 2.75 mL per second. Notice the line gets flatter later: by 50 s the reaction has run out of ingredients and makes no more gas."},
+ {t:TABLE+"Seven lab groups followed the same recipe. Use the table. What is the <strong>mean</strong> amount of gas the groups collected?", a:"64", u:"mL",
+  h:["Add all seven amounts.","The total is 448 mL. Divide by 7."],
+  s:"62 + 58 + 71 + 58 + 69 + 75 + 55 = 448 mL. 448 ÷ 7 = 64 mL. (Bonus: in order, 55, 58, 58, 62, 69, 71, 75, so the median is 62 mL.)"},
+ {t:"<strong>Safety first:</strong> some cleaners must be diluted before use. The label says: mix <strong>1 part cleaner with 9 parts water</strong>. How many millilitres of cleaner are in <strong>2 L</strong> of the diluted mixture? (An adult should always handle cleaners!)", a:"200", u:"mL",
+  h:["How many parts are there in total? 1 + 9.","2 L = 2000 mL. One part = 2000 ÷ 10."],
+  s:"1 + 9 = 10 parts. 2 L = 2000 mL, so one part = 2000 ÷ 10 = 200 mL of cleaner (and 1800 mL of water)."},
+ {t:"Ace's class lists <strong>24</strong> kitchen changes, like melting butter, toasting bread, and dissolving sugar. Exactly <strong>3/8</strong> of them are <strong>chemical changes</strong> (a new substance forms). The rest are physical changes. How many are <strong>physical</strong> changes?", a:"15", u:"changes",
+  h:["Find 1/8 of 24 first: 24 ÷ 8 = 3.","Chemical: 3 × 3 = 9. Physical = 24 − 9. (Or physical is 5/8 of 24.)"],
+  s:"1/8 of 24 = 3, so 3/8 of 24 = 9 chemical changes. 24 − 9 = 15 physical changes. (Check: 5/8 of 24 = 5 × 3 = 15 ✔)"},
+ {t:"<strong>Conservation of mass:</strong> Ace puts a cup holding <strong>100 g</strong> of vinegar on a scale and adds <strong>8 g</strong> of baking soda. The mixture fizzes, and the CO₂ gas escapes into the air. Afterward, the scale reads <strong>103.8 g</strong>. What mass of gas escaped?", a:"4.2", u:"g",
+  h:["Before the reaction, the total mass was 100 + 8.","Mass is never lost, it just moves. The missing mass left as gas: 108 − 103.8."],
+  s:"Before: 100 + 8 = 108 g. After: 103.8 g. 108 − 103.8 = 4.2 g of carbon dioxide floated away. If Ace had sealed the gas in a balloon on the scale, the reading would have stayed at 108 g!"},
+ {t:"A plastic container for storing red-cabbage indicator is a rectangular prism, <strong>20 cm</strong> long, <strong>10 cm</strong> wide, and <strong>8 cm</strong> tall. Since 1 cm³ holds 1 mL, how many <strong>litres</strong> does it hold when full?", a:"1.6", u:"L",
+  h:["Volume = length × width × height, in cm³ (= mL).","20 × 10 × 8 = 1600 mL. Now change mL to L."],
+  s:"20 × 10 × 8 = 1600 cm³ = 1600 mL. 1600 ÷ 1000 = 1.6 L."},
+ {t:"<strong>Challenge (equation):</strong> To make a weak acid for testing, Ace mixes vinegar with water. He uses <strong>20 mL more than 3 times</strong> as much water as vinegar. Altogether he has <strong>500 mL</strong>. How many millilitres of <strong>vinegar</strong> did he use? (Hint: let the vinegar be <span class=\"mono\">v</span>.)", a:"120", u:"mL",
+  h:["Vinegar = v and water = 3v + 20. Together: v + 3v + 20 = 500.","Combine: 4v + 20 = 500. Subtract 20, then divide by 4."],
+  s:"v + (3v + 20) = 500, so 4v + 20 = 500, 4v = 480, and v = 120 mL. Water = 3 × 120 + 20 = 380 mL. (Check: 120 + 380 = 500 ✔)"}
+];
+
+var PRAISE = ["Nice work, Ace!","Correct! What a reaction! 🧪","Yes! Chemist Ace!","Excellent, Ace. That was a tough one!","Right on target! 🎯","Brilliant thinking, Ace!","Fizz-tastic! 🫧"];
+var ENCOURAGE = ["Not quite. Check your steps and try again!","Close call. Try again, Ace! Maybe use a hint?","Hmm, not yet. Re-read the question carefully.","Keep going, Ace. Mistakes help your brain grow!"];
+
+function parseAnswer(str){
+  if(str===undefined||str===null) return NaN;
+  var s=String(str).trim().toLowerCase();
+  s=s.replace(/[\u2212\u2013]/g,"-");
+  s=s.replace(/(\d),(?=\d{3}(\D|$))/g,"$1");
+  s=s.replace(/[^0-9.\/\- ]/g," ").replace(/\s+/g," ").trim();
+  s=s.replace(/\s*\/\s*/g,"/");
+  var m;
+  if((m=s.match(/^(-?\d+) (\d+)\/(\d+)$/))){ var w=parseFloat(m[1]),n=parseFloat(m[2]),d=parseFloat(m[3]); if(d===0)return NaN; return w<0? w-n/d : w+n/d; }
+  if((m=s.match(/^(-?\d+(?:\.\d+)?)\/(\d+(?:\.\d+)?)$/))){ var d2=parseFloat(m[2]); if(d2===0)return NaN; return parseFloat(m[1])/d2; }
+  s=s.replace(/ /g,"");
+  if(/^-?(\d+\.?\d*|\.\d+)$/.test(s)) return parseFloat(s);
+  return NaN;
+}
+function isCorrect(input,key){
+  var a=parseAnswer(input), k=parseAnswer(key);
+  if(isNaN(a)) return false;
+  var isInt=Math.abs(k-Math.round(k))<1e-12;
+  var tol=isInt?1e-9:0.005;
+  return Math.abs(a-k)<=tol;
+}
+
+function isRomanCorrect(input,key){ return String(input).replace(/\s+/g,"").toUpperCase()===key; }
+var state=[];
+function render(){
+  var box=document.getElementById("questions");
+  QUESTIONS.forEach(function(q,i){
+    state.push({correct:false,tries:0,hints:0});
+    var d=document.createElement("div");
+    d.className="box q"; d.id="q"+i;
+    d.innerHTML='<div><span class="qnum">'+(i+1)+'.</span> '+q.t+'</div>'+
+      '<div class="row"><input type="text"'+(q.r?' placeholder="e.g. MMXXVI"':'')+' id="in'+i+'" aria-label="Answer to question '+(i+1)+'" autocomplete="off"> <span class="unit">'+q.u+'</span>'+
+      '<button type="button" class="check" data-i="'+i+'">Check</button>'+
+      '<button type="button" class="hint" data-i="'+i+'">Hint 💡</button>'+
+      '<button type="button" class="sol" data-i="'+i+'" style="display:none">Show solution</button></div>'+
+      '<div class="fb" id="fb'+i+'"></div><div class="hints" id="hints'+i+'"></div>'+
+      '<div class="solution" id="sol'+i+'"><strong>Solution:</strong> '+q.s+'</div>';
+    box.appendChild(d);
+  });
+  box.addEventListener("click",function(e){
+    var b=e.target; if(b.tagName!=="BUTTON")return;
+    var i=+b.getAttribute("data-i");
+    if(b.className==="check") check(i);
+    else if(b.className==="hint") hint(i);
+    else if(b.className==="sol") document.getElementById("sol"+i).style.display="block";
+  });
+  box.addEventListener("keydown",function(e){
+    if(e.key==="Enter"&&e.target.tagName==="INPUT"){ check(+e.target.id.slice(2)); }
+  });
+}
+function pick(arr){return arr[Math.floor(Math.random()*arr.length)];}
+function check(i){
+  var val=document.getElementById("in"+i).value;
+  var fb=document.getElementById("fb"+i), card=document.getElementById("q"+i);
+  if(val.trim()===""){fb.className="fb bad";fb.textContent="Type an answer first, Ace!";return;}
+  var isR=!!QUESTIONS[i].r;
+  if(isR&&!/^[ivxlcdm\s]+$/i.test(val)){fb.className="fb bad";fb.textContent="Use only Roman numeral letters: I, V, X, L, C, D, M.";return;}
+  if(!isR&&isNaN(parseAnswer(val))){fb.className="fb bad";fb.textContent="I can't read that as a number. Try something like 42, 3.5, 3/4 or 1 3/4.";return;}
+  state[i].tries++;
+  if(isR?isRomanCorrect(val,QUESTIONS[i].a):isCorrect(val,QUESTIONS[i].a)){
+    state[i].correct=true; card.className="box q right"; fb.className="fb good";
+    fb.textContent="✅ "+pick(PRAISE)+(state[i].tries===1?" (first try!)":"");
+  } else {
+    state[i].correct=false; card.className="box q wrong"; fb.className="fb bad";
+    fb.textContent="❌ "+pick(ENCOURAGE);
+    if(state[i].tries>=2) card.querySelector(".sol").style.display="inline-block";
+  }
+  updateScore();
+}
+function hint(i){
+  var q=QUESTIONS[i], s=state[i], hb=document.getElementById("hints"+i);
+  if(s.hints<q.h.length){
+    var p=document.createElement("p"); p.textContent="💡 Hint "+(s.hints+1)+": "+q.h[s.hints]; hb.appendChild(p); s.hints++;
+  }
+  if(s.hints>=q.h.length) document.querySelector("#q"+i+" .hint").disabled=true;
+  updateScore();
+}
+function counts(){
+  var c=0,first=0,h=0;
+  state.forEach(function(s){ if(s.correct){c++; if(s.tries===1)first++;} h+=s.hints; });
+  return {correct:c,first:first,hints:h};
+}
+function updateScore(){
+  var k=counts();
+  document.getElementById("scoreText").textContent="Score: "+k.correct+" / "+QUESTIONS.length+" correct · hints used: "+k.hints;
+}
+function finish(){
+  var k=counts(), n=QUESTIONS.length, pct=Math.round(100*k.correct/n);
+  var msg;
+  if(pct===100) msg="🏆 PERFECT SCORE! Incredible work, Ace. A real lab chemist would be impressed!";
+  else if(pct>=85) msg="🌟 Outstanding, Ace! That's a Grade 6-7 level performance!";
+  else if(pct>=65) msg="💪 Great effort, Ace! Review the ones you missed and try them again.";
+  else if(pct>=40) msg="👍 Good start, Ace! These problems are tough. Use the hints and solutions to learn the tricks, then try again.";
+  else msg="🌱 These are challenge problems, well above grade level. Every great chemist started as a beginner! Go through the worked examples and try again, Ace!";
+  var f=document.getElementById("final");
+  f.style.display="block";
+  f.innerHTML="<h2 style='border:none;margin-top:0'>Final Score: "+k.correct+" / "+n+" ("+pct+"%)</h2>"+
+    "<p>Correct on the first try: "+k.first+" · Hints used: "+k.hints+"</p><p>"+msg+"</p>"+
+    "<p style='font-size:.85em;color:#546e7a'>Finished on "+new Date().toLocaleString("en-CA")+"</p>";
+  f.scrollIntoView({behavior:"smooth"});
+}
+render();
+updateScore();
+document.getElementById("finishBtn").addEventListener("click",finish);
+</script>
+<script src="../../assets/autosave.js"></script>
+</body>
+</html>

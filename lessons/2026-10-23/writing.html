@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Writing (Oct. 23): Science Lab Report (My Kitchen Chemistry Experiment) + Grammar Clinic</title>
+<style>
+  body{font-family:"Segoe UI",Verdana,Arial,sans-serif;font-size:20px;line-height:1.6;margin:0;background:#fff8f0;color:#2c2416}
+  .wrap{max-width:880px;margin:0 auto;padding:20px 18px 80px}
+  a.home{font-size:.9em;color:#bf360c}
+  h1{color:#e65100;font-size:2em;margin:10px 0}
+  h2{color:#ef6c00;margin-top:36px;border-bottom:3px solid #ffcc80;padding-bottom:4px}
+  h3{color:#ef6c00}
+  .box{background:#fff;border-radius:16px;padding:18px 22px;margin:16px 0;box-shadow:0 3px 10px rgba(0,0,0,.07)}
+  .tipbox{background:#fff8e1;border-left:8px solid #ffb300}
+  .senses{display:grid;gap:8px;margin:10px 0;grid-template-columns:repeat(auto-fit,minmax(140px,1fr))}
+  .senses .side{border-radius:14px;padding:10px 16px;background:#fff3e0}
+  .ts{background:#ffcc80;border-radius:5px;padding:1px 3px}
+  .ev{background:#c8e6c9;border-radius:5px;padding:1px 3px}
+  .ex{background:#ffe0b2;border-radius:5px;padding:1px 3px}
+  .cs{background:#e1bee7;border-radius:5px;padding:1px 3px}
+  .legend span{display:inline-block;margin:4px 8px 4px 0;font-size:.85em}
+  .model{font-family:Georgia,"Times New Roman",serif;font-size:1.05em;line-height:1.9}
+  .row{padding:10px 6px;border-bottom:1px dashed #ddd}
+  .row.right{background:#f1f8e9} .row.wrong{background:#fff5f5}
+  select{font-size:.9em;padding:5px 8px;border-radius:8px;border:2px solid #ffb74d;font-family:inherit}
+  .q{border-left:8px solid #b0bec5}
+  .q.right{border-left-color:#43a047;background:#f1f8e9}
+  .q.wrong{border-left-color:#e53935;background:#fff5f5}
+  .opt{display:block;width:100%;text-align:left;font-size:.95em;background:#fafafa;border:2px solid #e0e0e0;border-radius:10px;padding:8px 14px;margin:8px 0;cursor:pointer;font-family:inherit}
+  .opt:hover{border-color:#ffb74d;background:#fff}
+  .opt.sel-right{background:#c8e6c9;border-color:#43a047}
+  .opt.sel-wrong{background:#ffcdd2;border-color:#e53935}
+  .fb{margin-top:6px;font-weight:bold}
+  .fb.good{color:#2e7d32} .fb.bad{color:#c62828}
+  .explain{font-weight:normal;color:#e65100}
+  .bad-sent{font-family:Consolas,"Courier New",monospace;background:#ffebee;padding:6px 10px;border-radius:8px;display:inline-block;margin:6px 0}
+  input.fix{width:100%;box-sizing:border-box;font-size:1em;padding:8px 12px;border:2px solid #ffb74d;border-radius:10px;font-family:inherit}
+  button{font-size:.95em;padding:8px 16px;border:none;border-radius:10px;cursor:pointer;font-weight:bold;font-family:inherit}
+  .go{background:#ef6c00;color:#fff} .go:hover{background:#e65100}
+  .hint{background:#ffe082;color:#5d4037}
+  .blue{background:#1e88e5;color:#fff}
+  .purple{background:#8e24aa;color:#fff}
+  .grey{background:#cfd8dc;color:#263238}
+  .btnrow{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px}
+  textarea{width:100%;box-sizing:border-box;min-height:300px;font-size:1.05em;line-height:1.7;font-family:Georgia,"Times New Roman",serif;padding:14px;border:3px solid #ffb74d;border-radius:12px}
+  textarea:focus{outline:none;border-color:#ef6c00}
+  .counter{display:flex;flex-wrap:wrap;gap:20px;align-items:center;margin:8px 0;font-weight:bold}
+  .meter{flex:1;min-width:200px;height:18px;background:#e0e0e0;border-radius:9px;overflow:hidden}
+  .meter div{height:100%;width:0;background:#ffb300;transition:width .2s}
+  .checklist label{display:block;padding:6px 4px;cursor:pointer}
+  .checklist input{transform:scale(1.4);margin-right:10px}
+  .prompts label{display:block;background:#fff3e0;border-radius:10px;padding:10px 14px;margin:8px 0;cursor:pointer}
+  .prompts input{transform:scale(1.3);margin-right:8px}
+  #scoreBox{position:sticky;bottom:0;background:#e65100;color:#fff;border-radius:16px 16px 0 0;padding:12px 20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-top:30px}
+  .w5{display:grid;gap:8px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));margin:10px 0}
+  .w5 label{display:block;font-weight:bold;color:#e65100}
+  .w5 input{width:100%;box-sizing:border-box;font-size:.95em;padding:6px 10px;border:2px solid #ffb74d;border-radius:8px;font-family:inherit}
+  #printArea{display:none}
+  @media print{
+    body{background:#fff;font-size:14pt}
+    .wrap,#scoreBox{display:none !important}
+    #printArea{display:block;font-family:Georgia,serif;line-height:1.8}
+    #printArea h1{font-size:18pt;margin:0 0 6pt}
+    #printArea .meta{font-size:11pt;color:#444}
+    #printArea .text{white-space:pre-wrap;border-top:1px solid #999;padding-top:10pt;margin-top:10pt}
+    #printArea .lines{margin-top:24pt;border-top:1px solid #999;padding-top:6pt;font-size:11pt}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+<a class="home" href="../../index.html">&larr; Back to all lessons</a>
+<h1>✍️ Writing Week 26: Science Lab Report: My Kitchen Chemistry Experiment 🧪📋</h1>
+<p>Yesterday you wrote a diary as someone living through history. Today, Ace, you'll write like a real scientist: a <strong>lab report</strong>. Earlier this week you wrote instructions that tell someone <em>how</em> to do something. A lab report goes further: it records <em>what you wanted to find out, what you predicted, what you did, what actually happened, and what it means</em>. Scientists all over the world share their discoveries this way, so another scientist can read the report, repeat the experiment, and check the results.</p>
+
+<h2>Part 1: The Lesson</h2>
+<div class="box">
+  <h3 style="margin-top:0">A lab report has six parts 🧩</h3>
+  <p>Think of it as the story of an experiment, told honestly and clearly, in order.</p>
+  <div class="senses">
+    <div class="side"><strong>1. Question:</strong> what you want to find out, like <em>Which kitchen liquids are acids, and which are bases?</em></div>
+    <div class="side"><strong>2. Hypothesis:</strong> your prediction and your reason: <em>I predict... because...</em></div>
+    <div class="side"><strong>3. Materials + method:</strong> what you used (with amounts) and the steps you followed, clearly enough for someone to repeat</div>
+    <div class="side"><strong>4. Observations:</strong> what you noticed with your senses (colours, bubbles, sounds, smells), but <em>never</em> taste!</div>
+    <div class="side"><strong>5. Results:</strong> the measurements and data, often in a table (mL, cm, seconds, pH)</div>
+    <div class="side"><strong>6. Conclusion:</strong> the answer to your question, whether your hypothesis was supported, and what you'd change next time</div>
+  </div>
+  <h3>Five scientist's moves</h3>
+  <ul>
+    <li><strong>Be exact:</strong> instead of "some vinegar," write "50 mL of vinegar." Write metric units the proper way: <em>50 mL</em>, <em>5 g</em>, <em>3 cm</em> (a space, no period).</li>
+    <li><strong>Use the past tense</strong> for what you did and saw: "I <em>poured</em>... the mixture <em>fizzed</em>... the juice <em>turned</em> pink."</li>
+    <li><strong>Keep it a fair test:</strong> change only <em>one</em> thing (the variable) and keep everything else the same, like the same amount of liquid in the same size cup.</li>
+    <li><strong>Separate what you saw from what it means:</strong> "The juice turned pink" is an observation. "So lemon juice is an acid" belongs in the conclusion.</li>
+    <li><strong>Be honest:</strong> if your hypothesis was wrong, say so! A surprise result is still a discovery. Real scientists are wrong all the time, and that's how science moves forward.</li>
+  </ul>
+  <p><strong>Grown-up words:</strong> the thing you change on purpose is the <strong>independent variable</strong>; what you measure is the <strong>dependent variable</strong>; everything you keep the same are the <strong>controlled variables</strong>. A cup with no added substance, to compare against, is called a <strong>control</strong>.</p>
+</div>
+
+<div class="box">
+  <h3 style="margin-top:0">Model Lab Report (short version)</h3>
+  <p class="legend"><span class="ts">Question + hypothesis</span><span class="ev">Materials, method + observations</span><span class="ex">Results</span><span class="cs">Conclusion</span></p>
+  <p class="model">
+    <span class="ts"><strong>Question:</strong> Which kitchen liquids are acids, and which are bases? <strong>Hypothesis:</strong> I predict that lemon juice and vinegar will be acids, because they taste sour, and that baking soda water will be a base.</span><br>
+    <span class="ev"><strong>Method:</strong> With Dad's help, I soaked chopped red cabbage in hot water for 15 minutes and strained out the purple juice. I poured 50 mL of each liquid into four identical clear cups and added 10 mL of cabbage juice to each one. I wore safety goggles. <strong>Observations:</strong> The lemon juice turned bright pink right away, and the vinegar turned reddish pink. The plain water stayed purple. The baking soda water turned blue-green, and tiny bubbles clung to the sides of the cup.</span><br>
+    <span class="ex"><strong>Results:</strong> Lemon juice: pink (acid). Vinegar: red-pink (acid). Water: purple (neutral). Baking soda water: blue-green (base).</span><br>
+    <span class="cs"><strong>Conclusion:</strong> My hypothesis was supported. Lemon juice and vinegar are acids, water is neutral, and baking soda water is a base. Next time, I will test milk and soap to see where they fit on the colour scale.</span>
+  </p>
+  <p><strong>Notice:</strong> the question is clear and testable; the hypothesis gives a reason ("because they taste sour"); the method has exact amounts (50 mL, 10 mL, 15 minutes) and a safety step; the observations describe colours and bubbles in the past tense; the results are short and organized; and the conclusion answers the question, says whether the hypothesis was supported, and looks ahead.</p>
+</div>
+
+<h2>Part 2: Name That Lab Report Part</h2>
+<div class="box">
+  <p>Each line comes from a student's lab report about whether vinegar or lemon juice makes more fizz with baking soda. Choose which <strong>part of the lab report</strong> it belongs in.</p>
+  <div id="labelRows"></div>
+  <div class="btnrow"><button type="button" class="go" id="checkLabels">Check my answers</button></div>
+  <div class="fb" id="labelFb"></div>
+</div>
+
+<h2>Part 3: Grammar Clinic 🧪</h2>
+<div class="box tipbox">A careful scientist checks every sentence before a report is shared! <strong>Section A:</strong> pick the correct sentence. <strong>Section B:</strong> type the sentence again with <em>all</em> mistakes fixed. We use <strong>Canadian spelling</strong> (colour, litre, centimetre, neighbour). Today, watch <strong>affect / effect</strong>, <strong>then / than</strong>, <strong>commas after introductory words</strong> (First, Next, After that), <strong>keeping verbs in the past tense</strong>, <strong>writing metric units</strong> (50 mL), <strong>fewer / less</strong>, and <strong>their / there / they're</strong>.</div>
+<h3>Section A: Pick the correct sentence</h3>
+<div id="gmc"></div>
+<h3>Section B: Fix the sentence</h3>
+<p>Retype the whole sentence correctly, with capital letters and punctuation. Each one has <strong>at least two</strong> mistakes.</p>
+<div id="gfix"></div>
+
+<h2>Part 4: Your Turn to Write</h2>
+<div class="box">
+  <h3 style="margin-top:0">Step 1: Choose your experiment</h3>
+  <p><strong>Safety first:</strong> do any real experiment only with Dad or another adult, wear eye protection if you have it, use only food-safe kitchen ingredients, and never taste your results. If you can't do the experiment today, write the report as if you had, using what you learned in today's reading.</p>
+  <div class="prompts" id="prompts">
+    <label><input type="radio" name="prompt" value="Report A: The red-cabbage rainbow" checked> 🌈 <strong>Report A:</strong> Make red-cabbage indicator and test at least <em>four</em> kitchen liquids (for example lemon juice, vinegar, milk, water, baking soda water). Which are acids, which are bases, and which are neutral?</label>
+    <label><input type="radio" name="prompt" value="Report B: The balloon blow-up"> 🎈 <strong>Report B:</strong> Put baking soda inside a balloon, stretch the balloon over a bottle holding 100 mL of vinegar, and tip the soda in. Does <em>more</em> baking soda (5 g, 10 g, 15 g) blow the balloon up bigger? Measure around the balloon with a string and a ruler.</label>
+    <label><input type="radio" name="prompt" value="Report C: Physical or chemical?"> 🔍 <strong>Report C:</strong> Observe four kitchen changes (for example, ice melting, sugar dissolving, bread toasting, and baking soda meeting vinegar). For each one, record your observations and decide: physical or chemical change? What clues did you use?</label>
+  </div>
+  <p><strong>Plan your report:</strong> jot a few words for each box. (These notes save with your writing.)</p>
+  <div class="w5" id="w5">
+    <div><label for="w5who">Question: what do you want to find out?</label><input id="w5who" type="text" autocomplete="off"></div>
+    <div><label for="w5place">Hypothesis: I predict... because...</label><input id="w5place" type="text" autocomplete="off"></div>
+    <div><label for="w5facts">Materials (with amounts) + safety steps</label><input id="w5facts" type="text" autocomplete="off"></div>
+    <div><label for="w5senses">Fair test: what will you change, and what will you keep the same?</label><input id="w5senses" type="text" autocomplete="off"></div>
+    <div><label for="w5feel">Observations + results to record (colours, bubbles, sizes, numbers)</label><input id="w5feel" type="text" autocomplete="off"></div>
+    <div><label for="w5closing">Conclusion: answer, hypothesis supported?, next time...</label><input id="w5closing" type="text" autocomplete="off"></div>
+  </div>
+
+  <h3>Step 2: Write your lab report</h3>
+  <p><strong>Goal:</strong> <strong>250 to 350 words</strong> with all <strong>six parts</strong> and a <strong>heading</strong> for each one. Your method needs <strong>numbered steps</strong> with <strong>exact metric amounts</strong> and at least <strong>one safety step</strong>. Include at least <strong>three observations</strong> using your senses (but never taste!), results with <strong>numbers or a simple table</strong>, and a conclusion that says whether your hypothesis was <strong>supported</strong>. Use the <strong>past tense</strong> for what you did and saw.</p>
+  <p><button type="button" class="hint" id="templateBtn">📋 Add the headings for me</button></p>
+  <label for="essay"><strong>Write here, Ace:</strong></label>
+  <textarea id="essay" placeholder="Question: ..."></textarea>
+  <div class="counter">
+    <span id="wc">0 words</span>
+    <span id="sc">0 sentences</span>
+    <div class="meter" aria-hidden="true"><div id="meterBar"></div></div>
+  </div>
+  <div class="fb" id="wcMsg">Aim for 250 to 350 words.</div>
+  <p style="font-size:.8em;color:#607d8b" id="saveNote">Your writing is saved automatically in this browser as you type.</p>
+
+  <h3>Self-check before you finish ✅</h3>
+  <div class="checklist" id="checklist">
+    <label><input type="checkbox"> My report has all <strong>six parts</strong> with headings: question, hypothesis, materials + method, observations, results, conclusion.</label>
+    <label><input type="checkbox"> My hypothesis is a <strong>prediction with a reason</strong> ("I predict... because...").</label>
+    <label><input type="checkbox"> My method has <strong>numbered steps</strong>, <strong>exact metric amounts</strong> (mL, g, cm), and at least <strong>one safety step</strong>.</label>
+    <label><input type="checkbox"> I kept it a <strong>fair test</strong>: I changed only one thing and kept everything else the same.</label>
+    <label><input type="checkbox"> I recorded at least <strong>three observations</strong> and kept them separate from what they <strong>mean</strong>.</label>
+    <label><input type="checkbox"> My conclusion <strong>answers the question</strong>, says whether my hypothesis was <strong>supported</strong>, and suggests what to try next time.</label>
+    <label><input type="checkbox"> I checked affect / effect, then / than, commas after introductory words, past-tense verbs, fewer / less, their / there / they're, units like <strong>50 mL</strong>, and <strong>Canadian spelling</strong> (colour, litre, centimetre).</label>
+  </div>
+  <div class="btnrow">
+    <button type="button" class="blue" id="downloadBtn">⬇️ Download my writing (for Dad)</button>
+    <button type="button" class="purple" id="printBtn">🖨️ Print my writing</button>
+    <button type="button" class="grey" id="clearBtn">Start over</button>
+  </div>
+  <div class="fb" id="doneMsg"></div>
+</div>
+
+<div id="scoreBox"><span id="scoreText"></span><span>Keep going, scientist Ace! 🧪</span></div>
+</div>
+
+<div id="printArea"></div>
+
+<script>
+var NAME="Ace";
+var PRAISE=["Nice work, Ace!","Correct! Great editing eye!","Yes! Ace fixed it!","Excellent, scientist Ace!","What a reaction! 🧪"];
+function pick(a){return a[Math.floor(Math.random()*a.length)];}
+
+var LABELS=["Question", "Hypothesis", "Materials + method", "Observations", "Results", "Conclusion"];
+var LABEL_ITEMS=[
+ {s:"I predict that lemon juice will make more fizz, because it has a lower pH than vinegar.", a:"Hypothesis"},
+ {s:"I put 5 g of baking soda into each of two identical cups. Then I poured 50 mL of vinegar into one cup and 50 mL of lemon juice into the other.", a:"Materials + method"},
+ {s:"Which makes more fizz with baking soda: vinegar or lemon juice?", a:"Question"},
+ {s:"The foam in the vinegar cup rose 6 cm, but the foam in the lemon juice cup rose only 3 cm.", a:"Results"},
+ {s:"The vinegar cup foamed right up to the rim with a loud hiss, while the lemon juice cup made smaller, slower bubbles.", a:"Observations"},
+ {s:"My hypothesis was not supported, because vinegar made more fizz. Next time, I will repeat the test three times to make sure.", a:"Conclusion"}
+];
+var labelScore=0, labelChecked=false;
+function buildLabels(){
+  var box=document.getElementById("labelRows");
+  LABEL_ITEMS.forEach(function(it,i){
+    var d=document.createElement("div"); d.className="row"; d.id="lr"+i;
+    var sel='<select id="ls'+i+'" aria-label="Job of sentence '+(i+1)+'"><option value="">- choose -</option>';
+    LABELS.forEach(function(l){sel+='<option>'+l+'</option>';});
+    sel+='</select>';
+    d.innerHTML='<strong>'+(i+1)+'.</strong> '+it.s+'<br>'+sel+' <span id="lm'+i+'"></span>';
+    box.appendChild(d);
+  });
+}
+function checkLabels(){
+  var sc=0;
+  LABEL_ITEMS.forEach(function(it,i){
+    var ok=document.getElementById("ls"+i).value===it.a; if(ok)sc++;
+    document.getElementById("lr"+i).className="row "+(ok?"right":"wrong");
+    document.getElementById("lm"+i).textContent=ok?"✅":"❌";
+  });
+  labelScore=sc; labelChecked=true;
+  var fb=document.getElementById("labelFb");
+  if(sc===LABEL_ITEMS.length){fb.className="fb good";fb.textContent="🌟 "+sc+" / "+LABEL_ITEMS.length+". "+pick(PRAISE)+" You know exactly how a lab report is built!";}
+  else{fb.className="fb bad";fb.textContent=sc+" / "+LABEL_ITEMS.length+". Hint: something you want to find out = question; \"I predict... because\" = hypothesis; amounts and steps = materials + method; what you saw and heard = observations; measurements with numbers = results; whether the prediction was right and what to do next = conclusion. Fix the ❌ ones and check again.";}
+  updateScore();
+}
+
+var GMC=[
+ {q:"Which sentence uses <strong>affect / effect</strong> correctly?",
+  o:["The amount of vinegar will effect how much the mixture fizzes.", "The amount of vinegar had a big affect on the fizz.", "The amount of vinegar will affect how much the mixture fizzes.", "The amount of vinegar will affected the fizz."],
+  a:2,e:"<em>Affect</em> is usually a <strong>verb</strong> (to change something): the vinegar will <em>affect</em> the fizz. <em>Effect</em> is usually a <strong>noun</strong> (the result): it had a big <em>effect</em>."},
+ {q:"Which sentence uses <strong>then / than</strong> correctly?",
+  o:["Lemon juice is more acidic than milk, and then I tested the water.", "Lemon juice is more acidic then milk, and than I tested the water.", "Lemon juice is more acidic then milk, and then I tested the water.", "Lemon juice is more acidic than milk, and than I tested the water."],
+  a:0,e:"Use <em>than</em> to <strong>compare</strong> (more acidic <em>than</em> milk). Use <em>then</em> for <strong>time</strong> (and <em>then</em> I tested)."},
+ {q:"Which sentence uses a <strong>comma after an introductory word</strong> correctly?",
+  o:["First I, poured 50 mL of vinegar into the cup.", "First I poured, 50 mL of vinegar into the cup.", "First I poured 50 mL, of vinegar into the cup.", "First, I poured 50 mL of vinegar into the cup."],
+  a:3,e:"Put a comma after an introductory word or phrase like <em>First,</em> <em>Next,</em> <em>After that,</em> or <em>In the end,</em> before the main part of the sentence."},
+ {q:"Which sentence keeps the verbs in the <strong>past tense</strong> correctly?",
+  o:["The mixture fizzes, bubbled, and turns pink.", "The mixture fizzed, bubbled, and turned pink.", "The mixture fizzed, bubbles, and turned pink.", "The mixture fizz, bubbled, and turned pink."],
+  a:1,e:"In a lab report, describe what happened in the <strong>past tense</strong> and keep every verb in the list the same: <em>fizzed, bubbled, turned</em>."},
+ {q:"Which sentence writes the <strong>metric unit</strong> correctly?",
+  o:["I added 15ml. of vinegar to the cup.", "I added 15 ML of vinegar to the cup.", "I added 15 mL of vinegar to the cup.", "I added 15 Ml. of vinegar to the cup."],
+  a:2,e:"The symbol for millilitres is <strong>mL</strong>: a small <em>m</em>, a capital <em>L</em>, a space after the number, and no period. Same idea for <em>5 g</em> and <em>3 cm</em>."},
+ {q:"Which sentence uses <strong>fewer / less</strong> correctly?",
+  o:["Group B used fewer vinegar and made less bubbles.", "Group B used less vinegar and made less bubbles.", "Group B used fewer vinegar and made fewer bubbles.", "Group B used less vinegar and made fewer bubbles."],
+  a:3,e:"Use <em>fewer</em> for things you can <strong>count</strong> (fewer bubbles, fewer cups). Use <em>less</em> for amounts you <strong>measure</strong> but don't count one by one (less vinegar, less water)."},
+ {q:"Which sentence uses <strong>their / there / they're</strong> correctly?",
+  o:["They're testing their indicator over there.", "Their testing there indicator over they're.", "There testing they're indicator over their.", "They're testing there indicator over their."],
+  a:0,e:"<em>They're</em> = they are. <em>Their</em> shows belonging (their indicator). <em>There</em> is a place (over there)."}
+];
+var gmcState=GMC.map(function(){return{answered:false,firstRight:false,done:false};});
+function buildGMC(){
+  var box=document.getElementById("gmc");
+  GMC.forEach(function(it,i){
+    var d=document.createElement("div"); d.className="box q"; d.id="g"+i;
+    var h='<div><strong>'+(i+1)+'.</strong> '+it.q+'</div>';
+    it.o.forEach(function(o,j){h+='<button type="button" class="opt" data-i="'+i+'" data-j="'+j+'">'+String.fromCharCode(65+j)+'. '+o+'</button>';});
+    h+='<div class="fb" id="gfb'+i+'"></div>';
+    d.innerHTML=h; box.appendChild(d);
+  });
+  box.addEventListener("click",function(e){
+    var b=e.target.closest?e.target.closest(".opt"):e.target; if(!b||!b.classList.contains("opt"))return;
+    var i=+b.getAttribute("data-i"), j=+b.getAttribute("data-j"), st=gmcState[i], it=GMC[i];
+    if(st.done)return;
+    var ok=j===it.a; if(!st.answered){st.answered=true;st.firstRight=ok;}
+    var fb=document.getElementById("gfb"+i);
+    if(ok){st.done=true;b.classList.add("sel-right");document.getElementById("g"+i).className="box q right";fb.className="fb good";fb.innerHTML="✅ "+pick(PRAISE)+' <span class="explain">'+it.e+'</span>';}
+    else{b.classList.add("sel-wrong");document.getElementById("g"+i).className="box q wrong";fb.className="fb bad";fb.textContent="❌ Not quite, Ace. Look closely and try again.";}
+    updateScore();
+  });
+}
+
+var GFIX=[
+ {bad:"first i pored the vinegar into the cup",
+  ok:["First, I poured the vinegar into the cup."],
+  hint:"Capitalize the first word and the word <em>I</em>. Put a comma after the introductory word <em>First</em>. You <em>pour</em> a liquid (poured), but you <em>pore</em> over a book. End with a period."},
+ {bad:"the baking soda effected the vinegar it fizzed right away.",
+  ok:["The baking soda affected the vinegar, and it fizzed right away.", "The baking soda affected the vinegar, so it fizzed right away.", "The baking soda affected the vinegar. It fizzed right away.", "The baking soda affected the vinegar; it fizzed right away."],
+  hint:"Capitalize the first word. <em>Affected</em> is the verb (to change something). This is a run-on: fix it with <em>, and</em> or <em>, so</em> or a period."},
+ {bad:"lemon juice is more acidic then milk, it turned the indicator pink.",
+  ok:["Lemon juice is more acidic than milk, so it turned the indicator pink.", "Lemon juice is more acidic than milk, and it turned the indicator pink.", "Lemon juice is more acidic than milk. It turned the indicator pink.", "Lemon juice is more acidic than milk; it turned the indicator pink."],
+  hint:"Capitalize the first word. Use <em>than</em> to compare. A comma alone can't join two complete sentences (a comma splice), so add <em>so</em> or <em>and</em>, or use a period."},
+ {bad:"we used less cups then the other group and there results was different.",
+  ok:["We used fewer cups than the other group, and their results were different.", "We used fewer cups than the other group and their results were different."],
+  hint:"Capitalize the first word. Cups can be counted, so use <em>fewer</em>. Compare with <em>than</em>. The results belong to them, so use <em>their</em>. <em>Results</em> is plural, so use <em>were</em>. A comma before <em>and</em> joins the two complete sentences."}
+];
+
+var gfixState=GFIX.map(function(){return{tries:0,correct:false,firstRight:false};});
+function norm(s){return s.replace(/[\u2018\u2019\u02BC]/g,"'").replace(/[\u201C\u201D]/g,'"').replace(/\s+/g," ").trim();}
+function checkFixAnswer(i,val){var v=norm(val);return GFIX[i].ok.some(function(a){return norm(a)===v;});}
+function buildGFix(){
+  var box=document.getElementById("gfix");
+  GFIX.forEach(function(it,i){
+    var d=document.createElement("div"); d.className="box q"; d.id="f"+i;
+    d.innerHTML='<div><strong>'+(i+1)+'.</strong> Fix: <span class="bad-sent">'+it.bad+'</span></div>'+
+     '<input class="fix" type="text" id="fi'+i+'" autocomplete="off" spellcheck="false" aria-label="Corrected sentence '+(i+1)+'">'+
+     '<div class="btnrow"><button type="button" class="go" data-act="check" data-i="'+i+'">Check</button><button type="button" class="hint" data-act="hint" data-i="'+i+'">Hint 💡</button><button type="button" class="grey" data-act="show" data-i="'+i+'" style="display:none">Show answer</button></div>'+
+     '<div class="fb" id="ffb'+i+'"></div>';
+    box.appendChild(d);
+  });
+  box.addEventListener("click",function(e){
+    var b=e.target; if(b.tagName!=="BUTTON")return;
+    var i=+b.getAttribute("data-i"), act=b.getAttribute("data-act"), fb=document.getElementById("ffb"+i);
+    if(act==="hint"){fb.className="fb";fb.style.color="#5d4037";fb.textContent="💡 "+GFIX[i].hint;return;}
+    fb.style.color="";
+    if(act==="show"){fb.className="fb";fb.innerHTML='Answer: <em>'+GFIX[i].ok[0]+'</em>'+(GFIX[i].ok.length>1?' (other correct versions are accepted too)':'');return;}
+    fixCheck(i);
+  });
+  box.addEventListener("keydown",function(e){if(e.key==="Enter"&&e.target.classList.contains("fix"))fixCheck(+e.target.id.slice(2));});
+}
+function fixCheck(i){
+  var val=document.getElementById("fi"+i).value, fb=document.getElementById("ffb"+i), st=gfixState[i];
+  fb.style.color="";
+  if(!val.trim()){fb.className="fb bad";fb.textContent="Type the corrected sentence first, Ace!";return;}
+  st.tries++;
+  if(checkFixAnswer(i,val)){ if(st.tries===1)st.firstRight=true; st.correct=true; document.getElementById("f"+i).className="box q right"; fb.className="fb good"; fb.textContent="✅ "+pick(PRAISE); }
+  else { st.correct=false; document.getElementById("f"+i).className="box q wrong"; fb.className="fb bad"; fb.textContent="❌ Not quite. Check every capital letter, apostrophe, comma, and spelling. Try again!"; if(st.tries>=2)document.querySelector('#f'+i+' [data-act=show]').style.display="inline-block"; }
+  updateScore();
+}
+
+function updateScore(){
+  var g=0; gmcState.forEach(function(s){if(s.firstRight)g++;});
+  var f=0; gfixState.forEach(function(s){if(s.correct)f++;});
+  var total=LABEL_ITEMS.length+GMC.length+GFIX.length, got=labelScore+g+f;
+  document.getElementById("scoreText").textContent="Score: "+got+" / "+total+"  (labels "+(labelChecked?labelScore:"-")+"/"+LABEL_ITEMS.length+" · grammar A "+g+"/"+GMC.length+" · grammar B "+f+"/"+GFIX.length+")";
+}
+
+var W5=["who","place","facts","senses","feel","closing"];
+function w5Save(){try{localStorage.setItem(KEY+"-5w",JSON.stringify(W5.map(function(k){return document.getElementById("w5"+k).value;})));}catch(e){}}
+function w5Restore(){try{var d=JSON.parse(localStorage.getItem(KEY+"-5w")||"null");if(d)d.forEach(function(x,i){document.getElementById("w5"+W5[i]).value=x;});}catch(e){}}
+function w5Summary(){return W5.map(function(k){return k.charAt(0).toUpperCase()+k.slice(1)+": "+document.getElementById("w5"+k).value;}).join("\n");}
+function addTemplate(){
+  var t=document.getElementById("essay");
+  var tpl="TITLE: \n\nQuestion: \n\nHypothesis (I predict... because...): \n\nMaterials + method:\n- \n- \n1. \n2. \n3. \n4. \n\nObservations: \n\nResults: \n\nConclusion: \n\nWritten by "+NAME;
+  if(t.value.trim()&&!confirm("Add the headings below what you've already written?"))return;
+  t.value=(t.value.trim()?t.value.replace(/\s+$/,"")+"\n\n":"")+tpl; updateCount(); t.focus();
+}
+var KEY="ace-writing-2026-10-23";
+function countWords(t){var m=t.trim().match(/[A-Za-zÀ-ÿ0-9]+(?:['’\-][A-Za-zÀ-ÿ0-9]+)*/g);return m?m.length:0;}
+function countSentences(t){var m=t.match(/[^.!?]*[A-Za-z0-9][^.!?]*[.!?]+/g);return m?m.length:0;}
+function currentPrompt(){var r=document.querySelector('input[name=prompt]:checked');return r?r.value:"";}
+function updateCount(){
+  var t=document.getElementById("essay").value, w=countWords(t), s=countSentences(t);
+  document.getElementById("wc").textContent=w+(w===1?" word":" words");
+  document.getElementById("sc").textContent=s+(s===1?" sentence":" sentences");
+  var bar=document.getElementById("meterBar"); bar.style.width=Math.min(100,w/350*100)+"%";
+  var msg=document.getElementById("wcMsg");
+  if(w<250){bar.style.background="#ffb300";msg.className="fb";msg.textContent=w===0?"Aim for 250 to 350 words.":"Keep going, Ace! "+(250-w)+" more words to reach the goal.";}
+  else if(w<=350){bar.style.background="#43a047";msg.className="fb good";msg.textContent="🎯 You're in the target zone! Nice work, Ace!";}
+  else{bar.style.background="#1e88e5";msg.className="fb";msg.textContent="Wow, that's a lot of writing! Strong lab reports stay focused. Could any sentences be cut?";}
+  try{localStorage.setItem(KEY,JSON.stringify({text:t,prompt:currentPrompt(),checks:checkStates()}));}catch(e){document.getElementById("saveNote").textContent="(This browser can't auto-save here, so use the Download button before closing!)";}
+}
+function checkStates(){return Array.prototype.map.call(document.querySelectorAll("#checklist input"),function(c){return c.checked;});}
+function checklistText(){
+  return Array.prototype.map.call(document.querySelectorAll("#checklist label"),function(l){return (l.querySelector("input").checked?"[x] ":"[ ] ")+l.textContent.trim();}).join("\n");
+}
+function buildReport(){
+  var t=document.getElementById("essay").value;
+  return "Writing Week 26: "+NAME+"\nDate: "+new Date().toLocaleString("en-CA")+"\nPrompt: "+currentPrompt()+
+    "\nWords: "+countWords(t)+"   Sentences: "+countSentences(t)+"\nPlanning notes:\n"+w5Summary()+
+    "\n\n----- "+NAME+"'s writing -----\n\n"+t+"\n\n----- Self-check -----\n"+checklistText()+
+    "\n\n----- Parent feedback -----\n\n\n";
+}
+function download(){
+  var t=document.getElementById("essay").value;
+  if(!t.trim()){document.getElementById("doneMsg").className="fb bad";document.getElementById("doneMsg").textContent="Write something first, Ace!";return;}
+  var blob=new Blob([buildReport().replace(/\n/g,"\r\n")],{type:"text/plain;charset=utf-8"});
+  var a=document.createElement("a"); a.href=URL.createObjectURL(blob); a.download=NAME+"-writing-2026-10-23"+".txt";
+  document.body.appendChild(a); a.click();
+  setTimeout(function(){URL.revokeObjectURL(a.href);a.remove();},1000);
+  var dm=document.getElementById("doneMsg"); dm.className="fb good"; dm.textContent="📄 Saved! Look in your Downloads folder and show Dad. Great job finishing, Ace!";
+}
+function esc(s){return s.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");}
+function printIt(){
+  var t=document.getElementById("essay").value;
+  if(!t.trim()){document.getElementById("doneMsg").className="fb bad";document.getElementById("doneMsg").textContent="Write something first, Ace!";return;}
+  document.getElementById("printArea").innerHTML="<h1>Writing Week 26: "+NAME+"</h1><div class='meta'>"+esc(new Date().toLocaleString("en-CA"))+"<br><strong>Prompt:</strong> "+esc(currentPrompt())+"<br>Words: "+countWords(t)+" · Sentences: "+countSentences(t)+"</div><div class='text'>"+esc(t)+"</div><div class='lines'><strong>Self-check:</strong><br>"+esc(checklistText()).replace(/\n/g,"<br>")+"</div><div class='lines'><strong>Parent feedback:</strong><br><br><br><br></div>";
+  window.print();
+}
+function restore(){
+  try{var d=JSON.parse(localStorage.getItem(KEY)||"null"); if(!d)return;
+    document.getElementById("essay").value=d.text||"";
+    Array.prototype.forEach.call(document.querySelectorAll("input[name=prompt]"),function(r){r.checked=(r.value===d.prompt);});
+    if(!document.querySelector("input[name=prompt]:checked"))document.querySelector("input[name=prompt]").checked=true;
+    var cs=document.querySelectorAll("#checklist input"); (d.checks||[]).forEach(function(v,i){if(cs[i])cs[i].checked=v;});
+  }catch(e){}
+}
+buildLabels(); buildGMC(); buildGFix(); restore(); w5Restore(); updateCount(); updateScore();
+W5.forEach(function(k){document.getElementById("w5"+k).addEventListener("input",w5Save);});
+document.getElementById("templateBtn").addEventListener("click",addTemplate);
+document.getElementById("checkLabels").addEventListener("click",checkLabels);
+document.getElementById("essay").addEventListener("input",updateCount);
+document.getElementById("checklist").addEventListener("change",function(){updateCount(); if(checkStates().every(Boolean)){var dm=document.getElementById("doneMsg");dm.className="fb good";dm.textContent="✅ All boxes checked! Now download or print it for Dad. Awesome work, Ace!";}});
+document.getElementById("prompts").addEventListener("change",updateCount);
+document.getElementById("downloadBtn").addEventListener("click",download);
+document.getElementById("printBtn").addEventListener("click",printIt);
+document.getElementById("clearBtn").addEventListener("click",function(){ if(confirm("Erase your writing and start over?")){document.getElementById("essay").value="";Array.prototype.forEach.call(document.querySelectorAll("#checklist input"),function(c){c.checked=false;});document.getElementById("doneMsg").textContent="";updateCount();} });
+</script>
+<script src="../../assets/autosave.js"></script>
+</body>
+</html>

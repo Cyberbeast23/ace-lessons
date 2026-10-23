@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cantonese (Oct. 23): In the Kitchen: Cooking &amp; Flavours (廚房)</title>
+<style>
+  body{font-family:"Segoe UI",Verdana,Arial,sans-serif;font-size:20px;line-height:1.6;margin:0;background:#f5f0eb;color:#2c2416}
+  .wrap{max-width:880px;margin:0 auto;padding:20px 18px 80px}
+  a.home{font-size:.9em;color:#bf360c}
+  h1{color:#e65100;font-size:2em;margin:10px 0}
+  h2{color:#ef6c00;margin-top:36px;border-bottom:3px solid #ffcc80;padding-bottom:4px}
+  h3{color:#ef6c00}
+  .box{background:#fff;border-radius:16px;padding:18px 22px;margin:16px 0;box-shadow:0 3px 10px rgba(0,0,0,.07)}
+  .tipbox{background:#fff8e1;border-left:8px solid #ffb300}
+  .char{font-size:2.2em;font-weight:bold;color:#e65100;line-height:1.2}
+  .jyut{font-family:Consolas,"Courier New",monospace;background:#fff3e0;padding:2px 8px;border-radius:8px;font-size:1.05em}
+  .card{display:grid;grid-template-columns:auto 1fr;gap:8px 18px;align-items:center;border-left:8px solid #ef6c00;padding-left:14px}
+  .card .meta{grid-column:2}
+  .ex{margin-top:8px;background:#fff3e0;border-radius:10px;padding:8px 12px;font-size:.95em}
+  .q{border-left:8px solid #b0bec5}
+  .q.right{border-left-color:#43a047;background:#f1f8e9}
+  .q.wrong{border-left-color:#e53935;background:#fff5f5}
+  .opt{display:block;width:100%;text-align:left;font-size:.95em;background:#fafafa;border:2px solid #e0e0e0;border-radius:10px;padding:8px 14px;margin:8px 0;cursor:pointer;font-family:inherit}
+  .opt:hover{border-color:#ffb74d;background:#fff}
+  .opt.sel-right{background:#c8e6c9;border-color:#43a047}
+  .opt.sel-wrong{background:#ffcdd2;border-color:#e53935}
+  .fb{margin-top:6px;font-weight:bold}
+  .fb.good{color:#2e7d32} .fb.bad{color:#c62828}
+  .explain{font-weight:normal;color:#e65100}
+  .vrow{display:flex;flex-wrap:wrap;align-items:center;gap:10px;padding:8px 6px;border-bottom:1px dashed #eee}
+  .vrow .w{font-weight:bold;min-width:120px;font-size:1.3em}
+  .vrow.right{background:#f1f8e9} .vrow.wrong{background:#fff5f5}
+  select{font-size:.95em;padding:6px 8px;border-radius:8px;border:2px solid #ffb74d;max-width:100%;font-family:inherit}
+  .mark{font-size:1.2em;min-width:30px}
+  button.main{font-size:1em;padding:10px 20px;border:none;border-radius:10px;cursor:pointer;font-weight:bold;background:#ef6c00;color:#fff;margin-top:10px}
+  button.main:hover{background:#e65100}
+  input[type=text]{font-size:1.05em;padding:8px 12px;border:2px solid #ffb74d;border-radius:10px;width:220px;font-family:inherit}
+  button.check{font-size:.95em;padding:8px 16px;border:none;border-radius:10px;cursor:pointer;font-weight:bold;background:#ef6c00;color:#fff}
+  .row{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:10px}
+  #scoreBox{position:sticky;bottom:0;background:#e65100;color:#fff;border-radius:16px 16px 0 0;padding:12px 20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-top:30px}
+  #scoreBox button{font-size:.95em;padding:8px 16px;border:none;border-radius:10px;cursor:pointer;font-weight:bold;background:#ffca28;color:#3e2723}
+  #final{display:none;text-align:center;border:4px solid #43a047;font-size:1.1em}
+  .tone{font-size:.85em;color:#ef6c00}
+
+  .audio-bar{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin:12px 0 4px}
+  button.speak,button.record,button.play-mine,button.play-model,button.audio-ctrl{
+    font-size:1.05em;padding:14px 18px;min-height:52px;min-width:52px;
+    border:none;border-radius:14px;cursor:pointer;font-weight:bold;font-family:inherit;
+    touch-action:manipulation;-webkit-tap-highlight-color:transparent;
+  }
+  button.speak,button.play-model,button.audio-ctrl.hear{background:#ef6c00;color:#fff}
+  button.speak:hover,button.play-model:hover,button.audio-ctrl.hear:hover{background:#e65100}
+  button.speak.playing{background:#43a047}
+  button.record{background:#e53935;color:#fff}
+  button.record:hover{background:#c62828}
+  button.record.recording{background:#ffca28;color:#3e2723;animation:pulse 1s infinite}
+  @keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.04)}}
+  button.play-mine{background:#00897b;color:#fff}
+  button.play-mine:hover{background:#00695c}
+  button.play-mine:disabled{opacity:.45;cursor:not-allowed}
+  button.audio-ctrl.stop{background:#546e7a;color:#fff}
+  button.audio-ctrl.stop:hover{background:#37474f}
+  .practice{margin-top:14px;padding-top:12px;border-top:2px dashed #ffcc80}
+  .practice-row{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+  .rec-status{margin-top:8px;font-weight:bold;color:#ef6c00;font-size:.95em}
+  .rec-status.rec-on{color:#c62828}
+  .mic-msg{margin-top:8px;background:#fff3e0;border-left:6px solid #ef6c00;border-radius:10px;padding:10px 14px;font-size:.95em;color:#e65100}
+  .box[data-audio]{position:relative}
+</style>
+</head>
+<body>
+<div class="wrap">
+<a class="home" href="../../index.html">&larr; Back to all lessons</a>
+<h1>🗣️ Cantonese Week 26: In the Kitchen: Cooking &amp; Flavours 廚房 (Hong Kong)</h1>
+<p>Ace, you already know numbers up to 100, plus greetings, family, food, school, body parts, colours, sky &amp; space words, what to say at the doctor's, nature words, question words, music words, trains &amp; travel, brain &amp; sleep words, bees &amp; gardens, electricity &amp; lights, land, people &amp; respect, ice, snow &amp; giant animals, community, rules &amp; voting, weather &amp; storms, germ-fighter words, ancient China words, flight words, and gold rush words. Today, while your other lessons explore kitchen chemistry, you'll learn <strong>kitchen and flavour words</strong>: kitchen, to cook, sour, salty, salt, vinegar, sugar, and tasty. A chemist would notice something cool: 酸 (syun1, sour) is also the Cantonese word scientists use for an <em>acid</em>, because acids taste sour! You already know 甜 (tim4, sweet), 水 (seoi2, water), and 飯 (faan6, rice), so listen for them in today's sentences. We use <strong>Traditional Chinese</strong> characters and Jyutping with tone numbers, the Hong Kong way.</p>
+
+<div class="box tipbox">
+  <strong>How to read Jyutping (sounds):</strong>
+  <ul>
+    <li>Letters show the sound. Numbers show the <strong>tone</strong> (the musical pitch): 1 high, 2 rising, 3 mid, 4 low/falling, 5 low rising, 6 low.</li>
+    <li>Example: <span class="jyut">syun1</span> 酸 (sour) is tone 1 (high and flat), while <span class="jyut">haam4</span> 鹹 (salty) is tone 4 (low and falling). Try saying them one after the other: high "syuuun" for a lemon, then low, falling "haaam" for the sea! 糖 <span class="jyut">tong4</span> and 鹽 <span class="jyut">jim4</span> are tone 4 too, so sugar and salt both fall low.</li>
+    <li><strong>Listening/speaking tip:</strong> Say each word out loud three times while looking at the characters. Tap Hear model, then Record and compare!</li>
+  </ul>
+</div>
+
+<h2>Part 1: Learn Today's Words</h2>
+<div class="box tipbox" style="background:#fff3e0;border-left-color:#ef6c00"><strong>Listen &amp; practise:</strong> Tap <em>Hear model</em> to hear the word (Hong Kong voice). Then tap <em>Record</em>, say it out loud, and compare with <em>Play my try</em> + <em>Play model</em>. Recordings stay on this device only for this visit — nothing is uploaded.</div>
+<div class="audio-bar">
+  <button type="button" class="audio-ctrl hear" id="playAll">🔊 Play all words</button>
+  <button type="button" class="audio-ctrl stop" id="stopAudio">⏹️ Stop</button>
+  <span class="tone">Plays every word with English first (greetings + family + food + school + body + colours + sky &amp; space + numbers 11–100 + at the doctor + nature + question words + music + trains &amp; travel + brain &amp; sleep + bees &amp; gardens + electricity &amp; lights).</span>
+</div>
+<div id="cards"></div>
+
+<div class="box tipbox">
+  <strong>Kitchen tips for Ace:</strong>
+  <ul>
+    <li>廚房 <span class="jyut">cyu4 fong2</span> means kitchen. Dictionaries write 房 as <span class="jyut">fong4</span> (room), but in everyday Hong Kong speech 廚房 ends with a rising <span class="jyut">fong2</span>. Both are accepted in today's typing quiz.</li>
+    <li>煮 <span class="jyut">zyu2</span> means to cook or to boil. 煮飯 (zyu2 faan6) = to cook rice, and also just "to cook a meal."</li>
+    <li>酸 <span class="jyut">syun1</span> = sour. In science class, an acid is 酸 too! Baking soda is 梳打粉 (so1 daa2 fan2), "soda powder."</li>
+    <li>鹹 <span class="jyut">haam4</span> = salty and 鹽 <span class="jyut">jim4</span> = salt. 海水好鹹 = seawater is very salty.</li>
+    <li>醋 <span class="jyut">cou3</span> = vinegar (tone 3, mid and level) and 糖 <span class="jyut">tong4</span> = sugar.</li>
+    <li>好味 <span class="jyut">hou2 mei6</span> = tasty. You already know 好食 (hou2 sik6), "good to eat." Both are great to say to the cook! A kitchen chemist's sentence: 醋加梳打粉，有好多泡泡！ (cou3 gaa1 so1 daa2 fan2, jau5 hou2 do1 paau1 paau1!) = Vinegar plus baking soda makes lots of bubbles! 🫧</li>
+  </ul>
+</div>
+
+<h2>Part 2: Match the Meaning</h2>
+<div class="box">
+  <p>Match each Cantonese phrase to its English meaning.</p>
+  <div id="vmatch"></div>
+  <button type="button" class="main" id="checkMatch">Check my matching</button>
+  <div class="fb" id="matchFb"></div>
+</div>
+
+<h2>Part 3: What Would You Say?</h2>
+<p>Click the best Cantonese phrase for each situation. Only your <strong>first click</strong> counts toward your score.</p>
+<div id="mc"></div>
+
+<h2>Part 4: Type the Jyutping</h2>
+<p>Look at the Chinese characters and type the Jyutping (with tone numbers). Spelling must match, including the numbers. Example: <span class="jyut">hou2 mei6</span></p>
+<div id="fill"></div>
+
+<div class="box" id="final"></div>
+<div id="scoreBox">
+  <span id="scoreText"></span>
+  <button type="button" id="finishBtn">I'm done! Show my final score</button>
+</div>
+</div>
+
+<script src="../../audio/cantonese/player.js"></script>
+<script>
+var WORDS = [
+ {zh:"廚房", jy:"cyu4 fong2", audio:"193-cyu4-fong2-kitchen.mp3", en:"kitchen",
+  ex_zh:"我喺廚房。", ex_jy:"ngo5 hai2 cyu4 fong2.", ex_en:"I am in the kitchen."},
+ {zh:"煮", jy:"zyu2", audio:"194-zyu2-cook.mp3", en:"to cook / to boil",
+  ex_zh:"媽媽煮飯。", ex_jy:"maa4 maa1 zyu2 faan6.", ex_en:"Mom is cooking (a meal)."},
+ {zh:"酸", jy:"syun1", audio:"195-syun1-sour.mp3", en:"sour",
+  ex_zh:"檸檬好酸。", ex_jy:"ning4 mung1 hou2 syun1.", ex_en:"Lemons are very sour."},
+ {zh:"鹹", jy:"haam4", audio:"196-haam4-salty.mp3", en:"salty",
+  ex_zh:"海水好鹹。", ex_jy:"hoi2 seoi2 hou2 haam4.", ex_en:"Seawater is very salty."},
+ {zh:"鹽", jy:"jim4", audio:"197-jim4-salt.mp3", en:"salt",
+  ex_zh:"加少少鹽。", ex_jy:"gaa1 siu2 siu2 jim4.", ex_en:"Add a little salt."},
+ {zh:"醋", jy:"cou3", audio:"198-cou3-vinegar.mp3", en:"vinegar",
+  ex_zh:"醋好酸。", ex_jy:"cou3 hou2 syun1.", ex_en:"Vinegar is very sour."},
+ {zh:"糖", jy:"tong4", audio:"199-tong4-sugar.mp3", en:"sugar",
+  ex_zh:"糖好甜。", ex_jy:"tong4 hou2 tim4.", ex_en:"Sugar is very sweet."},
+ {zh:"好味", jy:"hou2 mei6", audio:"200-hou2-mei6-tasty.mp3", en:"tasty / delicious",
+  ex_zh:"呢個蛋糕好好味！", ex_jy:"ni1 go3 daan6 gou1 hou2 hou2 mei6!", ex_en:"This cake is really tasty!"}
+];
+
+var PRAISE=["Nice work, Ace!","正確！ Correct!","Yes! What a reaction! 🧪","Excellent, Ace!","Right! 好味! Tasty Cantonese! 🍰"];
+function pick(a){return a[Math.floor(Math.random()*a.length)];}
+function shuffled(arr,seed){var a=arr.slice(),s=seed;for(var i=a.length-1;i>0;i--){s=(s*9301+49297)%233280;var j=Math.floor(s/233280*(i+1));var t=a[i];a[i]=a[j];a[j]=t;}return a;}
+
+function buildCards(){
+  var box=document.getElementById("cards");
+  WORDS.forEach(function(w,i){
+    var d=document.createElement("div"); d.className="box";
+    if(w.audio){ d.setAttribute("data-audio", w.audio); d.setAttribute("data-audio-label", w.zh+" "+w.jy); }
+    d.innerHTML='<div class="card">'+
+      '<div class="char">'+(i+1)+'. '+w.zh+'</div>'+
+      '<div class="meta"><div><span class="jyut">'+w.jy+'</span> <span class="tone">← tap Hear model, then Record</span></div>'+
+      '<div><strong>'+w.en+'</strong></div></div></div>'+
+      '<div class="ex"><strong>Example:</strong> '+w.ex_zh+'<br><span class="jyut">'+w.ex_jy+'</span><br><em>'+w.ex_en+'</em></div>'+
+      '<div class="practice"></div>';
+    box.appendChild(d);
+  });
+}
+
+var matchScore=0, matchChecked=false;
+function buildMatch(){
+  var m=document.getElementById("vmatch");
+  var order=shuffled(WORDS.map(function(w){return w.jy;}),16);
+  WORDS.forEach(function(w,i){
+    var row=document.createElement("div"); row.className="vrow"; row.id="vm"+i;
+    var sel='<select id="vsel'+i+'" aria-label="Meaning of '+w.zh+'"><option value="">- choose English -</option>';
+    order.forEach(function(jy){
+      var en=WORDS.find(function(x){return x.jy===jy;}).en;
+      sel+='<option value="'+jy+'">'+en+'</option>';
+    });
+    sel+='</select>';
+    row.innerHTML='<span class="mark" id="vmk'+i+'"></span><span class="w">'+w.zh+'</span><span class="jyut">'+w.jy+'</span>'+sel;
+    m.appendChild(row);
+  });
+}
+function checkMatch(){
+  var score=0, blank=0;
+  WORDS.forEach(function(w,i){
+    var v=document.getElementById("vsel"+i).value, ok=(v===w.jy);
+    if(!v) blank++;
+    if(ok) score++;
+    document.getElementById("vm"+i).className="vrow "+(ok?"right":"wrong");
+    document.getElementById("vmk"+i).textContent=ok?"✅":"❌";
+  });
+  matchScore=score; matchChecked=true;
+  var fb=document.getElementById("matchFb");
+  if(score===WORDS.length){ fb.className="fb good"; fb.textContent="🌟 "+score+" / "+WORDS.length+". Perfect matching, Ace!"; }
+  else { fb.className="fb bad"; fb.textContent=score+" / "+WORDS.length+" correct"+(blank?" ("+blank+" blank)":"")+". Fix the ❌ ones and check again."; }
+  updateScore();
+}
+
+var MC = [
+ {q:"Ace takes a bite of a lemon and makes a funny face. How does it taste?",
+  o:["甜","鹹","酸","好味"], a:2,
+  e:"酸 (syun1) = sour. 檸檬好酸 = Lemons are very sour. (In science, acids are 酸 too!)"},
+ {q:"Grandma is in the room with the stove and the fridge. Where is she?",
+  o:["廚房","學校","花園","車站"], a:0,
+  e:"廚房 (cyu4 fong2) = kitchen. 我喺廚房 = I am in the kitchen."},
+ {q:"For the fizzy volcano experiment, you need the sour liquid that reacts with baking soda. What do you ask for?",
+  o:["糖","鹽","水","醋"], a:3,
+  e:"醋 (cou3) = vinegar. 醋加梳打粉，有好多泡泡！ = Vinegar plus baking soda makes lots of bubbles!"},
+ {q:"You taste a drop of ocean water at the beach. It is very ____!",
+  o:["甜","鹹","凍","酸"], a:1,
+  e:"鹹 (haam4) = salty. 海水好鹹 = Seawater is very salty."},
+ {q:"Dad's soup is delicious! What do you tell him?",
+  o:["好味！","好重！","好遠！","好凍！"], a:0,
+  e:"好味 (hou2 mei6) = tasty. 好好味！ = Really tasty!"},
+ {q:"You are baking a cake and need the sweet white crystals. What do you need?",
+  o:["鹽","醋","糖","沙"], a:2,
+  e:"糖 (tong4) = sugar. 糖好甜 = Sugar is very sweet. (Careful: 鹽 jim4, salt, looks the same but tastes very different!)"}
+];
+var mcState=MC.map(function(){return{answered:false,firstRight:false,done:false};});
+function buildMC(){
+  var box=document.getElementById("mc");
+  MC.forEach(function(item,i){
+    var d=document.createElement("div"); d.className="box q"; d.id="mc"+i;
+    var html="<div><strong>"+(i+1)+".</strong> "+item.q+"</div>";
+    item.o.forEach(function(opt,j){ html+='<button type="button" class="opt" data-i="'+i+'" data-j="'+j+'">'+String.fromCharCode(65+j)+". "+opt+"</button>"; });
+    html+='<div class="fb" id="mcfb'+i+'"></div>';
+    d.innerHTML=html; box.appendChild(d);
+  });
+  box.addEventListener("click",function(e){
+    var b=e.target.closest?e.target.closest(".opt"):e.target; if(!b||!b.classList.contains("opt"))return;
+    var i=+b.getAttribute("data-i"), j=+b.getAttribute("data-j"), st=mcState[i], item=MC[i];
+    if(st.done)return;
+    var right=(j===item.a);
+    if(!st.answered){ st.answered=true; st.firstRight=right; }
+    var fb=document.getElementById("mcfb"+i), card=document.getElementById("mc"+i);
+    if(right){ st.done=true; b.classList.add("sel-right"); card.className="box q right"; fb.className="fb good"; fb.innerHTML="✅ "+pick(PRAISE)+' <span class="explain">'+item.e+"</span>"; }
+    else { b.classList.add("sel-wrong"); card.className="box q wrong"; fb.className="fb bad"; fb.textContent="❌ Not quite, Ace. Think about the kitchen, cooking, and flavours, and try again."; }
+    updateScore();
+  });
+}
+
+var FILL = [
+ {zh:"廚房", a:"cyu4 fong2", alt:"cyu4 fong4"},
+ {zh:"煮", a:"zyu2"},
+ {zh:"酸", a:"syun1"},
+ {zh:"鹹", a:"haam4"},
+ {zh:"鹽", a:"jim4"},
+ {zh:"醋", a:"cou3"},
+ {zh:"糖", a:"tong4"},
+ {zh:"好味", a:"hou2 mei6"}
+];
+var fillState=FILL.map(function(){return{correct:false,tries:0};});
+function normJy(s){return String(s).trim().toLowerCase().replace(/\s+/g," ");}
+function buildFill(){
+  var box=document.getElementById("fill");
+  FILL.forEach(function(it,i){
+    var d=document.createElement("div"); d.className="box q"; d.id="f"+i;
+    d.innerHTML='<div><strong>'+(i+1)+'.</strong> Type Jyutping for <span class="char" style="font-size:1.4em">'+it.zh+'</span></div>'+
+      '<div class="row"><input type="text" id="fi'+i+'" autocomplete="off" spellcheck="false" aria-label="Jyutping '+it.zh+'">'+
+      '<button type="button" class="check" data-i="'+i+'">Check</button></div><div class="fb" id="ffb'+i+'"></div>';
+    box.appendChild(d);
+  });
+  box.addEventListener("click",function(e){
+    var b=e.target; if(b.tagName!=="BUTTON"||!b.classList.contains("check"))return;
+    fillCheck(+b.getAttribute("data-i"));
+  });
+  box.addEventListener("keydown",function(e){if(e.key==="Enter"&&e.target.tagName==="INPUT")fillCheck(+e.target.id.slice(2));});
+}
+function fillCheck(i){
+  var val=document.getElementById("fi"+i).value, fb=document.getElementById("ffb"+i), st=fillState[i];
+  if(!val.trim()){fb.className="fb bad";fb.textContent="Type the Jyutping first, Ace!";return;}
+  st.tries++;
+  if(normJy(val)===normJy(FILL[i].a)||(FILL[i].alt&&normJy(val)===normJy(FILL[i].alt))){
+    st.correct=true; document.getElementById("f"+i).className="box q right";
+    fb.className="fb good"; fb.textContent="✅ "+pick(PRAISE)+(st.tries===1?" (first try!)":"");
+  } else {
+    st.correct=false; document.getElementById("f"+i).className="box q wrong";
+    fb.className="fb bad"; fb.textContent="❌ Not quite. Check letters, spaces, and tone numbers. Answer looks like: hou2 mei6";
+  }
+  updateScore();
+}
+
+function scores(){
+  var mc=0; mcState.forEach(function(s){if(s.firstRight)mc++;});
+  var f=0; fillState.forEach(function(s){if(s.correct)f++;});
+  return {match:matchScore, mc:mc, fill:f};
+}
+function updateScore(){
+  var s=scores();
+  document.getElementById("scoreText").textContent="Match: "+(matchChecked?s.match:"-")+"/"+WORDS.length+" · Situations: "+s.mc+"/"+MC.length+" · Jyutping: "+s.fill+"/"+FILL.length;
+}
+function finish(){
+  if(!matchChecked) checkMatch();
+  var s=scores(), total=WORDS.length+MC.length+FILL.length, got=s.match+s.mc+s.fill, pct=Math.round(100*got/total);
+  var msg = pct===100 ? "🏆 完美！ Perfect score, Ace! You can talk about the kitchen, cooking, and flavours in Cantonese, like a real kitchen chemist!" :
+            pct>=80 ? "🌟 Fantastic work, Ace! Tonight, tell Dad: 醋加梳打粉，有好多泡泡！ (cou3 gaa1 so1 daa2 fan2, jau5 hou2 do1 paau1 paau1! Vinegar plus baking soda makes lots of bubbles!)" :
+            pct>=60 ? "💪 Solid effort! Review the cards and try the ❌ ones again." :
+                      "🌱 New words take practice! Look at Part 1 again, say each phrase three times, then retry.";
+  var f=document.getElementById("final"); f.style.display="block";
+  f.innerHTML="<h2 style='border:none;margin-top:0'>Final Score: "+got+" / "+total+" ("+pct+"%)</h2>"+
+    "<p>Matching: "+s.match+"/"+WORDS.length+" · Situations (first try): "+s.mc+"/"+MC.length+" · Jyutping typing: "+s.fill+"/"+FILL.length+"</p><p>"+msg+"</p>"+
+    "<p style='font-size:.85em;color:#ef6c00'>Finished on "+new Date().toLocaleString("en-CA")+"</p>";
+  f.scrollIntoView({behavior:"smooth"});
+}
+buildCards(); buildMatch(); buildMC(); buildFill(); updateScore();
+if(window.AceCantoneseAudio) AceCantoneseAudio.wireLesson({playAllBtn:"#playAll",stopBtn:"#stopAudio"});
+document.getElementById("checkMatch").addEventListener("click",checkMatch);
+document.getElementById("finishBtn").addEventListener("click",finish);
+</script>
+<script src="../../assets/autosave.js"></script>
+</body>
+</html>
