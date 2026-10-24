@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reading (Oct. 24): Making Pictures Move: The Art and Science of Animation</title>
+<style>
+  body{font-family:"Segoe UI",Verdana,Arial,sans-serif;font-size:20px;line-height:1.65;margin:0;background:#f5f0eb;color:#2c2416}
+  .wrap{max-width:880px;margin:0 auto;padding:20px 18px 80px}
+  a.home{font-size:.9em;color:#bf360c}
+  h1{color:#e65100;font-size:2em;margin:10px 0}
+  h2{color:#ef6c00;margin-top:36px;border-bottom:3px solid #ffcc80;padding-bottom:4px}
+  .box{background:#fff;border-radius:16px;padding:18px 22px;margin:16px 0;box-shadow:0 3px 10px rgba(0,0,0,.07)}
+  .passage{font-family:Georgia,"Times New Roman",serif;font-size:1.1em;line-height:1.8}
+  .passage h3{text-align:center;font-family:"Segoe UI",Verdana,sans-serif;color:#e65100;font-size:1.4em;margin:4px 0 14px}
+  .passage p{text-indent:1.5em;margin:0 0 14px}
+  mark.v{background:#fff59d;padding:0 3px;border-radius:4px;font-weight:bold}
+  .tipbox{background:#fff8e1;border-left:8px solid #ffb300}
+  .q{border-left:8px solid #ffcc80}
+  .q.right{border-left-color:#43a047;background:#f1f8e9}
+  .q.wrong{border-left-color:#e53935;background:#fff5f5}
+  .tag{display:inline-block;font-size:.7em;background:#ef6c00;color:#fff;border-radius:8px;padding:1px 8px;margin-left:6px;vertical-align:middle}
+  .opt{display:block;width:100%;text-align:left;font-size:.95em;background:#fafafa;border:2px solid #e0e0e0;border-radius:10px;padding:8px 14px;margin:8px 0;cursor:pointer;font-family:inherit}
+  .opt:hover{border-color:#ffb74d;background:#fff}
+  .opt.sel-right{background:#c8e6c9;border-color:#43a047}
+  .opt.sel-wrong{background:#ffcdd2;border-color:#e53935}
+  .fb{margin-top:6px;font-weight:bold}
+  .fb.good{color:#2e7d32} .fb.bad{color:#c62828}
+  .explain{color:#e65100;font-weight:normal}
+  select{font-size:.95em;padding:6px 8px;border-radius:8px;border:2px solid #ffb74d;max-width:100%;font-family:inherit}
+  .vrow{display:flex;flex-wrap:wrap;align-items:center;gap:10px;padding:8px 6px;border-bottom:1px dashed #eee}
+  .vrow .w{font-weight:bold;min-width:140px}
+  .vrow.right{background:#f1f8e9} .vrow.wrong{background:#fff5f5}
+  .mark{font-size:1.2em;min-width:30px}
+  button.main{font-size:1em;padding:10px 20px;border:none;border-radius:10px;cursor:pointer;font-weight:bold;background:#ef6c00;color:#fff;margin-top:10px}
+  button.main:hover{background:#e65100}
+  button.sec{font-size:.95em;padding:8px 16px;border:none;border-radius:10px;cursor:pointer;font-weight:bold;background:#ffe082;color:#5d4037}
+  textarea{width:100%;box-sizing:border-box;font-size:1em;font-family:inherit;padding:10px;border:2px solid #ffb74d;border-radius:10px;min-height:120px}
+  #model{display:none;background:#fff3e0;border-radius:10px;padding:10px 14px;margin-top:10px}
+  #scoreBox{position:sticky;bottom:0;background:#e65100;color:#fff;border-radius:16px 16px 0 0;padding:12px 20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-top:30px}
+  #scoreBox button{font-size:.95em;padding:8px 16px;border:none;border-radius:10px;cursor:pointer;font-weight:bold;background:#ffca28;color:#3e2723}
+  #final{display:none;text-align:center;border:4px solid #43a047;font-size:1.1em}
+</style>
+</head>
+<body>
+<div class="wrap">
+<a class="home" href="../../index.html">&larr; Back to all lessons</a>
+<h1>📖 Reading Week 27: Making Pictures Move: The Art and Science of Animation</h1>
+
+<div class="box tipbox">
+  <strong>Before you read, Ace:</strong> Today's passage is an <em>informational</em> text about how cartoons are made, from paper flipbooks to computers. As you read, watch for <em>sequence</em> (the order things happened in history and in a studio), <em>cause and effect</em> (why our eyes see motion), <em>the author's purpose</em>, and places where you must <em>infer</em> (read between the lines).
+  <ul>
+    <li><strong>Preview:</strong> Read the title. Why would animation be called both an <em>art</em> and a <em>science</em>? Make a prediction before you start.</li>
+    <li><strong>Pause:</strong> After paragraph 2, stop and explain to yourself, in your own words, why a pile of still drawings can look like it's moving.</li>
+    <li><strong>Root detective:</strong> Useful word parts:
+      <span style="display:block;margin-top:6px"><strong>anim</strong> = life, breath (animation, animal) · <strong>vis/vid</strong> = see (vision, video) · <strong>seq/sequ</strong> = follow (sequence, sequel) · <strong>col-/con-</strong> = together (collaborate, connect) · <strong>labor</strong> = work (collaborate, laboratory) · <strong>nov</strong> = new (innovative, novel) · <strong>-ive</strong> = tending to (innovative, creative)</span></li>
+    <li><strong>Words in <mark class="v">yellow</mark></strong> are vocabulary words. Use the sentence around them (the <em>context</em>) to figure out what they mean.</li>
+  </ul>
+</div>
+
+<div class="box passage" id="passage">
+<h3>Making Pictures Move: The Art and Science of Animation</h3>
+<p>Grab a pad of sticky notes and a pencil. On the bottom note, draw a stick figure with its arms down. On the next note up, draw the same figure with its arms raised a little higher, and keep going until the arms are high in the air. Now flip the pad quickly with your thumb. The figure waves! Nothing on the paper actually moved, yet you saw motion. That small trick is the secret behind every cartoon ever made. Animation is the art of creating the <mark class="v">illusion</mark> of movement from pictures that are perfectly still.</p>
+<p>Why does it work? When pictures flash by faster than about ten or twelve per second, your brain stops seeing them as separate images. Instead, it fills in the gaps and connects them into one smooth action. For many years, people called this "persistence of vision" and believed images simply lingered in the eye. Today, scientists think the brain itself does most of the work, constantly guessing how things move from one moment to the next. Either way, the result is the same: show a <mark class="v">sequence</mark> of slightly different pictures fast enough, and they come to life. Movies usually show 24 pictures, called frames, every second.</p>
+<p>People were playing with this effect long before television. In the 1830s, inventors built spinning toys such as the zoetrope, a drum with slits in its sides and a strip of drawings inside. When you spun the drum and peeked through the slits, a horse galloped or an acrobat flipped. In the 1860s, the first flipbooks went on sale. By the early 1900s, artists were drawing short cartoons for movie theatres, and audiences were amazed to see drawings walk, dance, and tell jokes on a giant screen.</p>
+<p>Making a hand-drawn cartoon took enormous patience. A lead animator drew the most important poses, called keyframes, such as a character crouching before a jump and landing after it. Assistants then drew all the in-between pictures that connected those poses. Each finished drawing was traced onto a clear plastic sheet called a cel and painted by hand. Because the cels were see-through, they could be laid on top of one painted background, so the scenery did not have to be redrawn thousands of times. Hundreds of artists had to <mark class="v">collaborate</mark>, and the work was so <mark class="v">meticulous</mark> that a single feature film could take several years to finish.</p>
+<p>Good animators are not just careful copiers; they are actors with pencils. Over the years, they discovered tricks that make drawings feel alive. One <mark class="v">technique</mark> is called squash and stretch: a bouncing ball flattens when it hits the ground and stretches long as it falls fast, which makes it seem rubbery and full of energy. Animators also <mark class="v">exaggerate</mark> movements on purpose. A surprised character's eyes might pop out like saucers, and a running character's legs might spin into a blur. Real people don't move like that, but on screen, the bigger action looks more <mark class="v">convincing</mark>, not less.</p>
+<p>Not all animation is drawn. In stop-motion, artists build puppets out of clay, fabric, or wire, then move them a tiny bit, take a photo, move them again, and take another photo. Twenty seconds of film can take a whole day. Canada has a proud history here, too. At the National Film Board of Canada, an artist named Norman McLaren became famous for an <mark class="v">innovative</mark> idea: he skipped the camera altogether and scratched and painted his pictures directly onto strips of film. His experiments inspired animators around the world.</p>
+<p>Today, many cartoons are made on computers. Artists build characters as three-dimensional models with hidden digital skeletons, then pose them like puppets. The computer can calculate some of the in-between frames, but people still decide every important pose, expression, and joke. The tools keep changing, from paper and cels to clay and computers, but the basic idea has stayed the same for almost two hundred years: many still pictures, shown one after another, can make an audience laugh, cheer, and believe that drawings are alive.</p>
+<p style="text-indent:0;font-size:.8em;color:#546e7a;text-align:right">About 670 words</p>
+</div>
+
+<h2>Part 1: Comprehension</h2>
+<p>Click the best answer. You'll find out right away if you're correct. Only your <strong>first click</strong> counts toward your score, but you can keep trying to find the right answer.</p>
+<div id="mc"></div>
+
+<h2>Part 2: Think Deeper (not scored)</h2>
+<div class="box">
+  <p><strong>Ace's friend says, "Animation is easy now, because computers do all the work." In 3 to 5 sentences, explain whether you agree. Use at least two details from the passage, and explain one way that animators have always needed both art skills and careful planning.</strong></p>
+  <textarea id="openAns" placeholder="Write your answer here, Ace..."></textarea>
+  <p><button type="button" class="sec" id="showModel">Compare with a model answer</button></p>
+  <div id="model"><strong>Model answer:</strong> I disagree, because computers help with animation but they do not do all the work. The passage says the computer can calculate some in-between frames, but people still decide every important pose, expression, and joke. Animators also have to act out a character's feelings and use techniques like squash and stretch and exaggeration to make movements convincing. Even in the days of hand-drawn cels, animators had to plan keyframes carefully and work together as a huge team. Making a great cartoon has always needed both an artist's imagination and a planner's patience.<br><em>Did you take a side, use two passage details, and explain how art and planning work together? If so, excellent thinking!</em></div>
+</div>
+
+<h2>Part 3: Vocabulary</h2>
+<div class="box">
+  <h3 style="margin-top:0">A. Match each word to its meaning</h3>
+  <p>Choose the meaning that fits how the word is used in the passage.</p>
+  <div id="vmatch"></div>
+  <h3>B. Fill in the blank</h3>
+  <p>Choose the vocabulary word that best completes each sentence.</p>
+  <div id="vfill"></div>
+  <button type="button" class="main" id="checkVocab">Check my vocabulary</button>
+  <div class="fb" id="vocabFb"></div>
+</div>
+
+<div class="box" id="final"></div>
+<div id="scoreBox">
+  <span id="scoreText"></span>
+  <button type="button" id="finishBtn">I'm done! Show my final score</button>
+</div>
+</div>
+
+<script>
+var MC = [
+ {q:"Which sentence best states the <strong>main idea</strong> of the whole passage?",
+  o:["Movies usually show 24 frames every second.",
+     "Norman McLaren painted directly onto film.",
+     "Zoetropes were spinning drums with slits.",
+     "Animation uses many still pictures shown quickly to create the illusion of movement, and artists have found new tools and tricks to do it for almost 200 years."],
+  a:3, e:"A, B, and C are single details. D sums up the whole passage: still pictures shown fast create movement, and the tools have changed over time while the idea stayed the same."},
+ {q:"According to paragraph 2, what <strong>causes</strong> a fast series of still pictures to look like smooth motion?", tag:"Cause and effect",
+  o:["The paper bends as the pages flip.","The brain fills in the gaps and connects the pictures into one action.","The pictures are printed in special ink.","Each picture is shown for a whole second."],
+  a:1, e:"Paragraph 2: \"your brain stops seeing them as separate images. Instead, it fills in the gaps and connects them into one smooth action.\""},
+ {q:"Which of these happened <strong>first</strong>, according to the passage?", tag:"Sequence",
+  o:["Spinning toys like the zoetrope were built.","The first flipbooks went on sale.","Artists drew short cartoons for movie theatres.","Computers began calculating in-between frames."],
+  a:0, e:"The zoetrope came in the 1830s, flipbooks in the 1860s, theatre cartoons by the early 1900s, and computers much later."},
+ {q:"How did the idea of \"persistence of vision\" <strong>change</strong> over time?", tag:"Compare and contrast",
+  o:["People used to think the eye was not involved at all.","Scientists proved that pictures really do move.","People once believed images lingered in the eye; now scientists think the brain does most of the work.","Nobody has ever explained why animation works."],
+  a:2, e:"Paragraph 2 contrasts the old belief (images \"simply lingered in the eye\") with today's view (\"the brain itself does most of the work\")."},
+ {q:"Why were cels made of <strong>clear</strong> plastic?", tag:"Key detail",
+  o:["So they could be laid over one painted background, and the scenery did not have to be redrawn.","So they would not melt under the lights.","So the paint would dry faster.","So the drawings would look three-dimensional."],
+  a:0, e:"Paragraph 4: \"Because the cels were see-through, they could be laid on top of one painted background, so the scenery did not have to be redrawn thousands of times.\""},
+ {q:"What is the job of the <strong>keyframes</strong> in a hand-drawn cartoon?", tag:"Vocabulary in context",
+  o:["They are the painted backgrounds.","They show the most important poses, and the in-betweens connect them.","They are the last frames of the film.","They are the frames the computer adds by itself."],
+  a:1, e:"The lead animator draws the keyframes, \"the most important poses,\" and assistants draw \"the in-between pictures that connected those poses.\""},
+ {q:"The author says good animators are \"actors with pencils.\" What does this phrase suggest?", tag:"Figurative language",
+  o:["Animators perform in plays after work.","Animators must use their drawings to show how characters move, feel, and react.","Animators only draw actors from real movies.","Pencils are used as props in cartoons."],
+  a:1, e:"It's a metaphor. Like actors, animators must show emotions and actions, but they do it through drawings, using tricks like squash and stretch and exaggeration."},
+ {q:"A cartoon ball hits the floor and flattens like a pancake, then stretches tall as it springs up. Which technique is this, and what does it make the ball seem like?", tag:"Apply",
+  o:["Stop-motion; it makes the ball seem made of clay.","Keyframing; it makes the ball seem heavy.","Squash and stretch; it makes the ball seem rubbery and full of energy.","Cel painting; it makes the ball seem see-through."],
+  a:2, e:"Paragraph 5: in squash and stretch, a ball \"flattens when it hits the ground and stretches long,\" which \"makes it seem rubbery and full of energy.\""},
+ {q:"Why does the author include the detail \"Twenty seconds of film can take a whole day\" in paragraph 6?", tag:"Author's purpose",
+  o:["To show how slow and patient stop-motion work is.","To complain that stop-motion films are too short.","To explain how computers work.","To prove stop-motion is easier than drawing."],
+  a:0, e:"The detail helps the reader understand how much careful work goes into moving puppets one tiny step at a time."},
+ {q:"What can you <strong>infer</strong> from the last paragraph about the future of animation?", tag:"Inference",
+  o:["Computers will soon replace all human animators.","The tools will probably keep changing, but people will still use still pictures shown quickly to tell stories.","Animators will go back to using only zoetropes.","Cartoons will stop being made."],
+  a:1, e:"The author says \"the tools keep changing\" but \"the basic idea has stayed the same\" and that people still decide every pose, so tools change while human storytelling stays."}
+];
+
+var VOCAB = ["illusion","sequence","collaborate","meticulous","technique","exaggerate","convincing","innovative"];
+var DEFS = {
+ illusion:"something that tricks your eyes or mind into seeing what isn't really there",
+ sequence:"a set of things that come one after another in a certain order",
+ collaborate:"to work together with others to make or do something",
+ meticulous:"extremely careful about every small detail",
+ technique:"a special way or method of doing something that takes skill",
+ exaggerate:"to make something seem bigger, stronger, or more extreme than it really is",
+ convincing:"making people believe that something is true or real",
+ innovative:"using new ideas or methods that nobody has tried before"
+};
+var FILL = [
+ {s:"The magician's floating card was only an ____, because a thin thread was holding it up.", a:"illusion"},
+ {s:"Our class had to ____ on the mural, so everyone painted one section.", a:"collaborate"},
+ {s:"Please don't ____ the size of your fish, Ace. It was not as long as a canoe!", a:"exaggerate"},
+ {s:"She was so ____ that she checked every single answer on her test twice.", a:"meticulous"}
+];
+var FILL_OPTIONS = ["technique","illusion","convincing","collaborate","sequence","exaggerate","innovative","meticulous"];
+
+var PRAISE=["Nice work, Ace!","Correct! Sharp reading, Ace!","Yes! You followed the evidence!","Excellent thinking, animator Ace!","Right! Lights, camera, action! 🎬"];
+function pick(a){return a[Math.floor(Math.random()*a.length)];}
+function shuffled(arr,seed){var a=arr.slice(),s=seed;for(var i=a.length-1;i>0;i--){s=(s*9301+49297)%233280;var j=Math.floor(s/233280*(i+1));var t=a[i];a[i]=a[j];a[j]=t;}return a;}
+
+var mcState=MC.map(function(){return {answered:false,firstRight:false,done:false};});
+var vocabScore=0, vocabChecked=false;
+var VOCAB_TOTAL=VOCAB.length+FILL.length;
+
+function buildMC(){
+  var box=document.getElementById("mc");
+  MC.forEach(function(item,i){
+    var d=document.createElement("div"); d.className="box q"; d.id="mc"+i;
+    var html="<div><strong>"+(i+1)+".</strong> "+item.q+(item.tag?'<span class="tag">'+item.tag+'</span>':"")+"</div>";
+    item.o.forEach(function(opt,j){ html+='<button type="button" class="opt" data-i="'+i+'" data-j="'+j+'">'+String.fromCharCode(65+j)+". "+opt+"</button>"; });
+    html+='<div class="fb" id="mcfb'+i+'"></div>';
+    d.innerHTML=html; box.appendChild(d);
+  });
+  box.addEventListener("click",function(e){
+    var b=e.target.closest?e.target.closest(".opt"):e.target; if(!b||!b.classList.contains("opt"))return;
+    answerMC(+b.getAttribute("data-i"),+b.getAttribute("data-j"),b);
+  });
+}
+function answerMC(i,j,btn){
+  var st=mcState[i], item=MC[i], fb=document.getElementById("mcfb"+i), card=document.getElementById("mc"+i);
+  if(st.done) return;
+  var right=(j===item.a);
+  if(!st.answered){ st.answered=true; st.firstRight=right; }
+  if(right){
+    st.done=true; btn.classList.add("sel-right"); card.className="box q right";
+    fb.className="fb good"; fb.innerHTML="✅ "+pick(PRAISE)+' <span class="explain">'+item.e+"</span>";
+  } else {
+    btn.classList.add("sel-wrong"); card.className="box q wrong";
+    fb.className="fb bad"; fb.innerHTML="❌ Not quite, Ace. Look back at the passage and try another answer.";
+  }
+  updateScore();
+}
+function buildVocab(){
+  var m=document.getElementById("vmatch");
+  var defOrder=shuffled(VOCAB,44);
+  VOCAB.forEach(function(w,i){
+    var row=document.createElement("div"); row.className="vrow"; row.id="vm"+i;
+    var sel='<select id="vsel'+i+'" aria-label="Meaning of '+w+'"><option value="">- choose a meaning -</option>';
+    defOrder.forEach(function(k){ sel+='<option value="'+k+'">'+DEFS[k]+'</option>'; });
+    sel+="</select>";
+    row.innerHTML='<span class="mark" id="vmk'+i+'"></span><span class="w">'+w+'</span>'+sel;
+    m.appendChild(row);
+  });
+  var f=document.getElementById("vfill");
+  FILL.forEach(function(item,i){
+    var row=document.createElement("div"); row.className="vrow"; row.id="vf"+i;
+    var sel='<select id="fsel'+i+'" aria-label="Blank '+(i+1)+'"><option value="">- choose -</option>';
+    FILL_OPTIONS.forEach(function(w){ sel+='<option value="'+w+'">'+w+'</option>'; });
+    sel+="</select>";
+    var parts=item.s.split("____");
+    row.innerHTML='<span class="mark" id="vfk'+i+'"></span><span>'+(i+1)+'. '+parts[0]+sel+parts[1]+'</span>';
+    f.appendChild(row);
+  });
+}
+function checkVocab(){
+  var score=0, blank=0;
+  VOCAB.forEach(function(w,i){
+    var v=document.getElementById("vsel"+i).value, ok=(v===w);
+    if(!v) blank++;
+    if(ok) score++;
+    document.getElementById("vm"+i).className="vrow "+(ok?"right":"wrong");
+    document.getElementById("vmk"+i).textContent=ok?"✅":"❌";
+  });
+  FILL.forEach(function(item,i){
+    var v=document.getElementById("fsel"+i).value, ok=(v===item.a);
+    if(!v) blank++;
+    if(ok) score++;
+    document.getElementById("vf"+i).className="vrow "+(ok?"right":"wrong");
+    document.getElementById("vfk"+i).textContent=ok?"✅":"❌";
+  });
+  vocabScore=score; vocabChecked=true;
+  var fb=document.getElementById("vocabFb");
+  if(score===VOCAB_TOTAL){ fb.className="fb good"; fb.textContent="🌟 "+score+" / "+VOCAB_TOTAL+". Perfect! Your vocabulary is picture-perfect, Ace! 🎬"; }
+  else { fb.className="fb bad"; fb.textContent=score+" / "+VOCAB_TOTAL+" correct"+(blank?" ("+blank+" left blank)":"")+". Fix the ❌ ones and check again. Try finding the word in the passage for clues!"; }
+  updateScore();
+}
+function scores(){
+  var mc=0,answered=0; mcState.forEach(function(s){ if(s.firstRight) mc++; if(s.answered) answered++; });
+  return {mc:mc,answered:answered,vocab:vocabScore};
+}
+function updateScore(){
+  var s=scores();
+  document.getElementById("scoreText").textContent="Comprehension: "+s.mc+" / "+MC.length+" · Vocabulary: "+(vocabChecked?s.vocab:"-")+" / "+VOCAB_TOTAL;
+}
+function finish(){
+  if(!vocabChecked) checkVocab();
+  var s=scores(), total=MC.length+VOCAB_TOTAL, got=s.mc+s.vocab, pct=Math.round(100*got/total);
+  var msg = pct===100 ? "🏆 A perfect score! Outstanding reading, Ace!" :
+            pct>=80 ? "🌟 Fantastic work, Ace! You read like a Grade 7 student!" :
+            pct>=60 ? "💪 Solid effort, Ace! Reread the paragraphs for the questions you missed." :
+                      "🌱 This was a challenging passage. Read it once more, slowly, and try again. You've got this, Ace!";
+  var f=document.getElementById("final"); f.style.display="block";
+  f.innerHTML="<h2 style='border:none;margin-top:0'>Final Score: "+got+" / "+total+" ("+pct+"%)</h2>"+
+    "<p>Comprehension (first tries): "+s.mc+" / "+MC.length+(s.answered<MC.length?" (you skipped "+(MC.length-s.answered)+")":"")+"<br>Vocabulary: "+s.vocab+" / "+VOCAB_TOTAL+"</p><p>"+msg+"</p>"+
+    "<p style='font-size:.85em;color:#546e7a'>Finished on "+new Date().toLocaleString("en-CA")+"</p>";
+  f.scrollIntoView({behavior:"smooth"});
+}
+buildMC(); buildVocab(); updateScore();
+document.getElementById("checkVocab").addEventListener("click",checkVocab);
+document.getElementById("finishBtn").addEventListener("click",finish);
+document.getElementById("showModel").addEventListener("click",function(){document.getElementById("model").style.display="block";});
+</script>
+<script src="../../assets/autosave.js"></script>
+</body>
+</html>

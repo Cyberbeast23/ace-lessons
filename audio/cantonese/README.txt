@@ -6,7 +6,7 @@ TTS voice (Cantonese): zh-HK-HiuMaanNeural when available; 2026-10-12+ often gTT
 TTS voice (English in ALL-words.mp3): en-HK-YanNeural
 Rate: slowed (~-20%) for clear listening practice.
 
-Sources: Ace lessons 2026-09-29 (Greetings) + 2026-09-30 (Family Members) + 2026-10-01 (Food) + 2026-10-02 (School) + 2026-10-03 (Body) + 2026-10-04 (Colours) + 2026-10-05 (Sky & Space) + 2026-10-06 (Numbers 11-100) + 2026-10-07 (At the Doctor) + 2026-10-08 (Nature: Mountains & Volcanoes) + 2026-10-09 (Question Words & Secrets) + 2026-10-10 (Music) + 2026-10-11 (Trains & Travel) + 2026-10-12 (Brain & Sleep) + 2026-10-13 (Bees & Gardens) + 2026-10-14 (Electricity & Lights) + 2026-10-15 (Land, People & Respect) + 2026-10-16 (Ice, Snow & Giant Animals) + 2026-10-17 (Community, Rules & Voting) + 2026-10-18 (Weather & Storms) + 2026-10-19 (Germs, Vaccines & Staying Healthy) + 2026-10-20 (Ancient China: Paper, Books & Emperors) + 2026-10-21 (Flight: Airplanes, Pilots & Birds) + 2026-10-22 (Gold Mountain: Gold, Miners & Money) + 2026-10-23 (In the Kitchen: Cooking & Flavours).
+Sources: Ace lessons 2026-09-29 (Greetings) + 2026-09-30 (Family Members) + 2026-10-01 (Food) + 2026-10-02 (School) + 2026-10-03 (Body) + 2026-10-04 (Colours) + 2026-10-05 (Sky & Space) + 2026-10-06 (Numbers 11-100) + 2026-10-07 (At the Doctor) + 2026-10-08 (Nature: Mountains & Volcanoes) + 2026-10-09 (Question Words & Secrets) + 2026-10-10 (Music) + 2026-10-11 (Trains & Travel) + 2026-10-12 (Brain & Sleep) + 2026-10-13 (Bees & Gardens) + 2026-10-14 (Electricity & Lights) + 2026-10-15 (Land, People & Respect) + 2026-10-16 (Ice, Snow & Giant Animals) + 2026-10-17 (Community, Rules & Voting) + 2026-10-18 (Weather & Storms) + 2026-10-19 (Germs, Vaccines & Staying Healthy) + 2026-10-20 (Ancient China: Paper, Books & Emperors) + 2026-10-21 (Flight: Airplanes, Pilots & Birds) + 2026-10-22 (Gold Mountain: Gold, Miners & Money) + 2026-10-23 (In the Kitchen: Cooking & Flavours) + 2026-10-24 (Cartoons, Drawing & Movies).
 Numbers 1-10 are already known and not included here.
 
 How to practise:
@@ -1025,6 +1025,46 @@ Individual files
   Chinese:  好味
   Jyutping: hou2 mei6
   English:  tasty / delicious
+
+201-kaa1-tung1-cartoon.mp3
+  Chinese:  卡通
+  Jyutping: kaa1 tung1
+  English:  cartoon
+
+202-dung6-waa2-animation.mp3
+  Chinese:  動畫
+  Jyutping: dung6 waa2
+  English:  animation / animated film
+
+203-waak6-waa2-draw.mp3
+  Chinese:  畫畫
+  Jyutping: waak6 waa2
+  English:  to draw / to paint (a picture)
+
+204-gung1-zai2-character.mp3
+  Chinese:  公仔
+  Jyutping: gung1 zai2
+  English:  cartoon character / doll / figure
+
+205-din6-jing2-movie.mp3
+  Chinese:  電影
+  Jyutping: din6 jing2
+  English:  movie / film
+
+206-tai2-watch.mp3
+  Chinese:  睇
+  Jyutping: tai2
+  English:  to watch / to look at
+
+207-siu3-laugh.mp3
+  Chinese:  笑
+  Jyutping: siu3
+  English:  to laugh / to smile
+
+208-maan6-slow.mp3
+  Chinese:  慢
+  Jyutping: maan6
+  English:  slow
 
 
 Combined file

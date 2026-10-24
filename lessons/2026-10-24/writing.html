@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Writing (Oct. 24): Cartoon Script (Write Your Own One-Minute Cartoon) + Grammar Clinic</title>
+<style>
+  body{font-family:"Segoe UI",Verdana,Arial,sans-serif;font-size:20px;line-height:1.6;margin:0;background:#fff8f0;color:#2c2416}
+  .wrap{max-width:880px;margin:0 auto;padding:20px 18px 80px}
+  a.home{font-size:.9em;color:#bf360c}
+  h1{color:#e65100;font-size:2em;margin:10px 0}
+  h2{color:#ef6c00;margin-top:36px;border-bottom:3px solid #ffcc80;padding-bottom:4px}
+  h3{color:#ef6c00}
+  .box{background:#fff;border-radius:16px;padding:18px 22px;margin:16px 0;box-shadow:0 3px 10px rgba(0,0,0,.07)}
+  .tipbox{background:#fff8e1;border-left:8px solid #ffb300}
+  .senses{display:grid;gap:8px;margin:10px 0;grid-template-columns:repeat(auto-fit,minmax(140px,1fr))}
+  .senses .side{border-radius:14px;padding:10px 16px;background:#fff3e0}
+  .ts{background:#ffcc80;border-radius:5px;padding:1px 3px}
+  .ev{background:#c8e6c9;border-radius:5px;padding:1px 3px}
+  .ex{background:#ffe0b2;border-radius:5px;padding:1px 3px}
+  .cs{background:#e1bee7;border-radius:5px;padding:1px 3px}
+  .legend span{display:inline-block;margin:4px 8px 4px 0;font-size:.85em}
+  .model{font-family:Georgia,"Times New Roman",serif;font-size:1.05em;line-height:1.9}
+  .row{padding:10px 6px;border-bottom:1px dashed #ddd}
+  .row.right{background:#f1f8e9} .row.wrong{background:#fff5f5}
+  select{font-size:.9em;padding:5px 8px;border-radius:8px;border:2px solid #ffb74d;font-family:inherit}
+  .q{border-left:8px solid #b0bec5}
+  .q.right{border-left-color:#43a047;background:#f1f8e9}
+  .q.wrong{border-left-color:#e53935;background:#fff5f5}
+  .opt{display:block;width:100%;text-align:left;font-size:.95em;background:#fafafa;border:2px solid #e0e0e0;border-radius:10px;padding:8px 14px;margin:8px 0;cursor:pointer;font-family:inherit}
+  .opt:hover{border-color:#ffb74d;background:#fff}
+  .opt.sel-right{background:#c8e6c9;border-color:#43a047}
+  .opt.sel-wrong{background:#ffcdd2;border-color:#e53935}
+  .fb{margin-top:6px;font-weight:bold}
+  .fb.good{color:#2e7d32} .fb.bad{color:#c62828}
+  .explain{font-weight:normal;color:#e65100}
+  .bad-sent{font-family:Consolas,"Courier New",monospace;background:#ffebee;padding:6px 10px;border-radius:8px;display:inline-block;margin:6px 0}
+  input.fix{width:100%;box-sizing:border-box;font-size:1em;padding:8px 12px;border:2px solid #ffb74d;border-radius:10px;font-family:inherit}
+  button{font-size:.95em;padding:8px 16px;border:none;border-radius:10px;cursor:pointer;font-weight:bold;font-family:inherit}
+  .go{background:#ef6c00;color:#fff} .go:hover{background:#e65100}
+  .hint{background:#ffe082;color:#5d4037}
+  .blue{background:#1e88e5;color:#fff}
+  .purple{background:#8e24aa;color:#fff}
+  .grey{background:#cfd8dc;color:#263238}
+  .btnrow{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px}
+  textarea{width:100%;box-sizing:border-box;min-height:300px;font-size:1.05em;line-height:1.7;font-family:Georgia,"Times New Roman",serif;padding:14px;border:3px solid #ffb74d;border-radius:12px}
+  textarea:focus{outline:none;border-color:#ef6c00}
+  .counter{display:flex;flex-wrap:wrap;gap:20px;align-items:center;margin:8px 0;font-weight:bold}
+  .meter{flex:1;min-width:200px;height:18px;background:#e0e0e0;border-radius:9px;overflow:hidden}
+  .meter div{height:100%;width:0;background:#ffb300;transition:width .2s}
+  .checklist label{display:block;padding:6px 4px;cursor:pointer}
+  .checklist input{transform:scale(1.4);margin-right:10px}
+  .prompts label{display:block;background:#fff3e0;border-radius:10px;padding:10px 14px;margin:8px 0;cursor:pointer}
+  .prompts input{transform:scale(1.3);margin-right:8px}
+  #scoreBox{position:sticky;bottom:0;background:#e65100;color:#fff;border-radius:16px 16px 0 0;padding:12px 20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-top:30px}
+  .w5{display:grid;gap:8px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));margin:10px 0}
+  .w5 label{display:block;font-weight:bold;color:#e65100}
+  .w5 input{width:100%;box-sizing:border-box;font-size:.95em;padding:6px 10px;border:2px solid #ffb74d;border-radius:8px;font-family:inherit}
+  #printArea{display:none}
+  @media print{
+    body{background:#fff;font-size:14pt}
+    .wrap,#scoreBox{display:none !important}
+    #printArea{display:block;font-family:Georgia,serif;line-height:1.8}
+    #printArea h1{font-size:18pt;margin:0 0 6pt}
+    #printArea .meta{font-size:11pt;color:#444}
+    #printArea .text{white-space:pre-wrap;border-top:1px solid #999;padding-top:10pt;margin-top:10pt}
+    #printArea .lines{margin-top:24pt;border-top:1px solid #999;padding-top:6pt;font-size:11pt}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+<a class="home" href="../../index.html">&larr; Back to all lessons</a>
+<h1>✍️ Writing Week 27: Cartoon Script: Write Your Own One-Minute Cartoon 🎬✏️</h1>
+<p>Yesterday you wrote like a scientist. Today, Ace, you'll write like a <strong>cartoon screenwriter</strong>. Before a single drawing is made, every cartoon starts as a <strong>script</strong>: a special kind of writing that tells the animators, the voice actors, and the sound team exactly what happens, who says what, and what the audience will hear. A script is a story, but it is written in a <em>format</em> that people can read like a plan, so a whole team can turn your words into moving pictures.</p>
+
+<h2>Part 1: The Lesson</h2>
+<div class="box">
+  <h3 style="margin-top:0">A cartoon script has six building blocks 🧩</h3>
+  <p>Professional scripts look a little different from stories, because each part has its own job.</p>
+  <div class="senses">
+    <div class="side"><strong>1. Title + logline:</strong> a one-sentence summary of the whole story: <em>who</em> wants <em>what</em>, and <em>what gets in the way</em></div>
+    <div class="side"><strong>2. Character list:</strong> each character's name with a few words about their look and personality</div>
+    <div class="side"><strong>3. Scene heading:</strong> where and when the scene happens, in capitals: <em>EXT. CITY PARK - DAY</em> (EXT. = outside, INT. = inside)</div>
+    <div class="side"><strong>4. Action lines:</strong> what we <em>see</em> on screen, in the <em>present tense</em>, short and vivid</div>
+    <div class="side"><strong>5. Dialogue:</strong> the character's name in capitals, then exactly what they say (and sometimes how, in brackets)</div>
+    <div class="side"><strong>6. Sound effects + ending:</strong> sounds in capitals (CRASH!) and a strong ending: a punchline, a twist, or a problem solved</div>
+  </div>
+  <h3>Five screenwriter's moves</h3>
+  <ul>
+    <li><strong>Show, don't tell:</strong> instead of "Pip is sad," write what the animators can draw: "Pip's ears droop. A single tear rolls down his whiskers."</li>
+    <li><strong>Use the present tense</strong> in action lines: "The cat <em>leaps</em>... the pie <em>splats</em>..." The audience is watching it happen <em>now</em>.</li>
+    <li><strong>Think in pictures:</strong> name the camera shot when it matters: CLOSE-UP on a face for feelings, WIDE SHOT to show a big place.</li>
+    <li><strong>Exaggerate:</strong> cartoons love squash and stretch, so write big, bouncy actions and funny surprises.</li>
+    <li><strong>Every line of dialogue should do a job:</strong> show who the character is, move the story forward, or get a laugh. Keep it short; cartoons move fast!</li>
+  </ul>
+  <p><strong>Grown-up words:</strong> the main character is the <strong>protagonist</strong>, whoever or whatever blocks them is the <strong>antagonist</strong>, and the moment of greatest tension is the <strong>climax</strong>. The drawings that plan each shot are called a <strong>storyboard</strong>.</p>
+</div>
+
+<div class="box">
+  <h3 style="margin-top:0">Model Cartoon Script (short version)</h3>
+  <p class="legend"><span class="ts">Title, logline + characters</span><span class="ev">Scene heading + action</span><span class="ex">Dialogue + sound effects</span><span class="cs">Ending</span></p>
+  <p class="model">
+    <span class="ts"><strong>THE LAST PANCAKE</strong><br>Logline: A hungry squirrel named Pip must outsmart a sneaky seagull to win the last pancake at a park picnic.<br>Characters: PIP, a tiny squirrel with a huge, fluffy tail and bigger dreams. GULLY, a seagull who thinks every snack belongs to him.</span><br>
+    <span class="ev">EXT. CITY PARK - DAY<br>WIDE SHOT: a picnic blanket. One golden pancake sits on a plate. Pip peeks out from behind a tree, his eyes growing as big as dinner plates. He tiptoes forward, then FREEZES. A shadow sweeps across the grass.</span><br>
+    <span class="ex">SOUND: FLAP! FLAP! SCREECH!<br>GULLY: (landing with a thud) Mine, mine, MINE!<br>PIP: (folding his arms) Not today, bird brain.</span><br>
+    <span class="cs">Pip yanks the blanket like a magician. The plate flies up. Gully grabs at the air and misses. CLOSE-UP: the pancake lands, SPLAT, right on Pip's head like a hat. Pip grins and takes a bite. FADE OUT.</span>
+  </p>
+  <p><strong>Notice:</strong> the logline tells us who wants what and what's in the way; the scene heading is in capitals; the action lines are in the present tense and describe things an artist can draw ("eyes growing as big as dinner plates"); the dialogue shows personality in just a few words; the sound effects are in capitals; and the ending is a funny visual surprise.</p>
+</div>
+
+<h2>Part 2: Name That Script Part</h2>
+<div class="box">
+  <p>Each line comes from a student's cartoon script about a robot who is afraid of the dark. Choose which <strong>part of the script</strong> it belongs in.</p>
+  <div id="labelRows"></div>
+  <div class="btnrow"><button type="button" class="go" id="checkLabels">Check my answers</button></div>
+  <div class="fb" id="labelFb"></div>
+</div>
+
+<h2>Part 3: Grammar Clinic 🎬</h2>
+<div class="box tipbox">A careful screenwriter checks every line before the voice actors read it! <strong>Section A:</strong> pick the correct sentence. <strong>Section B:</strong> type the sentence again with <em>all</em> mistakes fixed. We use <strong>Canadian spelling</strong> (colour, favourite, theatre, humour). Today, watch <strong>punctuating dialogue with quotation marks</strong>, <strong>its / it's</strong>, <strong>whose / who's</strong>, <strong>apostrophes for plural owners</strong> (the animators' desks), <strong>good / well</strong>, <strong>capital letters in titles</strong>, and <strong>lose / loose</strong>.</div>
+<h3>Section A: Pick the correct sentence</h3>
+<div id="gmc"></div>
+<h3>Section B: Fix the sentence</h3>
+<p>Retype the whole sentence correctly, with capital letters and punctuation. Each one has <strong>at least two</strong> mistakes.</p>
+<div id="gfix"></div>
+
+<h2>Part 4: Your Turn to Write</h2>
+<div class="box">
+  <h3 style="margin-top:0">Step 1: Choose your cartoon</h3>
+  <p>Your cartoon should be about <strong>one minute</strong> long on screen. That's short, so pick <strong>one problem</strong>, <strong>two or three characters</strong>, and <strong>one or two places</strong>.</p>
+  <div class="prompts" id="prompts">
+    <label><input type="radio" name="prompt" value="Cartoon A: The robot who was afraid of the dark" checked> 🤖 <strong>Cartoon A:</strong> A small robot is afraid of the dark, but the power goes out on the night it has to rescue its friend. How does it find its courage (or its flashlight)?</label>
+    <label><input type="radio" name="prompt" value="Cartoon B: The drawing that came to life"> ✏️ <strong>Cartoon B:</strong> A kid's doodle climbs off the page and starts causing trouble around the house. Can the kid catch it before Mom gets home?</label>
+    <label><input type="radio" name="prompt" value="Cartoon C: My own idea"> 💡 <strong>Cartoon C:</strong> Your own idea! Use any characters you invent (animals, aliens, a talking pencil...). It just needs a clear problem and a strong ending.</label>
+  </div>
+  <p><strong>Plan your script:</strong> jot a few words for each box. (These notes save with your writing.)</p>
+  <div class="w5" id="w5">
+    <div><label for="w5who">Title + logline: who wants what, and what's in the way?</label><input id="w5who" type="text" autocomplete="off"></div>
+    <div><label for="w5place">Characters: names, looks, personalities</label><input id="w5place" type="text" autocomplete="off"></div>
+    <div><label for="w5facts">Scene heading(s): INT. or EXT., place, DAY or NIGHT</label><input id="w5facts" type="text" autocomplete="off"></div>
+    <div><label for="w5senses">Big funny or exciting actions to animate (squash and stretch!)</label><input id="w5senses" type="text" autocomplete="off"></div>
+    <div><label for="w5feel">Best lines of dialogue + sound effects</label><input id="w5feel" type="text" autocomplete="off"></div>
+    <div><label for="w5closing">Ending: punchline, twist, or problem solved</label><input id="w5closing" type="text" autocomplete="off"></div>
+  </div>
+
+  <h3>Step 2: Write your script</h3>
+  <p><strong>Goal:</strong> <strong>250 to 350 words</strong> with all <strong>six building blocks</strong>. Write a <strong>title</strong> and a <strong>one-sentence logline</strong>, a <strong>character list</strong>, at least <strong>one scene heading</strong> in capitals, <strong>action lines in the present tense</strong>, at least <strong>six lines of dialogue</strong> with the speaker's name in capitals, at least <strong>three sound effects</strong>, at least <strong>one camera shot</strong> (CLOSE-UP or WIDE SHOT), and an ending that ties up the problem. <strong>Show, don't tell!</strong></p>
+  <p><button type="button" class="hint" id="templateBtn">📋 Add the script layout for me</button></p>
+  <label for="essay"><strong>Write here, Ace:</strong></label>
+  <textarea id="essay" placeholder="TITLE: ..."></textarea>
+  <div class="counter">
+    <span id="wc">0 words</span>
+    <span id="sc">0 sentences</span>
+    <div class="meter" aria-hidden="true"><div id="meterBar"></div></div>
+  </div>
+  <div class="fb" id="wcMsg">Aim for 250 to 350 words.</div>
+  <p style="font-size:.8em;color:#607d8b" id="saveNote">Your writing is saved automatically in this browser as you type.</p>
+
+  <h3>Self-check before you finish ✅</h3>
+  <div class="checklist" id="checklist">
+    <label><input type="checkbox"> My script has a <strong>title</strong> and a <strong>logline</strong> that says who wants what and what's in the way.</label>
+    <label><input type="checkbox"> I have a <strong>character list</strong> with looks and personalities.</label>
+    <label><input type="checkbox"> I used at least <strong>one scene heading</strong> in capitals (INT. or EXT., place, DAY or NIGHT).</label>
+    <label><input type="checkbox"> My <strong>action lines</strong> are in the <strong>present tense</strong> and <strong>show</strong> feelings with things an artist can draw.</label>
+    <label><input type="checkbox"> I wrote at least <strong>six lines of dialogue</strong> with the speaker's name in capitals, and at least <strong>three sound effects</strong>.</label>
+    <label><input type="checkbox"> I used at least <strong>one camera shot</strong> and my <strong>ending</strong> solves the problem with a punchline, twist, or surprise.</label>
+    <label><input type="checkbox"> I checked quotation marks, its / it's, whose / who's, plural apostrophes, good / well, capitals in titles, lose / loose, and <strong>Canadian spelling</strong> (colour, favourite, theatre).</label>
+  </div>
+  <div class="btnrow">
+    <button type="button" class="blue" id="downloadBtn">⬇️ Download my writing (for Dad)</button>
+    <button type="button" class="purple" id="printBtn">🖨️ Print my writing</button>
+    <button type="button" class="grey" id="clearBtn">Start over</button>
+  </div>
+  <div class="fb" id="doneMsg"></div>
+</div>
+
+<div id="scoreBox"><span id="scoreText"></span><span>Keep going, screenwriter Ace! 🎬</span></div>
+</div>
+
+<div id="printArea"></div>
+
+<script>
+var NAME="Ace";
+var PRAISE=["Nice work, Ace!","Correct! Great editing eye!","Yes! Ace fixed it!","Excellent, screenwriter Ace!","That is a wrap! 🎬"];
+function pick(a){return a[Math.floor(Math.random()*a.length)];}
+
+var LABELS=["Logline", "Character list", "Scene heading", "Action line", "Dialogue", "Sound effect"];
+var LABEL_ITEMS=[
+ {s:"BOLT: (whispering) Is anybody there? I can't see my own wheels!", a:"Dialogue"},
+ {s:"INT. DARK BASEMENT - NIGHT", a:"Scene heading"},
+ {s:"A timid robot named Bolt must cross a pitch-black basement to rescue his best friend, but he is terrified of the dark.", a:"Logline"},
+ {s:"CLICK! CLICK! BZZZT!", a:"Sound effect"},
+ {s:"BOLT, a shiny robot the size of a toaster, with one wobbly antenna and a very nervous beep.", a:"Character list"},
+ {s:"Bolt rolls forward one centimetre at a time. His antenna trembles. Suddenly, his eyes flash on like headlights.", a:"Action line"}
+];
+var labelScore=0, labelChecked=false;
+function buildLabels(){
+  var box=document.getElementById("labelRows");
+  LABEL_ITEMS.forEach(function(it,i){
+    var d=document.createElement("div"); d.className="row"; d.id="lr"+i;
+    var sel='<select id="ls'+i+'" aria-label="Job of sentence '+(i+1)+'"><option value="">- choose -</option>';
+    LABELS.forEach(function(l){sel+='<option>'+l+'</option>';});
+    sel+='</select>';
+    d.innerHTML='<strong>'+(i+1)+'.</strong> '+it.s+'<br>'+sel+' <span id="lm'+i+'"></span>';
+    box.appendChild(d);
+  });
+}
+function checkLabels(){
+  var sc=0;
+  LABEL_ITEMS.forEach(function(it,i){
+    var ok=document.getElementById("ls"+i).value===it.a; if(ok)sc++;
+    document.getElementById("lr"+i).className="row "+(ok?"right":"wrong");
+    document.getElementById("lm"+i).textContent=ok?"✅":"❌";
+  });
+  labelScore=sc; labelChecked=true;
+  var fb=document.getElementById("labelFb");
+  if(sc===LABEL_ITEMS.length){fb.className="fb good";fb.textContent="🌟 "+sc+" / "+LABEL_ITEMS.length+". "+pick(PRAISE)+" You know exactly how a cartoon script is built!";}
+  else{fb.className="fb bad";fb.textContent=sc+" / "+LABEL_ITEMS.length+". Hint: a one-sentence summary of the story = logline; a name plus looks and personality = character list; INT. or EXT. + place + time = scene heading; what we see happening = action line; a name followed by what they say = dialogue; noises in capitals = sound effect. Fix the ❌ ones and check again.";}
+  updateScore();
+}
+
+var GMC=[
+ {q:"Which sentence punctuates the <strong>dialogue</strong> correctly?",
+  o:["\"Watch out\", yelled Pip, \"The seagull is back!\"", "\"Watch out!\" yelled Pip. \"The seagull is back!\"", "\"Watch out!\" yelled Pip \"the seagull is back!\"", "Watch out! \"yelled Pip.\" The seagull is back!"],
+  a:1,e:"Put the speaker's exact words inside quotation marks, and keep the end punctuation (! ? , .) <strong>inside</strong> the closing quotation mark. A new sentence inside the quote starts with a capital letter."},
+ {q:"Which sentence uses <strong>its / it's</strong> correctly?",
+  o:["It's tail swishes when its happy.", "Its tail swishes when its happy.", "Its tail swishes when it's happy.", "It's tail swishes when it's happy."],
+  a:2,e:"<em>It's</em> always means <strong>it is</strong> (or it has): when <em>it's</em> happy. <em>Its</em> (no apostrophe) shows belonging: <em>its</em> tail."},
+ {q:"Which sentence uses <strong>whose / who's</strong> correctly?",
+  o:["Who's going to voice the robot whose antenna is broken?", "Whose going to voice the robot who's antenna is broken?", "Who's going to voice the robot who's antenna is broken?", "Whose going to voice the robot whose antenna is broken?"],
+  a:0,e:"<em>Who's</em> = <strong>who is</strong> (who is going to voice...). <em>Whose</em> shows belonging (the robot <em>whose</em> antenna is broken)."},
+ {q:"Which sentence uses an <strong>apostrophe for plural owners</strong> correctly?",
+  o:["All the animator's desks were covered in sketches.", "All the animators desks' were covered in sketches.", "All the animators's desks were covered in sketches.", "All the animators' desks were covered in sketches."],
+  a:3,e:"When a <strong>plural</strong> noun already ends in <em>s</em> (animators), add just an apostrophe after the s to show they own something: the <em>animators'</em> desks."},
+ {q:"Which sentence uses <strong>good / well</strong> correctly?",
+  o:["The voice actor read her lines good, and the scene looked well.", "The voice actor read her lines well, and the scene looked good.", "The voice actor read her lines well, and the scene looked well.", "The voice actor read her lines good, and the scene looked good."],
+  a:1,e:"<em>Well</em> describes <strong>how</strong> someone does an action (read <em>well</em>). <em>Good</em> describes a <strong>thing</strong> (a <em>good</em> scene; the scene looked <em>good</em>)."},
+ {q:"Which sentence writes the cartoon's <strong>title</strong> with the correct capital letters?",
+  o:["We watched The Robot Who Was Afraid of the Dark at the theatre.", "We watched the robot who was afraid of the dark at the theatre.", "We watched The Robot Who Was Afraid Of The Dark at the Theatre.", "We watched The robot who was afraid of the dark at the theatre."],
+  a:0,e:"In a title, capitalize the first word and all the important words. Short little words like <em>of</em>, <em>the</em>, <em>a</em>, and <em>and</em> stay lowercase unless they come first. <em>Theatre</em> here is a common noun, so it stays lowercase."},
+ {q:"Which sentence uses <strong>lose / loose</strong> correctly?",
+  o:["If the puppet's arm gets lose, we might loose a whole day of filming.", "If the puppet's arm gets loose, we might loose a whole day of filming.", "If the puppet's arm gets lose, we might lose a whole day of filming.", "If the puppet's arm gets loose, we might lose a whole day of filming."],
+  a:3,e:"<em>Loose</em> (two o's) means <strong>not tight</strong>. <em>Lose</em> (one o) means to <strong>not have something anymore</strong> or to not win."}
+];
+var gmcState=GMC.map(function(){return{answered:false,firstRight:false,done:false};});
+function buildGMC(){
+  var box=document.getElementById("gmc");
+  GMC.forEach(function(it,i){
+    var d=document.createElement("div"); d.className="box q"; d.id="g"+i;
+    var h='<div><strong>'+(i+1)+'.</strong> '+it.q+'</div>';
+    it.o.forEach(function(o,j){h+='<button type="button" class="opt" data-i="'+i+'" data-j="'+j+'">'+String.fromCharCode(65+j)+'. '+o+'</button>';});
+    h+='<div class="fb" id="gfb'+i+'"></div>';
+    d.innerHTML=h; box.appendChild(d);
+  });
+  box.addEventListener("click",function(e){
+    var b=e.target.closest?e.target.closest(".opt"):e.target; if(!b||!b.classList.contains("opt"))return;
+    var i=+b.getAttribute("data-i"), j=+b.getAttribute("data-j"), st=gmcState[i], it=GMC[i];
+    if(st.done)return;
+    var ok=j===it.a; if(!st.answered){st.answered=true;st.firstRight=ok;}
+    var fb=document.getElementById("gfb"+i);
+    if(ok){st.done=true;b.classList.add("sel-right");document.getElementById("g"+i).className="box q right";fb.className="fb good";fb.innerHTML="✅ "+pick(PRAISE)+' <span class="explain">'+it.e+'</span>';}
+    else{b.classList.add("sel-wrong");document.getElementById("g"+i).className="box q wrong";fb.className="fb bad";fb.textContent="❌ Not quite, Ace. Look closely and try again.";}
+    updateScore();
+  });
+}
+
+var GFIX=[
+ {bad:"\"where is my pencil\" asked ace",
+  ok:["\"Where is my pencil?\" asked Ace."],
+  hint:"Capitalize the first word of the quote and the name <em>Ace</em>. The speaker is asking a question, so put a question mark <strong>inside</strong> the closing quotation mark. End the whole sentence with a period."},
+ {bad:"its the robots favourite song and its playing to loud.",
+  ok:["It's the robot's favourite song, and it's playing too loud.", "It's the robot's favourite song and it's playing too loud.", "It's the robot's favourite song. It's playing too loud."],
+  hint:"Capitalize the first word. <em>It's</em> = it is (twice!). The song belongs to the robot, so use <em>robot's</em>. <em>Too</em> (two o's) means <em>more than enough</em>. Keep the Canadian spelling <em>favourite</em>."},
+ {bad:"me and maya drawed twenty pictures for are flipbook",
+  ok:["Maya and I drew twenty pictures for our flipbook.", "Maya and I drew 20 pictures for our flipbook."],
+  hint:"Name the other person first and use <em>I</em> when it's the subject: <em>Maya and I</em>. The past tense of <em>draw</em> is <em>drew</em>. <em>Our</em> shows belonging (<em>are</em> is a verb). End with a period."},
+ {bad:"the clay dog wagged it's tail, the audience laughed and clapped.",
+  ok:["The clay dog wagged its tail, and the audience laughed and clapped.", "The clay dog wagged its tail. The audience laughed and clapped.", "The clay dog wagged its tail; the audience laughed and clapped.", "The clay dog wagged its tail, so the audience laughed and clapped."],
+  hint:"Capitalize the first word. The tail belongs to the dog, so use <em>its</em> (no apostrophe). Two complete sentences can't be joined with just a comma (a comma splice): add <em>and</em> or <em>so</em>, or use a period."}
+];
+
+var gfixState=GFIX.map(function(){return{tries:0,correct:false,firstRight:false};});
+function norm(s){return s.replace(/[\u2018\u2019\u02BC]/g,"'").replace(/[\u201C\u201D]/g,'"').replace(/\s+/g," ").trim();}
+function checkFixAnswer(i,val){var v=norm(val);return GFIX[i].ok.some(function(a){return norm(a)===v;});}
+function buildGFix(){
+  var box=document.getElementById("gfix");
+  GFIX.forEach(function(it,i){
+    var d=document.createElement("div"); d.className="box q"; d.id="f"+i;
+    d.innerHTML='<div><strong>'+(i+1)+'.</strong> Fix: <span class="bad-sent">'+it.bad+'</span></div>'+
+     '<input class="fix" type="text" id="fi'+i+'" autocomplete="off" spellcheck="false" aria-label="Corrected sentence '+(i+1)+'">'+
+     '<div class="btnrow"><button type="button" class="go" data-act="check" data-i="'+i+'">Check</button><button type="button" class="hint" data-act="hint" data-i="'+i+'">Hint 💡</button><button type="button" class="grey" data-act="show" data-i="'+i+'" style="display:none">Show answer</button></div>'+
+     '<div class="fb" id="ffb'+i+'"></div>';
+    box.appendChild(d);
+  });
+  box.addEventListener("click",function(e){
+    var b=e.target; if(b.tagName!=="BUTTON")return;
+    var i=+b.getAttribute("data-i"), act=b.getAttribute("data-act"), fb=document.getElementById("ffb"+i);
+    if(act==="hint"){fb.className="fb";fb.style.color="#5d4037";fb.textContent="💡 "+GFIX[i].hint;return;}
+    fb.style.color="";
+    if(act==="show"){fb.className="fb";fb.innerHTML='Answer: <em>'+GFIX[i].ok[0]+'</em>'+(GFIX[i].ok.length>1?' (other correct versions are accepted too)':'');return;}
+    fixCheck(i);
+  });
+  box.addEventListener("keydown",function(e){if(e.key==="Enter"&&e.target.classList.contains("fix"))fixCheck(+e.target.id.slice(2));});
+}
+function fixCheck(i){
+  var val=document.getElementById("fi"+i).value, fb=document.getElementById("ffb"+i), st=gfixState[i];
+  fb.style.color="";
+  if(!val.trim()){fb.className="fb bad";fb.textContent="Type the corrected sentence first, Ace!";return;}
+  st.tries++;
+  if(checkFixAnswer(i,val)){ if(st.tries===1)st.firstRight=true; st.correct=true; document.getElementById("f"+i).className="box q right"; fb.className="fb good"; fb.textContent="✅ "+pick(PRAISE); }
+  else { st.correct=false; document.getElementById("f"+i).className="box q wrong"; fb.className="fb bad"; fb.textContent="❌ Not quite. Check every capital letter, apostrophe, comma, and spelling. Try again!"; if(st.tries>=2)document.querySelector('#f'+i+' [data-act=show]').style.display="inline-block"; }
+  updateScore();
+}
+
+function updateScore(){
+  var g=0; gmcState.forEach(function(s){if(s.firstRight)g++;});
+  var f=0; gfixState.forEach(function(s){if(s.correct)f++;});
+  var total=LABEL_ITEMS.length+GMC.length+GFIX.length, got=labelScore+g+f;
+  document.getElementById("scoreText").textContent="Score: "+got+" / "+total+"  (labels "+(labelChecked?labelScore:"-")+"/"+LABEL_ITEMS.length+" · grammar A "+g+"/"+GMC.length+" · grammar B "+f+"/"+GFIX.length+")";
+}
+
+var W5=["who","place","facts","senses","feel","closing"];
+function w5Save(){try{localStorage.setItem(KEY+"-5w",JSON.stringify(W5.map(function(k){return document.getElementById("w5"+k).value;})));}catch(e){}}
+function w5Restore(){try{var d=JSON.parse(localStorage.getItem(KEY+"-5w")||"null");if(d)d.forEach(function(x,i){document.getElementById("w5"+W5[i]).value=x;});}catch(e){}}
+function w5Summary(){return W5.map(function(k){return k.charAt(0).toUpperCase()+k.slice(1)+": "+document.getElementById("w5"+k).value;}).join("\n");}
+function addTemplate(){
+  var t=document.getElementById("essay");
+  var tpl="TITLE: \n\nLogline: \n\nCharacters:\n- \n- \n\nEXT./INT. PLACE - DAY/NIGHT\n\n(Action) \n\nNAME: (dialogue) \nNAME: \n\nSOUND: \n\n(Action) \n\nENDING: \n\nFADE OUT.\n\nWritten by "+NAME;
+  if(t.value.trim()&&!confirm("Add the script layout below what you've already written?"))return;
+  t.value=(t.value.trim()?t.value.replace(/\s+$/,"")+"\n\n":"")+tpl; updateCount(); t.focus();
+}
+var KEY="ace-writing-2026-10-24";
+function countWords(t){var m=t.trim().match(/[A-Za-zÀ-ÿ0-9]+(?:['’\-][A-Za-zÀ-ÿ0-9]+)*/g);return m?m.length:0;}
+function countSentences(t){var m=t.match(/[^.!?]*[A-Za-z0-9][^.!?]*[.!?]+/g);return m?m.length:0;}
+function currentPrompt(){var r=document.querySelector('input[name=prompt]:checked');return r?r.value:"";}
+function updateCount(){
+  var t=document.getElementById("essay").value, w=countWords(t), s=countSentences(t);
+  document.getElementById("wc").textContent=w+(w===1?" word":" words");
+  document.getElementById("sc").textContent=s+(s===1?" sentence":" sentences");
+  var bar=document.getElementById("meterBar"); bar.style.width=Math.min(100,w/350*100)+"%";
+  var msg=document.getElementById("wcMsg");
+  if(w<250){bar.style.background="#ffb300";msg.className="fb";msg.textContent=w===0?"Aim for 250 to 350 words.":"Keep going, Ace! "+(250-w)+" more words to reach the goal.";}
+  else if(w<=350){bar.style.background="#43a047";msg.className="fb good";msg.textContent="🎯 You're in the target zone! Nice work, Ace!";}
+  else{bar.style.background="#1e88e5";msg.className="fb";msg.textContent="Wow, that's a lot of writing! Strong cartoon scripts stay focused, because cartoons move fast! Could any sentences be cut?";}
+  try{localStorage.setItem(KEY,JSON.stringify({text:t,prompt:currentPrompt(),checks:checkStates()}));}catch(e){document.getElementById("saveNote").textContent="(This browser can't auto-save here, so use the Download button before closing!)";}
+}
+function checkStates(){return Array.prototype.map.call(document.querySelectorAll("#checklist input"),function(c){return c.checked;});}
+function checklistText(){
+  return Array.prototype.map.call(document.querySelectorAll("#checklist label"),function(l){return (l.querySelector("input").checked?"[x] ":"[ ] ")+l.textContent.trim();}).join("\n");
+}
+function buildReport(){
+  var t=document.getElementById("essay").value;
+  return "Writing Week 27: "+NAME+"\nDate: "+new Date().toLocaleString("en-CA")+"\nPrompt: "+currentPrompt()+
+    "\nWords: "+countWords(t)+"   Sentences: "+countSentences(t)+"\nPlanning notes:\n"+w5Summary()+
+    "\n\n----- "+NAME+"'s writing -----\n\n"+t+"\n\n----- Self-check -----\n"+checklistText()+
+    "\n\n----- Parent feedback -----\n\n\n";
+}
+function download(){
+  var t=document.getElementById("essay").value;
+  if(!t.trim()){document.getElementById("doneMsg").className="fb bad";document.getElementById("doneMsg").textContent="Write something first, Ace!";return;}
+  var blob=new Blob([buildReport().replace(/\n/g,"\r\n")],{type:"text/plain;charset=utf-8"});
+  var a=document.createElement("a"); a.href=URL.createObjectURL(blob); a.download=NAME+"-writing-2026-10-24"+".txt";
+  document.body.appendChild(a); a.click();
+  setTimeout(function(){URL.revokeObjectURL(a.href);a.remove();},1000);
+  var dm=document.getElementById("doneMsg"); dm.className="fb good"; dm.textContent="📄 Saved! Look in your Downloads folder and show Dad. Great job finishing, Ace!";
+}
+function esc(s){return s.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");}
+function printIt(){
+  var t=document.getElementById("essay").value;
+  if(!t.trim()){document.getElementById("doneMsg").className="fb bad";document.getElementById("doneMsg").textContent="Write something first, Ace!";return;}
+  document.getElementById("printArea").innerHTML="<h1>Writing Week 27: "+NAME+"</h1><div class='meta'>"+esc(new Date().toLocaleString("en-CA"))+"<br><strong>Prompt:</strong> "+esc(currentPrompt())+"<br>Words: "+countWords(t)+" · Sentences: "+countSentences(t)+"</div><div class='text'>"+esc(t)+"</div><div class='lines'><strong>Self-check:</strong><br>"+esc(checklistText()).replace(/\n/g,"<br>")+"</div><div class='lines'><strong>Parent feedback:</strong><br><br><br><br></div>";
+  window.print();
+}
+function restore(){
+  try{var d=JSON.parse(localStorage.getItem(KEY)||"null"); if(!d)return;
+    document.getElementById("essay").value=d.text||"";
+    Array.prototype.forEach.call(document.querySelectorAll("input[name=prompt]"),function(r){r.checked=(r.value===d.prompt);});
+    if(!document.querySelector("input[name=prompt]:checked"))document.querySelector("input[name=prompt]").checked=true;
+    var cs=document.querySelectorAll("#checklist input"); (d.checks||[]).forEach(function(v,i){if(cs[i])cs[i].checked=v;});
+  }catch(e){}
+}
+buildLabels(); buildGMC(); buildGFix(); restore(); w5Restore(); updateCount(); updateScore();
+W5.forEach(function(k){document.getElementById("w5"+k).addEventListener("input",w5Save);});
+document.getElementById("templateBtn").addEventListener("click",addTemplate);
+document.getElementById("checkLabels").addEventListener("click",checkLabels);
+document.getElementById("essay").addEventListener("input",updateCount);
+document.getElementById("checklist").addEventListener("change",function(){updateCount(); if(checkStates().every(Boolean)){var dm=document.getElementById("doneMsg");dm.className="fb good";dm.textContent="✅ All boxes checked! Now download or print it for Dad. Awesome work, Ace!";}});
+document.getElementById("prompts").addEventListener("change",updateCount);
+document.getElementById("downloadBtn").addEventListener("click",download);
+document.getElementById("printBtn").addEventListener("click",printIt);
+document.getElementById("clearBtn").addEventListener("click",function(){ if(confirm("Erase your writing and start over?")){document.getElementById("essay").value="";Array.prototype.forEach.call(document.querySelectorAll("#checklist input"),function(c){c.checked=false;});document.getElementById("doneMsg").textContent="";updateCount();} });
+</script>
+<script src="../../assets/autosave.js"></script>
+</body>
+</html>
