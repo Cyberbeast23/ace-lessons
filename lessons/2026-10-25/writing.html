@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Writing (Oct. 25): Field Guide Entry (Describe a Cambrian Creature Like a Scientist) + Grammar Clinic</title>
+<style>
+  body{font-family:"Segoe UI",Verdana,Arial,sans-serif;font-size:20px;line-height:1.6;margin:0;background:#fff8f0;color:#2c2416}
+  .wrap{max-width:880px;margin:0 auto;padding:20px 18px 80px}
+  a.home{font-size:.9em;color:#bf360c}
+  h1{color:#e65100;font-size:2em;margin:10px 0}
+  h2{color:#ef6c00;margin-top:36px;border-bottom:3px solid #ffcc80;padding-bottom:4px}
+  h3{color:#ef6c00}
+  .box{background:#fff;border-radius:16px;padding:18px 22px;margin:16px 0;box-shadow:0 3px 10px rgba(0,0,0,.07)}
+  .tipbox{background:#fff8e1;border-left:8px solid #ffb300}
+  .senses{display:grid;gap:8px;margin:10px 0;grid-template-columns:repeat(auto-fit,minmax(140px,1fr))}
+  .senses .side{border-radius:14px;padding:10px 16px;background:#fff3e0}
+  .ts{background:#ffcc80;border-radius:5px;padding:1px 3px}
+  .ev{background:#c8e6c9;border-radius:5px;padding:1px 3px}
+  .ex{background:#ffe0b2;border-radius:5px;padding:1px 3px}
+  .cs{background:#e1bee7;border-radius:5px;padding:1px 3px}
+  .legend span{display:inline-block;margin:4px 8px 4px 0;font-size:.85em}
+  .model{font-family:Georgia,"Times New Roman",serif;font-size:1.05em;line-height:1.9}
+  .row{padding:10px 6px;border-bottom:1px dashed #ddd}
+  .row.right{background:#f1f8e9} .row.wrong{background:#fff5f5}
+  select{font-size:.9em;padding:5px 8px;border-radius:8px;border:2px solid #ffb74d;font-family:inherit}
+  .q{border-left:8px solid #b0bec5}
+  .q.right{border-left-color:#43a047;background:#f1f8e9}
+  .q.wrong{border-left-color:#e53935;background:#fff5f5}
+  .opt{display:block;width:100%;text-align:left;font-size:.95em;background:#fafafa;border:2px solid #e0e0e0;border-radius:10px;padding:8px 14px;margin:8px 0;cursor:pointer;font-family:inherit}
+  .opt:hover{border-color:#ffb74d;background:#fff}
+  .opt.sel-right{background:#c8e6c9;border-color:#43a047}
+  .opt.sel-wrong{background:#ffcdd2;border-color:#e53935}
+  .fb{margin-top:6px;font-weight:bold}
+  .fb.good{color:#2e7d32} .fb.bad{color:#c62828}
+  .explain{font-weight:normal;color:#e65100}
+  .bad-sent{font-family:Consolas,"Courier New",monospace;background:#ffebee;padding:6px 10px;border-radius:8px;display:inline-block;margin:6px 0}
+  input.fix{width:100%;box-sizing:border-box;font-size:1em;padding:8px 12px;border:2px solid #ffb74d;border-radius:10px;font-family:inherit}
+  button{font-size:.95em;padding:8px 16px;border:none;border-radius:10px;cursor:pointer;font-weight:bold;font-family:inherit}
+  .go{background:#ef6c00;color:#fff} .go:hover{background:#e65100}
+  .hint{background:#ffe082;color:#5d4037}
+  .blue{background:#1e88e5;color:#fff}
+  .purple{background:#8e24aa;color:#fff}
+  .grey{background:#cfd8dc;color:#263238}
+  .btnrow{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px}
+  textarea{width:100%;box-sizing:border-box;min-height:300px;font-size:1.05em;line-height:1.7;font-family:Georgia,"Times New Roman",serif;padding:14px;border:3px solid #ffb74d;border-radius:12px}
+  textarea:focus{outline:none;border-color:#ef6c00}
+  .counter{display:flex;flex-wrap:wrap;gap:20px;align-items:center;margin:8px 0;font-weight:bold}
+  .meter{flex:1;min-width:200px;height:18px;background:#e0e0e0;border-radius:9px;overflow:hidden}
+  .meter div{height:100%;width:0;background:#ffb300;transition:width .2s}
+  .checklist label{display:block;padding:6px 4px;cursor:pointer}
+  .checklist input{transform:scale(1.4);margin-right:10px}
+  .prompts label{display:block;background:#fff3e0;border-radius:10px;padding:10px 14px;margin:8px 0;cursor:pointer}
+  .prompts input{transform:scale(1.3);margin-right:8px}
+  #scoreBox{position:sticky;bottom:0;background:#e65100;color:#fff;border-radius:16px 16px 0 0;padding:12px 20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-top:30px}
+  .w5{display:grid;gap:8px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));margin:10px 0}
+  .w5 label{display:block;font-weight:bold;color:#e65100}
+  .w5 input{width:100%;box-sizing:border-box;font-size:.95em;padding:6px 10px;border:2px solid #ffb74d;border-radius:8px;font-family:inherit}
+  #printArea{display:none}
+  @media print{
+    body{background:#fff;font-size:14pt}
+    .wrap,#scoreBox{display:none !important}
+    #printArea{display:block;font-family:Georgia,serif;line-height:1.8}
+    #printArea h1{font-size:18pt;margin:0 0 6pt}
+    #printArea .meta{font-size:11pt;color:#444}
+    #printArea .text{white-space:pre-wrap;border-top:1px solid #999;padding-top:10pt;margin-top:10pt}
+    #printArea .lines{margin-top:24pt;border-top:1px solid #999;padding-top:6pt;font-size:11pt}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+<a class="home" href="../../index.html">&larr; Back to all lessons</a>
+<h1>✍️ Writing Week 28: Field Guide Entry: Describe a Cambrian Creature Like a Scientist 🦐🔬</h1>
+<p>Yesterday you wrote like a cartoon screenwriter. Today, Ace, you'll write like a <strong>palaeontologist</strong>. Scientists who discover a new animal must describe it so clearly that someone on the other side of the world could picture it without ever seeing the fossil. You'll write a <strong>field guide entry</strong>: a short, organized, factual description with <strong>headings</strong>, <strong>precise details and measurements</strong>, and a <strong>caption</strong> for a picture. You can write about a real Burgess Shale animal from today's reading, or invent your own Cambrian creature, as long as you describe it like a scientist.</p>
+
+<h2>Part 1: The Lesson</h2>
+<div class="box">
+  <h3 style="margin-top:0">A field guide entry has six building blocks 🧩</h3>
+  <p>Field guides are organized with <strong>headings</strong> so a reader can find information fast. Each section has its own job.</p>
+  <div class="senses">
+    <div class="side"><strong>1. Name + meaning:</strong> the scientific name, what it means, and a one-sentence summary of what kind of animal it is</div>
+    <div class="side"><strong>2. Description:</strong> its body plan from front to back: shape, parts, how many of each, and <em>exact measurements</em> in metric units</div>
+    <div class="side"><strong>3. Habitat:</strong> where and when it lived (sea floor, open water, mud; how many million years ago)</div>
+    <div class="side"><strong>4. Diet + behaviour:</strong> what it ate and how it moved, hunted, or hid</div>
+    <div class="side"><strong>5. Adaptations + evidence:</strong> a body part that helped it survive, and the <em>fossil evidence</em> that tells us so</div>
+    <div class="side"><strong>6. Caption:</strong> one or two sentences under a picture that tell the reader exactly what to notice</div>
+  </div>
+  <h3>Five scientist's moves</h3>
+  <ul>
+    <li><strong>Be precise, not vague:</strong> instead of "it was kind of big," write "it grew to about 50 cm long." Numbers and units make writing scientific.</li>
+    <li><strong>Use comparisons the reader knows:</strong> "about the size of a paper clip," "shaped like a canoe."</li>
+    <li><strong>Describe in a logical order:</strong> front to back, or top to bottom, so the reader can build the picture step by step.</li>
+    <li><strong>Separate facts from inferences:</strong> "Its fossil shows spines" is a fact. "The spines probably protected it" is an inference, so use words like <em>probably</em>, <em>likely</em>, or <em>scientists think</em>.</li>
+    <li><strong>Use the right words:</strong> <em>segment</em>, <em>appendage</em>, <em>carapace</em>, <em>predator</em>, <em>prey</em>. Explain a hard word the first time you use it.</li>
+  </ul>
+  <p><strong>Grown-up words:</strong> a <strong>species</strong> is one kind of living thing; its two-part Latin name, like <em>Opabinia regalis</em>, is written in <em>italics</em> with only the first word capitalized. The animals with jointed legs and a hard outer covering are <strong>arthropods</strong>.</p>
+</div>
+
+<div class="box">
+  <h3 style="margin-top:0">Model Field Guide Entry (short version)</h3>
+  <p class="legend"><span class="ts">Name + meaning</span><span class="ev">Description + habitat</span><span class="ex">Diet, adaptations + evidence</span><span class="cs">Caption</span></p>
+  <p class="model">
+    <span class="ts"><strong>OPABINIA</strong> (<em>Opabinia regalis</em>): named after Opabin Pass in the Rocky Mountains. A small sea animal that may be the strangest creature in the Burgess Shale.</span><br>
+    <span class="ev"><strong>Description:</strong> Opabinia grew to about 7 cm long, roughly the length of your finger. At the front of its head were <em>five</em> eyes on short stalks. Below them hung a long, flexible nose, called a proboscis, that ended in a spiny claw. Its soft body had 15 segments, each with a flap on both sides and gills on top. Its tail was shaped like a fan. <strong>Habitat:</strong> the muddy floor of a warm sea about 508 million years ago.</span><br>
+    <span class="ex"><strong>Diet + adaptations:</strong> Scientists think Opabinia used its claw to grab small prey from the mud and pass it back to its mouth. Its five eyes probably helped it spot movement in every direction. The side flaps likely let it swim by waving them in a ripple. <strong>Evidence:</strong> flattened fossils show the eyes, claw, and flaps clearly.</span><br>
+    <span class="cs"><strong>Caption:</strong> Opabinia, seen from above. Look for the five eyes and the claw-tipped proboscis at the front.</span>
+  </p>
+  <p><strong>Notice:</strong> the entry uses headings; the measurements are metric and compared to something familiar ("the length of your finger"); the description goes front to back; hard words are explained (proboscis); and inferences are signalled with <em>scientists think</em>, <em>probably</em>, and <em>likely</em>.</p>
+</div>
+
+<h2>Part 2: Name That Field Guide Part</h2>
+<div class="box">
+  <p>Each line comes from a student's field guide entry about <em>Anomalocaris</em>, the giant hunter of the Cambrian sea. Choose which <strong>part of the entry</strong> it belongs in.</p>
+  <div id="labelRows"></div>
+  <div class="btnrow"><button type="button" class="go" id="checkLabels">Check my answers</button></div>
+  <div class="fb" id="labelFb"></div>
+</div>
+
+<h2>Part 3: Grammar Clinic 🔬</h2>
+<div class="box tipbox">A careful scientist checks every sentence before it is published! <strong>Section A:</strong> pick the correct sentence. <strong>Section B:</strong> type the sentence again with <em>all</em> mistakes fixed. We use <strong>Canadian spelling</strong> (colour, centre, metre, favourite). Today, watch <strong>passed / past</strong>, <strong>accept / except</strong>, <strong>between / among</strong>, <strong>lie / lay</strong> (lying vs. laying), <strong>hyphens in number-and-unit adjectives</strong> (a 15-mm fossil, a 508-million-year-old rock), <strong>advice / advise</strong>, and <strong>who / that</strong> (people who, things that).</div>
+<h3>Section A: Pick the correct sentence</h3>
+<div id="gmc"></div>
+<h3>Section B: Fix the sentence</h3>
+<p>Retype the whole sentence correctly, with capital letters and punctuation. Each one has <strong>at least two</strong> mistakes.</p>
+<div id="gfix"></div>
+
+<h2>Part 4: Your Turn to Write</h2>
+<div class="box">
+  <h3 style="margin-top:0">Step 1: Choose your creature</h3>
+  <p>Pick <strong>one</strong> animal and describe it so well that a reader could draw it without seeing a picture.</p>
+  <div class="prompts" id="prompts">
+    <label><input type="radio" name="prompt" value="Creature A: Anomalocaris, the giant hunter" checked> 🦐 <strong>Creature A:</strong> <em>Anomalocaris</em>, the giant hunter with two grabbing arms, a round mouth, and big eyes on stalks (use details from today's reading).</label>
+    <label><input type="radio" name="prompt" value="Creature B: Hallucigenia, the upside-down puzzle"> 🐛 <strong>Creature B:</strong> <em>Hallucigenia</em>, the spiky "worm" that scientists first drew upside down. Include how scientists figured out which way was up.</label>
+    <label><input type="radio" name="prompt" value="Creature C: My own invented Cambrian creature"> 💡 <strong>Creature C:</strong> Invent your own Cambrian sea creature! Give it a scientific-sounding name, a believable body, and evidence from its (imaginary) fossil.</label>
+  </div>
+  <p><strong>Plan your entry:</strong> jot a few words for each box. (These notes save with your writing.)</p>
+  <div class="w5" id="w5">
+    <div><label for="w5who">Name + meaning + one-sentence summary</label><input id="w5who" type="text" autocomplete="off"></div>
+    <div><label for="w5place">Description, front to back (with measurements in mm or cm)</label><input id="w5place" type="text" autocomplete="off"></div>
+    <div><label for="w5facts">Habitat: where and when it lived</label><input id="w5facts" type="text" autocomplete="off"></div>
+    <div><label for="w5senses">Diet + behaviour: what it ate, how it moved</label><input id="w5senses" type="text" autocomplete="off"></div>
+    <div><label for="w5feel">Adaptation + fossil evidence (fact vs. inference)</label><input id="w5feel" type="text" autocomplete="off"></div>
+    <div><label for="w5closing">Caption: what should the reader notice in the picture?</label><input id="w5closing" type="text" autocomplete="off"></div>
+  </div>
+
+  <h3>Step 2: Write your field guide entry</h3>
+  <p><strong>Goal:</strong> <strong>250 to 350 words</strong> with all <strong>six building blocks</strong> under <strong>headings</strong>. Include at least <strong>three measurements</strong> with metric units, at least <strong>two comparisons</strong> to familiar objects, a description in <strong>logical order</strong> (front to back), at least <strong>two inferences</strong> signalled with words like <em>probably</em>, <em>likely</em>, or <em>scientists think</em>, at least <strong>one hard science word explained</strong>, and a <strong>caption</strong>. Bonus: draw your creature on paper and label its parts!</p>
+  <p><button type="button" class="hint" id="templateBtn">📋 Add the headings for me</button></p>
+  <label for="essay"><strong>Write here, Ace:</strong></label>
+  <textarea id="essay" placeholder="NAME: ..."></textarea>
+  <div class="counter">
+    <span id="wc">0 words</span>
+    <span id="sc">0 sentences</span>
+    <div class="meter" aria-hidden="true"><div id="meterBar"></div></div>
+  </div>
+  <div class="fb" id="wcMsg">Aim for 250 to 350 words.</div>
+  <p style="font-size:.8em;color:#607d8b" id="saveNote">Your writing is saved automatically in this browser as you type.</p>
+
+  <h3>Self-check before you finish ✅</h3>
+  <div class="checklist" id="checklist">
+    <label><input type="checkbox"> My entry has a <strong>name</strong> (scientific name in italics, if I can), its <strong>meaning</strong>, and a one-sentence summary.</label>
+    <label><input type="checkbox"> My <strong>description</strong> goes in a <strong>logical order</strong> (front to back) and uses at least <strong>three metric measurements</strong>.</label>
+    <label><input type="checkbox"> I used at least <strong>two comparisons</strong> to things my reader knows.</label>
+    <label><input type="checkbox"> I included <strong>habitat</strong> and <strong>diet + behaviour</strong> sections under headings.</label>
+    <label><input type="checkbox"> I separated <strong>facts</strong> (what the fossil shows) from <strong>inferences</strong> (probably, likely, scientists think).</label>
+    <label><input type="checkbox"> I explained at least <strong>one hard science word</strong> and wrote a <strong>caption</strong>.</label>
+    <label><input type="checkbox"> I checked passed / past, accept / except, between / among, lie / lay, hyphens (a 15-mm fossil), advice / advise, who / that, and <strong>Canadian spelling</strong> (centre, metre, colour).</label>
+  </div>
+  <div class="btnrow">
+    <button type="button" class="blue" id="downloadBtn">⬇️ Download my writing (for Dad)</button>
+    <button type="button" class="purple" id="printBtn">🖨️ Print my writing</button>
+    <button type="button" class="grey" id="clearBtn">Start over</button>
+  </div>
+  <div class="fb" id="doneMsg"></div>
+</div>
+
+<div id="scoreBox"><span id="scoreText"></span><span>Keep going, scientist Ace! 🔬</span></div>
+</div>
+
+<div id="printArea"></div>
+
+<script>
+var NAME="Ace";
+var PRAISE=["Nice work, Ace!","Correct! Great editing eye!","Yes! Ace fixed it!","Excellent, palaeontologist Ace!","Fossil-tastic! 🦐"];
+function pick(a){return a[Math.floor(Math.random()*a.length)];}
+
+var LABELS=["Name + meaning", "Description", "Habitat", "Diet + behaviour", "Adaptation + evidence", "Caption"];
+var LABEL_ITEMS=[
+ {s:"Scientists think it grabbed trilobites and worms with its spiny front arms and pushed them into its round mouth.", a:"Diet + behaviour"},
+ {s:"Anomalocaris: the name means \"unusual shrimp,\" because one of its arms was first mistaken for a shrimp's body.", a:"Name + meaning"},
+ {s:"It swam in the open water above the sea floor, about 508 million years ago, in what is now British Columbia.", a:"Habitat"},
+ {s:"Anomalocaris seen from the side. Notice the two curved arms in front of the head.", a:"Caption"},
+ {s:"It grew to about 50 cm long. At the front were two curved, spiny arms; behind them were two large eyes on stalks and a body with flaps along each side.", a:"Description"},
+ {s:"Its big eyes were made of thousands of tiny lenses, which probably helped it spot prey. Fossil eyes found in Australia show these lenses.", a:"Adaptation + evidence"}
+];
+var labelScore=0, labelChecked=false;
+function buildLabels(){
+  var box=document.getElementById("labelRows");
+  LABEL_ITEMS.forEach(function(it,i){
+    var d=document.createElement("div"); d.className="row"; d.id="lr"+i;
+    var sel='<select id="ls'+i+'" aria-label="Job of sentence '+(i+1)+'"><option value="">- choose -</option>';
+    LABELS.forEach(function(l){sel+='<option>'+l+'</option>';});
+    sel+='</select>';
+    d.innerHTML='<strong>'+(i+1)+'.</strong> '+it.s+'<br>'+sel+' <span id="lm'+i+'"></span>';
+    box.appendChild(d);
+  });
+}
+function checkLabels(){
+  var sc=0;
+  LABEL_ITEMS.forEach(function(it,i){
+    var ok=document.getElementById("ls"+i).value===it.a; if(ok)sc++;
+    document.getElementById("lr"+i).className="row "+(ok?"right":"wrong");
+    document.getElementById("lm"+i).textContent=ok?"✅":"❌";
+  });
+  labelScore=sc; labelChecked=true;
+  var fb=document.getElementById("labelFb");
+  if(sc===LABEL_ITEMS.length){fb.className="fb good";fb.textContent="🌟 "+sc+" / "+LABEL_ITEMS.length+". "+pick(PRAISE)+" You know exactly how a field guide entry is built!";}
+  else{fb.className="fb bad";fb.textContent=sc+" / "+LABEL_ITEMS.length+". Hint: what it is called and why = name + meaning; its body parts and size = description; where and when it lived = habitat; what it ate and how it moved = diet + behaviour; a helpful body part plus proof from fossils = adaptation + evidence; a sentence telling you what to look at in a picture = caption. Fix the ❌ ones and check again.";}
+  updateScore();
+}
+
+var GMC=[
+ {q:"Which sentence uses <strong>passed / past</strong> correctly?",
+  o:["Millions of years past before the mud passed into hard shale.", "Millions of years passed before the mud turned into hard shale, far in the past.", "Millions of years past before the mud turned into hard shale, far in the passed.", "Millions of years passed before the mud turned into hard shale, far in the passed."],
+  a:1,e:"<em>Passed</em> is a <strong>verb</strong> (time passed, she passed the ball). <em>Past</em> is a <strong>time</strong> or a direction (in the past, we walked past the lake)."},
+ {q:"Which sentence uses <strong>accept / except</strong> correctly?",
+  o:["Everyone except Ace accepted the guide's invitation.", "Everyone accept Ace excepted the guide's invitation.", "Everyone except Ace excepted the guide's invitation.", "Everyone accept Ace accepted the guide's invitation."],
+  a:0,e:"<em>Accept</em> means to <strong>receive or agree to</strong>. <em>Except</em> means <strong>but not</strong> or leaving out (everyone <em>except</em> Ace)."},
+ {q:"Which sentence uses <strong>between / among</strong> correctly?",
+  o:["The trilobite was hidden between hundreds of shells.", "The trilobite was hidden among hundreds of shells, among two big rocks.", "The trilobite was hidden between hundreds of shells, among two big rocks.", "The trilobite was hidden among hundreds of shells, between two big rocks."],
+  a:3,e:"Use <em>between</em> for <strong>two</strong> things (between two rocks) and <em>among</em> for a <strong>group of three or more</strong> (among hundreds of shells)."},
+ {q:"Which sentence uses <strong>lie / lay</strong> correctly?",
+  o:["The fossil was laying on the table, so I lied it in the drawer.", "The fossil was lying on the table, so I laid it in the drawer.", "The fossil was laying on the table, so I laid it in the drawer.", "The fossil was lying on the table, so I layed it in the drawer."],
+  a:1,e:"<em>Lie</em> (lying) means to <strong>rest</strong>: the fossil was <em>lying</em> there. <em>Lay</em> (laid) means to <strong>put something down</strong>: I <em>laid</em> it in the drawer. (<em>Layed</em> isn't a word!)"},
+ {q:"Which sentence uses <strong>hyphens</strong> correctly?",
+  o:["We studied a 508 million year old rock with a 15 mm fossil.", "We studied a 508-million-year-old rock with a 15-mm fossil.", "We studied a 508-million-year old rock with a 15-mm-fossil.", "The rock we studied is 508-million-years-old."],
+  a:1,e:"When a number + unit comes <strong>before a noun</strong> and works as one adjective, join it with hyphens: a <em>508-million-year-old</em> rock, a <em>15-mm</em> fossil. After the noun, no hyphens: the rock is <em>508 million years old</em>."},
+ {q:"Which sentence uses <strong>advice / advise</strong> correctly?",
+  o:["The guide gave us good advise, and I advice you to listen.", "The guide gave us good advice, and I advice you to listen.", "The guide gave us good advice, and I advise you to listen.", "The guide gave us good advise, and I advise you to listen."],
+  a:2,e:"<em>Advice</em> (with a <strong>c</strong>, rhymes with <em>ice</em>) is a <strong>noun</strong>, a thing you give. <em>Advise</em> (with an <strong>s</strong>, sounds like <em>z</em>) is a <strong>verb</strong>, something you do."},
+ {q:"Which sentence uses <strong>who / that</strong> correctly?",
+  o:["The scientist that found the fossil studied an animal who had five eyes.", "The scientist who found the fossil studied an animal who had five eyes.", "The scientist who found the fossil studied an animal that had five eyes.", "The scientist which found the fossil studied an animal that had five eyes."],
+  a:2,e:"Use <em>who</em> for <strong>people</strong> (the scientist <em>who</em> found it) and <em>that</em> or <em>which</em> for <strong>animals and things</strong> (an animal <em>that</em> had five eyes)."}
+];
+var gmcState=GMC.map(function(){return{answered:false,firstRight:false,done:false};});
+function buildGMC(){
+  var box=document.getElementById("gmc");
+  GMC.forEach(function(it,i){
+    var d=document.createElement("div"); d.className="box q"; d.id="g"+i;
+    var h='<div><strong>'+(i+1)+'.</strong> '+it.q+'</div>';
+    it.o.forEach(function(o,j){h+='<button type="button" class="opt" data-i="'+i+'" data-j="'+j+'">'+String.fromCharCode(65+j)+'. '+o+'</button>';});
+    h+='<div class="fb" id="gfb'+i+'"></div>';
+    d.innerHTML=h; box.appendChild(d);
+  });
+  box.addEventListener("click",function(e){
+    var b=e.target.closest?e.target.closest(".opt"):e.target; if(!b||!b.classList.contains("opt"))return;
+    var i=+b.getAttribute("data-i"), j=+b.getAttribute("data-j"), st=gmcState[i], it=GMC[i];
+    if(st.done)return;
+    var ok=j===it.a; if(!st.answered){st.answered=true;st.firstRight=ok;}
+    var fb=document.getElementById("gfb"+i);
+    if(ok){st.done=true;b.classList.add("sel-right");document.getElementById("g"+i).className="box q right";fb.className="fb good";fb.innerHTML="✅ "+pick(PRAISE)+' <span class="explain">'+it.e+'</span>';}
+    else{b.classList.add("sel-wrong");document.getElementById("g"+i).className="box q wrong";fb.className="fb bad";fb.textContent="❌ Not quite, Ace. Look closely and try again.";}
+    updateScore();
+  });
+}
+
+var GFIX=[
+ {bad:"walcott found the fossils in 1909 he returned almost every summer",
+  ok:["Walcott found the fossils in 1909, and he returned almost every summer.", "Walcott found the fossils in 1909. He returned almost every summer.", "Walcott found the fossils in 1909; he returned almost every summer.", "Walcott found the fossils in 1909, and returned almost every summer."],
+  hint:"Capitalize the name <em>Walcott</em>. This is a run-on: two complete sentences are squashed together. Add <em>, and</em> after 1909, or make two sentences. End with a period."},
+ {bad:"everyone accept me has seen a 508 million year old fossil",
+  ok:["Everyone except me has seen a 508-million-year-old fossil."],
+  hint:"Capitalize the first word. <em>Except</em> means <em>but not</em>. The age comes before the noun <em>fossil</em>, so it needs hyphens: <em>508-million-year-old</em>. End with a period."},
+ {bad:"the trilobite was laying on the rock between all the other shells",
+  ok:["The trilobite was lying on the rock among all the other shells."],
+  hint:"Capitalize the first word. The trilobite is <em>resting</em>, so use <em>lying</em>. <em>All the other shells</em> is a big group, so use <em>among</em>. End with a period."},
+ {bad:"we past the museum and the guide that met us gave us good advise",
+  ok:["We passed the museum, and the guide who met us gave us good advice.", "We passed the museum and the guide who met us gave us good advice.", "We passed the museum. The guide who met us gave us good advice."],
+  hint:"Capitalize the first word. <em>Passed</em> is the verb (we went by it). A guide is a person, so use <em>who</em>. <em>Advice</em> (with a c) is the noun. Add a comma before <em>and</em> when it joins two sentences, and end with a period."}
+];
+
+var gfixState=GFIX.map(function(){return{tries:0,correct:false,firstRight:false};});
+function norm(s){return s.replace(/[\u2018\u2019\u02BC]/g,"'").replace(/[\u201C\u201D]/g,'"').replace(/\s+/g," ").trim();}
+function checkFixAnswer(i,val){var v=norm(val);return GFIX[i].ok.some(function(a){return norm(a)===v;});}
+function buildGFix(){
+  var box=document.getElementById("gfix");
+  GFIX.forEach(function(it,i){
+    var d=document.createElement("div"); d.className="box q"; d.id="f"+i;
+    d.innerHTML='<div><strong>'+(i+1)+'.</strong> Fix: <span class="bad-sent">'+it.bad+'</span></div>'+
+     '<input class="fix" type="text" id="fi'+i+'" autocomplete="off" spellcheck="false" aria-label="Corrected sentence '+(i+1)+'">'+
+     '<div class="btnrow"><button type="button" class="go" data-act="check" data-i="'+i+'">Check</button><button type="button" class="hint" data-act="hint" data-i="'+i+'">Hint 💡</button><button type="button" class="grey" data-act="show" data-i="'+i+'" style="display:none">Show answer</button></div>'+
+     '<div class="fb" id="ffb'+i+'"></div>';
+    box.appendChild(d);
+  });
+  box.addEventListener("click",function(e){
+    var b=e.target; if(b.tagName!=="BUTTON")return;
+    var i=+b.getAttribute("data-i"), act=b.getAttribute("data-act"), fb=document.getElementById("ffb"+i);
+    if(act==="hint"){fb.className="fb";fb.style.color="#5d4037";fb.textContent="💡 "+GFIX[i].hint;return;}
+    fb.style.color="";
+    if(act==="show"){fb.className="fb";fb.innerHTML='Answer: <em>'+GFIX[i].ok[0]+'</em>'+(GFIX[i].ok.length>1?' (other correct versions are accepted too)':'');return;}
+    fixCheck(i);
+  });
+  box.addEventListener("keydown",function(e){if(e.key==="Enter"&&e.target.classList.contains("fix"))fixCheck(+e.target.id.slice(2));});
+}
+function fixCheck(i){
+  var val=document.getElementById("fi"+i).value, fb=document.getElementById("ffb"+i), st=gfixState[i];
+  fb.style.color="";
+  if(!val.trim()){fb.className="fb bad";fb.textContent="Type the corrected sentence first, Ace!";return;}
+  st.tries++;
+  if(checkFixAnswer(i,val)){ if(st.tries===1)st.firstRight=true; st.correct=true; document.getElementById("f"+i).className="box q right"; fb.className="fb good"; fb.textContent="✅ "+pick(PRAISE); }
+  else { st.correct=false; document.getElementById("f"+i).className="box q wrong"; fb.className="fb bad"; fb.textContent="❌ Not quite. Check every capital letter, apostrophe, comma, and spelling. Try again!"; if(st.tries>=2)document.querySelector('#f'+i+' [data-act=show]').style.display="inline-block"; }
+  updateScore();
+}
+
+function updateScore(){
+  var g=0; gmcState.forEach(function(s){if(s.firstRight)g++;});
+  var f=0; gfixState.forEach(function(s){if(s.correct)f++;});
+  var total=LABEL_ITEMS.length+GMC.length+GFIX.length, got=labelScore+g+f;
+  document.getElementById("scoreText").textContent="Score: "+got+" / "+total+"  (labels "+(labelChecked?labelScore:"-")+"/"+LABEL_ITEMS.length+" · grammar A "+g+"/"+GMC.length+" · grammar B "+f+"/"+GFIX.length+")";
+}
+
+var W5=["who","place","facts","senses","feel","closing"];
+function w5Save(){try{localStorage.setItem(KEY+"-5w",JSON.stringify(W5.map(function(k){return document.getElementById("w5"+k).value;})));}catch(e){}}
+function w5Restore(){try{var d=JSON.parse(localStorage.getItem(KEY+"-5w")||"null");if(d)d.forEach(function(x,i){document.getElementById("w5"+W5[i]).value=x;});}catch(e){}}
+function w5Summary(){return W5.map(function(k){return k.charAt(0).toUpperCase()+k.slice(1)+": "+document.getElementById("w5"+k).value;}).join("\n");}
+function addTemplate(){
+  var t=document.getElementById("essay");
+  var tpl="NAME + MEANING: \n\nDESCRIPTION: \n\nHABITAT: \n\nDIET + BEHAVIOUR: \n\nADAPTATIONS + EVIDENCE: \n\nCAPTION: \n\nWritten by "+NAME;
+  if(t.value.trim()&&!confirm("Add the headings below what you've already written?"))return;
+  t.value=(t.value.trim()?t.value.replace(/\s+$/,"")+"\n\n":"")+tpl; updateCount(); t.focus();
+}
+var KEY="ace-writing-2026-10-25";
+function countWords(t){var m=t.trim().match(/[A-Za-zÀ-ÿ0-9]+(?:['’\-][A-Za-zÀ-ÿ0-9]+)*/g);return m?m.length:0;}
+function countSentences(t){var m=t.match(/[^.!?]*[A-Za-z0-9][^.!?]*[.!?]+/g);return m?m.length:0;}
+function currentPrompt(){var r=document.querySelector('input[name=prompt]:checked');return r?r.value:"";}
+function updateCount(){
+  var t=document.getElementById("essay").value, w=countWords(t), s=countSentences(t);
+  document.getElementById("wc").textContent=w+(w===1?" word":" words");
+  document.getElementById("sc").textContent=s+(s===1?" sentence":" sentences");
+  var bar=document.getElementById("meterBar"); bar.style.width=Math.min(100,w/350*100)+"%";
+  var msg=document.getElementById("wcMsg");
+  if(w<250){bar.style.background="#ffb300";msg.className="fb";msg.textContent=w===0?"Aim for 250 to 350 words.":"Keep going, Ace! "+(250-w)+" more words to reach the goal.";}
+  else if(w<=350){bar.style.background="#43a047";msg.className="fb good";msg.textContent="🎯 You're in the target zone! Nice work, Ace!";}
+  else{bar.style.background="#1e88e5";msg.className="fb";msg.textContent="Wow, that's a lot of writing! Strong field guide entries stay focused and precise! Could any sentences be cut?";}
+  try{localStorage.setItem(KEY,JSON.stringify({text:t,prompt:currentPrompt(),checks:checkStates()}));}catch(e){document.getElementById("saveNote").textContent="(This browser can't auto-save here, so use the Download button before closing!)";}
+}
+function checkStates(){return Array.prototype.map.call(document.querySelectorAll("#checklist input"),function(c){return c.checked;});}
+function checklistText(){
+  return Array.prototype.map.call(document.querySelectorAll("#checklist label"),function(l){return (l.querySelector("input").checked?"[x] ":"[ ] ")+l.textContent.trim();}).join("\n");
+}
+function buildReport(){
+  var t=document.getElementById("essay").value;
+  return "Writing Week 28: "+NAME+"\nDate: "+new Date().toLocaleString("en-CA")+"\nPrompt: "+currentPrompt()+
+    "\nWords: "+countWords(t)+"   Sentences: "+countSentences(t)+"\nPlanning notes:\n"+w5Summary()+
+    "\n\n----- "+NAME+"'s writing -----\n\n"+t+"\n\n----- Self-check -----\n"+checklistText()+
+    "\n\n----- Parent feedback -----\n\n\n";
+}
+function download(){
+  var t=document.getElementById("essay").value;
+  if(!t.trim()){document.getElementById("doneMsg").className="fb bad";document.getElementById("doneMsg").textContent="Write something first, Ace!";return;}
+  var blob=new Blob([buildReport().replace(/\n/g,"\r\n")],{type:"text/plain;charset=utf-8"});
+  var a=document.createElement("a"); a.href=URL.createObjectURL(blob); a.download=NAME+"-writing-2026-10-25"+".txt";
+  document.body.appendChild(a); a.click();
+  setTimeout(function(){URL.revokeObjectURL(a.href);a.remove();},1000);
+  var dm=document.getElementById("doneMsg"); dm.className="fb good"; dm.textContent="📄 Saved! Look in your Downloads folder and show Dad. Great job finishing, Ace!";
+}
+function esc(s){return s.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");}
+function printIt(){
+  var t=document.getElementById("essay").value;
+  if(!t.trim()){document.getElementById("doneMsg").className="fb bad";document.getElementById("doneMsg").textContent="Write something first, Ace!";return;}
+  document.getElementById("printArea").innerHTML="<h1>Writing Week 28: "+NAME+"</h1><div class='meta'>"+esc(new Date().toLocaleString("en-CA"))+"<br><strong>Prompt:</strong> "+esc(currentPrompt())+"<br>Words: "+countWords(t)+" · Sentences: "+countSentences(t)+"</div><div class='text'>"+esc(t)+"</div><div class='lines'><strong>Self-check:</strong><br>"+esc(checklistText()).replace(/\n/g,"<br>")+"</div><div class='lines'><strong>Parent feedback:</strong><br><br><br><br></div>";
+  window.print();
+}
+function restore(){
+  try{var d=JSON.parse(localStorage.getItem(KEY)||"null"); if(!d)return;
+    document.getElementById("essay").value=d.text||"";
+    Array.prototype.forEach.call(document.querySelectorAll("input[name=prompt]"),function(r){r.checked=(r.value===d.prompt);});
+    if(!document.querySelector("input[name=prompt]:checked"))document.querySelector("input[name=prompt]").checked=true;
+    var cs=document.querySelectorAll("#checklist input"); (d.checks||[]).forEach(function(v,i){if(cs[i])cs[i].checked=v;});
+  }catch(e){}
+}
+buildLabels(); buildGMC(); buildGFix(); restore(); w5Restore(); updateCount(); updateScore();
+W5.forEach(function(k){document.getElementById("w5"+k).addEventListener("input",w5Save);});
+document.getElementById("templateBtn").addEventListener("click",addTemplate);
+document.getElementById("checkLabels").addEventListener("click",checkLabels);
+document.getElementById("essay").addEventListener("input",updateCount);
+document.getElementById("checklist").addEventListener("change",function(){updateCount(); if(checkStates().every(Boolean)){var dm=document.getElementById("doneMsg");dm.className="fb good";dm.textContent="✅ All boxes checked! Now download or print it for Dad. Awesome work, Ace!";}});
+document.getElementById("prompts").addEventListener("change",updateCount);
+document.getElementById("downloadBtn").addEventListener("click",download);
+document.getElementById("printBtn").addEventListener("click",printIt);
+document.getElementById("clearBtn").addEventListener("click",function(){ if(confirm("Erase your writing and start over?")){document.getElementById("essay").value="";Array.prototype.forEach.call(document.querySelectorAll("#checklist input"),function(c){c.checked=false;});document.getElementById("doneMsg").textContent="";updateCount();} });
+</script>
+<script src="../../assets/autosave.js"></script>
+</body>
+</html>

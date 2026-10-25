@@ -6,7 +6,7 @@ TTS voice (Cantonese): zh-HK-HiuMaanNeural when available; 2026-10-12+ often gTT
 TTS voice (English in ALL-words.mp3): en-HK-YanNeural
 Rate: slowed (~-20%) for clear listening practice.
 
-Sources: Ace lessons 2026-09-29 (Greetings) + 2026-09-30 (Family Members) + 2026-10-01 (Food) + 2026-10-02 (School) + 2026-10-03 (Body) + 2026-10-04 (Colours) + 2026-10-05 (Sky & Space) + 2026-10-06 (Numbers 11-100) + 2026-10-07 (At the Doctor) + 2026-10-08 (Nature: Mountains & Volcanoes) + 2026-10-09 (Question Words & Secrets) + 2026-10-10 (Music) + 2026-10-11 (Trains & Travel) + 2026-10-12 (Brain & Sleep) + 2026-10-13 (Bees & Gardens) + 2026-10-14 (Electricity & Lights) + 2026-10-15 (Land, People & Respect) + 2026-10-16 (Ice, Snow & Giant Animals) + 2026-10-17 (Community, Rules & Voting) + 2026-10-18 (Weather & Storms) + 2026-10-19 (Germs, Vaccines & Staying Healthy) + 2026-10-20 (Ancient China: Paper, Books & Emperors) + 2026-10-21 (Flight: Airplanes, Pilots & Birds) + 2026-10-22 (Gold Mountain: Gold, Miners & Money) + 2026-10-23 (In the Kitchen: Cooking & Flavours) + 2026-10-24 (Cartoons, Drawing & Movies).
+Sources: Ace lessons 2026-09-29 (Greetings) + 2026-09-30 (Family Members) + 2026-10-01 (Food) + 2026-10-02 (School) + 2026-10-03 (Body) + 2026-10-04 (Colours) + 2026-10-05 (Sky & Space) + 2026-10-06 (Numbers 11-100) + 2026-10-07 (At the Doctor) + 2026-10-08 (Nature: Mountains & Volcanoes) + 2026-10-09 (Question Words & Secrets) + 2026-10-10 (Music) + 2026-10-11 (Trains & Travel) + 2026-10-12 (Brain & Sleep) + 2026-10-13 (Bees & Gardens) + 2026-10-14 (Electricity & Lights) + 2026-10-15 (Land, People & Respect) + 2026-10-16 (Ice, Snow & Giant Animals) + 2026-10-17 (Community, Rules & Voting) + 2026-10-18 (Weather & Storms) + 2026-10-19 (Germs, Vaccines & Staying Healthy) + 2026-10-20 (Ancient China: Paper, Books & Emperors) + 2026-10-21 (Flight: Airplanes, Pilots & Birds) + 2026-10-22 (Gold Mountain: Gold, Miners & Money) + 2026-10-23 (In the Kitchen: Cooking & Flavours) + 2026-10-24 (Cartoons, Drawing & Movies) + 2026-10-25 (Fossils & Sea Creatures).
 Numbers 1-10 are already known and not included here.
 
 How to practise:
@@ -1065,6 +1065,46 @@ Individual files
   Chinese:  慢
   Jyutping: maan6
   English:  slow
+
+209-faa3-sek6-fossil.mp3
+  Chinese:  化石
+  Jyutping: faa3 sek6
+  English:  fossil
+
+210-dung6-mat6-animal.mp3
+  Chinese:  動物
+  Jyutping: dung6 mat6
+  English:  animal
+
+211-hoi2-joeng4-ocean.mp3
+  Chinese:  海洋
+  Jyutping: hoi2 joeng4
+  English:  ocean
+
+212-haa1-shrimp.mp3
+  Chinese:  蝦
+  Jyutping: haa1
+  English:  shrimp / prawn
+
+213-kei4-gwaai3-strange.mp3
+  Chinese:  奇怪
+  Jyutping: kei4 gwaai3
+  English:  strange / weird
+
+214-bok3-mat6-gun2-museum.mp3
+  Chinese:  博物館
+  Jyutping: bok3 mat6 gun2
+  English:  museum
+
+215-ngaang6-hard.mp3
+  Chinese:  硬
+  Jyutping: ngaang6
+  English:  hard (not soft)
+
+216-jau4-seoi2-swim.mp3
+  Chinese:  游水
+  Jyutping: jau4 seoi2
+  English:  to swim
 
 
 Combined file
