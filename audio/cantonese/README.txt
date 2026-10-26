@@ -6,7 +6,7 @@ TTS voice (Cantonese): zh-HK-HiuMaanNeural when available; 2026-10-12+ often gTT
 TTS voice (English in ALL-words.mp3): en-HK-YanNeural
 Rate: slowed (~-20%) for clear listening practice.
 
-Sources: Ace lessons 2026-09-29 (Greetings) + 2026-09-30 (Family Members) + 2026-10-01 (Food) + 2026-10-02 (School) + 2026-10-03 (Body) + 2026-10-04 (Colours) + 2026-10-05 (Sky & Space) + 2026-10-06 (Numbers 11-100) + 2026-10-07 (At the Doctor) + 2026-10-08 (Nature: Mountains & Volcanoes) + 2026-10-09 (Question Words & Secrets) + 2026-10-10 (Music) + 2026-10-11 (Trains & Travel) + 2026-10-12 (Brain & Sleep) + 2026-10-13 (Bees & Gardens) + 2026-10-14 (Electricity & Lights) + 2026-10-15 (Land, People & Respect) + 2026-10-16 (Ice, Snow & Giant Animals) + 2026-10-17 (Community, Rules & Voting) + 2026-10-18 (Weather & Storms) + 2026-10-19 (Germs, Vaccines & Staying Healthy) + 2026-10-20 (Ancient China: Paper, Books & Emperors) + 2026-10-21 (Flight: Airplanes, Pilots & Birds) + 2026-10-22 (Gold Mountain: Gold, Miners & Money) + 2026-10-23 (In the Kitchen: Cooking & Flavours) + 2026-10-24 (Cartoons, Drawing & Movies) + 2026-10-25 (Fossils & Sea Creatures).
+Sources: Ace lessons 2026-09-29 (Greetings) + 2026-09-30 (Family Members) + 2026-10-01 (Food) + 2026-10-02 (School) + 2026-10-03 (Body) + 2026-10-04 (Colours) + 2026-10-05 (Sky & Space) + 2026-10-06 (Numbers 11-100) + 2026-10-07 (At the Doctor) + 2026-10-08 (Nature: Mountains & Volcanoes) + 2026-10-09 (Question Words & Secrets) + 2026-10-10 (Music) + 2026-10-11 (Trains & Travel) + 2026-10-12 (Brain & Sleep) + 2026-10-13 (Bees & Gardens) + 2026-10-14 (Electricity & Lights) + 2026-10-15 (Land, People & Respect) + 2026-10-16 (Ice, Snow & Giant Animals) + 2026-10-17 (Community, Rules & Voting) + 2026-10-18 (Weather & Storms) + 2026-10-19 (Germs, Vaccines & Staying Healthy) + 2026-10-20 (Ancient China: Paper, Books & Emperors) + 2026-10-21 (Flight: Airplanes, Pilots & Birds) + 2026-10-22 (Gold Mountain: Gold, Miners & Money) + 2026-10-23 (In the Kitchen: Cooking & Flavours) + 2026-10-24 (Cartoons, Drawing & Movies) + 2026-10-25 (Fossils & Sea Creatures) + 2026-10-26 (Emergency & Hospital Words).
 Numbers 1-10 are already known and not included here.
 
 How to practise:
@@ -1105,6 +1105,46 @@ Individual files
   Chinese:  游水
   Jyutping: jau4 seoi2
   English:  to swim
+
+217-ji1-jyun2-hospital.mp3
+  Chinese:  醫院
+  Jyutping: ji1 jyun2
+  English:  hospital
+
+218-baak6-ce1-ambulance.mp3
+  Chinese:  白車
+  Jyutping: baak6 ce1
+  English:  ambulance (literally "white car")
+
+219-wu6-si6-nurse.mp3
+  Chinese:  護士
+  Jyutping: wu6 si6
+  English:  nurse
+
+220-fu1-kap1-breathe.mp3
+  Chinese:  呼吸
+  Jyutping: fu1 kap1
+  English:  to breathe / breathing
+
+221-gan2-gap1-emergency.mp3
+  Chinese:  緊急
+  Jyutping: gan2 gap1
+  English:  emergency / urgent
+
+222-gau3-meng6-save-a-life.mp3
+  Chinese:  救命
+  Jyutping: gau3 meng6
+  English:  to save a life / Help!
+
+223-sau6-soeng1-injured.mp3
+  Chinese:  受傷
+  Jyutping: sau6 soeng1
+  English:  to get hurt / injured
+
+224-daa2-din6-waa2-phone-call.mp3
+  Chinese:  打電話
+  Jyutping: daa2 din6 waa2
+  English:  to make a phone call
 
 
 Combined file

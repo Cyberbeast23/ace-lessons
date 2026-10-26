@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Math (Oct. 26): Emergency! How Paramedics and the ER Save Lives Math Lab</title>
+<style>
+  body{font-family:"Segoe UI",Verdana,Arial,sans-serif;font-size:20px;line-height:1.6;margin:0;background:#f5f0eb;color:#2c2416}
+  .wrap{max-width:880px;margin:0 auto;padding:20px 18px 80px}
+  a.home{font-size:.9em;color:#bf360c}
+  h1{color:#e65100;font-size:2em;margin:10px 0}
+  h2{color:#ef6c00;margin-top:36px;border-bottom:3px solid #ffcc80;padding-bottom:4px}
+  .box{background:#fff;border-radius:16px;padding:18px 22px;margin:16px 0;box-shadow:0 3px 10px rgba(0,0,0,.07)}
+  .example{border-left:8px solid #ef6c00}
+  .example h3{margin:0 0 6px;color:#e65100}
+  .step{margin:4px 0 4px 10px}
+  code,.mono{font-family:Consolas,"Courier New",monospace;background:#fff3e0;padding:1px 6px;border-radius:5px}
+  .q{border-left:8px solid #90a4ae}
+  .q.right{border-left-color:#43a047;background:#f1f8e9}
+  .q.wrong{border-left-color:#e53935;background:#fff5f5}
+  .qnum{font-weight:bold;color:#e65100}
+  .row{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:10px}
+  input[type=text]{font-size:1.05em;padding:8px 12px;border:2px solid #ffcc80;border-radius:10px;width:190px}
+  input[type=text]:focus{outline:none;border-color:#ef6c00;box-shadow:0 0 0 3px #ffe0b2}
+  button{font-size:.95em;padding:8px 16px;border:none;border-radius:10px;cursor:pointer;font-weight:bold}
+  .check{background:#ef6c00;color:#fff} .check:hover{background:#e65100}
+  .hint{background:#ffe082;color:#5d4037} .hint:hover{background:#ffd54f}
+  .sol{background:#ce93d8;color:#311b92}
+  .unit{color:#546e7a}
+  .fb{margin-top:8px;font-weight:bold;min-height:1em}
+  .fb.good{color:#2e7d32} .fb.bad{color:#c62828}
+  .hints{margin-top:8px;color:#e65100;background:#fff3e0;border-radius:10px;padding:0 12px}
+  .hints p{margin:6px 0;padding:6px 0}
+  .solution{margin-top:8px;background:#f3e5f5;border-radius:10px;padding:8px 12px;display:none}
+  #scoreBox{position:sticky;bottom:0;background:#e65100;color:#fff;border-radius:16px 16px 0 0;padding:12px 20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-top:30px}
+  #scoreBox button{background:#ffca28;color:#3e2723}
+  #final{display:none;font-size:1.15em;text-align:center;border:4px solid #43a047}
+  .tipbox{background:#fff8e1;border-left:8px solid #ffb300}
+</style>
+</head>
+<body>
+<div class="wrap">
+<a class="home" href="../../index.html">&larr; Back to all lessons</a>
+<h1>🚑 Math Week 29: Emergency Room Math Lab</h1>
+<p>Ace, when someone calls 9-1-1, a whole team swings into action: a dispatcher answers the call, paramedics race out in an ambulance, and an emergency room (ER) team gets ready at the hospital. Every one of them uses math, fast and accurately. Paramedics count heartbeats and breaths, work out how long the oxygen will last, and keep an eye on the clock, because in emergency medicine, minutes matter. Today you'll work like an emergency crew with <strong>percents (including percent change), speed-distance-time, rates per minute and per hour, ratios, median of an even set, decimal temperature changes, fractions of a supply, reading a bar graph, elapsed time, comparing travel times, expected results, a two-condition puzzle, and an equation</strong>.</p>
+
+<h2>Part 1: Learn the Moves</h2>
+
+<div class="box tipbox">
+  <strong>The 4-Step Problem Solver (your paramedic checklist):</strong>
+  <ol>
+    <li><strong>Read</strong>: What is the question actually asking? Underline the numbers and units.</li>
+    <li><strong>Plan</strong>: Which operations do I need, and in what order? Do the units match (seconds with seconds, minutes with minutes)?</li>
+    <li><strong>Solve</strong>: Do one step at a time and write each step down.</li>
+    <li><strong>Check</strong>: Is my answer reasonable? Did I answer the question that was asked, in the right units?</li>
+  </ol>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 1: Rates from a short count</h3>
+  <p class="step">Nobody waits a whole minute to count a pulse in an emergency. A paramedic counts beats for a short time and <strong>scales up</strong>. 18 beats in 15 seconds: there are 4 fifteen-second chunks in a minute, so 18 × 4 = <strong>72 beats per minute</strong>.</p>
+  <p class="step">To go from "per minute" to "per hour," multiply by 60: 12 breaths per minute × 60 = <strong>720 breaths per hour</strong>.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 2: Speed, distance and time</h3>
+  <p class="step">time = distance ÷ speed. An ambulance drives 10 km at 60 km/h: 10 ÷ 60 = 1/6 of an hour. Change hours to minutes by multiplying by 60: 1/6 × 60 = <strong>10 minutes</strong>.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 3: Percent and percent change</h3>
+  <p class="step"><strong>What percent?</strong> Part ÷ whole × 100. If 45 out of 50 calls were answered quickly: 45 ÷ 50 = 0.9, and 0.9 × 100 = <strong>90%</strong>.</p>
+  <p class="step"><strong>Percent increase</strong> = (change ÷ <em>original</em>) × 100. From 200 patients to 230 patients, the change is 30. 30 ÷ 200 = 0.15 = <strong>15% increase</strong>. Always divide by the <em>starting</em> amount!</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 4: Ratios in groups</h3>
+  <p class="step">A pattern of 3 red cards then 1 blue card repeats. Each group has 3 + 1 = 4 cards. In 20 cards there are 20 ÷ 4 = 5 groups, so there are 5 × 1 = <strong>5 blue cards</strong>.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 5: Median of an EVEN number of values</h3>
+  <p class="step">Sort first: 3, 5, 8, 10. There are two middle values (5 and 8), so the median is <strong>halfway between them</strong>: (5 + 8) ÷ 2 = <strong>6.5</strong>.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 6: Elapsed time and saving time</h3>
+  <p class="step">Add up the parts of a trip: 5 min + 12 min + 20 min = 37 min. Out of a 60-minute hour, 60 − 37 = <strong>23 minutes</strong> are left.</p>
+  <p class="step">To find <strong>time saved</strong>, work out each travel time in the same unit, then subtract.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 7: Expected results and equations</h3>
+  <p class="step"><strong>Expected:</strong> if 1 out of every 4 patients needs an X-ray, then out of 200 patients, expect 200 × 1/4 = <strong>50</strong>.</p>
+  <p class="step"><strong>Solving an equation:</strong> 25n + 40 = 190. Undo each step in reverse: subtract 40 (25n = 150), then divide by 25 (<strong>n = 6</strong>).</p>
+</div>
+
+<h2>Part 2: The Challenge (15 problems)</h2>
+<p>Type your answer and press <strong>Check</strong> (or Enter). Fractions like <span class="mono">3/4</span>, mixed numbers like <span class="mono">1 3/4</span>, or decimals like <span class="mono">1.75</span> are fine. Don't type the units, $ signs, or % signs, and you may use spaces or commas in big numbers (1 000 000). Stuck? Press <strong>Hint</strong>. After 2 tries, you can see a full solution.</p>
+
+<div id="questions"></div>
+<div class="box" id="final"></div>
+<div id="scoreBox">
+  <span id="scoreText">Score: 0 / 15 correct</span>
+  <button id="finishBtn" type="button">I'm done! Show my final score</button>
+</div>
+</div>
+
+<script>
+var NAME = "Ace";
+var GRAPH = '<div style="margin:10px 0"><svg viewBox="0 0 380 300" width="100%" style="max-width:440px;background:#fff;border-radius:12px" role="img" aria-label="Bar graph of ambulance calls each day. Monday 30, Tuesday 28, Wednesday 32, Thursday 35, Friday 45, Saturday 42, Sunday 38."><text x="210" y="20" text-anchor="middle" font-size="13" font-weight="bold" fill="#b71c1c">Ambulance calls for one station, by day</text><line x1="50" y1="260.0" x2="370" y2="260.0" stroke="#e0e0e0"/><text x="44" y="264.0" text-anchor="end" font-size="11" fill="#37474f">0</text><line x1="50" y1="216.0" x2="370" y2="216.0" stroke="#e0e0e0"/><text x="44" y="220.0" text-anchor="end" font-size="11" fill="#37474f">10</text><line x1="50" y1="172.0" x2="370" y2="172.0" stroke="#e0e0e0"/><text x="44" y="176.0" text-anchor="end" font-size="11" fill="#37474f">20</text><line x1="50" y1="128.0" x2="370" y2="128.0" stroke="#e0e0e0"/><text x="44" y="132.0" text-anchor="end" font-size="11" fill="#37474f">30</text><line x1="50" y1="84.0" x2="370" y2="84.0" stroke="#e0e0e0"/><text x="44" y="88.0" text-anchor="end" font-size="11" fill="#37474f">40</text><line x1="50" y1="40.0" x2="370" y2="40.0" stroke="#e0e0e0"/><text x="44" y="44.0" text-anchor="end" font-size="11" fill="#37474f">50</text><rect x="60" y="128.0" width="30" height="132.0" fill="#c62828"/><text x="75" y="123.0" text-anchor="middle" font-size="12" font-weight="bold" fill="#b71c1c">30</text><text x="75" y="276" text-anchor="middle" font-size="12" fill="#37474f">Mon</text><rect x="105" y="136.8" width="30" height="123.2" fill="#c62828"/><text x="120" y="131.8" text-anchor="middle" font-size="12" font-weight="bold" fill="#b71c1c">28</text><text x="120" y="276" text-anchor="middle" font-size="12" fill="#37474f">Tue</text><rect x="150" y="119.2" width="30" height="140.8" fill="#c62828"/><text x="165" y="114.2" text-anchor="middle" font-size="12" font-weight="bold" fill="#b71c1c">32</text><text x="165" y="276" text-anchor="middle" font-size="12" fill="#37474f">Wed</text><rect x="195" y="106.0" width="30" height="154.0" fill="#c62828"/><text x="210" y="101.0" text-anchor="middle" font-size="12" font-weight="bold" fill="#b71c1c">35</text><text x="210" y="276" text-anchor="middle" font-size="12" fill="#37474f">Thu</text><rect x="240" y="62.0" width="30" height="198.0" fill="#c62828"/><text x="255" y="57.0" text-anchor="middle" font-size="12" font-weight="bold" fill="#b71c1c">45</text><text x="255" y="276" text-anchor="middle" font-size="12" fill="#37474f">Fri</text><rect x="285" y="75.2" width="30" height="184.8" fill="#c62828"/><text x="300" y="70.2" text-anchor="middle" font-size="12" font-weight="bold" fill="#b71c1c">42</text><text x="300" y="276" text-anchor="middle" font-size="12" fill="#37474f">Sat</text><rect x="330" y="92.8" width="30" height="167.2" fill="#c62828"/><text x="345" y="87.8" text-anchor="middle" font-size="12" font-weight="bold" fill="#b71c1c">38</text><text x="345" y="276" text-anchor="middle" font-size="12" fill="#37474f">Sun</text><line x1="50" y1="260" x2="370" y2="260" stroke="#263238" stroke-width="2"/><line x1="50" y1="260" x2="50" y2="30" stroke="#263238" stroke-width="2"/><text x="14" y="150" font-size="11" fill="#37474f" transform="rotate(-90 14 150)" text-anchor="middle">Number of calls</text></svg></div>';
+var TABLE = '<table style="border-collapse:collapse;margin:10px 0;font-size:.95em;background:#fff"><caption style="font-weight:bold;text-align:left;padding-bottom:4px">Ambulance response times for six calls</caption><tr><th style="border:1px solid #bdbdbd;padding:4px 10px;background:#ffebee">Call</th><th style="border:1px solid #bdbdbd;padding:4px 10px;background:#ffebee">Response time (min)</th></tr><tr><td style="border:1px solid #bdbdbd;padding:4px 10px">A</td><td style="border:1px solid #bdbdbd;padding:4px 10px;text-align:right">6</td></tr><tr><td style="border:1px solid #bdbdbd;padding:4px 10px">B</td><td style="border:1px solid #bdbdbd;padding:4px 10px;text-align:right">14</td></tr><tr><td style="border:1px solid #bdbdbd;padding:4px 10px">C</td><td style="border:1px solid #bdbdbd;padding:4px 10px;text-align:right">9</td></tr><tr><td style="border:1px solid #bdbdbd;padding:4px 10px">D</td><td style="border:1px solid #bdbdbd;padding:4px 10px;text-align:right">12</td></tr><tr><td style="border:1px solid #bdbdbd;padding:4px 10px">E</td><td style="border:1px solid #bdbdbd;padding:4px 10px;text-align:right">7</td></tr><tr><td style="border:1px solid #bdbdbd;padding:4px 10px">F</td><td style="border:1px solid #bdbdbd;padding:4px 10px;text-align:right">13</td></tr></table>';
+var QUESTIONS = [
+ {t:"A 9-1-1 centre's goal is to answer calls within 15 seconds. Last month it received <strong>2400</strong> calls and answered <strong>2148</strong> of them within 15 seconds. What <strong>percent</strong> of calls were answered within 15 seconds?", a:"89.5", u:"%",
+  h:["Percent = part ÷ whole × 100.","2148 ÷ 2400 = 0.895. Now multiply by 100."],
+  s:"2148 ÷ 2400 = 0.895. 0.895 × 100 = 89.5%. Just short of a 90% goal!"},
+ {t:"An ambulance is <strong>6.3 km</strong> away from a patient. It drives at an average speed of <strong>84 km/h</strong>. How many <strong>minutes</strong> does it take to arrive?", a:"4.5", u:"minutes",
+  h:["time = distance ÷ speed, which gives you hours.","6.3 ÷ 84 = 0.075 hours. Multiply by 60 to get minutes."],
+  s:"6.3 ÷ 84 = 0.075 h. 0.075 × 60 = 4.5 minutes (4 minutes 30 seconds)."},
+ {t:"A paramedic counts a patient's pulse: <strong>23 beats in 20 seconds</strong>. What is the heart rate in <strong>beats per minute</strong>?", a:"69", u:"beats per minute",
+  h:["How many 20-second chunks fit in one minute?","There are 3. Multiply 23 by 3."],
+  s:"60 ÷ 20 = 3, so 23 × 3 = 69 beats per minute. That is a normal resting heart rate for an adult."},
+ {t:"A patient breathes <strong>7 times in 20 seconds</strong>. At this rate, how many breaths would the patient take in <strong>one hour</strong>?", a:"1260", u:"breaths",
+  h:["First find breaths per minute: 7 × 3.","21 breaths per minute. There are 60 minutes in an hour."],
+  s:"7 × 3 = 21 breaths per minute. 21 × 60 = 1260 breaths per hour."},
+ {t:"In adult CPR, a rescuer gives <strong>30 chest compressions</strong>, then <strong>2 rescue breaths</strong>, and repeats. If the rescuer has done <strong>160</strong> actions in total (compressions plus breaths), how many were <strong>breaths</strong>?", a:"10", u:"breaths",
+  h:["One complete cycle is 30 + 2 = 32 actions.","160 ÷ 32 = 5 cycles. Each cycle has 2 breaths."],
+  s:"30 + 2 = 32 actions per cycle. 160 ÷ 32 = 5 cycles. 5 × 2 = 10 breaths (and 150 compressions)."},
+ {t:TABLE+"What is the <strong>median</strong> response time for these six calls?", a:"10.5", u:"minutes",
+  h:["Put the times in order first: 6, 7, 9, 12, 13, 14.","With six values, there are two middle values (9 and 12). Find the number halfway between them."],
+  s:"In order: 6, 7, <strong>9, 12</strong>, 13, 14. Median = (9 + 12) ÷ 2 = 21 ÷ 2 = 10.5 minutes."},
+ {t:"A child in the ER has a fever of <strong>39.2 °C</strong>. After medicine, the temperature drops by <strong>0.3 °C every 30 minutes</strong>. How many <strong>minutes</strong> until it reaches <strong>37.4 °C</strong>?", a:"180", u:"minutes",
+  h:["How many degrees must it drop? 39.2 − 37.4.","It must drop 1.8 °C. How many drops of 0.3 °C is that? Each drop takes 30 minutes."],
+  s:"39.2 − 37.4 = 1.8 °C. 1.8 ÷ 0.3 = 6 drops. 6 × 30 = 180 minutes (3 hours)."},
+ {t:"An ambulance oxygen tank holds <strong>640 L</strong> of oxygen. A patient receives <strong>8 L per minute</strong>. Paramedics switch tanks when only <strong>one quarter</strong> of the oxygen is left. How many <strong>minutes</strong> can they use this tank before switching?", a:"60", u:"minutes",
+  h:["If one quarter is left, three quarters can be used. Find 3/4 of 640.","3/4 of 640 = 480 L. Divide by 8 L per minute."],
+  s:"3/4 × 640 = 480 L can be used. 480 ÷ 8 = 60 minutes."},
+ {t:"A hospital ER saw <strong>240</strong> patients on a Monday last year and <strong>276</strong> patients on a Monday this year. What was the <strong>percent increase</strong>?", a:"15", u:"%",
+  h:["Find the change first: 276 − 240.","The change is 36. Divide by the ORIGINAL amount (240), then multiply by 100."],
+  s:"276 − 240 = 36. 36 ÷ 240 = 0.15. 0.15 × 100 = 15% increase."},
+ {t:GRAPH+"The bar graph shows one ambulance station's calls for a week. What <strong>percent</strong> of the week's calls happened on the <strong>weekend</strong> (Saturday and Sunday)?", a:"32", u:"%",
+  h:["Add all seven bars to get the week's total.","The total is 250 calls. The weekend had 42 + 38 = 80. Find 80 ÷ 250 × 100."],
+  s:"Total = 30 + 28 + 32 + 35 + 45 + 42 + 38 = 250. Weekend = 42 + 38 = 80. 80 ÷ 250 = 0.32 = 32%."},
+ {t:"Doctors talk about the <strong>golden hour</strong>: the first 60 minutes after a serious injury, when fast care helps most. After a bike crash, the ambulance arrives in <strong>9 minutes</strong>, paramedics spend <strong>14 minutes</strong> caring for the patient on scene, and the drive to the hospital takes <strong>23 minutes</strong>. How many minutes of the golden hour are <strong>left</strong> when they reach the ER?", a:"14", u:"minutes",
+  h:["Add up all three parts of the trip.","9 + 14 + 23 = 46 minutes. Subtract from 60."],
+  s:"9 + 14 + 23 = 46 minutes used. 60 − 46 = 14 minutes left for the ER team to get started."},
+ {t:"A patient is <strong>60 km</strong> from a hospital. An ambulance can travel at <strong>80 km/h</strong>, and an air-ambulance helicopter at <strong>240 km/h</strong>. How many <strong>minutes</strong> does the helicopter save?", a:"30", u:"minutes",
+  h:["Find each time in hours: 60 ÷ 80 and 60 ÷ 240.","Ambulance: 0.75 h = 45 min. Helicopter: 0.25 h = 15 min. Subtract."],
+  s:"Ambulance: 60 ÷ 80 = 0.75 h = 45 min. Helicopter: 60 ÷ 240 = 0.25 h = 15 min. Time saved: 45 − 15 = 30 minutes. In BC, helicopters and planes help reach patients in remote places!"},
+ {t:"At one hospital, <strong>3 out of every 20</strong> ER patients arrive by ambulance. If <strong>1360</strong> patients come to the ER next month, about how many should the hospital <strong>expect</strong> to arrive by ambulance?", a:"204", u:"patients",
+  h:["Find 3/20 of 1360.","1360 ÷ 20 = 68. Multiply by 3."],
+  s:"1360 ÷ 20 = 68. 68 × 3 = 204 patients."},
+ {t:"For a big emergency drill, <strong>9 vehicles</strong> arrive. Each ambulance carries <strong>2</strong> paramedics, and each fire truck carries <strong>4</strong> firefighters. Altogether <strong>26</strong> responders arrive. How many <strong>fire trucks</strong> came?", a:"4", u:"fire trucks",
+  h:["Imagine all 9 were ambulances: that's 18 people. How many extra people are there?","26 − 18 = 8 extra people. Each fire truck adds 2 more people than an ambulance."],
+  s:"All ambulances: 9 × 2 = 18. Extra people: 26 − 18 = 8. Each swap to a fire truck adds 2, so 8 ÷ 2 = 4 fire trucks. (Check: 4 × 4 + 5 × 2 = 16 + 10 = 26 ✔)"},
+ {t:"<strong>Challenge (equation):</strong> A community centre buys <span class=\"mono\">n</span> AEDs (machines that can restart a heart with a shock) for <strong>$1450 each</strong>, plus a <strong>$350</strong> training class. The total bill is <strong>$9050</strong>. Solve 1450n + 350 = 9050. What is <span class=\"mono\">n</span>?", a:"6", u:"AEDs",
+  h:["Undo the + 350 first: 1450n = 9050 − 350.","1450n = 8700. Now divide by 1450."],
+  s:"1450n + 350 = 9050, so 1450n = 8700, and n = 8700 ÷ 1450 = 6. (Check: 6 × 1450 + 350 = 8700 + 350 = 9050 ✔)"}
+];
+
+var PRAISE = ["Nice work, Ace!","Correct! Life-saving math! 🚑","Yes! Paramedic Ace!","Excellent, Ace. That was a tough one!","Right on target! 🎯","Brilliant thinking, Ace!","Strong pulse! 💓"];
+var ENCOURAGE = ["Not quite. Check your steps and try again!","Close call. Try again, Ace! Maybe use a hint?","Hmm, not yet. Re-read the question carefully.","Keep going, Ace. Mistakes help your brain grow!"];
+
+function parseAnswer(str){
+  if(str===undefined||str===null) return NaN;
+  var s=String(str).trim().toLowerCase();
+  s=s.replace(/[\u2212\u2013]/g,"-");
+  s=s.replace(/(\d),(?=\d{3}(\D|$))/g,"$1");
+  s=s.replace(/[^0-9.\/\- ]/g," ").replace(/\s+/g," ").trim();
+  s=s.replace(/\s*\/\s*/g,"/");
+  var m;
+  if((m=s.match(/^(-?\d+) (\d+)\/(\d+)$/))){ var w=parseFloat(m[1]),n=parseFloat(m[2]),d=parseFloat(m[3]); if(d===0)return NaN; return w<0? w-n/d : w+n/d; }
+  if((m=s.match(/^(-?\d+(?:\.\d+)?)\/(\d+(?:\.\d+)?)$/))){ var d2=parseFloat(m[2]); if(d2===0)return NaN; return parseFloat(m[1])/d2; }
+  s=s.replace(/ /g,"");
+  if(/^-?(\d+\.?\d*|\.\d+)$/.test(s)) return parseFloat(s);
+  return NaN;
+}
+function isCorrect(input,key){
+  var a=parseAnswer(input), k=parseAnswer(key);
+  if(isNaN(a)) return false;
+  var isInt=Math.abs(k-Math.round(k))<1e-12;
+  var tol=isInt?1e-9:0.005;
+  return Math.abs(a-k)<=tol;
+}
+
+function isRomanCorrect(input,key){ return String(input).replace(/\s+/g,"").toUpperCase()===key; }
+var state=[];
+function render(){
+  var box=document.getElementById("questions");
+  QUESTIONS.forEach(function(q,i){
+    state.push({correct:false,tries:0,hints:0});
+    var d=document.createElement("div");
+    d.className="box q"; d.id="q"+i;
+    d.innerHTML='<div><span class="qnum">'+(i+1)+'.</span> '+q.t+'</div>'+
+      '<div class="row"><input type="text"'+(q.r?' placeholder="e.g. MMXXVI"':'')+' id="in'+i+'" aria-label="Answer to question '+(i+1)+'" autocomplete="off"> <span class="unit">'+q.u+'</span>'+
+      '<button type="button" class="check" data-i="'+i+'">Check</button>'+
+      '<button type="button" class="hint" data-i="'+i+'">Hint 💡</button>'+
+      '<button type="button" class="sol" data-i="'+i+'" style="display:none">Show solution</button></div>'+
+      '<div class="fb" id="fb'+i+'"></div><div class="hints" id="hints'+i+'"></div>'+
+      '<div class="solution" id="sol'+i+'"><strong>Solution:</strong> '+q.s+'</div>';
+    box.appendChild(d);
+  });
+  box.addEventListener("click",function(e){
+    var b=e.target; if(b.tagName!=="BUTTON")return;
+    var i=+b.getAttribute("data-i");
+    if(b.className==="check") check(i);
+    else if(b.className==="hint") hint(i);
+    else if(b.className==="sol") document.getElementById("sol"+i).style.display="block";
+  });
+  box.addEventListener("keydown",function(e){
+    if(e.key==="Enter"&&e.target.tagName==="INPUT"){ check(+e.target.id.slice(2)); }
+  });
+}
+function pick(arr){return arr[Math.floor(Math.random()*arr.length)];}
+function check(i){
+  var val=document.getElementById("in"+i).value;
+  var fb=document.getElementById("fb"+i), card=document.getElementById("q"+i);
+  if(val.trim()===""){fb.className="fb bad";fb.textContent="Type an answer first, Ace!";return;}
+  var isR=!!QUESTIONS[i].r;
+  if(isR&&!/^[ivxlcdm\s]+$/i.test(val)){fb.className="fb bad";fb.textContent="Use only Roman numeral letters: I, V, X, L, C, D, M.";return;}
+  if(!isR&&isNaN(parseAnswer(val))){fb.className="fb bad";fb.textContent="I can't read that as a number. Try something like 42, 3.5, 3/4 or 1 3/4.";return;}
+  state[i].tries++;
+  if(isR?isRomanCorrect(val,QUESTIONS[i].a):isCorrect(val,QUESTIONS[i].a)){
+    state[i].correct=true; card.className="box q right"; fb.className="fb good";
+    fb.textContent="✅ "+pick(PRAISE)+(state[i].tries===1?" (first try!)":"");
+  } else {
+    state[i].correct=false; card.className="box q wrong"; fb.className="fb bad";
+    fb.textContent="❌ "+pick(ENCOURAGE);
+    if(state[i].tries>=2) card.querySelector(".sol").style.display="inline-block";
+  }
+  updateScore();
+}
+function hint(i){
+  var q=QUESTIONS[i], s=state[i], hb=document.getElementById("hints"+i);
+  if(s.hints<q.h.length){
+    var p=document.createElement("p"); p.textContent="💡 Hint "+(s.hints+1)+": "+q.h[s.hints]; hb.appendChild(p); s.hints++;
+  }
+  if(s.hints>=q.h.length) document.querySelector("#q"+i+" .hint").disabled=true;
+  updateScore();
+}
+function counts(){
+  var c=0,first=0,h=0;
+  state.forEach(function(s){ if(s.correct){c++; if(s.tries===1)first++;} h+=s.hints; });
+  return {correct:c,first:first,hints:h};
+}
+function updateScore(){
+  var k=counts();
+  document.getElementById("scoreText").textContent="Score: "+k.correct+" / "+QUESTIONS.length+" correct · hints used: "+k.hints;
+}
+function finish(){
+  var k=counts(), n=QUESTIONS.length, pct=Math.round(100*k.correct/n);
+  var msg;
+  if(pct===100) msg="🏆 PERFECT SCORE! Incredible work, Ace. A real ER doctor would be impressed!";
+  else if(pct>=85) msg="🌟 Outstanding, Ace! That's a Grade 6-7 level performance!";
+  else if(pct>=65) msg="💪 Great effort, Ace! Review the ones you missed and try them again.";
+  else if(pct>=40) msg="👍 Good start, Ace! These problems are tough. Use the hints and solutions to learn the tricks, then try again.";
+  else msg="🌱 These are challenge problems, well above grade level. Every great paramedic started as a beginner! Go through the worked examples and try again, Ace!";
+  var f=document.getElementById("final");
+  f.style.display="block";
+  f.innerHTML="<h2 style='border:none;margin-top:0'>Final Score: "+k.correct+" / "+n+" ("+pct+"%)</h2>"+
+    "<p>Correct on the first try: "+k.first+" · Hints used: "+k.hints+"</p><p>"+msg+"</p>"+
+    "<p style='font-size:.85em;color:#546e7a'>Finished on "+new Date().toLocaleString("en-CA")+"</p>";
+  f.scrollIntoView({behavior:"smooth"});
+}
+render();
+updateScore();
+document.getElementById("finishBtn").addEventListener("click",finish);
+</script>
+<script src="../../assets/autosave.js"></script>
+</body>
+</html>

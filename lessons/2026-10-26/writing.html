@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Writing (Oct. 26): Interview Article (A Day in the Life of a Paramedic) + Grammar Clinic</title>
+<style>
+  body{font-family:"Segoe UI",Verdana,Arial,sans-serif;font-size:20px;line-height:1.6;margin:0;background:#fff8f0;color:#2c2416}
+  .wrap{max-width:880px;margin:0 auto;padding:20px 18px 80px}
+  a.home{font-size:.9em;color:#bf360c}
+  h1{color:#e65100;font-size:2em;margin:10px 0}
+  h2{color:#ef6c00;margin-top:36px;border-bottom:3px solid #ffcc80;padding-bottom:4px}
+  h3{color:#ef6c00}
+  .box{background:#fff;border-radius:16px;padding:18px 22px;margin:16px 0;box-shadow:0 3px 10px rgba(0,0,0,.07)}
+  .tipbox{background:#fff8e1;border-left:8px solid #ffb300}
+  .senses{display:grid;gap:8px;margin:10px 0;grid-template-columns:repeat(auto-fit,minmax(140px,1fr))}
+  .senses .side{border-radius:14px;padding:10px 16px;background:#fff3e0}
+  .ts{background:#ffcc80;border-radius:5px;padding:1px 3px}
+  .ev{background:#c8e6c9;border-radius:5px;padding:1px 3px}
+  .ex{background:#ffe0b2;border-radius:5px;padding:1px 3px}
+  .cs{background:#e1bee7;border-radius:5px;padding:1px 3px}
+  .legend span{display:inline-block;margin:4px 8px 4px 0;font-size:.85em}
+  .model{font-family:Georgia,"Times New Roman",serif;font-size:1.05em;line-height:1.9}
+  .row{padding:10px 6px;border-bottom:1px dashed #ddd}
+  .row.right{background:#f1f8e9} .row.wrong{background:#fff5f5}
+  select{font-size:.9em;padding:5px 8px;border-radius:8px;border:2px solid #ffb74d;font-family:inherit}
+  .q{border-left:8px solid #b0bec5}
+  .q.right{border-left-color:#43a047;background:#f1f8e9}
+  .q.wrong{border-left-color:#e53935;background:#fff5f5}
+  .opt{display:block;width:100%;text-align:left;font-size:.95em;background:#fafafa;border:2px solid #e0e0e0;border-radius:10px;padding:8px 14px;margin:8px 0;cursor:pointer;font-family:inherit}
+  .opt:hover{border-color:#ffb74d;background:#fff}
+  .opt.sel-right{background:#c8e6c9;border-color:#43a047}
+  .opt.sel-wrong{background:#ffcdd2;border-color:#e53935}
+  .fb{margin-top:6px;font-weight:bold}
+  .fb.good{color:#2e7d32} .fb.bad{color:#c62828}
+  .explain{font-weight:normal;color:#e65100}
+  .bad-sent{font-family:Consolas,"Courier New",monospace;background:#ffebee;padding:6px 10px;border-radius:8px;display:inline-block;margin:6px 0}
+  input.fix{width:100%;box-sizing:border-box;font-size:1em;padding:8px 12px;border:2px solid #ffb74d;border-radius:10px;font-family:inherit}
+  button{font-size:.95em;padding:8px 16px;border:none;border-radius:10px;cursor:pointer;font-weight:bold;font-family:inherit}
+  .go{background:#ef6c00;color:#fff} .go:hover{background:#e65100}
+  .hint{background:#ffe082;color:#5d4037}
+  .blue{background:#1e88e5;color:#fff}
+  .purple{background:#8e24aa;color:#fff}
+  .grey{background:#cfd8dc;color:#263238}
+  .btnrow{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px}
+  textarea{width:100%;box-sizing:border-box;min-height:300px;font-size:1.05em;line-height:1.7;font-family:Georgia,"Times New Roman",serif;padding:14px;border:3px solid #ffb74d;border-radius:12px}
+  textarea:focus{outline:none;border-color:#ef6c00}
+  .counter{display:flex;flex-wrap:wrap;gap:20px;align-items:center;margin:8px 0;font-weight:bold}
+  .meter{flex:1;min-width:200px;height:18px;background:#e0e0e0;border-radius:9px;overflow:hidden}
+  .meter div{height:100%;width:0;background:#ffb300;transition:width .2s}
+  .checklist label{display:block;padding:6px 4px;cursor:pointer}
+  .checklist input{transform:scale(1.4);margin-right:10px}
+  .prompts label{display:block;background:#fff3e0;border-radius:10px;padding:10px 14px;margin:8px 0;cursor:pointer}
+  .prompts input{transform:scale(1.3);margin-right:8px}
+  #scoreBox{position:sticky;bottom:0;background:#e65100;color:#fff;border-radius:16px 16px 0 0;padding:12px 20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-top:30px}
+  .w5{display:grid;gap:8px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));margin:10px 0}
+  .w5 label{display:block;font-weight:bold;color:#e65100}
+  .w5 input{width:100%;box-sizing:border-box;font-size:.95em;padding:6px 10px;border:2px solid #ffb74d;border-radius:8px;font-family:inherit}
+  #printArea{display:none}
+  @media print{
+    body{background:#fff;font-size:14pt}
+    .wrap,#scoreBox{display:none !important}
+    #printArea{display:block;font-family:Georgia,serif;line-height:1.8}
+    #printArea h1{font-size:18pt;margin:0 0 6pt}
+    #printArea .meta{font-size:11pt;color:#444}
+    #printArea .text{white-space:pre-wrap;border-top:1px solid #999;padding-top:10pt;margin-top:10pt}
+    #printArea .lines{margin-top:24pt;border-top:1px solid #999;padding-top:6pt;font-size:11pt}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+<a class="home" href="../../index.html">&larr; Back to all lessons</a>
+<h1>✍️ Writing Week 29: Interview Article: A Day in the Life of a Paramedic 🚑🎤</h1>
+<p>Yesterday you wrote like a scientist describing a fossil. Today, Ace, you'll write like a <strong>journalist</strong>. Magazines and newspapers often share an <strong>interview article</strong>: the writer asks a real person smart questions, then turns the answers into an interesting piece with a <strong>headline</strong>, a <strong>hook</strong>, <strong>background</strong>, <strong>questions and answers</strong> with <strong>direct quotations</strong>, and a strong <strong>ending</strong>. Your subject today is someone on an emergency team, such as a paramedic, a 9-1-1 dispatcher, or an ER nurse. You can interview a real grown-up you know (with permission!), or invent a believable one using facts from today's reading.</p>
+
+<h2>Part 1: The Lesson</h2>
+<div class="box">
+  <h3 style="margin-top:0">An interview article has six building blocks 🧩</h3>
+  <p>A good interview article reads like a conversation, but it is carefully organized so the reader learns something and enjoys it.</p>
+  <div class="senses">
+    <div class="side"><strong>1. Headline:</strong> a short, catchy title that tells the reader who the article is about</div>
+    <div class="side"><strong>2. Hook (lead):</strong> an opening sentence or two that grabs attention: a vivid moment, a surprising fact, or a strong quotation</div>
+    <div class="side"><strong>3. Background:</strong> who the person is, what their job is, where they work, and how long they have done it</div>
+    <div class="side"><strong>4. Questions:</strong> <em>open-ended</em> questions (how, why, what, describe) that can't be answered with just yes or no</div>
+    <div class="side"><strong>5. Answers + quotations:</strong> the person's exact words in quotation marks, mixed with the writer's own summary</div>
+    <div class="side"><strong>6. Wrap-up:</strong> an ending that ties it together: advice from the person, a final quotation, or what the writer learned</div>
+  </div>
+  <h3>Five journalist's moves</h3>
+  <ul>
+    <li><strong>Ask open-ended questions:</strong> "Do you like your job?" gets "Yes." "What is the hardest part of your job, and how do you handle it?" gets a story.</li>
+    <li><strong>Ask a follow-up:</strong> when an answer is interesting, dig deeper: "Can you give me an example?" or "How did that make you feel?"</li>
+    <li><strong>Quote the best lines exactly:</strong> put the speaker's exact words in quotation marks. Summarize the rest in your own words (that's called <em>paraphrasing</em>).</li>
+    <li><strong>Use strong speaker tags:</strong> instead of always "said," try <em>explained</em>, <em>admitted</em>, <em>laughed</em>, <em>added</em>, or <em>recalled</em>.</li>
+    <li><strong>Be accurate and respectful:</strong> never invent words for a real person, and leave out private details like home addresses or patients' names.</li>
+  </ul>
+  <p><strong>Punctuating quotations:</strong> commas and periods go <em>inside</em> the closing quotation mark. "I love helping people," she said. She said, "I love helping people." A question mark goes inside if the <em>quote</em> is the question: He asked, "Are you okay?"</p>
+</div>
+
+<div class="box">
+  <h3 style="margin-top:0">Model Interview Article (short version)</h3>
+  <p class="legend"><span class="ts">Headline + hook</span><span class="ev">Background</span><span class="ex">Questions, answers + quotations</span><span class="cs">Wrap-up</span></p>
+  <p class="model">
+    <span class="ts"><strong>Calm in the Storm: Meet Paramedic Priya Sandhu</strong><br>"The siren is loud, but inside the ambulance I try to be the quietest person there," Priya Sandhu told me with a smile.</span><br>
+    <span class="ev">Sandhu has been a paramedic in British Columbia for nine years. She works twelve-hour shifts, and on a busy day her crew may answer more than ten calls.</span><br>
+    <span class="ex"><strong>What is the first thing you do when you reach a patient?</strong><br>"I look, I listen, and I introduce myself," she explained. "A scared person needs to know someone is in charge." Then she checks vital signs, like pulse and breathing.<br>
+    <strong>What is the hardest part of the job?</strong><br>Sandhu admitted that night shifts are tiring. "But when someone squeezes my hand and says thank you, I forget I'm tired," she added.</span><br>
+    <span class="cs">Before I left, I asked what kids can do to help. "Learn your address and how to call 9-1-1," she said. "You could be the first hero on the scene." I'll never hear a siren the same way again.</span>
+  </p>
+  <p><strong>Notice:</strong> the hook is a strong quotation; the background gives facts about the person; the questions are open-ended (what, what is the hardest); the writer mixes exact quotations with paraphrasing; speaker tags vary (told, explained, admitted, added); and the wrap-up ends with advice and what the writer learned. (Priya Sandhu is an invented paramedic for this model.)</p>
+</div>
+
+<h2>Part 2: Name That Interview Part</h2>
+<div class="box">
+  <p>Each line comes from a student's interview article about a 9-1-1 dispatcher named Marcus. Choose which <strong>part of the article</strong> it belongs in.</p>
+  <div id="labelRows"></div>
+  <div class="btnrow"><button type="button" class="go" id="checkLabels">Check my answers</button></div>
+  <div class="fb" id="labelFb"></div>
+</div>
+
+<h2>Part 3: Grammar Clinic 🚑</h2>
+<div class="box tipbox">A careful journalist checks every sentence before it is printed! <strong>Section A:</strong> pick the correct sentence. <strong>Section B:</strong> type the sentence again with <em>all</em> mistakes fixed. We use <strong>Canadian spelling</strong> (colour, centre, metre, favourite). Today, watch <strong>punctuation with quotation marks</strong>, <strong>its / it's</strong>, <strong>affect / effect</strong>, <strong>fewer / less</strong>, <strong>whose / who's</strong>, <strong>then / than</strong>, and the <strong>comma after an introductory phrase</strong>.</div>
+<h3>Section A: Pick the correct sentence</h3>
+<div id="gmc"></div>
+<h3>Section B: Fix the sentence</h3>
+<p>Retype the whole sentence correctly, with capital letters and punctuation. Each one has <strong>at least two</strong> mistakes.</p>
+<div id="gfix"></div>
+
+<h2>Part 4: Your Turn to Write</h2>
+<div class="box">
+  <h3 style="margin-top:0">Step 1: Choose your interview</h3>
+  <p>Pick <strong>one</strong> option. If you interview a real person, ask a parent first and take notes while they talk.</p>
+  <div class="prompts" id="prompts">
+    <label><input type="radio" name="prompt" value="Option A: Interview a real grown-up about their job" checked> 🎤 <strong>Option A:</strong> Interview a real grown-up you know (like Dad, a relative, or a family friend) about their job, especially any time they had to stay calm in an emergency or help someone.</label>
+    <label><input type="radio" name="prompt" value="Option B: An invented paramedic"> 🚑 <strong>Option B:</strong> Invent a believable paramedic. Use real facts from today's reading: vital signs, oxygen, the golden hour, calming the patient, and sending results to the hospital.</label>
+    <label><input type="radio" name="prompt" value="Option C: An invented 9-1-1 dispatcher or ER nurse"> 📞 <strong>Option C:</strong> Invent a 9-1-1 dispatcher or an ER triage nurse. Include the questions they ask, how they decide who needs help first, and how they stay calm.</label>
+  </div>
+  <p><strong>Plan your article:</strong> jot a few words for each box. (These notes save with your writing.)</p>
+  <div class="w5" id="w5">
+    <div><label for="w5who">Headline: who is it about? Make it catchy</label><input id="w5who" type="text" autocomplete="off"></div>
+    <div><label for="w5place">Hook: a vivid moment, surprising fact, or strong quotation</label><input id="w5place" type="text" autocomplete="off"></div>
+    <div><label for="w5facts">Background: job, workplace, how long</label><input id="w5facts" type="text" autocomplete="off"></div>
+    <div><label for="w5senses">3+ open-ended questions (how, why, what, describe)</label><input id="w5senses" type="text" autocomplete="off"></div>
+    <div><label for="w5feel">Best quotations + a follow-up question</label><input id="w5feel" type="text" autocomplete="off"></div>
+    <div><label for="w5closing">Wrap-up: advice, final quote, or what I learned</label><input id="w5closing" type="text" autocomplete="off"></div>
+  </div>
+
+  <h3>Step 2: Write your interview article</h3>
+  <p><strong>Goal:</strong> <strong>250 to 350 words</strong> with all <strong>six building blocks</strong>. Include at least <strong>three open-ended questions</strong> (in bold or on their own lines), at least <strong>four direct quotations</strong> punctuated correctly, at least <strong>one follow-up question</strong>, at least <strong>three different speaker tags</strong> (explained, admitted, laughed...), at least <strong>one paraphrase</strong> (an answer in your own words), and a <strong>wrap-up</strong>. Bonus: read your article aloud to the person you interviewed and ask, "Did I get your words right?"</p>
+  <p><button type="button" class="hint" id="templateBtn">📋 Add the layout for me</button></p>
+  <label for="essay"><strong>Write here, Ace:</strong></label>
+  <textarea id="essay" placeholder="HEADLINE: ..."></textarea>
+  <div class="counter">
+    <span id="wc">0 words</span>
+    <span id="sc">0 sentences</span>
+    <div class="meter" aria-hidden="true"><div id="meterBar"></div></div>
+  </div>
+  <div class="fb" id="wcMsg">Aim for 250 to 350 words.</div>
+  <p style="font-size:.8em;color:#607d8b" id="saveNote">Your writing is saved automatically in this browser as you type.</p>
+
+  <h3>Self-check before you finish ✅</h3>
+  <div class="checklist" id="checklist">
+    <label><input type="checkbox"> My article has a catchy <strong>headline</strong> and a <strong>hook</strong> that grabs attention.</label>
+    <label><input type="checkbox"> I gave <strong>background</strong>: who the person is, their job, and where they work.</label>
+    <label><input type="checkbox"> I asked at least <strong>three open-ended questions</strong> and at least <strong>one follow-up</strong>.</label>
+    <label><input type="checkbox"> I used at least <strong>four direct quotations</strong>, with commas and periods <strong>inside</strong> the closing quotation marks.</label>
+    <label><input type="checkbox"> I used at least <strong>three different speaker tags</strong> and at least <strong>one paraphrase</strong>.</label>
+    <label><input type="checkbox"> My <strong>wrap-up</strong> ends with advice, a final quotation, or what I learned, and I left out private details.</label>
+    <label><input type="checkbox"> I checked its / it's, affect / effect, fewer / less, whose / who's, then / than, commas after introductory phrases, and <strong>Canadian spelling</strong> (centre, metre, colour).</label>
+  </div>
+  <div class="btnrow">
+    <button type="button" class="blue" id="downloadBtn">⬇️ Download my writing (for Dad)</button>
+    <button type="button" class="purple" id="printBtn">🖨️ Print my writing</button>
+    <button type="button" class="grey" id="clearBtn">Start over</button>
+  </div>
+  <div class="fb" id="doneMsg"></div>
+</div>
+
+<div id="scoreBox"><span id="scoreText"></span><span>Keep going, reporter Ace! 🎤</span></div>
+</div>
+
+<div id="printArea"></div>
+
+<script>
+var NAME="Ace";
+var PRAISE=["Nice work, Ace!","Correct! Great editing eye!","Yes! Ace fixed it!","Excellent, reporter Ace!","Front-page news! 📰"];
+function pick(a){return a[Math.floor(Math.random()*a.length)];}
+
+var LABELS=["Headline", "Hook", "Background", "Question", "Answer + quotation", "Wrap-up"];
+var LABEL_ITEMS=[
+ {s:"How do you stay calm when a caller is screaming?", a:"Question"},
+ {s:"The Voice on the Other End: Meet Dispatcher Marcus Lee", a:"Headline"},
+ {s:"\"I take a slow breath before I speak, because if I sound calm, the caller gets calmer too,\" Marcus explained.", a:"Answer + quotation"},
+ {s:"Marcus has worked at a 9-1-1 centre in British Columbia for six years and answers about 80 calls in a single shift.", a:"Background"},
+ {s:"At 3:12 in the morning, the phone lights up, and Marcus has less than fifteen seconds to answer it.", a:"Hook"},
+ {s:"When I asked for his best advice, Marcus said every kid should memorize their address. After this interview, I practised mine twice.", a:"Wrap-up"}
+];
+var labelScore=0, labelChecked=false;
+function buildLabels(){
+  var box=document.getElementById("labelRows");
+  LABEL_ITEMS.forEach(function(it,i){
+    var d=document.createElement("div"); d.className="row"; d.id="lr"+i;
+    var sel='<select id="ls'+i+'" aria-label="Job of sentence '+(i+1)+'"><option value="">- choose -</option>';
+    LABELS.forEach(function(l){sel+='<option>'+l+'</option>';});
+    sel+='</select>';
+    d.innerHTML='<strong>'+(i+1)+'.</strong> '+it.s+'<br>'+sel+' <span id="lm'+i+'"></span>';
+    box.appendChild(d);
+  });
+}
+function checkLabels(){
+  var sc=0;
+  LABEL_ITEMS.forEach(function(it,i){
+    var ok=document.getElementById("ls"+i).value===it.a; if(ok)sc++;
+    document.getElementById("lr"+i).className="row "+(ok?"right":"wrong");
+    document.getElementById("lm"+i).textContent=ok?"✅":"❌";
+  });
+  labelScore=sc; labelChecked=true;
+  var fb=document.getElementById("labelFb");
+  if(sc===LABEL_ITEMS.length){fb.className="fb good";fb.textContent="🌟 "+sc+" / "+LABEL_ITEMS.length+". "+pick(PRAISE)+" You know exactly how an interview article is built!";}
+  else{fb.className="fb bad";fb.textContent=sc+" / "+LABEL_ITEMS.length+". Hint: the title = headline; an exciting opening moment = hook; facts about the person and their job = background; something the writer asks = question; the person\'s exact words with a speaker tag = answer + quotation; advice or what the writer learned at the end = wrap-up. Fix the ❌ ones and check again.";}
+  updateScore();
+}
+
+var GMC=[
+ {q:"Which sentence punctuates the <strong>quotation</strong> correctly?",
+  o:["\"Always check that the scene is safe\", the paramedic said.", "\"Always check that the scene is safe,\" the paramedic said.", "\"Always check that the scene is safe\" the paramedic said.", "\"Always check that the scene is safe.\" the paramedic said."],
+  a:1,e:"When a speaker tag comes <em>after</em> the quotation, end the quoted words with a <strong>comma inside</strong> the closing quotation mark: \"...is safe,\" the paramedic said."},
+ {q:"Which sentence uses <strong>its / it's</strong> correctly?",
+  o:["It's important to check the ambulance before its first call.", "Its important to check the ambulance before it's first call.", "It's important to check the ambulance before it's first call.", "Its important to check the ambulance before its first call."],
+  a:0,e:"<em>It's</em> = <strong>it is</strong> (It's important). <em>Its</em> = <strong>belonging to it</strong> (its first call). Test: can you say \"it is\"? If yes, use <em>it's</em>."},
+ {q:"Which sentence uses <strong>affect / effect</strong> correctly?",
+  o:["Fear can effect your breathing, and a calm voice has a good affect.", "Fear can affect your breathing, and a calm voice has a good affect.", "Fear can effect your breathing, and a calm voice has a good effect.", "Fear can affect your breathing, and a calm voice has a good effect."],
+  a:3,e:"<em>Affect</em> is usually a <strong>verb</strong> (to <strong>A</strong>ct on something). <em>Effect</em> is usually a <strong>noun</strong>, the r<strong>E</strong>sult (a good effect)."},
+ {q:"Which sentence uses <strong>fewer / less</strong> correctly?",
+  o:["The new station had less calls and fewer traffic.", "The new station had fewer calls and less traffic.", "The new station had fewer calls and fewer traffic.", "The new station had less calls and less traffic."],
+  a:1,e:"Use <em>fewer</em> for things you can <strong>count</strong> (fewer calls) and <em>less</em> for things you <strong>can't count one by one</strong> (less traffic, less water)."},
+ {q:"Which sentence uses <strong>whose / who's</strong> correctly?",
+  o:["Who's backpack is this, and whose coming with me?", "Whose backpack is this, and whose coming with me?", "Whose backpack is this, and who's coming with me?", "Who's backpack is this, and who's coming with me?"],
+  a:2,e:"<em>Who's</em> = <strong>who is</strong> (who's coming). <em>Whose</em> shows <strong>ownership</strong> (whose backpack)."},
+ {q:"Which sentence uses <strong>then / than</strong> correctly?",
+  o:["The helicopter was faster then the ambulance, and than it landed on the roof.", "The helicopter was faster than the ambulance, and then it landed on the roof.", "The helicopter was faster then the ambulance, and then it landed on the roof.", "The helicopter was faster than the ambulance, and than it landed on the roof."],
+  a:1,e:"<em>Than</em> is for <strong>comparing</strong> (faster than). <em>Then</em> is about <strong>time</strong> (and then it landed)."},
+ {q:"Which sentence uses a <strong>comma after an introductory phrase</strong> correctly?",
+  o:["After the long night shift the paramedic, finally went home.", "After the long night shift, the paramedic finally went home.", "After, the long night shift the paramedic finally went home.", "After the long night, shift the paramedic finally went home."],
+  a:1,e:"When a sentence <strong>starts</strong> with a phrase that sets the scene (After the long night shift), put a comma <strong>after the whole phrase</strong>, right before the main part of the sentence."}
+];
+var gmcState=GMC.map(function(){return{answered:false,firstRight:false,done:false};});
+function buildGMC(){
+  var box=document.getElementById("gmc");
+  GMC.forEach(function(it,i){
+    var d=document.createElement("div"); d.className="box q"; d.id="g"+i;
+    var h='<div><strong>'+(i+1)+'.</strong> '+it.q+'</div>';
+    it.o.forEach(function(o,j){h+='<button type="button" class="opt" data-i="'+i+'" data-j="'+j+'">'+String.fromCharCode(65+j)+'. '+o+'</button>';});
+    h+='<div class="fb" id="gfb'+i+'"></div>';
+    d.innerHTML=h; box.appendChild(d);
+  });
+  box.addEventListener("click",function(e){
+    var b=e.target.closest?e.target.closest(".opt"):e.target; if(!b||!b.classList.contains("opt"))return;
+    var i=+b.getAttribute("data-i"), j=+b.getAttribute("data-j"), st=gmcState[i], it=GMC[i];
+    if(st.done)return;
+    var ok=j===it.a; if(!st.answered){st.answered=true;st.firstRight=ok;}
+    var fb=document.getElementById("gfb"+i);
+    if(ok){st.done=true;b.classList.add("sel-right");document.getElementById("g"+i).className="box q right";fb.className="fb good";fb.innerHTML="✅ "+pick(PRAISE)+' <span class="explain">'+it.e+'</span>';}
+    else{b.classList.add("sel-wrong");document.getElementById("g"+i).className="box q wrong";fb.className="fb bad";fb.textContent="❌ Not quite, Ace. Look closely and try again.";}
+    updateScore();
+  });
+}
+
+var GFIX=[
+ {bad:"during the interview the nurse explained that triage has a big affect on who is seen first",
+  ok:["During the interview, the nurse explained that triage has a big effect on who is seen first."],
+  hint:"Capitalize the first word. Add a comma after the introductory phrase <em>During the interview</em>. Here the word is a noun (a big ___), so use <em>effect</em>. End with a period."},
+ {bad:"its amazing how the ambulance got their faster then I expected",
+  ok:["It's amazing how the ambulance got there faster than I expected."],
+  hint:"<em>It's</em> = it is, and it starts the sentence, so capitalize it. <em>There</em> is a place (<em>their</em> means belonging to them). Use <em>than</em> to compare. End with a period."},
+ {bad:"the paramedic whos teaching our class has less students then last year",
+  ok:["The paramedic who's teaching our class has fewer students than last year."],
+  hint:"Capitalize the first word. <em>Who's</em> = who is (who is teaching), and it needs an apostrophe. Students can be counted, so use <em>fewer</em>. Use <em>than</em> to compare. End with a period."},
+ {bad:"ace asked the dispatcher how many calls she answers each day she said about eighty",
+  ok:["Ace asked the dispatcher how many calls she answers each day. She said about eighty.", "Ace asked the dispatcher how many calls she answers each day, and she said about eighty.", "Ace asked the dispatcher how many calls she answers each day; she said about eighty."],
+  hint:"Capitalize the name <em>Ace</em>. This is a run-on: two complete sentences are squashed together. Make two sentences, or join them with <em>, and</em>. End with a period."}
+];
+
+var gfixState=GFIX.map(function(){return{tries:0,correct:false,firstRight:false};});
+function norm(s){return s.replace(/[\u2018\u2019\u02BC]/g,"'").replace(/[\u201C\u201D]/g,'"').replace(/\s+/g," ").trim();}
+function checkFixAnswer(i,val){var v=norm(val);return GFIX[i].ok.some(function(a){return norm(a)===v;});}
+function buildGFix(){
+  var box=document.getElementById("gfix");
+  GFIX.forEach(function(it,i){
+    var d=document.createElement("div"); d.className="box q"; d.id="f"+i;
+    d.innerHTML='<div><strong>'+(i+1)+'.</strong> Fix: <span class="bad-sent">'+it.bad+'</span></div>'+
+     '<input class="fix" type="text" id="fi'+i+'" autocomplete="off" spellcheck="false" aria-label="Corrected sentence '+(i+1)+'">'+
+     '<div class="btnrow"><button type="button" class="go" data-act="check" data-i="'+i+'">Check</button><button type="button" class="hint" data-act="hint" data-i="'+i+'">Hint 💡</button><button type="button" class="grey" data-act="show" data-i="'+i+'" style="display:none">Show answer</button></div>'+
+     '<div class="fb" id="ffb'+i+'"></div>';
+    box.appendChild(d);
+  });
+  box.addEventListener("click",function(e){
+    var b=e.target; if(b.tagName!=="BUTTON")return;
+    var i=+b.getAttribute("data-i"), act=b.getAttribute("data-act"), fb=document.getElementById("ffb"+i);
+    if(act==="hint"){fb.className="fb";fb.style.color="#5d4037";fb.textContent="💡 "+GFIX[i].hint;return;}
+    fb.style.color="";
+    if(act==="show"){fb.className="fb";fb.innerHTML='Answer: <em>'+GFIX[i].ok[0]+'</em>'+(GFIX[i].ok.length>1?' (other correct versions are accepted too)':'');return;}
+    fixCheck(i);
+  });
+  box.addEventListener("keydown",function(e){if(e.key==="Enter"&&e.target.classList.contains("fix"))fixCheck(+e.target.id.slice(2));});
+}
+function fixCheck(i){
+  var val=document.getElementById("fi"+i).value, fb=document.getElementById("ffb"+i), st=gfixState[i];
+  fb.style.color="";
+  if(!val.trim()){fb.className="fb bad";fb.textContent="Type the corrected sentence first, Ace!";return;}
+  st.tries++;
+  if(checkFixAnswer(i,val)){ if(st.tries===1)st.firstRight=true; st.correct=true; document.getElementById("f"+i).className="box q right"; fb.className="fb good"; fb.textContent="✅ "+pick(PRAISE); }
+  else { st.correct=false; document.getElementById("f"+i).className="box q wrong"; fb.className="fb bad"; fb.textContent="❌ Not quite. Check every capital letter, apostrophe, comma, and spelling. Try again!"; if(st.tries>=2)document.querySelector('#f'+i+' [data-act=show]').style.display="inline-block"; }
+  updateScore();
+}
+
+function updateScore(){
+  var g=0; gmcState.forEach(function(s){if(s.firstRight)g++;});
+  var f=0; gfixState.forEach(function(s){if(s.correct)f++;});
+  var total=LABEL_ITEMS.length+GMC.length+GFIX.length, got=labelScore+g+f;
+  document.getElementById("scoreText").textContent="Score: "+got+" / "+total+"  (labels "+(labelChecked?labelScore:"-")+"/"+LABEL_ITEMS.length+" · grammar A "+g+"/"+GMC.length+" · grammar B "+f+"/"+GFIX.length+")";
+}
+
+var W5=["who","place","facts","senses","feel","closing"];
+function w5Save(){try{localStorage.setItem(KEY+"-5w",JSON.stringify(W5.map(function(k){return document.getElementById("w5"+k).value;})));}catch(e){}}
+function w5Restore(){try{var d=JSON.parse(localStorage.getItem(KEY+"-5w")||"null");if(d)d.forEach(function(x,i){document.getElementById("w5"+W5[i]).value=x;});}catch(e){}}
+function w5Summary(){return W5.map(function(k){return k.charAt(0).toUpperCase()+k.slice(1)+": "+document.getElementById("w5"+k).value;}).join("\n");}
+function addTemplate(){
+  var t=document.getElementById("essay");
+  var tpl="HEADLINE: \n\nHOOK: \n\nBACKGROUND: \n\nQUESTION 1: \nANSWER: \n\nQUESTION 2: \nANSWER: \n\nFOLLOW-UP QUESTION: \nANSWER: \n\nQUESTION 3: \nANSWER: \n\nWRAP-UP: \n\nInterview by "+NAME;
+  if(t.value.trim()&&!confirm("Add the interview layout below what you've already written?"))return;
+  t.value=(t.value.trim()?t.value.replace(/\s+$/,"")+"\n\n":"")+tpl; updateCount(); t.focus();
+}
+var KEY="ace-writing-2026-10-26";
+function countWords(t){var m=t.trim().match(/[A-Za-zÀ-ÿ0-9]+(?:['’\-][A-Za-zÀ-ÿ0-9]+)*/g);return m?m.length:0;}
+function countSentences(t){var m=t.match(/[^.!?]*[A-Za-z0-9][^.!?]*[.!?]+/g);return m?m.length:0;}
+function currentPrompt(){var r=document.querySelector('input[name=prompt]:checked');return r?r.value:"";}
+function updateCount(){
+  var t=document.getElementById("essay").value, w=countWords(t), s=countSentences(t);
+  document.getElementById("wc").textContent=w+(w===1?" word":" words");
+  document.getElementById("sc").textContent=s+(s===1?" sentence":" sentences");
+  var bar=document.getElementById("meterBar"); bar.style.width=Math.min(100,w/350*100)+"%";
+  var msg=document.getElementById("wcMsg");
+  if(w<250){bar.style.background="#ffb300";msg.className="fb";msg.textContent=w===0?"Aim for 250 to 350 words.":"Keep going, Ace! "+(250-w)+" more words to reach the goal.";}
+  else if(w<=350){bar.style.background="#43a047";msg.className="fb good";msg.textContent="🎯 You're in the target zone! Nice work, Ace!";}
+  else{bar.style.background="#1e88e5";msg.className="fb";msg.textContent="Wow, that's a lot of writing! Strong interview articles keep only the best quotations! Could any sentences be cut?";}
+  try{localStorage.setItem(KEY,JSON.stringify({text:t,prompt:currentPrompt(),checks:checkStates()}));}catch(e){document.getElementById("saveNote").textContent="(This browser can't auto-save here, so use the Download button before closing!)";}
+}
+function checkStates(){return Array.prototype.map.call(document.querySelectorAll("#checklist input"),function(c){return c.checked;});}
+function checklistText(){
+  return Array.prototype.map.call(document.querySelectorAll("#checklist label"),function(l){return (l.querySelector("input").checked?"[x] ":"[ ] ")+l.textContent.trim();}).join("\n");
+}
+function buildReport(){
+  var t=document.getElementById("essay").value;
+  return "Writing Week 29: "+NAME+"\nDate: "+new Date().toLocaleString("en-CA")+"\nPrompt: "+currentPrompt()+
+    "\nWords: "+countWords(t)+"   Sentences: "+countSentences(t)+"\nPlanning notes:\n"+w5Summary()+
+    "\n\n----- "+NAME+"'s writing -----\n\n"+t+"\n\n----- Self-check -----\n"+checklistText()+
+    "\n\n----- Parent feedback -----\n\n\n";
+}
+function download(){
+  var t=document.getElementById("essay").value;
+  if(!t.trim()){document.getElementById("doneMsg").className="fb bad";document.getElementById("doneMsg").textContent="Write something first, Ace!";return;}
+  var blob=new Blob([buildReport().replace(/\n/g,"\r\n")],{type:"text/plain;charset=utf-8"});
+  var a=document.createElement("a"); a.href=URL.createObjectURL(blob); a.download=NAME+"-writing-2026-10-26"+".txt";
+  document.body.appendChild(a); a.click();
+  setTimeout(function(){URL.revokeObjectURL(a.href);a.remove();},1000);
+  var dm=document.getElementById("doneMsg"); dm.className="fb good"; dm.textContent="📄 Saved! Look in your Downloads folder and show Dad. Great job finishing, Ace!";
+}
+function esc(s){return s.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");}
+function printIt(){
+  var t=document.getElementById("essay").value;
+  if(!t.trim()){document.getElementById("doneMsg").className="fb bad";document.getElementById("doneMsg").textContent="Write something first, Ace!";return;}
+  document.getElementById("printArea").innerHTML="<h1>Writing Week 29: "+NAME+"</h1><div class='meta'>"+esc(new Date().toLocaleString("en-CA"))+"<br><strong>Prompt:</strong> "+esc(currentPrompt())+"<br>Words: "+countWords(t)+" · Sentences: "+countSentences(t)+"</div><div class='text'>"+esc(t)+"</div><div class='lines'><strong>Self-check:</strong><br>"+esc(checklistText()).replace(/\n/g,"<br>")+"</div><div class='lines'><strong>Parent feedback:</strong><br><br><br><br></div>";
+  window.print();
+}
+function restore(){
+  try{var d=JSON.parse(localStorage.getItem(KEY)||"null"); if(!d)return;
+    document.getElementById("essay").value=d.text||"";
+    Array.prototype.forEach.call(document.querySelectorAll("input[name=prompt]"),function(r){r.checked=(r.value===d.prompt);});
+    if(!document.querySelector("input[name=prompt]:checked"))document.querySelector("input[name=prompt]").checked=true;
+    var cs=document.querySelectorAll("#checklist input"); (d.checks||[]).forEach(function(v,i){if(cs[i])cs[i].checked=v;});
+  }catch(e){}
+}
+buildLabels(); buildGMC(); buildGFix(); restore(); w5Restore(); updateCount(); updateScore();
+W5.forEach(function(k){document.getElementById("w5"+k).addEventListener("input",w5Save);});
+document.getElementById("templateBtn").addEventListener("click",addTemplate);
+document.getElementById("checkLabels").addEventListener("click",checkLabels);
+document.getElementById("essay").addEventListener("input",updateCount);
+document.getElementById("checklist").addEventListener("change",function(){updateCount(); if(checkStates().every(Boolean)){var dm=document.getElementById("doneMsg");dm.className="fb good";dm.textContent="✅ All boxes checked! Now download or print it for Dad. Awesome work, Ace!";}});
+document.getElementById("prompts").addEventListener("change",updateCount);
+document.getElementById("downloadBtn").addEventListener("click",download);
+document.getElementById("printBtn").addEventListener("click",printIt);
+document.getElementById("clearBtn").addEventListener("click",function(){ if(confirm("Erase your writing and start over?")){document.getElementById("essay").value="";Array.prototype.forEach.call(document.querySelectorAll("#checklist input"),function(c){c.checked=false;});document.getElementById("doneMsg").textContent="";updateCount();} });
+</script>
+<script src="../../assets/autosave.js"></script>
+</body>
+</html>
