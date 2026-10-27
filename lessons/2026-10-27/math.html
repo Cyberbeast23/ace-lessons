@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Math (Oct. 27): Finding Your Way: Maps, Latitude &amp; Longitude Math Lab</title>
+<style>
+  body{font-family:"Segoe UI",Verdana,Arial,sans-serif;font-size:20px;line-height:1.6;margin:0;background:#f5f0eb;color:#2c2416}
+  .wrap{max-width:880px;margin:0 auto;padding:20px 18px 80px}
+  a.home{font-size:.9em;color:#bf360c}
+  h1{color:#e65100;font-size:2em;margin:10px 0}
+  h2{color:#ef6c00;margin-top:36px;border-bottom:3px solid #ffcc80;padding-bottom:4px}
+  .box{background:#fff;border-radius:16px;padding:18px 22px;margin:16px 0;box-shadow:0 3px 10px rgba(0,0,0,.07)}
+  .example{border-left:8px solid #ef6c00}
+  .example h3{margin:0 0 6px;color:#e65100}
+  .step{margin:4px 0 4px 10px}
+  code,.mono{font-family:Consolas,"Courier New",monospace;background:#fff3e0;padding:1px 6px;border-radius:5px}
+  .q{border-left:8px solid #90a4ae}
+  .q.right{border-left-color:#43a047;background:#f1f8e9}
+  .q.wrong{border-left-color:#e53935;background:#fff5f5}
+  .qnum{font-weight:bold;color:#e65100}
+  .row{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:10px}
+  input[type=text]{font-size:1.05em;padding:8px 12px;border:2px solid #ffcc80;border-radius:10px;width:190px}
+  input[type=text]:focus{outline:none;border-color:#ef6c00;box-shadow:0 0 0 3px #ffe0b2}
+  button{font-size:.95em;padding:8px 16px;border:none;border-radius:10px;cursor:pointer;font-weight:bold}
+  .check{background:#ef6c00;color:#fff} .check:hover{background:#e65100}
+  .hint{background:#ffe082;color:#5d4037} .hint:hover{background:#ffd54f}
+  .sol{background:#ce93d8;color:#311b92}
+  .unit{color:#546e7a}
+  .fb{margin-top:8px;font-weight:bold;min-height:1em}
+  .fb.good{color:#2e7d32} .fb.bad{color:#c62828}
+  .hints{margin-top:8px;color:#e65100;background:#fff3e0;border-radius:10px;padding:0 12px}
+  .hints p{margin:6px 0;padding:6px 0}
+  .solution{margin-top:8px;background:#f3e5f5;border-radius:10px;padding:8px 12px;display:none}
+  #scoreBox{position:sticky;bottom:0;background:#e65100;color:#fff;border-radius:16px 16px 0 0;padding:12px 20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-top:30px}
+  #scoreBox button{background:#ffca28;color:#3e2723}
+  #final{display:none;font-size:1.15em;text-align:center;border:4px solid #43a047}
+  .tipbox{background:#fff8e1;border-left:8px solid #ffb300}
+</style>
+</head>
+<body>
+<div class="wrap">
+<a class="home" href="../../index.html">&larr; Back to all lessons</a>
+<h1>🧭 Math Week 30: Navigator's Math Lab</h1>
+<p>Ace, before phones could tell us where we are, sailors, explorers and pilots had to work it out with maps, compasses, clocks and math. Even today, a map is useless if you can't read its scale, and a GPS only works because computers do lightning-fast distance math. Today you'll work like a navigator with <strong>map scale ratios, converting centimetres to kilometres, reading latitude and longitude on a grid, degrees of latitude to kilometres, longitude and time zones (15° per hour), compass bearings and back bearings, turning angles, speed-distance-time, real area from a grid map, signal speed, contour lines, average speed for a whole trip, and an equation</strong>.</p>
+
+<h2>Part 1: Learn the Moves</h2>
+
+<div class="box tipbox">
+  <strong>The 4-Step Problem Solver (your navigator's checklist):</strong>
+  <ol>
+    <li><strong>Read</strong>: What is the question actually asking? Underline the numbers and units.</li>
+    <li><strong>Plan</strong>: Which operations do I need, and in what order? Do the units match (cm with cm, km with km, minutes with minutes)?</li>
+    <li><strong>Solve</strong>: Do one step at a time and write each step down.</li>
+    <li><strong>Check</strong>: Is my answer reasonable? Did I answer the question that was asked, in the right units?</li>
+  </ol>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 1: Map scale ratios</h3>
+  <p class="step">A scale of <strong>1 : 100 000</strong> means 1 cm on the map is 100 000 cm in real life. Since 100 cm = 1 m and 1000 m = 1 km, there are 100 000 cm in 1 km. So 1 cm on the map = <strong>1 km</strong>, and 3.5 cm on the map = <strong>3.5 km</strong>.</p>
+  <p class="step">Shortcut: to change cm into km, divide by 100 000 (that's ÷ 100, then ÷ 1000).</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 2: Latitude and longitude</h3>
+  <p class="step"><strong>Latitude</strong> lines run east-west and tell you how far <strong>north or south</strong> of the equator you are (0° to 90°). <strong>Longitude</strong> lines (meridians) run north-south and tell you how far <strong>east or west</strong> of the Prime Meridian in Greenwich, England you are (0° to 180°). Always say latitude first: Vancouver is about <strong>49°N, 123°W</strong>.</p>
+  <p class="step">Every 1° of latitude is about <strong>111 km</strong> north or south. So 2° of latitude ≈ 2 × 111 = <strong>222 km</strong>.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 3: Longitude and time</h3>
+  <p class="step">Earth turns 360° in 24 hours, so it turns 360 ÷ 24 = <strong>15° every hour</strong>. Two places 30° of longitude apart have sun-times 30 ÷ 15 = <strong>2 hours</strong> apart. Places farther <strong>east</strong> see the sun first, so their clocks are <strong>ahead</strong>.</p>
+  <p class="step">Going the other way: a 3-hour difference means 3 × 15 = <strong>45°</strong> of longitude.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 4: Compass bearings</h3>
+  <p class="step">A <strong>bearing</strong> is an angle measured <strong>clockwise from north</strong>, written with three digits. North = 000°, east = 090°, south = 180°, west = 270°.</p>
+  <p class="step">To go straight back the way you came, use the <strong>back bearing</strong>: add 180° (or subtract 180° if the bearing is already 180° or more). The back bearing of 040° is 040 + 180 = <strong>220°</strong>.</p>
+  <p class="step">A clockwise turn from 330° to 020° passes through north: 360 − 330 = 30°, then 30 + 20 = <strong>50°</strong>.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 5: Speed, distance and time</h3>
+  <p class="step">time = distance ÷ speed. A boat goes 30 km at 20 km/h: 30 ÷ 20 = 1.5 h = <strong>90 minutes</strong>.</p>
+  <p class="step"><strong>Average speed for a whole trip</strong> = <em>total</em> distance ÷ <em>total</em> time. Don't just average the two speeds!</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 6: Real area from a grid map</h3>
+  <p class="step">If each grid square is 2 km wide, a rectangle 3 squares by 4 squares is really 6 km by 8 km, so its area is 6 × 8 = <strong>48 km²</strong>. Change the side lengths to real units <em>first</em>, then multiply.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 7: Equations</h3>
+  <p class="step">20 + 3h = 35. Undo each step in reverse: subtract 20 (3h = 15), then divide by 3 (<strong>h = 5</strong>).</p>
+</div>
+
+<h2>Part 2: The Challenge (15 problems)</h2>
+<p>Type your answer and press <strong>Check</strong> (or Enter). Fractions like <span class="mono">3/4</span>, mixed numbers like <span class="mono">1 3/4</span>, or decimals like <span class="mono">1.75</span> are fine. Don't type the units, $ signs, or % signs, and you may use spaces or commas in big numbers (1 000 000). Stuck? Press <strong>Hint</strong>. After 2 tries, you can see a full solution.</p>
+
+<div id="questions"></div>
+<div class="box" id="final"></div>
+<div id="scoreBox">
+  <span id="scoreText">Score: 0 / 15 correct</span>
+  <button id="finishBtn" type="button">I'm done! Show my final score</button>
+</div>
+</div>
+
+<script>
+var NAME = "Ace";
+var GRAPH = '<div style="margin:10px 0"><svg viewBox="0 0 400 320" width="100%" style="max-width:460px;background:#fff;border-radius:12px" role="img" aria-label="Grid map. Lines of latitude run across from 48 degrees north at the bottom to 56 degrees north at the top, one line per degree. Lines of longitude run up and down from 128 degrees west on the left to 116 degrees west on the right, one line per degree. Point A Harbour, point B Lake, point C Fort and point D Peak are marked."><text x="200" y="18" text-anchor="middle" font-size="13" font-weight="bold" fill="#0d47a1">Explorer grid map (one line every 1°)</text><line x1="350" y1="30" x2="350" y2="270" stroke="#90a4ae"/><text x="350" y="286" text-anchor="middle" font-size="11" fill="#37474f">116°W</text><line x1="325" y1="30" x2="325" y2="270" stroke="#e0e0e0"/><line x1="300" y1="30" x2="300" y2="270" stroke="#90a4ae"/><text x="300" y="286" text-anchor="middle" font-size="11" fill="#37474f">118°W</text><line x1="275" y1="30" x2="275" y2="270" stroke="#e0e0e0"/><line x1="250" y1="30" x2="250" y2="270" stroke="#90a4ae"/><text x="250" y="286" text-anchor="middle" font-size="11" fill="#37474f">120°W</text><line x1="225" y1="30" x2="225" y2="270" stroke="#e0e0e0"/><line x1="200" y1="30" x2="200" y2="270" stroke="#90a4ae"/><text x="200" y="286" text-anchor="middle" font-size="11" fill="#37474f">122°W</text><line x1="175" y1="30" x2="175" y2="270" stroke="#e0e0e0"/><line x1="150" y1="30" x2="150" y2="270" stroke="#90a4ae"/><text x="150" y="286" text-anchor="middle" font-size="11" fill="#37474f">124°W</text><line x1="125" y1="30" x2="125" y2="270" stroke="#e0e0e0"/><line x1="100" y1="30" x2="100" y2="270" stroke="#90a4ae"/><text x="100" y="286" text-anchor="middle" font-size="11" fill="#37474f">126°W</text><line x1="75" y1="30" x2="75" y2="270" stroke="#e0e0e0"/><line x1="50" y1="30" x2="50" y2="270" stroke="#90a4ae"/><text x="50" y="286" text-anchor="middle" font-size="11" fill="#37474f">128°W</text><line x1="50" y1="270" x2="350" y2="270" stroke="#90a4ae"/><text x="44" y="274" text-anchor="end" font-size="11" fill="#37474f">48°N</text><line x1="50" y1="240" x2="350" y2="240" stroke="#e0e0e0"/><line x1="50" y1="210" x2="350" y2="210" stroke="#90a4ae"/><text x="44" y="214" text-anchor="end" font-size="11" fill="#37474f">50°N</text><line x1="50" y1="180" x2="350" y2="180" stroke="#e0e0e0"/><line x1="50" y1="150" x2="350" y2="150" stroke="#90a4ae"/><text x="44" y="154" text-anchor="end" font-size="11" fill="#37474f">52°N</text><line x1="50" y1="120" x2="350" y2="120" stroke="#e0e0e0"/><line x1="50" y1="90" x2="350" y2="90" stroke="#90a4ae"/><text x="44" y="94" text-anchor="end" font-size="11" fill="#37474f">54°N</text><line x1="50" y1="60" x2="350" y2="60" stroke="#e0e0e0"/><line x1="50" y1="30" x2="350" y2="30" stroke="#90a4ae"/><text x="44" y="34" text-anchor="end" font-size="11" fill="#37474f">56°N</text><circle cx="175" cy="240" r="6" fill="#1565c0"/><text x="184" y="233" font-size="13" font-weight="bold" fill="#0d47a1">A (Harbour)</text><circle cx="175" cy="120" r="6" fill="#1565c0"/><text x="184" y="113" font-size="13" font-weight="bold" fill="#0d47a1">B (Lake)</text><circle cx="100" cy="90" r="6" fill="#1565c0"/><text x="109" y="83" font-size="13" font-weight="bold" fill="#0d47a1">C (Fort)</text><circle cx="300" cy="180" r="6" fill="#1565c0"/><text x="309" y="173" font-size="13" font-weight="bold" fill="#0d47a1">D (Peak)</text><text x="364" y="40" font-size="12" font-weight="bold" fill="#c62828" text-anchor="middle">N</text><line x1="364" y1="70" x2="364" y2="46" stroke="#c62828" stroke-width="2"/></svg></div>';
+var TABLE = '<table style="border-collapse:collapse;margin:10px 0;font-size:.95em;background:#fff"><caption style="font-weight:bold;text-align:left;padding-bottom:4px">Approximate longitude of four Canadian cities</caption><tr><th style="border:1px solid #bdbdbd;padding:4px 10px;background:#e3f2fd">City</th><th style="border:1px solid #bdbdbd;padding:4px 10px;background:#e3f2fd">Longitude</th></tr><tr><td style="border:1px solid #bdbdbd;padding:4px 10px">Vancouver</td><td style="border:1px solid #bdbdbd;padding:4px 10px;text-align:right">123°W</td></tr><tr><td style="border:1px solid #bdbdbd;padding:4px 10px">Winnipeg</td><td style="border:1px solid #bdbdbd;padding:4px 10px;text-align:right">97°W</td></tr><tr><td style="border:1px solid #bdbdbd;padding:4px 10px">Toronto</td><td style="border:1px solid #bdbdbd;padding:4px 10px;text-align:right">79°W</td></tr><tr><td style="border:1px solid #bdbdbd;padding:4px 10px">Halifax</td><td style="border:1px solid #bdbdbd;padding:4px 10px;text-align:right">63°W</td></tr></table>';
+var QUESTIONS = [
+ {t:"A hiking map has a scale of <strong>1 : 250 000</strong>. Two campsites are <strong>6.4 cm</strong> apart on the map. How many <strong>kilometres</strong> apart are they in real life?", a:"16", u:"km",
+  h:["1 cm on the map = 250 000 cm in real life. Multiply 6.4 × 250 000 first.","6.4 × 250 000 = 1 600 000 cm. Divide by 100 to get metres, then by 1000 to get km."],
+  s:"6.4 × 250 000 = 1 600 000 cm. 1 600 000 ÷ 100 = 16 000 m. 16 000 ÷ 1000 = 16 km."},
+ {t:"On a road map of BC, <strong>1 cm represents 12 km</strong>. Two towns are <strong>252 km</strong> apart. How many <strong>centimetres</strong> apart are they on the map?", a:"21", u:"cm",
+  h:["Work backwards: how many groups of 12 km fit into 252 km?","252 ÷ 12 = ?"],
+  s:"252 ÷ 12 = 21, so the towns are 21 cm apart on the map."},
+ {t:GRAPH+"Look at the grid map. Point C (the Fort) is at <strong>54°N</strong>. What is its <strong>longitude</strong>? (Type just the number of degrees west.)", a:"126", u:"°W",
+  h:["Longitude lines run up and down. Only every second line is labelled, so count carefully.","Start at the 128°W label and count the lines to the right, one degree per line, until you reach point C."],
+  s:"Moving right from 128°W, the lines are 127°W, 126°W, 125°W, 124°W. Point C is on the second line, so it is at 54°N, <strong>126°W</strong>. Remember: in the west, the numbers get <em>smaller</em> as you go east!"},
+ {t:"On the same grid map, the Lake (B, at 53°N) is <strong>directly north</strong> of the Harbour (A, at 49°N), on the same line of longitude. If <strong>1° of latitude ≈ 111 km</strong>, about how many <strong>kilometres</strong> is it from the Harbour to the Lake?", a:"444", u:"km",
+  h:["How many degrees of latitude apart are they? 53 − 49.","4 degrees. Multiply by 111 km per degree."],
+  s:"53 − 49 = 4° of latitude. 4 × 111 = 444 km."},
+ {t:TABLE+"Earth turns <strong>15° every hour</strong>. Using the table, how many <strong>hours</strong> apart are the sun-times in <strong>Vancouver</strong> and <strong>Halifax</strong>?", a:"4", u:"hours",
+  h:["Find the difference in longitude: 123 − 63.","60° apart. How many 15° chunks is that?"],
+  s:"123 − 63 = 60°. 60 ÷ 15 = 4 hours. That matches real life: when it is noon in Vancouver (Pacific Time), it is 4:00 PM in Halifax (Atlantic Time)."},
+ {t:"In the 1700s, sailors found longitude with a very accurate clock called a <strong>chronometer</strong>, set to Greenwich time (0°). A ship near the coast of Vancouver Island sees the sun at its highest point (local noon). At that moment, the chronometer reads <strong>8:20 PM</strong> Greenwich time. How many <strong>degrees west</strong> of Greenwich is the ship?", a:"125", u:"°W",
+  h:["Noon to 8:20 PM is 8 hours 20 minutes. 20 minutes is what fraction of an hour?","8 h 20 min = 8 1/3 hours. Multiply by 15° per hour."],
+  s:"From 12:00 noon to 8:20 PM is 8 h 20 min = 8 1/3 h. Each hour is 15°, so 8 × 15 = 120°, plus 1/3 × 15 = 5°. Total 125°W. Greenwich is ahead, so the ship is west."},
+ {t:"A kayaker paddles out from shore on a bearing of <strong>070°</strong>. What <strong>bearing</strong> should she follow to paddle straight back to where she started?", a:"250", u:"°",
+  h:["The way back points in the exact opposite direction: half a full turn away.","Add 180° to 070°."],
+  s:"070° + 180° = 250°. (Check: 070° is a bit north of east, and 250° is a bit south of west, the opposite direction ✔)"},
+ {t:"A sailboat is heading on a bearing of <strong>300°</strong>. The captain turns <strong>clockwise</strong> until the boat is heading on a bearing of <strong>045°</strong>. How many <strong>degrees</strong> did the boat turn?", a:"105", u:"°",
+  h:["Turning clockwise from 300°, the boat passes north (360° = 000°) on the way.","From 300° to 360° is 60°. From 000° to 045° is 45° more."],
+  s:"300° → 360°: 60°. Then 000° → 045°: 45°. Total turn: 60 + 45 = 105°."},
+ {t:"A ferry crosses <strong>44 km</strong> of ocean at an average speed of <strong>24 km/h</strong>. How many <strong>minutes</strong> does the crossing take?", a:"110", u:"minutes",
+  h:["time = distance ÷ speed. 44 ÷ 24 gives hours.","44 ÷ 24 = 1 5/6 hours. Multiply by 60 to get minutes."],
+  s:"44 ÷ 24 = 11/6 h. 11/6 × 60 = 110 minutes (1 hour 50 minutes)."},
+ {t:"A plane leaves Vancouver at <strong>8:00 AM Pacific Time</strong> and flies <strong>3360 km</strong> to Toronto at <strong>840 km/h</strong>. Toronto clocks are <strong>3 hours ahead</strong> of Vancouver. On the <strong>24-hour clock</strong>, what hour does it show in Toronto when the plane lands? (Example: 2:00 PM would be 14.)", a:"15", u:":00 (Toronto time)",
+  h:["First find the flight time: 3360 ÷ 840.","The flight is 4 hours, so it lands at 12:00 noon Vancouver time. Now add the 3-hour time difference."],
+  s:"3360 ÷ 840 = 4 h. 8:00 AM + 4 h = 12:00 noon Pacific Time. Toronto is 3 hours ahead: 12 + 3 = 15, so 15:00 (3:00 PM) in Toronto."},
+ {t:"On a park map, each grid square is <strong>0.5 km</strong> wide. A rectangular wildlife area has corners at <strong>(1, 2)</strong>, <strong>(9, 2)</strong>, <strong>(9, 7)</strong> and <strong>(1, 7)</strong>. What is its real <strong>area</strong> in square kilometres?", a:"10", u:"km²",
+  h:["Find the width and height in squares: 9 − 1 and 7 − 2.","8 squares by 5 squares. Change each to km (× 0.5) before multiplying."],
+  s:"Width: 9 − 1 = 8 squares = 4 km. Height: 7 − 2 = 5 squares = 2.5 km. Area: 4 × 2.5 = 10 km²."},
+ {t:"A GPS receiver finds its distance to a satellite by timing a radio signal. Radio signals travel about <strong>300 000 km per second</strong>. If a signal takes <strong>0.07 seconds</strong> to arrive, about how many <strong>kilometres</strong> away is the satellite?", a:"21000", u:"km",
+  h:["distance = speed × time.","300 000 × 0.07 = ?"],
+  s:"300 000 × 0.07 = 21 000 km. A GPS receiver does this with at least 3 or 4 satellites and finds the one spot that matches all the distances. That is called <strong>trilateration</strong> (a cousin of triangulation)."},
+ {t:"On a topographic map, <strong>contour lines</strong> are drawn every <strong>20 m</strong> of height. A hiker starts on the <strong>340 m</strong> contour line and climbs uphill, crossing <strong>9 more</strong> contour lines to reach a lookout. What is the lookout's <strong>elevation</strong>?", a:"520", u:"m",
+  h:["Each contour line crossed going uphill adds 20 m.","9 × 20 = 180 m. Add it to the starting height."],
+  s:"9 × 20 = 180 m gained. 340 + 180 = 520 m."},
+ {t:"A sailboat sails <strong>45 km at 15 km/h</strong>, then <strong>36 km at 12 km/h</strong>. What is its <strong>average speed</strong> for the whole trip?", a:"13.5", u:"km/h",
+  h:["Find the time for each part: 45 ÷ 15 and 36 ÷ 12.","3 h + 3 h = 6 h in total, and 45 + 36 = 81 km in total. Divide total distance by total time."],
+  s:"Times: 45 ÷ 15 = 3 h and 36 ÷ 12 = 3 h, so 6 h in total. Distance: 45 + 36 = 81 km. Average speed: 81 ÷ 6 = 13.5 km/h."},
+ {t:"<strong>Challenge (equation):</strong> A research ship starts at latitude <strong>48.5°N</strong> and sails due north, gaining <strong>0.25°</strong> of latitude every hour. After <span class=\"mono\">h</span> hours it reaches <strong>50°N</strong>. Solve 48.5 + 0.25h = 50. What is <span class=\"mono\">h</span>?", a:"6", u:"hours",
+  h:["Undo the + 48.5 first: 0.25h = 50 − 48.5.","0.25h = 1.5. Now divide by 0.25 (or multiply by 4)."],
+  s:"48.5 + 0.25h = 50, so 0.25h = 1.5, and h = 1.5 ÷ 0.25 = 6 hours. (Check: 48.5 + 0.25 × 6 = 48.5 + 1.5 = 50 ✔)"}
+];
+
+var PRAISE = ["Nice work, Ace!","Correct! Right on course! 🧭","Yes! Navigator Ace!","Excellent, Ace. That was a tough one!","Right on target! 🎯","Brilliant thinking, Ace!","You found your way! 🗺️"];
+var ENCOURAGE = ["Not quite. Check your steps and try again!","Close call. Try again, Ace! Maybe use a hint?","Hmm, not yet. Re-read the question carefully.","Keep going, Ace. Mistakes help your brain grow!"];
+
+function parseAnswer(str){
+  if(str===undefined||str===null) return NaN;
+  var s=String(str).trim().toLowerCase();
+  s=s.replace(/[\u2212\u2013]/g,"-");
+  s=s.replace(/(\d),(?=\d{3}(\D|$))/g,"$1");
+  s=s.replace(/[^0-9.\/\- ]/g," ").replace(/\s+/g," ").trim();
+  s=s.replace(/\s*\/\s*/g,"/");
+  var m;
+  if((m=s.match(/^(-?\d+) (\d+)\/(\d+)$/))){ var w=parseFloat(m[1]),n=parseFloat(m[2]),d=parseFloat(m[3]); if(d===0)return NaN; return w<0? w-n/d : w+n/d; }
+  if((m=s.match(/^(-?\d+(?:\.\d+)?)\/(\d+(?:\.\d+)?)$/))){ var d2=parseFloat(m[2]); if(d2===0)return NaN; return parseFloat(m[1])/d2; }
+  s=s.replace(/ /g,"");
+  if(/^-?(\d+\.?\d*|\.\d+)$/.test(s)) return parseFloat(s);
+  return NaN;
+}
+function isCorrect(input,key){
+  var a=parseAnswer(input), k=parseAnswer(key);
+  if(isNaN(a)) return false;
+  var isInt=Math.abs(k-Math.round(k))<1e-12;
+  var tol=isInt?1e-9:0.005;
+  return Math.abs(a-k)<=tol;
+}
+
+function isRomanCorrect(input,key){ return String(input).replace(/\s+/g,"").toUpperCase()===key; }
+var state=[];
+function render(){
+  var box=document.getElementById("questions");
+  QUESTIONS.forEach(function(q,i){
+    state.push({correct:false,tries:0,hints:0});
+    var d=document.createElement("div");
+    d.className="box q"; d.id="q"+i;
+    d.innerHTML='<div><span class="qnum">'+(i+1)+'.</span> '+q.t+'</div>'+
+      '<div class="row"><input type="text"'+(q.r?' placeholder="e.g. MMXXVI"':'')+' id="in'+i+'" aria-label="Answer to question '+(i+1)+'" autocomplete="off"> <span class="unit">'+q.u+'</span>'+
+      '<button type="button" class="check" data-i="'+i+'">Check</button>'+
+      '<button type="button" class="hint" data-i="'+i+'">Hint 💡</button>'+
+      '<button type="button" class="sol" data-i="'+i+'" style="display:none">Show solution</button></div>'+
+      '<div class="fb" id="fb'+i+'"></div><div class="hints" id="hints'+i+'"></div>'+
+      '<div class="solution" id="sol'+i+'"><strong>Solution:</strong> '+q.s+'</div>';
+    box.appendChild(d);
+  });
+  box.addEventListener("click",function(e){
+    var b=e.target; if(b.tagName!=="BUTTON")return;
+    var i=+b.getAttribute("data-i");
+    if(b.className==="check") check(i);
+    else if(b.className==="hint") hint(i);
+    else if(b.className==="sol") document.getElementById("sol"+i).style.display="block";
+  });
+  box.addEventListener("keydown",function(e){
+    if(e.key==="Enter"&&e.target.tagName==="INPUT"){ check(+e.target.id.slice(2)); }
+  });
+}
+function pick(arr){return arr[Math.floor(Math.random()*arr.length)];}
+function check(i){
+  var val=document.getElementById("in"+i).value;
+  var fb=document.getElementById("fb"+i), card=document.getElementById("q"+i);
+  if(val.trim()===""){fb.className="fb bad";fb.textContent="Type an answer first, Ace!";return;}
+  var isR=!!QUESTIONS[i].r;
+  if(isR&&!/^[ivxlcdm\s]+$/i.test(val)){fb.className="fb bad";fb.textContent="Use only Roman numeral letters: I, V, X, L, C, D, M.";return;}
+  if(!isR&&isNaN(parseAnswer(val))){fb.className="fb bad";fb.textContent="I can't read that as a number. Try something like 42, 3.5, 3/4 or 1 3/4.";return;}
+  state[i].tries++;
+  if(isR?isRomanCorrect(val,QUESTIONS[i].a):isCorrect(val,QUESTIONS[i].a)){
+    state[i].correct=true; card.className="box q right"; fb.className="fb good";
+    fb.textContent="✅ "+pick(PRAISE)+(state[i].tries===1?" (first try!)":"");
+  } else {
+    state[i].correct=false; card.className="box q wrong"; fb.className="fb bad";
+    fb.textContent="❌ "+pick(ENCOURAGE);
+    if(state[i].tries>=2) card.querySelector(".sol").style.display="inline-block";
+  }
+  updateScore();
+}
+function hint(i){
+  var q=QUESTIONS[i], s=state[i], hb=document.getElementById("hints"+i);
+  if(s.hints<q.h.length){
+    var p=document.createElement("p"); p.textContent="💡 Hint "+(s.hints+1)+": "+q.h[s.hints]; hb.appendChild(p); s.hints++;
+  }
+  if(s.hints>=q.h.length) document.querySelector("#q"+i+" .hint").disabled=true;
+  updateScore();
+}
+function counts(){
+  var c=0,first=0,h=0;
+  state.forEach(function(s){ if(s.correct){c++; if(s.tries===1)first++;} h+=s.hints; });
+  return {correct:c,first:first,hints:h};
+}
+function updateScore(){
+  var k=counts();
+  document.getElementById("scoreText").textContent="Score: "+k.correct+" / "+QUESTIONS.length+" correct · hints used: "+k.hints;
+}
+function finish(){
+  var k=counts(), n=QUESTIONS.length, pct=Math.round(100*k.correct/n);
+  var msg;
+  if(pct===100) msg="🏆 PERFECT SCORE! Incredible work, Ace. A real navigator would be impressed!";
+  else if(pct>=85) msg="🌟 Outstanding, Ace! That's a Grade 6-7 level performance!";
+  else if(pct>=65) msg="💪 Great effort, Ace! Review the ones you missed and try them again.";
+  else if(pct>=40) msg="👍 Good start, Ace! These problems are tough. Use the hints and solutions to learn the tricks, then try again.";
+  else msg="🌱 These are challenge problems, well above grade level. Every great explorer started as a beginner! Go through the worked examples and try again, Ace!";
+  var f=document.getElementById("final");
+  f.style.display="block";
+  f.innerHTML="<h2 style='border:none;margin-top:0'>Final Score: "+k.correct+" / "+n+" ("+pct+"%)</h2>"+
+    "<p>Correct on the first try: "+k.first+" · Hints used: "+k.hints+"</p><p>"+msg+"</p>"+
+    "<p style='font-size:.85em;color:#546e7a'>Finished on "+new Date().toLocaleString("en-CA")+"</p>";
+  f.scrollIntoView({behavior:"smooth"});
+}
+render();
+updateScore();
+document.getElementById("finishBtn").addEventListener("click",finish);
+</script>
+<script src="../../assets/autosave.js"></script>
+</body>
+</html>

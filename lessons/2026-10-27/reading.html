@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reading (Oct. 27): Where in the World? How Navigators Find Their Place</title>
+<style>
+  body{font-family:"Segoe UI",Verdana,Arial,sans-serif;font-size:20px;line-height:1.65;margin:0;background:#f5f0eb;color:#2c2416}
+  .wrap{max-width:880px;margin:0 auto;padding:20px 18px 80px}
+  a.home{font-size:.9em;color:#bf360c}
+  h1{color:#e65100;font-size:2em;margin:10px 0}
+  h2{color:#ef6c00;margin-top:36px;border-bottom:3px solid #ffcc80;padding-bottom:4px}
+  .box{background:#fff;border-radius:16px;padding:18px 22px;margin:16px 0;box-shadow:0 3px 10px rgba(0,0,0,.07)}
+  .passage{font-family:Georgia,"Times New Roman",serif;font-size:1.1em;line-height:1.8}
+  .passage h3{text-align:center;font-family:"Segoe UI",Verdana,sans-serif;color:#e65100;font-size:1.4em;margin:4px 0 14px}
+  .passage p{text-indent:1.5em;margin:0 0 14px}
+  mark.v{background:#fff59d;padding:0 3px;border-radius:4px;font-weight:bold}
+  .tipbox{background:#fff8e1;border-left:8px solid #ffb300}
+  .q{border-left:8px solid #ffcc80}
+  .q.right{border-left-color:#43a047;background:#f1f8e9}
+  .q.wrong{border-left-color:#e53935;background:#fff5f5}
+  .tag{display:inline-block;font-size:.7em;background:#ef6c00;color:#fff;border-radius:8px;padding:1px 8px;margin-left:6px;vertical-align:middle}
+  .opt{display:block;width:100%;text-align:left;font-size:.95em;background:#fafafa;border:2px solid #e0e0e0;border-radius:10px;padding:8px 14px;margin:8px 0;cursor:pointer;font-family:inherit}
+  .opt:hover{border-color:#ffb74d;background:#fff}
+  .opt.sel-right{background:#c8e6c9;border-color:#43a047}
+  .opt.sel-wrong{background:#ffcdd2;border-color:#e53935}
+  .fb{margin-top:6px;font-weight:bold}
+  .fb.good{color:#2e7d32} .fb.bad{color:#c62828}
+  .explain{color:#e65100;font-weight:normal}
+  select{font-size:.95em;padding:6px 8px;border-radius:8px;border:2px solid #ffb74d;max-width:100%;font-family:inherit}
+  .vrow{display:flex;flex-wrap:wrap;align-items:center;gap:10px;padding:8px 6px;border-bottom:1px dashed #eee}
+  .vrow .w{font-weight:bold;min-width:140px}
+  .vrow.right{background:#f1f8e9} .vrow.wrong{background:#fff5f5}
+  .mark{font-size:1.2em;min-width:30px}
+  button.main{font-size:1em;padding:10px 20px;border:none;border-radius:10px;cursor:pointer;font-weight:bold;background:#ef6c00;color:#fff;margin-top:10px}
+  button.main:hover{background:#e65100}
+  button.sec{font-size:.95em;padding:8px 16px;border:none;border-radius:10px;cursor:pointer;font-weight:bold;background:#ffe082;color:#5d4037}
+  textarea{width:100%;box-sizing:border-box;font-size:1em;font-family:inherit;padding:10px;border:2px solid #ffb74d;border-radius:10px;min-height:120px}
+  #model{display:none;background:#fff3e0;border-radius:10px;padding:10px 14px;margin-top:10px}
+  #scoreBox{position:sticky;bottom:0;background:#e65100;color:#fff;border-radius:16px 16px 0 0;padding:12px 20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-top:30px}
+  #scoreBox button{font-size:.95em;padding:8px 16px;border:none;border-radius:10px;cursor:pointer;font-weight:bold;background:#ffca28;color:#3e2723}
+  #final{display:none;text-align:center;border:4px solid #43a047;font-size:1.1em}
+</style>
+</head>
+<body>
+<div class="wrap">
+<a class="home" href="../../index.html">&larr; Back to all lessons</a>
+<h1>📖 Reading Week 30: Where in the World? How Navigators Find Their Place</h1>
+
+<div class="box tipbox">
+  <strong>Before you read, Ace:</strong> Today's passage is an <em>informational</em> text that explains how people have figured out where they are, from stars and clocks to satellites. As you read, watch for <em>problem and solution</em>, <em>cause and effect</em>, <em>comparisons</em>, and places where you must <em>infer</em> (read between the lines).
+  <ul>
+    <li><strong>Preview:</strong> Read the title and the first paragraph. What problem do you think navigators had to solve? Make a prediction before you start.</li>
+    <li><strong>Pause:</strong> After paragraph 3, stop and explain to yourself, in your own words, why finding longitude was so much harder than finding latitude.</li>
+    <li><strong>Root detective:</strong> Useful word parts:
+      <span style="display:block;margin-top:6px"><strong>nav</strong> = ship (navigate, navy) · <strong>graph</strong> = write or draw (cartographer, geography) · <strong>chron</strong> = time (chronometer) · <strong>meter/metre</strong> = measure · <strong>dis-</strong> = apart (distort) · <strong>tri-</strong> = three (triangulation) · <strong>geo</strong> = earth (geography)</span></li>
+    <li><strong>Words in <mark class="v">yellow</mark></strong> are vocabulary words. Use the sentence around them (the <em>context</em>) to figure out what they mean.</li>
+  </ul>
+</div>
+
+<div class="box passage" id="passage">
+<h3>Where in the World? How Navigators Find Their Place</h3>
+<p>Imagine you are the captain of a wooden sailing ship in the year 1750. For weeks, all you have seen is grey ocean in every direction. There are no road signs out here, no coastline, and no phone to show a blue dot on a screen. Somewhere ahead are dangerous rocks, and your crew is running low on fresh water. To survive, you must answer one question correctly: <em>Where in the world are we?</em> For thousands of years, people who wanted to <mark class="v">navigate</mark> across oceans, deserts and frozen lands have needed clever ways to answer it.</p>
+<p>The first part of the answer is <strong>latitude</strong>, which measures how far north or south of the equator you are. Latitude was the easier half of the puzzle, because the sky gives it away. In the Northern Hemisphere, the North Star, Polaris, sits almost exactly above the North Pole. The higher Polaris appears above the horizon, the farther north you are. A sailor who measured Polaris at 49 degrees above the horizon could <mark class="v">determine</mark> that the ship was at about 49 degrees north, the same latitude as Vancouver. During the day, sailors measured the angle of the sun at noon and used tables to work out the same thing.</p>
+<p>The second part, <strong>longitude</strong>, tells you how far east or west you are, and it was a much harder problem. The stars can't help much, because the whole sky turns as Earth spins. The clue turned out to be time. Earth turns 15 degrees every hour, so if a sailor knew the exact time at a <mark class="v">reference</mark> point, such as Greenwich in England, and compared it with local noon on the ship, the difference would reveal the longitude. If noon on the ship came eight hours after noon in Greenwich, the ship was 120 degrees west. The trouble was that in the 1700s, ordinary clocks used swinging pendulums, and on a rolling ship they sped up, slowed down or stopped. A clock that was off by just a few minutes could put a ship many kilometres away from where the captain thought it was.</p>
+<p>The British government offered a huge prize to anyone who could solve the longitude problem. A carpenter and clockmaker named John Harrison spent most of his life on the challenge. His sea clock, called a <strong>chronometer</strong>, used springs and clever balances instead of a pendulum, so it kept <mark class="v">precise</mark> time even in storms and heat. When Captain James Cook sailed to the Pacific Northwest coast in 1778, he carried a copy of a Harrison-style chronometer, and his charts of the coastline were remarkably accurate for the time.</p>
+<p>Knowing your position is only useful if you have a good map, and mapmakers, called cartographers, face a puzzle of their own. Earth is round, but paper is flat. Try flattening an orange peel and it tears and stretches. In the same way, every flat map must <mark class="v">distort</mark> something: shapes, sizes, distances or directions. A famous map called the Mercator projection keeps directions correct, which is why sailors loved it, but it stretches lands near the poles. On it, Greenland looks about as big as Africa, even though Africa is actually about fourteen times larger. No flat map is perfect; each one is designed for a different job.</p>
+<p>Of course, Europeans were not the only skilled navigators. Long before compasses, Polynesian wayfinders crossed thousands of kilometres of the Pacific by reading star paths, ocean swells and the flight of birds. Inuit travellers in the Arctic learned to <mark class="v">orient</mark> themselves using wind-carved snowdrifts, the shape of the coastline and the position of the sun, and some carved wooden maps of the coast that could be felt with mittened hands in the dark.</p>
+<p>Today, a phone finds its position using the Global Positioning System, or GPS. About thirty satellites <mark class="v">rotate</mark> around Earth, each one constantly sending out a signal with the exact time it was sent. Your phone measures how long each signal took to arrive and calculates how far away each satellite is. With distances to at least four satellites, the phone can pinpoint the only spot on Earth that fits them all. The result is usually <mark class="v">approximate</mark>, often within a few metres, but that is close enough to guide a driver to the right street. Behind that tiny blue dot are the same ideas sailors used centuries ago: angles, distances, and very, very accurate clocks.</p>
+<p style="text-indent:0;font-size:.8em;color:#546e7a;text-align:right">About 740 words</p>
+</div>
+
+<h2>Part 1: Comprehension</h2>
+<p>Click the best answer. You'll find out right away if you're correct. Only your <strong>first click</strong> counts toward your score, but you can keep trying to find the right answer.</p>
+<div id="mc"></div>
+
+<h2>Part 2: Think Deeper (not scored)</h2>
+<div class="box">
+  <p><strong>The author ends by saying that behind the blue dot on a phone "are the same ideas sailors used centuries ago." In 3 to 5 sentences, explain what the author means. Use at least two details from the passage, and tell whether YOU think people should still learn to read a paper map and compass today, and why.</strong></p>
+  <textarea id="openAns" placeholder="Write your answer here, Ace..."></textarea>
+  <p><button type="button" class="sec" id="showModel">Compare with a model answer</button></p>
+  <div id="model"><strong>Model answer:</strong> The author means that GPS is new technology, but it works using old ideas. Sailors found longitude by comparing times on an accurate chronometer, and GPS satellites also send out exact times so a phone can work out distances. Both methods depend on measuring time and distance very carefully. I think people should still learn to use a paper map and compass, because a phone battery can die or lose its signal in the mountains, and a map never runs out of power.<br><em>Did you explain the author's idea, use two passage details, and give your own opinion with a reason? If so, excellent thinking!</em></div>
+</div>
+
+<h2>Part 3: Vocabulary</h2>
+<div class="box">
+  <h3 style="margin-top:0">A. Match each word to its meaning</h3>
+  <p>Choose the meaning that fits how the word is used in the passage.</p>
+  <div id="vmatch"></div>
+  <h3>B. Fill in the blank</h3>
+  <p>Choose the vocabulary word that best completes each sentence.</p>
+  <div id="vfill"></div>
+  <button type="button" class="main" id="checkVocab">Check my vocabulary</button>
+  <div class="fb" id="vocabFb"></div>
+</div>
+
+<div class="box" id="final"></div>
+<div id="scoreBox">
+  <span id="scoreText"></span>
+  <button type="button" id="finishBtn">I'm done! Show my final score</button>
+</div>
+</div>
+
+<script>
+var MC = [
+ {q:"Which sentence best states the <strong>main idea</strong> of the whole passage?",
+  o:["Greenland looks too big on some maps.",
+     "People have used stars, clocks, maps, local knowledge and satellites to solve the problem of finding where they are.",
+     "John Harrison was a carpenter.",
+     "GPS satellites send signals to phones."],
+  a:1, e:"A, C, and D are single details. B sums up the whole passage: many clever ways people have worked out their position over time."},
+ {q:"Why was latitude <strong>easier</strong> to find than longitude?", tag:"Compare and contrast",
+  o:["Because the height of Polaris or the noon sun above the horizon shows how far north or south you are.","Because latitude lines are painted on the ocean.","Because latitude only works in Canada.","Because sailors had phones."],
+  a:0, e:"Paragraph 2: \"The higher Polaris appears above the horizon, the farther north you are.\" The sky gives latitude away, but not longitude."},
+ {q:"According to the passage, what was the main <strong>problem</strong> with finding longitude in the 1700s?", tag:"Problem and solution",
+  o:["Ships had no maps at all.","Nobody knew that Earth spins.","Pendulum clocks could not keep accurate time on a rolling ship.","The North Star was too bright."],
+  a:2, e:"Paragraph 3: pendulum clocks on a rolling ship \"sped up, slowed down or stopped,\" so sailors couldn't compare times accurately."},
+ {q:"How did John Harrison's chronometer <strong>solve</strong> the problem?", tag:"Problem and solution",
+  o:["It used springs and balances instead of a pendulum, so it kept precise time at sea.","It pointed to the North Pole.","It showed the ship's position on a screen.","It measured the height of the sun."],
+  a:0, e:"Paragraph 4: it \"used springs and clever balances instead of a pendulum, so it kept precise time even in storms and heat.\""},
+ {q:"If noon on a ship came <strong>eight hours after</strong> noon in Greenwich, the ship was 120° west. Which fact from the passage explains this?", tag:"Cause and effect",
+  o:["Africa is fourteen times larger than Greenland.","Earth turns 15 degrees every hour, and 8 × 15 = 120.","About thirty GPS satellites orbit Earth.","Polaris sits above the North Pole."],
+  a:1, e:"Paragraph 3: \"Earth turns 15 degrees every hour.\" Eight hours of difference × 15° = 120°."},
+ {q:"Why does the author mention <strong>flattening an orange peel</strong>?", tag:"Figurative language / comparison",
+  o:["To give a healthy snack idea.","To show that oranges are round.","To help readers picture why a round Earth can't be shown on flat paper without stretching or tearing.","To explain how GPS works."],
+  a:2, e:"Paragraph 5: the orange peel is a comparison. Just as the peel tears and stretches, every flat map must distort something."},
+ {q:"In paragraph 5, the word <strong>distort</strong> most nearly means:", tag:"Vocabulary in context",
+  o:["to colour brightly","to twist or change the true shape or size of something","to fold neatly","to measure exactly"],
+  a:1, e:"The paragraph says flat maps change \"shapes, sizes, distances or directions,\" and Greenland looks too big. That is distortion."},
+ {q:"Why did the author include paragraph 6 about Polynesian and Inuit wayfinders?", tag:"Author's purpose",
+  o:["To show that many cultures developed skilled ways to navigate, not only European sailors.","To prove that compasses don't work in the Arctic.","To persuade readers to move to the Pacific.","To explain how chronometers were built."],
+  a:0, e:"The paragraph begins, \"Of course, Europeans were not the only skilled navigators,\" and then gives two examples."},
+ {q:"Why does a phone need signals from <strong>several</strong> satellites, not just one?", tag:"Inference",
+  o:["One satellite only tells the time, not the date.","A single distance fits many possible spots; several distances together fit only one spot.","Satellites take turns sleeping.","Phones need a different satellite for each app."],
+  a:1, e:"Paragraph 7: with distances to at least four satellites, the phone finds \"the only spot on Earth that fits them all.\" One distance alone could be anywhere on a huge sphere."},
+ {q:"Which pair of ideas does the author say connects old sailing navigation and GPS?", tag:"Synthesis",
+  o:["Pendulums and paper","Birds and snowdrifts","Prizes and carpenters","Angles, distances and very accurate clocks"],
+  a:3, e:"The last sentence: \"the same ideas sailors used centuries ago: angles, distances, and very, very accurate clocks.\""}
+];
+
+var VOCAB = ["navigate","determine","reference","precise","distort","orient","rotate","approximate"];
+var DEFS = {
+ navigate:"to find your way and steer a course from one place to another",
+ determine:"to find out or work out something exactly",
+ reference:"something you use as a starting point or to compare against",
+ precise:"exact and accurate, with no mistakes",
+ distort:"to twist or change the true shape, size or meaning of something",
+ orient:"to figure out which direction you are facing or where you are",
+ rotate:"to turn or spin around a centre point",
+ approximate:"close to the exact amount, but not perfectly exact"
+};
+var FILL = [
+ {s:"When Ace stepped out of the forest, he looked for the mountain so he could ____ himself and find north.", a:"orient"},
+ {s:"The recipe needed a ____ measurement, so we used the kitchen scale instead of guessing.", a:"precise"},
+ {s:"A funhouse mirror can ____ your reflection and make you look super tall.", a:"distort"},
+ {s:"I don't know the exact number of people at the game, but my ____ guess is about 300.", a:"approximate"}
+];
+var FILL_OPTIONS = ["approximate","orient","rotate","precise","navigate","distort","reference","determine"];
+
+var PRAISE=["Nice work, Ace!","Correct! Sharp reading, Ace!","Yes! You followed the evidence!","Excellent thinking, navigator Ace!","Right! Right on course! 🧭"];
+function pick(a){return a[Math.floor(Math.random()*a.length)];}
+function shuffled(arr,seed){var a=arr.slice(),s=seed;for(var i=a.length-1;i>0;i--){s=(s*9301+49297)%233280;var j=Math.floor(s/233280*(i+1));var t=a[i];a[i]=a[j];a[j]=t;}return a;}
+
+var mcState=MC.map(function(){return {answered:false,firstRight:false,done:false};});
+var vocabScore=0, vocabChecked=false;
+var VOCAB_TOTAL=VOCAB.length+FILL.length;
+
+function buildMC(){
+  var box=document.getElementById("mc");
+  MC.forEach(function(item,i){
+    var d=document.createElement("div"); d.className="box q"; d.id="mc"+i;
+    var html="<div><strong>"+(i+1)+".</strong> "+item.q+(item.tag?'<span class="tag">'+item.tag+'</span>':"")+"</div>";
+    item.o.forEach(function(opt,j){ html+='<button type="button" class="opt" data-i="'+i+'" data-j="'+j+'">'+String.fromCharCode(65+j)+". "+opt+"</button>"; });
+    html+='<div class="fb" id="mcfb'+i+'"></div>';
+    d.innerHTML=html; box.appendChild(d);
+  });
+  box.addEventListener("click",function(e){
+    var b=e.target.closest?e.target.closest(".opt"):e.target; if(!b||!b.classList.contains("opt"))return;
+    answerMC(+b.getAttribute("data-i"),+b.getAttribute("data-j"),b);
+  });
+}
+function answerMC(i,j,btn){
+  var st=mcState[i], item=MC[i], fb=document.getElementById("mcfb"+i), card=document.getElementById("mc"+i);
+  if(st.done) return;
+  var right=(j===item.a);
+  if(!st.answered){ st.answered=true; st.firstRight=right; }
+  if(right){
+    st.done=true; btn.classList.add("sel-right"); card.className="box q right";
+    fb.className="fb good"; fb.innerHTML="✅ "+pick(PRAISE)+' <span class="explain">'+item.e+"</span>";
+  } else {
+    btn.classList.add("sel-wrong"); card.className="box q wrong";
+    fb.className="fb bad"; fb.innerHTML="❌ Not quite, Ace. Look back at the passage and try another answer.";
+  }
+  updateScore();
+}
+function buildVocab(){
+  var m=document.getElementById("vmatch");
+  var defOrder=shuffled(VOCAB,44);
+  VOCAB.forEach(function(w,i){
+    var row=document.createElement("div"); row.className="vrow"; row.id="vm"+i;
+    var sel='<select id="vsel'+i+'" aria-label="Meaning of '+w+'"><option value="">- choose a meaning -</option>';
+    defOrder.forEach(function(k){ sel+='<option value="'+k+'">'+DEFS[k]+'</option>'; });
+    sel+="</select>";
+    row.innerHTML='<span class="mark" id="vmk'+i+'"></span><span class="w">'+w+'</span>'+sel;
+    m.appendChild(row);
+  });
+  var f=document.getElementById("vfill");
+  FILL.forEach(function(item,i){
+    var row=document.createElement("div"); row.className="vrow"; row.id="vf"+i;
+    var sel='<select id="fsel'+i+'" aria-label="Blank '+(i+1)+'"><option value="">- choose -</option>';
+    FILL_OPTIONS.forEach(function(w){ sel+='<option value="'+w+'">'+w+'</option>'; });
+    sel+="</select>";
+    var parts=item.s.split("____");
+    row.innerHTML='<span class="mark" id="vfk'+i+'"></span><span>'+(i+1)+'. '+parts[0]+sel+parts[1]+'</span>';
+    f.appendChild(row);
+  });
+}
+function checkVocab(){
+  var score=0, blank=0;
+  VOCAB.forEach(function(w,i){
+    var v=document.getElementById("vsel"+i).value, ok=(v===w);
+    if(!v) blank++;
+    if(ok) score++;
+    document.getElementById("vm"+i).className="vrow "+(ok?"right":"wrong");
+    document.getElementById("vmk"+i).textContent=ok?"✅":"❌";
+  });
+  FILL.forEach(function(item,i){
+    var v=document.getElementById("fsel"+i).value, ok=(v===item.a);
+    if(!v) blank++;
+    if(ok) score++;
+    document.getElementById("vf"+i).className="vrow "+(ok?"right":"wrong");
+    document.getElementById("vfk"+i).textContent=ok?"✅":"❌";
+  });
+  vocabScore=score; vocabChecked=true;
+  var fb=document.getElementById("vocabFb");
+  if(score===VOCAB_TOTAL){ fb.className="fb good"; fb.textContent="🌟 "+score+" / "+VOCAB_TOTAL+". Perfect! Your vocabulary is right on the map, Ace! 🗺️"; }
+  else { fb.className="fb bad"; fb.textContent=score+" / "+VOCAB_TOTAL+" correct"+(blank?" ("+blank+" left blank)":"")+". Fix the ❌ ones and check again. Try finding the word in the passage for clues!"; }
+  updateScore();
+}
+function scores(){
+  var mc=0,answered=0; mcState.forEach(function(s){ if(s.firstRight) mc++; if(s.answered) answered++; });
+  return {mc:mc,answered:answered,vocab:vocabScore};
+}
+function updateScore(){
+  var s=scores();
+  document.getElementById("scoreText").textContent="Comprehension: "+s.mc+" / "+MC.length+" · Vocabulary: "+(vocabChecked?s.vocab:"-")+" / "+VOCAB_TOTAL;
+}
+function finish(){
+  if(!vocabChecked) checkVocab();
+  var s=scores(), total=MC.length+VOCAB_TOTAL, got=s.mc+s.vocab, pct=Math.round(100*got/total);
+  var msg = pct===100 ? "🏆 A perfect score! Outstanding reading, Ace!" :
+            pct>=80 ? "🌟 Fantastic work, Ace! You read like a Grade 7 student!" :
+            pct>=60 ? "💪 Solid effort, Ace! Reread the paragraphs for the questions you missed." :
+                      "🌱 This was a challenging passage. Read it once more, slowly, and try again. You've got this, Ace!";
+  var f=document.getElementById("final"); f.style.display="block";
+  f.innerHTML="<h2 style='border:none;margin-top:0'>Final Score: "+got+" / "+total+" ("+pct+"%)</h2>"+
+    "<p>Comprehension (first tries): "+s.mc+" / "+MC.length+(s.answered<MC.length?" (you skipped "+(MC.length-s.answered)+")":"")+"<br>Vocabulary: "+s.vocab+" / "+VOCAB_TOTAL+"</p><p>"+msg+"</p>"+
+    "<p style='font-size:.85em;color:#546e7a'>Finished on "+new Date().toLocaleString("en-CA")+"</p>";
+  f.scrollIntoView({behavior:"smooth"});
+}
+buildMC(); buildVocab(); updateScore();
+document.getElementById("checkVocab").addEventListener("click",checkVocab);
+document.getElementById("finishBtn").addEventListener("click",finish);
+document.getElementById("showModel").addEventListener("click",function(){document.getElementById("model").style.display="block";});
+</script>
+<script src="../../assets/autosave.js"></script>
+</body>
+</html>

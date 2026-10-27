@@ -6,7 +6,7 @@ TTS voice (Cantonese): zh-HK-HiuMaanNeural when available; 2026-10-12+ often gTT
 TTS voice (English in ALL-words.mp3): en-HK-YanNeural
 Rate: slowed (~-20%) for clear listening practice.
 
-Sources: Ace lessons 2026-09-29 (Greetings) + 2026-09-30 (Family Members) + 2026-10-01 (Food) + 2026-10-02 (School) + 2026-10-03 (Body) + 2026-10-04 (Colours) + 2026-10-05 (Sky & Space) + 2026-10-06 (Numbers 11-100) + 2026-10-07 (At the Doctor) + 2026-10-08 (Nature: Mountains & Volcanoes) + 2026-10-09 (Question Words & Secrets) + 2026-10-10 (Music) + 2026-10-11 (Trains & Travel) + 2026-10-12 (Brain & Sleep) + 2026-10-13 (Bees & Gardens) + 2026-10-14 (Electricity & Lights) + 2026-10-15 (Land, People & Respect) + 2026-10-16 (Ice, Snow & Giant Animals) + 2026-10-17 (Community, Rules & Voting) + 2026-10-18 (Weather & Storms) + 2026-10-19 (Germs, Vaccines & Staying Healthy) + 2026-10-20 (Ancient China: Paper, Books & Emperors) + 2026-10-21 (Flight: Airplanes, Pilots & Birds) + 2026-10-22 (Gold Mountain: Gold, Miners & Money) + 2026-10-23 (In the Kitchen: Cooking & Flavours) + 2026-10-24 (Cartoons, Drawing & Movies) + 2026-10-25 (Fossils & Sea Creatures) + 2026-10-26 (Emergency & Hospital Words).
+Sources: Ace lessons 2026-09-29 (Greetings) + 2026-09-30 (Family Members) + 2026-10-01 (Food) + 2026-10-02 (School) + 2026-10-03 (Body) + 2026-10-04 (Colours) + 2026-10-05 (Sky & Space) + 2026-10-06 (Numbers 11-100) + 2026-10-07 (At the Doctor) + 2026-10-08 (Nature: Mountains & Volcanoes) + 2026-10-09 (Question Words & Secrets) + 2026-10-10 (Music) + 2026-10-11 (Trains & Travel) + 2026-10-12 (Brain & Sleep) + 2026-10-13 (Bees & Gardens) + 2026-10-14 (Electricity & Lights) + 2026-10-15 (Land, People & Respect) + 2026-10-16 (Ice, Snow & Giant Animals) + 2026-10-17 (Community, Rules & Voting) + 2026-10-18 (Weather & Storms) + 2026-10-19 (Germs, Vaccines & Staying Healthy) + 2026-10-20 (Ancient China: Paper, Books & Emperors) + 2026-10-21 (Flight: Airplanes, Pilots & Birds) + 2026-10-22 (Gold Mountain: Gold, Miners & Money) + 2026-10-23 (In the Kitchen: Cooking & Flavours) + 2026-10-24 (Cartoons, Drawing & Movies) + 2026-10-25 (Fossils & Sea Creatures) + 2026-10-26 (Emergency & Hospital Words) + 2026-10-27 (Maps & Directions).
 Numbers 1-10 are already known and not included here.
 
 How to practise:
@@ -1145,6 +1145,46 @@ Individual files
   Chinese:  打電話
   Jyutping: daa2 din6 waa2
   English:  to make a phone call
+
+225-dei6-tou4-map.mp3
+  Chinese:  地圖
+  Jyutping: dei6 tou4
+  English:  map
+
+226-dung1-east.mp3
+  Chinese:  東
+  Jyutping: dung1
+  English:  east
+
+227-naam4-south.mp3
+  Chinese:  南
+  Jyutping: naam4
+  English:  south
+
+228-sai1-west.mp3
+  Chinese:  西
+  Jyutping: sai1
+  English:  west
+
+229-bak1-north.mp3
+  Chinese:  北
+  Jyutping: bak1
+  English:  north
+
+230-zo2-bin1-left-side.mp3
+  Chinese:  左邊
+  Jyutping: zo2 bin1
+  English:  left / the left side
+
+231-jau6-bin1-right-side.mp3
+  Chinese:  右邊
+  Jyutping: jau6 bin1
+  English:  right / the right side
+
+232-zi2-naam4-zam1-compass.mp3
+  Chinese:  指南針
+  Jyutping: zi2 naam4 zam1
+  English:  compass
 
 
 Combined file
