@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Math (Oct. 28): Robots: How Machines Sense, Think &amp; Move Math Lab</title>
+<style>
+  body{font-family:"Segoe UI",Verdana,Arial,sans-serif;font-size:20px;line-height:1.6;margin:0;background:#f5f0eb;color:#2c2416}
+  .wrap{max-width:880px;margin:0 auto;padding:20px 18px 80px}
+  a.home{font-size:.9em;color:#bf360c}
+  h1{color:#e65100;font-size:2em;margin:10px 0}
+  h2{color:#ef6c00;margin-top:36px;border-bottom:3px solid #ffcc80;padding-bottom:4px}
+  .box{background:#fff;border-radius:16px;padding:18px 22px;margin:16px 0;box-shadow:0 3px 10px rgba(0,0,0,.07)}
+  .example{border-left:8px solid #ef6c00}
+  .example h3{margin:0 0 6px;color:#e65100}
+  .step{margin:4px 0 4px 10px}
+  code,.mono{font-family:Consolas,"Courier New",monospace;background:#fff3e0;padding:1px 6px;border-radius:5px}
+  .q{border-left:8px solid #90a4ae}
+  .q.right{border-left-color:#43a047;background:#f1f8e9}
+  .q.wrong{border-left-color:#e53935;background:#fff5f5}
+  .qnum{font-weight:bold;color:#e65100}
+  .row{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:10px}
+  input[type=text]{font-size:1.05em;padding:8px 12px;border:2px solid #ffcc80;border-radius:10px;width:190px}
+  input[type=text]:focus{outline:none;border-color:#ef6c00;box-shadow:0 0 0 3px #ffe0b2}
+  button{font-size:.95em;padding:8px 16px;border:none;border-radius:10px;cursor:pointer;font-weight:bold}
+  .check{background:#ef6c00;color:#fff} .check:hover{background:#e65100}
+  .hint{background:#ffe082;color:#5d4037} .hint:hover{background:#ffd54f}
+  .sol{background:#ce93d8;color:#311b92}
+  .unit{color:#546e7a}
+  .fb{margin-top:8px;font-weight:bold;min-height:1em}
+  .fb.good{color:#2e7d32} .fb.bad{color:#c62828}
+  .hints{margin-top:8px;color:#e65100;background:#fff3e0;border-radius:10px;padding:0 12px}
+  .hints p{margin:6px 0;padding:6px 0}
+  .solution{margin-top:8px;background:#f3e5f5;border-radius:10px;padding:8px 12px;display:none}
+  #scoreBox{position:sticky;bottom:0;background:#e65100;color:#fff;border-radius:16px 16px 0 0;padding:12px 20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-top:30px}
+  #scoreBox button{background:#ffca28;color:#3e2723}
+  #final{display:none;font-size:1.15em;text-align:center;border:4px solid #43a047}
+  .tipbox{background:#fff8e1;border-left:8px solid #ffb300}
+</style>
+</head>
+<body>
+<div class="wrap">
+<a class="home" href="../../index.html">&larr; Back to all lessons</a>
+<h1>🤖 Math Week 31: Robot Engineer's Math Lab</h1>
+<p>Ace, every robot, from a vacuum that cleans the living room to a rover on Mars, runs on math. Engineers use math to choose gears, measure how far wheels roll, program turns, read sensor signals and decide how long a battery will last. Today you'll work like a robotics engineer with <strong>gear ratios and gear trains, wheel circumference (π), turning angles for robot paths, binary numbers, echo sensors, battery life, percentages, coordinates with negative numbers, loops in a program, rates and unit conversions, proportional reasoning, and an equation with brackets</strong>.</p>
+
+<h2>Part 1: Learn the Moves</h2>
+
+<div class="box tipbox">
+  <strong>The 4-Step Problem Solver (your engineer's checklist):</strong>
+  <ol>
+    <li><strong>Read</strong>: What is the question actually asking? Underline the numbers and units.</li>
+    <li><strong>Plan</strong>: Which operations do I need, and in what order? Do the units match (cm with cm, seconds with seconds)?</li>
+    <li><strong>Solve</strong>: Do one step at a time and write each step down.</li>
+    <li><strong>Check</strong>: Is my answer reasonable? Did I answer the question that was asked, in the right units?</li>
+  </ol>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 1: Gear ratios</h3>
+  <p class="step">When two gears mesh, the teeth pass each other one for one. If a <strong>small 10-tooth gear</strong> drives a <strong>big 30-tooth gear</strong>, the small gear must turn 3 times to turn the big gear once. So the big gear turns <strong>3 times slower</strong>, but with more turning force (torque).</p>
+  <p class="step">Rule: <em>output speed = input speed × (driver teeth ÷ driven teeth)</em>. 90 rpm × 10/30 = <strong>30 rpm</strong> (rpm = rotations per minute).</p>
+  <p class="step"><strong>Gear trains:</strong> when two gears are fixed on the <em>same axle</em>, they turn at the same speed. Multiply the fractions for each pair of meshing gears.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 2: How far does a wheel roll?</h3>
+  <p class="step">In one full turn, a wheel rolls a distance equal to its <strong>circumference</strong>: C = π × diameter. Use π ≈ <strong>3.14</strong>.</p>
+  <p class="step">A wheel with diameter 10 cm rolls 3.14 × 10 = 31.4 cm per turn. In 20 turns: 31.4 × 20 = 628 cm = <strong>6.28 m</strong>.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 3: Programming a robot to draw a shape</h3>
+  <p class="step">A robot that drives around any closed shape and ends up facing the way it started has turned a <strong>full 360°</strong>. For a regular polygon with n sides, each turn is <strong>360° ÷ n</strong>. A square: 360 ÷ 4 = 90°. A hexagon: 360 ÷ 6 = 60°.</p>
+  <p class="step">Working backwards: if each turn is 40°, the shape has 360 ÷ 40 = <strong>9 sides</strong>.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 4: Binary, the language of robot brains</h3>
+  <p class="step">Computers store numbers using only <strong>0</strong> and <strong>1</strong>. Each place is worth <strong>double</strong> the place to its right: ... 64, 32, 16, 8, 4, 2, 1.</p>
+  <p class="step">Binary 10110 = 16 + 0 + 4 + 2 + 0 = <strong>22</strong>. Add up the place values wherever there is a 1.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 5: Echo sensors</h3>
+  <p class="step">An ultrasonic sensor sends out a "ping" of sound and times how long the echo takes to come back. The sound travels <strong>to the wall and back</strong>, so the distance to the wall is <strong>half</strong> the total distance travelled.</p>
+  <p class="step">Sound travels about 343 m/s. If the echo takes 0.002 s: 343 × 0.002 = 0.686 m there and back, so the wall is 0.686 ÷ 2 = 0.343 m = <strong>34.3 cm</strong> away.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 6: Coordinates and negative numbers</h3>
+  <p class="step">On a grid, moving <strong>east</strong> adds to x and moving <strong>west</strong> subtracts. Moving <strong>north</strong> adds to y and moving <strong>south</strong> subtracts. If you go south past the x-axis, y becomes <strong>negative</strong>: from (2, 3), going 5 south lands at (2, 3 − 5) = <strong>(2, −2)</strong>.</p>
+  <p class="step">Turning <strong>right</strong> from north faces you east; turning right again faces you south. Keep track of which way the robot is facing!</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 7: Equations with brackets</h3>
+  <p class="step">3(x + 2) = 21. Undo the outside first: divide both sides by 3 (x + 2 = 7), then subtract 2 (<strong>x = 5</strong>). Check: 3 × (5 + 2) = 21 ✔</p>
+</div>
+
+<h2>Part 2: The Challenge (15 problems)</h2>
+<p>Type your answer and press <strong>Check</strong> (or Enter). Fractions like <span class="mono">3/4</span>, mixed numbers like <span class="mono">1 3/4</span>, or decimals like <span class="mono">1.75</span> are fine. Don't type the units, $ signs, or % signs, and you may use spaces or commas in big numbers (1 000 000). Stuck? Press <strong>Hint</strong>. After 2 tries, you can see a full solution.</p>
+
+<div id="questions"></div>
+<div class="box" id="final"></div>
+<div id="scoreBox">
+  <span id="scoreText">Score: 0 / 15 correct</span>
+  <button id="finishBtn" type="button">I'm done! Show my final score</button>
+</div>
+</div>
+
+<script>
+var NAME = "Ace";
+var GRAPH = '<div style="margin:10px 0"><svg viewBox="0 0 330 220" width="100%" style="max-width:460px;background:#fff;border-radius:12px" role="img" aria-label="Gear train. Small motor gear A with 10 teeth meshes with gear B with 40 teeth. Gear C with 15 teeth is fixed on the same axle as gear B, in front of it. Gear C meshes with large gear D with 45 teeth."><text x="165" y="16" text-anchor="middle" font-size="12" font-weight="bold" fill="#0d47a1">Gear train: C sits in front of B, same axle</text><polygon points="311.0,110.0 305.8,114.9 310.3,120.4 304.5,124.6 308.1,130.7 301.8,133.9 304.5,140.5 297.8,142.9 299.6,149.7 292.6,151.1 293.5,158.2 286.4,158.6 286.2,165.7 279.1,165.2 277.9,172.2 271.0,170.6 268.9,177.4 262.2,174.9 259.2,181.3 252.9,177.9 249.0,183.9 243.3,179.6 238.6,185.0 233.6,180.0 228.2,184.6 223.8,178.9 217.9,182.8 214.4,176.6 207.9,179.5 205.3,172.9 198.5,175.0 196.9,168.0 189.8,169.1 189.2,162.0 182.0,162.1 182.4,155.0 175.3,154.1 176.6,147.1 169.8,145.2 172.1,138.5 165.5,135.7 168.7,129.3 162.6,125.6 166.7,119.7 161.2,115.2 166.0,110.0 161.2,104.8 166.7,100.3 162.6,94.4 168.7,90.7 165.5,84.3 172.1,81.5 169.8,74.8 176.6,72.9 175.3,65.9 182.4,65.0 182.0,57.9 189.2,58.0 189.8,50.9 196.9,52.0 198.5,45.0 205.3,47.1 207.9,40.5 214.4,43.4 217.9,37.2 223.8,41.1 228.2,35.4 233.6,40.0 238.6,35.0 243.3,40.4 249.0,36.1 252.9,42.1 259.2,38.7 262.2,45.1 268.9,42.6 271.0,49.4 277.9,47.8 279.1,54.8 286.2,54.3 286.4,61.4 293.5,61.8 292.6,68.9 299.6,70.3 297.8,77.1 304.5,79.5 301.8,86.1 308.1,89.3 304.5,95.4 310.3,99.6 305.8,105.1" fill="#ce93d8" stroke="#37474f" stroke-width="1"/><circle cx="236" cy="110" r="4" fill="#37474f"/><text x="236" y="212" text-anchor="middle" font-size="12" fill="#263238">D: 45 teeth</text><polygon points="83.0,110.0 77.1,115.6 78.6,123.5 70.6,124.6 67.1,131.9 60.0,128.0 52.9,131.9 49.4,124.6 41.4,123.5 42.9,115.6 37.0,110.0 42.9,104.4 41.4,96.5 49.4,95.4 52.9,88.1 60.0,92.0 67.1,88.1 70.6,95.4 78.6,96.5 77.1,104.4" fill="#ffcc80" stroke="#37474f" stroke-width="1"/><circle cx="60" cy="110" r="4" fill="#37474f"/><text x="60" y="212" text-anchor="middle" font-size="12" fill="#263238">A: 10 teeth (motor)</text><polygon points="192.0,110.0 186.8,114.1 191.3,118.9 185.6,122.1 189.2,127.6 183.0,129.9 185.8,135.9 179.3,137.2 181.1,143.5 174.5,143.8 175.3,150.3 168.8,149.5 168.5,156.1 162.2,154.3 160.9,160.8 154.9,158.0 152.6,164.2 147.1,160.6 143.9,166.3 139.1,161.8 135.0,167.0 130.9,161.8 126.1,166.3 122.9,160.6 117.4,164.2 115.1,158.0 109.1,160.8 107.8,154.3 101.5,156.1 101.2,149.5 94.7,150.3 95.5,143.8 88.9,143.5 90.7,137.2 84.2,135.9 87.0,129.9 80.8,127.6 84.4,122.1 78.7,118.9 83.2,114.1 78.0,110.0 83.2,105.9 78.7,101.1 84.4,97.9 80.8,92.4 87.0,90.1 84.2,84.1 90.7,82.8 88.9,76.5 95.5,76.2 94.7,69.7 101.2,70.5 101.5,63.9 107.8,65.7 109.1,59.2 115.1,62.0 117.4,55.8 122.9,59.4 126.1,53.7 130.9,58.2 135.0,53.0 139.1,58.2 143.9,53.7 147.1,59.4 152.6,55.8 154.9,62.0 160.9,59.2 162.2,65.7 168.5,63.9 168.8,70.5 175.3,69.7 174.5,76.2 181.1,76.5 179.3,82.8 185.8,84.1 183.0,90.1 189.2,92.4 185.6,97.9 191.3,101.1 186.8,105.9" fill="#90caf9" fill-opacity="0.9" stroke="#37474f" stroke-width="1"/><circle cx="135" cy="110" r="4" fill="#37474f"/><text x="135" y="196" text-anchor="middle" font-size="12" fill="#263238">B: 40 teeth</text><polygon points="166.0,110.0 160.4,115.4 163.3,122.6 156.0,125.3 155.7,133.0 148.0,132.5 144.6,139.5 137.7,135.9 131.8,140.8 127.0,134.7 119.5,136.8 117.6,129.3 109.9,128.2 111.2,120.6 104.7,116.4 109.0,110.0 104.7,103.6 111.2,99.4 109.9,91.8 117.6,90.7 119.5,83.2 127.0,85.3 131.8,79.2 137.7,84.1 144.6,80.5 148.0,87.5 155.7,87.0 156.0,94.7 163.3,97.4 160.4,104.6" fill="#a5d6a7" stroke="#37474f" stroke-width="1"/><circle cx="135" cy="110" r="4" fill="#37474f"/><text x="135" y="158" text-anchor="middle" font-size="12" fill="#263238"></text><text x="135" y="40" text-anchor="middle" font-size="12" fill="#2e7d32">C: 15 teeth</text><line x1="135" y1="45" x2="135" y2="80" stroke="#2e7d32"/></svg></div>';
+var TABLE = '<table style="border-collapse:collapse;margin:10px 0;font-size:.95em;background:#fff"><caption style="font-weight:bold;text-align:left;padding-bottom:4px">Rover program (1 unit = 1 grid square)</caption><tr><th style="border:1px solid #bdbdbd;padding:4px 10px;background:#e3f2fd">Step</th></tr><tr><td style="border:1px solid #bdbdbd;padding:4px 10px;font-family:monospace">1. move forward 5</td></tr><tr><td style="border:1px solid #bdbdbd;padding:4px 10px;font-family:monospace">2. turn right 90°</td></tr><tr><td style="border:1px solid #bdbdbd;padding:4px 10px;font-family:monospace">3. move forward 3</td></tr><tr><td style="border:1px solid #bdbdbd;padding:4px 10px;font-family:monospace">4. turn right 90°</td></tr><tr><td style="border:1px solid #bdbdbd;padding:4px 10px;font-family:monospace">5. move forward 8</td></tr><tr><td style="border:1px solid #bdbdbd;padding:4px 10px;font-family:monospace">6. turn left 90°</td></tr><tr><td style="border:1px solid #bdbdbd;padding:4px 10px;font-family:monospace">7. move forward 4</td></tr></table>';
+var QUESTIONS = [
+ {t:"A robot's motor spins a <strong>12-tooth gear</strong> at <strong>180 rpm</strong> (rotations per minute). It meshes with a <strong>36-tooth gear</strong> that turns the wheel. How many <strong>rpm</strong> does the 36-tooth gear turn?", a:"60", u:"rpm",
+  h:["The big gear has 3 times as many teeth, so does it turn faster or slower?","Output = 180 × 12/36."],
+  s:"180 × 12 ÷ 36 = 180 ÷ 3 = 60 rpm. The big gear turns 3 times slower, but pushes 3 times harder."},
+ {t:"A robot's wheel has a <strong>diameter of 5 cm</strong>. The wheel makes <strong>40 full turns</strong>. Using <strong>π ≈ 3.14</strong>, how many <strong>metres</strong> does the robot roll?", a:"6.28", u:"m",
+  h:["One turn rolls one circumference: C = π × d = 3.14 × 5.","15.7 cm per turn. Multiply by 40, then change cm to m (÷ 100)."],
+  s:"C = 3.14 × 5 = 15.7 cm. 15.7 × 40 = 628 cm. 628 ÷ 100 = 6.28 m."},
+ {t:"Ace programs a drawing robot: <span class=\"mono\">repeat 5 [ move forward 15 cm, turn right ? ° ]</span>. It should draw a <strong>regular pentagon</strong> and end up facing the way it started. How many <strong>degrees</strong> should each turn be?", a:"72", u:"°",
+  h:["After the whole shape, the robot has turned all the way around: 360°.","Share 360° equally among 5 turns."],
+  s:"360 ÷ 5 = 72°. (Careful: the <em>inside</em> angle of a pentagon is 108°, but the robot turns the <em>outside</em> angle, 180 − 108 = 72°.)"},
+ {t:"Another robot repeats <span class=\"mono\">[ move forward 10 cm, turn right 24° ]</span> until it is back at the start, facing the same way. The path it traces is a regular polygon. How many <strong>sides</strong> does the polygon have?", a:"15", u:"sides",
+  h:["All the turns together add up to 360°.","How many 24° turns make 360°?"],
+  s:"360 ÷ 24 = 15 turns, so the robot draws a regular 15-sided polygon (a pentadecagon)."},
+ {t:"A robot's light sensors send this <strong>binary</strong> number to its computer: <span class=\"mono\">1101101</span>. What is it in our ordinary (base-10) numbers?", a:"109", u:"",
+  h:["The seven place values, from left to right, are 64, 32, 16, 8, 4, 2, 1.","Add the place values that have a 1: 64 + 32 + 8 + 4 + 1."],
+  s:"1101101 = 64 + 32 + 0 + 8 + 4 + 0 + 1 = 109."},
+ {t:"A robot's ultrasonic sensor sends out a ping. The echo comes back after <strong>0.004 seconds</strong>. Sound travels about <strong>343 m/s</strong>. How many <strong>centimetres</strong> away is the wall?", a:"68.6", u:"cm",
+  h:["Distance travelled by the sound = 343 × 0.004. But the sound went to the wall AND back.","343 × 0.004 = 1.372 m there and back. Halve it, then change m to cm."],
+  s:"343 × 0.004 = 1.372 m (round trip). 1.372 ÷ 2 = 0.686 m = 68.6 cm."},
+ {t:TABLE+"A Mars rover robot starts at <strong>(0, 0)</strong> facing <strong>north</strong> (up the y-axis). It runs the program in the table. What is the rover's <strong>y-coordinate</strong> when it finishes? (It may be negative!)", a:"-3", u:"",
+  h:["Track two things: position AND which way it faces. After step 1 it is at (0, 5) facing north. Turning right faces it east.","After step 3: (3, 5). Turning right again faces it south, so step 5 subtracts 8 from y."],
+  s:"Step 1: (0, 5) facing north. Step 2: face east. Step 3: (3, 5). Step 4: face south. Step 5: (3, 5 − 8) = (3, −3). Step 6: turning left from south faces east. Step 7: (7, −3). The y-coordinate is <strong>−3</strong>."},
+ {t:"Read this robot code carefully:<br><span class=\"mono\">x = 2<br>repeat 5 times:<br>&nbsp;&nbsp;x = x × 2 − 1</span><br>What is the value of <span class=\"mono\">x</span> after the loop finishes?", a:"33", u:"",
+  h:["Do the loop one time at a time and write down x each time. First time: 2 × 2 − 1 = 3.","Then 3 × 2 − 1 = 5. Keep going until you have done it 5 times."],
+  s:"2 → 3 → 5 → 9 → 17 → 33. After 5 loops, x = 33."},
+ {t:"A delivery robot's battery stores <strong>3000 mAh</strong> (milliamp-hours). Its motors draw <strong>450 mA</strong> and its sensors and computer draw <strong>150 mA</strong>, all at the same time. How many <strong>hours</strong> can it run on a full charge?", a:"5", u:"hours",
+  h:["First find the total current the robot uses: 450 + 150.","Battery life (hours) = battery capacity (mAh) ÷ current (mA)."],
+  s:"450 + 150 = 600 mA. 3000 ÷ 600 = 5 hours."},
+ {t:"A warehouse robot sorted <strong>1250 parcels</strong> and put <strong>96.8%</strong> of them in the correct bin. How many parcels went in the <strong>wrong</strong> bin?", a:"40", u:"parcels",
+  h:["What percent went in the WRONG bin? 100% − 96.8%.","3.2% of 1250 = 0.032 × 1250."],
+  s:"100 − 96.8 = 3.2% wrong. 0.032 × 1250 = 40 parcels."},
+ {t:"A robot vacuum cleans a strip <strong>25 cm wide</strong> and moves at <strong>0.3 m/s</strong>. It cleans a rectangular room <strong>4.5 m by 6 m</strong> without overlapping. How many <strong>minutes</strong> does it take?", a:"6", u:"minutes",
+  h:["Area of the room = 4.5 × 6 m². If the vacuum cleans a strip 0.25 m wide, the length of path it must drive is area ÷ width.","27 ÷ 0.25 = 108 m of driving. Time = distance ÷ speed, then change seconds to minutes."],
+  s:"Area = 4.5 × 6 = 27 m². Path length = 27 ÷ 0.25 = 108 m. Time = 108 ÷ 0.3 = 360 s = 6 minutes."},
+ {t:"A Mars rover can drive at <strong>4.2 cm per second</strong>. At that speed, how many <strong>metres</strong> could it drive in <strong>1 hour</strong>?", a:"151.2", u:"m",
+  h:["How many seconds are in 1 hour? 60 × 60.","4.2 × 3600 gives centimetres. Divide by 100 to get metres."],
+  s:"1 h = 3600 s. 4.2 × 3600 = 15 120 cm. 15 120 ÷ 100 = 151.2 m. Slow and careful: on Mars, one crash could end the mission!"},
+ {t:GRAPH+"A robot arm uses the gear train in the diagram. Gear A (10 teeth) drives gear B (40 teeth). Gear C (15 teeth) is fixed to the <strong>same axle</strong> as B. Gear C drives gear D (45 teeth). If the motor turns gear A at <strong>1200 rpm</strong>, how many <strong>rpm</strong> does gear D turn?", a:"100", u:"rpm",
+  h:["A → B: 1200 × 10/40. B and C share an axle, so C turns at the same speed as B.","B (and C) turn at 300 rpm. C → D: 300 × 15/45."],
+  s:"A → B: 1200 × 10/40 = 300 rpm. C turns with B: 300 rpm. C → D: 300 × 15/45 = 100 rpm. Overall the gear train slows the motor down 12 times (4 × 3), giving the arm lots of strength."},
+ {t:"A robot's servo motor turns from <strong>0° to 180°</strong> in <strong>0.6 seconds</strong>, always at the same speed. How many <strong>seconds</strong> does it take to turn <strong>75°</strong>?", a:"0.25", u:"seconds",
+  h:["Find the time for 1° first, or notice that 75 out of 180 is a fraction of the full turn.","0.6 × 75/180 = ?"],
+  s:"0.6 ÷ 180 = 1/300 s per degree. 75 × 1/300 = 0.25 s. (Or: 75/180 = 5/12, and 5/12 × 0.6 = 0.25 s.)"},
+ {t:"<strong>Challenge (equation with brackets):</strong> A team of <strong>4 identical robots</strong> each carries a toolbox of mass <span class=\"mono\">x</span> kg plus a <strong>3 kg</strong> battery pack. Together they carry <strong>38 kg</strong>. Solve 4(x + 3) = 38. What is <span class=\"mono\">x</span>?", a:"6.5", u:"kg",
+  h:["Undo the outside first: divide both sides by 4.","x + 3 = 9.5. Now subtract 3."],
+  s:"4(x + 3) = 38, so x + 3 = 38 ÷ 4 = 9.5, and x = 9.5 − 3 = 6.5 kg. (Check: 4 × (6.5 + 3) = 4 × 9.5 = 38 ✔)"}
+];
+
+var PRAISE = ["Nice work, Ace!","Correct! Beep boop, brilliant! 🤖","Yes! Engineer Ace!","Excellent, Ace. That was a tough one!","Right on target! 🎯","Brilliant thinking, Ace!","Gears are turning! ⚙️"];
+var ENCOURAGE = ["Not quite. Check your steps and try again!","Close call. Try again, Ace! Maybe use a hint?","Hmm, not yet. Re-read the question carefully.","Keep going, Ace. Mistakes help your brain grow!"];
+
+function parseAnswer(str){
+  if(str===undefined||str===null) return NaN;
+  var s=String(str).trim().toLowerCase();
+  s=s.replace(/[\u2212\u2013]/g,"-");
+  s=s.replace(/(\d),(?=\d{3}(\D|$))/g,"$1");
+  s=s.replace(/[^0-9.\/\- ]/g," ").replace(/\s+/g," ").trim();
+  s=s.replace(/\s*\/\s*/g,"/");
+  var m;
+  if((m=s.match(/^(-?\d+) (\d+)\/(\d+)$/))){ var w=parseFloat(m[1]),n=parseFloat(m[2]),d=parseFloat(m[3]); if(d===0)return NaN; return w<0? w-n/d : w+n/d; }
+  if((m=s.match(/^(-?\d+(?:\.\d+)?)\/(\d+(?:\.\d+)?)$/))){ var d2=parseFloat(m[2]); if(d2===0)return NaN; return parseFloat(m[1])/d2; }
+  s=s.replace(/ /g,"");
+  if(/^-?(\d+\.?\d*|\.\d+)$/.test(s)) return parseFloat(s);
+  return NaN;
+}
+function isCorrect(input,key){
+  var a=parseAnswer(input), k=parseAnswer(key);
+  if(isNaN(a)) return false;
+  var isInt=Math.abs(k-Math.round(k))<1e-12;
+  var tol=isInt?1e-9:0.005;
+  return Math.abs(a-k)<=tol;
+}
+
+function isRomanCorrect(input,key){ return String(input).replace(/\s+/g,"").toUpperCase()===key; }
+var state=[];
+function render(){
+  var box=document.getElementById("questions");
+  QUESTIONS.forEach(function(q,i){
+    state.push({correct:false,tries:0,hints:0});
+    var d=document.createElement("div");
+    d.className="box q"; d.id="q"+i;
+    d.innerHTML='<div><span class="qnum">'+(i+1)+'.</span> '+q.t+'</div>'+
+      '<div class="row"><input type="text"'+(q.r?' placeholder="e.g. MMXXVI"':'')+' id="in'+i+'" aria-label="Answer to question '+(i+1)+'" autocomplete="off"> <span class="unit">'+q.u+'</span>'+
+      '<button type="button" class="check" data-i="'+i+'">Check</button>'+
+      '<button type="button" class="hint" data-i="'+i+'">Hint 💡</button>'+
+      '<button type="button" class="sol" data-i="'+i+'" style="display:none">Show solution</button></div>'+
+      '<div class="fb" id="fb'+i+'"></div><div class="hints" id="hints'+i+'"></div>'+
+      '<div class="solution" id="sol'+i+'"><strong>Solution:</strong> '+q.s+'</div>';
+    box.appendChild(d);
+  });
+  box.addEventListener("click",function(e){
+    var b=e.target; if(b.tagName!=="BUTTON")return;
+    var i=+b.getAttribute("data-i");
+    if(b.className==="check") check(i);
+    else if(b.className==="hint") hint(i);
+    else if(b.className==="sol") document.getElementById("sol"+i).style.display="block";
+  });
+  box.addEventListener("keydown",function(e){
+    if(e.key==="Enter"&&e.target.tagName==="INPUT"){ check(+e.target.id.slice(2)); }
+  });
+}
+function pick(arr){return arr[Math.floor(Math.random()*arr.length)];}
+function check(i){
+  var val=document.getElementById("in"+i).value;
+  var fb=document.getElementById("fb"+i), card=document.getElementById("q"+i);
+  if(val.trim()===""){fb.className="fb bad";fb.textContent="Type an answer first, Ace!";return;}
+  var isR=!!QUESTIONS[i].r;
+  if(isR&&!/^[ivxlcdm\s]+$/i.test(val)){fb.className="fb bad";fb.textContent="Use only Roman numeral letters: I, V, X, L, C, D, M.";return;}
+  if(!isR&&isNaN(parseAnswer(val))){fb.className="fb bad";fb.textContent="I can't read that as a number. Try something like 42, 3.5, 3/4 or 1 3/4.";return;}
+  state[i].tries++;
+  if(isR?isRomanCorrect(val,QUESTIONS[i].a):isCorrect(val,QUESTIONS[i].a)){
+    state[i].correct=true; card.className="box q right"; fb.className="fb good";
+    fb.textContent="✅ "+pick(PRAISE)+(state[i].tries===1?" (first try!)":"");
+  } else {
+    state[i].correct=false; card.className="box q wrong"; fb.className="fb bad";
+    fb.textContent="❌ "+pick(ENCOURAGE);
+    if(state[i].tries>=2) card.querySelector(".sol").style.display="inline-block";
+  }
+  updateScore();
+}
+function hint(i){
+  var q=QUESTIONS[i], s=state[i], hb=document.getElementById("hints"+i);
+  if(s.hints<q.h.length){
+    var p=document.createElement("p"); p.textContent="💡 Hint "+(s.hints+1)+": "+q.h[s.hints]; hb.appendChild(p); s.hints++;
+  }
+  if(s.hints>=q.h.length) document.querySelector("#q"+i+" .hint").disabled=true;
+  updateScore();
+}
+function counts(){
+  var c=0,first=0,h=0;
+  state.forEach(function(s){ if(s.correct){c++; if(s.tries===1)first++;} h+=s.hints; });
+  return {correct:c,first:first,hints:h};
+}
+function updateScore(){
+  var k=counts();
+  document.getElementById("scoreText").textContent="Score: "+k.correct+" / "+QUESTIONS.length+" correct · hints used: "+k.hints;
+}
+function finish(){
+  var k=counts(), n=QUESTIONS.length, pct=Math.round(100*k.correct/n);
+  var msg;
+  if(pct===100) msg="🏆 PERFECT SCORE! Incredible work, Ace. A real robotics engineer would be impressed!";
+  else if(pct>=85) msg="🌟 Outstanding, Ace! That's a Grade 6-7 level performance!";
+  else if(pct>=65) msg="💪 Great effort, Ace! Review the ones you missed and try them again.";
+  else if(pct>=40) msg="👍 Good start, Ace! These problems are tough. Use the hints and solutions to learn the tricks, then try again.";
+  else msg="🌱 These are challenge problems, well above grade level. Every great engineer started as a beginner! Go through the worked examples and try again, Ace!";
+  var f=document.getElementById("final");
+  f.style.display="block";
+  f.innerHTML="<h2 style='border:none;margin-top:0'>Final Score: "+k.correct+" / "+n+" ("+pct+"%)</h2>"+
+    "<p>Correct on the first try: "+k.first+" · Hints used: "+k.hints+"</p><p>"+msg+"</p>"+
+    "<p style='font-size:.85em;color:#546e7a'>Finished on "+new Date().toLocaleString("en-CA")+"</p>";
+  f.scrollIntoView({behavior:"smooth"});
+}
+render();
+updateScore();
+document.getElementById("finishBtn").addEventListener("click",finish);
+</script>
+<script src="../../assets/autosave.js"></script>
+</body>
+</html>

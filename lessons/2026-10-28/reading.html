@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reading (Oct. 28): Sense, Think, Act: How Robots Work</title>
+<style>
+  body{font-family:"Segoe UI",Verdana,Arial,sans-serif;font-size:20px;line-height:1.65;margin:0;background:#f5f0eb;color:#2c2416}
+  .wrap{max-width:880px;margin:0 auto;padding:20px 18px 80px}
+  a.home{font-size:.9em;color:#bf360c}
+  h1{color:#e65100;font-size:2em;margin:10px 0}
+  h2{color:#ef6c00;margin-top:36px;border-bottom:3px solid #ffcc80;padding-bottom:4px}
+  .box{background:#fff;border-radius:16px;padding:18px 22px;margin:16px 0;box-shadow:0 3px 10px rgba(0,0,0,.07)}
+  .passage{font-family:Georgia,"Times New Roman",serif;font-size:1.1em;line-height:1.8}
+  .passage h3{text-align:center;font-family:"Segoe UI",Verdana,sans-serif;color:#e65100;font-size:1.4em;margin:4px 0 14px}
+  .passage p{text-indent:1.5em;margin:0 0 14px}
+  mark.v{background:#fff59d;padding:0 3px;border-radius:4px;font-weight:bold}
+  .tipbox{background:#fff8e1;border-left:8px solid #ffb300}
+  .q{border-left:8px solid #ffcc80}
+  .q.right{border-left-color:#43a047;background:#f1f8e9}
+  .q.wrong{border-left-color:#e53935;background:#fff5f5}
+  .tag{display:inline-block;font-size:.7em;background:#ef6c00;color:#fff;border-radius:8px;padding:1px 8px;margin-left:6px;vertical-align:middle}
+  .opt{display:block;width:100%;text-align:left;font-size:.95em;background:#fafafa;border:2px solid #e0e0e0;border-radius:10px;padding:8px 14px;margin:8px 0;cursor:pointer;font-family:inherit}
+  .opt:hover{border-color:#ffb74d;background:#fff}
+  .opt.sel-right{background:#c8e6c9;border-color:#43a047}
+  .opt.sel-wrong{background:#ffcdd2;border-color:#e53935}
+  .fb{margin-top:6px;font-weight:bold}
+  .fb.good{color:#2e7d32} .fb.bad{color:#c62828}
+  .explain{color:#e65100;font-weight:normal}
+  select{font-size:.95em;padding:6px 8px;border-radius:8px;border:2px solid #ffb74d;max-width:100%;font-family:inherit}
+  .vrow{display:flex;flex-wrap:wrap;align-items:center;gap:10px;padding:8px 6px;border-bottom:1px dashed #eee}
+  .vrow .w{font-weight:bold;min-width:140px}
+  .vrow.right{background:#f1f8e9} .vrow.wrong{background:#fff5f5}
+  .mark{font-size:1.2em;min-width:30px}
+  button.main{font-size:1em;padding:10px 20px;border:none;border-radius:10px;cursor:pointer;font-weight:bold;background:#ef6c00;color:#fff;margin-top:10px}
+  button.main:hover{background:#e65100}
+  button.sec{font-size:.95em;padding:8px 16px;border:none;border-radius:10px;cursor:pointer;font-weight:bold;background:#ffe082;color:#5d4037}
+  textarea{width:100%;box-sizing:border-box;font-size:1em;font-family:inherit;padding:10px;border:2px solid #ffb74d;border-radius:10px;min-height:120px}
+  #model{display:none;background:#fff3e0;border-radius:10px;padding:10px 14px;margin-top:10px}
+  #scoreBox{position:sticky;bottom:0;background:#e65100;color:#fff;border-radius:16px 16px 0 0;padding:12px 20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-top:30px}
+  #scoreBox button{font-size:.95em;padding:8px 16px;border:none;border-radius:10px;cursor:pointer;font-weight:bold;background:#ffca28;color:#3e2723}
+  #final{display:none;text-align:center;border:4px solid #43a047;font-size:1.1em}
+</style>
+</head>
+<body>
+<div class="wrap">
+<a class="home" href="../../index.html">&larr; Back to all lessons</a>
+<h1>📖 Reading Week 31: Sense, Think, Act: How Robots Work</h1>
+
+<div class="box tipbox">
+  <strong>Before you read, Ace:</strong> Today's passage is an <em>informational</em> text that explains how robots notice the world, make decisions and move. As you read, watch for <em>sequence</em> (steps in a cycle), <em>cause and effect</em>, <em>comparisons</em>, and places where you must <em>infer</em> (read between the lines).
+  <ul>
+    <li><strong>Preview:</strong> Read the title. The three words "sense, think, act" are a clue to how the passage is organized. Predict what each part will explain.</li>
+    <li><strong>Pause:</strong> After paragraph 4, stop and explain the sense-think-act loop to yourself using a robot vacuum as your example.</li>
+    <li><strong>Root detective:</strong> Useful word parts:
+      <span style="display:block;margin-top:6px"><strong>auto</strong> = self (autonomous, automatic) · <strong>nom</strong> = law, rule (autonomous) · <strong>tect</strong> = cover (detect = "uncover") · <strong>-ate</strong> = make or do (calibrate) · <strong>ex-</strong> = out (execute) · <strong>vers</strong> = turn (versatile)</span></li>
+    <li><strong>Words in <mark class="v">yellow</mark></strong> are vocabulary words. Use the sentence around them (the <em>context</em>) to figure out what they mean.</li>
+  </ul>
+</div>
+
+<div class="box passage" id="passage">
+<h3>Sense, Think, Act: How Robots Work</h3>
+<p>In a car factory, a row of orange robot arms swings, welds and lifts all day without a coffee break. In a hospital, a robot carries medicine down the hallway and politely waits for the elevator. On Mars, a six-wheeled rover studies a rock, decides it looks interesting, and drives over for a closer look. These machines look nothing alike, but almost every robot follows the same simple pattern: it <strong>senses</strong>, it <strong>thinks</strong>, and it <strong>acts</strong>. Then it does it all over again, sometimes hundreds of times every second.</p>
+<p>The first job of any robot is to notice what is around it. People use eyes, ears and skin; robots use <strong>sensors</strong>. A camera lets a robot see shapes and colours. An ultrasonic sensor sends out a squeak of sound too high for humans to hear and times the echo, the way a bat does, to <mark class="v">detect</mark> walls and furniture. Touch sensors tell a robot when it has bumped into something, and a tiny device called a gyroscope tells it whether it is tilting or about to tip over. Sensors are not perfect, though. Dust, glare and noise can fool them, so engineers must <mark class="v">calibrate</mark> each sensor, testing it against known measurements and adjusting it until its readings can be trusted.</p>
+<p>The second job is thinking. A robot's "brain" is a computer that runs a <strong>program</strong>: a list of instructions written by people. The instructions often use simple rules like "IF the front sensor detects an object closer than 20 cm, THEN stop and turn right." A computer can <mark class="v">execute</mark> millions of these instructions every second without getting bored or distracted. But it only does exactly what it is told. If a programmer forgets to include a rule for stairs, a robot vacuum may happily roll straight off the top step.</p>
+<p>The third job is acting, and that is where <strong>actuators</strong> come in. An actuator is any part that makes a robot move: electric motors that spin wheels, small motors called servos that turn a joint to an exact angle, or pistons pushed by air or liquid. Gears connect the motors to the moving parts. A small gear driving a big gear trades speed for strength, which is why a robot arm can lift a heavy car door slowly and smoothly. Then the loop begins again. The robot senses whether its last move worked, and this <mark class="v">feedback</mark> lets it correct itself, just as you adjust your hand when you reach for a glass.</p>
+<p>Some robots need a person to steer them, like a remote-controlled toy. Others are <mark class="v">autonomous</mark>, meaning they can make many decisions on their own. Mars rovers must be partly autonomous because a radio message takes several minutes, and sometimes more than twenty, to travel between Earth and Mars. If a rover waited for a human to approve every move, it might roll into a crater before the warning arrived. So engineers give it rules for avoiding <mark class="v">obstacles</mark> and let it pick its own safe path across the rocks.</p>
+<p>Canada is famous for one of the most important robots ever built. Canadarm, first launched on a space shuttle in 1981, was a robotic arm that caught satellites and moved heavy cargo in space. Its bigger cousin, Canadarm2, has helped build and repair the International Space Station, and a two-armed robot called Dextre handles delicate jobs so astronauts don't have to risk dangerous spacewalks. These arms were designed to <mark class="v">mimic</mark> a human arm, with a shoulder, an elbow and a wrist, but they are many metres long and controlled with great care.</p>
+<p>Surprisingly, the things that are hardest for robots are often the easiest for people. A computer can beat a world champion at chess, yet folding laundry, walking on a slippery sidewalk or picking up an egg without crushing it are huge challenges for a machine. That is why the most <mark class="v">versatile</mark> robots today still work alongside people, not instead of them. Robots are excellent at jobs that are dangerous, dull or require perfect repetition, while humans are better at creativity, kindness and figuring out brand-new problems. The future of robotics may be less about robots replacing us and more about humans and machines working as a team.</p>
+<p style="text-indent:0;font-size:.8em;color:#546e7a;text-align:right">About 700 words</p>
+</div>
+
+<h2>Part 1: Comprehension</h2>
+<p>Click the best answer. You'll find out right away if you're correct. Only your <strong>first click</strong> counts toward your score, but you can keep trying to find the right answer.</p>
+<div id="mc"></div>
+
+<h2>Part 2: Think Deeper (not scored)</h2>
+<div class="box">
+  <p><strong>The author says the future may be "less about robots replacing us and more about humans and machines working as a team." In 3 to 5 sentences, explain what the author means. Use at least two details from the passage, then describe one job YOU think a robot and a person could do better together than either could alone.</strong></p>
+  <textarea id="openAns" placeholder="Write your answer here, Ace..."></textarea>
+  <p><button type="button" class="sec" id="showModel">Compare with a model answer</button></p>
+  <div id="model"><strong>Model answer:</strong> The author means that robots and people are good at different things, so they work best together. Robots are excellent at dangerous, dull or repetitive jobs, like welding in a factory, but they struggle with tasks that are easy for people, like folding laundry or handling an egg. Humans are better at creativity and solving brand-new problems. I think a robot and a surgeon could do an operation better together, because the robot arm can make tiny, steady movements while the doctor decides what to do and reacts if something unexpected happens.<br><em>Did you explain the author's idea, use two passage details, and give your own example with a reason? If so, excellent thinking!</em></div>
+</div>
+
+<h2>Part 3: Vocabulary</h2>
+<div class="box">
+  <h3 style="margin-top:0">A. Match each word to its meaning</h3>
+  <p>Choose the meaning that fits how the word is used in the passage.</p>
+  <div id="vmatch"></div>
+  <h3>B. Fill in the blank</h3>
+  <p>Choose the vocabulary word that best completes each sentence.</p>
+  <div id="vfill"></div>
+  <button type="button" class="main" id="checkVocab">Check my vocabulary</button>
+  <div class="fb" id="vocabFb"></div>
+</div>
+
+<div class="box" id="final"></div>
+<div id="scoreBox">
+  <span id="scoreText"></span>
+  <button type="button" id="finishBtn">I'm done! Show my final score</button>
+</div>
+</div>
+
+<script>
+var MC = [
+ {q:"Which sentence best states the <strong>main idea</strong> of the whole passage?",
+  o:["Canadarm was launched in 1981.","Robots look very different, but most work by repeating a loop of sensing, thinking and acting, and they work best alongside people.","Robot vacuums can fall down stairs.","Gyroscopes tell robots if they are tilting."],
+  a:1, e:"A, C and D are single details. B sums up the whole passage: the sense-think-act loop, plus the idea that robots and humans make a good team."},
+ {q:"What is the correct <strong>order</strong> of the robot loop described in the passage?", tag:"Sequence",
+  o:["Act, think, sense","Think, act, sense","Sense, think, act","Sense, act, think"],
+  a:2, e:"Paragraph 1: \"it senses, it thinks, and it acts. Then it does it all over again.\""},
+ {q:"According to paragraph 2, how is an ultrasonic sensor <strong>like a bat</strong>?", tag:"Compare and contrast",
+  o:["It sends out a high sound and times the echo to find objects.","It flies at night.","It sees colours with a camera.","It sleeps upside down."],
+  a:0, e:"The sensor \"sends out a squeak of sound too high for humans to hear and times the echo, the way a bat does.\""},
+ {q:"Why must engineers <strong>calibrate</strong> sensors?", tag:"Cause and effect",
+  o:["Because sensors are too expensive.","Because sensors need to be painted.","Because robots like to be tested.","Because dust, glare and noise can fool sensors, so their readings must be tested and adjusted."],
+  a:3, e:"Paragraph 2: \"Dust, glare and noise can fool them, so engineers must calibrate each sensor.\""},
+ {q:"What can you <strong>infer</strong> from the example of the robot vacuum rolling off the top step?", tag:"Inference",
+  o:["Robot vacuums enjoy stairs.","A robot is only as smart as the rules people program into it.","Stairs are dangerous for everyone.","Vacuums should never be used upstairs."],
+  a:1, e:"Paragraph 3 says a computer \"only does exactly what it is told,\" so a missing rule leads to a mistake. The robot can't think of the rule itself."},
+ {q:"In paragraph 4, which of these is an <strong>actuator</strong>?", tag:"Vocabulary in context",
+  o:["A camera","A gyroscope","A program","A servo that turns a joint to an exact angle"],
+  a:3, e:"An actuator is \"any part that makes a robot move,\" including \"servos that turn a joint to an exact angle.\" Cameras and gyroscopes are sensors; a program is part of the thinking."},
+ {q:"Why do Mars rovers <strong>need</strong> to be partly autonomous?", tag:"Problem and solution",
+  o:["Because radio messages take minutes to travel between Earth and Mars, so waiting for every command could be dangerous.","Because there are no humans who know how to drive them.","Because Mars has no rocks.","Because autonomous robots are cheaper."],
+  a:0, e:"Paragraph 5: the delay means \"it might roll into a crater before the warning arrived.\""},
+ {q:"Why did the author include paragraph 6 about Canadarm and Dextre?", tag:"Author's purpose",
+  o:["To explain how chess computers work.","To persuade readers to become astronauts.","To give a Canadian example of important robots that copy the human arm and keep astronauts safer.","To describe how a robot vacuum cleans."],
+  a:2, e:"The paragraph shows a real, famous Canadian robot, and says Dextre does delicate jobs \"so astronauts don't have to risk dangerous spacewalks.\""},
+ {q:"In paragraph 7, what is <strong>surprising</strong> about what robots find hard?", tag:"Compare and contrast",
+  o:["Robots can't do math.","Robots are bad at chess.","Robots can't work in factories.","Tasks that are easy for people, like folding laundry or holding an egg, are often very hard for robots."],
+  a:3, e:"\"The things that are hardest for robots are often the easiest for people.\" A computer can win at chess but struggles to fold laundry."},
+ {q:"Which job would a robot most likely be <strong>best</strong> at, based on the passage?", tag:"Synthesis",
+  o:["Inventing a brand-new board game","Tightening the same bolt on 5000 cars with perfect accuracy","Comforting a sad friend","Deciding what to paint in an art class"],
+  a:1, e:"Paragraph 7: robots are excellent at jobs that are \"dangerous, dull or require perfect repetition.\" Creativity and kindness are human strengths."}
+];
+
+var VOCAB = ["detect","calibrate","execute","feedback","autonomous","obstacles","mimic","versatile"];
+var DEFS = {
+ detect:"to notice or discover that something is there",
+ calibrate:"to test and adjust an instrument so its measurements are accurate",
+ execute:"to carry out or perform an instruction or plan",
+ feedback:"information about how well something worked, used to make it better",
+ autonomous:"able to act and make decisions on its own, without being controlled",
+ obstacles:"things that block your way or make progress harder",
+ mimic:"to copy the way someone or something looks, moves or sounds",
+ versatile:"able to do many different things well"
+};
+var FILL = [
+ {s:"Ace's parrot can ____ the sound of the microwave beeping.", a:"mimic"},
+ {s:"The bike course had cones, ramps and other ____ to steer around.", a:"obstacles"},
+ {s:"Before the race, the coach had to ____ the stopwatch so the times would be accurate.", a:"calibrate"},
+ {s:"A Swiss Army knife is ____ because it can cut, open cans and drive screws.", a:"versatile"}
+];
+var FILL_OPTIONS = ["versatile","detect","mimic","feedback","calibrate","autonomous","execute","obstacles"];
+
+var PRAISE=["Nice work, Ace!","Correct! Sharp reading, Ace!","Yes! You followed the evidence!","Excellent thinking, engineer Ace!","Right! Beep boop, brilliant! 🤖"];
+function pick(a){return a[Math.floor(Math.random()*a.length)];}
+function shuffled(arr,seed){var a=arr.slice(),s=seed;for(var i=a.length-1;i>0;i--){s=(s*9301+49297)%233280;var j=Math.floor(s/233280*(i+1));var t=a[i];a[i]=a[j];a[j]=t;}return a;}
+
+var mcState=MC.map(function(){return {answered:false,firstRight:false,done:false};});
+var vocabScore=0, vocabChecked=false;
+var VOCAB_TOTAL=VOCAB.length+FILL.length;
+
+function buildMC(){
+  var box=document.getElementById("mc");
+  MC.forEach(function(item,i){
+    var d=document.createElement("div"); d.className="box q"; d.id="mc"+i;
+    var html="<div><strong>"+(i+1)+".</strong> "+item.q+(item.tag?'<span class="tag">'+item.tag+'</span>':"")+"</div>";
+    item.o.forEach(function(opt,j){ html+='<button type="button" class="opt" data-i="'+i+'" data-j="'+j+'">'+String.fromCharCode(65+j)+". "+opt+"</button>"; });
+    html+='<div class="fb" id="mcfb'+i+'"></div>';
+    d.innerHTML=html; box.appendChild(d);
+  });
+  box.addEventListener("click",function(e){
+    var b=e.target.closest?e.target.closest(".opt"):e.target; if(!b||!b.classList.contains("opt"))return;
+    answerMC(+b.getAttribute("data-i"),+b.getAttribute("data-j"),b);
+  });
+}
+function answerMC(i,j,btn){
+  var st=mcState[i], item=MC[i], fb=document.getElementById("mcfb"+i), card=document.getElementById("mc"+i);
+  if(st.done) return;
+  var right=(j===item.a);
+  if(!st.answered){ st.answered=true; st.firstRight=right; }
+  if(right){
+    st.done=true; btn.classList.add("sel-right"); card.className="box q right";
+    fb.className="fb good"; fb.innerHTML="✅ "+pick(PRAISE)+' <span class="explain">'+item.e+"</span>";
+  } else {
+    btn.classList.add("sel-wrong"); card.className="box q wrong";
+    fb.className="fb bad"; fb.innerHTML="❌ Not quite, Ace. Look back at the passage and try another answer.";
+  }
+  updateScore();
+}
+function buildVocab(){
+  var m=document.getElementById("vmatch");
+  var defOrder=shuffled(VOCAB,44);
+  VOCAB.forEach(function(w,i){
+    var row=document.createElement("div"); row.className="vrow"; row.id="vm"+i;
+    var sel='<select id="vsel'+i+'" aria-label="Meaning of '+w+'"><option value="">- choose a meaning -</option>';
+    defOrder.forEach(function(k){ sel+='<option value="'+k+'">'+DEFS[k]+'</option>'; });
+    sel+="</select>";
+    row.innerHTML='<span class="mark" id="vmk'+i+'"></span><span class="w">'+w+'</span>'+sel;
+    m.appendChild(row);
+  });
+  var f=document.getElementById("vfill");
+  FILL.forEach(function(item,i){
+    var row=document.createElement("div"); row.className="vrow"; row.id="vf"+i;
+    var sel='<select id="fsel'+i+'" aria-label="Blank '+(i+1)+'"><option value="">- choose -</option>';
+    FILL_OPTIONS.forEach(function(w){ sel+='<option value="'+w+'">'+w+'</option>'; });
+    sel+="</select>";
+    var parts=item.s.split("____");
+    row.innerHTML='<span class="mark" id="vfk'+i+'"></span><span>'+(i+1)+'. '+parts[0]+sel+parts[1]+'</span>';
+    f.appendChild(row);
+  });
+}
+function checkVocab(){
+  var score=0, blank=0;
+  VOCAB.forEach(function(w,i){
+    var v=document.getElementById("vsel"+i).value, ok=(v===w);
+    if(!v) blank++;
+    if(ok) score++;
+    document.getElementById("vm"+i).className="vrow "+(ok?"right":"wrong");
+    document.getElementById("vmk"+i).textContent=ok?"✅":"❌";
+  });
+  FILL.forEach(function(item,i){
+    var v=document.getElementById("fsel"+i).value, ok=(v===item.a);
+    if(!v) blank++;
+    if(ok) score++;
+    document.getElementById("vf"+i).className="vrow "+(ok?"right":"wrong");
+    document.getElementById("vfk"+i).textContent=ok?"✅":"❌";
+  });
+  vocabScore=score; vocabChecked=true;
+  var fb=document.getElementById("vocabFb");
+  if(score===VOCAB_TOTAL){ fb.className="fb good"; fb.textContent="🌟 "+score+" / "+VOCAB_TOTAL+". Perfect! Your vocabulary is fully programmed, Ace! 🤖"; }
+  else { fb.className="fb bad"; fb.textContent=score+" / "+VOCAB_TOTAL+" correct"+(blank?" ("+blank+" left blank)":"")+". Fix the ❌ ones and check again. Try finding the word in the passage for clues!"; }
+  updateScore();
+}
+function scores(){
+  var mc=0,answered=0; mcState.forEach(function(s){ if(s.firstRight) mc++; if(s.answered) answered++; });
+  return {mc:mc,answered:answered,vocab:vocabScore};
+}
+function updateScore(){
+  var s=scores();
+  document.getElementById("scoreText").textContent="Comprehension: "+s.mc+" / "+MC.length+" · Vocabulary: "+(vocabChecked?s.vocab:"-")+" / "+VOCAB_TOTAL;
+}
+function finish(){
+  if(!vocabChecked) checkVocab();
+  var s=scores(), total=MC.length+VOCAB_TOTAL, got=s.mc+s.vocab, pct=Math.round(100*got/total);
+  var msg = pct===100 ? "🏆 A perfect score! Outstanding reading, Ace!" :
+            pct>=80 ? "🌟 Fantastic work, Ace! You read like a Grade 7 student!" :
+            pct>=60 ? "💪 Solid effort, Ace! Reread the paragraphs for the questions you missed." :
+                      "🌱 This was a challenging passage. Read it once more, slowly, and try again. You've got this, Ace!";
+  var f=document.getElementById("final"); f.style.display="block";
+  f.innerHTML="<h2 style='border:none;margin-top:0'>Final Score: "+got+" / "+total+" ("+pct+"%)</h2>"+
+    "<p>Comprehension (first tries): "+s.mc+" / "+MC.length+(s.answered<MC.length?" (you skipped "+(MC.length-s.answered)+")":"")+"<br>Vocabulary: "+s.vocab+" / "+VOCAB_TOTAL+"</p><p>"+msg+"</p>"+
+    "<p style='font-size:.85em;color:#546e7a'>Finished on "+new Date().toLocaleString("en-CA")+"</p>";
+  f.scrollIntoView({behavior:"smooth"});
+}
+buildMC(); buildVocab(); updateScore();
+document.getElementById("checkVocab").addEventListener("click",checkVocab);
+document.getElementById("finishBtn").addEventListener("click",finish);
+document.getElementById("showModel").addEventListener("click",function(){document.getElementById("model").style.display="block";});
+</script>
+<script src="../../assets/autosave.js"></script>
+</body>
+</html>

@@ -6,7 +6,7 @@ TTS voice (Cantonese): zh-HK-HiuMaanNeural when available; 2026-10-12+ often gTT
 TTS voice (English in ALL-words.mp3): en-HK-YanNeural
 Rate: slowed (~-20%) for clear listening practice.
 
-Sources: Ace lessons 2026-09-29 (Greetings) + 2026-09-30 (Family Members) + 2026-10-01 (Food) + 2026-10-02 (School) + 2026-10-03 (Body) + 2026-10-04 (Colours) + 2026-10-05 (Sky & Space) + 2026-10-06 (Numbers 11-100) + 2026-10-07 (At the Doctor) + 2026-10-08 (Nature: Mountains & Volcanoes) + 2026-10-09 (Question Words & Secrets) + 2026-10-10 (Music) + 2026-10-11 (Trains & Travel) + 2026-10-12 (Brain & Sleep) + 2026-10-13 (Bees & Gardens) + 2026-10-14 (Electricity & Lights) + 2026-10-15 (Land, People & Respect) + 2026-10-16 (Ice, Snow & Giant Animals) + 2026-10-17 (Community, Rules & Voting) + 2026-10-18 (Weather & Storms) + 2026-10-19 (Germs, Vaccines & Staying Healthy) + 2026-10-20 (Ancient China: Paper, Books & Emperors) + 2026-10-21 (Flight: Airplanes, Pilots & Birds) + 2026-10-22 (Gold Mountain: Gold, Miners & Money) + 2026-10-23 (In the Kitchen: Cooking & Flavours) + 2026-10-24 (Cartoons, Drawing & Movies) + 2026-10-25 (Fossils & Sea Creatures) + 2026-10-26 (Emergency & Hospital Words) + 2026-10-27 (Maps & Directions).
+Sources: Ace lessons 2026-09-29 (Greetings) + 2026-09-30 (Family Members) + 2026-10-01 (Food) + 2026-10-02 (School) + 2026-10-03 (Body) + 2026-10-04 (Colours) + 2026-10-05 (Sky & Space) + 2026-10-06 (Numbers 11-100) + 2026-10-07 (At the Doctor) + 2026-10-08 (Nature: Mountains & Volcanoes) + 2026-10-09 (Question Words & Secrets) + 2026-10-10 (Music) + 2026-10-11 (Trains & Travel) + 2026-10-12 (Brain & Sleep) + 2026-10-13 (Bees & Gardens) + 2026-10-14 (Electricity & Lights) + 2026-10-15 (Land, People & Respect) + 2026-10-16 (Ice, Snow & Giant Animals) + 2026-10-17 (Community, Rules & Voting) + 2026-10-18 (Weather & Storms) + 2026-10-19 (Germs, Vaccines & Staying Healthy) + 2026-10-20 (Ancient China: Paper, Books & Emperors) + 2026-10-21 (Flight: Airplanes, Pilots & Birds) + 2026-10-22 (Gold Mountain: Gold, Miners & Money) + 2026-10-23 (In the Kitchen: Cooking & Flavours) + 2026-10-24 (Cartoons, Drawing & Movies) + 2026-10-25 (Fossils & Sea Creatures) + 2026-10-26 (Emergency & Hospital Words) + 2026-10-27 (Maps & Directions) + 2026-10-28 (Robot Words).
 Numbers 1-10 are already known and not included here.
 
 How to practise:
@@ -1185,6 +1185,46 @@ Individual files
   Chinese:  指南針
   Jyutping: zi2 naam4 zam1
   English:  compass
+
+233-gei1-haai6-jan4-robot.mp3
+  Chinese:  機械人
+  Jyutping: gei1 haai6 jan4
+  English:  robot
+
+234-cing4-sik1-program.mp3
+  Chinese:  程式
+  Jyutping: cing4 sik1
+  English:  computer program
+
+235-din6-ci4-battery.mp3
+  Chinese:  電池
+  Jyutping: din6 ci4
+  English:  battery
+
+236-mo1-daa2-motor.mp3
+  Chinese:  摩打
+  Jyutping: mo1 daa2
+  English:  motor
+
+237-ci2-leon4-gear.mp3
+  Chinese:  齒輪
+  Jyutping: ci2 leon4
+  English:  gear
+
+238-on3-zai3-press-button.mp3
+  Chinese:  按掣
+  Jyutping: on3 zai3
+  English:  to press a button
+
+239-juk1-move.mp3
+  Chinese:  郁
+  Jyutping: juk1
+  English:  to move
+
+240-ting4-stop.mp3
+  Chinese:  停
+  Jyutping: ting4
+  English:  to stop
 
 
 Combined file
