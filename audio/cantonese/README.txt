@@ -6,7 +6,7 @@ TTS voice (Cantonese): zh-HK-HiuMaanNeural when available; 2026-10-12+ often gTT
 TTS voice (English in ALL-words.mp3): en-HK-YanNeural
 Rate: slowed (~-20%) for clear listening practice.
 
-Sources: Ace lessons 2026-09-29 (Greetings) + 2026-09-30 (Family Members) + 2026-10-01 (Food) + 2026-10-02 (School) + 2026-10-03 (Body) + 2026-10-04 (Colours) + 2026-10-05 (Sky & Space) + 2026-10-06 (Numbers 11-100) + 2026-10-07 (At the Doctor) + 2026-10-08 (Nature: Mountains & Volcanoes) + 2026-10-09 (Question Words & Secrets) + 2026-10-10 (Music) + 2026-10-11 (Trains & Travel) + 2026-10-12 (Brain & Sleep) + 2026-10-13 (Bees & Gardens) + 2026-10-14 (Electricity & Lights) + 2026-10-15 (Land, People & Respect) + 2026-10-16 (Ice, Snow & Giant Animals) + 2026-10-17 (Community, Rules & Voting) + 2026-10-18 (Weather & Storms) + 2026-10-19 (Germs, Vaccines & Staying Healthy) + 2026-10-20 (Ancient China: Paper, Books & Emperors) + 2026-10-21 (Flight: Airplanes, Pilots & Birds) + 2026-10-22 (Gold Mountain: Gold, Miners & Money) + 2026-10-23 (In the Kitchen: Cooking & Flavours) + 2026-10-24 (Cartoons, Drawing & Movies) + 2026-10-25 (Fossils & Sea Creatures) + 2026-10-26 (Emergency & Hospital Words) + 2026-10-27 (Maps & Directions) + 2026-10-28 (Robot Words).
+Sources: Ace lessons 2026-09-29 (Greetings) + 2026-09-30 (Family Members) + 2026-10-01 (Food) + 2026-10-02 (School) + 2026-10-03 (Body) + 2026-10-04 (Colours) + 2026-10-05 (Sky & Space) + 2026-10-06 (Numbers 11-100) + 2026-10-07 (At the Doctor) + 2026-10-08 (Nature: Mountains & Volcanoes) + 2026-10-09 (Question Words & Secrets) + 2026-10-10 (Music) + 2026-10-11 (Trains & Travel) + 2026-10-12 (Brain & Sleep) + 2026-10-13 (Bees & Gardens) + 2026-10-14 (Electricity & Lights) + 2026-10-15 (Land, People & Respect) + 2026-10-16 (Ice, Snow & Giant Animals) + 2026-10-17 (Community, Rules & Voting) + 2026-10-18 (Weather & Storms) + 2026-10-19 (Germs, Vaccines & Staying Healthy) + 2026-10-20 (Ancient China: Paper, Books & Emperors) + 2026-10-21 (Flight: Airplanes, Pilots & Birds) + 2026-10-22 (Gold Mountain: Gold, Miners & Money) + 2026-10-23 (In the Kitchen: Cooking & Flavours) + 2026-10-24 (Cartoons, Drawing & Movies) + 2026-10-25 (Fossils & Sea Creatures) + 2026-10-26 (Emergency & Hospital Words) + 2026-10-27 (Maps & Directions) + 2026-10-28 (Robot Words) + 2026-10-29 (Sports & Ancient Greece).
 Numbers 1-10 are already known and not included here.
 
 How to practise:
@@ -1225,6 +1225,46 @@ Individual files
   Chinese:  停
   Jyutping: ting4
   English:  to stop
+
+241-hei1-laap6-greece.mp3
+  Chinese:  希臘
+  Jyutping: hei1 laap6
+  English:  Greece
+
+242-bei2-coi3-competition.mp3
+  Chinese:  比賽
+  Jyutping: bei2 coi3
+  English:  competition, race, match
+
+243-wan6-dung6-jyun4-athlete.mp3
+  Chinese:  運動員
+  Jyutping: wan6 dung6 jyun4
+  English:  athlete
+
+244-jeng4-win.mp3
+  Chinese:  贏
+  Jyutping: jeng4
+  English:  to win
+
+245-syu1-lose.mp3
+  Chinese:  輸
+  Jyutping: syu1
+  English:  to lose
+
+246-zoeng2-paai4-medal.mp3
+  Chinese:  獎牌
+  Jyutping: zoeng2 paai4
+  English:  medal
+
+247-dai6-jat1-first.mp3
+  Chinese:  第一
+  Jyutping: dai6 jat1
+  English:  first, number one
+
+248-gaa1-jau2-go-for-it.mp3
+  Chinese:  加油
+  Jyutping: gaa1 jau2
+  English:  Go! You can do it! (cheer)
 
 
 Combined file

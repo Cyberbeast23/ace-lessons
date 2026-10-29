@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cantonese (Oct. 29): Sports &amp; Competition (比賽)</title>
+<style>
+  body{font-family:"Segoe UI",Verdana,Arial,sans-serif;font-size:20px;line-height:1.6;margin:0;background:#f5f0eb;color:#2c2416}
+  .wrap{max-width:880px;margin:0 auto;padding:20px 18px 80px}
+  a.home{font-size:.9em;color:#bf360c}
+  h1{color:#e65100;font-size:2em;margin:10px 0}
+  h2{color:#ef6c00;margin-top:36px;border-bottom:3px solid #ffcc80;padding-bottom:4px}
+  h3{color:#ef6c00}
+  .box{background:#fff;border-radius:16px;padding:18px 22px;margin:16px 0;box-shadow:0 3px 10px rgba(0,0,0,.07)}
+  .tipbox{background:#fff8e1;border-left:8px solid #ffb300}
+  .char{font-size:2.2em;font-weight:bold;color:#e65100;line-height:1.2}
+  .jyut{font-family:Consolas,"Courier New",monospace;background:#fff3e0;padding:2px 8px;border-radius:8px;font-size:1.05em}
+  .card{display:grid;grid-template-columns:auto 1fr;gap:8px 18px;align-items:center;border-left:8px solid #ef6c00;padding-left:14px}
+  .card .meta{grid-column:2}
+  .ex{margin-top:8px;background:#fff3e0;border-radius:10px;padding:8px 12px;font-size:.95em}
+  .q{border-left:8px solid #b0bec5}
+  .q.right{border-left-color:#43a047;background:#f1f8e9}
+  .q.wrong{border-left-color:#e53935;background:#fff5f5}
+  .opt{display:block;width:100%;text-align:left;font-size:.95em;background:#fafafa;border:2px solid #e0e0e0;border-radius:10px;padding:8px 14px;margin:8px 0;cursor:pointer;font-family:inherit}
+  .opt:hover{border-color:#ffb74d;background:#fff}
+  .opt.sel-right{background:#c8e6c9;border-color:#43a047}
+  .opt.sel-wrong{background:#ffcdd2;border-color:#e53935}
+  .fb{margin-top:6px;font-weight:bold}
+  .fb.good{color:#2e7d32} .fb.bad{color:#c62828}
+  .explain{font-weight:normal;color:#e65100}
+  .vrow{display:flex;flex-wrap:wrap;align-items:center;gap:10px;padding:8px 6px;border-bottom:1px dashed #eee}
+  .vrow .w{font-weight:bold;min-width:120px;font-size:1.3em}
+  .vrow.right{background:#f1f8e9} .vrow.wrong{background:#fff5f5}
+  select{font-size:.95em;padding:6px 8px;border-radius:8px;border:2px solid #ffb74d;max-width:100%;font-family:inherit}
+  .mark{font-size:1.2em;min-width:30px}
+  button.main{font-size:1em;padding:10px 20px;border:none;border-radius:10px;cursor:pointer;font-weight:bold;background:#ef6c00;color:#fff;margin-top:10px}
+  button.main:hover{background:#e65100}
+  input[type=text]{font-size:1.05em;padding:8px 12px;border:2px solid #ffb74d;border-radius:10px;width:220px;font-family:inherit}
+  button.check{font-size:.95em;padding:8px 16px;border:none;border-radius:10px;cursor:pointer;font-weight:bold;background:#ef6c00;color:#fff}
+  .row{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:10px}
+  #scoreBox{position:sticky;bottom:0;background:#e65100;color:#fff;border-radius:16px 16px 0 0;padding:12px 20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-top:30px}
+  #scoreBox button{font-size:.95em;padding:8px 16px;border:none;border-radius:10px;cursor:pointer;font-weight:bold;background:#ffca28;color:#3e2723}
+  #final{display:none;text-align:center;border:4px solid #43a047;font-size:1.1em}
+  .tone{font-size:.85em;color:#ef6c00}
+
+  .audio-bar{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin:12px 0 4px}
+  button.speak,button.record,button.play-mine,button.play-model,button.audio-ctrl{
+    font-size:1.05em;padding:14px 18px;min-height:52px;min-width:52px;
+    border:none;border-radius:14px;cursor:pointer;font-weight:bold;font-family:inherit;
+    touch-action:manipulation;-webkit-tap-highlight-color:transparent;
+  }
+  button.speak,button.play-model,button.audio-ctrl.hear{background:#ef6c00;color:#fff}
+  button.speak:hover,button.play-model:hover,button.audio-ctrl.hear:hover{background:#e65100}
+  button.speak.playing{background:#43a047}
+  button.record{background:#e53935;color:#fff}
+  button.record:hover{background:#c62828}
+  button.record.recording{background:#ffca28;color:#3e2723;animation:pulse 1s infinite}
+  @keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.04)}}
+  button.play-mine{background:#00897b;color:#fff}
+  button.play-mine:hover{background:#00695c}
+  button.play-mine:disabled{opacity:.45;cursor:not-allowed}
+  button.audio-ctrl.stop{background:#546e7a;color:#fff}
+  button.audio-ctrl.stop:hover{background:#37474f}
+  .practice{margin-top:14px;padding-top:12px;border-top:2px dashed #ffcc80}
+  .practice-row{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+  .rec-status{margin-top:8px;font-weight:bold;color:#ef6c00;font-size:.95em}
+  .rec-status.rec-on{color:#c62828}
+  .mic-msg{margin-top:8px;background:#fff3e0;border-left:6px solid #ef6c00;border-radius:10px;padding:10px 14px;font-size:.95em;color:#e65100}
+  .box[data-audio]{position:relative}
+</style>
+</head>
+<body>
+<div class="wrap">
+<a class="home" href="../../index.html">&larr; Back to all lessons</a>
+<h1>🗣️ Cantonese Week 32: Sports &amp; Competition 比賽 (Hong Kong)</h1>
+<p>Ace, you already know numbers up to 100, plus greetings, family, food, school, body parts, colours, sky &amp; space words, what to say at the doctor's, nature words, question words, music words, trains &amp; travel, brain &amp; sleep words, bees &amp; gardens, electricity &amp; lights, land, people &amp; respect, ice, snow &amp; giant animals, community, rules &amp; voting, weather &amp; storms, germ-fighter words, ancient China words, flight words, gold rush words, kitchen &amp; flavour words, cartoon &amp; movie words, fossil &amp; sea-creature words, emergency &amp; hospital words, map &amp; direction words, and robot words. Today, while your other lessons visit ancient Greece and the first Olympic Games, you'll learn <strong>sports and competition words</strong>: Greece, competition, athlete, win, lose, medal, first, and the famous Hong Kong cheer 加油! You already know 跑步 (paau2 bou6, running) and 好快 (hou2 faai3, very fast), so listen for them in today's sentences. We use <strong>Traditional Chinese</strong> characters and Jyutping with tone numbers, the Hong Kong way.</p>
+
+<div class="box tipbox">
+  <strong>How to read Jyutping (sounds):</strong>
+  <ul>
+    <li>Letters show the sound. Numbers show the <strong>tone</strong> (the musical pitch): 1 high, 2 rising, 3 mid, 4 low/falling, 5 low rising, 6 low.</li>
+    <li>Example: 贏 <span class="jyut">jeng4</span> (win) is tone 4, low and falling, while 輸 <span class="jyut">syu1</span> (lose) is tone 1, high and flat. 第一 <span class="jyut">dai6 jat1</span> (first) starts low and level (tone 6), then jumps up to a short, clipped high tone 1 because 一 ends in <em>t</em>.</li>
+    <li><strong>Listening/speaking tip:</strong> Say each word out loud three times while looking at the characters. Tap Hear model, then Record and compare!</li>
+  </ul>
+</div>
+
+<h2>Part 1: Learn Today's Words</h2>
+<div class="box tipbox" style="background:#fff3e0;border-left-color:#ef6c00"><strong>Listen &amp; practise:</strong> Tap <em>Hear model</em> to hear the word (Hong Kong voice). Then tap <em>Record</em>, say it out loud, and compare with <em>Play my try</em> + <em>Play model</em>. Recordings stay on this device only for this visit — nothing is uploaded.</div>
+<div class="audio-bar">
+  <button type="button" class="audio-ctrl hear" id="playAll">🔊 Play all words</button>
+  <button type="button" class="audio-ctrl stop" id="stopAudio">⏹️ Stop</button>
+  <span class="tone">Plays every word with English first (greetings + family + food + school + body + colours + sky &amp; space + numbers 11–100 + at the doctor + nature + question words + music + trains &amp; travel + brain &amp; sleep + bees &amp; gardens + electricity &amp; lights).</span>
+</div>
+<div id="cards"></div>
+
+<div class="box tipbox">
+  <strong>Sports tips for Ace:</strong>
+  <ul>
+    <li>希臘 <span class="jyut">hei1 laap6</span> = Greece. Add 人 (jan4, person) to make 希臘人, a Greek person, just like 加拿大人 is a Canadian!</li>
+    <li>運動員 <span class="jyut">wan6 dung6 jyun4</span> = athlete: 運動 = sport, exercise + 員 = member, worker. An athlete is a "sport worker."</li>
+    <li>贏 <span class="jyut">jeng4</span> and 輸 <span class="jyut">syu1</span> are opposites: win and lose. 我贏咗！ (ngo5 jeng4 zo2!) = I won! The little word 咗 (zo2) shows it already happened.</li>
+    <li>獎牌 <span class="jyut">zoeng2 paai4</span> = medal: 獎 = prize + 牌 = plate, badge. A gold medal is 金牌 (gam1 paai4); you learned 金 on gold rush day!</li>
+    <li>加油 <span class="jyut">gaa1 jau2</span> literally means "add oil," but Hong Kong fans shout it to mean "Go! You can do it!" Shout it at Ace's next game. 💪</li>
+  </ul>
+</div>
+
+<h2>Part 2: Match the Meaning</h2>
+<div class="box">
+  <p>Match each Cantonese phrase to its English meaning.</p>
+  <div id="vmatch"></div>
+  <button type="button" class="main" id="checkMatch">Check my matching</button>
+  <div class="fb" id="matchFb"></div>
+</div>
+
+<h2>Part 3: What Would You Say?</h2>
+<p>Click the best Cantonese phrase for each situation. Only your <strong>first click</strong> counts toward your score.</p>
+<div id="mc"></div>
+
+<h2>Part 4: Type the Jyutping</h2>
+<p>Look at the Chinese characters and type the Jyutping (with tone numbers). Spelling must match, including the numbers. Example: <span class="jyut">wan6 dung6 jyun4</span></p>
+<div id="fill"></div>
+
+<div class="box" id="final"></div>
+<div id="scoreBox">
+  <span id="scoreText"></span>
+  <button type="button" id="finishBtn">I'm done! Show my final score</button>
+</div>
+</div>
+
+<script src="../../audio/cantonese/player.js"></script>
+<script>
+var WORDS = [
+ {zh:"希臘", jy:"hei1 laap6", audio:"241-hei1-laap6-greece.mp3", en:"Greece",
+  ex_zh:"奧運係喺希臘開始嘅。", ex_jy:"ou3 wan6 hai6 hai2 hei1 laap6 hoi1 ci2 ge3.", ex_en:"The Olympics started in Greece."},
+ {zh:"比賽", jy:"bei2 coi3", audio:"242-bei2-coi3-competition.mp3", en:"competition, race, match",
+  ex_zh:"今日有跑步比賽。", ex_jy:"gam1 jat6 jau5 paau2 bou6 bei2 coi3.", ex_en:"There is a running race today."},
+ {zh:"運動員", jy:"wan6 dung6 jyun4", audio:"243-wan6-dung6-jyun4-athlete.mp3", en:"athlete",
+  ex_zh:"佢係一個運動員。", ex_jy:"keoi5 hai6 jat1 go3 wan6 dung6 jyun4.", ex_en:"He is an athlete."},
+ {zh:"贏", jy:"jeng4", audio:"244-jeng4-win.mp3", en:"to win",
+  ex_zh:"我贏咗！", ex_jy:"ngo5 jeng4 zo2!", ex_en:"I won!"},
+ {zh:"輸", jy:"syu1", audio:"245-syu1-lose.mp3", en:"to lose",
+  ex_zh:"輸咗唔緊要。", ex_jy:"syu1 zo2 m4 gan2 jiu3.", ex_en:"It's okay to lose."},
+ {zh:"獎牌", jy:"zoeng2 paai4", audio:"246-zoeng2-paai4-medal.mp3", en:"medal",
+  ex_zh:"我想攞獎牌。", ex_jy:"ngo5 soeng2 lo2 zoeng2 paai4.", ex_en:"I want to get a medal."},
+ {zh:"第一", jy:"dai6 jat1", audio:"247-dai6-jat1-first.mp3", en:"first, number one",
+  ex_zh:"佢跑第一！", ex_jy:"keoi5 paau2 dai6 jat1!", ex_en:"He came first in the race!"},
+ {zh:"加油", jy:"gaa1 jau2", audio:"248-gaa1-jau2-go-for-it.mp3", en:"Go! You can do it! (cheer)",
+  ex_zh:"加油！你好快！", ex_jy:"gaa1 jau2! nei5 hou2 faai3!", ex_en:"Go go go! You're so fast!"}
+];
+
+var PRAISE=["Nice work, Ace!","正確！ Correct!","Yes! Olympic gold! 🥇","Excellent, Ace!","Right! 好叻! Champion-level Cantonese! 🏅"];
+function pick(a){return a[Math.floor(Math.random()*a.length)];}
+function shuffled(arr,seed){var a=arr.slice(),s=seed;for(var i=a.length-1;i>0;i--){s=(s*9301+49297)%233280;var j=Math.floor(s/233280*(i+1));var t=a[i];a[i]=a[j];a[j]=t;}return a;}
+
+function buildCards(){
+  var box=document.getElementById("cards");
+  WORDS.forEach(function(w,i){
+    var d=document.createElement("div"); d.className="box";
+    if(w.audio){ d.setAttribute("data-audio", w.audio); d.setAttribute("data-audio-label", w.zh+" "+w.jy); }
+    d.innerHTML='<div class="card">'+
+      '<div class="char">'+(i+1)+'. '+w.zh+'</div>'+
+      '<div class="meta"><div><span class="jyut">'+w.jy+'</span> <span class="tone">← tap Hear model, then Record</span></div>'+
+      '<div><strong>'+w.en+'</strong></div></div></div>'+
+      '<div class="ex"><strong>Example:</strong> '+w.ex_zh+'<br><span class="jyut">'+w.ex_jy+'</span><br><em>'+w.ex_en+'</em></div>'+
+      '<div class="practice"></div>';
+    box.appendChild(d);
+  });
+}
+
+var matchScore=0, matchChecked=false;
+function buildMatch(){
+  var m=document.getElementById("vmatch");
+  var order=shuffled(WORDS.map(function(w){return w.jy;}),16);
+  WORDS.forEach(function(w,i){
+    var row=document.createElement("div"); row.className="vrow"; row.id="vm"+i;
+    var sel='<select id="vsel'+i+'" aria-label="Meaning of '+w.zh+'"><option value="">- choose English -</option>';
+    order.forEach(function(jy){
+      var en=WORDS.find(function(x){return x.jy===jy;}).en;
+      sel+='<option value="'+jy+'">'+en+'</option>';
+    });
+    sel+='</select>';
+    row.innerHTML='<span class="mark" id="vmk'+i+'"></span><span class="w">'+w.zh+'</span><span class="jyut">'+w.jy+'</span>'+sel;
+    m.appendChild(row);
+  });
+}
+function checkMatch(){
+  var score=0, blank=0;
+  WORDS.forEach(function(w,i){
+    var v=document.getElementById("vsel"+i).value, ok=(v===w.jy);
+    if(!v) blank++;
+    if(ok) score++;
+    document.getElementById("vm"+i).className="vrow "+(ok?"right":"wrong");
+    document.getElementById("vmk"+i).textContent=ok?"✅":"❌";
+  });
+  matchScore=score; matchChecked=true;
+  var fb=document.getElementById("matchFb");
+  if(score===WORDS.length){ fb.className="fb good"; fb.textContent="🌟 "+score+" / "+WORDS.length+". Perfect matching, Ace!"; }
+  else { fb.className="fb bad"; fb.textContent=score+" / "+WORDS.length+" correct"+(blank?" ("+blank+" blank)":"")+". Fix the ❌ ones and check again."; }
+  updateScore();
+}
+
+var MC = [
+ {q:"Ace's friend is running in a race and getting tired. What should Ace shout?",
+  o:["輸！","加油！","停！","第一"], a:1,
+  e:"加油 (gaa1 jau2) = Go! You can do it! It literally means \"add oil.\""},
+ {q:"Ace crosses the finish line before everyone else. He came...",
+  o:["第一","輸","希臘","獎牌"], a:0,
+  e:"第一 (dai6 jat1) = first, number one. 佢跑第一 = He came first in the race."},
+ {q:"The Olympic Games started in which country?",
+  o:["加拿大","中國","希臘","香港"], a:2,
+  e:"希臘 (hei1 laap6) = Greece. 奧運係喺希臘開始嘅 = The Olympics started in Greece."},
+ {q:"The winner gets a shiny round prize to wear around the neck. What is it?",
+  o:["獎牌","比賽","電池","運動員"], a:0,
+  e:"獎牌 (zoeng2 paai4) = medal. A gold medal is 金牌 (gam1 paai4)."},
+ {q:"Ace's team scored more points than the other team. 我哋____咗！",
+  o:["輸","停","贏","郁"], a:2,
+  e:"贏 (jeng4) = to win. 我哋贏咗 = We won!"},
+ {q:"Someone who trains hard and competes in sports is a...",
+  o:["醫生","運動員","老師","機械人"], a:1,
+  e:"運動員 (wan6 dung6 jyun4) = athlete, a \"sport worker.\""}
+];
+var mcState=MC.map(function(){return{answered:false,firstRight:false,done:false};});
+function buildMC(){
+  var box=document.getElementById("mc");
+  MC.forEach(function(item,i){
+    var d=document.createElement("div"); d.className="box q"; d.id="mc"+i;
+    var html="<div><strong>"+(i+1)+".</strong> "+item.q+"</div>";
+    item.o.forEach(function(opt,j){ html+='<button type="button" class="opt" data-i="'+i+'" data-j="'+j+'">'+String.fromCharCode(65+j)+". "+opt+"</button>"; });
+    html+='<div class="fb" id="mcfb'+i+'"></div>';
+    d.innerHTML=html; box.appendChild(d);
+  });
+  box.addEventListener("click",function(e){
+    var b=e.target.closest?e.target.closest(".opt"):e.target; if(!b||!b.classList.contains("opt"))return;
+    var i=+b.getAttribute("data-i"), j=+b.getAttribute("data-j"), st=mcState[i], item=MC[i];
+    if(st.done)return;
+    var right=(j===item.a);
+    if(!st.answered){ st.answered=true; st.firstRight=right; }
+    var fb=document.getElementById("mcfb"+i), card=document.getElementById("mc"+i);
+    if(right){ st.done=true; b.classList.add("sel-right"); card.className="box q right"; fb.className="fb good"; fb.innerHTML="✅ "+pick(PRAISE)+' <span class="explain">'+item.e+"</span>"; }
+    else { b.classList.add("sel-wrong"); card.className="box q wrong"; fb.className="fb bad"; fb.textContent="❌ Not quite, Ace. Think about races, medals, and cheering, and try again."; }
+    updateScore();
+  });
+}
+
+var FILL = [
+ {zh:"希臘", a:"hei1 laap6"},
+ {zh:"比賽", a:"bei2 coi3"},
+ {zh:"運動員", a:"wan6 dung6 jyun4"},
+ {zh:"贏", a:"jeng4"},
+ {zh:"輸", a:"syu1"},
+ {zh:"獎牌", a:"zoeng2 paai4"},
+ {zh:"第一", a:"dai6 jat1"},
+ {zh:"加油", a:"gaa1 jau2"}
+];
+var fillState=FILL.map(function(){return{correct:false,tries:0};});
+function normJy(s){return String(s).trim().toLowerCase().replace(/\s+/g," ");}
+function buildFill(){
+  var box=document.getElementById("fill");
+  FILL.forEach(function(it,i){
+    var d=document.createElement("div"); d.className="box q"; d.id="f"+i;
+    d.innerHTML='<div><strong>'+(i+1)+'.</strong> Type Jyutping for <span class="char" style="font-size:1.4em">'+it.zh+'</span></div>'+
+      '<div class="row"><input type="text" id="fi'+i+'" autocomplete="off" spellcheck="false" aria-label="Jyutping '+it.zh+'">'+
+      '<button type="button" class="check" data-i="'+i+'">Check</button></div><div class="fb" id="ffb'+i+'"></div>';
+    box.appendChild(d);
+  });
+  box.addEventListener("click",function(e){
+    var b=e.target; if(b.tagName!=="BUTTON"||!b.classList.contains("check"))return;
+    fillCheck(+b.getAttribute("data-i"));
+  });
+  box.addEventListener("keydown",function(e){if(e.key==="Enter"&&e.target.tagName==="INPUT")fillCheck(+e.target.id.slice(2));});
+}
+function fillCheck(i){
+  var val=document.getElementById("fi"+i).value, fb=document.getElementById("ffb"+i), st=fillState[i];
+  if(!val.trim()){fb.className="fb bad";fb.textContent="Type the Jyutping first, Ace!";return;}
+  st.tries++;
+  if(normJy(val)===normJy(FILL[i].a)||(FILL[i].alt&&normJy(val)===normJy(FILL[i].alt))){
+    st.correct=true; document.getElementById("f"+i).className="box q right";
+    fb.className="fb good"; fb.textContent="✅ "+pick(PRAISE)+(st.tries===1?" (first try!)":"");
+  } else {
+    st.correct=false; document.getElementById("f"+i).className="box q wrong";
+    fb.className="fb bad"; fb.textContent="❌ Not quite. Check letters, spaces, and tone numbers. Answer looks like: wan6 dung6 jyun4";
+  }
+  updateScore();
+}
+
+function scores(){
+  var mc=0; mcState.forEach(function(s){if(s.firstRight)mc++;});
+  var f=0; fillState.forEach(function(s){if(s.correct)f++;});
+  return {match:matchScore, mc:mc, fill:f};
+}
+function updateScore(){
+  var s=scores();
+  document.getElementById("scoreText").textContent="Match: "+(matchChecked?s.match:"-")+"/"+WORDS.length+" · Situations: "+s.mc+"/"+MC.length+" · Jyutping: "+s.fill+"/"+FILL.length;
+}
+function finish(){
+  if(!matchChecked) checkMatch();
+  var s=scores(), total=WORDS.length+MC.length+FILL.length, got=s.match+s.mc+s.fill, pct=Math.round(100*got/total);
+  var msg = pct===100 ? "🏆 完美！ Perfect score, Ace! You can talk about sports in Cantonese, like a real Hong Kong champion!" :
+            pct>=80 ? "🌟 Fantastic work, Ace! Tonight, tell Dad: 加油！我想跑第一，攞獎牌！ (gaa1 jau2! ngo5 soeng2 paau2 dai6 jat1, lo2 zoeng2 paai4! Go! I want to come first and win a medal!)" :
+            pct>=60 ? "💪 Solid effort! Review the cards and try the ❌ ones again." :
+                      "🌱 New words take practice! Look at Part 1 again, say each phrase three times, then retry.";
+  var f=document.getElementById("final"); f.style.display="block";
+  f.innerHTML="<h2 style='border:none;margin-top:0'>Final Score: "+got+" / "+total+" ("+pct+"%)</h2>"+
+    "<p>Matching: "+s.match+"/"+WORDS.length+" · Situations (first try): "+s.mc+"/"+MC.length+" · Jyutping typing: "+s.fill+"/"+FILL.length+"</p><p>"+msg+"</p>"+
+    "<p style='font-size:.85em;color:#ef6c00'>Finished on "+new Date().toLocaleString("en-CA")+"</p>";
+  f.scrollIntoView({behavior:"smooth"});
+}
+buildCards(); buildMatch(); buildMC(); buildFill(); updateScore();
+if(window.AceCantoneseAudio) AceCantoneseAudio.wireLesson({playAllBtn:"#playAll",stopBtn:"#stopAudio"});
+document.getElementById("checkMatch").addEventListener("click",checkMatch);
+document.getElementById("finishBtn").addEventListener("click",finish);
+</script>
+<script src="../../assets/autosave.js"></script>
+</body>
+</html>

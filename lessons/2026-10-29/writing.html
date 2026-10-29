@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Writing (Oct. 29): Write Your Own Greek-Style Myth (A "Why" Story) + Grammar Clinic</title>
+<style>
+  body{font-family:"Segoe UI",Verdana,Arial,sans-serif;font-size:20px;line-height:1.6;margin:0;background:#fff8f0;color:#2c2416}
+  .wrap{max-width:880px;margin:0 auto;padding:20px 18px 80px}
+  a.home{font-size:.9em;color:#bf360c}
+  h1{color:#e65100;font-size:2em;margin:10px 0}
+  h2{color:#ef6c00;margin-top:36px;border-bottom:3px solid #ffcc80;padding-bottom:4px}
+  h3{color:#ef6c00}
+  .box{background:#fff;border-radius:16px;padding:18px 22px;margin:16px 0;box-shadow:0 3px 10px rgba(0,0,0,.07)}
+  .tipbox{background:#fff8e1;border-left:8px solid #ffb300}
+  .senses{display:grid;gap:8px;margin:10px 0;grid-template-columns:repeat(auto-fit,minmax(140px,1fr))}
+  .senses .side{border-radius:14px;padding:10px 16px;background:#fff3e0}
+  .ts{background:#ffcc80;border-radius:5px;padding:1px 3px}
+  .ev{background:#c8e6c9;border-radius:5px;padding:1px 3px}
+  .ex{background:#ffe0b2;border-radius:5px;padding:1px 3px}
+  .cs{background:#e1bee7;border-radius:5px;padding:1px 3px}
+  .legend span{display:inline-block;margin:4px 8px 4px 0;font-size:.85em}
+  .model{font-family:Georgia,"Times New Roman",serif;font-size:1.05em;line-height:1.9}
+  .row{padding:10px 6px;border-bottom:1px dashed #ddd}
+  .row.right{background:#f1f8e9} .row.wrong{background:#fff5f5}
+  select{font-size:.9em;padding:5px 8px;border-radius:8px;border:2px solid #ffb74d;font-family:inherit}
+  .q{border-left:8px solid #b0bec5}
+  .q.right{border-left-color:#43a047;background:#f1f8e9}
+  .q.wrong{border-left-color:#e53935;background:#fff5f5}
+  .opt{display:block;width:100%;text-align:left;font-size:.95em;background:#fafafa;border:2px solid #e0e0e0;border-radius:10px;padding:8px 14px;margin:8px 0;cursor:pointer;font-family:inherit}
+  .opt:hover{border-color:#ffb74d;background:#fff}
+  .opt.sel-right{background:#c8e6c9;border-color:#43a047}
+  .opt.sel-wrong{background:#ffcdd2;border-color:#e53935}
+  .fb{margin-top:6px;font-weight:bold}
+  .fb.good{color:#2e7d32} .fb.bad{color:#c62828}
+  .explain{font-weight:normal;color:#e65100}
+  .bad-sent{font-family:Consolas,"Courier New",monospace;background:#ffebee;padding:6px 10px;border-radius:8px;display:inline-block;margin:6px 0}
+  input.fix{width:100%;box-sizing:border-box;font-size:1em;padding:8px 12px;border:2px solid #ffb74d;border-radius:10px;font-family:inherit}
+  button{font-size:.95em;padding:8px 16px;border:none;border-radius:10px;cursor:pointer;font-weight:bold;font-family:inherit}
+  .go{background:#ef6c00;color:#fff} .go:hover{background:#e65100}
+  .hint{background:#ffe082;color:#5d4037}
+  .blue{background:#1e88e5;color:#fff}
+  .purple{background:#8e24aa;color:#fff}
+  .grey{background:#cfd8dc;color:#263238}
+  .btnrow{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px}
+  textarea{width:100%;box-sizing:border-box;min-height:300px;font-size:1.05em;line-height:1.7;font-family:Georgia,"Times New Roman",serif;padding:14px;border:3px solid #ffb74d;border-radius:12px}
+  textarea:focus{outline:none;border-color:#ef6c00}
+  .counter{display:flex;flex-wrap:wrap;gap:20px;align-items:center;margin:8px 0;font-weight:bold}
+  .meter{flex:1;min-width:200px;height:18px;background:#e0e0e0;border-radius:9px;overflow:hidden}
+  .meter div{height:100%;width:0;background:#ffb300;transition:width .2s}
+  .checklist label{display:block;padding:6px 4px;cursor:pointer}
+  .checklist input{transform:scale(1.4);margin-right:10px}
+  .prompts label{display:block;background:#fff3e0;border-radius:10px;padding:10px 14px;margin:8px 0;cursor:pointer}
+  .prompts input{transform:scale(1.3);margin-right:8px}
+  #scoreBox{position:sticky;bottom:0;background:#e65100;color:#fff;border-radius:16px 16px 0 0;padding:12px 20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-top:30px}
+  .w5{display:grid;gap:8px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));margin:10px 0}
+  .w5 label{display:block;font-weight:bold;color:#e65100}
+  .w5 input{width:100%;box-sizing:border-box;font-size:.95em;padding:6px 10px;border:2px solid #ffb74d;border-radius:8px;font-family:inherit}
+  #printArea{display:none}
+  @media print{
+    body{background:#fff;font-size:14pt}
+    .wrap,#scoreBox{display:none !important}
+    #printArea{display:block;font-family:Georgia,serif;line-height:1.8}
+    #printArea h1{font-size:18pt;margin:0 0 6pt}
+    #printArea .meta{font-size:11pt;color:#444}
+    #printArea .text{white-space:pre-wrap;border-top:1px solid #999;padding-top:10pt;margin-top:10pt}
+    #printArea .lines{margin-top:24pt;border-top:1px solid #999;padding-top:6pt;font-size:11pt}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+<a class="home" href="../../index.html">&larr; Back to all lessons</a>
+<h1>✍️ Writing Week 32: Write Your Own Greek-Style Myth 🏛️⚡</h1>
+<p>Yesterday you wrote like an engineer. Today, Ace, you'll write like an ancient Greek <strong>storyteller</strong>. Long before science could explain thunder, echoes or the seasons, the Greeks told <strong>myths</strong>: stories about gods, heroes and monsters that explained <em>why</em> the world is the way it is. In one myth, a girl named Echo was cursed so she could only repeat other people's last words, which is "why" we hear echoes. Today you'll invent your own <strong>"why" myth</strong> (also called an <em>origin story</em>) that explains something real in nature, with a hero, a challenge, vivid description, dialogue and a lesson.</p>
+
+<h2>Part 1: The Lesson</h2>
+<div class="box">
+  <h3 style="margin-top:0">A Greek-style "why" myth has six building blocks 🧩</h3>
+  <p>Like most stories, a myth follows a <strong>plot arc</strong>: it rises to a big moment, then falls to an ending. What makes a myth special is that the ending <strong>explains something real</strong> and teaches a <strong>lesson</strong>.</p>
+  <div class="senses">
+    <div class="side"><strong>1. Title:</strong> hints at what the myth explains, like "How the Owl Got Its Night Eyes"</div>
+    <div class="side"><strong>2. Opening (setting + characters):</strong> long ago, where, and who: a mortal hero plus at least one god or goddess</div>
+    <div class="side"><strong>3. Problem (the spark):</strong> a mistake, a boast, a jealous god, or a challenge that starts the trouble</div>
+    <div class="side"><strong>4. Rising action:</strong> the hero tries, struggles, and things get harder; include dialogue</div>
+    <div class="side"><strong>5. Climax + transformation:</strong> the biggest moment, when something (or someone) changes forever</div>
+    <div class="side"><strong>6. Ending + lesson:</strong> "And that is why..." plus the lesson the myth teaches</div>
+  </div>
+  <h3>Five storyteller's moves</h3>
+  <ul>
+    <li><strong>Show, don't tell:</strong> not "Zeus was angry" but "Zeus's eyes flashed, and the clouds above Olympus turned black."</li>
+    <li><strong>Use dialogue to reveal character:</strong> put the exact words inside quotation marks, and start a new paragraph each time a new character speaks.</li>
+    <li><strong>Choose vivid verbs:</strong> thundered, crept, snatched, soared, trembled instead of went, got or said.</li>
+    <li><strong>Add a Greek flavour:</strong> real places (Mount Olympus, Athens, the Aegean Sea) and real gods: Zeus (sky and thunder), Poseidon (sea), Athena (wisdom), Apollo (sun and music), Artemis (moon and hunting), Demeter (harvest).</li>
+    <li><strong>Make the change believable:</strong> the transformation should connect to the problem. A boastful weaver becomes a spider; a fast runner becomes the wind.</li>
+  </ul>
+  <p><strong>Myth tone:</strong> myths sound grand and old. Phrases like "long ago, when the gods still walked the earth" set the mood, but keep your sentences clear.</p>
+</div>
+
+<div class="box">
+  <h3 style="margin-top:0">Model Myth (short version)</h3>
+  <p class="legend"><span class="ts">Title + opening</span><span class="ev">Problem + rising action</span><span class="ex">Climax + transformation</span><span class="cs">Ending + lesson</span></p>
+  <p class="model">
+    <span class="ts"><strong>Why the Sea Is Salty</strong><br>Long ago, when the gods still walked the earth, a fisherman named Lykos lived in a tiny village beside the Aegean Sea, which back then was as fresh and sweet as rainwater.</span><br>
+    <span class="ev">One summer, Lykos boasted, "My nets are greater than Poseidon himself!" The sea god heard him. Waves crashed against the village, and for thirty days Lykos caught nothing at all. "Forgive me," he begged at the water's edge, but the sea only roared louder.</span><br>
+    <span class="ex">At last Lykos climbed the cliff and poured every grain of his family's precious salt into the waves as an apology. Poseidon accepted the gift, calmed the water, and swirled the salt through every sea in the world so that no one would ever forget it.</span><br>
+    <span class="cs">And that is why the sea is salty to this day. Whenever you taste it, remember the lesson of Lykos: pride can cost you everything, but an honest apology can calm even a storm.</span>
+  </p>
+  <p><strong>Notice:</strong> the title tells what the myth explains; the opening sets the time, place and hero; the problem comes from a boast; the rising action uses dialogue and gets worse; the climax causes a permanent change; and the ending begins "And that is why..." and states a lesson.</p>
+</div>
+
+<h2>Part 2: Name That Myth Part</h2>
+<div class="box">
+  <p>Each line comes from a student's myth called "How the Owl Got Its Night Eyes." Choose which <strong>part of the myth</strong> it belongs in.</p>
+  <div id="labelRows"></div>
+  <div class="btnrow"><button type="button" class="go" id="checkLabels">Check my answers</button></div>
+  <div class="fb" id="labelFb"></div>
+</div>
+
+<h2>Part 3: Grammar Clinic 🏛️</h2>
+<div class="box tipbox">Even the best storyteller needs a careful editor! <strong>Section A:</strong> pick the correct sentence. <strong>Section B:</strong> type the sentence again with <em>all</em> mistakes fixed. We use <strong>Canadian spelling</strong> (honour, theatre, colour, centre). Today, watch <strong>there / their / they're</strong>, <strong>whose / who's</strong>, <strong>lose / loose</strong>, <strong>compound subjects</strong>, <strong>irregular past tense verbs</strong>, <strong>capitals for names and places</strong>, and <strong>commas in a series</strong>.</div>
+<h3>Section A: Pick the correct sentence</h3>
+<div id="gmc"></div>
+<h3>Section B: Fix the sentence</h3>
+<p>Retype the whole sentence correctly, with capital letters and punctuation. Each one has <strong>at least two</strong> mistakes.</p>
+<div id="gfix"></div>
+
+<h2>Part 4: Your Turn to Write</h2>
+<div class="box">
+  <h3 style="margin-top:0">Step 1: Choose what your myth explains</h3>
+  <p>Pick <strong>one</strong> option. Then jot down which god or goddess will be in your story and why they get involved.</p>
+  <div class="prompts" id="prompts">
+    <label><input type="radio" name="prompt" value="Option A: Something in the sky" checked> ⚡ <strong>Option A:</strong> Something in the sky: why the moon changes shape, why we have rainbows, why lightning zigzags, or why the stars twinkle.</label>
+    <label><input type="radio" name="prompt" value="Option B: Something about an animal"> 🦉 <strong>Option B:</strong> Something about an animal: why the zebra has stripes, why the turtle carries its house, why owls hunt at night, or why bees sting.</label>
+    <label><input type="radio" name="prompt" value="Option C: Something about the human body"> 🫀 <strong>Option C:</strong> Something about the human body: why we hiccup, why we yawn, why we have fingerprints, or why the heart beats. (Future doctors, this one's for you!)</label>
+  </div>
+  <p><strong>Plan your myth:</strong> jot a few words for each box. (These notes save with your writing.)</p>
+  <div class="w5" id="w5">
+    <div><label for="w5who">Title: what your myth explains</label><input id="w5who" type="text" autocomplete="off"></div>
+    <div><label for="w5place">Opening: long ago, where, mortal hero + god or goddess</label><input id="w5place" type="text" autocomplete="off"></div>
+    <div><label for="w5facts">Problem: the boast, mistake, jealousy or challenge</label><input id="w5facts" type="text" autocomplete="off"></div>
+    <div><label for="w5senses">Rising action: 2 or 3 things that make it harder (+ a line of dialogue)</label><input id="w5senses" type="text" autocomplete="off"></div>
+    <div><label for="w5feel">Climax + transformation: what changes forever?</label><input id="w5feel" type="text" autocomplete="off"></div>
+    <div><label for="w5closing">Ending + lesson: "And that is why..." + what we learn</label><input id="w5closing" type="text" autocomplete="off"></div>
+  </div>
+
+  <h3>Step 2: Write your myth</h3>
+  <p><strong>Goal:</strong> <strong>300 to 400 words</strong> with all <strong>six building blocks</strong>. Include at least <strong>one god or goddess</strong> and <strong>one real Greek place</strong>; at least <strong>three lines of dialogue</strong> in quotation marks (new speaker, new paragraph); at least <strong>five vivid verbs</strong>; at least <strong>two "show, don't tell" sentences</strong> for feelings; a <strong>transformation</strong> that connects to the problem; and an ending that begins <strong>"And that is why..."</strong> plus a clear <strong>lesson</strong>. Bonus: hide one Greek root word (like <em>tele</em>, <em>photo</em> or <em>bio</em>) in a character's name!</p>
+  <p><button type="button" class="hint" id="templateBtn">📋 Add the layout for me</button></p>
+  <label for="essay"><strong>Write here, Ace:</strong></label>
+  <textarea id="essay" placeholder="TITLE: ..."></textarea>
+  <div class="counter">
+    <span id="wc">0 words</span>
+    <span id="sc">0 sentences</span>
+    <div class="meter" aria-hidden="true"><div id="meterBar"></div></div>
+  </div>
+  <div class="fb" id="wcMsg">Aim for 250 to 350 words.</div>
+  <p style="font-size:.8em;color:#607d8b" id="saveNote">Your writing is saved automatically in this browser as you type.</p>
+
+  <h3>Self-check before you finish ✅</h3>
+  <div class="checklist" id="checklist">
+    <label><input type="checkbox"> My <strong>title</strong> hints at what my myth explains, and my <strong>opening</strong> gives the time, a Greek place, a hero and a god.</label>
+    <label><input type="checkbox"> My <strong>problem</strong> starts the trouble, and my <strong>rising action</strong> makes things harder.</label>
+    <label><input type="checkbox"> I wrote at least <strong>three lines of dialogue</strong> with correct quotation marks, starting a new paragraph for each new speaker.</label>
+    <label><input type="checkbox"> My <strong>climax</strong> causes a <strong>transformation</strong> that connects to the problem.</label>
+    <label><input type="checkbox"> I used at least <strong>five vivid verbs</strong> and <strong>two "show, don't tell"</strong> sentences.</label>
+    <label><input type="checkbox"> My ending begins <strong>"And that is why..."</strong> and states a clear <strong>lesson</strong>.</label>
+    <label><input type="checkbox"> I checked there / their / they're, whose / who's, lose / loose, compound subjects, irregular past tense, capitals, commas in a series, and <strong>Canadian spelling</strong> (honour, colour, theatre).</label>
+  </div>
+  <div class="btnrow">
+    <button type="button" class="blue" id="downloadBtn">⬇️ Download my writing (for Dad)</button>
+    <button type="button" class="purple" id="printBtn">🖨️ Print my writing</button>
+    <button type="button" class="grey" id="clearBtn">Start over</button>
+  </div>
+  <div class="fb" id="doneMsg"></div>
+</div>
+
+<div id="scoreBox"><span id="scoreText"></span><span>Keep going, storyteller Ace! 🏛️</span></div>
+</div>
+
+<div id="printArea"></div>
+
+<script>
+var NAME="Ace";
+var PRAISE=["Nice work, Ace!","Correct! Great editing eye!","Yes! Ace fixed it!","Excellent, storyteller Ace!","Worthy of Olympus! ⚡"];
+function pick(a){return a[Math.floor(Math.random()*a.length)];}
+
+var LABELS=["Title", "Opening (setting + characters)", "Problem", "Rising action", "Climax + transformation", "Ending + lesson"];
+var LABEL_ITEMS=[
+ {s:"Each night Nyx stole a little more of Theo's sight, until he could barely see his own feathers. \"Please, I can still learn!\" he cried.", a:"Rising action"},
+ {s:"How the Owl Got Its Night Eyes", a:"Title"},
+ {s:"Moved by his courage, Athena touched his face, and his eyes grew huge, round and golden, able to see in the darkest night.", a:"Climax + transformation"},
+ {s:"Theo boasted that he could see better than the goddess of night, and Nyx swore to darken his eyes forever.", a:"Problem"},
+ {s:"And that is why owls have enormous eyes and hunt by moonlight. Never boast about a gift, because the gods are always listening.", a:"Ending + lesson"},
+ {s:"Long ago, in the olive groves outside Athens, there lived a small brown bird named Theo, a favourite of the goddess Athena.", a:"Opening (setting + characters)"}
+];
+var labelScore=0, labelChecked=false;
+function buildLabels(){
+  var box=document.getElementById("labelRows");
+  LABEL_ITEMS.forEach(function(it,i){
+    var d=document.createElement("div"); d.className="row"; d.id="lr"+i;
+    var sel='<select id="ls'+i+'" aria-label="Job of sentence '+(i+1)+'"><option value="">- choose -</option>';
+    LABELS.forEach(function(l){sel+='<option>'+l+'</option>';});
+    sel+='</select>';
+    d.innerHTML='<strong>'+(i+1)+'.</strong> '+it.s+'<br>'+sel+' <span id="lm'+i+'"></span>';
+    box.appendChild(d);
+  });
+}
+function checkLabels(){
+  var sc=0;
+  LABEL_ITEMS.forEach(function(it,i){
+    var ok=document.getElementById("ls"+i).value===it.a; if(ok)sc++;
+    document.getElementById("lr"+i).className="row "+(ok?"right":"wrong");
+    document.getElementById("lm"+i).textContent=ok?"✅":"❌";
+  });
+  labelScore=sc; labelChecked=true;
+  var fb=document.getElementById("labelFb");
+  if(sc===LABEL_ITEMS.length){fb.className="fb good";fb.textContent="🌟 "+sc+" / "+LABEL_ITEMS.length+". "+pick(PRAISE)+" You know exactly how a Greek myth is built!";}
+  else{fb.className="fb bad";fb.textContent=sc+" / "+LABEL_ITEMS.length+". Hint: what the myth explains = title; long ago, a place and the characters = opening; the boast or mistake that starts the trouble = problem; things getting harder (often with dialogue) = rising action; the big moment when something changes forever = climax + transformation; “And that is why...” plus a lesson = ending + lesson. Fix the ❌ ones and check again.";}
+  updateScore();
+}
+
+var GMC=[
+ {q:"Which sentence uses <strong>there / their / they're</strong> correctly?",
+  o:["They're temple is over their, and there proud of it.", "There temple is over their, and they're proud of it.", "Their temple is over they're, and there proud of it.", "Their temple is over there, and they're proud of it."],
+  a:3,e:"<em>Their</em> shows belonging (their temple). <em>There</em> is a place (over there). <em>They're</em> = they are (they are proud)."},
+ {q:"Which sentence uses <strong>whose / who's</strong> correctly?",
+  o:["Who's sandals are these, and whose running next?", "Whose sandals are these, and who's running next?", "Who's sandals are these, and who's running next?", "Whose sandals are these, and whose running next?"],
+  a:1,e:"<em>Whose</em> asks who something belongs to (whose sandals). <em>Who's</em> = who is (who is running). Test: can you say \"who is\"? Then use who's."},
+ {q:"Which sentence uses <strong>lose / loose</strong> correctly?",
+  o:["If his sandal strap is loose, the runner might lose the race.", "If his sandal strap is lose, the runner might loose the race.", "If his sandal strap is loose, the runner might loose the race.", "If his sandal strap is lose, the runner might lose the race."],
+  a:0,e:"<em>Loose</em> (rhymes with goose) means not tight. <em>Lose</em> (rhymes with shoes) means to fail to win or to misplace something. Trick: loose has an extra o, like a loose, baggy shirt."},
+ {q:"Which sentence has correct agreement with a <strong>compound subject</strong>?",
+  o:["Athens and Sparta was rivals.", "Athens and Sparta is rivals.", "Athens and Sparta were rivals.", "Athens and Sparta was a rivals."],
+  a:2,e:"Two subjects joined by <em>and</em> make a plural subject, so use the plural verb <em>were</em>: Athens and Sparta (they) were rivals."},
+ {q:"Which sentence uses <strong>irregular past tense verbs</strong> correctly?",
+  o:["The athlete throwed the discus and runned to the finish.", "The athlete threw the discus and ran to the finish.", "The athlete thrown the discus and ran to the finish.", "The athlete threw the discus and run to the finish."],
+  a:1,e:"Irregular verbs don't add -ed. Throw becomes <em>threw</em> (not throwed), and run becomes <em>ran</em> (not runned). <em>Thrown</em> needs a helper: has thrown."},
+ {q:"Which sentence uses <strong>capital letters</strong> correctly?",
+  o:["the greek god zeus lived on mount olympus.", "The greek God Zeus lived on Mount olympus.", "The Greek God zeus lived on mount Olympus.", "The Greek god Zeus lived on Mount Olympus."],
+  a:3,e:"Capitalize the first word and every proper noun or adjective: <em>Greek</em>, <em>Zeus</em>, <em>Mount Olympus</em>. The common noun <em>god</em> stays lowercase here."},
+ {q:"Which sentence uses <strong>commas in a series</strong> correctly?",
+  o:["The pentathlon included running, jumping, wrestling, and throwing.", "The pentathlon included running jumping, wrestling and throwing.", "The pentathlon included, running, jumping, wrestling, and throwing.", "The pentathlon included running, jumping wrestling, and, throwing."],
+  a:0,e:"Put a comma between items in a list of three or more. Don't put a comma right after the verb (included) or right after <em>and</em>."}
+];
+var gmcState=GMC.map(function(){return{answered:false,firstRight:false,done:false};});
+function buildGMC(){
+  var box=document.getElementById("gmc");
+  GMC.forEach(function(it,i){
+    var d=document.createElement("div"); d.className="box q"; d.id="g"+i;
+    var h='<div><strong>'+(i+1)+'.</strong> '+it.q+'</div>';
+    it.o.forEach(function(o,j){h+='<button type="button" class="opt" data-i="'+i+'" data-j="'+j+'">'+String.fromCharCode(65+j)+'. '+o+'</button>';});
+    h+='<div class="fb" id="gfb'+i+'"></div>';
+    d.innerHTML=h; box.appendChild(d);
+  });
+  box.addEventListener("click",function(e){
+    var b=e.target.closest?e.target.closest(".opt"):e.target; if(!b||!b.classList.contains("opt"))return;
+    var i=+b.getAttribute("data-i"), j=+b.getAttribute("data-j"), st=gmcState[i], it=GMC[i];
+    if(st.done)return;
+    var ok=j===it.a; if(!st.answered){st.answered=true;st.firstRight=ok;}
+    var fb=document.getElementById("gfb"+i);
+    if(ok){st.done=true;b.classList.add("sel-right");document.getElementById("g"+i).className="box q right";fb.className="fb good";fb.innerHTML="✅ "+pick(PRAISE)+' <span class="explain">'+it.e+'</span>';}
+    else{b.classList.add("sel-wrong");document.getElementById("g"+i).className="box q wrong";fb.className="fb bad";fb.textContent="❌ Not quite, Ace. Look closely and try again.";}
+    updateScore();
+  });
+}
+
+var GFIX=[
+ {bad:"there going to the olympics in greece to watch there cousin run",
+  ok:["They're going to the Olympics in Greece to watch their cousin run."],
+  hint:"Capitalize the first word and the proper nouns <em>Olympics</em> and <em>Greece</em>. The first word means \"they are,\" so write <em>They're</em>. The cousin belongs to them, so write <em>their</em>. End with a period."},
+ {bad:"athena and apollo was angry because the hero throwed his shield",
+  ok:["Athena and Apollo were angry because the hero threw his shield."],
+  hint:"Capitalize the names <em>Athena</em> and <em>Apollo</em>. Two subjects joined by <em>and</em> need <em>were</em>. The past tense of throw is <em>threw</em>. End with a period."},
+ {bad:"if you lose your focus youll loose the race",
+  ok:["If you lose your focus, you'll lose the race."],
+  hint:"Capitalize the first word. Both verbs mean \"fail to keep or win,\" so both are <em>lose</em>. Add a comma after the IF clause. <em>You'll</em> needs an apostrophe. End with a period."},
+ {bad:"whos sandals are these asked the runner",
+  ok:["Whose sandals are these? asked the runner.", "\"Whose sandals are these?\" asked the runner."],
+  hint:"Capitalize the first word. The question asks who the sandals belong to, so use <em>Whose</em>. End the question with a question mark. Bonus: put the spoken words in quotation marks."}
+];
+
+var gfixState=GFIX.map(function(){return{tries:0,correct:false,firstRight:false};});
+function norm(s){return s.replace(/[\u2018\u2019\u02BC]/g,"'").replace(/[\u201C\u201D]/g,'"').replace(/\s+/g," ").trim();}
+function checkFixAnswer(i,val){var v=norm(val);return GFIX[i].ok.some(function(a){return norm(a)===v;});}
+function buildGFix(){
+  var box=document.getElementById("gfix");
+  GFIX.forEach(function(it,i){
+    var d=document.createElement("div"); d.className="box q"; d.id="f"+i;
+    d.innerHTML='<div><strong>'+(i+1)+'.</strong> Fix: <span class="bad-sent">'+it.bad+'</span></div>'+
+     '<input class="fix" type="text" id="fi'+i+'" autocomplete="off" spellcheck="false" aria-label="Corrected sentence '+(i+1)+'">'+
+     '<div class="btnrow"><button type="button" class="go" data-act="check" data-i="'+i+'">Check</button><button type="button" class="hint" data-act="hint" data-i="'+i+'">Hint 💡</button><button type="button" class="grey" data-act="show" data-i="'+i+'" style="display:none">Show answer</button></div>'+
+     '<div class="fb" id="ffb'+i+'"></div>';
+    box.appendChild(d);
+  });
+  box.addEventListener("click",function(e){
+    var b=e.target; if(b.tagName!=="BUTTON")return;
+    var i=+b.getAttribute("data-i"), act=b.getAttribute("data-act"), fb=document.getElementById("ffb"+i);
+    if(act==="hint"){fb.className="fb";fb.style.color="#5d4037";fb.textContent="💡 "+GFIX[i].hint;return;}
+    fb.style.color="";
+    if(act==="show"){fb.className="fb";fb.innerHTML='Answer: <em>'+GFIX[i].ok[0]+'</em>'+(GFIX[i].ok.length>1?' (other correct versions are accepted too)':'');return;}
+    fixCheck(i);
+  });
+  box.addEventListener("keydown",function(e){if(e.key==="Enter"&&e.target.classList.contains("fix"))fixCheck(+e.target.id.slice(2));});
+}
+function fixCheck(i){
+  var val=document.getElementById("fi"+i).value, fb=document.getElementById("ffb"+i), st=gfixState[i];
+  fb.style.color="";
+  if(!val.trim()){fb.className="fb bad";fb.textContent="Type the corrected sentence first, Ace!";return;}
+  st.tries++;
+  if(checkFixAnswer(i,val)){ if(st.tries===1)st.firstRight=true; st.correct=true; document.getElementById("f"+i).className="box q right"; fb.className="fb good"; fb.textContent="✅ "+pick(PRAISE); }
+  else { st.correct=false; document.getElementById("f"+i).className="box q wrong"; fb.className="fb bad"; fb.textContent="❌ Not quite. Check every capital letter, apostrophe, comma, and spelling. Try again!"; if(st.tries>=2)document.querySelector('#f'+i+' [data-act=show]').style.display="inline-block"; }
+  updateScore();
+}
+
+function updateScore(){
+  var g=0; gmcState.forEach(function(s){if(s.firstRight)g++;});
+  var f=0; gfixState.forEach(function(s){if(s.correct)f++;});
+  var total=LABEL_ITEMS.length+GMC.length+GFIX.length, got=labelScore+g+f;
+  document.getElementById("scoreText").textContent="Score: "+got+" / "+total+"  (labels "+(labelChecked?labelScore:"-")+"/"+LABEL_ITEMS.length+" · grammar A "+g+"/"+GMC.length+" · grammar B "+f+"/"+GFIX.length+")";
+}
+
+var W5=["who","place","facts","senses","feel","closing"];
+function w5Save(){try{localStorage.setItem(KEY+"-5w",JSON.stringify(W5.map(function(k){return document.getElementById("w5"+k).value;})));}catch(e){}}
+function w5Restore(){try{var d=JSON.parse(localStorage.getItem(KEY+"-5w")||"null");if(d)d.forEach(function(x,i){document.getElementById("w5"+W5[i]).value=x;});}catch(e){}}
+function w5Summary(){return W5.map(function(k){return k.charAt(0).toUpperCase()+k.slice(1)+": "+document.getElementById("w5"+k).value;}).join("\n");}
+function addTemplate(){
+  var t=document.getElementById("essay");
+  var tpl="TITLE: \n\nOPENING (long ago, where, who): \n\nTHE PROBLEM: \n\nRISING ACTION: \n\nCLIMAX + TRANSFORMATION: \n\nAND THAT IS WHY... (ending + lesson): \n\nA myth by "+NAME;
+  if(t.value.trim()&&!confirm("Add the myth layout below what you've already written?"))return;
+  t.value=(t.value.trim()?t.value.replace(/\s+$/,"")+"\n\n":"")+tpl; updateCount(); t.focus();
+}
+var KEY="ace-writing-2026-10-29";
+function countWords(t){var m=t.trim().match(/[A-Za-zÀ-ÿ0-9]+(?:['’\-][A-Za-zÀ-ÿ0-9]+)*/g);return m?m.length:0;}
+function countSentences(t){var m=t.match(/[^.!?]*[A-Za-z0-9][^.!?]*[.!?]+/g);return m?m.length:0;}
+function currentPrompt(){var r=document.querySelector('input[name=prompt]:checked');return r?r.value:"";}
+function updateCount(){
+  var t=document.getElementById("essay").value, w=countWords(t), s=countSentences(t);
+  document.getElementById("wc").textContent=w+(w===1?" word":" words");
+  document.getElementById("sc").textContent=s+(s===1?" sentence":" sentences");
+  var bar=document.getElementById("meterBar"); bar.style.width=Math.min(100,w/350*100)+"%";
+  var msg=document.getElementById("wcMsg");
+  if(w<250){bar.style.background="#ffb300";msg.className="fb";msg.textContent=w===0?"Aim for 250 to 350 words.":"Keep going, Ace! "+(250-w)+" more words to reach the goal.";}
+  else if(w<=350){bar.style.background="#43a047";msg.className="fb good";msg.textContent="🎯 You're in the target zone! Nice work, Ace!";}
+  else{bar.style.background="#1e88e5";msg.className="fb";msg.textContent="Wow, that's a lot of writing! Strong myths are vivid and well paced! Could any sentences be cut?";}
+  try{localStorage.setItem(KEY,JSON.stringify({text:t,prompt:currentPrompt(),checks:checkStates()}));}catch(e){document.getElementById("saveNote").textContent="(This browser can't auto-save here, so use the Download button before closing!)";}
+}
+function checkStates(){return Array.prototype.map.call(document.querySelectorAll("#checklist input"),function(c){return c.checked;});}
+function checklistText(){
+  return Array.prototype.map.call(document.querySelectorAll("#checklist label"),function(l){return (l.querySelector("input").checked?"[x] ":"[ ] ")+l.textContent.trim();}).join("\n");
+}
+function buildReport(){
+  var t=document.getElementById("essay").value;
+  return "Writing Week 32: "+NAME+"\nDate: "+new Date().toLocaleString("en-CA")+"\nPrompt: "+currentPrompt()+
+    "\nWords: "+countWords(t)+"   Sentences: "+countSentences(t)+"\nPlanning notes:\n"+w5Summary()+
+    "\n\n----- "+NAME+"'s writing -----\n\n"+t+"\n\n----- Self-check -----\n"+checklistText()+
+    "\n\n----- Parent feedback -----\n\n\n";
+}
+function download(){
+  var t=document.getElementById("essay").value;
+  if(!t.trim()){document.getElementById("doneMsg").className="fb bad";document.getElementById("doneMsg").textContent="Write something first, Ace!";return;}
+  var blob=new Blob([buildReport().replace(/\n/g,"\r\n")],{type:"text/plain;charset=utf-8"});
+  var a=document.createElement("a"); a.href=URL.createObjectURL(blob); a.download=NAME+"-writing-2026-10-29"+".txt";
+  document.body.appendChild(a); a.click();
+  setTimeout(function(){URL.revokeObjectURL(a.href);a.remove();},1000);
+  var dm=document.getElementById("doneMsg"); dm.className="fb good"; dm.textContent="📄 Saved! Look in your Downloads folder and show Dad. Great job finishing, Ace!";
+}
+function esc(s){return s.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");}
+function printIt(){
+  var t=document.getElementById("essay").value;
+  if(!t.trim()){document.getElementById("doneMsg").className="fb bad";document.getElementById("doneMsg").textContent="Write something first, Ace!";return;}
+  document.getElementById("printArea").innerHTML="<h1>Writing Week 32: "+NAME+"</h1><div class='meta'>"+esc(new Date().toLocaleString("en-CA"))+"<br><strong>Prompt:</strong> "+esc(currentPrompt())+"<br>Words: "+countWords(t)+" · Sentences: "+countSentences(t)+"</div><div class='text'>"+esc(t)+"</div><div class='lines'><strong>Self-check:</strong><br>"+esc(checklistText()).replace(/\n/g,"<br>")+"</div><div class='lines'><strong>Parent feedback:</strong><br><br><br><br></div>";
+  window.print();
+}
+function restore(){
+  try{var d=JSON.parse(localStorage.getItem(KEY)||"null"); if(!d)return;
+    document.getElementById("essay").value=d.text||"";
+    Array.prototype.forEach.call(document.querySelectorAll("input[name=prompt]"),function(r){r.checked=(r.value===d.prompt);});
+    if(!document.querySelector("input[name=prompt]:checked"))document.querySelector("input[name=prompt]").checked=true;
+    var cs=document.querySelectorAll("#checklist input"); (d.checks||[]).forEach(function(v,i){if(cs[i])cs[i].checked=v;});
+  }catch(e){}
+}
+buildLabels(); buildGMC(); buildGFix(); restore(); w5Restore(); updateCount(); updateScore();
+W5.forEach(function(k){document.getElementById("w5"+k).addEventListener("input",w5Save);});
+document.getElementById("templateBtn").addEventListener("click",addTemplate);
+document.getElementById("checkLabels").addEventListener("click",checkLabels);
+document.getElementById("essay").addEventListener("input",updateCount);
+document.getElementById("checklist").addEventListener("change",function(){updateCount(); if(checkStates().every(Boolean)){var dm=document.getElementById("doneMsg");dm.className="fb good";dm.textContent="✅ All boxes checked! Now download or print it for Dad. Awesome work, Ace!";}});
+document.getElementById("prompts").addEventListener("change",updateCount);
+document.getElementById("downloadBtn").addEventListener("click",download);
+document.getElementById("printBtn").addEventListener("click",printIt);
+document.getElementById("clearBtn").addEventListener("click",function(){ if(confirm("Erase your writing and start over?")){document.getElementById("essay").value="";Array.prototype.forEach.call(document.querySelectorAll("#checklist input"),function(c){c.checked=false;});document.getElementById("doneMsg").textContent="";updateCount();} });
+</script>
+<script src="../../assets/autosave.js"></script>
+</body>
+</html>
