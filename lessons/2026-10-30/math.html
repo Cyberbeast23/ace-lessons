@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Math (Oct. 30): Creatures of the Night: Bats, Owls &amp; Super Senses Math Lab</title>
+<style>
+  body{font-family:"Segoe UI",Verdana,Arial,sans-serif;font-size:20px;line-height:1.6;margin:0;background:#f5f0eb;color:#2c2416}
+  .wrap{max-width:880px;margin:0 auto;padding:20px 18px 80px}
+  a.home{font-size:.9em;color:#bf360c}
+  h1{color:#e65100;font-size:2em;margin:10px 0}
+  h2{color:#ef6c00;margin-top:36px;border-bottom:3px solid #ffcc80;padding-bottom:4px}
+  .box{background:#fff;border-radius:16px;padding:18px 22px;margin:16px 0;box-shadow:0 3px 10px rgba(0,0,0,.07)}
+  .example{border-left:8px solid #ef6c00}
+  .example h3{margin:0 0 6px;color:#e65100}
+  .step{margin:4px 0 4px 10px}
+  code,.mono{font-family:Consolas,"Courier New",monospace;background:#fff3e0;padding:1px 6px;border-radius:5px}
+  .q{border-left:8px solid #90a4ae}
+  .q.right{border-left-color:#43a047;background:#f1f8e9}
+  .q.wrong{border-left-color:#e53935;background:#fff5f5}
+  .qnum{font-weight:bold;color:#e65100}
+  .row{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:10px}
+  input[type=text]{font-size:1.05em;padding:8px 12px;border:2px solid #ffcc80;border-radius:10px;width:190px}
+  input[type=text]:focus{outline:none;border-color:#ef6c00;box-shadow:0 0 0 3px #ffe0b2}
+  button{font-size:.95em;padding:8px 16px;border:none;border-radius:10px;cursor:pointer;font-weight:bold}
+  .check{background:#ef6c00;color:#fff} .check:hover{background:#e65100}
+  .hint{background:#ffe082;color:#5d4037} .hint:hover{background:#ffd54f}
+  .sol{background:#ce93d8;color:#311b92}
+  .unit{color:#546e7a}
+  .fb{margin-top:8px;font-weight:bold;min-height:1em}
+  .fb.good{color:#2e7d32} .fb.bad{color:#c62828}
+  .hints{margin-top:8px;color:#e65100;background:#fff3e0;border-radius:10px;padding:0 12px}
+  .hints p{margin:6px 0;padding:6px 0}
+  .solution{margin-top:8px;background:#f3e5f5;border-radius:10px;padding:8px 12px;display:none}
+  #scoreBox{position:sticky;bottom:0;background:#e65100;color:#fff;border-radius:16px 16px 0 0;padding:12px 20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-top:30px}
+  #scoreBox button{background:#ffca28;color:#3e2723}
+  #final{display:none;font-size:1.15em;text-align:center;border:4px solid #43a047}
+  .tipbox{background:#fff8e1;border-left:8px solid #ffb300}
+</style>
+</head>
+<body>
+<div class="wrap">
+<a class="home" href="../../index.html">&larr; Back to all lessons</a>
+<h1>🦇 Math Week 33: Night Hunter's Math Lab</h1>
+<p>Ace, when the sun goes down, a whole hidden world wakes up. Bats find moths in total darkness by listening to echoes, owls swoop on mice they can only hear, and both animals have bodies built for the night. Scientists who study them use a lot of math: the speed of sound, sound frequencies, heart rates, compass bearings and population counts. Today you'll work like a wildlife biologist with <strong>echo distances, kilohertz, percent increase, compass bearings, the median, elapsed time across midnight, km/h to m/s, the distance between two points on a coordinate grid, and a three-part equation</strong>.</p>
+
+<h2>Part 1: Learn the Moves</h2>
+
+<div class="box tipbox">
+  <strong>The 4-Step Problem Solver (your field biologist's checklist):</strong>
+  <ol>
+    <li><strong>Read</strong>: What is the question actually asking? Underline the numbers and units.</li>
+    <li><strong>Plan</strong>: Which operations do I need, and in what order? Do the units match (Hz with Hz, minutes with minutes)?</li>
+    <li><strong>Solve</strong>: Do one step at a time and write each step down.</li>
+    <li><strong>Check</strong>: Is my answer reasonable? Did I answer the question that was asked, in the right units?</li>
+  </ol>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 1: Echo distance (there and back!)</h3>
+  <p class="step">An echo travels <em>to</em> an object and <em>back</em>. Distance travelled by the sound = speed × time. The object is only <strong>half</strong> that far away.</p>
+  <p class="step">Sound moves about 340 m/s. An echo returns after 0.1 s: 340 × 0.1 = 34 m of travel, so the wall is 34 ÷ 2 = <strong>17 m</strong> away.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 2: Hertz and kilohertz</h3>
+  <p class="step"><strong>Hertz (Hz)</strong> means vibrations per second. <strong>kilo</strong> means 1000, so <strong>1 kHz = 1000 Hz</strong>.</p>
+  <p class="step">A whistle at 6 kHz = 6000 Hz. Compared with a 2000 Hz note, it is 6000 ÷ 2000 = <strong>3 times</strong> higher.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 3: Percent increase</h3>
+  <p class="step">Percent increase = <strong>(new − old) ÷ old × 100</strong>. Always divide by the <em>old</em> (starting) value.</p>
+  <p class="step">From 40 to 70: (70 − 40) ÷ 40 = 0.75, so a <strong>75% increase</strong>. Going from 10 to 20 is a 100% increase (it doubled), not 200%!</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 4: Compass bearings</h3>
+  <p class="step">A <strong>bearing</strong> is measured <strong>clockwise from north</strong>: north = 0°, east = 090°, south = 180°, west = 270°.</p>
+  <p class="step">Turning 60° <em>counter-clockwise</em> from north takes you to 360° − 60° = <strong>300°</strong>.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 5: The median</h3>
+  <p class="step">The <strong>median</strong> is the middle value after you put the data <strong>in order</strong>. With an odd number of values there is one exact middle.</p>
+  <p class="step">8, 2, 5, 9, 3 → in order: 2, 3, <strong>5</strong>, 8, 9. Median = <strong>5</strong>.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 6: Elapsed time across midnight</h3>
+  <p class="step">Split the time at midnight. From 9:30 p.m. to midnight is 2 h 30 min = 150 min. From midnight to 1:15 a.m. is 75 min. Total = <strong>225 min</strong>.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 7: km/h back to m/s</h3>
+  <p class="step">Last lesson you multiplied m/s by 3.6 to get km/h. To go the other way, <strong>divide km/h by 3.6</strong>.</p>
+  <p class="step">72 km/h ÷ 3.6 = <strong>20 m/s</strong>.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 8: Distance between two points on a grid</h3>
+  <p class="step">Find how far apart the points are <strong>across</strong> (difference in x) and <strong>up</strong> (difference in y). Those are the two legs of a right triangle, so use <strong>a² + b² = c²</strong>.</p>
+  <p class="step">From (1, 2) to (4, 6): across 4 − 1 = 3, up 6 − 2 = 4. 3² + 4² = 25, √25 = <strong>5 units</strong>. Careful with negatives: from −3 to 2 is 5 steps, because 2 − (−3) = 5.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 9: Three amounts, one equation</h3>
+  <p class="step">"A has x, B has twice as many as A, and C has 1 more than A. Together they have 21." So x + 2x + (x + 1) = 21 → 4x + 1 = 21 → 4x = 20 → <strong>x = 5</strong>. Check: 5 + 10 + 6 = 21 ✔</p>
+</div>
+
+<h2>Part 2: The Challenge (15 problems)</h2>
+<p>Type your answer and press <strong>Check</strong> (or Enter). Fractions like <span class="mono">3/4</span>, mixed numbers like <span class="mono">1 3/4</span>, or decimals like <span class="mono">1.75</span> are fine. Don't type the units, $ signs, or % signs, and you may use spaces or commas in big numbers (1 000 000). Stuck? Press <strong>Hint</strong>. After 2 tries, you can see a full solution.</p>
+
+<div id="questions"></div>
+<div class="box" id="final"></div>
+<div id="scoreBox">
+  <span id="scoreText">Score: 0 / 15 correct</span>
+  <button id="finishBtn" type="button">I'm done! Show my final score</button>
+</div>
+</div>
+
+<script>
+var NAME = "Ace";
+var GRAPH = '<div style="margin:10px 0"><svg viewBox="0 0 280 330" width="100%" style="max-width:320px;background:#fff;border-radius:12px" role="img" aria-label="Coordinate grid. Each square is 1 metre. An owl sits at the point negative 2, 1 and a mouse is at the point 4, 9. A dashed line joins them."><line x1="30" y1="284" x2="30" y2="20" stroke="#cfd8dc" stroke-width="1"/><line x1="52" y1="284" x2="52" y2="20" stroke="#cfd8dc" stroke-width="1"/><line x1="74" y1="284" x2="74" y2="20" stroke="#cfd8dc" stroke-width="1"/><line x1="96" y1="284" x2="96" y2="20" stroke="#cfd8dc" stroke-width="1"/><line x1="118" y1="284" x2="118" y2="20" stroke="#37474f" stroke-width="2"/><line x1="140" y1="284" x2="140" y2="20" stroke="#cfd8dc" stroke-width="1"/><line x1="162" y1="284" x2="162" y2="20" stroke="#cfd8dc" stroke-width="1"/><line x1="184" y1="284" x2="184" y2="20" stroke="#cfd8dc" stroke-width="1"/><line x1="206" y1="284" x2="206" y2="20" stroke="#cfd8dc" stroke-width="1"/><line x1="228" y1="284" x2="228" y2="20" stroke="#cfd8dc" stroke-width="1"/><line x1="250" y1="284" x2="250" y2="20" stroke="#cfd8dc" stroke-width="1"/><line x1="30" y1="284" x2="250" y2="284" stroke="#cfd8dc" stroke-width="1"/><line x1="30" y1="262" x2="250" y2="262" stroke="#cfd8dc" stroke-width="1"/><line x1="30" y1="240" x2="250" y2="240" stroke="#37474f" stroke-width="2"/><line x1="30" y1="218" x2="250" y2="218" stroke="#cfd8dc" stroke-width="1"/><line x1="30" y1="196" x2="250" y2="196" stroke="#cfd8dc" stroke-width="1"/><line x1="30" y1="174" x2="250" y2="174" stroke="#cfd8dc" stroke-width="1"/><line x1="30" y1="152" x2="250" y2="152" stroke="#cfd8dc" stroke-width="1"/><line x1="30" y1="130" x2="250" y2="130" stroke="#cfd8dc" stroke-width="1"/><line x1="30" y1="108" x2="250" y2="108" stroke="#cfd8dc" stroke-width="1"/><line x1="30" y1="86" x2="250" y2="86" stroke="#cfd8dc" stroke-width="1"/><line x1="30" y1="64" x2="250" y2="64" stroke="#cfd8dc" stroke-width="1"/><line x1="30" y1="42" x2="250" y2="42" stroke="#cfd8dc" stroke-width="1"/><line x1="30" y1="20" x2="250" y2="20" stroke="#cfd8dc" stroke-width="1"/><text x="30" y="254" font-size="10" text-anchor="middle" fill="#455a64">-4</text><text x="74" y="254" font-size="10" text-anchor="middle" fill="#455a64">-2</text><text x="162" y="254" font-size="10" text-anchor="middle" fill="#455a64">2</text><text x="206" y="254" font-size="10" text-anchor="middle" fill="#455a64">4</text><text x="250" y="254" font-size="10" text-anchor="middle" fill="#455a64">6</text><text x="112" y="288" font-size="10" text-anchor="end" fill="#455a64">-2</text><text x="112" y="200" font-size="10" text-anchor="end" fill="#455a64">2</text><text x="112" y="156" font-size="10" text-anchor="end" fill="#455a64">4</text><text x="112" y="112" font-size="10" text-anchor="end" fill="#455a64">6</text><text x="112" y="68" font-size="10" text-anchor="end" fill="#455a64">8</text><text x="112" y="24" font-size="10" text-anchor="end" fill="#455a64">10</text><circle cx="74" cy="218" r="6" fill="#5d4037"/><text x="70" y="238" font-size="12" fill="#263238" style="paint-order:stroke" stroke="#fff" stroke-width="3">Owl (−2, 1)</text><circle cx="206" cy="42" r="6" fill="#9e9e9e"/><text x="198" y="34" font-size="12" text-anchor="end" fill="#263238">Mouse (4, 9)</text><line x1="74" y1="218" x2="206" y2="42" stroke="#7b1fa2" stroke-width="2" stroke-dasharray="5 4"/></svg></div>';
+var TABLE = '<table style="border-collapse:collapse;margin:10px 0;font-size:.95em;background:#fff"><caption style="font-weight:bold;text-align:left;padding-bottom:4px">Owl pellet lab: skulls found</caption><tr><th style="border:1px solid #bdbdbd;padding:4px 10px;background:#ede7f6">Pellet</th><th style="border:1px solid #bdbdbd;padding:4px 10px;background:#ede7f6">Skulls</th></tr><tr><td style="border:1px solid #bdbdbd;padding:4px 10px;font-family:monospace">A</td><td style="border:1px solid #bdbdbd;padding:4px 10px;font-family:monospace">4</td></tr><tr><td style="border:1px solid #bdbdbd;padding:4px 10px;font-family:monospace">B</td><td style="border:1px solid #bdbdbd;padding:4px 10px;font-family:monospace">7</td></tr><tr><td style="border:1px solid #bdbdbd;padding:4px 10px;font-family:monospace">C</td><td style="border:1px solid #bdbdbd;padding:4px 10px;font-family:monospace">3</td></tr><tr><td style="border:1px solid #bdbdbd;padding:4px 10px;font-family:monospace">D</td><td style="border:1px solid #bdbdbd;padding:4px 10px;font-family:monospace">5</td></tr><tr><td style="border:1px solid #bdbdbd;padding:4px 10px;font-family:monospace">E</td><td style="border:1px solid #bdbdbd;padding:4px 10px;font-family:monospace">9</td></tr><tr><td style="border:1px solid #bdbdbd;padding:4px 10px;font-family:monospace">F</td><td style="border:1px solid #bdbdbd;padding:4px 10px;font-family:monospace">4</td></tr><tr><td style="border:1px solid #bdbdbd;padding:4px 10px;font-family:monospace">G</td><td style="border:1px solid #bdbdbd;padding:4px 10px;font-family:monospace">6</td></tr></table>';
+var QUESTIONS = [
+ {t:"A single little brown bat can eat about <strong>1500 insects</strong> in one night. A colony of <strong>240 bats</strong> lives in a barn. How many insects could the whole colony eat in a <strong>30-night</strong> month?", a:"10800000", u:"insects",
+  h:["First find one night for the colony: 240 × 1500.","240 × 1500 = 360 000 insects per night. Now multiply by 30 nights."],
+  s:"240 × 1500 = 360 000 insects per night. 360 000 × 30 = 10 800 000 insects in a month. That's why farmers love bats!"},
+ {t:"A bat sends out a click. The echo bounces off a moth and comes back <strong>0.05 seconds</strong> later. Sound travels about <strong>340 m/s</strong>. How many <strong>metres</strong> away is the moth?", a:"8.5", u:"m",
+  h:["Distance the sound travels = 340 × 0.05.","17 m is the trip there AND back. The moth is only half that far."],
+  s:"340 × 0.05 = 17 m (there and back). 17 ÷ 2 = 8.5 m to the moth."},
+ {t:"Most people can hear sounds up to about <strong>20 000 Hz</strong>. A hunting bat calls at <strong>50 kHz</strong>. How many <strong>times</strong> higher is the bat's call than the top of human hearing?", a:"2.5", u:"times",
+  h:["Change kHz to Hz first: 1 kHz = 1000 Hz.","50 kHz = 50 000 Hz. Divide by 20 000."],
+  s:"50 kHz = 50 000 Hz. 50 000 ÷ 20 000 = 2.5 times higher. That's ultrasonic: too high for us to hear!"},
+ {t:"While searching, a bat makes about <strong>20 calls per second</strong>. When it closes in on a moth, it speeds up to <strong>200 calls per second</strong> (the \"feeding buzz\"). What is the <strong>percent increase</strong>?", a:"900", u:"%",
+  h:["Percent increase = (new − old) ÷ old × 100.","(200 − 20) ÷ 20 = 9. Change that to a percent."],
+  s:"200 − 20 = 180. 180 ÷ 20 = 9 = 900%. (Not 1000%: 200 is 10 times 20, but the increase is 9 times the old value.)"},
+ {t:"A great horned owl sits facing <strong>north</strong>. It hears a mouse and turns its head <strong>135° counter-clockwise</strong>. What <strong>bearing</strong> (in degrees, measured clockwise from north) is the owl now facing?", a:"225", u:"°",
+  h:["Bearings go clockwise from north. Counter-clockwise turns go backwards from 360°.","360 − 135 = ?"],
+  s:"Turning 135° counter-clockwise from 0° (north) is the same as 360° − 135° = 225°, which is southwest. Owls can turn their heads about 270° because they have 14 neck bones (we have 7)!"},
+ {t:"A great horned owl's wingspan is about <strong>1.4 m</strong>. A little brown bat's wingspan is about <strong>25 cm</strong>. How many <strong>times</strong> wider is the owl's wingspan?", a:"5.6", u:"times",
+  h:["Use the same units: change 1.4 m into centimetres.","1.4 m = 140 cm. Now 140 ÷ 25."],
+  s:"1.4 m = 140 cm. 140 ÷ 25 = 5.6 times wider."},
+ {t:TABLE+"Owls swallow mice whole and later cough up the bones and fur as a <strong>pellet</strong>. Ace's class pulled apart 7 pellets and counted the skulls inside (see the table). What is the <strong>median</strong> number of skulls?", a:"5", u:"skulls",
+  h:["Put the 7 numbers in order from least to greatest.","3, 4, 4, 5, 6, 7, 9. Which one is exactly in the middle?"],
+  s:"In order: 3, 4, 4, 5, 6, 7, 9. The 4th value of 7 is the middle: 5 skulls."},
+ {t:"When a bat flies, its heart can beat about <strong>900 times per minute</strong>. A resting person's heart beats about <strong>75 times per minute</strong>. How many <strong>times</strong> faster is the flying bat's heart?", a:"12", u:"times",
+  h:["Compare by dividing: 900 ÷ 75.","75 × 10 = 750, and 75 × 2 = 150."],
+  s:"900 ÷ 75 = 12. A flying bat's heart beats 12 times faster than yours at rest, about 15 beats every second!"},
+ {t:"During winter <strong>hibernation</strong>, a bat's heart rate drops from about <strong>600</strong> beats per minute (when active) to only <strong>18</strong>. The hibernating rate is what <strong>percent</strong> of the active rate?", a:"3", u:"%",
+  h:["Percent = part ÷ whole × 100. Here the part is 18 and the whole is 600.","18 ÷ 600 = 0.03."],
+  s:"18 ÷ 600 = 0.03 = 3%. Slowing down saves energy so the bat's fat lasts all winter."},
+ {t:"A little brown bat weighs <strong>8.2 g</strong> when it starts hibernating. It burns about <strong>0.02 g</strong> of fat each day. How much will it weigh after <strong>150 days</strong>, in <strong>grams</strong>?", a:"5.2", u:"g",
+  h:["Total mass lost = 0.02 × 150.","0.02 × 150 = 3 g. Subtract that from 8.2 g."],
+  s:"0.02 × 150 = 3 g lost. 8.2 − 3 = 5.2 g. If the bat wakes up too often, it burns fat faster and may not make it to spring."},
+ {t:"Biologists counted <strong>480 bats</strong> leaving a BC cave. <strong>3/8</strong> of them were little brown bats. Of the <strong>rest</strong>, <strong>25%</strong> were big brown bats. How many <strong>big brown bats</strong> were there?", a:"75", u:"bats",
+  h:["Find 3/8 of 480 first, then subtract to find \"the rest\".","480 ÷ 8 × 3 = 180, so 300 bats are left. Now find 25% of 300."],
+  s:"3/8 of 480 = 180 little brown bats. 480 − 180 = 300 others. 25% of 300 = 75 big brown bats."},
+ {t:"In a northern BC town on one late-autumn evening, the sun sets at <strong>4:52 p.m.</strong> and rises the next morning at <strong>7:38 a.m.</strong> How many <strong>minutes</strong> of night does a bat get to hunt (from sunset to sunrise)?", a:"886", u:"minutes",
+  h:["Split it at midnight. From 4:52 p.m. to midnight is 7 h 8 min.","7 h 8 min = 428 min. From midnight to 7:38 a.m. = 458 min. Add them."],
+  s:"4:52 p.m. to midnight = 7 h 8 min = 428 min. Midnight to 7:38 a.m. = 7 h 38 min = 458 min. 428 + 458 = 886 minutes (14 h 46 min)."},
+ {t:"The Mexican free-tailed bat is one of the fastest flying animals ever measured. Suppose one zooms along at <strong>144 km/h</strong>. What is that speed in <strong>metres per second</strong>?", a:"40", u:"m/s",
+  h:["To change km/h into m/s, divide by 3.6.","144 ÷ 3.6 is the same as 1440 ÷ 36."],
+  s:"144 ÷ 3.6 = 40 m/s. That's 40 metres every second!"},
+ {t:GRAPH+"On the grid, each square is <strong>1 metre</strong>. An owl perches at <strong>(−2, 1)</strong> and hears a mouse at <strong>(4, 9)</strong>. How many <strong>metres</strong> must it glide in a <strong>straight line</strong> to reach the mouse?", a:"10", u:"m",
+  h:["Across: from −2 to 4 is 4 − (−2) = 6. Up: from 1 to 9 is 8.","The legs are 6 and 8. Use a² + b² = c²: 36 + 64 = ?"],
+  s:"Across = 6 m, up = 8 m. 6² + 8² = 36 + 64 = 100. √100 = 10 m."},
+ {t:"<strong>Challenge (build your own equation):</strong> In one week a barn owl caught some voles. It caught <strong>3 times as many mice</strong> as voles, and <strong>4 more shrews</strong> than voles. Altogether it caught <strong>39</strong> animals. How many <strong>voles</strong> did it catch?", a:"7", u:"voles",
+  h:["Let x = voles. Then mice = 3x and shrews = x + 4.","x + 3x + (x + 4) = 39, so 5x + 4 = 39."],
+  s:"x + 3x + x + 4 = 39, so 5x + 4 = 39, 5x = 35, x = 7 voles. Check: 7 + 21 + 11 = 39 ✔"}
+];
+
+var PRAISE = ["Nice work, Ace!","Correct! Sharp as an owl! 🦉","Yes! Biologist Ace!","Excellent, Ace. That was a tough one!","Right on target! 🎯","Brilliant thinking, Ace!","Echo-perfect! 🦇"];
+var ENCOURAGE = ["Not quite. Check your steps and try again!","Close call. Try again, Ace! Maybe use a hint?","Hmm, not yet. Re-read the question carefully.","Keep going, Ace. Mistakes help your brain grow!"];
+
+function parseAnswer(str){
+  if(str===undefined||str===null) return NaN;
+  var s=String(str).trim().toLowerCase();
+  s=s.replace(/[\u2212\u2013]/g,"-");
+  s=s.replace(/(\d),(?=\d{3}(\D|$))/g,"$1");
+  s=s.replace(/[^0-9.\/\- ]/g," ").replace(/\s+/g," ").trim();
+  s=s.replace(/\s*\/\s*/g,"/");
+  var m;
+  if((m=s.match(/^(-?\d+) (\d+)\/(\d+)$/))){ var w=parseFloat(m[1]),n=parseFloat(m[2]),d=parseFloat(m[3]); if(d===0)return NaN; return w<0? w-n/d : w+n/d; }
+  if((m=s.match(/^(-?\d+(?:\.\d+)?)\/(\d+(?:\.\d+)?)$/))){ var d2=parseFloat(m[2]); if(d2===0)return NaN; return parseFloat(m[1])/d2; }
+  s=s.replace(/ /g,"");
+  if(/^-?(\d+\.?\d*|\.\d+)$/.test(s)) return parseFloat(s);
+  return NaN;
+}
+function isCorrect(input,key){
+  var a=parseAnswer(input), k=parseAnswer(key);
+  if(isNaN(a)) return false;
+  var isInt=Math.abs(k-Math.round(k))<1e-12;
+  var tol=isInt?1e-9:0.005;
+  return Math.abs(a-k)<=tol;
+}
+
+function isRomanCorrect(input,key){ return String(input).replace(/\s+/g,"").toUpperCase()===key; }
+var state=[];
+function render(){
+  var box=document.getElementById("questions");
+  QUESTIONS.forEach(function(q,i){
+    state.push({correct:false,tries:0,hints:0});
+    var d=document.createElement("div");
+    d.className="box q"; d.id="q"+i;
+    d.innerHTML='<div><span class="qnum">'+(i+1)+'.</span> '+q.t+'</div>'+
+      '<div class="row"><input type="text"'+(q.r?' placeholder="e.g. MMXXVI"':'')+' id="in'+i+'" aria-label="Answer to question '+(i+1)+'" autocomplete="off"> <span class="unit">'+q.u+'</span>'+
+      '<button type="button" class="check" data-i="'+i+'">Check</button>'+
+      '<button type="button" class="hint" data-i="'+i+'">Hint 💡</button>'+
+      '<button type="button" class="sol" data-i="'+i+'" style="display:none">Show solution</button></div>'+
+      '<div class="fb" id="fb'+i+'"></div><div class="hints" id="hints'+i+'"></div>'+
+      '<div class="solution" id="sol'+i+'"><strong>Solution:</strong> '+q.s+'</div>';
+    box.appendChild(d);
+  });
+  box.addEventListener("click",function(e){
+    var b=e.target; if(b.tagName!=="BUTTON")return;
+    var i=+b.getAttribute("data-i");
+    if(b.className==="check") check(i);
+    else if(b.className==="hint") hint(i);
+    else if(b.className==="sol") document.getElementById("sol"+i).style.display="block";
+  });
+  box.addEventListener("keydown",function(e){
+    if(e.key==="Enter"&&e.target.tagName==="INPUT"){ check(+e.target.id.slice(2)); }
+  });
+}
+function pick(arr){return arr[Math.floor(Math.random()*arr.length)];}
+function check(i){
+  var val=document.getElementById("in"+i).value;
+  var fb=document.getElementById("fb"+i), card=document.getElementById("q"+i);
+  if(val.trim()===""){fb.className="fb bad";fb.textContent="Type an answer first, Ace!";return;}
+  var isR=!!QUESTIONS[i].r;
+  if(isR&&!/^[ivxlcdm\s]+$/i.test(val)){fb.className="fb bad";fb.textContent="Use only Roman numeral letters: I, V, X, L, C, D, M.";return;}
+  if(!isR&&isNaN(parseAnswer(val))){fb.className="fb bad";fb.textContent="I can't read that as a number. Try something like 42, 3.5, 3/4 or 1 3/4.";return;}
+  state[i].tries++;
+  if(isR?isRomanCorrect(val,QUESTIONS[i].a):isCorrect(val,QUESTIONS[i].a)){
+    state[i].correct=true; card.className="box q right"; fb.className="fb good";
+    fb.textContent="✅ "+pick(PRAISE)+(state[i].tries===1?" (first try!)":"");
+  } else {
+    state[i].correct=false; card.className="box q wrong"; fb.className="fb bad";
+    fb.textContent="❌ "+pick(ENCOURAGE);
+    if(state[i].tries>=2) card.querySelector(".sol").style.display="inline-block";
+  }
+  updateScore();
+}
+function hint(i){
+  var q=QUESTIONS[i], s=state[i], hb=document.getElementById("hints"+i);
+  if(s.hints<q.h.length){
+    var p=document.createElement("p"); p.textContent="💡 Hint "+(s.hints+1)+": "+q.h[s.hints]; hb.appendChild(p); s.hints++;
+  }
+  if(s.hints>=q.h.length) document.querySelector("#q"+i+" .hint").disabled=true;
+  updateScore();
+}
+function counts(){
+  var c=0,first=0,h=0;
+  state.forEach(function(s){ if(s.correct){c++; if(s.tries===1)first++;} h+=s.hints; });
+  return {correct:c,first:first,hints:h};
+}
+function updateScore(){
+  var k=counts();
+  document.getElementById("scoreText").textContent="Score: "+k.correct+" / "+QUESTIONS.length+" correct · hints used: "+k.hints;
+}
+function finish(){
+  var k=counts(), n=QUESTIONS.length, pct=Math.round(100*k.correct/n);
+  var msg;
+  if(pct===100) msg="🏆 PERFECT SCORE! Incredible work, Ace. A real wildlife biologist would be impressed!";
+  else if(pct>=85) msg="🌟 Outstanding, Ace! That's a Grade 6-7 level performance!";
+  else if(pct>=65) msg="💪 Great effort, Ace! Review the ones you missed and try them again.";
+  else if(pct>=40) msg="👍 Good start, Ace! These problems are tough. Use the hints and solutions to learn the tricks, then try again.";
+  else msg="🌱 These are challenge problems, well above grade level. Every great scientist started as a beginner! Go through the worked examples and try again, Ace!";
+  var f=document.getElementById("final");
+  f.style.display="block";
+  f.innerHTML="<h2 style='border:none;margin-top:0'>Final Score: "+k.correct+" / "+n+" ("+pct+"%)</h2>"+
+    "<p>Correct on the first try: "+k.first+" · Hints used: "+k.hints+"</p><p>"+msg+"</p>"+
+    "<p style='font-size:.85em;color:#546e7a'>Finished on "+new Date().toLocaleString("en-CA")+"</p>";
+  f.scrollIntoView({behavior:"smooth"});
+}
+render();
+updateScore();
+document.getElementById("finishBtn").addEventListener("click",finish);
+</script>
+<script src="../../assets/autosave.js"></script>
+</body>
+</html>
