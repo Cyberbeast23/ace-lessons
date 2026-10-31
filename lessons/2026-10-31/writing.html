@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Writing (Oct. 31): News Report (Fossil Find on the Riverbank!) + Grammar Clinic</title>
+<style>
+  body{font-family:"Segoe UI",Verdana,Arial,sans-serif;font-size:20px;line-height:1.6;margin:0;background:#fff8f0;color:#2c2416}
+  .wrap{max-width:880px;margin:0 auto;padding:20px 18px 80px}
+  a.home{font-size:.9em;color:#bf360c}
+  h1{color:#e65100;font-size:2em;margin:10px 0}
+  h2{color:#ef6c00;margin-top:36px;border-bottom:3px solid #ffcc80;padding-bottom:4px}
+  h3{color:#ef6c00}
+  .box{background:#fff;border-radius:16px;padding:18px 22px;margin:16px 0;box-shadow:0 3px 10px rgba(0,0,0,.07)}
+  .tipbox{background:#fff8e1;border-left:8px solid #ffb300}
+  .senses{display:grid;gap:8px;margin:10px 0;grid-template-columns:repeat(auto-fit,minmax(140px,1fr))}
+  .senses .side{border-radius:14px;padding:10px 16px;background:#fff3e0}
+  .ts{background:#ffcc80;border-radius:5px;padding:1px 3px}
+  .ev{background:#c8e6c9;border-radius:5px;padding:1px 3px}
+  .ex{background:#ffe0b2;border-radius:5px;padding:1px 3px}
+  .cs{background:#e1bee7;border-radius:5px;padding:1px 3px}
+  .legend span{display:inline-block;margin:4px 8px 4px 0;font-size:.85em}
+  .model{font-family:Georgia,"Times New Roman",serif;font-size:1.05em;line-height:1.9}
+  .row{padding:10px 6px;border-bottom:1px dashed #ddd}
+  .row.right{background:#f1f8e9} .row.wrong{background:#fff5f5}
+  select{font-size:.9em;padding:5px 8px;border-radius:8px;border:2px solid #ffb74d;font-family:inherit}
+  .q{border-left:8px solid #b0bec5}
+  .q.right{border-left-color:#43a047;background:#f1f8e9}
+  .q.wrong{border-left-color:#e53935;background:#fff5f5}
+  .opt{display:block;width:100%;text-align:left;font-size:.95em;background:#fafafa;border:2px solid #e0e0e0;border-radius:10px;padding:8px 14px;margin:8px 0;cursor:pointer;font-family:inherit}
+  .opt:hover{border-color:#ffb74d;background:#fff}
+  .opt.sel-right{background:#c8e6c9;border-color:#43a047}
+  .opt.sel-wrong{background:#ffcdd2;border-color:#e53935}
+  .fb{margin-top:6px;font-weight:bold}
+  .fb.good{color:#2e7d32} .fb.bad{color:#c62828}
+  .explain{font-weight:normal;color:#e65100}
+  .bad-sent{font-family:Consolas,"Courier New",monospace;background:#ffebee;padding:6px 10px;border-radius:8px;display:inline-block;margin:6px 0}
+  input.fix{width:100%;box-sizing:border-box;font-size:1em;padding:8px 12px;border:2px solid #ffb74d;border-radius:10px;font-family:inherit}
+  button{font-size:.95em;padding:8px 16px;border:none;border-radius:10px;cursor:pointer;font-weight:bold;font-family:inherit}
+  .go{background:#ef6c00;color:#fff} .go:hover{background:#e65100}
+  .hint{background:#ffe082;color:#5d4037}
+  .blue{background:#1e88e5;color:#fff}
+  .purple{background:#8e24aa;color:#fff}
+  .grey{background:#cfd8dc;color:#263238}
+  .btnrow{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px}
+  textarea{width:100%;box-sizing:border-box;min-height:300px;font-size:1.05em;line-height:1.7;font-family:Georgia,"Times New Roman",serif;padding:14px;border:3px solid #ffb74d;border-radius:12px}
+  textarea:focus{outline:none;border-color:#ef6c00}
+  .counter{display:flex;flex-wrap:wrap;gap:20px;align-items:center;margin:8px 0;font-weight:bold}
+  .meter{flex:1;min-width:200px;height:18px;background:#e0e0e0;border-radius:9px;overflow:hidden}
+  .meter div{height:100%;width:0;background:#ffb300;transition:width .2s}
+  .checklist label{display:block;padding:6px 4px;cursor:pointer}
+  .checklist input{transform:scale(1.4);margin-right:10px}
+  .prompts label{display:block;background:#fff3e0;border-radius:10px;padding:10px 14px;margin:8px 0;cursor:pointer}
+  .prompts input{transform:scale(1.3);margin-right:8px}
+  #scoreBox{position:sticky;bottom:0;background:#e65100;color:#fff;border-radius:16px 16px 0 0;padding:12px 20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-top:30px}
+  .w5{display:grid;gap:8px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));margin:10px 0}
+  .w5 label{display:block;font-weight:bold;color:#e65100}
+  .w5 input{width:100%;box-sizing:border-box;font-size:.95em;padding:6px 10px;border:2px solid #ffb74d;border-radius:8px;font-family:inherit}
+  #printArea{display:none}
+  @media print{
+    body{background:#fff;font-size:14pt}
+    .wrap,#scoreBox{display:none !important}
+    #printArea{display:block;font-family:Georgia,serif;line-height:1.8}
+    #printArea h1{font-size:18pt;margin:0 0 6pt}
+    #printArea .meta{font-size:11pt;color:#444}
+    #printArea .text{white-space:pre-wrap;border-top:1px solid #999;padding-top:10pt;margin-top:10pt}
+    #printArea .lines{margin-top:24pt;border-top:1px solid #999;padding-top:6pt;font-size:11pt}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+<a class="home" href="../../index.html">&larr; Back to all lessons</a>
+<h1>✍️ Writing Week 34: News Report: Fossil Find on the Riverbank! 📰🦴</h1>
+<p>Yesterday you wrote like a scientist. Today, Ace, you'll write like a <strong>reporter</strong>. When the Trask family found sea-reptile bones by the Puntledge River in 1988, people learned about it from news stories. A news report is built in a special shape called the <strong>inverted pyramid</strong>: the most important facts go at the top, and less important details come later. That way, a busy reader who stops after the first paragraph still knows what happened. Today you'll write your own news report about a fossil discovery.</p>
+
+<h2>Part 1: The Lesson</h2>
+<div class="box">
+  <h3 style="margin-top:0">A news report has six building blocks 🧩</h3>
+  <p>Reporters answer the <strong>5 W's + H</strong>: <strong>Who? What? When? Where? Why? How?</strong> The biggest answers go in the first paragraph, called the <strong>lead</strong>. Then the story moves from <em>most</em> important to <em>least</em> important, like an upside-down pyramid. 🔻</p>
+  <div class="senses">
+    <div class="side"><strong>1. Headline:</strong> a short, punchy title in the present tense, like "Father and Daughter Find Sea Monster in BC Riverbank"</div>
+    <div class="side"><strong>2. Lead:</strong> one or two sentences that answer who, what, when and where</div>
+    <div class="side"><strong>3. Key details:</strong> the most important facts next: how it happened, sizes, ages, numbers</div>
+    <div class="side"><strong>4. Quote:</strong> the exact words of someone involved, inside quotation marks, with a speaker tag ("said Heather")</div>
+    <div class="side"><strong>5. Background:</strong> extra facts that help readers understand (what an elasmosaur is, how old the rock is)</div>
+    <div class="side"><strong>6. What's next:</strong> a closing that tells readers what will happen now (the museum, more digging, a new name)</div>
+  </div>
+  <h3>Five reporter's moves</h3>
+  <ul>
+    <li><strong>Be objective:</strong> report facts, not your opinion. Write in the <strong>third person</strong> ("the team," "she"), never "I think."</li>
+    <li><strong>Be specific:</strong> not "a big fossil" but "a 12-metre skeleton about 85 million years old."</li>
+    <li><strong>Keep paragraphs short:</strong> one to three sentences each. News is easy to skim.</li>
+    <li><strong>Use strong, exact verbs:</strong> unearthed, discovered, announced, confirmed, instead of got or found again and again.</li>
+    <li><strong>Attribute your facts:</strong> tell readers where information came from: "according to museum scientists," "said the palaeontologist."</li>
+  </ul>
+  <p><strong>Reporter's tone:</strong> clear, exciting but fair, and exact. Let the facts make the story amazing.</p>
+</div>
+
+<div class="box">
+  <h3 style="margin-top:0">Model News Report (short version)</h3>
+  <p class="legend"><span class="ts">Headline + lead</span><span class="ev">Key details + quote</span><span class="ex">Background</span><span class="cs">What's next</span></p>
+  <p class="model">
+    <span class="ts"><strong>Hikers Spot Giant Sea Reptile Bones in Northern BC</strong><br>Two hikers discovered the fossil skeleton of an ichthyosaur along a riverbank in northeastern British Columbia last Saturday.</span><br>
+    <span class="ev">The hikers noticed a row of round bones sticking out of a grey cliff. Scientists later confirmed that the backbone was about 8 metres long. "At first we thought it was just a pile of rocks," said one of the hikers. "Then we saw the shape of a spine."</span><br>
+    <span class="ex">Ichthyosaurs were dolphin-shaped reptiles that swam in ancient seas more than 200 million years ago. They were not dinosaurs. A famous 21-metre ichthyosaur, <em>Shonisaurus</em>, was found in the same region.</span><br>
+    <span class="cs">According to museum staff, a team will return next summer to wrap the bones in plaster and carry them to a lab, where cleaning could take more than a year.</span>
+  </p>
+  <p><strong>Notice:</strong> the headline is short and in the present tense; the lead answers who, what, when and where in one sentence; the quote has quotation marks and a speaker tag; the background explains the science; and the ending tells readers what happens next.</p>
+</div>
+
+<h2>Part 2: Name That News Report Part</h2>
+<div class="box">
+  <p>Each line comes from a student's news report called "Students Find Mosasaur Tooth on School Trip." Choose which <strong>part of the news report</strong> it belongs in.</p>
+  <div id="labelRows"></div>
+  <div class="btnrow"><button type="button" class="go" id="checkLabels">Check my answers</button></div>
+  <div class="fb" id="labelFb"></div>
+</div>
+
+<h2>Part 3: Grammar Clinic 📰</h2>
+<div class="box tipbox">Every reporter needs a careful editor! <strong>Section A:</strong> pick the correct sentence. <strong>Section B:</strong> type the sentence again with <em>all</em> mistakes fixed. We use <strong>Canadian spelling</strong> (honour, centre, metre, colour). Today, watch <strong>punctuating quotations</strong>, <strong>subject-verb agreement</strong>, <strong>irregular past-tense verbs</strong>, <strong>commas around appositives</strong>, <strong>capitalizing proper nouns</strong>, <strong>there / their / they're</strong>, and <strong>who's / whose</strong>.</div>
+<h3>Section A: Pick the correct sentence</h3>
+<div id="gmc"></div>
+<h3>Section B: Fix the sentence</h3>
+<p>Retype the whole sentence correctly, with capital letters and punctuation. Each one has <strong>at least two</strong> mistakes.</p>
+<div id="gfix"></div>
+
+<h2>Part 4: Your Turn to Write</h2>
+<div class="box">
+  <h3 style="margin-top:0">Step 1: Choose your story</h3>
+  <p>Pick <strong>one</strong> option. You may use facts from today's reading and math lessons. For Options B and C you may invent the people and quotes, but keep the science true.</p>
+  <div class="prompts" id="prompts">
+    <label><input type="radio" name="prompt" value="Option A: The Puntledge River elasmosaur" checked> 🦕 <strong>Option A:</strong> Report the real 1988 discovery of the elasmosaur by the Puntledge River near Courtenay, as if it happened yesterday.</label>
+    <label><input type="radio" name="prompt" value="Option B: A new fossil find"> 🦴 <strong>Option B:</strong> Invent a news story: a student discovers an ichthyosaur, plesiosaur or mosasaur fossil somewhere in BC.</label>
+    <label><input type="radio" name="prompt" value="Option C: BC picks a provincial fossil"> 🗳️ <strong>Option C:</strong> Report on British Columbia choosing the elasmosaur as its official provincial fossil in 2023, and why people voted for it.</label>
+  </div>
+  <p><strong>Plan your report:</strong> jot a few words for each box. (These notes save with your writing.)</p>
+  <div class="w5" id="w5">
+    <div><label for="w5who">Headline (short, present tense)</label><input id="w5who" type="text" autocomplete="off"></div>
+    <div><label for="w5place">Lead: who, what, when, where</label><input id="w5place" type="text" autocomplete="off"></div>
+    <div><label for="w5facts">Key details: how it happened + numbers</label><input id="w5facts" type="text" autocomplete="off"></div>
+    <div><label for="w5senses">Quote: who says it and what they say</label><input id="w5senses" type="text" autocomplete="off"></div>
+    <div><label for="w5feel">Background: the science readers need</label><input id="w5feel" type="text" autocomplete="off"></div>
+    <div><label for="w5closing">What's next: what will happen now</label><input id="w5closing" type="text" autocomplete="off"></div>
+  </div>
+
+  <h3>Step 2: Write your news report</h3>
+  <p><strong>Goal:</strong> <strong>250 to 350 words</strong> with all <strong>six building blocks</strong>. Include a <strong>headline</strong> of 10 words or fewer; a <strong>lead</strong> that answers who, what, when and where; at least <strong>two numbers or measurements</strong> (use metric units); at least <strong>one quote</strong>, punctuated correctly, with a speaker tag; at least <strong>one attribution</strong> ("according to..."); at least <strong>three strong verbs</strong> (unearthed, confirmed, announced); and paragraphs of no more than three sentences. Write in the <strong>third person</strong>. Bonus: use one word from today's spelling list (like <em>ichthyosaur</em> or <em>sedimentary</em>) correctly!</p>
+  <p><button type="button" class="hint" id="templateBtn">📋 Add the layout for me</button></p>
+  <label for="essay"><strong>Write here, Ace:</strong></label>
+  <textarea id="essay" placeholder="HEADLINE: ..."></textarea>
+  <div class="counter">
+    <span id="wc">0 words</span>
+    <span id="sc">0 sentences</span>
+    <div class="meter" aria-hidden="true"><div id="meterBar"></div></div>
+  </div>
+  <div class="fb" id="wcMsg">Aim for 250 to 350 words.</div>
+  <p style="font-size:.8em;color:#607d8b" id="saveNote">Your writing is saved automatically in this browser as you type.</p>
+
+  <h3>Self-check before you finish ✅</h3>
+  <div class="checklist" id="checklist">
+    <label><input type="checkbox"> My <strong>headline</strong> is short and in the present tense, and my <strong>lead</strong> answers who, what, when and where.</label>
+    <label><input type="checkbox"> I put the <strong>most important facts first</strong> (inverted pyramid) and kept paragraphs to three sentences or fewer.</label>
+    <label><input type="checkbox"> I included at least <strong>two numbers or measurements</strong> in metric units.</label>
+    <label><input type="checkbox"> I included a <strong>quote</strong> with quotation marks, a comma or end mark inside the quotes, and a speaker tag.</label>
+    <label><input type="checkbox"> I gave <strong>background</strong> science and at least one <strong>attribution</strong> ("according to...").</label>
+    <label><input type="checkbox"> My ending tells readers <strong>what happens next</strong>, and I wrote in the <strong>third person</strong> with no opinions.</label>
+    <label><input type="checkbox"> I checked quotation punctuation, subject-verb agreement, past-tense verbs, appositive commas, proper nouns, there / their / they're, who's / whose, and <strong>Canadian spelling</strong> (honour, metre, centre).</label>
+  </div>
+  <div class="btnrow">
+    <button type="button" class="blue" id="downloadBtn">⬇️ Download my writing (for Dad)</button>
+    <button type="button" class="purple" id="printBtn">🖨️ Print my writing</button>
+    <button type="button" class="grey" id="clearBtn">Start over</button>
+  </div>
+  <div class="fb" id="doneMsg"></div>
+</div>
+
+<div id="scoreBox"><span id="scoreText"></span><span>Keep going, reporter Ace! 📰</span></div>
+</div>
+
+<div id="printArea"></div>
+
+<script>
+var NAME="Ace";
+var PRAISE=["Nice work, Ace!","Correct! Great editing eye!","Yes! Ace fixed it!","Excellent, reporter Ace!","Front-page work! 🗞️"];
+function pick(a){return a[Math.floor(Math.random()*a.length)];}
+
+var LABELS=["Headline", "Lead", "Key details", "Quote", "Background", "What's next"];
+var LABEL_ITEMS=[
+ {s:"The tooth is about 6 centimetres long and has sharp ridges along its edges, and a museum expert confirmed it is around 80 million years old.", a:"Key details"},
+ {s:"Students Find Mosasaur Tooth on School Trip", a:"Headline"},
+ {s:"Mosasaurs were giant sea reptiles related to today's monitor lizards. They were not dinosaurs, and they died out 66 million years ago.", a:"Background"},
+ {s:"A Grade 5 student from a Vancouver Island school discovered a mosasaur tooth on a beach near Nanaimo last Tuesday.", a:"Lead"},
+ {s:"The museum plans to clean the tooth and display it next spring, with the student's name on the label.", a:"What's next"},
+ {s:"\"I thought it was a shiny rock until I saw the point,\" said the student.", a:"Quote"}
+];
+var labelScore=0, labelChecked=false;
+function buildLabels(){
+  var box=document.getElementById("labelRows");
+  LABEL_ITEMS.forEach(function(it,i){
+    var d=document.createElement("div"); d.className="row"; d.id="lr"+i;
+    var sel='<select id="ls'+i+'" aria-label="Job of sentence '+(i+1)+'"><option value="">- choose -</option>';
+    LABELS.forEach(function(l){sel+='<option>'+l+'</option>';});
+    sel+='</select>';
+    d.innerHTML='<strong>'+(i+1)+'.</strong> '+it.s+'<br>'+sel+' <span id="lm'+i+'"></span>';
+    box.appendChild(d);
+  });
+}
+function checkLabels(){
+  var sc=0;
+  LABEL_ITEMS.forEach(function(it,i){
+    var ok=document.getElementById("ls"+i).value===it.a; if(ok)sc++;
+    document.getElementById("lr"+i).className="row "+(ok?"right":"wrong");
+    document.getElementById("lm"+i).textContent=ok?"✅":"❌";
+  });
+  labelScore=sc; labelChecked=true;
+  var fb=document.getElementById("labelFb");
+  if(sc===LABEL_ITEMS.length){fb.className="fb good";fb.textContent="🌟 "+sc+" / "+LABEL_ITEMS.length+". "+pick(PRAISE)+" You know exactly how a news report is built!";}
+  else{fb.className="fb bad";fb.textContent=sc+" / "+LABEL_ITEMS.length+". Hint: the short title = headline; who, what, when and where in one sentence = lead; sizes, ages and how it happened = key details; words in quotation marks = quote; science that helps readers understand = background; what will happen now = what's next. Fix the ❌ ones and check again.";}
+  updateScore();
+}
+
+var GMC=[
+ {q:"Which sentence <strong>punctuates the quotation</strong> correctly?",
+  o:["\"We found a bone\", said Heather.", "\"We found a bone\" said Heather.", "We found a bone, \"said Heather.\"", "\"We found a bone,\" said Heather."],
+  a:3,e:"When the speaker tag comes after the quote, put a <strong>comma inside</strong> the closing quotation mark: \"We found a bone,\" said Heather."},
+ {q:"Which sentence uses <strong>subject-verb agreement</strong> correctly?",
+  o:["The box of fossils is heavy.", "The box of fossils are heavy.", "The box of fossils were heavy.", "The box of fossils be heavy."],
+  a:0,e:"The subject is <em>box</em> (one box), not <em>fossils</em>. Cross out the phrase \"of fossils\": The box... <strong>is</strong> heavy."},
+ {q:"Which sentence uses the <strong>past tense</strong> correctly?",
+  o:["The team digged for three days and finded a skull.", "The team dug for three days and finded a skull.", "The team dug for three days and found a skull.", "The team digged for three days and found a skull."],
+  a:2,e:"<em>Dig</em> and <em>find</em> are irregular verbs. Their past tense forms are <strong>dug</strong> and <strong>found</strong>, not \"digged\" or \"finded.\""},
+ {q:"Which sentence uses <strong>commas around an appositive</strong> correctly?",
+  o:["Traskasaura a long-necked elasmosaur, is BC's provincial fossil.", "Traskasaura, a long-necked elasmosaur, is BC's provincial fossil.", "Traskasaura, a long-necked elasmosaur is BC's provincial fossil.", "Traskasaura a long-necked, elasmosaur is BC's provincial fossil."],
+  a:1,e:"An <strong>appositive</strong> is a phrase that renames a noun. Put a comma on <em>both</em> sides of it: Traskasaura<strong>,</strong> a long-necked elasmosaur<strong>,</strong> is..."},
+ {q:"Which sentence <strong>capitalizes proper nouns</strong> correctly?",
+  o:["The fossil was found by the Puntledge river on Vancouver island.", "The Fossil was found by the Puntledge River on Vancouver Island.", "The fossil was found by the puntledge river on vancouver island.", "The fossil was found by the Puntledge River on Vancouver Island."],
+  a:3,e:"Names of specific places are proper nouns. Every important word gets a capital: <em>Puntledge River</em>, <em>Vancouver Island</em>. Common nouns like <em>fossil</em> stay lowercase."},
+ {q:"Which sentence uses <strong>there / their / they're</strong> correctly?",
+  o:["They're proud of their discovery, and they're going back there tomorrow.", "They're proud of there discovery, and their going back their tomorrow.", "Their proud of they're discovery, and there going back their tomorrow.", "There proud of their discovery, and they're going back there tomorrow."],
+  a:0,e:"<em>They're</em> = they are. <em>Their</em> = belonging to them. <em>There</em> = a place."},
+ {q:"Which sentence uses <strong>who's / whose</strong> correctly?",
+  o:["Whose the girl who's father found the fossil?", "Who's the girl who's father found the fossil?", "Who's the girl whose father found the fossil?", "Whose the girl whose father found the fossil?"],
+  a:2,e:"<em>Who's</em> = who is (Who is the girl?). <em>Whose</em> shows belonging (whose father)."}
+];
+var gmcState=GMC.map(function(){return{answered:false,firstRight:false,done:false};});
+function buildGMC(){
+  var box=document.getElementById("gmc");
+  GMC.forEach(function(it,i){
+    var d=document.createElement("div"); d.className="box q"; d.id="g"+i;
+    var h='<div><strong>'+(i+1)+'.</strong> '+it.q+'</div>';
+    it.o.forEach(function(o,j){h+='<button type="button" class="opt" data-i="'+i+'" data-j="'+j+'">'+String.fromCharCode(65+j)+'. '+o+'</button>';});
+    h+='<div class="fb" id="gfb'+i+'"></div>';
+    d.innerHTML=h; box.appendChild(d);
+  });
+  box.addEventListener("click",function(e){
+    var b=e.target.closest?e.target.closest(".opt"):e.target; if(!b||!b.classList.contains("opt"))return;
+    var i=+b.getAttribute("data-i"), j=+b.getAttribute("data-j"), st=gmcState[i], it=GMC[i];
+    if(st.done)return;
+    var ok=j===it.a; if(!st.answered){st.answered=true;st.firstRight=ok;}
+    var fb=document.getElementById("gfb"+i);
+    if(ok){st.done=true;b.classList.add("sel-right");document.getElementById("g"+i).className="box q right";fb.className="fb good";fb.innerHTML="✅ "+pick(PRAISE)+' <span class="explain">'+it.e+'</span>';}
+    else{b.classList.add("sel-wrong");document.getElementById("g"+i).className="box q wrong";fb.className="fb bad";fb.textContent="❌ Not quite, Ace. Look closely and try again.";}
+    updateScore();
+  });
+}
+
+var GFIX=[
+ {bad:"the scientists was excited when they digged up the skull",
+  ok:["The scientists were excited when they dug up the skull."],
+  hint:"Capitalize the first word. <em>Scientists</em> is plural, so use <em>were</em>. The past tense of dig is <em>dug</em>. End with a period."},
+ {bad:"mike trask and his daughter found the bones in courtenay",
+  ok:["Mike Trask and his daughter found the bones in Courtenay."],
+  hint:"People's names (<em>Mike Trask</em>) and place names (<em>Courtenay</em>) are proper nouns, so capitalize them. End with a period."},
+ {bad:"the elasmosaur a sea reptile lived about 85 million years ago",
+  ok:["The elasmosaur, a sea reptile, lived about 85 million years ago."],
+  hint:"Capitalize the first word. <em>a sea reptile</em> is an appositive that renames the elasmosaur, so put commas on both sides of it. End with a period."},
+ {bad:"the museum said their going to put the fossil over they're",
+  ok:["The museum said they're going to put the fossil over there."],
+  hint:"Capitalize the first word. \"They are going\" = <em>they're</em>. A place = <em>there</em>. End with a period."}
+];
+
+var gfixState=GFIX.map(function(){return{tries:0,correct:false,firstRight:false};});
+function norm(s){return s.replace(/[\u2018\u2019\u02BC]/g,"'").replace(/[\u201C\u201D]/g,'"').replace(/\s+/g," ").trim();}
+function checkFixAnswer(i,val){var v=norm(val);return GFIX[i].ok.some(function(a){return norm(a)===v;});}
+function buildGFix(){
+  var box=document.getElementById("gfix");
+  GFIX.forEach(function(it,i){
+    var d=document.createElement("div"); d.className="box q"; d.id="f"+i;
+    d.innerHTML='<div><strong>'+(i+1)+'.</strong> Fix: <span class="bad-sent">'+it.bad+'</span></div>'+
+     '<input class="fix" type="text" id="fi'+i+'" autocomplete="off" spellcheck="false" aria-label="Corrected sentence '+(i+1)+'">'+
+     '<div class="btnrow"><button type="button" class="go" data-act="check" data-i="'+i+'">Check</button><button type="button" class="hint" data-act="hint" data-i="'+i+'">Hint 💡</button><button type="button" class="grey" data-act="show" data-i="'+i+'" style="display:none">Show answer</button></div>'+
+     '<div class="fb" id="ffb'+i+'"></div>';
+    box.appendChild(d);
+  });
+  box.addEventListener("click",function(e){
+    var b=e.target; if(b.tagName!=="BUTTON")return;
+    var i=+b.getAttribute("data-i"), act=b.getAttribute("data-act"), fb=document.getElementById("ffb"+i);
+    if(act==="hint"){fb.className="fb";fb.style.color="#5d4037";fb.textContent="💡 "+GFIX[i].hint;return;}
+    fb.style.color="";
+    if(act==="show"){fb.className="fb";fb.innerHTML='Answer: <em>'+GFIX[i].ok[0]+'</em>'+(GFIX[i].ok.length>1?' (other correct versions are accepted too)':'');return;}
+    fixCheck(i);
+  });
+  box.addEventListener("keydown",function(e){if(e.key==="Enter"&&e.target.classList.contains("fix"))fixCheck(+e.target.id.slice(2));});
+}
+function fixCheck(i){
+  var val=document.getElementById("fi"+i).value, fb=document.getElementById("ffb"+i), st=gfixState[i];
+  fb.style.color="";
+  if(!val.trim()){fb.className="fb bad";fb.textContent="Type the corrected sentence first, Ace!";return;}
+  st.tries++;
+  if(checkFixAnswer(i,val)){ if(st.tries===1)st.firstRight=true; st.correct=true; document.getElementById("f"+i).className="box q right"; fb.className="fb good"; fb.textContent="✅ "+pick(PRAISE); }
+  else { st.correct=false; document.getElementById("f"+i).className="box q wrong"; fb.className="fb bad"; fb.textContent="❌ Not quite. Check every capital letter, apostrophe, comma, and spelling. Try again!"; if(st.tries>=2)document.querySelector('#f'+i+' [data-act=show]').style.display="inline-block"; }
+  updateScore();
+}
+
+function updateScore(){
+  var g=0; gmcState.forEach(function(s){if(s.firstRight)g++;});
+  var f=0; gfixState.forEach(function(s){if(s.correct)f++;});
+  var total=LABEL_ITEMS.length+GMC.length+GFIX.length, got=labelScore+g+f;
+  document.getElementById("scoreText").textContent="Score: "+got+" / "+total+"  (labels "+(labelChecked?labelScore:"-")+"/"+LABEL_ITEMS.length+" · grammar A "+g+"/"+GMC.length+" · grammar B "+f+"/"+GFIX.length+")";
+}
+
+var W5=["who","place","facts","senses","feel","closing"];
+function w5Save(){try{localStorage.setItem(KEY+"-5w",JSON.stringify(W5.map(function(k){return document.getElementById("w5"+k).value;})));}catch(e){}}
+function w5Restore(){try{var d=JSON.parse(localStorage.getItem(KEY+"-5w")||"null");if(d)d.forEach(function(x,i){document.getElementById("w5"+W5[i]).value=x;});}catch(e){}}
+function w5Summary(){return W5.map(function(k){return k.charAt(0).toUpperCase()+k.slice(1)+": "+document.getElementById("w5"+k).value;}).join("\n");}
+function addTemplate(){
+  var t=document.getElementById("essay");
+  var tpl="HEADLINE: \n\nLEAD (who, what, when, where): \n\nKEY DETAILS (how it happened + numbers): \n\nQUOTE (\"...,\" said ...): \n\nBACKGROUND (According to ...): \n\nWHAT'S NEXT: \n\nBy "+NAME+", staff reporter";
+  if(t.value.trim()&&!confirm("Add the news report layout below what you've already written?"))return;
+  t.value=(t.value.trim()?t.value.replace(/\s+$/,"")+"\n\n":"")+tpl; updateCount(); t.focus();
+}
+var KEY="ace-writing-2026-10-31";
+function countWords(t){var m=t.trim().match(/[A-Za-zÀ-ÿ0-9]+(?:['’\-][A-Za-zÀ-ÿ0-9]+)*/g);return m?m.length:0;}
+function countSentences(t){var m=t.match(/[^.!?]*[A-Za-z0-9][^.!?]*[.!?]+/g);return m?m.length:0;}
+function currentPrompt(){var r=document.querySelector('input[name=prompt]:checked');return r?r.value:"";}
+function updateCount(){
+  var t=document.getElementById("essay").value, w=countWords(t), s=countSentences(t);
+  document.getElementById("wc").textContent=w+(w===1?" word":" words");
+  document.getElementById("sc").textContent=s+(s===1?" sentence":" sentences");
+  var bar=document.getElementById("meterBar"); bar.style.width=Math.min(100,w/350*100)+"%";
+  var msg=document.getElementById("wcMsg");
+  if(w<250){bar.style.background="#ffb300";msg.className="fb";msg.textContent=w===0?"Aim for 250 to 350 words.":"Keep going, Ace! "+(250-w)+" more words to reach the goal.";}
+  else if(w<=350){bar.style.background="#43a047";msg.className="fb good";msg.textContent="🎯 You're in the target zone! Nice work, Ace!";}
+  else{bar.style.background="#1e88e5";msg.className="fb";msg.textContent="Wow, that's a lot of writing! Strong news reports are clear, fair and exact! Could any sentences be cut?";}
+  try{localStorage.setItem(KEY,JSON.stringify({text:t,prompt:currentPrompt(),checks:checkStates()}));}catch(e){document.getElementById("saveNote").textContent="(This browser can't auto-save here, so use the Download button before closing!)";}
+}
+function checkStates(){return Array.prototype.map.call(document.querySelectorAll("#checklist input"),function(c){return c.checked;});}
+function checklistText(){
+  return Array.prototype.map.call(document.querySelectorAll("#checklist label"),function(l){return (l.querySelector("input").checked?"[x] ":"[ ] ")+l.textContent.trim();}).join("\n");
+}
+function buildReport(){
+  var t=document.getElementById("essay").value;
+  return "Writing Week 34: "+NAME+"\nDate: "+new Date().toLocaleString("en-CA")+"\nPrompt: "+currentPrompt()+
+    "\nWords: "+countWords(t)+"   Sentences: "+countSentences(t)+"\nPlanning notes:\n"+w5Summary()+
+    "\n\n----- "+NAME+"'s writing -----\n\n"+t+"\n\n----- Self-check -----\n"+checklistText()+
+    "\n\n----- Parent feedback -----\n\n\n";
+}
+function download(){
+  var t=document.getElementById("essay").value;
+  if(!t.trim()){document.getElementById("doneMsg").className="fb bad";document.getElementById("doneMsg").textContent="Write something first, Ace!";return;}
+  var blob=new Blob([buildReport().replace(/\n/g,"\r\n")],{type:"text/plain;charset=utf-8"});
+  var a=document.createElement("a"); a.href=URL.createObjectURL(blob); a.download=NAME+"-writing-2026-10-31"+".txt";
+  document.body.appendChild(a); a.click();
+  setTimeout(function(){URL.revokeObjectURL(a.href);a.remove();},1000);
+  var dm=document.getElementById("doneMsg"); dm.className="fb good"; dm.textContent="📄 Saved! Look in your Downloads folder and show Dad. Great job finishing, Ace!";
+}
+function esc(s){return s.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");}
+function printIt(){
+  var t=document.getElementById("essay").value;
+  if(!t.trim()){document.getElementById("doneMsg").className="fb bad";document.getElementById("doneMsg").textContent="Write something first, Ace!";return;}
+  document.getElementById("printArea").innerHTML="<h1>Writing Week 34: "+NAME+"</h1><div class='meta'>"+esc(new Date().toLocaleString("en-CA"))+"<br><strong>Prompt:</strong> "+esc(currentPrompt())+"<br>Words: "+countWords(t)+" · Sentences: "+countSentences(t)+"</div><div class='text'>"+esc(t)+"</div><div class='lines'><strong>Self-check:</strong><br>"+esc(checklistText()).replace(/\n/g,"<br>")+"</div><div class='lines'><strong>Parent feedback:</strong><br><br><br><br></div>";
+  window.print();
+}
+function restore(){
+  try{var d=JSON.parse(localStorage.getItem(KEY)||"null"); if(!d)return;
+    document.getElementById("essay").value=d.text||"";
+    Array.prototype.forEach.call(document.querySelectorAll("input[name=prompt]"),function(r){r.checked=(r.value===d.prompt);});
+    if(!document.querySelector("input[name=prompt]:checked"))document.querySelector("input[name=prompt]").checked=true;
+    var cs=document.querySelectorAll("#checklist input"); (d.checks||[]).forEach(function(v,i){if(cs[i])cs[i].checked=v;});
+  }catch(e){}
+}
+buildLabels(); buildGMC(); buildGFix(); restore(); w5Restore(); updateCount(); updateScore();
+W5.forEach(function(k){document.getElementById("w5"+k).addEventListener("input",w5Save);});
+document.getElementById("templateBtn").addEventListener("click",addTemplate);
+document.getElementById("checkLabels").addEventListener("click",checkLabels);
+document.getElementById("essay").addEventListener("input",updateCount);
+document.getElementById("checklist").addEventListener("change",function(){updateCount(); if(checkStates().every(Boolean)){var dm=document.getElementById("doneMsg");dm.className="fb good";dm.textContent="✅ All boxes checked! Now download or print it for Dad. Awesome work, Ace!";}});
+document.getElementById("prompts").addEventListener("change",updateCount);
+document.getElementById("downloadBtn").addEventListener("click",download);
+document.getElementById("printBtn").addEventListener("click",printIt);
+document.getElementById("clearBtn").addEventListener("click",function(){ if(confirm("Erase your writing and start over?")){document.getElementById("essay").value="";Array.prototype.forEach.call(document.querySelectorAll("#checklist input"),function(c){c.checked=false;});document.getElementById("doneMsg").textContent="";updateCount();} });
+</script>
+<script src="../../assets/autosave.js"></script>
+</body>
+</html>
