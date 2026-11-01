@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Writing (Nov. 1): Business Pitch (Launch Your Own Mini Business) + Grammar Clinic</title>
+<style>
+  body{font-family:"Segoe UI",Verdana,Arial,sans-serif;font-size:20px;line-height:1.6;margin:0;background:#fff8f0;color:#2c2416}
+  .wrap{max-width:880px;margin:0 auto;padding:20px 18px 80px}
+  a.home{font-size:.9em;color:#bf360c}
+  h1{color:#e65100;font-size:2em;margin:10px 0}
+  h2{color:#ef6c00;margin-top:36px;border-bottom:3px solid #ffcc80;padding-bottom:4px}
+  h3{color:#ef6c00}
+  .box{background:#fff;border-radius:16px;padding:18px 22px;margin:16px 0;box-shadow:0 3px 10px rgba(0,0,0,.07)}
+  .tipbox{background:#fff8e1;border-left:8px solid #ffb300}
+  .senses{display:grid;gap:8px;margin:10px 0;grid-template-columns:repeat(auto-fit,minmax(140px,1fr))}
+  .senses .side{border-radius:14px;padding:10px 16px;background:#fff3e0}
+  .ts{background:#ffcc80;border-radius:5px;padding:1px 3px}
+  .ev{background:#c8e6c9;border-radius:5px;padding:1px 3px}
+  .ex{background:#ffe0b2;border-radius:5px;padding:1px 3px}
+  .cs{background:#e1bee7;border-radius:5px;padding:1px 3px}
+  .legend span{display:inline-block;margin:4px 8px 4px 0;font-size:.85em}
+  .model{font-family:Georgia,"Times New Roman",serif;font-size:1.05em;line-height:1.9}
+  .row{padding:10px 6px;border-bottom:1px dashed #ddd}
+  .row.right{background:#f1f8e9} .row.wrong{background:#fff5f5}
+  select{font-size:.9em;padding:5px 8px;border-radius:8px;border:2px solid #ffb74d;font-family:inherit}
+  .q{border-left:8px solid #b0bec5}
+  .q.right{border-left-color:#43a047;background:#f1f8e9}
+  .q.wrong{border-left-color:#e53935;background:#fff5f5}
+  .opt{display:block;width:100%;text-align:left;font-size:.95em;background:#fafafa;border:2px solid #e0e0e0;border-radius:10px;padding:8px 14px;margin:8px 0;cursor:pointer;font-family:inherit}
+  .opt:hover{border-color:#ffb74d;background:#fff}
+  .opt.sel-right{background:#c8e6c9;border-color:#43a047}
+  .opt.sel-wrong{background:#ffcdd2;border-color:#e53935}
+  .fb{margin-top:6px;font-weight:bold}
+  .fb.good{color:#2e7d32} .fb.bad{color:#c62828}
+  .explain{font-weight:normal;color:#e65100}
+  .bad-sent{font-family:Consolas,"Courier New",monospace;background:#ffebee;padding:6px 10px;border-radius:8px;display:inline-block;margin:6px 0}
+  input.fix{width:100%;box-sizing:border-box;font-size:1em;padding:8px 12px;border:2px solid #ffb74d;border-radius:10px;font-family:inherit}
+  button{font-size:.95em;padding:8px 16px;border:none;border-radius:10px;cursor:pointer;font-weight:bold;font-family:inherit}
+  .go{background:#ef6c00;color:#fff} .go:hover{background:#e65100}
+  .hint{background:#ffe082;color:#5d4037}
+  .blue{background:#1e88e5;color:#fff}
+  .purple{background:#8e24aa;color:#fff}
+  .grey{background:#cfd8dc;color:#263238}
+  .btnrow{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px}
+  textarea{width:100%;box-sizing:border-box;min-height:300px;font-size:1.05em;line-height:1.7;font-family:Georgia,"Times New Roman",serif;padding:14px;border:3px solid #ffb74d;border-radius:12px}
+  textarea:focus{outline:none;border-color:#ef6c00}
+  .counter{display:flex;flex-wrap:wrap;gap:20px;align-items:center;margin:8px 0;font-weight:bold}
+  .meter{flex:1;min-width:200px;height:18px;background:#e0e0e0;border-radius:9px;overflow:hidden}
+  .meter div{height:100%;width:0;background:#ffb300;transition:width .2s}
+  .checklist label{display:block;padding:6px 4px;cursor:pointer}
+  .checklist input{transform:scale(1.4);margin-right:10px}
+  .prompts label{display:block;background:#fff3e0;border-radius:10px;padding:10px 14px;margin:8px 0;cursor:pointer}
+  .prompts input{transform:scale(1.3);margin-right:8px}
+  #scoreBox{position:sticky;bottom:0;background:#e65100;color:#fff;border-radius:16px 16px 0 0;padding:12px 20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-top:30px}
+  .w5{display:grid;gap:8px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));margin:10px 0}
+  .w5 label{display:block;font-weight:bold;color:#e65100}
+  .w5 input{width:100%;box-sizing:border-box;font-size:.95em;padding:6px 10px;border:2px solid #ffb74d;border-radius:8px;font-family:inherit}
+  #printArea{display:none}
+  @media print{
+    body{background:#fff;font-size:14pt}
+    .wrap,#scoreBox{display:none !important}
+    #printArea{display:block;font-family:Georgia,serif;line-height:1.8}
+    #printArea h1{font-size:18pt;margin:0 0 6pt}
+    #printArea .meta{font-size:11pt;color:#444}
+    #printArea .text{white-space:pre-wrap;border-top:1px solid #999;padding-top:10pt;margin-top:10pt}
+    #printArea .lines{margin-top:24pt;border-top:1px solid #999;padding-top:6pt;font-size:11pt}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+<a class="home" href="../../index.html">&larr; Back to all lessons</a>
+<h1>✍️ Writing Week 35: Business Pitch: Launch Your Own Mini Business 💼💰</h1>
+<p>Yesterday you wrote like a reporter. Today, Ace, you'll write like an <strong>entrepreneur</strong>: someone who starts a business. Before a bank lends money or an investor puts money into a new business, the owner must give a <strong>pitch</strong>: a short, convincing plan that explains what the business sells, who will buy it, what it costs, and how it will make a profit. A great pitch mixes <strong>persuasion</strong> (why it's a great idea) with <strong>numbers</strong> (proof that it can work). Today you'll write a pitch for your own mini business.</p>
+
+<h2>Part 1: The Lesson</h2>
+<div class="box">
+  <h3 style="margin-top:0">A business pitch has six building blocks 🧩</h3>
+  <p>Investors are busy, so a pitch must be <strong>clear, organized and backed by numbers</strong>. Each building block answers a question the investor is thinking.</p>
+  <div class="senses">
+    <div class="side"><strong>1. Hook:</strong> grab attention with a question, a surprising fact or a problem people have ("Tired of soggy sandwiches?")</div>
+    <div class="side"><strong>2. Product:</strong> what you sell or do, and the business name</div>
+    <div class="side"><strong>3. Customers:</strong> who will buy it and why they need it (the problem you solve)</div>
+    <div class="side"><strong>4. Costs &amp; price:</strong> what supplies cost, what you'll charge, and the profit on each sale</div>
+    <div class="side"><strong>5. Goal &amp; plan:</strong> how much you hope to earn, how you'll save or spend it, and what you need to get started</div>
+    <div class="side"><strong>6. The ask:</strong> a strong closing that tells the investor exactly what you want ("Will you invest $40?") and why it's a smart choice</div>
+  </div>
+  <h3>Five entrepreneur's moves</h3>
+  <ul>
+    <li><strong>Show the math:</strong> profit = price − cost. "Each cookie costs 40¢ to bake and sells for $1.50, so I earn $1.10 profit per cookie."</li>
+    <li><strong>Know your customer:</strong> not "everyone" but "busy parents on my street who have dogs."</li>
+    <li><strong>Answer a worry before it's asked:</strong> "Some might worry it will rain. If it does, I'll sell hot chocolate instead."</li>
+    <li><strong>Use persuasive words:</strong> affordable, reliable, convenient, guaranteed, local.</li>
+    <li><strong>Stay honest:</strong> never promise what you can't deliver. Investors trust a realistic plan more than a wild one.</li>
+  </ul>
+  <p><strong>Pitch tone:</strong> confident, friendly and businesslike. Write in the <strong>first person</strong> ("I will...") and speak directly to the investor ("you").</p>
+</div>
+
+<div class="box">
+  <h3 style="margin-top:0">Model Business Pitch (short version)</h3>
+  <p class="legend"><span class="ts">Hook + product</span><span class="ev">Customers + costs &amp; price</span><span class="ex">Goal &amp; plan</span><span class="cs">The ask</span></p>
+  <p class="model">
+    <span class="ts">Have you ever come home to a muddy dog and no time to wash it? My business, <strong>Paws &amp; Suds</strong>, will give dogs a bath right in their own backyard.</span><br>
+    <span class="ev">My customers are busy families in my neighbourhood. At least eight homes on my street have dogs. Shampoo and towels cost about $2 per bath, and I will charge $10, so I make $8 profit on every dog.</span><br>
+    <span class="ex">If I wash four dogs every weekend, I will earn $32 a week. I will save 30% in my bank account, give 10% to the animal shelter, and use the rest to buy a better hose. Some might worry about cold weather. In winter, I will offer indoor paw cleaning instead.</span><br>
+    <span class="cs">To start, I need $25 for a tub, shampoo and towels. Will you invest $25? I will pay you back in four weeks, plus a free bath for your dog!</span>
+  </p>
+  <p><strong>Notice:</strong> the hook is a question about a real problem; the numbers prove the business can make a profit; the writer answers a worry before the investor asks; and the ending makes a clear, specific ask.</p>
+</div>
+
+<h2>Part 2: Name That Pitch Part</h2>
+<div class="box">
+  <p>Each line comes from a student's business pitch called "Ace's Fresh-Squeezed Lemonade." Choose which <strong>part of the pitch</strong> it belongs in.</p>
+  <div id="labelRows"></div>
+  <div class="btnrow"><button type="button" class="go" id="checkLabels">Check my answers</button></div>
+  <div class="fb" id="labelFb"></div>
+</div>
+
+<h2>Part 3: Grammar Clinic 💼</h2>
+<div class="box tipbox">Every entrepreneur needs a careful editor! <strong>Section A:</strong> pick the correct sentence. <strong>Section B:</strong> type the sentence again with <em>all</em> mistakes fixed. We use <strong>Canadian spelling</strong> (cheque, neighbour, colour, centre). Today, watch <strong>fewer / less</strong>, <strong>then / than</strong>, <strong>affect / effect</strong>, <strong>lose / loose</strong>, <strong>plural possessive apostrophes</strong>, <strong>commas in a series</strong>, and <strong>comparatives (better / best)</strong>.</div>
+<h3>Section A: Pick the correct sentence</h3>
+<div id="gmc"></div>
+<h3>Section B: Fix the sentence</h3>
+<p>Retype the whole sentence correctly, with capital letters and punctuation. Each one has <strong>at least two</strong> mistakes.</p>
+<div id="gfix"></div>
+
+<h2>Part 4: Your Turn to Write</h2>
+<div class="box">
+  <h3 style="margin-top:0">Step 1: Choose your business</h3>
+  <p>Pick <strong>one</strong> option. Use real numbers that make sense (you can estimate prices from a store or flyer). Remember today's math: profit, percents and budgets!</p>
+  <div class="prompts" id="prompts">
+    <label><input type="radio" name="prompt" value="Option A: A neighbourhood service" checked> 🐕 <strong>Option A:</strong> A service business: dog walking, car washing, snow shovelling, leaf raking, or helping neighbours with tech.</label>
+    <label><input type="radio" name="prompt" value="Option B: A product you make"> 🍪 <strong>Option B:</strong> A product business: something you make and sell, like baked goods, bracelets, comics, or bird feeders.</label>
+    <label><input type="radio" name="prompt" value="Option C: A class fundraiser"> 🏫 <strong>Option C:</strong> A school fundraiser: pitch a plan to your principal to raise money for a class trip or a charity.</label>
+  </div>
+  <p><strong>Plan your pitch:</strong> jot a few words for each box. (These notes save with your writing.)</p>
+  <div class="w5" id="w5">
+    <div><label for="w5who">Hook: question, fact or problem</label><input id="w5who" type="text" autocomplete="off"></div>
+    <div><label for="w5place">Product + business name</label><input id="w5place" type="text" autocomplete="off"></div>
+    <div><label for="w5facts">Customers: who and why</label><input id="w5facts" type="text" autocomplete="off"></div>
+    <div><label for="w5senses">Costs, price + profit per sale</label><input id="w5senses" type="text" autocomplete="off"></div>
+    <div><label for="w5feel">Goal + budget plan (save / give / spend)</label><input id="w5feel" type="text" autocomplete="off"></div>
+    <div><label for="w5closing">The ask: what you want from the investor</label><input id="w5closing" type="text" autocomplete="off"></div>
+  </div>
+
+  <h3>Step 2: Write your business pitch</h3>
+  <p><strong>Goal:</strong> <strong>250 to 350 words</strong> with all <strong>six building blocks</strong>. Include a <strong>hook</strong> in your first sentence; a clear <strong>business name</strong>; a specific <strong>customer</strong> group; at least <strong>three numbers</strong> (a cost, a price and a profit); a <strong>budget plan</strong> that uses at least one <strong>percent</strong>; one <strong>worry answered</strong> ("Some might worry... If so, I will..."); at least <strong>three persuasive words</strong>; and a specific <strong>ask</strong> at the end. Bonus: use one word from today's spelling list (like <em>budget</em> or <em>investment</em>) correctly!</p>
+  <p><button type="button" class="hint" id="templateBtn">📋 Add the layout for me</button></p>
+  <label for="essay"><strong>Write here, Ace:</strong></label>
+  <textarea id="essay" placeholder="HOOK: ..."></textarea>
+  <div class="counter">
+    <span id="wc">0 words</span>
+    <span id="sc">0 sentences</span>
+    <div class="meter" aria-hidden="true"><div id="meterBar"></div></div>
+  </div>
+  <div class="fb" id="wcMsg">Aim for 250 to 350 words.</div>
+  <p style="font-size:.8em;color:#607d8b" id="saveNote">Your writing is saved automatically in this browser as you type.</p>
+
+  <h3>Self-check before you finish ✅</h3>
+  <div class="checklist" id="checklist">
+    <label><input type="checkbox"> My first sentence is a <strong>hook</strong> (a question, surprising fact or problem), and I named my <strong>business</strong>.</label>
+    <label><input type="checkbox"> I described a specific <strong>customer</strong> group and the problem my business solves for them.</label>
+    <label><input type="checkbox"> I included a <strong>cost</strong>, a <strong>price</strong> and the <strong>profit</strong> per sale, and my math is correct.</label>
+    <label><input type="checkbox"> I gave a <strong>goal</strong> and a <strong>budget plan</strong> with at least one percent.</label>
+    <label><input type="checkbox"> I answered at least one <strong>worry</strong> an investor might have.</label>
+    <label><input type="checkbox"> I ended with a clear, specific <strong>ask</strong> and used at least three <strong>persuasive words</strong>.</label>
+    <label><input type="checkbox"> I checked fewer / less, then / than, affect / effect, lose / loose, apostrophes, series commas, better / best, and <strong>Canadian spelling</strong> (cheque, neighbour, colour).</label>
+  </div>
+  <div class="btnrow">
+    <button type="button" class="blue" id="downloadBtn">⬇️ Download my writing (for Dad)</button>
+    <button type="button" class="purple" id="printBtn">🖨️ Print my writing</button>
+    <button type="button" class="grey" id="clearBtn">Start over</button>
+  </div>
+  <div class="fb" id="doneMsg"></div>
+</div>
+
+<div id="scoreBox"><span id="scoreText"></span><span>Keep going, entrepreneur Ace! 💼</span></div>
+</div>
+
+<div id="printArea"></div>
+
+<script>
+var NAME="Ace";
+var PRAISE=["Nice work, Ace!","Correct! Great editing eye!","Yes! Ace fixed it!","Excellent, entrepreneur Ace!","Money-smart editing! 💰"];
+function pick(a){return a[Math.floor(Math.random()*a.length)];}
+
+var LABELS=["Hook", "Product", "Customers", "Costs & price", "Goal & plan", "The ask"];
+var LABEL_ITEMS=[
+ {s:"Each cup costs me about 35¢ for lemons, sugar and cups, and I will sell it for $1.50, so I earn $1.15 profit per cup.", a:"Costs & price"},
+ {s:"Will you invest $30 in my stand? I will pay you back by the end of the month, plus a free cup every Saturday!", a:"The ask"},
+ {s:"My business, Ace's Fresh-Squeezed Lemonade, sells cold homemade lemonade at the end of my driveway.", a:"Product"},
+ {s:"Did you know that the average soccer game leaves players thirsty and tired, with nothing cold nearby?", a:"Hook"},
+ {s:"If I sell 40 cups each weekend, I will earn $46. I will save 50% in my bank account and spend the rest on more supplies.", a:"Goal & plan"},
+ {s:"My customers are soccer families walking home from the field across the street every Saturday morning.", a:"Customers"}
+];
+var labelScore=0, labelChecked=false;
+function buildLabels(){
+  var box=document.getElementById("labelRows");
+  LABEL_ITEMS.forEach(function(it,i){
+    var d=document.createElement("div"); d.className="row"; d.id="lr"+i;
+    var sel='<select id="ls'+i+'" aria-label="Job of sentence '+(i+1)+'"><option value="">- choose -</option>';
+    LABELS.forEach(function(l){sel+='<option>'+l+'</option>';});
+    sel+='</select>';
+    d.innerHTML='<strong>'+(i+1)+'.</strong> '+it.s+'<br>'+sel+' <span id="lm'+i+'"></span>';
+    box.appendChild(d);
+  });
+}
+function checkLabels(){
+  var sc=0;
+  LABEL_ITEMS.forEach(function(it,i){
+    var ok=document.getElementById("ls"+i).value===it.a; if(ok)sc++;
+    document.getElementById("lr"+i).className="row "+(ok?"right":"wrong");
+    document.getElementById("lm"+i).textContent=ok?"✅":"❌";
+  });
+  labelScore=sc; labelChecked=true;
+  var fb=document.getElementById("labelFb");
+  if(sc===LABEL_ITEMS.length){fb.className="fb good";fb.textContent="🌟 "+sc+" / "+LABEL_ITEMS.length+". "+pick(PRAISE)+" You know exactly how a business pitch is built!";}
+  else{fb.className="fb bad";fb.textContent=sc+" / "+LABEL_ITEMS.length+". Hint: a question or surprising fact that grabs attention = hook; what you sell and the business name = product; who will buy it = customers; what things cost and what you charge = costs & price; how much you will earn and what you will do with it = goal & plan; asking the investor for money = the ask. Fix the ❌ ones and check again.";}
+  updateScore();
+}
+
+var GMC=[
+ {q:"Which sentence uses <strong>fewer / less</strong> correctly?",
+  o:["I sold less cookies today, so I have fewer money.", "I sold fewer cookies today, so I have fewer money.", "I sold fewer cookies today, so I have less money.", "I sold less cookies today, so I have less money."],
+  a:2,e:"Use <strong>fewer</strong> for things you can count (cookies) and <strong>less</strong> for amounts you can't count one by one (money, water, time)."},
+ {q:"Which sentence uses <strong>then / than</strong> correctly?",
+  o:["A toonie is worth more than a loonie.", "A toonie is worth more then a loonie.", "A toonie is worth more thane a loonie.", "A toonie is worth more that a loonie."],
+  a:0,e:"<strong>Than</strong> compares (more than, less than). <strong>Then</strong> tells about time (first this, then that)."},
+ {q:"Which sentence uses <strong>affect / effect</strong> correctly?",
+  o:["Inflation can effect how much candy a dollar buys.", "Inflation can affects how much candy a dollar buys.", "Inflation can effects how much candy a dollar buys.", "Inflation can affect how much candy a dollar buys."],
+  a:3,e:"<strong>Affect</strong> is usually a verb (an action: to change something). <strong>Effect</strong> is usually a noun (the result). Inflation can <em>affect</em> prices; the <em>effect</em> is higher prices."},
+ {q:"Which sentence uses <strong>lose / loose</strong> correctly?",
+  o:["Don't loose your wallet; the zipper is lose.", "Don't lose your wallet; the zipper is loose.", "Don't lose your wallet; the zipper is lose.", "Don't loose your wallet; the zipper is loose."],
+  a:1,e:"<strong>Lose</strong> (one o) means to misplace something. <strong>Loose</strong> (two o's) means not tight."},
+ {q:"Which sentence uses a <strong>plural possessive apostrophe</strong> correctly?",
+  o:["All the customers' orders were ready on time.", "All the customer's orders were ready on time.", "All the customers orders' were ready on time.", "All the customer's' orders were ready on time."],
+  a:0,e:"Many customers own the orders. For a plural noun ending in <em>s</em>, add the apostrophe <strong>after</strong> the s: customers<strong>'</strong> orders."},
+ {q:"Which sentence uses <strong>commas in a series</strong> correctly?",
+  o:["I bought lemons sugar, and paper cups.", "I bought, lemons, sugar, and paper cups.", "I bought lemons, sugar and, paper cups.", "I bought lemons, sugar, and paper cups."],
+  a:3,e:"Put a comma between items in a list of three or more: lemons<strong>,</strong> sugar<strong>,</strong> and paper cups. No comma before the first item."},
+ {q:"Which sentence uses <strong>comparatives and superlatives</strong> correctly?",
+  o:["This bank pays gooder interest, but that one pays the most best.", "This bank pays more better interest, but that one pays the bestest.", "This bank pays better interest, but that one pays the best.", "This bank pays best interest, but that one pays the better."],
+  a:2,e:"<em>Good</em> is irregular: good → <strong>better</strong> (comparing two) → <strong>best</strong> (comparing three or more). Never \"gooder,\" \"more better\" or \"most best.\""}
+];
+var gmcState=GMC.map(function(){return{answered:false,firstRight:false,done:false};});
+function buildGMC(){
+  var box=document.getElementById("gmc");
+  GMC.forEach(function(it,i){
+    var d=document.createElement("div"); d.className="box q"; d.id="g"+i;
+    var h='<div><strong>'+(i+1)+'.</strong> '+it.q+'</div>';
+    it.o.forEach(function(o,j){h+='<button type="button" class="opt" data-i="'+i+'" data-j="'+j+'">'+String.fromCharCode(65+j)+'. '+o+'</button>';});
+    h+='<div class="fb" id="gfb'+i+'"></div>';
+    d.innerHTML=h; box.appendChild(d);
+  });
+  box.addEventListener("click",function(e){
+    var b=e.target.closest?e.target.closest(".opt"):e.target; if(!b||!b.classList.contains("opt"))return;
+    var i=+b.getAttribute("data-i"), j=+b.getAttribute("data-j"), st=gmcState[i], it=GMC[i];
+    if(st.done)return;
+    var ok=j===it.a; if(!st.answered){st.answered=true;st.firstRight=ok;}
+    var fb=document.getElementById("gfb"+i);
+    if(ok){st.done=true;b.classList.add("sel-right");document.getElementById("g"+i).className="box q right";fb.className="fb good";fb.innerHTML="✅ "+pick(PRAISE)+' <span class="explain">'+it.e+'</span>';}
+    else{b.classList.add("sel-wrong");document.getElementById("g"+i).className="box q wrong";fb.className="fb bad";fb.textContent="❌ Not quite, Ace. Look closely and try again.";}
+    updateScore();
+  });
+}
+
+var GFIX=[
+ {bad:"we earned less dollars this week then last week",
+  ok:["We earned fewer dollars this week than last week."],
+  hint:"Capitalize the first word. Dollars can be counted, so use <em>fewer</em>. Comparing uses <em>than</em>. End with a period."},
+ {bad:"ace deposited his cheque at the bank of montreal on monday",
+  ok:["Ace deposited his cheque at the Bank of Montreal on Monday."],
+  hint:"Names (<em>Ace</em>), the name of a specific bank (<em>Bank of Montreal</em>) and days of the week (<em>Monday</em>) are proper nouns, so capitalize them. End with a period."},
+ {bad:"my budget has three parts saving spending and giving",
+  ok:["My budget has three parts: saving, spending, and giving.", "My budget has three parts: saving, spending and giving."],
+  hint:"Capitalize the first word. Use a colon to introduce the list, then commas between the items. End with a period."},
+ {bad:"dont loose the money in you're pocket",
+  ok:["Don't lose the money in your pocket."],
+  hint:"Capitalize the first word. <em>Don't</em> needs an apostrophe (do not). Misplace = <em>lose</em>. Belonging to you = <em>your</em>. End with a period."}
+];
+
+var gfixState=GFIX.map(function(){return{tries:0,correct:false,firstRight:false};});
+function norm(s){return s.replace(/[\u2018\u2019\u02BC]/g,"'").replace(/[\u201C\u201D]/g,'"').replace(/\s+/g," ").trim();}
+function checkFixAnswer(i,val){var v=norm(val);return GFIX[i].ok.some(function(a){return norm(a)===v;});}
+function buildGFix(){
+  var box=document.getElementById("gfix");
+  GFIX.forEach(function(it,i){
+    var d=document.createElement("div"); d.className="box q"; d.id="f"+i;
+    d.innerHTML='<div><strong>'+(i+1)+'.</strong> Fix: <span class="bad-sent">'+it.bad+'</span></div>'+
+     '<input class="fix" type="text" id="fi'+i+'" autocomplete="off" spellcheck="false" aria-label="Corrected sentence '+(i+1)+'">'+
+     '<div class="btnrow"><button type="button" class="go" data-act="check" data-i="'+i+'">Check</button><button type="button" class="hint" data-act="hint" data-i="'+i+'">Hint 💡</button><button type="button" class="grey" data-act="show" data-i="'+i+'" style="display:none">Show answer</button></div>'+
+     '<div class="fb" id="ffb'+i+'"></div>';
+    box.appendChild(d);
+  });
+  box.addEventListener("click",function(e){
+    var b=e.target; if(b.tagName!=="BUTTON")return;
+    var i=+b.getAttribute("data-i"), act=b.getAttribute("data-act"), fb=document.getElementById("ffb"+i);
+    if(act==="hint"){fb.className="fb";fb.style.color="#5d4037";fb.textContent="💡 "+GFIX[i].hint;return;}
+    fb.style.color="";
+    if(act==="show"){fb.className="fb";fb.innerHTML='Answer: <em>'+GFIX[i].ok[0]+'</em>'+(GFIX[i].ok.length>1?' (other correct versions are accepted too)':'');return;}
+    fixCheck(i);
+  });
+  box.addEventListener("keydown",function(e){if(e.key==="Enter"&&e.target.classList.contains("fix"))fixCheck(+e.target.id.slice(2));});
+}
+function fixCheck(i){
+  var val=document.getElementById("fi"+i).value, fb=document.getElementById("ffb"+i), st=gfixState[i];
+  fb.style.color="";
+  if(!val.trim()){fb.className="fb bad";fb.textContent="Type the corrected sentence first, Ace!";return;}
+  st.tries++;
+  if(checkFixAnswer(i,val)){ if(st.tries===1)st.firstRight=true; st.correct=true; document.getElementById("f"+i).className="box q right"; fb.className="fb good"; fb.textContent="✅ "+pick(PRAISE); }
+  else { st.correct=false; document.getElementById("f"+i).className="box q wrong"; fb.className="fb bad"; fb.textContent="❌ Not quite. Check every capital letter, apostrophe, comma, and spelling. Try again!"; if(st.tries>=2)document.querySelector('#f'+i+' [data-act=show]').style.display="inline-block"; }
+  updateScore();
+}
+
+function updateScore(){
+  var g=0; gmcState.forEach(function(s){if(s.firstRight)g++;});
+  var f=0; gfixState.forEach(function(s){if(s.correct)f++;});
+  var total=LABEL_ITEMS.length+GMC.length+GFIX.length, got=labelScore+g+f;
+  document.getElementById("scoreText").textContent="Score: "+got+" / "+total+"  (labels "+(labelChecked?labelScore:"-")+"/"+LABEL_ITEMS.length+" · grammar A "+g+"/"+GMC.length+" · grammar B "+f+"/"+GFIX.length+")";
+}
+
+var W5=["who","place","facts","senses","feel","closing"];
+function w5Save(){try{localStorage.setItem(KEY+"-5w",JSON.stringify(W5.map(function(k){return document.getElementById("w5"+k).value;})));}catch(e){}}
+function w5Restore(){try{var d=JSON.parse(localStorage.getItem(KEY+"-5w")||"null");if(d)d.forEach(function(x,i){document.getElementById("w5"+W5[i]).value=x;});}catch(e){}}
+function w5Summary(){return W5.map(function(k){return k.charAt(0).toUpperCase()+k.slice(1)+": "+document.getElementById("w5"+k).value;}).join("\n");}
+function addTemplate(){
+  var t=document.getElementById("essay");
+  var tpl="HOOK (question, fact or problem): \n\nPRODUCT + BUSINESS NAME: \n\nCUSTOMERS (who and why): \n\nCOSTS & PRICE (cost, price, profit per sale): \n\nGOAL & BUDGET PLAN (save ...%, give ...%, spend ...%): \nSome might worry ... If so, I will ...\n\nTHE ASK (Will you invest ...?): \n\nThank you,\n"+NAME+", founder";
+  if(t.value.trim()&&!confirm("Add the business pitch layout below what you've already written?"))return;
+  t.value=(t.value.trim()?t.value.replace(/\s+$/,"")+"\n\n":"")+tpl; updateCount(); t.focus();
+}
+var KEY="ace-writing-2026-11-01";
+function countWords(t){var m=t.trim().match(/[A-Za-zÀ-ÿ0-9]+(?:['’\-][A-Za-zÀ-ÿ0-9]+)*/g);return m?m.length:0;}
+function countSentences(t){var m=t.match(/[^.!?]*[A-Za-z0-9][^.!?]*[.!?]+/g);return m?m.length:0;}
+function currentPrompt(){var r=document.querySelector('input[name=prompt]:checked');return r?r.value:"";}
+function updateCount(){
+  var t=document.getElementById("essay").value, w=countWords(t), s=countSentences(t);
+  document.getElementById("wc").textContent=w+(w===1?" word":" words");
+  document.getElementById("sc").textContent=s+(s===1?" sentence":" sentences");
+  var bar=document.getElementById("meterBar"); bar.style.width=Math.min(100,w/350*100)+"%";
+  var msg=document.getElementById("wcMsg");
+  if(w<250){bar.style.background="#ffb300";msg.className="fb";msg.textContent=w===0?"Aim for 250 to 350 words.":"Keep going, Ace! "+(250-w)+" more words to reach the goal.";}
+  else if(w<=350){bar.style.background="#43a047";msg.className="fb good";msg.textContent="🎯 You're in the target zone! Nice work, Ace!";}
+  else{bar.style.background="#1e88e5";msg.className="fb";msg.textContent="Wow, that's a lot of writing! Strong pitches are clear, confident and backed by numbers! Could any sentences be cut?";}
+  try{localStorage.setItem(KEY,JSON.stringify({text:t,prompt:currentPrompt(),checks:checkStates()}));}catch(e){document.getElementById("saveNote").textContent="(This browser can't auto-save here, so use the Download button before closing!)";}
+}
+function checkStates(){return Array.prototype.map.call(document.querySelectorAll("#checklist input"),function(c){return c.checked;});}
+function checklistText(){
+  return Array.prototype.map.call(document.querySelectorAll("#checklist label"),function(l){return (l.querySelector("input").checked?"[x] ":"[ ] ")+l.textContent.trim();}).join("\n");
+}
+function buildReport(){
+  var t=document.getElementById("essay").value;
+  return "Writing Week 35: "+NAME+"\nDate: "+new Date().toLocaleString("en-CA")+"\nPrompt: "+currentPrompt()+
+    "\nWords: "+countWords(t)+"   Sentences: "+countSentences(t)+"\nPlanning notes:\n"+w5Summary()+
+    "\n\n----- "+NAME+"'s writing -----\n\n"+t+"\n\n----- Self-check -----\n"+checklistText()+
+    "\n\n----- Parent feedback -----\n\n\n";
+}
+function download(){
+  var t=document.getElementById("essay").value;
+  if(!t.trim()){document.getElementById("doneMsg").className="fb bad";document.getElementById("doneMsg").textContent="Write something first, Ace!";return;}
+  var blob=new Blob([buildReport().replace(/\n/g,"\r\n")],{type:"text/plain;charset=utf-8"});
+  var a=document.createElement("a"); a.href=URL.createObjectURL(blob); a.download=NAME+"-writing-2026-11-01"+".txt";
+  document.body.appendChild(a); a.click();
+  setTimeout(function(){URL.revokeObjectURL(a.href);a.remove();},1000);
+  var dm=document.getElementById("doneMsg"); dm.className="fb good"; dm.textContent="📄 Saved! Look in your Downloads folder and show Dad. Great job finishing, Ace!";
+}
+function esc(s){return s.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");}
+function printIt(){
+  var t=document.getElementById("essay").value;
+  if(!t.trim()){document.getElementById("doneMsg").className="fb bad";document.getElementById("doneMsg").textContent="Write something first, Ace!";return;}
+  document.getElementById("printArea").innerHTML="<h1>Writing Week 35: "+NAME+"</h1><div class='meta'>"+esc(new Date().toLocaleString("en-CA"))+"<br><strong>Prompt:</strong> "+esc(currentPrompt())+"<br>Words: "+countWords(t)+" · Sentences: "+countSentences(t)+"</div><div class='text'>"+esc(t)+"</div><div class='lines'><strong>Self-check:</strong><br>"+esc(checklistText()).replace(/\n/g,"<br>")+"</div><div class='lines'><strong>Parent feedback:</strong><br><br><br><br></div>";
+  window.print();
+}
+function restore(){
+  try{var d=JSON.parse(localStorage.getItem(KEY)||"null"); if(!d)return;
+    document.getElementById("essay").value=d.text||"";
+    Array.prototype.forEach.call(document.querySelectorAll("input[name=prompt]"),function(r){r.checked=(r.value===d.prompt);});
+    if(!document.querySelector("input[name=prompt]:checked"))document.querySelector("input[name=prompt]").checked=true;
+    var cs=document.querySelectorAll("#checklist input"); (d.checks||[]).forEach(function(v,i){if(cs[i])cs[i].checked=v;});
+  }catch(e){}
+}
+buildLabels(); buildGMC(); buildGFix(); restore(); w5Restore(); updateCount(); updateScore();
+W5.forEach(function(k){document.getElementById("w5"+k).addEventListener("input",w5Save);});
+document.getElementById("templateBtn").addEventListener("click",addTemplate);
+document.getElementById("checkLabels").addEventListener("click",checkLabels);
+document.getElementById("essay").addEventListener("input",updateCount);
+document.getElementById("checklist").addEventListener("change",function(){updateCount(); if(checkStates().every(Boolean)){var dm=document.getElementById("doneMsg");dm.className="fb good";dm.textContent="✅ All boxes checked! Now download or print it for Dad. Awesome work, Ace!";}});
+document.getElementById("prompts").addEventListener("change",updateCount);
+document.getElementById("downloadBtn").addEventListener("click",download);
+document.getElementById("printBtn").addEventListener("click",printIt);
+document.getElementById("clearBtn").addEventListener("click",function(){ if(confirm("Erase your writing and start over?")){document.getElementById("essay").value="";Array.prototype.forEach.call(document.querySelectorAll("#checklist input"),function(c){c.checked=false;});document.getElementById("doneMsg").textContent="";updateCount();} });
+</script>
+<script src="../../assets/autosave.js"></script>
+</body>
+</html>
