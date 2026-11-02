@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Writing (Nov. 2): Science Poem (The Secret Life of a Tree) + Grammar Clinic</title>
+<style>
+  body{font-family:"Segoe UI",Verdana,Arial,sans-serif;font-size:20px;line-height:1.6;margin:0;background:#fff8f0;color:#2c2416}
+  .wrap{max-width:880px;margin:0 auto;padding:20px 18px 80px}
+  a.home{font-size:.9em;color:#bf360c}
+  h1{color:#e65100;font-size:2em;margin:10px 0}
+  h2{color:#ef6c00;margin-top:36px;border-bottom:3px solid #ffcc80;padding-bottom:4px}
+  h3{color:#ef6c00}
+  .box{background:#fff;border-radius:16px;padding:18px 22px;margin:16px 0;box-shadow:0 3px 10px rgba(0,0,0,.07)}
+  .tipbox{background:#fff8e1;border-left:8px solid #ffb300}
+  .senses{display:grid;gap:8px;margin:10px 0;grid-template-columns:repeat(auto-fit,minmax(140px,1fr))}
+  .senses .side{border-radius:14px;padding:10px 16px;background:#fff3e0}
+  .ts{background:#ffcc80;border-radius:5px;padding:1px 3px}
+  .ev{background:#c8e6c9;border-radius:5px;padding:1px 3px}
+  .ex{background:#ffe0b2;border-radius:5px;padding:1px 3px}
+  .cs{background:#e1bee7;border-radius:5px;padding:1px 3px}
+  .legend span{display:inline-block;margin:4px 8px 4px 0;font-size:.85em}
+  .model{font-family:Georgia,"Times New Roman",serif;font-size:1.05em;line-height:1.9}
+  .row{padding:10px 6px;border-bottom:1px dashed #ddd}
+  .row.right{background:#f1f8e9} .row.wrong{background:#fff5f5}
+  select{font-size:.9em;padding:5px 8px;border-radius:8px;border:2px solid #ffb74d;font-family:inherit}
+  .q{border-left:8px solid #b0bec5}
+  .q.right{border-left-color:#43a047;background:#f1f8e9}
+  .q.wrong{border-left-color:#e53935;background:#fff5f5}
+  .opt{display:block;width:100%;text-align:left;font-size:.95em;background:#fafafa;border:2px solid #e0e0e0;border-radius:10px;padding:8px 14px;margin:8px 0;cursor:pointer;font-family:inherit}
+  .opt:hover{border-color:#ffb74d;background:#fff}
+  .opt.sel-right{background:#c8e6c9;border-color:#43a047}
+  .opt.sel-wrong{background:#ffcdd2;border-color:#e53935}
+  .fb{margin-top:6px;font-weight:bold}
+  .fb.good{color:#2e7d32} .fb.bad{color:#c62828}
+  .explain{font-weight:normal;color:#e65100}
+  .bad-sent{font-family:Consolas,"Courier New",monospace;background:#ffebee;padding:6px 10px;border-radius:8px;display:inline-block;margin:6px 0}
+  input.fix{width:100%;box-sizing:border-box;font-size:1em;padding:8px 12px;border:2px solid #ffb74d;border-radius:10px;font-family:inherit}
+  button{font-size:.95em;padding:8px 16px;border:none;border-radius:10px;cursor:pointer;font-weight:bold;font-family:inherit}
+  .go{background:#ef6c00;color:#fff} .go:hover{background:#e65100}
+  .hint{background:#ffe082;color:#5d4037}
+  .blue{background:#1e88e5;color:#fff}
+  .purple{background:#8e24aa;color:#fff}
+  .grey{background:#cfd8dc;color:#263238}
+  .btnrow{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px}
+  textarea{width:100%;box-sizing:border-box;min-height:300px;font-size:1.05em;line-height:1.7;font-family:Georgia,"Times New Roman",serif;padding:14px;border:3px solid #ffb74d;border-radius:12px}
+  textarea:focus{outline:none;border-color:#ef6c00}
+  .counter{display:flex;flex-wrap:wrap;gap:20px;align-items:center;margin:8px 0;font-weight:bold}
+  .meter{flex:1;min-width:200px;height:18px;background:#e0e0e0;border-radius:9px;overflow:hidden}
+  .meter div{height:100%;width:0;background:#ffb300;transition:width .2s}
+  .checklist label{display:block;padding:6px 4px;cursor:pointer}
+  .checklist input{transform:scale(1.4);margin-right:10px}
+  .prompts label{display:block;background:#fff3e0;border-radius:10px;padding:10px 14px;margin:8px 0;cursor:pointer}
+  .prompts input{transform:scale(1.3);margin-right:8px}
+  #scoreBox{position:sticky;bottom:0;background:#e65100;color:#fff;border-radius:16px 16px 0 0;padding:12px 20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-top:30px}
+  .w5{display:grid;gap:8px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));margin:10px 0}
+  .w5 label{display:block;font-weight:bold;color:#e65100}
+  .w5 input{width:100%;box-sizing:border-box;font-size:.95em;padding:6px 10px;border:2px solid #ffb74d;border-radius:8px;font-family:inherit}
+  #printArea{display:none}
+  @media print{
+    body{background:#fff;font-size:14pt}
+    .wrap,#scoreBox{display:none !important}
+    #printArea{display:block;font-family:Georgia,serif;line-height:1.8}
+    #printArea h1{font-size:18pt;margin:0 0 6pt}
+    #printArea .meta{font-size:11pt;color:#444}
+    #printArea .text{white-space:pre-wrap;border-top:1px solid #999;padding-top:10pt;margin-top:10pt}
+    #printArea .lines{margin-top:24pt;border-top:1px solid #999;padding-top:6pt;font-size:11pt}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+<a class="home" href="../../index.html">&larr; Back to all lessons</a>
+<h1>✍️ Writing Week 36: Science Poem: The Secret Life of a Tree 🌲📝</h1>
+<p>Yesterday you wrote like an entrepreneur. Today, Ace, you'll write like a <strong>poet who is also a scientist</strong>. Scientists describe the world with exact facts; poets describe it with vivid pictures and the music of words. A great <strong>science poem</strong> does both: every image is beautiful <em>and</em> true. Today you'll write a <strong>free-verse poem</strong> (a poem that doesn't need to rhyme) about a tree, a leaf, a seed, or a nurse log, packed with real photosynthesis and rainforest science.</p>
+
+<h2>Part 1: The Lesson</h2>
+<div class="box">
+  <h3 style="margin-top:0">Six tools in a poet's toolbox 🧰</h3>
+  <p>Poems are short, so <strong>every word must work hard</strong>. Poets use these tools to help a reader <em>see, hear and feel</em> an idea.</p>
+  <div class="senses">
+    <div class="side"><strong>1. Simile:</strong> compares two different things using <em>like</em> or <em>as</em> ("Roots spread like a hidden city's streets.")</div>
+    <div class="side"><strong>2. Metaphor:</strong> says one thing <em>is</em> another, with no like or as ("The canopy is a green umbrella.")</div>
+    <div class="side"><strong>3. Personification:</strong> gives a non-human thing human actions or feelings ("The old cedar whispers to its neighbours.")</div>
+    <div class="side"><strong>4. Alliteration:</strong> repeats the same first sound in nearby words ("Silent, sun-soaked, sugar-making leaves")</div>
+    <div class="side"><strong>5. Onomatopoeia:</strong> a word that sounds like what it means (drip, crack, swish, thud)</div>
+    <div class="side"><strong>6. Science fact:</strong> a true, exact detail woven into the poem ("I drink carbon dioxide and breathe out oxygen.")</div>
+  </div>
+  <h3>Five poet's moves</h3>
+  <ul>
+    <li><strong>Break lines on purpose:</strong> end a line on a strong word so the reader pauses there.</li>
+    <li><strong>Group lines into stanzas:</strong> a stanza is a poem's "paragraph." Start a new one when the idea, time or place changes.</li>
+    <li><strong>Choose precise words:</strong> not "a big tree" but "a 70-metre Sitka spruce"; not "goes" but "creeps," "surges," or "trickles."</li>
+    <li><strong>Pick a point of view:</strong> try writing as the tree itself ("I"), which makes personification easy.</li>
+    <li><strong>End with a twist or an echo:</strong> repeat your first line in a new way, or end with a surprising thought.</li>
+  </ul>
+  <p><strong>Science-poem rule:</strong> beautiful <em>and</em> accurate. If a line says something false (like "plants eat soil"), fix the science, then make it beautiful again.</p>
+</div>
+
+<div class="box">
+  <h3 style="margin-top:0">Model Science Poem (short version): "I Am the Cedar"</h3>
+  <p class="legend"><span class="ts">Personification + science fact</span><span class="ev">Simile + alliteration</span><span class="ex">Metaphor + onomatopoeia</span><span class="cs">Ending with an echo</span></p>
+  <p class="model">
+    <span class="ts">I am the cedar. I have stood here for five hundred years,<br>sipping rain through my roots,<br>drinking the carbon dioxide you breathe out.</span><br>
+    <span class="ev">My needles catch sunlight like a million tiny solar panels,<br>silent, sun-soaked, sugar-making.</span><br>
+    <span class="ex">My canopy is a green roof over the forest.<br>Drip. Drip. The rain slides down my bark<br>to the fungi that trade me water for sugar.</span><br>
+    <span class="cs">One day I will fall with a thunderous crack,<br>and seedlings will grow from my body.<br>I am the cedar. I am still giving.</span>
+  </p>
+  <p><strong>Notice:</strong> the poem is told by the tree ("I"); every image is also a true science fact; the stanzas change as the idea changes (roots, leaves, forest, death and new life); and the last stanza echoes the first line with a twist.</p>
+</div>
+
+<h2>Part 2: Name That Poetry Tool</h2>
+<div class="box">
+  <p>Each line comes from a student's science poem called "Song of the Rainforest." Choose which <strong>poetry tool</strong> the line uses <em>most</em>.</p>
+  <div id="labelRows"></div>
+  <div class="btnrow"><button type="button" class="go" id="checkLabels">Check my answers</button></div>
+  <div class="fb" id="labelFb"></div>
+</div>
+
+<h2>Part 3: Grammar Clinic 🌿</h2>
+<div class="box tipbox">Every poet needs a careful editor! <strong>Section A:</strong> pick the correct sentence. <strong>Section B:</strong> type the sentence again with <em>all</em> mistakes fixed. We use <strong>Canadian spelling</strong> (colour, neighbour, centre, metre). Today, watch <strong>its / it's</strong>, <strong>lie / lay</strong>, <strong>who's / whose</strong>, <strong>subject-verb agreement</strong>, <strong>double negatives</strong>, <strong>adjective vs. adverb (good / well)</strong>, and <strong>run-on sentences</strong>.</div>
+<h3>Section A: Pick the correct sentence</h3>
+<div id="gmc"></div>
+<h3>Section B: Fix the sentence</h3>
+<p>Retype the whole sentence correctly, with capital letters and punctuation. Each one has <strong>at least two</strong> mistakes.</p>
+<div id="gfix"></div>
+
+<h2>Part 4: Your Turn to Write</h2>
+<div class="box">
+  <h3 style="margin-top:0">Step 1: Choose your subject</h3>
+  <p>Pick <strong>one</strong> option. Use what you learned in today's reading and math: photosynthesis, stomata, chlorophyll, roots, fungi, canopy, nurse logs, tree rings!</p>
+  <div class="prompts" id="prompts">
+    <label><input type="radio" name="prompt" value="Option A: I am the tree" checked> 🌲 <strong>Option A:</strong> "I Am the ___": write as a giant BC tree (a redcedar, Sitka spruce or Douglas fir) telling its life story.</label>
+    <label><input type="radio" name="prompt" value="Option B: A day in the life of a leaf"> 🍃 <strong>Option B:</strong> "A Leaf's Day": follow one leaf from sunrise to sunset as it makes food, or from spring bud to autumn fall.</label>
+    <label><input type="radio" name="prompt" value="Option C: The nurse log"> 🪵 <strong>Option C:</strong> "The Nurse Log": a fallen tree that slowly decomposes and becomes a home for new seedlings.</label>
+  </div>
+  <p><strong>Plan your poem:</strong> jot a few words for each box. (These notes save with your writing.)</p>
+  <div class="w5" id="w5">
+    <div><label for="w5who">Title + point of view (I, you, or it?)</label><input id="w5who" type="text" autocomplete="off"></div>
+    <div><label for="w5place">Simile (like / as)</label><input id="w5place" type="text" autocomplete="off"></div>
+    <div><label for="w5facts">Three science facts to weave in</label><input id="w5facts" type="text" autocomplete="off"></div>
+    <div><label for="w5senses">Metaphor + personification</label><input id="w5senses" type="text" autocomplete="off"></div>
+    <div><label for="w5feel">Sound words: alliteration + onomatopoeia</label><input id="w5feel" type="text" autocomplete="off"></div>
+    <div><label for="w5closing">Ending: twist or echo of line 1</label><input id="w5closing" type="text" autocomplete="off"></div>
+  </div>
+
+  <h3>Step 2: Write your science poem</h3>
+  <p><strong>Goal:</strong> <strong>120 to 220 words</strong> in <strong>at least four stanzas</strong> (leave a blank line between stanzas). Include a <strong>title</strong>; at least one <strong>simile</strong>, one <strong>metaphor</strong> and one example of <strong>personification</strong>; one line with <strong>alliteration</strong>; at least one <strong>onomatopoeia</strong> word; at least <strong>three true science facts</strong> (for example, what leaves take in and give off); and an <strong>ending</strong> that twists or echoes your first line. Bonus: use one word from today's spelling list (like <em>photosynthesis</em> or <em>chlorophyll</em>) correctly!</p>
+  <p><button type="button" class="hint" id="templateBtn">📋 Add the layout for me</button></p>
+  <label for="essay"><strong>Write here, Ace:</strong></label>
+  <textarea id="essay" placeholder="TITLE: ..."></textarea>
+  <div class="counter">
+    <span id="wc">0 words</span>
+    <span id="sc">0 sentences</span>
+    <div class="meter" aria-hidden="true"><div id="meterBar"></div></div>
+  </div>
+  <div class="fb" id="wcMsg">Aim for 120 to 220 words.</div>
+  <p style="font-size:.8em;color:#607d8b" id="saveNote">Your writing is saved automatically in this browser as you type.</p>
+
+  <h3>Self-check before you finish ✅</h3>
+  <div class="checklist" id="checklist">
+    <label><input type="checkbox"> My poem has a <strong>title</strong> and a clear <strong>point of view</strong>.</label>
+    <label><input type="checkbox"> I used at least one <strong>simile</strong> and one <strong>metaphor</strong>.</label>
+    <label><input type="checkbox"> I used <strong>personification</strong> to give the plant human actions or feelings.</label>
+    <label><input type="checkbox"> I included <strong>alliteration</strong> and at least one <strong>onomatopoeia</strong> word.</label>
+    <label><input type="checkbox"> I wove in at least <strong>three true science facts</strong>, and none of my lines say something false.</label>
+    <label><input type="checkbox"> I grouped my lines into <strong>at least four stanzas</strong> and ended with a <strong>twist or an echo</strong>.</label>
+    <label><input type="checkbox"> I checked its / it's, lie / lay, who's / whose, subject-verb agreement, double negatives, good / well, run-ons, and <strong>Canadian spelling</strong> (colour, metre, centre).</label>
+  </div>
+  <div class="btnrow">
+    <button type="button" class="blue" id="downloadBtn">⬇️ Download my writing (for Dad)</button>
+    <button type="button" class="purple" id="printBtn">🖨️ Print my writing</button>
+    <button type="button" class="grey" id="clearBtn">Start over</button>
+  </div>
+  <div class="fb" id="doneMsg"></div>
+</div>
+
+<div id="scoreBox"><span id="scoreText"></span><span>Keep going, poet Ace! 🌲</span></div>
+</div>
+
+<div id="printArea"></div>
+
+<script>
+var NAME="Ace";
+var PRAISE=["Nice work, Ace!","Correct! Great editing eye!","Yes! Ace fixed it!","Excellent, poet Ace!","Rainforest-sharp editing! 🌿"];
+function pick(a){return a[Math.floor(Math.random()*a.length)];}
+
+var LABELS=["Simile", "Metaphor", "Personification", "Alliteration", "Onomatopoeia", "Science fact"];
+var LABEL_ITEMS=[
+ {s:"Each leaf takes in carbon dioxide through tiny stomata and gives off oxygen.", a:"Science fact"},
+ {s:"The breeze gently lifts the sleepy ferns and tells them it is morning.", a:"Personification"},
+ {s:"Moss hangs from the branches like soft green scarves.", a:"Simile"},
+ {s:"Crack! Thud! The ancient hemlock crashes to the forest floor.", a:"Onomatopoeia"},
+ {s:"The forest floor is a dim, damp cellar beneath the canopy.", a:"Metaphor"},
+ {s:"Tall trees tower toward the twinkling stars.", a:"Alliteration"}
+];
+var labelScore=0, labelChecked=false;
+function buildLabels(){
+  var box=document.getElementById("labelRows");
+  LABEL_ITEMS.forEach(function(it,i){
+    var d=document.createElement("div"); d.className="row"; d.id="lr"+i;
+    var sel='<select id="ls'+i+'" aria-label="Job of sentence '+(i+1)+'"><option value="">- choose -</option>';
+    LABELS.forEach(function(l){sel+='<option>'+l+'</option>';});
+    sel+='</select>';
+    d.innerHTML='<strong>'+(i+1)+'.</strong> '+it.s+'<br>'+sel+' <span id="lm'+i+'"></span>';
+    box.appendChild(d);
+  });
+}
+function checkLabels(){
+  var sc=0;
+  LABEL_ITEMS.forEach(function(it,i){
+    var ok=document.getElementById("ls"+i).value===it.a; if(ok)sc++;
+    document.getElementById("lr"+i).className="row "+(ok?"right":"wrong");
+    document.getElementById("lm"+i).textContent=ok?"✅":"❌";
+  });
+  labelScore=sc; labelChecked=true;
+  var fb=document.getElementById("labelFb");
+  if(sc===LABEL_ITEMS.length){fb.className="fb good";fb.textContent="🌟 "+sc+" / "+LABEL_ITEMS.length+". "+pick(PRAISE)+" You know your poetry tools!";}
+  else{fb.className="fb bad";fb.textContent=sc+" / "+LABEL_ITEMS.length+". Hint: like or as = simile; says one thing IS another = metaphor; a non-human thing acting human = personification; the same first sound repeated = alliteration; a word that sounds like its meaning = onomatopoeia; an exact, true detail with no figure of speech = science fact. Fix the ❌ ones and check again.";}
+  updateScore();
+}
+
+var GMC=[
+ {q:"Which sentence uses <strong>its / it's</strong> correctly?",
+  o:["It's leaves turn red in October, and its beautiful.", "Its leaves turn red in October, and its beautiful.", "It's leaves turn red in October, and it's beautiful.", "Its leaves turn red in October, and it's beautiful."],
+  a:3,e:"<strong>It's</strong> = it is (or it has). <strong>Its</strong> = belonging to it, with no apostrophe, just like his and hers. Its leaves... it's (it is) beautiful."},
+ {q:"Which sentence uses <strong>lie / lay</strong> correctly?",
+  o:["The fallen log will lie on the forest floor for centuries.", "The fallen log will lay on the forest floor for centuries.", "The fallen log will laid on the forest floor for centuries.", "The fallen log will lays on the forest floor for centuries."],
+  a:0,e:"<strong>Lie</strong> = to rest (no object): the log lies there. <strong>Lay</strong> = to put something down (needs an object): lay the seeds in the tray."},
+ {q:"Which sentence uses <strong>who's / whose</strong> correctly?",
+  o:["Who's notebook is full of leaf drawings?", "Whos notebook is full of leaf drawings?", "Whose notebook is full of leaf drawings?", "Who'se notebook is full of leaf drawings?"],
+  a:2,e:"<strong>Whose</strong> asks who owns something. <strong>Who's</strong> = who is (or who has): Who's coming on the hike?"},
+ {q:"Which sentence has correct <strong>subject-verb agreement</strong>?",
+  o:["The roots of the old cedar spreads under the trail.", "The roots of the old cedar spread under the trail.", "The roots of the old cedar is spreading under the trail.", "The roots of the old cedar has spread under the trail."],
+  a:1,e:"The subject is <strong>roots</strong> (plural), not <em>cedar</em>. Ignore the phrase \"of the old cedar\" and ask: the roots spread. Plural subject, plural verb."},
+ {q:"Which sentence avoids a <strong>double negative</strong>?",
+  o:["A seed can't grow without no water.", "A seed can't never grow without water.", "A seed don't grow without no water.", "A seed can't grow without any water."],
+  a:3,e:"Use only <strong>one</strong> negative word. <em>Can't</em> is already negative, so use <em>any</em>, not <em>no</em>. (Also: a seed <em>doesn't</em>, not <em>don't</em>.)"},
+ {q:"Which sentence uses <strong>good / well</strong> correctly?",
+  o:["The tomato plants grew well in the sunny window.", "The tomato plants grew good in the sunny window.", "The tomato plants grew goodly in the sunny window.", "The tomato plants grew weller in the sunny window."],
+  a:0,e:"<strong>Good</strong> is an adjective (describes a noun: a good plant). <strong>Well</strong> is an adverb (describes how an action is done: grew well)."},
+ {q:"Which is <strong>not</strong> a run-on sentence?",
+  o:["Leaves need sunlight they also need water.", "Leaves need sunlight, and they also need water.", "Leaves need sunlight, they also need water.", "Leaves need sunlight they also, need water."],
+  a:1,e:"Two complete thoughts need a joining word with a comma (<strong>, and</strong>), a semicolon, or a period. A comma alone (a comma splice) or nothing at all makes a run-on."}
+];
+var gmcState=GMC.map(function(){return{answered:false,firstRight:false,done:false};});
+function buildGMC(){
+  var box=document.getElementById("gmc");
+  GMC.forEach(function(it,i){
+    var d=document.createElement("div"); d.className="box q"; d.id="g"+i;
+    var h='<div><strong>'+(i+1)+'.</strong> '+it.q+'</div>';
+    it.o.forEach(function(o,j){h+='<button type="button" class="opt" data-i="'+i+'" data-j="'+j+'">'+String.fromCharCode(65+j)+'. '+o+'</button>';});
+    h+='<div class="fb" id="gfb'+i+'"></div>';
+    d.innerHTML=h; box.appendChild(d);
+  });
+  box.addEventListener("click",function(e){
+    var b=e.target.closest?e.target.closest(".opt"):e.target; if(!b||!b.classList.contains("opt"))return;
+    var i=+b.getAttribute("data-i"), j=+b.getAttribute("data-j"), st=gmcState[i], it=GMC[i];
+    if(st.done)return;
+    var ok=j===it.a; if(!st.answered){st.answered=true;st.firstRight=ok;}
+    var fb=document.getElementById("gfb"+i);
+    if(ok){st.done=true;b.classList.add("sel-right");document.getElementById("g"+i).className="box q right";fb.className="fb good";fb.innerHTML="✅ "+pick(PRAISE)+' <span class="explain">'+it.e+'</span>';}
+    else{b.classList.add("sel-wrong");document.getElementById("g"+i).className="box q wrong";fb.className="fb bad";fb.textContent="❌ Not quite, Ace. Look closely and try again.";}
+    updateScore();
+  });
+}
+
+var GFIX=[
+ {bad:"its colour changes from green to orange in the fall",
+  ok:["Its colour changes from green to orange in the fall."],
+  hint:"Capitalize the first word. <em>Its</em> (belonging to it) has no apostrophe. Use the Canadian spelling <em>colour</em>. End with a period."},
+ {bad:"ace and his dad hiked through cathedral grove on vancouver island",
+  ok:["Ace and his dad hiked through Cathedral Grove on Vancouver Island."],
+  hint:"Names (<em>Ace</em>) and specific places (<em>Cathedral Grove</em>, <em>Vancouver Island</em>) are proper nouns, so capitalize them. End with a period."},
+ {bad:"the tallest tree in the park is more than seventy meters tall",
+  ok:["The tallest tree in the park is more than seventy metres tall."],
+  hint:"Capitalize the first word. In Canada, the unit is spelled <em>metre</em> (a <em>meter</em> is a measuring device, like a parking meter). End with a period."},
+ {bad:"whos ready to plant the seeds",
+  ok:["Who's ready to plant the seeds?"],
+  hint:"Capitalize the first word. <em>Who's</em> = who is, so it needs an apostrophe. It's a question, so end with a question mark."}
+];
+
+var gfixState=GFIX.map(function(){return{tries:0,correct:false,firstRight:false};});
+function norm(s){return s.replace(/[\u2018\u2019\u02BC]/g,"'").replace(/[\u201C\u201D]/g,'"').replace(/\s+/g," ").trim();}
+function checkFixAnswer(i,val){var v=norm(val);return GFIX[i].ok.some(function(a){return norm(a)===v;});}
+function buildGFix(){
+  var box=document.getElementById("gfix");
+  GFIX.forEach(function(it,i){
+    var d=document.createElement("div"); d.className="box q"; d.id="f"+i;
+    d.innerHTML='<div><strong>'+(i+1)+'.</strong> Fix: <span class="bad-sent">'+it.bad+'</span></div>'+
+     '<input class="fix" type="text" id="fi'+i+'" autocomplete="off" spellcheck="false" aria-label="Corrected sentence '+(i+1)+'">'+
+     '<div class="btnrow"><button type="button" class="go" data-act="check" data-i="'+i+'">Check</button><button type="button" class="hint" data-act="hint" data-i="'+i+'">Hint 💡</button><button type="button" class="grey" data-act="show" data-i="'+i+'" style="display:none">Show answer</button></div>'+
+     '<div class="fb" id="ffb'+i+'"></div>';
+    box.appendChild(d);
+  });
+  box.addEventListener("click",function(e){
+    var b=e.target; if(b.tagName!=="BUTTON")return;
+    var i=+b.getAttribute("data-i"), act=b.getAttribute("data-act"), fb=document.getElementById("ffb"+i);
+    if(act==="hint"){fb.className="fb";fb.style.color="#5d4037";fb.textContent="💡 "+GFIX[i].hint;return;}
+    fb.style.color="";
+    if(act==="show"){fb.className="fb";fb.innerHTML='Answer: <em>'+GFIX[i].ok[0]+'</em>'+(GFIX[i].ok.length>1?' (other correct versions are accepted too)':'');return;}
+    fixCheck(i);
+  });
+  box.addEventListener("keydown",function(e){if(e.key==="Enter"&&e.target.classList.contains("fix"))fixCheck(+e.target.id.slice(2));});
+}
+function fixCheck(i){
+  var val=document.getElementById("fi"+i).value, fb=document.getElementById("ffb"+i), st=gfixState[i];
+  fb.style.color="";
+  if(!val.trim()){fb.className="fb bad";fb.textContent="Type the corrected sentence first, Ace!";return;}
+  st.tries++;
+  if(checkFixAnswer(i,val)){ if(st.tries===1)st.firstRight=true; st.correct=true; document.getElementById("f"+i).className="box q right"; fb.className="fb good"; fb.textContent="✅ "+pick(PRAISE); }
+  else { st.correct=false; document.getElementById("f"+i).className="box q wrong"; fb.className="fb bad"; fb.textContent="❌ Not quite. Check every capital letter, apostrophe, comma, and spelling. Try again!"; if(st.tries>=2)document.querySelector('#f'+i+' [data-act=show]').style.display="inline-block"; }
+  updateScore();
+}
+
+function updateScore(){
+  var g=0; gmcState.forEach(function(s){if(s.firstRight)g++;});
+  var f=0; gfixState.forEach(function(s){if(s.correct)f++;});
+  var total=LABEL_ITEMS.length+GMC.length+GFIX.length, got=labelScore+g+f;
+  document.getElementById("scoreText").textContent="Score: "+got+" / "+total+"  (labels "+(labelChecked?labelScore:"-")+"/"+LABEL_ITEMS.length+" · grammar A "+g+"/"+GMC.length+" · grammar B "+f+"/"+GFIX.length+")";
+}
+
+var W5=["who","place","facts","senses","feel","closing"];
+function w5Save(){try{localStorage.setItem(KEY+"-5w",JSON.stringify(W5.map(function(k){return document.getElementById("w5"+k).value;})));}catch(e){}}
+function w5Restore(){try{var d=JSON.parse(localStorage.getItem(KEY+"-5w")||"null");if(d)d.forEach(function(x,i){document.getElementById("w5"+W5[i]).value=x;});}catch(e){}}
+function w5Summary(){return W5.map(function(k){return k.charAt(0).toUpperCase()+k.slice(1)+": "+document.getElementById("w5"+k).value;}).join("\n");}
+function addTemplate(){
+  var t=document.getElementById("essay");
+  var tpl="TITLE: \n\nSTANZA 1 (introduce your plant + point of view): \n\n\nSTANZA 2 (simile + science fact): \n\n\nSTANZA 3 (metaphor + personification + sound words): \n\n\nSTANZA 4 (ending: twist or echo of line 1): \n\n\nby "+NAME;
+  if(t.value.trim()&&!confirm("Add the poem layout below what you've already written?"))return;
+  t.value=(t.value.trim()?t.value.replace(/\s+$/,"")+"\n\n":"")+tpl; updateCount(); t.focus();
+}
+var KEY="ace-writing-2026-11-02";
+function countWords(t){var m=t.trim().match(/[A-Za-zÀ-ÿ0-9]+(?:['’\-][A-Za-zÀ-ÿ0-9]+)*/g);return m?m.length:0;}
+function countSentences(t){var m=t.match(/[^.!?]*[A-Za-z0-9][^.!?]*[.!?]+/g);return m?m.length:0;}
+function currentPrompt(){var r=document.querySelector('input[name=prompt]:checked');return r?r.value:"";}
+function updateCount(){
+  var t=document.getElementById("essay").value, w=countWords(t), s=countSentences(t);
+  document.getElementById("wc").textContent=w+(w===1?" word":" words");
+  document.getElementById("sc").textContent=s+(s===1?" sentence":" sentences");
+  var bar=document.getElementById("meterBar"); bar.style.width=Math.min(100,w/220*100)+"%";
+  var msg=document.getElementById("wcMsg");
+  if(w<120){bar.style.background="#ffb300";msg.className="fb";msg.textContent=w===0?"Aim for 120 to 220 words.":"Keep going, Ace! "+(120-w)+" more words to reach the goal.";}
+  else if(w<=220){bar.style.background="#43a047";msg.className="fb good";msg.textContent="🎯 You're in the target zone! Nice work, Ace!";}
+  else{bar.style.background="#1e88e5";msg.className="fb";msg.textContent="Wow, that's a lot of writing! Strong poems make every word count! Could any sentences be cut?";}
+  try{localStorage.setItem(KEY,JSON.stringify({text:t,prompt:currentPrompt(),checks:checkStates()}));}catch(e){document.getElementById("saveNote").textContent="(This browser can't auto-save here, so use the Download button before closing!)";}
+}
+function checkStates(){return Array.prototype.map.call(document.querySelectorAll("#checklist input"),function(c){return c.checked;});}
+function checklistText(){
+  return Array.prototype.map.call(document.querySelectorAll("#checklist label"),function(l){return (l.querySelector("input").checked?"[x] ":"[ ] ")+l.textContent.trim();}).join("\n");
+}
+function buildReport(){
+  var t=document.getElementById("essay").value;
+  return "Writing Week 36: "+NAME+"\nDate: "+new Date().toLocaleString("en-CA")+"\nPrompt: "+currentPrompt()+
+    "\nWords: "+countWords(t)+"   Sentences: "+countSentences(t)+"\nPlanning notes:\n"+w5Summary()+
+    "\n\n----- "+NAME+"'s writing -----\n\n"+t+"\n\n----- Self-check -----\n"+checklistText()+
+    "\n\n----- Parent feedback -----\n\n\n";
+}
+function download(){
+  var t=document.getElementById("essay").value;
+  if(!t.trim()){document.getElementById("doneMsg").className="fb bad";document.getElementById("doneMsg").textContent="Write something first, Ace!";return;}
+  var blob=new Blob([buildReport().replace(/\n/g,"\r\n")],{type:"text/plain;charset=utf-8"});
+  var a=document.createElement("a"); a.href=URL.createObjectURL(blob); a.download=NAME+"-writing-2026-11-02"+".txt";
+  document.body.appendChild(a); a.click();
+  setTimeout(function(){URL.revokeObjectURL(a.href);a.remove();},1000);
+  var dm=document.getElementById("doneMsg"); dm.className="fb good"; dm.textContent="📄 Saved! Look in your Downloads folder and show Dad. Great job finishing, Ace!";
+}
+function esc(s){return s.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");}
+function printIt(){
+  var t=document.getElementById("essay").value;
+  if(!t.trim()){document.getElementById("doneMsg").className="fb bad";document.getElementById("doneMsg").textContent="Write something first, Ace!";return;}
+  document.getElementById("printArea").innerHTML="<h1>Writing Week 36: "+NAME+"</h1><div class='meta'>"+esc(new Date().toLocaleString("en-CA"))+"<br><strong>Prompt:</strong> "+esc(currentPrompt())+"<br>Words: "+countWords(t)+" · Sentences: "+countSentences(t)+"</div><div class='text'>"+esc(t)+"</div><div class='lines'><strong>Self-check:</strong><br>"+esc(checklistText()).replace(/\n/g,"<br>")+"</div><div class='lines'><strong>Parent feedback:</strong><br><br><br><br></div>";
+  window.print();
+}
+function restore(){
+  try{var d=JSON.parse(localStorage.getItem(KEY)||"null"); if(!d)return;
+    document.getElementById("essay").value=d.text||"";
+    Array.prototype.forEach.call(document.querySelectorAll("input[name=prompt]"),function(r){r.checked=(r.value===d.prompt);});
+    if(!document.querySelector("input[name=prompt]:checked"))document.querySelector("input[name=prompt]").checked=true;
+    var cs=document.querySelectorAll("#checklist input"); (d.checks||[]).forEach(function(v,i){if(cs[i])cs[i].checked=v;});
+  }catch(e){}
+}
+buildLabels(); buildGMC(); buildGFix(); restore(); w5Restore(); updateCount(); updateScore();
+W5.forEach(function(k){document.getElementById("w5"+k).addEventListener("input",w5Save);});
+document.getElementById("templateBtn").addEventListener("click",addTemplate);
+document.getElementById("checkLabels").addEventListener("click",checkLabels);
+document.getElementById("essay").addEventListener("input",updateCount);
+document.getElementById("checklist").addEventListener("change",function(){updateCount(); if(checkStates().every(Boolean)){var dm=document.getElementById("doneMsg");dm.className="fb good";dm.textContent="✅ All boxes checked! Now download or print it for Dad. Awesome work, Ace!";}});
+document.getElementById("prompts").addEventListener("change",updateCount);
+document.getElementById("downloadBtn").addEventListener("click",download);
+document.getElementById("printBtn").addEventListener("click",printIt);
+document.getElementById("clearBtn").addEventListener("click",function(){ if(confirm("Erase your writing and start over?")){document.getElementById("essay").value="";Array.prototype.forEach.call(document.querySelectorAll("#checklist input"),function(c){c.checked=false;});document.getElementById("doneMsg").textContent="";updateCount();} });
+</script>
+<script src="../../assets/autosave.js"></script>
+</body>
+</html>

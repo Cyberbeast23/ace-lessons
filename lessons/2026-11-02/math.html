@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Math (Nov. 2): Green Machines: Photosynthesis &amp; BC Rainforest Math Lab</title>
+<style>
+  body{font-family:"Segoe UI",Verdana,Arial,sans-serif;font-size:20px;line-height:1.6;margin:0;background:#f5f0eb;color:#2c2416}
+  .wrap{max-width:880px;margin:0 auto;padding:20px 18px 80px}
+  a.home{font-size:.9em;color:#bf360c}
+  h1{color:#e65100;font-size:2em;margin:10px 0}
+  h2{color:#ef6c00;margin-top:36px;border-bottom:3px solid #ffcc80;padding-bottom:4px}
+  .box{background:#fff;border-radius:16px;padding:18px 22px;margin:16px 0;box-shadow:0 3px 10px rgba(0,0,0,.07)}
+  .example{border-left:8px solid #ef6c00}
+  .example h3{margin:0 0 6px;color:#e65100}
+  .step{margin:4px 0 4px 10px}
+  code,.mono{font-family:Consolas,"Courier New",monospace;background:#fff3e0;padding:1px 6px;border-radius:5px}
+  .q{border-left:8px solid #90a4ae}
+  .q.right{border-left-color:#43a047;background:#f1f8e9}
+  .q.wrong{border-left-color:#e53935;background:#fff5f5}
+  .qnum{font-weight:bold;color:#e65100}
+  .row{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:10px}
+  input[type=text]{font-size:1.05em;padding:8px 12px;border:2px solid #ffcc80;border-radius:10px;width:190px}
+  input[type=text]:focus{outline:none;border-color:#ef6c00;box-shadow:0 0 0 3px #ffe0b2}
+  button{font-size:.95em;padding:8px 16px;border:none;border-radius:10px;cursor:pointer;font-weight:bold}
+  .check{background:#ef6c00;color:#fff} .check:hover{background:#e65100}
+  .hint{background:#ffe082;color:#5d4037} .hint:hover{background:#ffd54f}
+  .sol{background:#ce93d8;color:#311b92}
+  .unit{color:#546e7a}
+  .fb{margin-top:8px;font-weight:bold;min-height:1em}
+  .fb.good{color:#2e7d32} .fb.bad{color:#c62828}
+  .hints{margin-top:8px;color:#e65100;background:#fff3e0;border-radius:10px;padding:0 12px}
+  .hints p{margin:6px 0;padding:6px 0}
+  .solution{margin-top:8px;background:#f3e5f5;border-radius:10px;padding:8px 12px;display:none}
+  #scoreBox{position:sticky;bottom:0;background:#e65100;color:#fff;border-radius:16px 16px 0 0;padding:12px 20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-top:30px}
+  #scoreBox button{background:#ffca28;color:#3e2723}
+  #final{display:none;font-size:1.15em;text-align:center;border:4px solid #43a047}
+  .tipbox{background:#fff8e1;border-left:8px solid #ffb300}
+</style>
+</head>
+<body>
+<div class="wrap">
+<a class="home" href="../../index.html">&larr; Back to all lessons</a>
+<h1>🌲 Math Week 36: Green Machines: Rainforest Botanist's Math Lab</h1>
+<p>Ace, every leaf is a tiny solar-powered factory. Using sunlight, a plant turns carbon dioxide and water into sugar and gives off the oxygen we breathe. British Columbia's coastal rainforest holds some of the tallest and oldest trees on Earth, and botanists and foresters use math every day to study them. Today you'll work like a rainforest botanist with <strong>counting atoms in the photosynthesis equation, growth rates, measuring a tree's height with shadows (similar triangles), tree-ring ages, circumference and π, percent water in a leaf, carbon dioxide and rounding up, litres to cubic metres, the mean from a bar graph, germination rates, ratios, hectares and tree planting, an equation with the variable on both sides, doubling patterns, and unit rates</strong>.</p>
+
+<h2>Part 1: Learn the Moves</h2>
+
+<div class="box tipbox">
+  <strong>The 4-Step Problem Solver (your botanist's field checklist):</strong>
+  <ol>
+    <li><strong>Read</strong>: What is the question actually asking? Underline the numbers and units (cm, m, mm, L, ha, %).</li>
+    <li><strong>Plan</strong>: Do the units match? If one length is in cm and another in m, convert first.</li>
+    <li><strong>Solve</strong>: Do one step at a time and write each step down.</li>
+    <li><strong>Check</strong>: Is my answer reasonable? A tree can be 70 m tall, but not 700 m!</li>
+  </ol>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 1: Counting atoms in a chemical equation</h3>
+  <p class="step">Photosynthesis: <strong>6 CO₂ + 6 H₂O → C₆H₁₂O₆ + 6 O₂</strong> (carbon dioxide + water → glucose sugar + oxygen). The big number in front multiplies the whole molecule; the small number counts atoms of the element just before it.</p>
+  <p class="step">Carbon atoms on the left: 6 CO₂ has 6 × 1 = <strong>6</strong>. Hydrogen on the left: 6 H₂O has 6 × 2 = <strong>12</strong>. Glucose on the right, C₆H₁₂O₆, also has 6 carbons and 12 hydrogens. Atoms are never created or destroyed, so both sides must match!</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 2: Growth at a steady rate</h3>
+  <p class="step">Final height = <strong>start + rate × time</strong>. Convert first if the units differ.</p>
+  <p class="step">A sapling starts at 0.5 m and grows 30 cm (0.3 m) per year for 5 years: 0.5 + 0.3 × 5 = <strong>2 m</strong>.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 3: Measuring a tall tree with shadows</h3>
+  <p class="step">At the same moment, the sun makes every object's height and shadow length have the same <strong>ratio</strong> (they form <em>similar triangles</em>).</p>
+  <p class="step">A 2 m pole casts a 1 m shadow, so height is 2 × the shadow. A tree with a 15 m shadow is 15 × 2 = <strong>30 m</strong> tall.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 4: Tree rings</h3>
+  <p class="step">Most trees in BC add one growth ring each year. Age ≈ <strong>radius ÷ average ring width</strong> (same units!).</p>
+  <p class="step">Radius 30 cm = 300 mm, rings about 3 mm wide: 300 ÷ 3 = <strong>about 100 years old</strong>.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 5: Circumference and π</h3>
+  <p class="step">Circumference = <strong>π × diameter</strong>, so diameter = <strong>circumference ÷ π</strong>. Use π ≈ 3.14.</p>
+  <p class="step">A trunk measures 6.28 m around with a tape: diameter = 6.28 ÷ 3.14 = <strong>2 m</strong>.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 6: When to round UP</h3>
+  <p class="step">If you need <em>enough</em> of something, a decimal answer must be rounded <strong>up</strong> to the next whole number, even if the decimal is small.</p>
+  <p class="step">You need 100 L of water and each bucket holds 30 L: 100 ÷ 30 = 3.33..., so you need <strong>4 buckets</strong> (3 buckets would only hold 90 L).</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 7: Litres, cubic metres and hectares</h3>
+  <p class="step"><strong>1000 L = 1 m³</strong> (a cube 1 m on each side holds 1000 L). Land area: <strong>1 hectare (ha) = 10 000 m²</strong>, about the size of two soccer fields.</p>
+  <p class="step">2500 L = 2500 ÷ 1000 = <strong>2.5 m³</strong>. 3 ha = 3 × 10 000 = <strong>30 000 m²</strong>.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 8: Germination rate (a percent)</h3>
+  <p class="step">Germination rate = <strong>seeds that sprouted ÷ seeds planted × 100</strong>. To compare trays with different numbers of seeds, always compare the percents, not the counts.</p>
+  <p class="step">18 of 20 seeds sprouted: 18 ÷ 20 = 0.9 = <strong>90%</strong>.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 9: Doubling patterns</h3>
+  <p class="step">If something doubles every day, then <strong>one day before</strong> it was half as big. Work backward instead of forward!</p>
+  <p class="step">Mould covers a whole slice of bread on day 10 and doubles daily, so it covered half on day <strong>9</strong> and a quarter on day 8.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 10: Variables on both sides</h3>
+  <p class="step">Two plants: one is 10 cm and grows 5 cm a week, the other is 30 cm and grows 1 cm a week. When are they equal? 10 + 5x = 30 + x → 4x = 20 → <strong>x = 5 weeks</strong> (both are 35 cm).</p>
+</div>
+
+<h2>Part 2: The Challenge (15 problems)</h2>
+<p>Type your answer and press <strong>Check</strong> (or Enter). Fractions like <span class="mono">3/4</span>, mixed numbers like <span class="mono">1 3/4</span>, or decimals like <span class="mono">1.75</span> are fine. Don't type the units, $ signs, or % signs, and you may use spaces or commas in big numbers (1 000 000). Stuck? Press <strong>Hint</strong>. After 2 tries, you can see a full solution.</p>
+
+<div id="questions"></div>
+<div class="box" id="final"></div>
+<div id="scoreBox">
+  <span id="scoreText">Score: 0 / 15 correct</span>
+  <button id="finishBtn" type="button">I'm done! Show my final score</button>
+</div>
+</div>
+
+<script>
+var NAME = "Ace";
+var GRAPH = '<div style="margin:10px 0"><svg viewBox="0 0 320 175" width="100%" style="max-width:480px;background:#fff;border-radius:12px" role="img" aria-label="Bar chart of bean plant height after three weeks: 4 hours of light per day gives 6 cm, 8 hours gives 11 cm, 12 hours gives 17 cm, 16 hours gives 18 cm."><line x1="40" y1="150" x2="300" y2="150" stroke="#37474f" stroke-width="2"/><rect x="60" y="114.0" width="40" height="36.0" fill="#81c784" stroke="#388e3c"/><text x="80" y="109.0" font-size="11" text-anchor="middle" fill="#1b5e20">6 cm</text><text x="80" y="165" font-size="10" text-anchor="middle" fill="#455a64">4 h light</text><rect x="122" y="84.0" width="40" height="66.0" fill="#81c784" stroke="#388e3c"/><text x="142" y="79.0" font-size="11" text-anchor="middle" fill="#1b5e20">11 cm</text><text x="142" y="165" font-size="10" text-anchor="middle" fill="#455a64">8 h light</text><rect x="184" y="48.0" width="40" height="102.0" fill="#81c784" stroke="#388e3c"/><text x="204" y="43.0" font-size="11" text-anchor="middle" fill="#1b5e20">17 cm</text><text x="204" y="165" font-size="10" text-anchor="middle" fill="#455a64">12 h light</text><rect x="246" y="42.0" width="40" height="108.0" fill="#81c784" stroke="#388e3c"/><text x="266" y="37.0" font-size="11" text-anchor="middle" fill="#1b5e20">18 cm</text><text x="266" y="165" font-size="10" text-anchor="middle" fill="#455a64">16 h light</text></svg></div>';
+var TABLE = '<table style="border-collapse:collapse;margin:10px 0;font-size:.95em;background:#fff"><caption style="font-weight:bold;text-align:left;padding-bottom:4px">Ace&rsquo;s seed germination trays</caption><tr><th style="border:1px solid #bdbdbd;padding:4px 10px;background:#e8f5e9">Tray</th><th style="border:1px solid #bdbdbd;padding:4px 10px;background:#e8f5e9">Seeds planted</th><th style="border:1px solid #bdbdbd;padding:4px 10px;background:#e8f5e9">Seeds that sprouted</th></tr><tr><td style="border:1px solid #bdbdbd;padding:4px 10px;font-family:monospace">A</td><td style="border:1px solid #bdbdbd;padding:4px 10px;font-family:monospace">40</td><td style="border:1px solid #bdbdbd;padding:4px 10px;font-family:monospace">34</td></tr><tr><td style="border:1px solid #bdbdbd;padding:4px 10px;font-family:monospace">B</td><td style="border:1px solid #bdbdbd;padding:4px 10px;font-family:monospace">50</td><td style="border:1px solid #bdbdbd;padding:4px 10px;font-family:monospace">36</td></tr><tr><td style="border:1px solid #bdbdbd;padding:4px 10px;font-family:monospace">C</td><td style="border:1px solid #bdbdbd;padding:4px 10px;font-family:monospace">25</td><td style="border:1px solid #bdbdbd;padding:4px 10px;font-family:monospace">22</td></tr></table>';
+var QUESTIONS = [
+ {t:"The photosynthesis equation is <strong>6 CO₂ + 6 H₂O → C₆H₁₂O₆ + 6 O₂</strong>. Count all the <strong>oxygen (O) atoms</strong> on the <strong>right side</strong> of the arrow (in the glucose <em>and</em> the oxygen gas). How many are there?", a:"18", u:"atoms",
+  h:["Glucose, C₆H₁₂O₆, has 6 oxygen atoms.","6 O₂ means 6 molecules with 2 oxygen atoms each: 6 × 2 = 12. Add them."],
+  s:"Glucose has 6 O atoms and 6 O₂ has 6 × 2 = 12. Total = 18. Check the left side: 6 CO₂ has 12 O and 6 H₂O has 6 O, also 18. Balanced! ✔"},
+ {t:"A Douglas fir seedling is planted when it is <strong>0.3 m</strong> tall. It grows about <strong>45 cm</strong> every year. How tall is it after <strong>12 years</strong>, in <strong>metres</strong>?", a:"5.7", u:"m",
+  h:["Convert 45 cm to metres first: 0.45 m.","0.3 + 0.45 × 12 = ?"],
+  s:"0.45 × 12 = 5.4 m of growth. 0.3 + 5.4 = 5.7 m."},
+ {t:"On a sunny afternoon in a BC forest, a <strong>1.2 m</strong> post casts a shadow <strong>0.8 m</strong> long. At the same moment, a giant Sitka spruce casts a shadow <strong>46 m</strong> long. How tall is the spruce, in <strong>metres</strong>?", a:"69", u:"m",
+  h:["Height ÷ shadow is the same for both: 1.2 ÷ 0.8 = 1.5.","The tree is 1.5 times as tall as its shadow: 46 × 1.5."],
+  s:"1.2 ÷ 0.8 = 1.5, so every object is 1.5 × its shadow. 46 × 1.5 = 69 m tall."},
+ {t:"A western redcedar stump has a <strong>radius of 60 cm</strong>. Its growth rings are, on average, <strong>2.5 mm</strong> wide. About how many <strong>years old</strong> was the tree?", a:"240", u:"years",
+  h:["Make the units match: 60 cm = 600 mm.","600 ÷ 2.5 = ?"],
+  s:"60 cm = 600 mm. 600 ÷ 2.5 = 240 rings, so about 240 years old."},
+ {t:"Ace wraps a tape measure around a huge cedar trunk. The <strong>circumference</strong> is <strong>12.56 m</strong>. Using <strong>π ≈ 3.14</strong>, what is the trunk's <strong>diameter</strong>, in <strong>metres</strong>?", a:"4", u:"m",
+  h:["C = π × d, so d = C ÷ π.","12.56 ÷ 3.14 = ?"],
+  s:"d = 12.56 ÷ 3.14 = 4 m. That's wider than most cars are long!"},
+ {t:"Ace weighs a fresh maple leaf: <strong>25 g</strong>. After drying it completely in the sun, it weighs <strong>6 g</strong>. The lost mass was water. What <strong>percent</strong> of the fresh leaf was <strong>water</strong>?", a:"76", u:"%",
+  h:["Water lost = 25 − 6 = 19 g.","19 ÷ 25 × 100 = ?"],
+  s:"19 ÷ 25 = 0.76 = 76% water. Leaves are mostly water!"},
+ {t:"A healthy tree absorbs about <strong>22 kg</strong> of carbon dioxide (CO₂) each year. A family car gives off about <strong>4.6 tonnes</strong> of CO₂ each year (1 tonne = 1000 kg). What is the <strong>smallest whole number of trees</strong> needed to absorb all of the car's CO₂ in one year?", a:"210", u:"trees",
+  h:["4.6 tonnes = 4600 kg. Divide by 22.","4600 ÷ 22 = 209.09... Will 209 trees be enough?"],
+  s:"4600 ÷ 22 ≈ 209.09. 209 trees absorb only 4598 kg, which isn't quite enough, so round UP to 210 trees."},
+ {t:"Leaves release water vapour into the air (this is called <strong>transpiration</strong>). A large tree releases about <strong>380 L</strong> of water per day. How much water does it release in <strong>30 days</strong>, in <strong>cubic metres</strong>? (1000 L = 1 m³)", a:"11.4", u:"m³",
+  h:["380 × 30 = 11 400 L.","Divide by 1000 to change litres to cubic metres."],
+  s:"380 × 30 = 11 400 L = 11 400 ÷ 1000 = 11.4 m³."},
+ {t:GRAPH+"Ace grows four bean plants with different hours of light each day. The bar graph shows their heights after three weeks. What is the <strong>mean</strong> (average) height of the four plants, in <strong>cm</strong>?", a:"13", u:"cm",
+  h:["Add all four heights: 6 + 11 + 17 + 18.","Divide the total by 4."],
+  s:"6 + 11 + 17 + 18 = 52. 52 ÷ 4 = 13 cm. (Notice: going from 12 h to 16 h of light added only 1 cm. Plants need darkness too!)"},
+ {t:TABLE+"Ace planted seeds in three trays. Find the <strong>germination rate</strong> (percent of seeds that sprouted) for each tray. What is the <strong>highest</strong> germination rate, as a <strong>percent</strong>?", a:"88", u:"%",
+  h:["Rate = sprouted ÷ planted × 100. Tray A: 34 ÷ 40.","A = 85%, B = 72%. Now try C: 22 ÷ 25."],
+  s:"A: 34 ÷ 40 = 85%. B: 36 ÷ 50 = 72%. C: 22 ÷ 25 = 88%. Tray C is best at 88%, even though Tray B had the most sprouts!"},
+ {t:"In a study plot of a coastal forest, the ratio of <strong>conifers</strong> (cone-bearing trees) to <strong>deciduous</strong> trees is <strong>7 : 2</strong>. There are <strong>360</strong> trees in the plot. How many are <strong>deciduous</strong>?", a:"80", u:"trees",
+  h:["7 + 2 = 9 parts in all.","One part = 360 ÷ 9 = 40. Deciduous trees are 2 parts."],
+  s:"360 ÷ 9 = 40 per part. Deciduous = 2 × 40 = 80 trees (and conifers = 280). Check: 80 + 280 = 360 ✔"},
+ {t:"After a wildfire, a crew replants a <strong>2.5 ha</strong> area (1 ha = 10 000 m²). They plant <strong>one seedling for every 4 m²</strong>. The crew has <strong>2 tree planters</strong>, and each plants <strong>1250 seedlings per day</strong>. How many <strong>days</strong> will the job take?", a:"2.5", u:"days",
+  h:["2.5 ha = 25 000 m². Seedlings = 25 000 ÷ 4.","6250 seedlings. The crew plants 2 × 1250 = 2500 per day."],
+  s:"2.5 × 10 000 = 25 000 m². 25 000 ÷ 4 = 6250 seedlings. 6250 ÷ 2500 = 2.5 days."},
+ {t:"<strong>Grade 7 stretch:</strong> A sunflower is <strong>20 cm</strong> tall and grows <strong>6 cm</strong> a week. A bean vine is <strong>50 cm</strong> tall and grows <strong>3 cm</strong> a week. After how many <strong>weeks</strong> will they be exactly the same height? (Hint: 20 + 6x = 50 + 3x)", a:"10", u:"weeks",
+  h:["Subtract 3x from both sides: 20 + 3x = 50.","3x = 30. What is x?"],
+  s:"20 + 6x = 50 + 3x → 3x = 30 → x = 10 weeks. Check: 20 + 60 = 80 cm and 50 + 30 = 80 cm ✔"},
+ {t:"<strong>Challenge:</strong> Duckweed, a tiny floating plant, <strong>doubles</strong> the area it covers every <strong>2 days</strong>. On <strong>day 30</strong>, it covers the whole pond. On what <strong>day</strong> was the pond <strong>half</strong> covered?", a:"28", u:"day",
+  h:["Don't divide 30 by 2! Think backward.","It doubles every 2 days, so 2 days before full, it was half."],
+  s:"Since it doubles every 2 days, it was half-covered 2 days earlier: day 30 − 2 = day 28. (Answering 15 is the trap!)"},
+ {t:"Some kinds of giant bamboo can grow <strong>91 cm in one day</strong>. What is that growth rate in <strong>millimetres per hour</strong>? Round to <strong>one decimal place</strong>.", a:"37.9", u:"mm per hour",
+  h:["91 cm = 910 mm.","910 ÷ 24 = 37.916..."],
+  s:"91 cm = 910 mm. 910 ÷ 24 ≈ 37.92, which rounds to 37.9 mm per hour. You could almost watch it grow!"}
+];
+
+var PRAISE = ["Nice work, Ace!","Correct! Botanist level! 🌿","Yes! Rainforest scientist Ace!","Excellent, Ace. That was a tough one!","Right on target! 🎯","Brilliant thinking, Ace!","Growing strong! 🌲"];
+var ENCOURAGE = ["Not quite. Check your steps and try again!","Close call. Try again, Ace! Maybe use a hint?","Hmm, not yet. Re-read the question carefully.","Keep going, Ace. Mistakes help your brain grow!"];
+
+function parseAnswer(str){
+  if(str===undefined||str===null) return NaN;
+  var s=String(str).trim().toLowerCase();
+  s=s.replace(/[\u2212\u2013]/g,"-");
+  s=s.replace(/(\d),(?=\d{3}(\D|$))/g,"$1");
+  s=s.replace(/[^0-9.\/\- ]/g," ").replace(/\s+/g," ").trim();
+  s=s.replace(/\s*\/\s*/g,"/");
+  var m;
+  if((m=s.match(/^(-?\d+) (\d+)\/(\d+)$/))){ var w=parseFloat(m[1]),n=parseFloat(m[2]),d=parseFloat(m[3]); if(d===0)return NaN; return w<0? w-n/d : w+n/d; }
+  if((m=s.match(/^(-?\d+(?:\.\d+)?)\/(\d+(?:\.\d+)?)$/))){ var d2=parseFloat(m[2]); if(d2===0)return NaN; return parseFloat(m[1])/d2; }
+  s=s.replace(/ /g,"");
+  if(/^-?(\d+\.?\d*|\.\d+)$/.test(s)) return parseFloat(s);
+  return NaN;
+}
+function isCorrect(input,key){
+  var a=parseAnswer(input), k=parseAnswer(key);
+  if(isNaN(a)) return false;
+  var isInt=Math.abs(k-Math.round(k))<1e-12;
+  var tol=isInt?1e-9:0.005;
+  return Math.abs(a-k)<=tol;
+}
+
+function isRomanCorrect(input,key){ return String(input).replace(/\s+/g,"").toUpperCase()===key; }
+var state=[];
+function render(){
+  var box=document.getElementById("questions");
+  QUESTIONS.forEach(function(q,i){
+    state.push({correct:false,tries:0,hints:0});
+    var d=document.createElement("div");
+    d.className="box q"; d.id="q"+i;
+    d.innerHTML='<div><span class="qnum">'+(i+1)+'.</span> '+q.t+'</div>'+
+      '<div class="row"><input type="text"'+(q.r?' placeholder="e.g. MMXXVI"':'')+' id="in'+i+'" aria-label="Answer to question '+(i+1)+'" autocomplete="off"> <span class="unit">'+q.u+'</span>'+
+      '<button type="button" class="check" data-i="'+i+'">Check</button>'+
+      '<button type="button" class="hint" data-i="'+i+'">Hint 💡</button>'+
+      '<button type="button" class="sol" data-i="'+i+'" style="display:none">Show solution</button></div>'+
+      '<div class="fb" id="fb'+i+'"></div><div class="hints" id="hints'+i+'"></div>'+
+      '<div class="solution" id="sol'+i+'"><strong>Solution:</strong> '+q.s+'</div>';
+    box.appendChild(d);
+  });
+  box.addEventListener("click",function(e){
+    var b=e.target; if(b.tagName!=="BUTTON")return;
+    var i=+b.getAttribute("data-i");
+    if(b.className==="check") check(i);
+    else if(b.className==="hint") hint(i);
+    else if(b.className==="sol") document.getElementById("sol"+i).style.display="block";
+  });
+  box.addEventListener("keydown",function(e){
+    if(e.key==="Enter"&&e.target.tagName==="INPUT"){ check(+e.target.id.slice(2)); }
+  });
+}
+function pick(arr){return arr[Math.floor(Math.random()*arr.length)];}
+function check(i){
+  var val=document.getElementById("in"+i).value;
+  var fb=document.getElementById("fb"+i), card=document.getElementById("q"+i);
+  if(val.trim()===""){fb.className="fb bad";fb.textContent="Type an answer first, Ace!";return;}
+  var isR=!!QUESTIONS[i].r;
+  if(isR&&!/^[ivxlcdm\s]+$/i.test(val)){fb.className="fb bad";fb.textContent="Use only Roman numeral letters: I, V, X, L, C, D, M.";return;}
+  if(!isR&&isNaN(parseAnswer(val))){fb.className="fb bad";fb.textContent="I can't read that as a number. Try something like 42, 3.5, 3/4 or 1 3/4.";return;}
+  state[i].tries++;
+  if(isR?isRomanCorrect(val,QUESTIONS[i].a):isCorrect(val,QUESTIONS[i].a)){
+    state[i].correct=true; card.className="box q right"; fb.className="fb good";
+    fb.textContent="✅ "+pick(PRAISE)+(state[i].tries===1?" (first try!)":"");
+  } else {
+    state[i].correct=false; card.className="box q wrong"; fb.className="fb bad";
+    fb.textContent="❌ "+pick(ENCOURAGE);
+    if(state[i].tries>=2) card.querySelector(".sol").style.display="inline-block";
+  }
+  updateScore();
+}
+function hint(i){
+  var q=QUESTIONS[i], s=state[i], hb=document.getElementById("hints"+i);
+  if(s.hints<q.h.length){
+    var p=document.createElement("p"); p.textContent="💡 Hint "+(s.hints+1)+": "+q.h[s.hints]; hb.appendChild(p); s.hints++;
+  }
+  if(s.hints>=q.h.length) document.querySelector("#q"+i+" .hint").disabled=true;
+  updateScore();
+}
+function counts(){
+  var c=0,first=0,h=0;
+  state.forEach(function(s){ if(s.correct){c++; if(s.tries===1)first++;} h+=s.hints; });
+  return {correct:c,first:first,hints:h};
+}
+function updateScore(){
+  var k=counts();
+  document.getElementById("scoreText").textContent="Score: "+k.correct+" / "+QUESTIONS.length+" correct · hints used: "+k.hints;
+}
+function finish(){
+  var k=counts(), n=QUESTIONS.length, pct=Math.round(100*k.correct/n);
+  var msg;
+  if(pct===100) msg="🏆 PERFECT SCORE! Incredible work, Ace. A real botanist would be impressed!";
+  else if(pct>=85) msg="🌟 Outstanding, Ace! That's a Grade 6-7 level performance!";
+  else if(pct>=65) msg="💪 Great effort, Ace! Review the ones you missed and try them again.";
+  else if(pct>=40) msg="👍 Good start, Ace! These problems are tough. Use the hints and solutions to learn the tricks, then try again.";
+  else msg="🌱 These are challenge problems, well above grade level. Every great scientist started as a beginner! Go through the worked examples and try again, Ace!";
+  var f=document.getElementById("final");
+  f.style.display="block";
+  f.innerHTML="<h2 style='border:none;margin-top:0'>Final Score: "+k.correct+" / "+n+" ("+pct+"%)</h2>"+
+    "<p>Correct on the first try: "+k.first+" · Hints used: "+k.hints+"</p><p>"+msg+"</p>"+
+    "<p style='font-size:.85em;color:#546e7a'>Finished on "+new Date().toLocaleString("en-CA")+"</p>";
+  f.scrollIntoView({behavior:"smooth"});
+}
+render();
+updateScore();
+document.getElementById("finishBtn").addEventListener("click",finish);
+</script>
+<script src="../../assets/autosave.js"></script>
+</body>
+</html>
