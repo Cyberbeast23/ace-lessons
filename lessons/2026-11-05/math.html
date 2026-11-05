@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Math (Nov. 5): Windows on the World: Eye Doctor's Math Lab</title>
+<style>
+  body{font-family:"Segoe UI",Verdana,Arial,sans-serif;font-size:20px;line-height:1.6;margin:0;background:#f5f0eb;color:#2c2416}
+  .wrap{max-width:880px;margin:0 auto;padding:20px 18px 80px}
+  a.home{font-size:.9em;color:#bf360c}
+  h1{color:#e65100;font-size:2em;margin:10px 0}
+  h2{color:#ef6c00;margin-top:36px;border-bottom:3px solid #ffcc80;padding-bottom:4px}
+  .box{background:#fff;border-radius:16px;padding:18px 22px;margin:16px 0;box-shadow:0 3px 10px rgba(0,0,0,.07)}
+  .example{border-left:8px solid #ef6c00}
+  .example h3{margin:0 0 6px;color:#e65100}
+  .step{margin:4px 0 4px 10px}
+  code,.mono{font-family:Consolas,"Courier New",monospace;background:#fff3e0;padding:1px 6px;border-radius:5px}
+  .q{border-left:8px solid #90a4ae}
+  .q.right{border-left-color:#43a047;background:#f1f8e9}
+  .q.wrong{border-left-color:#e53935;background:#fff5f5}
+  .qnum{font-weight:bold;color:#e65100}
+  .row{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:10px}
+  input[type=text]{font-size:1.05em;padding:8px 12px;border:2px solid #ffcc80;border-radius:10px;width:190px}
+  input[type=text]:focus{outline:none;border-color:#ef6c00;box-shadow:0 0 0 3px #ffe0b2}
+  button{font-size:.95em;padding:8px 16px;border:none;border-radius:10px;cursor:pointer;font-weight:bold}
+  .check{background:#ef6c00;color:#fff} .check:hover{background:#e65100}
+  .hint{background:#ffe082;color:#5d4037} .hint:hover{background:#ffd54f}
+  .sol{background:#ce93d8;color:#311b92}
+  .unit{color:#546e7a}
+  .fb{margin-top:8px;font-weight:bold;min-height:1em}
+  .fb.good{color:#2e7d32} .fb.bad{color:#c62828}
+  .hints{margin-top:8px;color:#e65100;background:#fff3e0;border-radius:10px;padding:0 12px}
+  .hints p{margin:6px 0;padding:6px 0}
+  .solution{margin-top:8px;background:#f3e5f5;border-radius:10px;padding:8px 12px;display:none}
+  #scoreBox{position:sticky;bottom:0;background:#e65100;color:#fff;border-radius:16px 16px 0 0;padding:12px 20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-top:30px}
+  #scoreBox button{background:#ffca28;color:#3e2723}
+  #final{display:none;font-size:1.15em;text-align:center;border:4px solid #43a047}
+  .tipbox{background:#fff8e1;border-left:8px solid #ffb300}
+</style>
+</head>
+<body>
+<div class="wrap">
+<a class="home" href="../../index.html">&larr; Back to all lessons</a>
+<h1>👁️ Math Week 39: Windows on the World: Eye Doctor's Math Lab</h1>
+<p>Ace, your eyes are working right now, reading these words! Eye doctors (called <strong>optometrists</strong>) use math every single day: <strong>fractions</strong> describe how sharp your vision is, the <strong>area of a circle</strong> tells how much light gets through your pupil, lenses are measured in <strong>diopters</strong> (a reciprocal!), and health researchers use <strong>ratios, percents and averages</strong> to study eyes. Today you are an eye doctor at the imaginary <strong>Clearview Eye Clinic</strong>, using <strong>rates and unit conversions, decimal fractions, circle area with π, scale factors and area, discounts plus tax, reciprocals with negative numbers, fractions of a number, the mean from a table, percent increase from a graph, two-step equations, ratio parts, very large numbers, and the path of light in a mirror</strong>.</p>
+
+<h2>Part 1: Learn the Moves</h2>
+
+<div class="box tipbox">
+  <strong>The 4-Step Problem Solver (your eye doctor's checklist):</strong>
+  <ol>
+    <li><strong>Read</strong>: What is the question actually asking? Underline the numbers and units (mm, cm, m, km, s, min, h, $, %).</li>
+    <li><strong>Plan</strong>: Do the units match? Change seconds to minutes or metres to centimetres <em>before</em> you answer.</li>
+    <li><strong>Solve</strong>: Do one step at a time and write each step down.</li>
+    <li><strong>Check</strong>: Is my answer reasonable? A pupil might be 5 mm wide, but not 5 m wide!</li>
+  </ol>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 1: Vision fractions</h3>
+  <p class="step">In Canada, eye charts are often read from <strong>6 metres</strong>. Perfect "normal" vision is written <strong>6/6</strong>. If your vision is <strong>6/12</strong>, it means: what <em>you</em> can read at 6 m, a person with normal vision could read from 12 m away.</p>
+  <p class="step">As a decimal, 6/12 = 6 ÷ 12 = <strong>0.5</strong>. The smaller the decimal, the blurrier the vision. (In the United States, 6/6 is called "20/20," using feet.)</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 2: Area of a circle</h3>
+  <p class="step">The <strong>pupil</strong> (the black opening in the middle of your eye) is a circle. <strong>Area = π × r × r</strong>, where r is the radius (half the diameter). We'll use <strong>π ≈ 3.14</strong>.</p>
+  <p class="step">A pupil 4 mm across has r = 2 mm: area = 3.14 × 2 × 2 = <strong>12.56 mm²</strong>.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 3: Scale factor and area (Grade 7 idea!)</h3>
+  <p class="step">If you make a circle's diameter <strong>k times</strong> bigger, its area becomes <strong>k × k times</strong> bigger, because both the length and the width grow.</p>
+  <p class="step">A pupil that widens from 3 mm to 6 mm is 2 times as wide, so it lets in 2 × 2 = <strong>4 times</strong> as much light.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 4: Lens power in diopters</h3>
+  <p class="step">Eye doctors measure lenses in <strong>diopters (D)</strong>. <strong>Power = 1 ÷ focal length in metres.</strong> A <em>focal length</em> is how far from the lens the light comes into focus.</p>
+  <p class="step">A lens with focal length 0.5 m: 1 ÷ 0.5 = <strong>+2 D</strong>. Lenses for <strong>nearsighted</strong> people spread light out, so their focal length and power are <strong>negative</strong>: 1 ÷ (−0.25) = <strong>−4 D</strong>. Going backwards: focal length = 1 ÷ power.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 5: Discount on part of a bill, then tax</h3>
+  <p class="step">If a discount is only on <em>one item</em>, take it off that item, add the other items, and <em>then</em> add the tax to the new total.</p>
+  <p class="step">Frames $100 at 20% off = $80. Add $50 lenses = $130. Add 5% GST: 130 × 1.05 = <strong>$136.50</strong>.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 6: Ratio parts</h3>
+  <p class="step">If two things are in the ratio <strong>3 : 1</strong>, think of it as <strong>3 + 1 = 4 equal parts</strong>. Divide the total by the number of parts to find one part.</p>
+  <p class="step">80 marbles in the ratio blue : red = 3 : 1. One part = 80 ÷ 4 = 20, so there are <strong>20 red</strong> and 60 blue.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 7: Percent increase</h3>
+  <p class="step"><strong>Percent increase = (new − old) ÷ old × 100.</strong> Always divide by the <em>starting</em> amount.</p>
+  <p class="step">From 5 to 8: (8 − 5) ÷ 5 × 100 = 3 ÷ 5 × 100 = <strong>60%</strong> increase. An increase can be more than 100%: from 2 to 6 is a 200% increase.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 8: Two-step equations</h3>
+  <p class="step">An eye exam costs $40, plus $10 for each pair of contact lens samples. A bill of $90: 40 + 10p = 90 → 10p = 50 → <strong>p = 5</strong>. Undo the adding first, then undo the multiplying.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 9: Time = distance ÷ speed (with huge numbers)</h3>
+  <p class="step">Light is the fastest thing in the universe: about <strong>300 000 km every second</strong>. Time = distance ÷ speed. Cross off the same number of zeros from both numbers to make dividing easier.</p>
+  <p class="step">The Moon is about 384 000 km away: 384 000 ÷ 300 000 = <strong>1.28 seconds</strong> for moonlight to reach your eyes.</p>
+</div>
+
+<h2>Part 2: The Challenge (15 problems)</h2>
+<p>Type your answer and press <strong>Check</strong> (or Enter). Fractions like <span class="mono">3/4</span>, mixed numbers like <span class="mono">1 3/4</span>, or decimals like <span class="mono">1.75</span> are fine. Don't type the units, $ signs, or % signs, and you may use spaces or commas in big numbers (1 000 000). Stuck? Press <strong>Hint</strong>. After 2 tries, you can see a full solution.</p>
+
+<div id="questions"></div>
+<div class="box" id="final"></div>
+<div id="scoreBox">
+  <span id="scoreText">Score: 0 / 15 correct</span>
+  <button id="finishBtn" type="button">I'm done! Show my final score</button>
+</div>
+</div>
+
+<script>
+var NAME = "Ace";
+var GRAPH = '<div style="margin:10px 0"><svg viewBox="0 0 320 175" width="100%" style="max-width:480px;background:#fff;border-radius:12px" role="img" aria-label="Bar chart of students who wear glasses in one class per grade: Grade 3 has 4, Grade 4 has 6, Grade 5 has 9, Grade 6 has 11."><text x="170" y="14" font-size="11" text-anchor="middle" fill="#263238" font-weight="bold">Students who wear glasses (one class per grade)</text><line x1="40" y1="150" x2="300" y2="150" stroke="#37474f" stroke-width="2"/><rect x="60" y="110.0" width="40" height="40.0" fill="#81c784" stroke="#2e7d32"/><text x="80" y="105.0" font-size="11" text-anchor="middle" fill="#263238">4</text><text x="80" y="165" font-size="10" text-anchor="middle" fill="#455a64">Grade 3</text><rect x="122" y="90.0" width="40" height="60.0" fill="#81c784" stroke="#2e7d32"/><text x="142" y="85.0" font-size="11" text-anchor="middle" fill="#263238">6</text><text x="142" y="165" font-size="10" text-anchor="middle" fill="#455a64">Grade 4</text><rect x="184" y="60.0" width="40" height="90.0" fill="#81c784" stroke="#2e7d32"/><text x="204" y="55.0" font-size="11" text-anchor="middle" fill="#263238">9</text><text x="204" y="165" font-size="10" text-anchor="middle" fill="#455a64">Grade 5</text><rect x="246" y="40.0" width="40" height="110.0" fill="#81c784" stroke="#2e7d32"/><text x="266" y="35.0" font-size="11" text-anchor="middle" fill="#263238">11</text><text x="266" y="165" font-size="10" text-anchor="middle" fill="#455a64">Grade 6</text></svg></div>';
+var TABLE = '<table style="border-collapse:collapse;margin:10px 0;font-size:.95em;background:#fff"><caption style="font-weight:bold;text-align:left;padding-bottom:4px">Ace&#8217;s screen time log (one school week)</caption><tr><th style="border:1px solid #bdbdbd;padding:4px 10px;background:#eceff1">Day</th><th style="border:1px solid #bdbdbd;padding:4px 10px;background:#eceff1">Minutes on screens</th></tr><tr><td style="border:1px solid #bdbdbd;padding:4px 10px;font-family:monospace">Monday</td><td style="border:1px solid #bdbdbd;padding:4px 10px;font-family:monospace">150</td></tr><tr><td style="border:1px solid #bdbdbd;padding:4px 10px;font-family:monospace">Tuesday</td><td style="border:1px solid #bdbdbd;padding:4px 10px;font-family:monospace">180</td></tr><tr><td style="border:1px solid #bdbdbd;padding:4px 10px;font-family:monospace">Wednesday</td><td style="border:1px solid #bdbdbd;padding:4px 10px;font-family:monospace">100</td></tr><tr><td style="border:1px solid #bdbdbd;padding:4px 10px;font-family:monospace">Thursday</td><td style="border:1px solid #bdbdbd;padding:4px 10px;font-family:monospace">120</td></tr><tr><td style="border:1px solid #bdbdbd;padding:4px 10px;font-family:monospace">Friday</td><td style="border:1px solid #bdbdbd;padding:4px 10px;font-family:monospace">250</td></tr></table>';
+var QUESTIONS = [
+ {t:"A person blinks about <strong>15 times per minute</strong>. Ace is awake for <strong>16 hours</strong> a day. About how many times does he <strong>blink in one day</strong>?", a:"14400", u:"blinks",
+  h:["First find blinks per hour: 15 × 60.","900 blinks per hour × 16 hours = ?"],
+  s:"15 × 60 = 900 blinks per hour. 900 × 16 = 14 400 blinks a day!"},
+ {t:"Each blink keeps Ace's eyes closed for about <strong>0.3 seconds</strong>. Using your answer to question 1 (<strong>14 400 blinks</strong>), how many <strong>minutes</strong> a day are his eyes closed from blinking?", a:"72", u:"minutes",
+  h:["Total seconds = 14 400 × 0.3.","4320 seconds ÷ 60 = ? minutes"],
+  s:"14 400 × 0.3 = 4320 seconds. 4320 ÷ 60 = 72 minutes. That's more than an hour of blinking every day!"},
+ {t:"At Clearview Eye Clinic, a patient's vision is measured as <strong>6/24</strong>. Write this vision fraction as a <strong>decimal</strong>.", a:"0.25", u:"",
+  h:["A fraction is a division: 6 ÷ 24.","6/24 simplifies to 1/4."],
+  s:"6 ÷ 24 = 0.25 (or 6/24 = 1/4 = 0.25). This patient sees at 6 m what a person with normal vision sees from 24 m away, so glasses would really help!"},
+ {t:"In dim light, Ace's pupil has a <strong>diameter of 6 mm</strong>. Using <strong>π ≈ 3.14</strong>, what is the <strong>area</strong> of the pupil, in <strong>mm²</strong>?", a:"28.26", u:"mm²",
+  h:["The radius is half the diameter: r = 3 mm.","Area = 3.14 × 3 × 3."],
+  s:"r = 6 ÷ 2 = 3 mm. Area = 3.14 × 3 × 3 = 3.14 × 9 = 28.26 mm²."},
+ {t:"<strong>Grade 7 stretch:</strong> In bright sunshine a pupil can shrink to <strong>2 mm</strong> across. In a dark room it can open to <strong>8 mm</strong> across. How many <strong>times as much light</strong> can the wide-open pupil let in? (Hint: light let in depends on the <em>area</em>.)", a:"16", u:"times",
+  h:["The diameter grows by a scale factor of 8 ÷ 2 = 4.","Area grows by the scale factor times itself: 4 × 4."],
+  s:"8 ÷ 2 = 4 times as wide, so the area is 4 × 4 = 16 times as big. (Check: area at 2 mm = 3.14 mm², area at 8 mm = 50.24 mm², and 50.24 ÷ 3.14 = 16 ✔)"},
+ {t:"Ace's dad picks out new glasses: frames cost <strong>$180</strong> and lenses cost <strong>$240</strong>. The frames are <strong>30% off</strong> (the lenses are not on sale). Then <strong>5% GST</strong> is added to the total. What is the final price, in <strong>dollars</strong>?", a:"384.3", u:"$",
+  h:["30% off means you pay 70% of the frames: 180 × 0.7 = $126.","$126 + $240 = $366. Now multiply by 1.05."],
+  s:"180 × 0.7 = $126. 126 + 240 = $366. 366 × 1.05 = $384.30."},
+ {t:"A nearsighted patient needs a lens with a focal length of <strong>−0.4 m</strong> (negative, because the lens spreads light out). What is the lens power in <strong>diopters</strong>? (Power = 1 ÷ focal length in metres.)", a:"-2.5", u:"D",
+  h:["Power = 1 ÷ (−0.4).","1 ÷ 0.4 = 2.5. A positive divided by a negative is negative."],
+  s:"1 ÷ (−0.4) = −2.5 D. You'll see numbers like −2.50 written on real glasses prescriptions!"},
+ {t:"Grandma's reading glasses have a power of <strong>+2.5 diopters</strong>. What is the focal length of the lens, in <strong>centimetres</strong>?", a:"40", u:"cm",
+  h:["Focal length (in metres) = 1 ÷ power = 1 ÷ 2.5.","0.4 m × 100 = ? cm"],
+  s:"1 ÷ 2.5 = 0.4 m. 0.4 × 100 = 40 cm."},
+ {t:"Ace's school has <strong>360 students</strong>. <strong>3/8</strong> of them wear glasses or contact lenses. Of those students, <strong>40%</strong> wear contact lenses. How many students wear <strong>contact lenses</strong>?", a:"54", u:"students",
+  h:["First find 3/8 of 360: 360 ÷ 8 × 3.","135 students × 0.4 = ?"],
+  s:"360 ÷ 8 = 45, and 45 × 3 = 135 students wear glasses or contacts. 40% of 135 = 135 × 0.4 = 54 students."},
+ {t:TABLE+"Eye doctors suggest the <strong>20-20-20 rule</strong>: every <strong>20 minutes</strong> of screen time, look at something 20 feet (about 6 m) away for 20 seconds. Find Ace's <strong>mean</strong> screen time per day. How many <strong>20-20-20 breaks</strong> should he take on a day with that mean amount?", a:"8", u:"breaks",
+  h:["Mean = (150 + 180 + 100 + 120 + 250) ÷ 5.","Mean = 160 minutes. Now 160 ÷ 20."],
+  s:"150 + 180 + 100 + 120 + 250 = 800. 800 ÷ 5 = 160 minutes. 160 ÷ 20 = 8 breaks."},
+ {t:GRAPH+"The bar graph shows how many students in one class of each grade wear glasses. What is the <strong>percent increase</strong> from <strong>Grade 3</strong> to <strong>Grade 6</strong>?", a:"175", u:"%",
+  h:["Grade 3 = 4 students, Grade 6 = 11 students. The increase is 11 − 4 = 7.","Percent increase = 7 ÷ 4 × 100 (divide by the starting amount!)."],
+  s:"11 − 4 = 7. 7 ÷ 4 = 1.75. 1.75 × 100 = 175% increase. (Many people become more nearsighted as they grow, which is why eye checkups matter!)"},
+ {t:"Clearview Eye Clinic charges <strong>$35</strong> for a contact lens fitting plus <strong>$12 per box</strong> of lenses. A family paid <strong>$107</strong>. Solve 35 + 12b = 107 to find how many <strong>boxes</strong> they bought.", a:"6", u:"boxes",
+  h:["Undo the + 35 first: 12b = 72.","72 ÷ 12 = ?"],
+  s:"35 + 12b = 107 → 12b = 72 → b = 6 boxes. Check: 35 + 12 × 6 = 35 + 72 = 107 ✔"},
+ {t:"Your retina has two kinds of light-sensing cells: <strong>rods</strong> (for dim light) and <strong>cones</strong> (for colour). In one area of the retina, rods and cones are in the ratio <strong>20 : 1</strong>. If that area has <strong>4200</strong> cells in total, how many are <strong>cones</strong>?", a:"200", u:"cones",
+  h:["20 : 1 means 20 + 1 = 21 equal parts.","One part = 4200 ÷ 21."],
+  s:"20 + 1 = 21 parts. 4200 ÷ 21 = 200. Cones = 1 part = 200 (and rods = 20 × 200 = 4000). Check: 4000 + 200 = 4200 ✔"},
+ {t:"Light travels about <strong>300 000 km per second</strong>. The Sun is about <strong>150 000 000 km</strong> from Earth. How many <strong>seconds</strong> does sunlight take to reach your eyes?", a:"500", u:"seconds",
+  h:["Time = distance ÷ speed = 150 000 000 ÷ 300 000.","Cross off five zeros from each: 1500 ÷ 3."],
+  s:"150 000 000 ÷ 300 000 = 1500 ÷ 3 = 500 seconds (8 minutes 20 seconds). The sunlight you see left the Sun over 8 minutes ago!"},
+ {t:"<strong>Challenge:</strong> Clearview's exam room is too short for a 6 m eye chart, so the doctor uses a mirror. The chart hangs on the wall <strong>0.5 m behind Ace's head</strong>, and the mirror is on the wall <strong>3 m in front of Ace</strong>. Light travels from the chart to the mirror, then bounces back to Ace's eyes. How far, in <strong>metres</strong>, does the light travel from the chart to his eyes?", a:"6.5", u:"m",
+  h:["Chart to mirror: the chart is 0.5 m behind Ace, and the mirror is 3 m in front, so 0.5 + 3 = 3.5 m.","Then the light bounces back from the mirror to Ace's eyes: another 3 m."],
+  s:"Chart to mirror = 0.5 + 3 = 3.5 m. Mirror back to Ace = 3 m. Total = 3.5 + 3 = 6.5 m. The mirror lets a short room act like a long one (the doctor would move the chair a little to make it exactly 6 m)!"}
+];
+
+var PRAISE = ["Nice work, Ace!","Correct! Eye doctor level! 👁️","Yes! Sharp-eyed Ace!","Excellent, Ace. That was a tough one!","Right on target! 🎯","Brilliant thinking, Ace!","Crystal clear! 👓"];
+var ENCOURAGE = ["Not quite. Check your steps and try again!","Close call. Try again, Ace! Maybe use a hint?","Hmm, not yet. Re-read the question carefully.","Keep going, Ace. Mistakes help your brain grow!"];
+
+function parseAnswer(str){
+  if(str===undefined||str===null) return NaN;
+  var s=String(str).trim().toLowerCase();
+  s=s.replace(/[\u2212\u2013]/g,"-");
+  s=s.replace(/(\d),(?=\d{3}(\D|$))/g,"$1");
+  s=s.replace(/[^0-9.\/\- ]/g," ").replace(/\s+/g," ").trim();
+  s=s.replace(/\s*\/\s*/g,"/");
+  var m;
+  if((m=s.match(/^(-?\d+) (\d+)\/(\d+)$/))){ var w=parseFloat(m[1]),n=parseFloat(m[2]),d=parseFloat(m[3]); if(d===0)return NaN; return w<0? w-n/d : w+n/d; }
+  if((m=s.match(/^(-?\d+(?:\.\d+)?)\/(\d+(?:\.\d+)?)$/))){ var d2=parseFloat(m[2]); if(d2===0)return NaN; return parseFloat(m[1])/d2; }
+  s=s.replace(/ /g,"");
+  if(/^-?(\d+\.?\d*|\.\d+)$/.test(s)) return parseFloat(s);
+  return NaN;
+}
+function isCorrect(input,key){
+  var a=parseAnswer(input), k=parseAnswer(key);
+  if(isNaN(a)) return false;
+  var isInt=Math.abs(k-Math.round(k))<1e-12;
+  var tol=isInt?1e-9:0.005;
+  return Math.abs(a-k)<=tol;
+}
+
+function isRomanCorrect(input,key){ return String(input).replace(/\s+/g,"").toUpperCase()===key; }
+var state=[];
+function render(){
+  var box=document.getElementById("questions");
+  QUESTIONS.forEach(function(q,i){
+    state.push({correct:false,tries:0,hints:0});
+    var d=document.createElement("div");
+    d.className="box q"; d.id="q"+i;
+    d.innerHTML='<div><span class="qnum">'+(i+1)+'.</span> '+q.t+'</div>'+
+      '<div class="row"><input type="text"'+(q.r?' placeholder="e.g. MMXXVI"':'')+' id="in'+i+'" aria-label="Answer to question '+(i+1)+'" autocomplete="off"> <span class="unit">'+q.u+'</span>'+
+      '<button type="button" class="check" data-i="'+i+'">Check</button>'+
+      '<button type="button" class="hint" data-i="'+i+'">Hint 💡</button>'+
+      '<button type="button" class="sol" data-i="'+i+'" style="display:none">Show solution</button></div>'+
+      '<div class="fb" id="fb'+i+'"></div><div class="hints" id="hints'+i+'"></div>'+
+      '<div class="solution" id="sol'+i+'"><strong>Solution:</strong> '+q.s+'</div>';
+    box.appendChild(d);
+  });
+  box.addEventListener("click",function(e){
+    var b=e.target; if(b.tagName!=="BUTTON")return;
+    var i=+b.getAttribute("data-i");
+    if(b.className==="check") check(i);
+    else if(b.className==="hint") hint(i);
+    else if(b.className==="sol") document.getElementById("sol"+i).style.display="block";
+  });
+  box.addEventListener("keydown",function(e){
+    if(e.key==="Enter"&&e.target.tagName==="INPUT"){ check(+e.target.id.slice(2)); }
+  });
+}
+function pick(arr){return arr[Math.floor(Math.random()*arr.length)];}
+function check(i){
+  var val=document.getElementById("in"+i).value;
+  var fb=document.getElementById("fb"+i), card=document.getElementById("q"+i);
+  if(val.trim()===""){fb.className="fb bad";fb.textContent="Type an answer first, Ace!";return;}
+  var isR=!!QUESTIONS[i].r;
+  if(isR&&!/^[ivxlcdm\s]+$/i.test(val)){fb.className="fb bad";fb.textContent="Use only Roman numeral letters: I, V, X, L, C, D, M.";return;}
+  if(!isR&&isNaN(parseAnswer(val))){fb.className="fb bad";fb.textContent="I can't read that as a number. Try something like 42, 3.5, 3/4 or 1 3/4.";return;}
+  state[i].tries++;
+  if(isR?isRomanCorrect(val,QUESTIONS[i].a):isCorrect(val,QUESTIONS[i].a)){
+    state[i].correct=true; card.className="box q right"; fb.className="fb good";
+    fb.textContent="✅ "+pick(PRAISE)+(state[i].tries===1?" (first try!)":"");
+  } else {
+    state[i].correct=false; card.className="box q wrong"; fb.className="fb bad";
+    fb.textContent="❌ "+pick(ENCOURAGE);
+    if(state[i].tries>=2) card.querySelector(".sol").style.display="inline-block";
+  }
+  updateScore();
+}
+function hint(i){
+  var q=QUESTIONS[i], s=state[i], hb=document.getElementById("hints"+i);
+  if(s.hints<q.h.length){
+    var p=document.createElement("p"); p.textContent="💡 Hint "+(s.hints+1)+": "+q.h[s.hints]; hb.appendChild(p); s.hints++;
+  }
+  if(s.hints>=q.h.length) document.querySelector("#q"+i+" .hint").disabled=true;
+  updateScore();
+}
+function counts(){
+  var c=0,first=0,h=0;
+  state.forEach(function(s){ if(s.correct){c++; if(s.tries===1)first++;} h+=s.hints; });
+  return {correct:c,first:first,hints:h};
+}
+function updateScore(){
+  var k=counts();
+  document.getElementById("scoreText").textContent="Score: "+k.correct+" / "+QUESTIONS.length+" correct · hints used: "+k.hints;
+}
+function finish(){
+  var k=counts(), n=QUESTIONS.length, pct=Math.round(100*k.correct/n);
+  var msg;
+  if(pct===100) msg="🏆 PERFECT SCORE! Incredible work, Ace. A real eye doctor would be impressed!";
+  else if(pct>=85) msg="🌟 Outstanding, Ace! That's a Grade 6-7 level performance!";
+  else if(pct>=65) msg="💪 Great effort, Ace! Review the ones you missed and try them again.";
+  else if(pct>=40) msg="👍 Good start, Ace! These problems are tough. Use the hints and solutions to learn the tricks, then try again.";
+  else msg="🌱 These are challenge problems, well above grade level. Every great scientist started as a beginner! Go through the worked examples and try again, Ace!";
+  var f=document.getElementById("final");
+  f.style.display="block";
+  f.innerHTML="<h2 style='border:none;margin-top:0'>Final Score: "+k.correct+" / "+n+" ("+pct+"%)</h2>"+
+    "<p>Correct on the first try: "+k.first+" · Hints used: "+k.hints+"</p><p>"+msg+"</p>"+
+    "<p style='font-size:.85em;color:#546e7a'>Finished on "+new Date().toLocaleString("en-CA")+"</p>";
+  f.scrollIntoView({behavior:"smooth"});
+}
+render();
+updateScore();
+document.getElementById("finishBtn").addEventListener("click",finish);
+</script>
+<script src="../../assets/autosave.js"></script>
+</body>
+</html>

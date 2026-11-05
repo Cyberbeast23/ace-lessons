@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Writing (Nov. 5): Advice Column (Ask Dr. Iris: Your Eye Questions Answered) + Grammar Clinic</title>
+<style>
+  body{font-family:"Segoe UI",Verdana,Arial,sans-serif;font-size:20px;line-height:1.6;margin:0;background:#fff8f0;color:#2c2416}
+  .wrap{max-width:880px;margin:0 auto;padding:20px 18px 80px}
+  a.home{font-size:.9em;color:#bf360c}
+  h1{color:#e65100;font-size:2em;margin:10px 0}
+  h2{color:#ef6c00;margin-top:36px;border-bottom:3px solid #ffcc80;padding-bottom:4px}
+  h3{color:#ef6c00}
+  .box{background:#fff;border-radius:16px;padding:18px 22px;margin:16px 0;box-shadow:0 3px 10px rgba(0,0,0,.07)}
+  .tipbox{background:#fff8e1;border-left:8px solid #ffb300}
+  .senses{display:grid;gap:8px;margin:10px 0;grid-template-columns:repeat(auto-fit,minmax(140px,1fr))}
+  .senses .side{border-radius:14px;padding:10px 16px;background:#fff3e0}
+  .ts{background:#ffcc80;border-radius:5px;padding:1px 3px}
+  .ev{background:#c8e6c9;border-radius:5px;padding:1px 3px}
+  .ex{background:#ffe0b2;border-radius:5px;padding:1px 3px}
+  .cs{background:#e1bee7;border-radius:5px;padding:1px 3px}
+  .legend span{display:inline-block;margin:4px 8px 4px 0;font-size:.85em}
+  .model{font-family:Georgia,"Times New Roman",serif;font-size:1.05em;line-height:1.9}
+  .row{padding:10px 6px;border-bottom:1px dashed #ddd}
+  .row.right{background:#f1f8e9} .row.wrong{background:#fff5f5}
+  select{font-size:.9em;padding:5px 8px;border-radius:8px;border:2px solid #ffb74d;font-family:inherit}
+  .q{border-left:8px solid #b0bec5}
+  .q.right{border-left-color:#43a047;background:#f1f8e9}
+  .q.wrong{border-left-color:#e53935;background:#fff5f5}
+  .opt{display:block;width:100%;text-align:left;font-size:.95em;background:#fafafa;border:2px solid #e0e0e0;border-radius:10px;padding:8px 14px;margin:8px 0;cursor:pointer;font-family:inherit}
+  .opt:hover{border-color:#ffb74d;background:#fff}
+  .opt.sel-right{background:#c8e6c9;border-color:#43a047}
+  .opt.sel-wrong{background:#ffcdd2;border-color:#e53935}
+  .fb{margin-top:6px;font-weight:bold}
+  .fb.good{color:#2e7d32} .fb.bad{color:#c62828}
+  .explain{font-weight:normal;color:#e65100}
+  .bad-sent{font-family:Consolas,"Courier New",monospace;background:#ffebee;padding:6px 10px;border-radius:8px;display:inline-block;margin:6px 0}
+  input.fix{width:100%;box-sizing:border-box;font-size:1em;padding:8px 12px;border:2px solid #ffb74d;border-radius:10px;font-family:inherit}
+  button{font-size:.95em;padding:8px 16px;border:none;border-radius:10px;cursor:pointer;font-weight:bold;font-family:inherit}
+  .go{background:#ef6c00;color:#fff} .go:hover{background:#e65100}
+  .hint{background:#ffe082;color:#5d4037}
+  .blue{background:#1e88e5;color:#fff}
+  .purple{background:#8e24aa;color:#fff}
+  .grey{background:#cfd8dc;color:#263238}
+  .btnrow{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px}
+  textarea{width:100%;box-sizing:border-box;min-height:300px;font-size:1.05em;line-height:1.7;font-family:Georgia,"Times New Roman",serif;padding:14px;border:3px solid #ffb74d;border-radius:12px}
+  textarea:focus{outline:none;border-color:#ef6c00}
+  .counter{display:flex;flex-wrap:wrap;gap:20px;align-items:center;margin:8px 0;font-weight:bold}
+  .meter{flex:1;min-width:200px;height:18px;background:#e0e0e0;border-radius:9px;overflow:hidden}
+  .meter div{height:100%;width:0;background:#ffb300;transition:width .2s}
+  .checklist label{display:block;padding:6px 4px;cursor:pointer}
+  .checklist input{transform:scale(1.4);margin-right:10px}
+  .prompts label{display:block;background:#fff3e0;border-radius:10px;padding:10px 14px;margin:8px 0;cursor:pointer}
+  .prompts input{transform:scale(1.3);margin-right:8px}
+  #scoreBox{position:sticky;bottom:0;background:#e65100;color:#fff;border-radius:16px 16px 0 0;padding:12px 20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-top:30px}
+  .w5{display:grid;gap:8px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));margin:10px 0}
+  .w5 label{display:block;font-weight:bold;color:#e65100}
+  .w5 input{width:100%;box-sizing:border-box;font-size:.95em;padding:6px 10px;border:2px solid #ffb74d;border-radius:8px;font-family:inherit}
+  #printArea{display:none}
+  @media print{
+    body{background:#fff;font-size:14pt}
+    .wrap,#scoreBox{display:none !important}
+    #printArea{display:block;font-family:Georgia,serif;line-height:1.8}
+    #printArea h1{font-size:18pt;margin:0 0 6pt}
+    #printArea .meta{font-size:11pt;color:#444}
+    #printArea .text{white-space:pre-wrap;border-top:1px solid #999;padding-top:10pt;margin-top:10pt}
+    #printArea .lines{margin-top:24pt;border-top:1px solid #999;padding-top:6pt;font-size:11pt}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+<a class="home" href="../../index.html">&larr; Back to all lessons</a>
+<h1>✍️ Writing Week 39: Advice Column: Ask Dr. Iris! 👁️💌</h1>
+<p>Yesterday you weighed up two sides of an argument like a fair judge. Today, Ace, you'll write in a brand-new form: an <strong>advice column</strong>. In newspapers and magazines, readers send in letters asking for help, and an expert writes back. A great advice column sounds <strong>warm and friendly</strong> (like a kind doctor talking to you), but it is also <strong>accurate</strong>: it explains the science behind the problem and gives clear, practical steps. Today you'll be <strong>Dr. Iris</strong>, the eye expert at the Clearview Eye Clinic, answering a worried reader's letter.</p>
+
+<h2>Part 1: The Lesson</h2>
+<div class="box">
+  <h3 style="margin-top:0">The six parts of an advice column 💌</h3>
+  <p>An advice column has <strong>two voices</strong>: the reader who asks, and the expert who answers. The expert's job is to make the reader feel understood <em>and</em> leave them knowing exactly what to do.</p>
+  <div class="senses">
+    <div class="side"><strong>1. Headline:</strong> a short, catchy title that names the problem ("Help! The Board Looks Blurry!")</div>
+    <div class="side"><strong>2. Reader's letter:</strong> "Dear Dr. Iris," a few sentences describing the problem, signed with a fun pen name ("Squinting in Grade 5")</div>
+    <div class="side"><strong>3. Caring opening:</strong> the expert greets the reader by their pen name, shows they understand the feeling, and says the problem is common or fixable</div>
+    <div class="side"><strong>4. Science explanation:</strong> why the problem happens, explained simply but accurately, with a comparison and a fact</div>
+    <div class="side"><strong>5. Advice steps:</strong> three or more clear, practical tips, each starting with an action verb (try, take, ask, wear)</div>
+    <div class="side"><strong>6. Encouraging closing + sign-off:</strong> a hopeful last line, then the expert's name ("See you clearly, Dr. Iris")</div>
+  </div>
+  <h3>Five moves of a great advice columnist</h3>
+  <ul>
+    <li><strong>Talk to one person:</strong> use "you" and the reader's pen name, as if you're sitting beside them.</li>
+    <li><strong>Name the feeling first:</strong> "It can be frustrating when…" or "You're not alone…" before giving any advice.</li>
+    <li><strong>Explain the "why":</strong> people follow advice better when they understand the reason behind it.</li>
+    <li><strong>Use imperative verbs</strong> for tips: <em>Take</em> a break. <em>Ask</em> your teacher. <em>Spend</em> time outside.</li>
+    <li><strong>Know your limits:</strong> a responsible expert says when to see a real doctor or a trusted adult.</li>
+  </ul>
+  <p><strong>Columnist's rule:</strong> after reading your answer, the reader should feel <em>better</em> and know <em>exactly what to do next</em>.</p>
+</div>
+
+<div class="box">
+  <h3 style="margin-top:0">Model Column (short version): "Help! My Eyes Feel Tired After Gaming"</h3>
+  <p class="legend"><span class="ts">Headline + reader's letter</span><span class="ev">Caring opening + science</span><span class="ex">Advice steps</span><span class="cs">Closing + sign-off</span></p>
+  <p class="model">
+    <span class="ts"><strong>Help! My Eyes Feel Tired After Gaming</strong><br>Dear Dr. Iris, after I play video games for a while, my eyes feel dry and sore, and sometimes things look a bit blurry. Is something wrong with me? Signed, Bleary-Eyed Gamer</span><br>
+    <span class="ev">Dear Bleary-Eyed Gamer, sore eyes are no fun, but you are definitely not alone! When you stare at a screen, you blink only about half as often as usual, so the front of your eyes dries out like a sponge left in the sun. The tiny muscles that focus your lens also get tired from looking at something close for so long.</span><br>
+    <span class="ex">Try the 20-20-20 rule: every 20 minutes, look at something about 6 metres away for 20 seconds. Remind yourself to blink fully. Ask an adult to help you set a timer, and spend time playing outdoors each day.</span><br>
+    <span class="cs">If your eyes still feel sore after a week, ask a parent to book an eye exam. With a few small changes, you'll be back in the game with happy eyes! See you clearly, Dr. Iris</span>
+  </p>
+  <p><strong>Notice:</strong> the headline names the problem; the letter has a pen name; Dr. Iris names the feeling first ("not alone"); the science uses a fact (blinking half as often) and a comparison (a sponge in the sun); the tips start with action verbs (<em>Try, Remind, Ask</em>); and the closing says when to see a real doctor before ending on a hopeful note.</p>
+</div>
+
+<h2>Part 2: Name That Column Part</h2>
+<div class="box">
+  <p>Each line comes from a student's advice column called "Help! I Can't See in the Dark!" Choose which <strong>part</strong> it belongs in.</p>
+  <div id="labelRows"></div>
+  <div class="btnrow"><button type="button" class="go" id="checkLabels">Check my answers</button></div>
+  <div class="fb" id="labelFb"></div>
+</div>
+
+<h2>Part 3: Grammar Clinic 👁️</h2>
+<div class="box tipbox">Every advice columnist needs a careful editor! <strong>Section A:</strong> pick the correct sentence. <strong>Section B:</strong> type the sentence again with <em>all</em> mistakes fixed. We use <strong>Canadian spelling</strong> (colour, centre, metre, practise as a verb). Today, watch <strong>your / you're</strong>, <strong>commas in letter greetings and closings</strong>, <strong>commas after introductory words</strong>, <strong>imperative sentences</strong>, <strong>fewer / less</strong>, <strong>affect / effect</strong>, and <strong>apostrophes for possession</strong>.</div>
+<h3>Section A: Pick the correct sentence</h3>
+<div id="gmc"></div>
+<h3>Section B: Fix the sentence</h3>
+<p>Retype the whole sentence correctly, with capital letters and punctuation. Each one has <strong>at least two</strong> mistakes.</p>
+<div id="gfix"></div>
+
+<h2>Part 4: Your Turn to Write</h2>
+<div class="box">
+  <h3 style="margin-top:0">Step 1: Choose your reader's problem</h3>
+  <p>Pick <strong>one</strong> letter to answer as Dr. Iris. Use facts from today's reading and math: the cornea, iris, pupil, lens, retina, rods and cones, blinking, the 20-20-20 rule, glasses and nearsightedness, sunlight and outdoor time!</p>
+  <div class="prompts" id="prompts">
+    <label><input type="radio" name="prompt" value="Option A: Help! The board at school looks blurry." checked> 📋 <strong>Option A:</strong> "Help! When I sit at the back of the class, the whiteboard looks blurry." (Signed, Squinting in Grade 5)</label>
+    <label><input type="radio" name="prompt" value="Option B: Help! I'm nervous about getting glasses."> 👓 <strong>Option B:</strong> "My eye doctor says I need glasses, and I'm worried kids will tease me." (Signed, Nervous About Frames)</label>
+    <label><input type="radio" name="prompt" value="Option C: Why can't I see colours in the dark?"> 🌙 <strong>Option C:</strong> "When I go camping, everything looks grey at night, and it takes ages before I can see. Why?" (Signed, Lost in the Dark)</label>
+  </div>
+  <p><strong>Plan your column:</strong> jot a few words for each box. (These notes save with your writing.)</p>
+  <div class="w5" id="w5">
+    <div><label for="w5who">Headline</label><input id="w5who" type="text" autocomplete="off"></div>
+    <div><label for="w5place">Reader's letter + pen name</label><input id="w5place" type="text" autocomplete="off"></div>
+    <div><label for="w5facts">Caring opening: what feeling will I name?</label><input id="w5facts" type="text" autocomplete="off"></div>
+    <div><label for="w5senses">Science: why it happens (a fact + a comparison)</label><input id="w5senses" type="text" autocomplete="off"></div>
+    <div><label for="w5feel">Three advice steps (action verbs!)</label><input id="w5feel" type="text" autocomplete="off"></div>
+    <div><label for="w5closing">Hopeful closing + when to see a doctor + sign-off</label><input id="w5closing" type="text" autocomplete="off"></div>
+  </div>
+
+  <h3>Step 2: Write your advice column</h3>
+  <p><strong>Goal:</strong> <strong>250 to 380 words</strong>. Include a <strong>headline</strong>; a <strong>reader's letter</strong> (2 to 4 sentences, starting "Dear Dr. Iris," and signed with a <strong>pen name</strong>); a <strong>caring opening</strong> that uses the pen name and <strong>names the feeling</strong>; a <strong>science explanation</strong> with at least <strong>two accurate facts</strong> from today's reading and <strong>one comparison</strong> ("like a…"); at least <strong>three advice steps</strong> that start with <strong>imperative verbs</strong>; a line saying <strong>when to see a doctor or trusted adult</strong>; and a <strong>hopeful closing</strong> with a sign-off. Bonus: use two words from today's spelling list (like <em>cornea</em> or <em>optometrist</em>) correctly!</p>
+  <p><button type="button" class="hint" id="templateBtn">📋 Add the layout for me</button></p>
+  <label for="essay"><strong>Write here, Ace:</strong></label>
+  <textarea id="essay" placeholder="HEADLINE: ..."></textarea>
+  <div class="counter">
+    <span id="wc">0 words</span>
+    <span id="sc">0 sentences</span>
+    <div class="meter" aria-hidden="true"><div id="meterBar"></div></div>
+  </div>
+  <div class="fb" id="wcMsg">Aim for 250 to 380 words.</div>
+  <p style="font-size:.8em;color:#607d8b" id="saveNote">Your writing is saved automatically in this browser as you type.</p>
+
+  <h3>Self-check before you finish ✅</h3>
+  <div class="checklist" id="checklist">
+    <label><input type="checkbox"> My column has a <strong>headline</strong> that names the problem.</label>
+    <label><input type="checkbox"> The <strong>reader's letter</strong> starts with "Dear Dr. Iris," and ends with a <strong>pen name</strong>.</label>
+    <label><input type="checkbox"> My <strong>caring opening</strong> uses the pen name and <strong>names the reader's feeling</strong>.</label>
+    <label><input type="checkbox"> My <strong>science explanation</strong> has at least <strong>two accurate facts</strong> and <strong>one comparison</strong>.</label>
+    <label><input type="checkbox"> I gave at least <strong>three advice steps</strong> that start with <strong>action verbs</strong>.</label>
+    <label><input type="checkbox"> I said <strong>when to see a doctor or trusted adult</strong> and ended with a <strong>hopeful closing and sign-off</strong>.</label>
+    <label><input type="checkbox"> I checked your / you're, commas in greetings and after introductory words, fewer / less, affect / effect, apostrophes, and <strong>Canadian spelling</strong> (colour, centre, metre).</label>
+  </div>
+  <div class="btnrow">
+    <button type="button" class="blue" id="downloadBtn">⬇️ Download my writing (for Dad)</button>
+    <button type="button" class="purple" id="printBtn">🖨️ Print my writing</button>
+    <button type="button" class="grey" id="clearBtn">Start over</button>
+  </div>
+  <div class="fb" id="doneMsg"></div>
+</div>
+
+<div id="scoreBox"><span id="scoreText"></span><span>Keep going, Dr. Ace! 👁️</span></div>
+</div>
+
+<div id="printArea"></div>
+
+<script>
+var NAME="Ace";
+var PRAISE=["Nice work, Ace!","Correct! Great editing eye!","Yes! Ace fixed it!","Excellent, advice columnist Ace!","Eagle-eyed editing! 🦅"];
+function pick(a){return a[Math.floor(Math.random()*a.length)];}
+
+var LABELS=["Headline", "Reader's letter", "Caring opening", "Science explanation", "Advice steps", "Closing + sign-off"];
+var LABEL_ITEMS=[
+ {s:"Try sitting quietly in the dark for about 20 minutes before you look around, and don't look at a bright phone screen while you wait.", a:"Advice steps"},
+ {s:"Help! I Can't See in the Dark!", a:"Headline"},
+ {s:"Your eyes use special cells called rods in dim light, and they need time to adjust, a bit like a camera switching to night mode.", a:"Science explanation"},
+ {s:"Dear Dr. Iris, when I walk outside at night, everything looks black for ages. Is something wrong with my eyes? Signed, Night Owl in Training", a:"Reader's letter"},
+ {s:"If you still struggle to see at night after trying these tips, ask a parent to book an eye exam. Happy stargazing! See you clearly, Dr. Iris", a:"Closing + sign-off"},
+ {s:"Dear Night Owl in Training, you are not alone! Feeling a little nervous in the dark is very normal, and the good news is that your eyes are probably working just fine.", a:"Caring opening"}
+];
+var labelScore=0, labelChecked=false;
+function buildLabels(){
+  var box=document.getElementById("labelRows");
+  LABEL_ITEMS.forEach(function(it,i){
+    var d=document.createElement("div"); d.className="row"; d.id="lr"+i;
+    var sel='<select id="ls'+i+'" aria-label="Job of sentence '+(i+1)+'"><option value="">- choose -</option>';
+    LABELS.forEach(function(l){sel+='<option>'+l+'</option>';});
+    sel+='</select>';
+    d.innerHTML='<strong>'+(i+1)+'.</strong> '+it.s+'<br>'+sel+' <span id="lm'+i+'"></span>';
+    box.appendChild(d);
+  });
+}
+function checkLabels(){
+  var sc=0;
+  LABEL_ITEMS.forEach(function(it,i){
+    var ok=document.getElementById("ls"+i).value===it.a; if(ok)sc++;
+    document.getElementById("lr"+i).className="row "+(ok?"right":"wrong");
+    document.getElementById("lm"+i).textContent=ok?"✅":"❌";
+  });
+  labelScore=sc; labelChecked=true;
+  var fb=document.getElementById("labelFb");
+  if(sc===LABEL_ITEMS.length){fb.className="fb good";fb.textContent="🌟 "+sc+" / "+LABEL_ITEMS.length+". "+pick(PRAISE)+" You know exactly how an advice column is built!";}
+  else{fb.className="fb bad";fb.textContent=sc+" / "+LABEL_ITEMS.length+". Hint: a short catchy title = headline; “Dear Dr. Iris” plus a pen name = reader\'s letter; greeting the reader and naming their feeling = caring opening; explaining why it happens = science explanation; sentences that start with action verbs (try, take, ask) = advice steps; “see a doctor” plus a hopeful goodbye and the expert\'s name = closing + sign-off. Fix the ❌ ones and check again.";}
+  updateScore();
+}
+
+var GMC=[
+ {q:"Which sentence uses <strong>your / you're</strong> correctly?",
+  o:["Your going to love you're new glasses.", "Your going to love your new glasses.", "You're going to love your new glasses.", "You're going to love you're new glasses."],
+  a:2,e:"<strong>You're</strong> means <em>you are</em> (you are going). <strong>Your</strong> shows ownership (your glasses). Test it: say \"you are\" and see if the sentence still makes sense."},
+ {q:"Which letter greeting is punctuated correctly?",
+  o:["Dear Dr. Iris,", "Dear, Dr. Iris", "Dear Dr Iris.", "dear Dr. Iris,"],
+  a:0,e:"In a friendly letter, capitalize <strong>Dear</strong>, put a period after the short form <strong>Dr.</strong>, and end the greeting with a <strong>comma</strong>."},
+ {q:"Which sentence uses a comma after an <strong>introductory word</strong> correctly?",
+  o:["First take a break from the screen.", "First take, a break from the screen.", "First take a break, from the screen.", "First, take a break from the screen."],
+  a:3,e:"Put a comma after an introductory word or phrase such as <em>First, Next, However, In bright light,</em>."},
+ {q:"Which sentence uses <strong>fewer / less</strong> correctly?",
+  o:["You should spend fewer time on screens and take less breaks.", "You should spend less time on screens and take fewer breaks.", "You should spend less time on screens and take less breaks.", "You should spend fewer time on screens and take fewer breaks."],
+  a:1,e:"Use <strong>fewer</strong> for things you can count (fewer breaks, fewer minutes) and <strong>less</strong> for things you can't count one by one (less time, less light)."},
+ {q:"Which sentence uses <strong>affect / effect</strong> correctly?",
+  o:["Bright sunlight can affect your eyes, so sunglasses have a good effect.", "Bright sunlight can effect your eyes, so sunglasses have a good affect.", "Bright sunlight can affect your eyes, so sunglasses have a good affect.", "Bright sunlight can effect your eyes, so sunglasses have a good effect."],
+  a:0,e:"Usually <strong>affect</strong> is a verb (an action: to affect something) and <strong>effect</strong> is a noun (a result: a good effect). Memory trick: <strong>A</strong>ction = <strong>A</strong>ffect."},
+ {q:"Which sentence uses an <strong>apostrophe</strong> correctly?",
+  o:["The doctors office is next to the library.", "The doctors' office is next to the library's.", "The doctor's office is next to the library.", "The doctor's office' is next to the library."],
+  a:2,e:"To show that one doctor owns the office, add <strong>'s</strong>: the doctor's office. Don't add apostrophes to words that don't own anything."},
+ {q:"Which sentence uses <strong>Canadian spelling</strong> correctly?",
+  o:["The iris gives your eye its color, and the pupil is in the center.", "The iris gives your eye its colour, and the pupil is in the center.", "The iris gives your eye its color, and the pupil is in the centre.", "The iris gives your eye its colour, and the pupil is in the centre."],
+  a:3,e:"In Canada we write <strong>colour</strong> (with -our) and <strong>centre</strong> (with -re), like neighbour and metre."}
+];
+var gmcState=GMC.map(function(){return{answered:false,firstRight:false,done:false};});
+function buildGMC(){
+  var box=document.getElementById("gmc");
+  GMC.forEach(function(it,i){
+    var d=document.createElement("div"); d.className="box q"; d.id="g"+i;
+    var h='<div><strong>'+(i+1)+'.</strong> '+it.q+'</div>';
+    it.o.forEach(function(o,j){h+='<button type="button" class="opt" data-i="'+i+'" data-j="'+j+'">'+String.fromCharCode(65+j)+'. '+o+'</button>';});
+    h+='<div class="fb" id="gfb'+i+'"></div>';
+    d.innerHTML=h; box.appendChild(d);
+  });
+  box.addEventListener("click",function(e){
+    var b=e.target.closest?e.target.closest(".opt"):e.target; if(!b||!b.classList.contains("opt"))return;
+    var i=+b.getAttribute("data-i"), j=+b.getAttribute("data-j"), st=gmcState[i], it=GMC[i];
+    if(st.done)return;
+    var ok=j===it.a; if(!st.answered){st.answered=true;st.firstRight=ok;}
+    var fb=document.getElementById("gfb"+i);
+    if(ok){st.done=true;b.classList.add("sel-right");document.getElementById("g"+i).className="box q right";fb.className="fb good";fb.innerHTML="✅ "+pick(PRAISE)+' <span class="explain">'+it.e+'</span>';}
+    else{b.classList.add("sel-wrong");document.getElementById("g"+i).className="box q wrong";fb.className="fb bad";fb.textContent="❌ Not quite, Ace. Look closely and try again.";}
+    updateScore();
+  });
+}
+
+var GFIX=[
+ {bad:"your eyes need a break every twenty minutes",
+  ok:["Your eyes need a break every twenty minutes.", "Your eyes need a break every 20 minutes.", "Your eyes need a break every twenty minutes!"],
+  hint:"Capitalize the first word. <em>Your</em> (ownership) is correct here. End with a period."},
+ {bad:"dear dr iris my eyes feel itchy",
+  ok:["Dear Dr. Iris, my eyes feel itchy.", "Dear Dr. Iris, My eyes feel itchy."],
+  hint:"Capitalize <em>Dear</em>, <em>Dr.</em> and <em>Iris</em>. <em>Dr.</em> needs a period. Put a comma after the greeting, and end the sentence with a period."},
+ {bad:"next wear sunglasses when your outside on a sunny day",
+  ok:["Next, wear sunglasses when you're outside on a sunny day.", "Next, wear sunglasses when you are outside on a sunny day."],
+  hint:"Capitalize the first word and put a comma after the introductory word <em>Next</em>. Use <em>you're</em> (you are), not <em>your</em>. End with a period."},
+ {bad:"the optometrists office has posters about eye color in the waiting area",
+  ok:["The optometrist's office has posters about eye colour in the waiting area."],
+  hint:"Capitalize the first word. One optometrist owns the office, so write <em>optometrist's</em>. Use the Canadian spelling <em>colour</em>. End with a period."}
+];
+
+var gfixState=GFIX.map(function(){return{tries:0,correct:false,firstRight:false};});
+function norm(s){return s.replace(/[\u2018\u2019\u02BC]/g,"'").replace(/[\u201C\u201D]/g,'"').replace(/\s+/g," ").trim();}
+function checkFixAnswer(i,val){var v=norm(val);return GFIX[i].ok.some(function(a){return norm(a)===v;});}
+function buildGFix(){
+  var box=document.getElementById("gfix");
+  GFIX.forEach(function(it,i){
+    var d=document.createElement("div"); d.className="box q"; d.id="f"+i;
+    d.innerHTML='<div><strong>'+(i+1)+'.</strong> Fix: <span class="bad-sent">'+it.bad+'</span></div>'+
+     '<input class="fix" type="text" id="fi'+i+'" autocomplete="off" spellcheck="false" aria-label="Corrected sentence '+(i+1)+'">'+
+     '<div class="btnrow"><button type="button" class="go" data-act="check" data-i="'+i+'">Check</button><button type="button" class="hint" data-act="hint" data-i="'+i+'">Hint 💡</button><button type="button" class="grey" data-act="show" data-i="'+i+'" style="display:none">Show answer</button></div>'+
+     '<div class="fb" id="ffb'+i+'"></div>';
+    box.appendChild(d);
+  });
+  box.addEventListener("click",function(e){
+    var b=e.target; if(b.tagName!=="BUTTON")return;
+    var i=+b.getAttribute("data-i"), act=b.getAttribute("data-act"), fb=document.getElementById("ffb"+i);
+    if(act==="hint"){fb.className="fb";fb.style.color="#5d4037";fb.textContent="💡 "+GFIX[i].hint;return;}
+    fb.style.color="";
+    if(act==="show"){fb.className="fb";fb.innerHTML='Answer: <em>'+GFIX[i].ok[0]+'</em>'+(GFIX[i].ok.length>1?' (other correct versions are accepted too)':'');return;}
+    fixCheck(i);
+  });
+  box.addEventListener("keydown",function(e){if(e.key==="Enter"&&e.target.classList.contains("fix"))fixCheck(+e.target.id.slice(2));});
+}
+function fixCheck(i){
+  var val=document.getElementById("fi"+i).value, fb=document.getElementById("ffb"+i), st=gfixState[i];
+  fb.style.color="";
+  if(!val.trim()){fb.className="fb bad";fb.textContent="Type the corrected sentence first, Ace!";return;}
+  st.tries++;
+  if(checkFixAnswer(i,val)){ if(st.tries===1)st.firstRight=true; st.correct=true; document.getElementById("f"+i).className="box q right"; fb.className="fb good"; fb.textContent="✅ "+pick(PRAISE); }
+  else { st.correct=false; document.getElementById("f"+i).className="box q wrong"; fb.className="fb bad"; fb.textContent="❌ Not quite. Check every capital letter, apostrophe, comma, and spelling. Try again!"; if(st.tries>=2)document.querySelector('#f'+i+' [data-act=show]').style.display="inline-block"; }
+  updateScore();
+}
+
+function updateScore(){
+  var g=0; gmcState.forEach(function(s){if(s.firstRight)g++;});
+  var f=0; gfixState.forEach(function(s){if(s.correct)f++;});
+  var total=LABEL_ITEMS.length+GMC.length+GFIX.length, got=labelScore+g+f;
+  document.getElementById("scoreText").textContent="Score: "+got+" / "+total+"  (labels "+(labelChecked?labelScore:"-")+"/"+LABEL_ITEMS.length+" · grammar A "+g+"/"+GMC.length+" · grammar B "+f+"/"+GFIX.length+")";
+}
+
+var W5=["who","place","facts","senses","feel","closing"];
+function w5Save(){try{localStorage.setItem(KEY+"-5w",JSON.stringify(W5.map(function(k){return document.getElementById("w5"+k).value;})));}catch(e){}}
+function w5Restore(){try{var d=JSON.parse(localStorage.getItem(KEY+"-5w")||"null");if(d)d.forEach(function(x,i){document.getElementById("w5"+W5[i]).value=x;});}catch(e){}}
+function w5Summary(){return W5.map(function(k){return k.charAt(0).toUpperCase()+k.slice(1)+": "+document.getElementById("w5"+k).value;}).join("\n");}
+function addTemplate(){
+  var t=document.getElementById("essay");
+  var tpl="HEADLINE: \n\nREADER'S LETTER (Dear Dr. Iris, ... Signed, pen name): \n\n\nCARING OPENING (Dear pen name, name the feeling): \n\n\nSCIENCE EXPLANATION (why it happens: two facts + a comparison): \n\n\nADVICE STEPS (three tips with action verbs): \n\n\nCLOSING + SIGN-OFF (when to see a doctor, hopeful ending, Dr. Iris): \n\n\nwritten by "+NAME;
+  if(t.value.trim()&&!confirm("Add the advice column layout below what you've already written?"))return;
+  t.value=(t.value.trim()?t.value.replace(/\s+$/,"")+"\n\n":"")+tpl; updateCount(); t.focus();
+}
+var KEY="ace-writing-2026-11-05";
+function countWords(t){var m=t.trim().match(/[A-Za-zÀ-ÿ0-9]+(?:['’\-][A-Za-zÀ-ÿ0-9]+)*/g);return m?m.length:0;}
+function countSentences(t){var m=t.match(/[^.!?]*[A-Za-z0-9][^.!?]*[.!?]+/g);return m?m.length:0;}
+function currentPrompt(){var r=document.querySelector('input[name=prompt]:checked');return r?r.value:"";}
+function updateCount(){
+  var t=document.getElementById("essay").value, w=countWords(t), s=countSentences(t);
+  document.getElementById("wc").textContent=w+(w===1?" word":" words");
+  document.getElementById("sc").textContent=s+(s===1?" sentence":" sentences");
+  var bar=document.getElementById("meterBar"); bar.style.width=Math.min(100,w/380*100)+"%";
+  var msg=document.getElementById("wcMsg");
+  if(w<250){bar.style.background="#ffb300";msg.className="fb";msg.textContent=w===0?"Aim for 250 to 380 words.":"Keep going, Ace! "+(250-w)+" more words to reach the goal.";}
+  else if(w<=380){bar.style.background="#43a047";msg.className="fb good";msg.textContent="🎯 You're in the target zone! Nice work, Ace!";}
+  else{bar.style.background="#1e88e5";msg.className="fb";msg.textContent="Wow, that's a lot of writing! Strong advice columns make every word count! Could any sentences be cut?";}
+  try{localStorage.setItem(KEY,JSON.stringify({text:t,prompt:currentPrompt(),checks:checkStates()}));}catch(e){document.getElementById("saveNote").textContent="(This browser can't auto-save here, so use the Download button before closing!)";}
+}
+function checkStates(){return Array.prototype.map.call(document.querySelectorAll("#checklist input"),function(c){return c.checked;});}
+function checklistText(){
+  return Array.prototype.map.call(document.querySelectorAll("#checklist label"),function(l){return (l.querySelector("input").checked?"[x] ":"[ ] ")+l.textContent.trim();}).join("\n");
+}
+function buildReport(){
+  var t=document.getElementById("essay").value;
+  return "Writing Week 39: "+NAME+"\nDate: "+new Date().toLocaleString("en-CA")+"\nPrompt: "+currentPrompt()+
+    "\nWords: "+countWords(t)+"   Sentences: "+countSentences(t)+"\nPlanning notes:\n"+w5Summary()+
+    "\n\n----- "+NAME+"'s writing -----\n\n"+t+"\n\n----- Self-check -----\n"+checklistText()+
+    "\n\n----- Parent feedback -----\n\n\n";
+}
+function download(){
+  var t=document.getElementById("essay").value;
+  if(!t.trim()){document.getElementById("doneMsg").className="fb bad";document.getElementById("doneMsg").textContent="Write something first, Ace!";return;}
+  var blob=new Blob([buildReport().replace(/\n/g,"\r\n")],{type:"text/plain;charset=utf-8"});
+  var a=document.createElement("a"); a.href=URL.createObjectURL(blob); a.download=NAME+"-writing-2026-11-05"+".txt";
+  document.body.appendChild(a); a.click();
+  setTimeout(function(){URL.revokeObjectURL(a.href);a.remove();},1000);
+  var dm=document.getElementById("doneMsg"); dm.className="fb good"; dm.textContent="📄 Saved! Look in your Downloads folder and show Dad. Great job finishing, Ace!";
+}
+function esc(s){return s.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");}
+function printIt(){
+  var t=document.getElementById("essay").value;
+  if(!t.trim()){document.getElementById("doneMsg").className="fb bad";document.getElementById("doneMsg").textContent="Write something first, Ace!";return;}
+  document.getElementById("printArea").innerHTML="<h1>Writing Week 39: "+NAME+"</h1><div class='meta'>"+esc(new Date().toLocaleString("en-CA"))+"<br><strong>Prompt:</strong> "+esc(currentPrompt())+"<br>Words: "+countWords(t)+" · Sentences: "+countSentences(t)+"</div><div class='text'>"+esc(t)+"</div><div class='lines'><strong>Self-check:</strong><br>"+esc(checklistText()).replace(/\n/g,"<br>")+"</div><div class='lines'><strong>Parent feedback:</strong><br><br><br><br></div>";
+  window.print();
+}
+function restore(){
+  try{var d=JSON.parse(localStorage.getItem(KEY)||"null"); if(!d)return;
+    document.getElementById("essay").value=d.text||"";
+    Array.prototype.forEach.call(document.querySelectorAll("input[name=prompt]"),function(r){r.checked=(r.value===d.prompt);});
+    if(!document.querySelector("input[name=prompt]:checked"))document.querySelector("input[name=prompt]").checked=true;
+    var cs=document.querySelectorAll("#checklist input"); (d.checks||[]).forEach(function(v,i){if(cs[i])cs[i].checked=v;});
+  }catch(e){}
+}
+buildLabels(); buildGMC(); buildGFix(); restore(); w5Restore(); updateCount(); updateScore();
+W5.forEach(function(k){document.getElementById("w5"+k).addEventListener("input",w5Save);});
+document.getElementById("templateBtn").addEventListener("click",addTemplate);
+document.getElementById("checkLabels").addEventListener("click",checkLabels);
+document.getElementById("essay").addEventListener("input",updateCount);
+document.getElementById("checklist").addEventListener("change",function(){updateCount(); if(checkStates().every(Boolean)){var dm=document.getElementById("doneMsg");dm.className="fb good";dm.textContent="✅ All boxes checked! Now download or print it for Dad. Awesome work, Ace!";}});
+document.getElementById("prompts").addEventListener("change",updateCount);
+document.getElementById("downloadBtn").addEventListener("click",download);
+document.getElementById("printBtn").addEventListener("click",printIt);
+document.getElementById("clearBtn").addEventListener("click",function(){ if(confirm("Erase your writing and start over?")){document.getElementById("essay").value="";Array.prototype.forEach.call(document.querySelectorAll("#checklist input"),function(c){c.checked=false;});document.getElementById("doneMsg").textContent="";updateCount();} });
+</script>
+<script src="../../assets/autosave.js"></script>
+</body>
+</html>
