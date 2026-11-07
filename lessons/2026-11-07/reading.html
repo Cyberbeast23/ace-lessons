@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reading (Nov. 7): Sky Dancers: How the Northern Lights Work</title>
+<style>
+  body{font-family:"Segoe UI",Verdana,Arial,sans-serif;font-size:20px;line-height:1.65;margin:0;background:#f5f0eb;color:#2c2416}
+  .wrap{max-width:880px;margin:0 auto;padding:20px 18px 80px}
+  a.home{font-size:.9em;color:#bf360c}
+  h1{color:#e65100;font-size:2em;margin:10px 0}
+  h2{color:#ef6c00;margin-top:36px;border-bottom:3px solid #ffcc80;padding-bottom:4px}
+  .box{background:#fff;border-radius:16px;padding:18px 22px;margin:16px 0;box-shadow:0 3px 10px rgba(0,0,0,.07)}
+  .passage{font-family:Georgia,"Times New Roman",serif;font-size:1.1em;line-height:1.8}
+  .passage h3{text-align:center;font-family:"Segoe UI",Verdana,sans-serif;color:#e65100;font-size:1.4em;margin:4px 0 14px}
+  .passage p{text-indent:1.5em;margin:0 0 14px}
+  mark.v{background:#fff59d;padding:0 3px;border-radius:4px;font-weight:bold}
+  .tipbox{background:#fff8e1;border-left:8px solid #ffb300}
+  .q{border-left:8px solid #ffcc80}
+  .q.right{border-left-color:#43a047;background:#f1f8e9}
+  .q.wrong{border-left-color:#e53935;background:#fff5f5}
+  .tag{display:inline-block;font-size:.7em;background:#ef6c00;color:#fff;border-radius:8px;padding:1px 8px;margin-left:6px;vertical-align:middle}
+  .opt{display:block;width:100%;text-align:left;font-size:.95em;background:#fafafa;border:2px solid #e0e0e0;border-radius:10px;padding:8px 14px;margin:8px 0;cursor:pointer;font-family:inherit}
+  .opt:hover{border-color:#ffb74d;background:#fff}
+  .opt.sel-right{background:#c8e6c9;border-color:#43a047}
+  .opt.sel-wrong{background:#ffcdd2;border-color:#e53935}
+  .fb{margin-top:6px;font-weight:bold}
+  .fb.good{color:#2e7d32} .fb.bad{color:#c62828}
+  .explain{color:#e65100;font-weight:normal}
+  select{font-size:.95em;padding:6px 8px;border-radius:8px;border:2px solid #ffb74d;max-width:100%;font-family:inherit}
+  .vrow{display:flex;flex-wrap:wrap;align-items:center;gap:10px;padding:8px 6px;border-bottom:1px dashed #eee}
+  .vrow .w{font-weight:bold;min-width:140px}
+  .vrow.right{background:#f1f8e9} .vrow.wrong{background:#fff5f5}
+  .mark{font-size:1.2em;min-width:30px}
+  button.main{font-size:1em;padding:10px 20px;border:none;border-radius:10px;cursor:pointer;font-weight:bold;background:#ef6c00;color:#fff;margin-top:10px}
+  button.main:hover{background:#e65100}
+  button.sec{font-size:.95em;padding:8px 16px;border:none;border-radius:10px;cursor:pointer;font-weight:bold;background:#ffe082;color:#5d4037}
+  textarea{width:100%;box-sizing:border-box;font-size:1em;font-family:inherit;padding:10px;border:2px solid #ffb74d;border-radius:10px;min-height:120px}
+  #model{display:none;background:#fff3e0;border-radius:10px;padding:10px 14px;margin-top:10px}
+  #scoreBox{position:sticky;bottom:0;background:#e65100;color:#fff;border-radius:16px 16px 0 0;padding:12px 20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-top:30px}
+  #scoreBox button{font-size:.95em;padding:8px 16px;border:none;border-radius:10px;cursor:pointer;font-weight:bold;background:#ffca28;color:#3e2723}
+  #final{display:none;text-align:center;border:4px solid #43a047;font-size:1.1em}
+</style>
+</head>
+<body>
+<div class="wrap">
+<a class="home" href="../../index.html">&larr; Back to all lessons</a>
+<h1>📖 Reading Week 41: Sky Dancers: How the Northern Lights Work</h1>
+
+<div class="box tipbox">
+  <strong>Before you read, Ace:</strong> Today's passage is an <em>informational</em> text about the aurora borealis and Earth's magnetic shield. Science writers often explain a <em>process</em> (how something happens step by step), describe a <em>cause and effect</em> chain, and separate <em>myth from science</em>. As you read, track the sequence from Sun → solar wind → magnetosphere → glowing sky, notice comparisons, and <em>infer</em> (read between the lines).
+  <ul>
+    <li><strong>Preview:</strong> Read the title. What do you already know about the northern lights? Make a prediction about why they appear near the poles.</li>
+    <li><strong>Pause:</strong> After paragraph 3, stop and list the steps that turn solar wind into glowing lights.</li>
+    <li><strong>Root detective:</strong> Sky and magnetism words have Greek and Latin roots:
+      <span style="display:block;margin-top:6px"><strong>aurora</strong> = dawn (Roman goddess of dawn) · <strong>borealis</strong> = northern · <strong>geo-</strong> = Earth · <strong>magnet</strong> = lodestone / magnetic · <strong>sphere</strong> = ball · <strong>iono-</strong> = ion / charged particle · <strong>plasma</strong> = a charged gas</span></li>
+    <li><strong>Words in <mark class="v">yellow</mark></strong> are vocabulary words. Use the sentence around them (the <em>context</em>) to figure out what they mean.</li>
+  </ul>
+</div>
+
+<div class="box passage" id="passage">
+<h3>Sky Dancers: How the Northern Lights Work</h3>
+<p>On a clear winter night in Yellowknife, the Yukon, or northern British Columbia, the sky can suddenly fill with green and purple curtains that ripple like silk. People call them the northern lights, or the <mark class="v">aurora</mark> borealis. For thousands of years, storytellers have invented myths to explain the glow — dancing spirits, reflections from ice, or fires in the sky. Today scientists know the real story is even more amazing: it begins on the Sun.</p>
+<p>The Sun is a giant ball of hot <mark class="v">plasma</mark>, a gas so energetic that electrons have been stripped from atoms. From its outer atmosphere, called the <mark class="v">corona</mark>, a stream of charged particles rushes outward in every direction. That stream is the solar wind. It usually travels at hundreds of kilometres per second and can reach Earth in only a few days. When the Sun throws off an extra burst during a solar storm, the wind becomes denser and faster — and auroras on Earth become brighter and more active.</p>
+<p>Earth is not helpless against this shower of particles. Deep inside our planet, swirling liquid iron creates a magnetic field. That field stretches into space and wraps around Earth like an invisible bubble called the <mark class="v">magnetosphere</mark>. Most of the solar wind is deflected around the bubble, which is lucky for living things: without that shield, high-energy particles could strip away our atmosphere over long stretches of time. Near the north and south magnetic poles, though, some particles are guided down along magnetic field lines into the upper air.</p>
+<p>About 100 kilometres above the ground, in a layer called the <mark class="v">ionosphere</mark>, those incoming particles slam into oxygen and nitrogen gases. The gases briefly store the energy, then release it as light — a kind of natural <mark class="v">luminescence</mark>. Oxygen often glows green or red; nitrogen can add blue or purple edges. From the ground the lights look like curtains, arcs, or swirling ribbons, because the magnetic field lines themselves are curved, and the glowing gases follow those paths.</p>
+<p>Canada is one of the best countries on Earth for aurora watching. The "auroral oval" — a ring of frequent lights around the magnetic pole — often sits over the Northwest Territories, Yukon, Nunavut, northern Manitoba and parts of northern British Columbia and Alberta. Towns such as Yellowknife and Whitehorse advertise clear, cold nights and open skies. Farther south, people may see a faint glow only during strong <mark class="v">geomagnetic</mark> storms, when the oval expands.</p>
+<p>Myths and science can live side by side. Indigenous peoples across the North have rich aurora stories that carry culture, respect and wonder. Science does not erase those stories; it adds another layer: measurements from satellites, magnetometers on the ground, and cameras that capture the fluorescence of oxygen atoms. The next time you see a photo of green light dancing over a frozen lake, remember the chain: a restless Sun, a racing solar wind, Earth's magnetic shield, and gases high above Canada turning invisible energy into a celestial show.</p>
+<p style="text-indent:0;font-size:.8em;color:#546e7a;text-align:right">About 580 words</p>
+</div>
+
+<h2>Part 1: Comprehension</h2>
+<p>Click the best answer. You'll find out right away if you're correct. Only your <strong>first click</strong> counts toward your score, but you can keep trying to find the right answer.</p>
+<div id="mc"></div>
+
+<h2>Part 2: Think Deeper (not scored)</h2>
+<div class="box">
+  <p><strong>The author says myths and science can "live side by side." In 3 to 5 sentences, explain what the author means. Use at least two pieces of evidence from the passage about both traditional stories and scientific explanations.</strong></p>
+  <textarea id="openAns" placeholder="Write your answer here, Ace..."></textarea>
+  <p><button type="button" class="sec" id="showModel">Compare with a model answer</button></p>
+  <div id="model"><strong>Model answer:</strong> The author means that traditional aurora stories and modern science do not have to cancel each other out — both can help people appreciate the northern lights. For evidence about myths, the passage says storytellers invented explanations such as dancing spirits or fires in the sky, and that Indigenous peoples across the North have rich aurora stories that carry culture, respect and wonder. For evidence about science, it explains the chain from the Sun's plasma and corona, through the solar wind and magnetosphere, to glowing oxygen and nitrogen in the ionosphere, measured by satellites and magnetometers. Science "adds another layer" instead of erasing the stories. So wonder and careful measurement can share the same night sky.<br><em>Did you explain the idea and use evidence about both myths/stories and science? If so, excellent thinking!</em></div>
+</div>
+
+<h2>Part 3: Vocabulary</h2>
+<div class="box">
+  <h3 style="margin-top:0">A. Match each word to its meaning</h3>
+  <p>Choose the meaning that fits how the word is used in the passage.</p>
+  <div id="vmatch"></div>
+  <h3>B. Fill in the blank</h3>
+  <p>Choose the vocabulary word that best completes each sentence.</p>
+  <div id="vfill"></div>
+  <button type="button" class="main" id="checkVocab">Check my vocabulary</button>
+  <div class="fb" id="vocabFb"></div>
+</div>
+
+<div class="box" id="final"></div>
+<div id="scoreBox">
+  <span id="scoreText"></span>
+  <button type="button" id="finishBtn">I'm done! Show my final score</button>
+</div>
+</div>
+
+<script>
+var MC = [
+ {q:"Which sentence best states the <strong>main idea</strong> of the whole passage?",
+  o:["Yellowknife is cold in winter.","Oxygen is green.","Solar wind particles guided by Earth's magnetosphere make gases in the ionosphere glow as auroras, which are often seen in northern Canada; myths and science both help us appreciate them.","The Sun is made of rock."],
+  a:2, e:"Single facts about weather or colour are details. The correct answer sums up solar wind, the magnetic shield, glowing gases, Canadian viewing, and myth vs science."},
+ {q:"According to paragraph 2, what is the <strong>solar wind</strong>?", tag:"Key details",
+  o:["A breeze that blows only at night on Earth","A stream of charged particles rushing outward from the Sun's corona","A type of rain made of ice","A Canadian winter storm"],
+  a:1, e:"Paragraph 2: from the corona, \"a stream of charged particles rushes outward\" — that stream is the solar wind."},
+ {q:"In paragraph 3, what does <strong>magnetosphere</strong> most likely mean?", tag:"Vocabulary in context",
+  o:["A museum about magnets","A kind of aurora colour","An invisible magnetic bubble around Earth that deflects most solar wind","A town in the Yukon"],
+  a:2, e:"The paragraph says the magnetic field \"wraps around Earth like an invisible bubble called the magnetosphere\" and deflects most of the solar wind."},
+ {q:"What causes the gases in the ionosphere to <strong>glow</strong>?", tag:"Cause and effect",
+  o:["Streetlights reflecting off snow","Incoming particles slam into oxygen and nitrogen, which then release energy as light","The Moon heating the air","Airplanes flying through clouds"],
+  a:1, e:"Paragraph 4: particles slam into oxygen and nitrogen; the gases store energy briefly, then release it as light (luminescence)."},
+ {q:"Put these steps in the <strong>correct order</strong>.", tag:"Sequence",
+  o:["Gases glow → solar wind leaves the Sun → particles enter the ionosphere","Solar wind leaves the Sun → magnetosphere guides some particles toward the poles → gases in the ionosphere glow","Magnetosphere forms on the Moon → solar wind stops → myths begin","Myths invent the Sun → particles freeze → lights appear on the ground"],
+  a:1, e:"The chain in the passage is Sun/solar wind → magnetic guidance near the poles → glowing gases in the ionosphere."},
+ {q:"Why does the author mention <strong>Yellowknife</strong> and <strong>Whitehorse</strong>?", tag:"Author's craft",
+  o:["To show that Canada sits under the auroral oval and is a great place to watch northern lights","To prove those towns have no winter","To advertise airplane tickets only","To explain how fossils form"],
+  a:0, e:"Paragraph 5 places the auroral oval over northern Canada and notes towns that advertise clear skies for aurora watching."},
+ {q:"What can you <strong>infer</strong> about strong geomagnetic storms?", tag:"Inference",
+  o:["They make the auroral oval shrink so only the North Pole sees lights.","They can expand the auroral oval so people farther south may see a faint aurora.","They turn the Sun off.","They only happen on the Moon."],
+  a:1, e:"Paragraph 5: during strong geomagnetic storms \"the oval expands,\" so people farther south may see a faint glow."},
+ {q:"According to the passage, how do myths and science relate?", tag:"Key details",
+  o:["Science erases every traditional story.","Myths prove the solar wind is fake.","Myths and science can live side by side; science adds measurements without erasing cultural wonder.","Only myths are true."],
+  a:2, e:"Paragraph 6: science does not erase Indigenous aurora stories; it adds another layer of measurement and explanation."},
+ {q:"About how high above the ground does the glowing usually happen?", tag:"Key details",
+  o:["About 100 kilometres up, in the ionosphere","At ground level in the snow","Under the ocean","Inside Earth's core"],
+  a:0, e:"Paragraph 4: \"About 100 kilometres above the ground, in a layer called the ionosphere...\""},
+ {q:"Why is Earth's magnetic shield important beyond making pretty lights?", tag:"Problem and solution",
+  o:["It makes the Sun hotter.","Without it, high-energy particles could strip away our atmosphere over long stretches of time.","It invents myths.","It paints the sky green every afternoon."],
+  a:1, e:"Paragraph 3 notes that without the magnetosphere shield, high-energy particles could strip away our atmosphere over long stretches of time."}
+];
+
+var VOCAB = ["aurora","plasma","corona","magnetosphere","ionosphere","luminescence","geomagnetic"];
+var DEFS = {
+ aurora:"a natural display of coloured lights in the polar sky, caused by solar particles hitting Earth's upper air",
+ plasma:"a hot, electrically charged gas made of free electrons and ions",
+ corona:"the Sun's outer atmosphere, which is the source of the solar wind",
+ magnetosphere:"the region of space around Earth controlled by Earth's magnetic field",
+ ionosphere:"a layer of Earth's upper atmosphere filled with charged particles where auroras often glow",
+ luminescence:"the giving off of light by a substance that is not burning hot",
+ geomagnetic:"related to Earth's magnetic field"
+};
+var FILL = [
+ {s:"The Sun's outer atmosphere, called the ____, launches the solar wind.", a:"corona"},
+ {s:"Earth's ____ deflects most of the solar wind like an invisible bubble.", a:"magnetosphere"},
+ {s:"A ____ storm can push the aurora farther south than usual.", a:"geomagnetic"},
+ {s:"Oxygen and nitrogen release energy as light — a natural ____.", a:"luminescence"}
+];
+var FILL_OPTIONS = ["aurora","plasma","corona","magnetosphere","ionosphere","luminescence","geomagnetic"];
+
+var PRAISE=["Nice work, Ace!","Correct! Sharp reading, Ace!","Yes! You followed the evidence!","Excellent thinking, sky-dancer Ace!","Right! Aurora reading! 🌌"];
+function pick(a){return a[Math.floor(Math.random()*a.length)];}
+function shuffled(arr,seed){var a=arr.slice(),s=seed;for(var i=a.length-1;i>0;i--){s=(s*9301+49297)%233280;var j=Math.floor(s/233280*(i+1));var t=a[i];a[i]=a[j];a[j]=t;}return a;}
+
+var mcState=MC.map(function(){return {answered:false,firstRight:false,done:false};});
+var vocabScore=0, vocabChecked=false;
+var VOCAB_TOTAL=VOCAB.length+FILL.length;
+
+function buildMC(){
+  var box=document.getElementById("mc");
+  MC.forEach(function(item,i){
+    var d=document.createElement("div"); d.className="box q"; d.id="mc"+i;
+    var html="<div><strong>"+(i+1)+".</strong> "+item.q+(item.tag?'<span class="tag">'+item.tag+'</span>':"")+"</div>";
+    item.o.forEach(function(opt,j){ html+='<button type="button" class="opt" data-i="'+i+'" data-j="'+j+'">'+String.fromCharCode(65+j)+". "+opt+"</button>"; });
+    html+='<div class="fb" id="mcfb'+i+'"></div>';
+    d.innerHTML=html; box.appendChild(d);
+  });
+  box.addEventListener("click",function(e){
+    var b=e.target.closest?e.target.closest(".opt"):e.target; if(!b||!b.classList.contains("opt"))return;
+    answerMC(+b.getAttribute("data-i"),+b.getAttribute("data-j"),b);
+  });
+}
+function answerMC(i,j,btn){
+  var st=mcState[i], item=MC[i], fb=document.getElementById("mcfb"+i), card=document.getElementById("mc"+i);
+  if(st.done) return;
+  var right=(j===item.a);
+  if(!st.answered){ st.answered=true; st.firstRight=right; }
+  if(right){
+    st.done=true; btn.classList.add("sel-right"); card.className="box q right";
+    fb.className="fb good"; fb.innerHTML="✅ "+pick(PRAISE)+' <span class="explain">'+item.e+"</span>";
+  } else {
+    btn.classList.add("sel-wrong"); card.className="box q wrong";
+    fb.className="fb bad"; fb.innerHTML="❌ Not quite, Ace. Look back at the passage and try another answer.";
+  }
+  updateScore();
+}
+function buildVocab(){
+  var m=document.getElementById("vmatch");
+  var defOrder=shuffled(VOCAB,44);
+  VOCAB.forEach(function(w,i){
+    var row=document.createElement("div"); row.className="vrow"; row.id="vm"+i;
+    var sel='<select id="vsel'+i+'" aria-label="Meaning of '+w+'"><option value="">- choose a meaning -</option>';
+    defOrder.forEach(function(k){ sel+='<option value="'+k+'">'+DEFS[k]+'</option>'; });
+    sel+="</select>";
+    row.innerHTML='<span class="mark" id="vmk'+i+'"></span><span class="w">'+w+'</span>'+sel;
+    m.appendChild(row);
+  });
+  var f=document.getElementById("vfill");
+  FILL.forEach(function(item,i){
+    var row=document.createElement("div"); row.className="vrow"; row.id="vf"+i;
+    var sel='<select id="fsel'+i+'" aria-label="Blank '+(i+1)+'"><option value="">- choose -</option>';
+    FILL_OPTIONS.forEach(function(w){ sel+='<option value="'+w+'">'+w+'</option>'; });
+    sel+="</select>";
+    var parts=item.s.split("____");
+    row.innerHTML='<span class="mark" id="vfk'+i+'"></span><span>'+(i+1)+'. '+parts[0]+sel+parts[1]+'</span>';
+    f.appendChild(row);
+  });
+}
+function checkVocab(){
+  var score=0, blank=0;
+  VOCAB.forEach(function(w,i){
+    var v=document.getElementById("vsel"+i).value, ok=(v===w);
+    if(!v) blank++;
+    if(ok) score++;
+    document.getElementById("vm"+i).className="vrow "+(ok?"right":"wrong");
+    document.getElementById("vmk"+i).textContent=ok?"✅":"❌";
+  });
+  FILL.forEach(function(item,i){
+    var v=document.getElementById("fsel"+i).value, ok=(v===item.a);
+    if(!v) blank++;
+    if(ok) score++;
+    document.getElementById("vf"+i).className="vrow "+(ok?"right":"wrong");
+    document.getElementById("vfk"+i).textContent=ok?"✅":"❌";
+  });
+  vocabScore=score; vocabChecked=true;
+  var fb=document.getElementById("vocabFb");
+  if(score===VOCAB_TOTAL){ fb.className="fb good"; fb.textContent="🌟 "+score+" / "+VOCAB_TOTAL+". Perfect! Your vocabulary is sky-solid, Ace! 🌌"; }
+  else { fb.className="fb bad"; fb.textContent=score+" / "+VOCAB_TOTAL+" correct"+(blank?" ("+blank+" left blank)":"")+". Fix the ❌ ones and check again. Try finding the word in the passage for clues!"; }
+  updateScore();
+}
+function scores(){
+  var mc=0,answered=0; mcState.forEach(function(s){ if(s.firstRight) mc++; if(s.answered) answered++; });
+  return {mc:mc,answered:answered,vocab:vocabScore};
+}
+function updateScore(){
+  var s=scores();
+  document.getElementById("scoreText").textContent="Comprehension: "+s.mc+" / "+MC.length+" · Vocabulary: "+(vocabChecked?s.vocab:"-")+" / "+VOCAB_TOTAL;
+}
+function finish(){
+  if(!vocabChecked) checkVocab();
+  var s=scores(), total=MC.length+VOCAB_TOTAL, got=s.mc+s.vocab, pct=Math.round(100*got/total);
+  var msg = pct===100 ? "🏆 A perfect score! Outstanding reading, Ace!" :
+            pct>=80 ? "🌟 Fantastic work, Ace! You read like a Grade 7 student!" :
+            pct>=60 ? "💪 Solid effort, Ace! Reread the paragraphs for the questions you missed." :
+                      "🌱 This was a challenging passage. Read it once more, slowly, and try again. You've got this, Ace!";
+  var f=document.getElementById("final"); f.style.display="block";
+  f.innerHTML="<h2 style='border:none;margin-top:0'>Final Score: "+got+" / "+total+" ("+pct+"%)</h2>"+
+    "<p>Comprehension (first tries): "+s.mc+" / "+MC.length+(s.answered<MC.length?" (you skipped "+(MC.length-s.answered)+")":"")+"<br>Vocabulary: "+s.vocab+" / "+VOCAB_TOTAL+"</p><p>"+msg+"</p>"+
+    "<p style='font-size:.85em;color:#546e7a'>Finished on "+new Date().toLocaleString("en-CA")+"</p>";
+  f.scrollIntoView({behavior:"smooth"});
+}
+buildMC(); buildVocab(); updateScore();
+document.getElementById("checkVocab").addEventListener("click",checkVocab);
+document.getElementById("finishBtn").addEventListener("click",finish);
+document.getElementById("showModel").addEventListener("click",function(){document.getElementById("model").style.display="block";});
+</script>
+<script src="../../assets/autosave.js"></script>
+</body>
+</html>
