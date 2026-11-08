@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Math (Nov. 8): Longships &amp; Legends: Viking Navigator's Math Lab</title>
+<style>
+  body{font-family:"Segoe UI",Verdana,Arial,sans-serif;font-size:20px;line-height:1.6;margin:0;background:#f5f0eb;color:#2c2416}
+  .wrap{max-width:880px;margin:0 auto;padding:20px 18px 80px}
+  a.home{font-size:.9em;color:#bf360c}
+  h1{color:#e65100;font-size:2em;margin:10px 0}
+  h2{color:#ef6c00;margin-top:36px;border-bottom:3px solid #ffcc80;padding-bottom:4px}
+  .box{background:#fff;border-radius:16px;padding:18px 22px;margin:16px 0;box-shadow:0 3px 10px rgba(0,0,0,.07)}
+  .example{border-left:8px solid #ef6c00}
+  .example h3{margin:0 0 6px;color:#e65100}
+  .step{margin:4px 0 4px 10px}
+  code,.mono{font-family:Consolas,"Courier New",monospace;background:#fff3e0;padding:1px 6px;border-radius:5px}
+  .q{border-left:8px solid #90a4ae}
+  .q.right{border-left-color:#43a047;background:#f1f8e9}
+  .q.wrong{border-left-color:#e53935;background:#fff5f5}
+  .qnum{font-weight:bold;color:#e65100}
+  .row{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:10px}
+  input[type=text]{font-size:1.05em;padding:8px 12px;border:2px solid #ffcc80;border-radius:10px;width:190px}
+  input[type=text]:focus{outline:none;border-color:#ef6c00;box-shadow:0 0 0 3px #ffe0b2}
+  button{font-size:.95em;padding:8px 16px;border:none;border-radius:10px;cursor:pointer;font-weight:bold}
+  .check{background:#ef6c00;color:#fff} .check:hover{background:#e65100}
+  .hint{background:#ffe082;color:#5d4037} .hint:hover{background:#ffd54f}
+  .sol{background:#ce93d8;color:#311b92}
+  .unit{color:#546e7a}
+  .fb{margin-top:8px;font-weight:bold;min-height:1em}
+  .fb.good{color:#2e7d32} .fb.bad{color:#c62828}
+  .hints{margin-top:8px;color:#e65100;background:#fff3e0;border-radius:10px;padding:0 12px}
+  .hints p{margin:6px 0;padding:6px 0}
+  .solution{margin-top:8px;background:#f3e5f5;border-radius:10px;padding:8px 12px;display:none}
+  #scoreBox{position:sticky;bottom:0;background:#e65100;color:#fff;border-radius:16px 16px 0 0;padding:12px 20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-top:30px}
+  #scoreBox button{background:#ffca28;color:#3e2723}
+  #final{display:none;font-size:1.15em;text-align:center;border:4px solid #43a047}
+  .tipbox{background:#fff8e1;border-left:8px solid #ffb300}
+</style>
+</head>
+<body>
+<div class="wrap">
+<a class="home" href="../../index.html">&larr; Back to all lessons</a>
+<h1>⛵ Math Week 42: Longships &amp; Legends: Viking Navigator's Math Lab</h1>
+<p>Ace, about a thousand years ago Norse sailors crossed the stormy North Atlantic in open wooden longships — from Norway to Iceland, on to Greenland, and all the way to Newfoundland, where archaeologists found their camp at <strong>L'Anse aux Meadows</strong>. Today you are the <strong>navigator</strong> on an imaginary replica longship, the <em>Sea Raven</em>, using <strong>length-to-width ratios, oars and crew shifts, distance–speed–time, average speed, compass bearings, sail area, map coordinates, the mean from a cargo table, fractions of a crew, percent of a voyage from a bar graph, timeline arithmetic, a two-step equation, the volume of a sea chest in litres, GST on museum tickets, and rounding</strong>.</p>
+
+<h2>Part 1: Learn the Moves</h2>
+
+<div class="box tipbox">
+  <strong>The 4-Step Problem Solver (your Viking navigator's checklist):</strong>
+  <ol>
+    <li><strong>Read</strong>: What is the question actually asking? Underline the numbers and units (m, km, km/h, hours, days, °, m², cm³, L, kg, years, $, %).</li>
+    <li><strong>Plan</strong>: Do the units match? Change metres to centimetres or hours to minutes <em>before</em> you answer.</li>
+    <li><strong>Solve</strong>: Do one step at a time and write each step down.</li>
+    <li><strong>Check</strong>: Is my answer reasonable? A longship might sail at 12 km/h, but not 1 200 km/h!</li>
+  </ol>
+</div>
+
+
+
+<div class="box example">
+  <h3>Worked Example 1: Comparing with a ratio</h3>
+  <p class="step">To find how many times longer a ship is than it is wide, divide <strong>length ÷ width</strong>.</p>
+  <p class="step">A boat 18 m long and 4 m wide: 18 ÷ 4 = <strong>4.5</strong>, so the length is 4.5 times the width (ratio 4.5 : 1).</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 2: Distance, speed and time</h3>
+  <p class="step"><strong>Time = distance ÷ speed</strong> and <strong>speed = distance ÷ time</strong>. Keep the units matching (km with km/h, hours with hours).</p>
+  <p class="step">600 km at 12 km/h: 600 ÷ 12 = <strong>50 hours</strong>. And 2 days = 48 hours, so 960 km in 2 days is 960 ÷ 48 = <strong>20 km/h</strong>.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 3: Compass bearings</h3>
+  <p class="step">Bearings are measured <strong>clockwise from north</strong>: north 0°, east 90°, south 180°, west 270°. Turning <strong>right</strong> (clockwise) adds degrees; turning <strong>left</strong> (counterclockwise) subtracts.</p>
+  <p class="step">Heading 90° (east), turn left 30°: 90 − 30 = <strong>60°</strong>. (If you go below 0°, add 360°.)</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 4: Distance on a coordinate grid</h3>
+  <p class="step">If two points have the <strong>same y-coordinate</strong>, the distance between them is the difference of the x-coordinates. Then multiply by the map scale.</p>
+  <p class="step">(−3, 2) to (5, 2): 5 − (−3) = 8 squares. At 20 km per square: 8 × 20 = <strong>160 km</strong>.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 5: Fraction of a group</h3>
+  <p class="step">To find <strong>a/b of a number</strong>, divide by the denominator, then multiply by the numerator.</p>
+  <p class="step">3/4 of 40 rowers: 40 ÷ 4 = 10, then 10 × 3 = <strong>30</strong>. The rest is 40 − 30 = 10.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 6: Two-step equations</h3>
+  <p class="step">Undo the steps in reverse order: first undo adding/subtracting, then undo multiplying.</p>
+  <p class="step">4n + 9 = 57 → 4n = 48 → n = <strong>12</strong>. Check: 4 × 12 + 9 = 57 ✔</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 7: Volume and litres</h3>
+  <p class="step"><strong>Volume of a rectangular prism = length × width × height.</strong> Remember <strong>1 000 cm³ = 1 L</strong>.</p>
+  <p class="step">50 cm × 20 cm × 30 cm = 30 000 cm³ = 30 000 ÷ 1 000 = <strong>30 L</strong>.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 8: GST and money</h3>
+  <p class="step">Find the subtotal first, then multiply by <strong>1.05</strong> to add 5% GST. Round money to the nearest cent.</p>
+  <p class="step">$12.40 + $8.60 = $21.00. 21.00 × 1.05 = <strong>$22.05</strong>.</p>
+</div>
+<h2>Part 2: The Challenge (15 problems)</h2>
+<p>Type your answer and press <strong>Check</strong> (or Enter). Fractions like <span class="mono">3/4</span>, mixed numbers like <span class="mono">1 3/4</span>, or decimals like <span class="mono">1.75</span> are fine. Don't type the units, $ signs, or % signs, and you may use spaces or commas in big numbers (1 000 000). Stuck? Press <strong>Hint</strong>. After 2 tries, you can see a full solution.</p>
+
+<div id="questions"></div>
+<div class="box" id="final"></div>
+<div id="scoreBox">
+  <span id="scoreText">Score: 0 / 15 correct</span>
+  <button id="finishBtn" type="button">I'm done! Show my final score</button>
+</div>
+</div>
+
+<script>
+var NAME = "Ace";
+var GRAPH = '<div style="margin:10px 0"><svg viewBox="0 0 320 175" width="100%" style="max-width:480px;background:#fff;border-radius:12px" role="img" aria-label="Bar chart of kilometres sailed each day: Day 1 450, Day 2 600, Day 3 375, Day 4 375."><text x="170" y="14" font-size="11" text-anchor="middle" fill="#263238" font-weight="bold">Sea Raven: kilometres sailed each day</text><line x1="40" y1="150" x2="300" y2="150" stroke="#37474f" stroke-width="2"/><rect x="60" y="67.5" width="40" height="82.5" fill="#1e88e5" stroke="#0d47a1"/><text x="80" y="62.5" font-size="11" text-anchor="middle" fill="#263238">450</text><text x="80" y="165" font-size="10" text-anchor="middle" fill="#455a64">Day 1</text><rect x="122" y="40.0" width="40" height="110.0" fill="#1e88e5" stroke="#0d47a1"/><text x="142" y="35.0" font-size="11" text-anchor="middle" fill="#263238">600</text><text x="142" y="165" font-size="10" text-anchor="middle" fill="#455a64">Day 2</text><rect x="184" y="81.2" width="40" height="68.8" fill="#1e88e5" stroke="#0d47a1"/><text x="204" y="76.2" font-size="11" text-anchor="middle" fill="#263238">375</text><text x="204" y="165" font-size="10" text-anchor="middle" fill="#455a64">Day 3</text><rect x="246" y="81.2" width="40" height="68.8" fill="#1e88e5" stroke="#0d47a1"/><text x="266" y="76.2" font-size="11" text-anchor="middle" fill="#263238">375</text><text x="266" y="165" font-size="10" text-anchor="middle" fill="#455a64">Day 4</text></svg></div>';
+var TABLE = '<table style="border-collapse:collapse;margin:10px 0;font-size:.95em;background:#fff"><caption style="font-weight:bold;text-align:left;padding-bottom:4px">Cargo loaded on the Sea Raven</caption><tr><th style="border:1px solid #bdbdbd;padding:4px 10px;background:#eceff1">Cargo item</th><th style="border:1px solid #bdbdbd;padding:4px 10px;background:#eceff1">Mass (kg)</th></tr><tr><td style="border:1px solid #bdbdbd;padding:4px 10px;font-family:monospace">Barrel of dried fish</td><td style="border:1px solid #bdbdbd;padding:4px 10px;font-family:monospace">44</td></tr><tr><td style="border:1px solid #bdbdbd;padding:4px 10px;font-family:monospace">Bundle of walrus hides</td><td style="border:1px solid #bdbdbd;padding:4px 10px;font-family:monospace">35</td></tr><tr><td style="border:1px solid #bdbdbd;padding:4px 10px;font-family:monospace">Sack of grain</td><td style="border:1px solid #bdbdbd;padding:4px 10px;font-family:monospace">50</td></tr><tr><td style="border:1px solid #bdbdbd;padding:4px 10px;font-family:monospace">Crate of iron tools</td><td style="border:1px solid #bdbdbd;padding:4px 10px;font-family:monospace">35</td></tr><tr><td style="border:1px solid #bdbdbd;padding:4px 10px;font-family:monospace">Chest of wool cloth</td><td style="border:1px solid #bdbdbd;padding:4px 10px;font-family:monospace">46</td></tr></table>';
+var QUESTIONS = [
+ {t:"The <em>Sea Raven</em> is modelled on the Gokstad ship, a real Viking ship dug up in Norway in 1880. The replica is <strong>23.4 m long</strong> and <strong>5.2 m wide</strong>. How many times longer is it than it is wide?", a:"4.5", u:"times",
+  h:["Divide length by width.","23.4 ÷ 5.2 = ? (Try 5.2 × 4 = 20.8, then the leftover 2.6 is half of 5.2.)"],
+  s:"23.4 ÷ 5.2 = 4.5. The ship is 4.5 times as long as it is wide — long and narrow, perfect for slicing through waves."},
+ {t:"The <em>Sea Raven</em> has <strong>16 oars on each side</strong>. Every oar has <strong>2 rowers</strong> who take turns in shifts. There is also <strong>1 steersman</strong> and <strong>5 sail handlers</strong>. How many people are in the whole crew?", a:"70", u:"people",
+  h:["First find the number of oars: 16 on each of 2 sides.","32 oars × 2 rowers, then add the 6 other crew."],
+  s:"16 × 2 = 32 oars. 32 × 2 = 64 rowers. 64 + 1 + 5 = 70 people."},
+ {t:"A voyage from western Norway to Iceland is about <strong>1 380 km</strong>. If the <em>Sea Raven</em> averages <strong>11.5 km/h</strong>, sailing day and night, how many <strong>hours</strong> will it take?", a:"120", u:"hours",
+  h:["Time = distance ÷ speed.","1 380 ÷ 11.5 = ? (Hint: 11.5 × 100 = 1 150, and 11.5 × 20 = 230.)"],
+  s:"1 380 ÷ 11.5 = 120 hours. That is 120 ÷ 24 = 5 days and nights at sea!"},
+ {t:"Later, the crew sails <strong>1 800 km</strong> from Greenland to Newfoundland in <strong>6 days</strong> of non-stop sailing. What was their average speed in <strong>km/h</strong>?", a:"12.5", u:"km/h",
+  h:["Change days to hours first: 6 × 24.","Speed = 1 800 ÷ 144."],
+  s:"6 × 24 = 144 hours. 1 800 ÷ 144 = 12.5 km/h."},
+ {t:"The navigator is steering a bearing of <strong>270°</strong> (due west). To avoid an iceberg she turns <strong>45° to the left</strong> (counterclockwise). What is the new bearing, in degrees?", a:"225", u:"°",
+  h:["Bearings go clockwise from north. Turning left means subtracting.","270 − 45 = ?"],
+  s:"270 − 45 = 225°. That points south-west."},
+ {t:"Viking longships used one big, nearly rectangular sail made of wool. The <em>Sea Raven</em>'s sail is <strong>11 m wide</strong> and <strong>9.5 m tall</strong>. What is its area in <strong>m²</strong>?", a:"104.5", u:"m²",
+  h:["Area of a rectangle = width × height.","11 × 9.5 = 11 × 9 + 11 × 0.5."],
+  s:"11 × 9 = 99 and 11 × 0.5 = 5.5, so 99 + 5.5 = 104.5 m²."},
+ {t:"On the navigator's map grid, the ship is at <strong>(−2, 7)</strong> and L'Anse aux Meadows is at <strong>(4, 7)</strong>. Each grid square stands for <strong>50 km</strong>. How many <strong>kilometres</strong> apart are they?", a:"300", u:"km",
+  h:["The y-coordinates match, so subtract the x-coordinates: 4 − (−2).","Multiply the number of squares by 50."],
+  s:"4 − (−2) = 6 squares. 6 × 50 = 300 km."},
+ {t:TABLE+"Find the <strong>mean</strong> mass of the five cargo items, in kilograms.", a:"42", u:"kg",
+  h:["Add all five masses.","Divide the total by 5."],
+  s:"44 + 35 + 50 + 35 + 46 = 210. 210 ÷ 5 = 42 kg."},
+ {t:"There are <strong>60 rowers</strong> on a bigger longship. During a storm, <strong>2/5</strong> of them bail water while the rest keep rowing. How many keep <strong>rowing</strong>?", a:"36", u:"rowers",
+  h:["Find 2/5 of 60 first: 60 ÷ 5 × 2.","Subtract that from 60 (or find 3/5 of 60)."],
+  s:"60 ÷ 5 = 12, so 2/5 = 24 bailing. 60 − 24 = 36 keep rowing (that is 3/5)."},
+ {t:GRAPH+"The whole voyage is <strong>2 400 km</strong>. Using the bar graph, what <strong>percent</strong> of the voyage has the crew finished after Day 4?", a:"75", u:"%",
+  h:["Add the four bars to find the distance sailed so far.","Percent = distance sailed ÷ 2 400 × 100."],
+  s:"450 + 600 + 375 + 375 = 1 800 km. 1 800 ÷ 2 400 = 0.75, so 75% of the voyage is done."},
+ {t:"In 2021, scientists used tree rings and the trace of a solar storm from the year 993 to show that Norse people cut wood at L'Anse aux Meadows in <strong>1021 CE</strong>. How many years before <strong>2026</strong> was that?", a:"1005", u:"years",
+  h:["Subtract the earlier year from the later year.","2026 − 1021 = ?"],
+  s:"2026 − 1021 = 1 005 years ago — more than a thousand years!"},
+ {t:"A Norse trader has <strong>3 pouches</strong> with the same number of silver coins in each, plus <strong>14 loose coins</strong>. Altogether he has <strong>254 coins</strong>. Solve 3n + 14 = 254 to find how many coins are in each pouch.", a:"80", u:"coins",
+  h:["Undo the + 14 first: 3n = 240.","240 ÷ 3 = ?"],
+  s:"3n + 14 = 254 → 3n = 240 → n = 80. Check: 3 × 80 + 14 = 254 ✔"},
+ {t:"Each rower keeps belongings in a wooden sea chest that is <strong>90 cm long</strong>, <strong>40 cm wide</strong> and <strong>35 cm tall</strong>. What is its volume in <strong>litres</strong>? (1 000 cm³ = 1 L)", a:"126", u:"L",
+  h:["Volume = length × width × height in cm³.","90 × 40 × 35 = 126 000 cm³. Now divide by 1 000."],
+  s:"90 × 40 = 3 600. 3 600 × 35 = 126 000 cm³. 126 000 ÷ 1 000 = 126 L."},
+ {t:"At a Viking ship museum, adult tickets cost <strong>$18.50</strong> and youth tickets cost <strong>$9.25</strong>. A family buys <strong>2 adult</strong> and <strong>2 youth</strong> tickets and pays <strong>5% GST</strong>. What is the total, in dollars, to the nearest cent?", a:"58.28", u:"$",
+  h:["Subtotal: 2 × 18.50 + 2 × 9.25.","Multiply the subtotal by 1.05 and round to 2 decimal places."],
+  s:"2 × 18.50 = 37.00 and 2 × 9.25 = 18.50. Subtotal = $55.50. 55.50 × 1.05 = 58.275, which rounds to $58.28."},
+ {t:"Historians often say the Viking Age lasted from <strong>793 CE</strong> to <strong>1066 CE</strong>. How many years is that, <strong>rounded to the nearest ten</strong>?", a:"270", u:"years",
+  h:["First subtract: 1066 − 793.","Round 273 to the nearest ten: look at the ones digit."],
+  s:"1066 − 793 = 273 years. The ones digit is 3 (less than 5), so round down to 270 years."}
+];
+
+var PRAISE = ["Nice work, Ace!","Correct! Master-navigator level! ⛵","Yes! Longship captain Ace!","Excellent, Ace. That was a tough one!","Right on course! 🧭","Brilliant thinking, Ace!","Land ho — you got it! 🏝️"];
+var ENCOURAGE = ["Not quite. Check your steps and try again!","Close call. Try again, Ace! Maybe use a hint?","Hmm, not yet. Re-read the question carefully.","Keep going, Ace. Mistakes help your brain grow!"];
+
+function parseAnswer(str){
+  if(str===undefined||str===null) return NaN;
+  var s=String(str).trim().toLowerCase();
+  s=s.replace(/[\u2212\u2013]/g,"-");
+  s=s.replace(/(\d),(?=\d{3}(\D|$))/g,"$1");
+  s=s.replace(/[^0-9.\/\- ]/g," ").replace(/\s+/g," ").trim();
+  s=s.replace(/\s*\/\s*/g,"/");
+  var m;
+  if((m=s.match(/^(-?\d+) (\d+)\/(\d+)$/))){ var w=parseFloat(m[1]),n=parseFloat(m[2]),d=parseFloat(m[3]); if(d===0)return NaN; return w<0? w-n/d : w+n/d; }
+  if((m=s.match(/^(-?\d+(?:\.\d+)?)\/(\d+(?:\.\d+)?)$/))){ var d2=parseFloat(m[2]); if(d2===0)return NaN; return parseFloat(m[1])/d2; }
+  s=s.replace(/ /g,"");
+  if(/^-?(\d+\.?\d*|\.\d+)$/.test(s)) return parseFloat(s);
+  return NaN;
+}
+function isCorrect(input,key){
+  var a=parseAnswer(input), k=parseAnswer(key);
+  if(isNaN(a)) return false;
+  var isInt=Math.abs(k-Math.round(k))<1e-12;
+  var tol=isInt?1e-9:0.005;
+  return Math.abs(a-k)<=tol;
+}
+
+function isRomanCorrect(input,key){ return String(input).replace(/\s+/g,"").toUpperCase()===key; }
+var state=[];
+function render(){
+  var box=document.getElementById("questions");
+  QUESTIONS.forEach(function(q,i){
+    state.push({correct:false,tries:0,hints:0});
+    var d=document.createElement("div");
+    d.className="box q"; d.id="q"+i;
+    d.innerHTML='<div><span class="qnum">'+(i+1)+'.</span> '+q.t+'</div>'+
+      '<div class="row"><input type="text"'+(q.r?' placeholder="e.g. MMXXVI"':'')+' id="in'+i+'" aria-label="Answer to question '+(i+1)+'" autocomplete="off"> <span class="unit">'+q.u+'</span>'+
+      '<button type="button" class="check" data-i="'+i+'">Check</button>'+
+      '<button type="button" class="hint" data-i="'+i+'">Hint 💡</button>'+
+      '<button type="button" class="sol" data-i="'+i+'" style="display:none">Show solution</button></div>'+
+      '<div class="fb" id="fb'+i+'"></div><div class="hints" id="hints'+i+'"></div>'+
+      '<div class="solution" id="sol'+i+'"><strong>Solution:</strong> '+q.s+'</div>';
+    box.appendChild(d);
+  });
+  box.addEventListener("click",function(e){
+    var b=e.target; if(b.tagName!=="BUTTON")return;
+    var i=+b.getAttribute("data-i");
+    if(b.className==="check") check(i);
+    else if(b.className==="hint") hint(i);
+    else if(b.className==="sol") document.getElementById("sol"+i).style.display="block";
+  });
+  box.addEventListener("keydown",function(e){
+    if(e.key==="Enter"&&e.target.tagName==="INPUT"){ check(+e.target.id.slice(2)); }
+  });
+}
+function pick(arr){return arr[Math.floor(Math.random()*arr.length)];}
+function check(i){
+  var val=document.getElementById("in"+i).value;
+  var fb=document.getElementById("fb"+i), card=document.getElementById("q"+i);
+  if(val.trim()===""){fb.className="fb bad";fb.textContent="Type an answer first, Ace!";return;}
+  var isR=!!QUESTIONS[i].r;
+  if(isR&&!/^[ivxlcdm\s]+$/i.test(val)){fb.className="fb bad";fb.textContent="Use only Roman numeral letters: I, V, X, L, C, D, M.";return;}
+  if(!isR&&isNaN(parseAnswer(val))){fb.className="fb bad";fb.textContent="I can't read that as a number. Try something like 42, 3.5, 3/4 or 1 3/4.";return;}
+  state[i].tries++;
+  if(isR?isRomanCorrect(val,QUESTIONS[i].a):isCorrect(val,QUESTIONS[i].a)){
+    state[i].correct=true; card.className="box q right"; fb.className="fb good";
+    fb.textContent="✅ "+pick(PRAISE)+(state[i].tries===1?" (first try!)":"");
+  } else {
+    state[i].correct=false; card.className="box q wrong"; fb.className="fb bad";
+    fb.textContent="❌ "+pick(ENCOURAGE);
+    if(state[i].tries>=2) card.querySelector(".sol").style.display="inline-block";
+  }
+  updateScore();
+}
+function hint(i){
+  var q=QUESTIONS[i], s=state[i], hb=document.getElementById("hints"+i);
+  if(s.hints<q.h.length){
+    var p=document.createElement("p"); p.textContent="💡 Hint "+(s.hints+1)+": "+q.h[s.hints]; hb.appendChild(p); s.hints++;
+  }
+  if(s.hints>=q.h.length) document.querySelector("#q"+i+" .hint").disabled=true;
+  updateScore();
+}
+function counts(){
+  var c=0,first=0,h=0;
+  state.forEach(function(s){ if(s.correct){c++; if(s.tries===1)first++;} h+=s.hints; });
+  return {correct:c,first:first,hints:h};
+}
+function updateScore(){
+  var k=counts();
+  document.getElementById("scoreText").textContent="Score: "+k.correct+" / "+QUESTIONS.length+" correct · hints used: "+k.hints;
+}
+function finish(){
+  var k=counts(), n=QUESTIONS.length, pct=Math.round(100*k.correct/n);
+  var msg;
+  if(pct===100) msg="🏆 PERFECT SCORE! Incredible work, Ace. A real Norse navigator would be impressed!";
+  else if(pct>=85) msg="🌟 Outstanding, Ace! That's a Grade 6–7 level performance!";
+  else if(pct>=65) msg="💪 Great effort, Ace! Review the ones you missed and try them again.";
+  else if(pct>=40) msg="👍 Good start, Ace! These problems are tough. Use the hints and solutions to learn the tricks, then try again.";
+  else msg="🌱 These are challenge problems, well above grade level. Every great scientist started as a beginner! Go through the worked examples and try again, Ace!";
+  var f=document.getElementById("final");
+  f.style.display="block";
+  f.innerHTML="<h2 style='border:none;margin-top:0'>Final Score: "+k.correct+" / "+n+" ("+pct+"%)</h2>"+
+    "<p>Correct on the first try: "+k.first+" · Hints used: "+k.hints+"</p><p>"+msg+"</p>"+
+    "<p style='font-size:.85em;color:#546e7a'>Finished on "+new Date().toLocaleString("en-CA")+"</p>";
+  f.scrollIntoView({behavior:"smooth"});
+}
+render();
+updateScore();
+document.getElementById("finishBtn").addEventListener("click",finish);
+</script>
+<script src="../../assets/autosave.js"></script>
+</body>
+</html>

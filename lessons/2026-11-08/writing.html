@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Writing (Nov. 8): Museum Exhibit Label Set (Longships &amp; Legends) + Grammar Clinic</title>
+<style>
+  body{font-family:"Segoe UI",Verdana,Arial,sans-serif;font-size:20px;line-height:1.6;margin:0;background:#fff8f0;color:#2c2416}
+  .wrap{max-width:880px;margin:0 auto;padding:20px 18px 80px}
+  a.home{font-size:.9em;color:#bf360c}
+  h1{color:#e65100;font-size:2em;margin:10px 0}
+  h2{color:#ef6c00;margin-top:36px;border-bottom:3px solid #ffcc80;padding-bottom:4px}
+  h3{color:#ef6c00}
+  .box{background:#fff;border-radius:16px;padding:18px 22px;margin:16px 0;box-shadow:0 3px 10px rgba(0,0,0,.07)}
+  .tipbox{background:#fff8e1;border-left:8px solid #ffb300}
+  .senses{display:grid;gap:8px;margin:10px 0;grid-template-columns:repeat(auto-fit,minmax(140px,1fr))}
+  .senses .side{border-radius:14px;padding:10px 16px;background:#fff3e0}
+  .ts{background:#ffcc80;border-radius:5px;padding:1px 3px}
+  .ev{background:#c8e6c9;border-radius:5px;padding:1px 3px}
+  .ex{background:#ffe0b2;border-radius:5px;padding:1px 3px}
+  .cs{background:#e1bee7;border-radius:5px;padding:1px 3px}
+  .legend span{display:inline-block;margin:4px 8px 4px 0;font-size:.85em}
+  .model{font-family:Georgia,"Times New Roman",serif;font-size:1.05em;line-height:1.9}
+  .row{padding:10px 6px;border-bottom:1px dashed #ddd}
+  .row.right{background:#f1f8e9} .row.wrong{background:#fff5f5}
+  select{font-size:.9em;padding:5px 8px;border-radius:8px;border:2px solid #ffb74d;font-family:inherit}
+  .q{border-left:8px solid #b0bec5}
+  .q.right{border-left-color:#43a047;background:#f1f8e9}
+  .q.wrong{border-left-color:#e53935;background:#fff5f5}
+  .opt{display:block;width:100%;text-align:left;font-size:.95em;background:#fafafa;border:2px solid #e0e0e0;border-radius:10px;padding:8px 14px;margin:8px 0;cursor:pointer;font-family:inherit}
+  .opt:hover{border-color:#ffb74d;background:#fff}
+  .opt.sel-right{background:#c8e6c9;border-color:#43a047}
+  .opt.sel-wrong{background:#ffcdd2;border-color:#e53935}
+  .fb{margin-top:6px;font-weight:bold}
+  .fb.good{color:#2e7d32} .fb.bad{color:#c62828}
+  .explain{font-weight:normal;color:#e65100}
+  .bad-sent{font-family:Consolas,"Courier New",monospace;background:#ffebee;padding:6px 10px;border-radius:8px;display:inline-block;margin:6px 0}
+  input.fix{width:100%;box-sizing:border-box;font-size:1em;padding:8px 12px;border:2px solid #ffb74d;border-radius:10px;font-family:inherit}
+  button{font-size:.95em;padding:8px 16px;border:none;border-radius:10px;cursor:pointer;font-weight:bold;font-family:inherit}
+  .go{background:#ef6c00;color:#fff} .go:hover{background:#e65100}
+  .hint{background:#ffe082;color:#5d4037}
+  .blue{background:#1e88e5;color:#fff}
+  .purple{background:#8e24aa;color:#fff}
+  .grey{background:#cfd8dc;color:#263238}
+  .btnrow{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px}
+  textarea{width:100%;box-sizing:border-box;min-height:300px;font-size:1.05em;line-height:1.7;font-family:Georgia,"Times New Roman",serif;padding:14px;border:3px solid #ffb74d;border-radius:12px}
+  textarea:focus{outline:none;border-color:#ef6c00}
+  .counter{display:flex;flex-wrap:wrap;gap:20px;align-items:center;margin:8px 0;font-weight:bold}
+  .meter{flex:1;min-width:200px;height:18px;background:#e0e0e0;border-radius:9px;overflow:hidden}
+  .meter div{height:100%;width:0;background:#ffb300;transition:width .2s}
+  .checklist label{display:block;padding:6px 4px;cursor:pointer}
+  .checklist input{transform:scale(1.4);margin-right:10px}
+  .prompts label{display:block;background:#fff3e0;border-radius:10px;padding:10px 14px;margin:8px 0;cursor:pointer}
+  .prompts input{transform:scale(1.3);margin-right:8px}
+  #scoreBox{position:sticky;bottom:0;background:#e65100;color:#fff;border-radius:16px 16px 0 0;padding:12px 20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-top:30px}
+  .w5{display:grid;gap:8px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));margin:10px 0}
+  .w5 label{display:block;font-weight:bold;color:#e65100}
+  .w5 input{width:100%;box-sizing:border-box;font-size:.95em;padding:6px 10px;border:2px solid #ffb74d;border-radius:8px;font-family:inherit}
+  #printArea{display:none}
+  @media print{
+    body{background:#fff;font-size:14pt}
+    .wrap,#scoreBox{display:none !important}
+    #printArea{display:block;font-family:Georgia,serif;line-height:1.8}
+    #printArea h1{font-size:18pt;margin:0 0 6pt}
+    #printArea .meta{font-size:11pt;color:#444}
+    #printArea .text{white-space:pre-wrap;border-top:1px solid #999;padding-top:10pt;margin-top:10pt}
+    #printArea .lines{margin-top:24pt;border-top:1px solid #999;padding-top:6pt;font-size:11pt}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+<a class="home" href="../../index.html">&larr; Back to all lessons</a>
+<h1>✍️ Writing Week 42: Museum Exhibit Labels — Longships &amp; Legends 🏛️⛵</h1>
+<p>Yesterday you wrote a myth-vs-science essay. Today, Ace, you'll try a brand-new form: a <strong>museum exhibit label set</strong>. When you walk through a museum, the small cards beside each object are written by real writers called <em>curators</em> and <em>interpretive writers</em>. They have a tough job: explain a big idea in <strong>very few words</strong>, so that a busy visitor reads the label in about 30 seconds and walks away amazed — and accurate. Today you are the junior curator for an imaginary exhibit called <em>Longships &amp; Legends: The Norse in North America</em> at a Canadian history museum.</p>
+
+<h2>Part 1: The Lesson</h2>
+<div class="box">
+  <h3 style="margin-top:0">The six labels in a great exhibit set 🏛️</h3>
+  <p>An exhibit label set is a group of short, connected texts. Each label has <strong>one job</strong>. Together they tell one clear story.</p>
+  <div class="senses">
+    <div class="side"><strong>1. Exhibit title + intro panel:</strong> a catchy title and 2–3 sentences giving the <em>big idea</em></div>
+    <div class="side"><strong>2. Object label:</strong> name of the object, what it is made of, where and when it was found, and why it matters</div>
+    <div class="side"><strong>3. "How do we know?" label:</strong> the evidence — digging, dating, tree rings, sagas</div>
+    <div class="side"><strong>4. Myth-buster label:</strong> names a popular myth and corrects it with evidence</div>
+    <div class="side"><strong>5. People &amp; perspectives label:</strong> who else was there; respectful and fair to everyone</div>
+    <div class="side"><strong>6. Visitor question:</strong> invites the reader to think, look closely, or imagine</div>
+  </div>
+  <h3>Five rules real curators follow</h3>
+  <ul>
+    <li><strong>Short and strong:</strong> most labels are 25–60 words. Every word must earn its place.</li>
+    <li><strong>Lead with the wow:</strong> put the most interesting fact in the first sentence.</li>
+    <li><strong>Be accurate:</strong> use real dates, places and materials. If experts are not sure, say so ("may have," "historians think").</li>
+    <li><strong>Talk to the visitor:</strong> use concrete details they can see ("Look for the tiny hole in the centre").</li>
+    <li><strong>Keep your tenses steady:</strong> tell what happened long ago in the <em>past tense</em>; describe the object in front of you in the <em>present tense</em>. Don't switch back and forth inside one sentence.</li>
+  </ul>
+  <p><strong>Curator's rule:</strong> a visitor who reads only your titles and first sentences should still learn the big idea.</p>
+</div>
+
+<div class="box tipbox">
+  <h3 style="margin-top:0">Mini-lesson: past-tense consistency ⏳</h3>
+  <p>History writing mostly uses the <strong>past tense</strong>: <em>sailed, built, found, traded</em>. A common mistake is slipping into the present tense by accident.</p>
+  <p>❌ <em>The Norse <u>sailed</u> west and <u>build</u> a camp near the shore.</em><br>
+     ✅ <em>The Norse <u>sailed</u> west and <u>built</u> a camp near the shore.</em></p>
+  <p>Watch the tricky irregular verbs: <strong>build → built</strong>, <strong>find → found</strong>, <strong>sink → sank</strong>, <strong>steer → steered</strong>, <strong>ride → rode</strong>, <strong>bring → brought</strong>, <strong>leave → left</strong>, <strong>keep → kept</strong>.</p>
+  <p>It is fine to use the present tense for the object that is <em>still here today</em>: "This rivet <u>is</u> made of iron. A Norse shipbuilder <u>hammered</u> it about 1 000 years ago."</p>
+</div>
+
+<div class="box">
+  <h3 style="margin-top:0">Model Label Set (short version)</h3>
+  <p class="legend"><span class="ts">Title + intro</span><span class="ev">Object + evidence</span><span class="ex">Myth-buster</span><span class="cs">People + visitor question</span></p>
+  <p class="model">
+    <span class="ts"><strong>LONGSHIPS &amp; LEGENDS</strong><br>About 1 000 years ago, Norse sailors crossed the North Atlantic in open wooden ships. Their journey ended here, in Newfoundland.</span><br>
+    <span class="ev"><strong>Iron Boat Rivet</strong> · iron · found at L'Anse aux Meadows, 1960s<br>This small rivet once held a longship's oak planks together. Rivets like this were made by Norse smiths, so they help prove that Norse ships were repaired here.<br><strong>How do we know when?</strong> In 2021, scientists counted tree rings in wood cut with metal tools. The trees were cut in 1021 CE.</span><br>
+    <span class="ex"><strong>Myth-buster: Horned helmets?</strong><br>No! No Viking-era horned helmet has ever been found. The idea came from opera costumes in the 1800s.</span><br>
+    <span class="cs"><strong>Who was already here?</strong> Indigenous peoples had lived in this region for thousands of years before the Norse arrived. The sagas describe both trade and conflict.<br><strong>Your turn:</strong> If you crossed the ocean with no compass, what would you watch to find your way?</span>
+  </p>
+  <p><strong>Notice:</strong> the title is punchy; each label does one job; dates and materials are exact; the myth-buster gives evidence; history is told in the past tense while the object "is" here today.</p>
+</div>
+
+<h2>Part 2: Name That Label</h2>
+<div class="box">
+  <p>Each card comes from a student's exhibit called "Across the Whale Road." Choose which <strong>kind of label</strong> it is.</p>
+  <div id="labelRows"></div>
+  <div class="btnrow"><button type="button" class="go" id="checkLabels">Check my answers</button></div>
+  <div class="fb" id="labelFb"></div>
+</div>
+
+<h2>Part 3: Grammar Clinic ⛵</h2>
+<div class="box tipbox">Every curator needs a careful editor! <strong>Section A:</strong> pick the correct sentence. <strong>Section B:</strong> type the sentence again with <em>all</em> mistakes fixed. We use <strong>Canadian spelling</strong> (colour, centre, metre, honour, harbour). Today, watch <strong>past-tense consistency</strong> (built, found, sank), <strong>capital letters for proper nouns</strong> (Newfoundland, Leif Erikson, Greenland), <strong>commas with dates and in lists</strong>, <strong>apostrophes for possession</strong>, and <strong>who / which</strong>.</div>
+<h3>Section A: Pick the correct sentence</h3>
+<div id="gmc"></div>
+<h3>Section B: Fix the sentence</h3>
+<p>Retype the whole sentence correctly, with capital letters and punctuation. Each one has <strong>at least two</strong> mistakes.</p>
+<div id="gfix"></div>
+
+<h2>Part 4: Your Turn to Write</h2>
+<div class="box">
+  <h3 style="margin-top:0">Step 1: Choose your exhibit</h3>
+  <p>Pick <strong>one</strong> exhibit to curate. Use real facts from today's reading and math: longships, keels, oars and rivets, navigation by Sun, stars and seabirds, the sagas, Leif Erikson, L'Anse aux Meadows, the Ingstads, tree-ring dating to 1021 CE, and the horned-helmet myth!</p>
+  <div class="prompts" id="prompts">
+    <label><input type="radio" name="prompt" value="Option A: The Longship Gallery" checked> ⛵ <strong>Option A: The Longship Gallery.</strong> Your star object is a model longship (or its keel, an oar, or an iron rivet). Explain how its design helped the Norse cross the ocean.</label>
+    <label><input type="radio" name="prompt" value="Option B: The L'Anse aux Meadows Dig"> 🏚️ <strong>Option B: The L'Anse aux Meadows Dig.</strong> Your star object is the bronze cloak pin or the spindle whorl. Explain how the Ingstads' dig and tree-ring dating proved the Norse were here.</label>
+    <label><input type="radio" name="prompt" value="Option C: Myths vs Evidence Corner"> 🪖 <strong>Option C: Myths vs Evidence Corner.</strong> Your star object is the rounded Gjermundbu helmet. Bust the horned-helmet myth and one other "Viking" myth (for example, "they were only raiders").</label>
+  </div>
+  <p><strong>Plan your labels:</strong> jot a few words for each box. (These notes save with your writing.)</p>
+  <div class="w5" id="w5">
+    <div><label for="w5who">Exhibit title + big idea</label><input id="w5who" type="text" autocomplete="off"></div>
+    <div><label for="w5place">Star object (name, material, where/when found)</label><input id="w5place" type="text" autocomplete="off"></div>
+    <div><label for="w5facts">How do we know? (evidence)</label><input id="w5facts" type="text" autocomplete="off"></div>
+    <div><label for="w5senses">Myth to bust + the real evidence</label><input id="w5senses" type="text" autocomplete="off"></div>
+    <div><label for="w5feel">People &amp; perspectives (who else was there?)</label><input id="w5feel" type="text" autocomplete="off"></div>
+    <div><label for="w5closing">Visitor question</label><input id="w5closing" type="text" autocomplete="off"></div>
+  </div>
+
+  <h3>Step 2: Write your exhibit label set</h3>
+  <p><strong>Goal:</strong> <strong>200 to 320 words in total</strong>, split into <strong>six labels</strong>. Each label gets a <strong>bold-style heading</strong> (type it in CAPITALS) and is about <strong>25 to 60 words</strong>. Include at least <strong>three exact facts</strong> (a date, a place, a material, or a measurement), one <strong>"may have" or "historians think"</strong> for something experts are unsure about, and a <strong>visitor question</strong> at the end. Tell the history in the <strong>past tense</strong>. Bonus: use two words from today's spelling list (like <em>settlement</em> or <em>archaeological</em>) correctly!</p>
+  <p><button type="button" class="hint" id="templateBtn">📋 Add the layout for me</button></p>
+  <label for="essay"><strong>Write here, Ace:</strong></label>
+  <textarea id="essay" placeholder="EXHIBIT TITLE: ..."></textarea>
+  <div class="counter">
+    <span id="wc">0 words</span>
+    <span id="sc">0 sentences</span>
+    <div class="meter" aria-hidden="true"><div id="meterBar"></div></div>
+  </div>
+  <div class="fb" id="wcMsg">Aim for 200 to 320 words.</div>
+  <p style="font-size:.8em;color:#607d8b" id="saveNote">Your writing is saved automatically in this browser as you type.</p>
+
+  <h3>Self-check before you finish ✅</h3>
+  <div class="checklist" id="checklist">
+    <label><input type="checkbox"> My exhibit has a catchy <strong>title</strong> and an intro panel with the <strong>big idea</strong>.</label>
+    <label><input type="checkbox"> I wrote <strong>six labels</strong>, and each one does <strong>one job</strong>.</label>
+    <label><input type="checkbox"> My object label names the <strong>material</strong> and <strong>where/when</strong> it was found.</label>
+    <label><input type="checkbox"> I included at least <strong>three exact facts</strong> and used "may have" for anything uncertain.</label>
+    <label><input type="checkbox"> I busted a <strong>myth</strong> with real evidence and wrote about other people <strong>respectfully</strong>.</label>
+    <label><input type="checkbox"> My history stays in the <strong>past tense</strong> (built, found, sailed), and I end with a <strong>visitor question</strong>.</label>
+    <label><input type="checkbox"> I checked capital letters for proper nouns, commas, apostrophes, and <strong>Canadian spelling</strong> (colour, centre, harbour).</label>
+  </div>
+  <div class="btnrow">
+    <button type="button" class="blue" id="downloadBtn">⬇️ Download my writing (for Dad)</button>
+    <button type="button" class="purple" id="printBtn">🖨️ Print my writing</button>
+    <button type="button" class="grey" id="clearBtn">Start over</button>
+  </div>
+  <div class="fb" id="doneMsg"></div>
+</div>
+
+<div id="scoreBox"><span id="scoreText"></span><span>Keep going, Curator Ace! 🏛️</span></div>
+</div>
+
+<div id="printArea"></div>
+
+<script>
+var NAME="Ace";
+var PRAISE=["Nice work, Ace!","Correct! Great editing eye!","Yes! Ace fixed it!","Excellent, curator Ace!","Shipshape editing! ⛵"];
+function pick(a){return a[Math.floor(Math.random()*a.length)];}
+
+var LABELS=["Exhibit title + intro panel", "Object label", "\"How do we know?\" label", "Myth-buster label", "People & perspectives label", "Visitor question"];
+var LABEL_ITEMS=[
+ {s:"SPINDLE WHORL · soapstone · found at L'Anse aux Meadows. This small stone weight helped someone spin wool into thread. Look for the hole in the centre.", a:"Object label"},
+ {s:"Were Vikings only raiders? No. Most Norse people were farmers, fishers and traders, and their raids were only one part of their story.", a:"Myth-buster label"},
+ {s:"ACROSS THE WHALE ROAD: About 1 000 years ago, Norse sailors crossed the North Atlantic and reached Newfoundland. This is their story.", a:"Exhibit title + intro panel"},
+ {s:"Scientists counted tree rings in wood the Norse cut with metal blades. A solar storm marker from 993 proved the trees were cut in 1021 CE.", a:"\"How do we know?\" label"},
+ {s:"If you had to cross an ocean with no compass, what clues in the sky and sea would you watch?", a:"Visitor question"},
+ {s:"Indigenous peoples had lived in this land for thousands of years before the Norse arrived. The sagas describe both trade and conflict between them.", a:"People & perspectives label"}
+];
+var labelScore=0, labelChecked=false;
+function buildLabels(){
+  var box=document.getElementById("labelRows");
+  LABEL_ITEMS.forEach(function(it,i){
+    var d=document.createElement("div"); d.className="row"; d.id="lr"+i;
+    var sel='<select id="ls'+i+'" aria-label="Job of sentence '+(i+1)+'"><option value="">- choose -</option>';
+    LABELS.forEach(function(l){sel+='<option>'+l+'</option>';});
+    sel+='</select>';
+    d.innerHTML='<strong>'+(i+1)+'.</strong> '+it.s+'<br>'+sel+' <span id="lm'+i+'"></span>';
+    box.appendChild(d);
+  });
+}
+function checkLabels(){
+  var sc=0;
+  LABEL_ITEMS.forEach(function(it,i){
+    var ok=document.getElementById("ls"+i).value===it.a; if(ok)sc++;
+    document.getElementById("lr"+i).className="row "+(ok?"right":"wrong");
+    document.getElementById("lm"+i).textContent=ok?"✅":"❌";
+  });
+  labelScore=sc; labelChecked=true;
+  var fb=document.getElementById("labelFb");
+  if(sc===LABEL_ITEMS.length){fb.className="fb good";fb.textContent="🌟 "+sc+" / "+LABEL_ITEMS.length+". "+pick(PRAISE)+" You know exactly how a museum exhibit is built!";}
+  else{fb.className="fb bad";fb.textContent=sc+" / "+LABEL_ITEMS.length+". Hint: catchy name + big idea = title + intro; a material and where it was found = object label; tree rings, digging or dating = \"How do we know?\"; \"No!\" + correction = myth-buster; who else was there = people & perspectives; a question to the reader = visitor question.";}
+  updateScore();
+}
+
+var GMC=[
+ {q:"Which sentence keeps the <strong>past tense</strong> consistent?",
+  o:["The Norse sailed west and build a camp.", "The Norse sail west and built a camp.", "The Norse sailed west and built a camp.", "The Norse sailed west and builded a camp."],
+  a:2,e:"Both verbs should be past tense: <strong>sailed</strong> and <strong>built</strong> (the irregular past of <em>build</em>)."},
+ {q:"Which sentence uses the correct past tense of <strong>find</strong> and <strong>dig</strong>?",
+  o:["Archaeologists dug carefully and found a bronze pin.", "Archaeologists digged carefully and finded a bronze pin.", "Archaeologists dig carefully and found a bronze pin.", "Archaeologists dug carefully and finds a bronze pin."],
+  a:0,e:"<em>Dig → dug</em> and <em>find → found</em> are irregular. Keep both in the past tense."},
+ {q:"Which sentence uses <strong>capital letters for proper nouns</strong> correctly?",
+  o:["leif erikson sailed from greenland to Vinland.", "Leif Erikson sailed from Greenland to Vinland.", "Leif erikson sailed from Greenland to vinland.", "Leif Erikson Sailed From Greenland To Vinland."],
+  a:1,e:"Names of people and places (<strong>Leif Erikson, Greenland, Vinland</strong>) need capitals. Ordinary words like <em>sailed</em> do not."},
+ {q:"Which sentence uses commas with a <strong>date</strong> correctly?",
+  o:["On June 8 793, raiders reached Lindisfarne.", "On June, 8 793 raiders reached Lindisfarne.", "On June 8, 793, raiders reached Lindisfarne.", "On, June 8 793 raiders reached Lindisfarne."],
+  a:2,e:"Put a comma between the day and the year (<strong>June 8, 793</strong>), and another after the date when the sentence keeps going."},
+ {q:"Which sentence uses an <strong>apostrophe</strong> correctly?",
+  o:["The ships keel was made of oak.", "The ship's keel was made of oak.", "The ships' keel's was made of oak.", "The ship keel's was made of oak."],
+  a:1,e:"One ship owns the keel, so write <strong>ship's</strong>. <em>Keel</em> does not need an apostrophe."},
+ {q:"Which sentence uses <strong>who / which</strong> correctly?",
+  o:["Anne Stine Ingstad, which was an archaeologist, led the dig.", "The longship, who had sixteen oars, was fast.", "Anne Stine Ingstad, who was an archaeologist, led the dig.", "The longship, who was made of oak, was fast."],
+  a:2,e:"Use <strong>who</strong> for people and <strong>which</strong> for things: <em>Anne Stine Ingstad, who…</em>; <em>the longship, which…</em>"},
+ {q:"Which sentence uses <strong>Canadian spelling</strong> correctly?",
+  o:["The ship sailed into the harbor to honor the colorful chieftain.", "The ship sailed into the harbour to honour the colourful chieftain.", "The ship sailed into the harbour to honor the colorful chieftain.", "The ship sailed into the harbor to honour the colourful chieftian."],
+  a:1,e:"In Canada we prefer <strong>harbour</strong>, <strong>honour</strong> and <strong>colourful</strong>. And it's <strong>chieftain</strong>, not <em>chieftian</em>!"}
+];
+var gmcState=GMC.map(function(){return{answered:false,firstRight:false,done:false};});
+function buildGMC(){
+  var box=document.getElementById("gmc");
+  GMC.forEach(function(it,i){
+    var d=document.createElement("div"); d.className="box q"; d.id="g"+i;
+    var h='<div><strong>'+(i+1)+'.</strong> '+it.q+'</div>';
+    it.o.forEach(function(o,j){h+='<button type="button" class="opt" data-i="'+i+'" data-j="'+j+'">'+String.fromCharCode(65+j)+'. '+o+'</button>';});
+    h+='<div class="fb" id="gfb'+i+'"></div>';
+    d.innerHTML=h; box.appendChild(d);
+  });
+  box.addEventListener("click",function(e){
+    var b=e.target.closest?e.target.closest(".opt"):e.target; if(!b||!b.classList.contains("opt"))return;
+    var i=+b.getAttribute("data-i"), j=+b.getAttribute("data-j"), st=gmcState[i], it=GMC[i];
+    if(st.done)return;
+    var ok=j===it.a; if(!st.answered){st.answered=true;st.firstRight=ok;}
+    var fb=document.getElementById("gfb"+i);
+    if(ok){st.done=true;b.classList.add("sel-right");document.getElementById("g"+i).className="box q right";fb.className="fb good";fb.innerHTML="✅ "+pick(PRAISE)+' <span class="explain">'+it.e+'</span>';}
+    else{b.classList.add("sel-wrong");document.getElementById("g"+i).className="box q wrong";fb.className="fb bad";fb.textContent="❌ Not quite, Ace. Look closely and try again.";}
+    updateScore();
+  });
+}
+
+var GFIX=[
+ {bad:"the norse sailed to greenland and build farms",
+  ok:["The Norse sailed to Greenland and built farms."],
+  hint:"Capitalize <em>The</em>, <em>Norse</em> and <em>Greenland</em>. Change <em>build</em> to the past tense <em>built</em>. End with a period."},
+ {bad:"in 1960 helge ingstad find the site",
+  ok:["In 1960, Helge Ingstad found the site.","In 1960 Helge Ingstad found the site."],
+  hint:"Capitalize the first word and the person's name. Use the past tense <em>found</em>. A comma after <em>In 1960</em> is a good idea. End with a period."},
+ {bad:"the ships sail was made of wool",
+  ok:["The ship's sail was made of wool."],
+  hint:"Capitalize the first word. One ship owns the sail, so it needs an apostrophe: <em>ship's</em>. End with a period."},
+ {bad:"they traded furs ivory and iron tools",
+  ok:["They traded furs, ivory, and iron tools.","They traded furs, ivory and iron tools."],
+  hint:"Capitalize the first word. Put commas between the items in the list. End with a period."}
+];
+
+var gfixState=GFIX.map(function(){return{tries:0,correct:false,firstRight:false};});
+function norm(s){return s.replace(/[\u2018\u2019\u02BC]/g,"'").replace(/[\u201C\u201D]/g,'"').replace(/\s+/g," ").trim();}
+function checkFixAnswer(i,val){var v=norm(val);return GFIX[i].ok.some(function(a){return norm(a)===v;});}
+function buildGFix(){
+  var box=document.getElementById("gfix");
+  GFIX.forEach(function(it,i){
+    var d=document.createElement("div"); d.className="box q"; d.id="f"+i;
+    d.innerHTML='<div><strong>'+(i+1)+'.</strong> Fix: <span class="bad-sent">'+it.bad+'</span></div>'+
+     '<input class="fix" type="text" id="fi'+i+'" autocomplete="off" spellcheck="false" aria-label="Corrected sentence '+(i+1)+'">'+
+     '<div class="btnrow"><button type="button" class="go" data-act="check" data-i="'+i+'">Check</button><button type="button" class="hint" data-act="hint" data-i="'+i+'">Hint 💡</button><button type="button" class="grey" data-act="show" data-i="'+i+'" style="display:none">Show answer</button></div>'+
+     '<div class="fb" id="ffb'+i+'"></div>';
+    box.appendChild(d);
+  });
+  box.addEventListener("click",function(e){
+    var b=e.target; if(b.tagName!=="BUTTON")return;
+    var i=+b.getAttribute("data-i"), act=b.getAttribute("data-act"), fb=document.getElementById("ffb"+i);
+    if(act==="hint"){fb.className="fb";fb.style.color="#5d4037";fb.textContent="💡 "+GFIX[i].hint;return;}
+    fb.style.color="";
+    if(act==="show"){fb.className="fb";fb.innerHTML='Answer: <em>'+GFIX[i].ok[0]+'</em>'+(GFIX[i].ok.length>1?' (other correct versions are accepted too)':'');return;}
+    fixCheck(i);
+  });
+  box.addEventListener("keydown",function(e){if(e.key==="Enter"&&e.target.classList.contains("fix"))fixCheck(+e.target.id.slice(2));});
+}
+function fixCheck(i){
+  var val=document.getElementById("fi"+i).value, fb=document.getElementById("ffb"+i), st=gfixState[i];
+  fb.style.color="";
+  if(!val.trim()){fb.className="fb bad";fb.textContent="Type the corrected sentence first, Ace!";return;}
+  st.tries++;
+  if(checkFixAnswer(i,val)){ if(st.tries===1)st.firstRight=true; st.correct=true; document.getElementById("f"+i).className="box q right"; fb.className="fb good"; fb.textContent="✅ "+pick(PRAISE); }
+  else { st.correct=false; document.getElementById("f"+i).className="box q wrong"; fb.className="fb bad"; fb.textContent="❌ Not quite. Check every capital letter, apostrophe, comma, and spelling. Try again!"; if(st.tries>=2)document.querySelector('#f'+i+' [data-act=show]').style.display="inline-block"; }
+  updateScore();
+}
+
+function updateScore(){
+  var g=0; gmcState.forEach(function(s){if(s.firstRight)g++;});
+  var f=0; gfixState.forEach(function(s){if(s.correct)f++;});
+  var total=LABEL_ITEMS.length+GMC.length+GFIX.length, got=labelScore+g+f;
+  document.getElementById("scoreText").textContent="Score: "+got+" / "+total+"  (labels "+(labelChecked?labelScore:"-")+"/"+LABEL_ITEMS.length+" · grammar A "+g+"/"+GMC.length+" · grammar B "+f+"/"+GFIX.length+")";
+}
+
+var W5=["who","place","facts","senses","feel","closing"];
+function w5Save(){try{localStorage.setItem(KEY+"-5w",JSON.stringify(W5.map(function(k){return document.getElementById("w5"+k).value;})));}catch(e){}}
+function w5Restore(){try{var d=JSON.parse(localStorage.getItem(KEY+"-5w")||"null");if(d)d.forEach(function(x,i){document.getElementById("w5"+W5[i]).value=x;});}catch(e){}}
+function w5Summary(){return W5.map(function(k){return k.charAt(0).toUpperCase()+k.slice(1)+": "+document.getElementById("w5"+k).value;}).join("\n");}
+function addTemplate(){
+  var t=document.getElementById("essay");
+  var tpl="EXHIBIT TITLE + INTRO PANEL:\n\nOBJECT LABEL (name · material · where/when found):\n\nHOW DO WE KNOW?:\n\nMYTH-BUSTER:\n\nPEOPLE & PERSPECTIVES:\n\nVISITOR QUESTION:\n\ncurated by "+NAME;
+  if(t.value.trim()&&!confirm("Add the exhibit-label layout below what you've already written?"))return;
+  t.value=(t.value.trim()?t.value.replace(/\s+$/,"")+"\n\n":"")+tpl; updateCount(); t.focus();
+}
+var KEY="ace-writing-2026-11-08";
+function countWords(t){var m=t.trim().match(/[A-Za-zÀ-ÿ0-9]+(?:['’\-][A-Za-zÀ-ÿ0-9]+)*/g);return m?m.length:0;}
+function countSentences(t){var m=t.match(/[^.!?]*[A-Za-z0-9][^.!?]*[.!?]+/g);return m?m.length:0;}
+function currentPrompt(){var r=document.querySelector('input[name=prompt]:checked');return r?r.value:"";}
+function updateCount(){
+  var t=document.getElementById("essay").value, w=countWords(t), s=countSentences(t);
+  document.getElementById("wc").textContent=w+(w===1?" word":" words");
+  document.getElementById("sc").textContent=s+(s===1?" sentence":" sentences");
+  var bar=document.getElementById("meterBar"); bar.style.width=Math.min(100,w/320*100)+"%";
+  var msg=document.getElementById("wcMsg");
+  if(w<200){bar.style.background="#ffb300";msg.className="fb";msg.textContent=w===0?"Aim for 200 to 320 words.":"Keep going, Ace! "+(200-w)+" more words to reach the goal.";}
+  else if(w<=320){bar.style.background="#43a047";msg.className="fb good";msg.textContent="🎯 You're in the target zone! Nice work, Ace!";}
+  else{bar.style.background="#1e88e5";msg.className="fb";msg.textContent="Wow, that's a lot of writing! Curators make every word count! Could any sentences be cut?";}
+  try{localStorage.setItem(KEY,JSON.stringify({text:t,prompt:currentPrompt(),checks:checkStates()}));}catch(e){document.getElementById("saveNote").textContent="(This browser can't auto-save here, so use the Download button before closing!)";}
+}
+function checkStates(){return Array.prototype.map.call(document.querySelectorAll("#checklist input"),function(c){return c.checked;});}
+function checklistText(){
+  return Array.prototype.map.call(document.querySelectorAll("#checklist label"),function(l){return (l.querySelector("input").checked?"[x] ":"[ ] ")+l.textContent.trim();}).join("\n");
+}
+function buildReport(){
+  var t=document.getElementById("essay").value;
+  return "Writing Week 42: "+NAME+"\nDate: "+new Date().toLocaleString("en-CA")+"\nPrompt: "+currentPrompt()+
+    "\nWords: "+countWords(t)+"   Sentences: "+countSentences(t)+"\nPlanning notes:\n"+w5Summary()+
+    "\n\n----- "+NAME+"'s writing -----\n\n"+t+"\n\n----- Self-check -----\n"+checklistText()+
+    "\n\n----- Parent feedback -----\n\n\n";
+}
+function download(){
+  var t=document.getElementById("essay").value;
+  if(!t.trim()){document.getElementById("doneMsg").className="fb bad";document.getElementById("doneMsg").textContent="Write something first, Ace!";return;}
+  var blob=new Blob([buildReport().replace(/\n/g,"\r\n")],{type:"text/plain;charset=utf-8"});
+  var a=document.createElement("a"); a.href=URL.createObjectURL(blob); a.download=NAME+"-writing-2026-11-08"+".txt";
+  document.body.appendChild(a); a.click();
+  setTimeout(function(){URL.revokeObjectURL(a.href);a.remove();},1000);
+  var dm=document.getElementById("doneMsg"); dm.className="fb good"; dm.textContent="📄 Saved! Look in your Downloads folder and show Dad. Great job finishing, Ace!";
+}
+function esc(s){return s.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");}
+function printIt(){
+  var t=document.getElementById("essay").value;
+  if(!t.trim()){document.getElementById("doneMsg").className="fb bad";document.getElementById("doneMsg").textContent="Write something first, Ace!";return;}
+  document.getElementById("printArea").innerHTML="<h1>Writing Week 42: "+NAME+"</h1><div class='meta'>"+esc(new Date().toLocaleString("en-CA"))+"<br><strong>Prompt:</strong> "+esc(currentPrompt())+"<br>Words: "+countWords(t)+" · Sentences: "+countSentences(t)+"</div><div class='text'>"+esc(t)+"</div><div class='lines'><strong>Self-check:</strong><br>"+esc(checklistText()).replace(/\n/g,"<br>")+"</div><div class='lines'><strong>Parent feedback:</strong><br><br><br><br></div>";
+  window.print();
+}
+function restore(){
+  try{var d=JSON.parse(localStorage.getItem(KEY)||"null"); if(!d)return;
+    document.getElementById("essay").value=d.text||"";
+    Array.prototype.forEach.call(document.querySelectorAll("input[name=prompt]"),function(r){r.checked=(r.value===d.prompt);});
+    if(!document.querySelector("input[name=prompt]:checked"))document.querySelector("input[name=prompt]").checked=true;
+    var cs=document.querySelectorAll("#checklist input"); (d.checks||[]).forEach(function(v,i){if(cs[i])cs[i].checked=v;});
+  }catch(e){}
+}
+buildLabels(); buildGMC(); buildGFix(); restore(); w5Restore(); updateCount(); updateScore();
+W5.forEach(function(k){document.getElementById("w5"+k).addEventListener("input",w5Save);});
+document.getElementById("templateBtn").addEventListener("click",addTemplate);
+document.getElementById("checkLabels").addEventListener("click",checkLabels);
+document.getElementById("essay").addEventListener("input",updateCount);
+document.getElementById("checklist").addEventListener("change",function(){updateCount(); if(checkStates().every(Boolean)){var dm=document.getElementById("doneMsg");dm.className="fb good";dm.textContent="✅ All boxes checked! Now download or print it for Dad. Awesome work, Ace!";}});
+document.getElementById("prompts").addEventListener("change",updateCount);
+document.getElementById("downloadBtn").addEventListener("click",download);
+document.getElementById("printBtn").addEventListener("click",printIt);
+document.getElementById("clearBtn").addEventListener("click",function(){ if(confirm("Erase your writing and start over?")){document.getElementById("essay").value="";Array.prototype.forEach.call(document.querySelectorAll("#checklist input"),function(c){c.checked=false;});document.getElementById("doneMsg").textContent="";updateCount();} });
+</script>
+<script src="../../assets/autosave.js"></script>
+</body>
+</html>
