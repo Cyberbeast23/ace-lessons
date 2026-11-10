@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Writing (Nov. 10): Biographical Sketch (A Life That Changed the World) + Grammar Clinic</title>
+<style>
+  body{font-family:"Segoe UI",Verdana,Arial,sans-serif;font-size:20px;line-height:1.6;margin:0;background:#fff8f0;color:#2c2416}
+  .wrap{max-width:880px;margin:0 auto;padding:20px 18px 80px}
+  a.home{font-size:.9em;color:#bf360c}
+  h1{color:#e65100;font-size:2em;margin:10px 0}
+  h2{color:#ef6c00;margin-top:36px;border-bottom:3px solid #ffcc80;padding-bottom:4px}
+  h3{color:#ef6c00}
+  .box{background:#fff;border-radius:16px;padding:18px 22px;margin:16px 0;box-shadow:0 3px 10px rgba(0,0,0,.07)}
+  .tipbox{background:#fff8e1;border-left:8px solid #ffb300}
+  .senses{display:grid;gap:8px;margin:10px 0;grid-template-columns:repeat(auto-fit,minmax(140px,1fr))}
+  .senses .side{border-radius:14px;padding:10px 16px;background:#fff3e0}
+  .ts{background:#ffcc80;border-radius:5px;padding:1px 3px}
+  .ev{background:#c8e6c9;border-radius:5px;padding:1px 3px}
+  .ex{background:#ffe0b2;border-radius:5px;padding:1px 3px}
+  .cs{background:#e1bee7;border-radius:5px;padding:1px 3px}
+  .legend span{display:inline-block;margin:4px 8px 4px 0;font-size:.85em}
+  .model{font-family:Georgia,"Times New Roman",serif;font-size:1.05em;line-height:1.9}
+  .row{padding:10px 6px;border-bottom:1px dashed #ddd}
+  .row.right{background:#f1f8e9} .row.wrong{background:#fff5f5}
+  select{font-size:.9em;padding:5px 8px;border-radius:8px;border:2px solid #ffb74d;font-family:inherit}
+  .q{border-left:8px solid #b0bec5}
+  .q.right{border-left-color:#43a047;background:#f1f8e9}
+  .q.wrong{border-left-color:#e53935;background:#fff5f5}
+  .opt{display:block;width:100%;text-align:left;font-size:.95em;background:#fafafa;border:2px solid #e0e0e0;border-radius:10px;padding:8px 14px;margin:8px 0;cursor:pointer;font-family:inherit}
+  .opt:hover{border-color:#ffb74d;background:#fff}
+  .opt.sel-right{background:#c8e6c9;border-color:#43a047}
+  .opt.sel-wrong{background:#ffcdd2;border-color:#e53935}
+  .fb{margin-top:6px;font-weight:bold}
+  .fb.good{color:#2e7d32} .fb.bad{color:#c62828}
+  .explain{font-weight:normal;color:#e65100}
+  .bad-sent{font-family:Consolas,"Courier New",monospace;background:#ffebee;padding:6px 10px;border-radius:8px;display:inline-block;margin:6px 0}
+  input.fix{width:100%;box-sizing:border-box;font-size:1em;padding:8px 12px;border:2px solid #ffb74d;border-radius:10px;font-family:inherit}
+  button{font-size:.95em;padding:8px 16px;border:none;border-radius:10px;cursor:pointer;font-weight:bold;font-family:inherit}
+  .go{background:#ef6c00;color:#fff} .go:hover{background:#e65100}
+  .hint{background:#ffe082;color:#5d4037}
+  .blue{background:#1e88e5;color:#fff}
+  .purple{background:#8e24aa;color:#fff}
+  .grey{background:#cfd8dc;color:#263238}
+  .btnrow{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px}
+  textarea{width:100%;box-sizing:border-box;min-height:300px;font-size:1.05em;line-height:1.7;font-family:Georgia,"Times New Roman",serif;padding:14px;border:3px solid #ffb74d;border-radius:12px}
+  textarea:focus{outline:none;border-color:#ef6c00}
+  .counter{display:flex;flex-wrap:wrap;gap:20px;align-items:center;margin:8px 0;font-weight:bold}
+  .meter{flex:1;min-width:200px;height:18px;background:#e0e0e0;border-radius:9px;overflow:hidden}
+  .meter div{height:100%;width:0;background:#ffb300;transition:width .2s}
+  .checklist label{display:block;padding:6px 4px;cursor:pointer}
+  .checklist input{transform:scale(1.4);margin-right:10px}
+  .prompts label{display:block;background:#fff3e0;border-radius:10px;padding:10px 14px;margin:8px 0;cursor:pointer}
+  .prompts input{transform:scale(1.3);margin-right:8px}
+  #scoreBox{position:sticky;bottom:0;background:#e65100;color:#fff;border-radius:16px 16px 0 0;padding:12px 20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-top:30px}
+  .w5{display:grid;gap:8px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));margin:10px 0}
+  .w5 label{display:block;font-weight:bold;color:#e65100}
+  .w5 input{width:100%;box-sizing:border-box;font-size:.95em;padding:6px 10px;border:2px solid #ffb74d;border-radius:8px;font-family:inherit}
+  #printArea{display:none}
+  @media print{
+    body{background:#fff;font-size:14pt}
+    .wrap,#scoreBox{display:none !important}
+    #printArea{display:block;font-family:Georgia,serif;line-height:1.8}
+    #printArea h1{font-size:18pt;margin:0 0 6pt}
+    #printArea .meta{font-size:11pt;color:#444}
+    #printArea .text{white-space:pre-wrap;border-top:1px solid #999;padding-top:10pt;margin-top:10pt}
+    #printArea .lines{margin-top:24pt;border-top:1px solid #999;padding-top:6pt;font-size:11pt}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+<a class="home" href="../../index.html">&larr; Back to all lessons</a>
+<h1>✍️ Writing Week 44: Biographical Sketch — A Life That Changed the World 🎨📜</h1>
+<p>Yesterday you wrote a public service announcement. Today, Ace, you'll write a <strong>biographical sketch</strong>: a short, true piece of writing about one real person's life. A biography is more than a list of dates. A great biographer chooses the <em>moments that matter</em>, backs them up with facts, and helps the reader understand <strong>why this person is still worth remembering</strong>. You just read about Leonardo da Vinci; now it's your turn to be the biographer.</p>
+
+<h2>Part 1: The Lesson</h2>
+<div class="box">
+  <h3 style="margin-top:0">The six parts of a strong biographical sketch 📜</h3>
+  <p>A biographical sketch tells a life mostly in <strong>time order</strong>, but it is built around one big idea about the person (your <strong>controlling idea</strong>), like "Leonardo's curiosity connected art and science."</p>
+  <div class="senses">
+    <div class="side"><strong>1. Lead:</strong> a vivid moment, image or surprising fact that pulls the reader in, plus your controlling idea</div>
+    <div class="side"><strong>2. Early life:</strong> when and where the person was born, and what shaped them as a young person</div>
+    <div class="side"><strong>3. Turning point:</strong> the moment or choice that set their life in a new direction</div>
+    <div class="side"><strong>4. Achievement with evidence:</strong> what they did, with exact facts (dates, numbers, names of works)</div>
+    <div class="side"><strong>5. Challenge or setback:</strong> a problem, failure or obstacle and how they responded</div>
+    <div class="side"><strong>6. Legacy:</strong> why the person still matters today, tied back to your controlling idea</div>
+  </div>
+  <h3>Four tricks biographers use</h3>
+  <ul>
+    <li><strong>Choose, don't list:</strong> pick 3–4 key moments instead of every event.</li>
+    <li><strong>Time transitions:</strong> <em>At fourteen…, A few years later…, By 1503…, After his death…</em> keep the reader on the timeline.</li>
+    <li><strong>Show character through actions:</strong> instead of "he was curious," show him watching water swirl around rocks.</li>
+    <li><strong>Stay fair and accurate:</strong> separate facts from legends ("Legend says…") and never invent quotations.</li>
+  </ul>
+  <p><strong>Biographer's rule:</strong> every paragraph should help prove your controlling idea about the person.</p>
+</div>
+
+<div class="box tipbox">
+  <h3 style="margin-top:0">Mini-lesson: appositives and verb tense 🔧</h3>
+  <p>An <strong>appositive</strong> is a noun phrase that renames the noun beside it. When it adds extra information, set it off with <strong>commas</strong>: <em>Leonardo<u>, a left-handed artist,</u> wrote from right to left.</em> / <em>He trained with Verrocchio<u>, a master painter in Florence</u>.</em></p>
+  <p><strong>Verb tense:</strong> tell finished events in the <strong>past tense</strong> (<em>He <u>painted</u> the Mona Lisa.</em>). Use the <strong>present tense</strong> only for things that are still true today (<em>The painting <u>hangs</u> in the Louvre. His notebooks <u>show</u> his curiosity.</em>). Don't switch tenses in the middle of an event.</p>
+  <p>❌ <em>In 1466 Leonardo moves to Florence and joined a workshop.</em><br>
+     ✅ <em>In 1466 Leonardo <u>moved</u> to Florence and <u>joined</u> a workshop.</em></p>
+  <p>Dates bonus: put a comma between the day and the year, and after the year in the middle of a sentence: <em>On April 15, 1452, Leonardo was born.</em></p>
+</div>
+
+<div class="box">
+  <h3 style="margin-top:0">Model biographical sketch (about 190 words)</h3>
+  <p class="legend"><span class="ts">Lead + controlling idea</span><span class="ev">Early life + turning point</span><span class="ex">Achievement + challenge</span><span class="cs">Legacy</span></p>
+  <p class="model">
+    <span class="ts">Imagine a notebook where a flying machine, a human heart and a shopping list share one page, all written backward. Its owner, Leonardo da Vinci, proved that curiosity can connect art and science.</span>
+    <span class="ev">Leonardo was born in 1452 near Vinci, a small town in Italy. At about fourteen, he became an apprentice to Andrea del Verrocchio, a master artist in Florence. In that busy workshop, he learned to grind pigments and draw faces, but he also began asking how the world worked.</span>
+    <span class="ex">Leonardo painted the <em>Mona Lisa</em>, which now hangs in the Louvre, using soft blending called sfumato. To draw bodies accurately, he dissected them and sketched the spine and heart. Not everything worked: <em>The Last Supper</em> began to flake because his experimental paint did not bond with the wall.</span>
+    <span class="cs">Today, about seven thousand pages of his notes survive. They remind us that looking closely and asking "why?" is the first step for both an artist and a scientist.</span>
+  </p>
+  <p><strong>Notice:</strong> the lead starts with a picture and ends with the controlling idea; appositives (<em>a small town in Italy</em>, <em>a master artist in Florence</em>) add facts smoothly; finished events are in the past tense, but "hangs" and "survive" are present because they are still true; the ending connects back to curiosity.</p>
+</div>
+
+<h2>Part 2: Name That Biography Part</h2>
+<div class="box">
+  <p>Each line comes from a student's biographical sketch of <strong>Emily Carr</strong>, the BC painter. Choose which <strong>part of the biography</strong> it is.</p>
+  <div id="labelRows"></div>
+  <div class="btnrow"><button type="button" class="go" id="checkLabels">Check my answers</button></div>
+  <div class="fb" id="labelFb"></div>
+</div>
+
+<h2>Part 3: Grammar Clinic 🖌️</h2>
+<div class="box tipbox">Every biographer needs a careful editor! <strong>Section A:</strong> pick the correct sentence. <strong>Section B:</strong> type the sentence again with <em>all</em> mistakes fixed. We use <strong>Canadian spelling</strong> (colour, centre, armour, honour, practise). Today, watch <strong>commas around appositives</strong>, <strong>consistent past tense</strong>, <strong>commas in dates</strong>, <strong>capital letters for proper nouns</strong> (Renaissance, Italy, Louvre), <strong>who's / whose</strong>, and <strong>its / it's</strong>.</div>
+<h3>Section A: Pick the correct sentence</h3>
+<div id="gmc"></div>
+<h3>Section B: Fix the sentence</h3>
+<p>Retype the whole sentence correctly, with capital letters and punctuation. Each one has <strong>at least two</strong> mistakes.</p>
+<div id="gfix"></div>
+
+<h2>Part 4: Your Turn to Write</h2>
+<div class="box">
+  <h3 style="margin-top:0">Step 1: Choose your person</h3>
+  <p>Pick <strong>one</strong> person. Use only facts you are sure of (from today's reading, the facts below, or a book or website Dad checks with you). Never make up quotations!</p>
+  <div class="prompts" id="prompts">
+    <label><input type="radio" name="prompt" value="Option A: Leonardo da Vinci (artist, inventor, anatomist)" checked> 🎨 <strong>Option A: Leonardo da Vinci.</strong> Use today's reading: born 1452 near Vinci; apprentice to Verrocchio at about 14; studied flight, water, light and anatomy; <em>Mona Lisa</em> (Louvre) and <em>The Last Supper</em> (Milan); died 1519 in France; about 7 000 notebook pages survive.</label>
+    <label><input type="radio" name="prompt" value="Option B: Emily Carr (BC painter and writer)"> 🌲 <strong>Option B: Emily Carr.</strong> Born 1871 in Victoria, BC; studied art in San Francisco, England and France; painted BC's forests and the villages and totem poles of Indigenous communities on the coast; for years few people bought her work, and she ran a boarding house to earn money; she became famous in her late fifties after a 1927 exhibition in Ottawa; her book <em>Klee Wyck</em> won a Governor General's Award in 1941; died 1945.</label>
+    <label><input type="radio" name="prompt" value="Option C: Frederick Banting (doctor, discovered insulin)"> 🩺 <strong>Option C: Frederick Banting.</strong> Born 1891 in Alliston, Ontario; a doctor who served in the First World War; in 1921 at the University of Toronto, he and Charles Best began research that led to insulin, a treatment for diabetes; a 14-year-old boy, Leonard Thompson, was the first person treated with it in 1922; Banting shared the 1923 Nobel Prize in Physiology or Medicine; he and his teammates sold the patent to the university for $1 each so more people could get insulin; died 1941.</label>
+  </div>
+  <p><strong>Plan your sketch:</strong> jot a few words for each box. (These notes save with your writing.)</p>
+  <div class="w5" id="w5">
+    <div><label for="w5who">Controlling idea (one sentence about this person)</label><input id="w5who" type="text" autocomplete="off"></div>
+    <div><label for="w5place">Lead (vivid moment or surprising fact)</label><input id="w5place" type="text" autocomplete="off"></div>
+    <div><label for="w5facts">Early life (when, where, what shaped them)</label><input id="w5facts" type="text" autocomplete="off"></div>
+    <div><label for="w5senses">Turning point</label><input id="w5senses" type="text" autocomplete="off"></div>
+    <div><label for="w5feel">Achievement + a challenge (with exact facts)</label><input id="w5feel" type="text" autocomplete="off"></div>
+    <div><label for="w5closing">Legacy (why they matter today)</label><input id="w5closing" type="text" autocomplete="off"></div>
+  </div>
+
+  <h3>Step 2: Write your biographical sketch</h3>
+  <p><strong>Goal:</strong> <strong>220 to 350 words</strong> in <strong>4 or 5 paragraphs</strong>: a lead with your controlling idea, early life + turning point, achievement(s) with exact facts, a challenge or setback, and a legacy ending that ties back to your controlling idea. Use at least <strong>two appositives</strong> with commas, at least <strong>three time transitions</strong>, and the <strong>past tense</strong> for finished events. Then add <strong>2–3 sentences to Dad</strong> explaining why you chose this person. Bonus: use two words from today's spelling list (like <em>apprentice</em> or <em>masterpiece</em>) correctly!</p>
+  <p><button type="button" class="hint" id="templateBtn">📋 Add the layout for me</button></p>
+  <label for="essay"><strong>Write here, Ace:</strong></label>
+  <textarea id="essay" placeholder="Title: ..."></textarea>
+  <div class="counter">
+    <span id="wc">0 words</span>
+    <span id="sc">0 sentences</span>
+    <div class="meter" aria-hidden="true"><div id="meterBar"></div></div>
+  </div>
+  <div class="fb" id="wcMsg">Aim for 220 to 350 words.</div>
+  <p style="font-size:.8em;color:#607d8b" id="saveNote">Your writing is saved automatically in this browser as you type.</p>
+
+  <h3>Self-check before you finish ✅</h3>
+  <div class="checklist" id="checklist">
+    <label><input type="checkbox"> My lead pulls the reader in and states my <strong>controlling idea</strong>.</label>
+    <label><input type="checkbox"> I told the life mostly in <strong>time order</strong> with at least <strong>three time transitions</strong>.</label>
+    <label><input type="checkbox"> I included <strong>exact facts</strong> (dates, places, names of works or discoveries).</label>
+    <label><input type="checkbox"> I included a <strong>challenge or setback</strong> and how the person responded.</label>
+    <label><input type="checkbox"> I used at least <strong>two appositives</strong>, set off with commas.</label>
+    <label><input type="checkbox"> Finished events are in the <strong>past tense</strong>; only things still true today are in the present.</label>
+    <label><input type="checkbox"> My ending explains the person's <strong>legacy</strong>, and I checked Canadian spelling (colour, centre, honour).</label>
+  </div>
+  <div class="btnrow">
+    <button type="button" class="blue" id="downloadBtn">⬇️ Download my writing (for Dad)</button>
+    <button type="button" class="purple" id="printBtn">🖨️ Print my writing</button>
+    <button type="button" class="grey" id="clearBtn">Start over</button>
+  </div>
+  <div class="fb" id="doneMsg"></div>
+</div>
+
+<div id="scoreBox"><span id="scoreText"></span><span>Keep going, biographer Ace! 📜</span></div>
+</div>
+
+<div id="printArea"></div>
+
+<script>
+var NAME="Ace";
+var PRAISE=["Nice work, Ace!","Correct! Great editing eye!","Yes! Ace fixed it!","Excellent, biographer Ace!","Bravo! A masterpiece of editing! 🎨"];
+function pick(a){return a[Math.floor(Math.random()*a.length)];}
+
+var LABELS=["Lead", "Early life", "Turning point", "Achievement with evidence", "Challenge or setback", "Legacy"];
+var LABEL_ITEMS=[
+ {s:"Emily Carr was born in 1871 in Victoria, British Columbia, and as a girl she loved to sketch animals and wander in the woods.", a:"Early life"},
+ {s:"Today her paintings hang in galleries across Canada, and a university in Vancouver is named after her, reminding us that an artist's own voice can outlast years of doubt.", a:"Legacy"},
+ {s:"For years almost nobody bought her paintings, so she ran a boarding house to pay her bills and had little time to paint.", a:"Challenge or setback"},
+ {s:"In 1927, when she was in her fifties, a major exhibition in Ottawa showed her work beside the Group of Seven, and her life as an artist changed.", a:"Turning point"},
+ {s:"Picture a woman pushing an old baby carriage full of paints through a dark, dripping rainforest, with a monkey named Woo on her shoulder.", a:"Lead"},
+ {s:"Her book <em>Klee Wyck</em> won a Governor General's Award in 1941, and her swirling forest paintings, such as <em>Big Raven</em>, became famous.", a:"Achievement with evidence"}
+];
+var labelScore=0, labelChecked=false;
+function buildLabels(){
+  var box=document.getElementById("labelRows");
+  LABEL_ITEMS.forEach(function(it,i){
+    var d=document.createElement("div"); d.className="row"; d.id="lr"+i;
+    var sel='<select id="ls'+i+'" aria-label="Job of sentence '+(i+1)+'"><option value="">- choose -</option>';
+    LABELS.forEach(function(l){sel+='<option>'+l+'</option>';});
+    sel+='</select>';
+    d.innerHTML='<strong>'+(i+1)+'.</strong> '+it.s+'<br>'+sel+' <span id="lm'+i+'"></span>';
+    box.appendChild(d);
+  });
+}
+function checkLabels(){
+  var sc=0;
+  LABEL_ITEMS.forEach(function(it,i){
+    var ok=document.getElementById("ls"+i).value===it.a; if(ok)sc++;
+    document.getElementById("lr"+i).className="row "+(ok?"right":"wrong");
+    document.getElementById("lm"+i).textContent=ok?"✅":"❌";
+  });
+  labelScore=sc; labelChecked=true;
+  var fb=document.getElementById("labelFb");
+  if(sc===LABEL_ITEMS.length){fb.className="fb good";fb.textContent="🌟 "+sc+" / "+LABEL_ITEMS.length+". "+pick(PRAISE)+" You know exactly how a biography is built!";}
+  else{fb.className="fb bad";fb.textContent=sc+" / "+LABEL_ITEMS.length+". Hint: a vivid picture = lead; childhood = early life; the moment things changed = turning point; an award or famous work = achievement; a problem = challenge; why she matters today = legacy.";}
+  updateScore();
+}
+
+var GMC=[
+ {q:"Which sentence uses <strong>commas around an appositive</strong> correctly?",
+  o:["Verrocchio a master artist taught Leonardo.", "Verrocchio, a master artist, taught Leonardo.", "Verrocchio, a master artist taught Leonardo.", "Verrocchio a master, artist taught Leonardo."],
+  a:1,e:"The appositive <em>a master artist</em> renames Verrocchio, so it needs a comma on <strong>both</strong> sides."},
+ {q:"Which sentence keeps the <strong>verb tense consistent</strong>?",
+  o:["Leonardo studied birds and sketches their wings.", "Leonardo studies birds and sketched their wings.", "Leonardo studied birds and sketched their wings.", "Leonardo study birds and sketched their wings."],
+  a:2,e:"Both actions are finished events, so both verbs are in the past tense: <strong>studied… sketched</strong>."},
+ {q:"Which sentence punctuates the <strong>date</strong> correctly?",
+  o:["On April 15 1452 Leonardo was born.", "On April, 15, 1452 Leonardo was born.", "On April 15, 1452 Leonardo, was born.", "On April 15, 1452, Leonardo was born."],
+  a:3,e:"Put a comma between the day and the year, and another after the year when the sentence keeps going."},
+ {q:"Which sentence uses <strong>capital letters</strong> correctly?",
+  o:["During the Renaissance, Leonardo lived in Italy and France.", "During the renaissance, Leonardo lived in italy and France.", "During the Renaissance, leonardo lived in Italy and france.", "during the Renaissance, Leonardo lived in Italy and France."],
+  a:0,e:"Names of time periods (<strong>Renaissance</strong>), people and countries are proper nouns, so they are capitalized."},
+ {q:"Which sentence uses <strong>who's / whose</strong> correctly?",
+  o:["Leonardo was an artist who's notebooks were written backward.", "Leonardo was an artist whose notebooks were written backward.", "Leonardo was an artist whose' notebooks were written backward.", "Leonardo was an artist who notebooks were written backward."],
+  a:1,e:"<strong>Whose</strong> shows ownership (the notebooks belonged to him). <strong>Who's</strong> means <em>who is</em>."},
+ {q:"Which sentence uses <strong>its / it's</strong> correctly?",
+  o:["The painting lost some of it's colour, but its still beautiful.", "The painting lost some of its colour, but its still beautiful.", "The painting lost some of it's colour, but it's still beautiful.", "The painting lost some of its colour, but it's still beautiful."],
+  a:3,e:"<strong>Its</strong> (no apostrophe) shows ownership; <strong>it's</strong> = it is."},
+ {q:"Which sentence uses <strong>Canadian spelling</strong> correctly?",
+  o:["The knight's armour was painted in bright colour in the centre of the mural.", "The knight's armor was painted in bright color in the center of the mural.", "The knight's armour was painted in bright color in the centre of the mural.", "The knight's armor was painted in bright colour in the center of the mural."],
+  a:0,e:"In Canada we write <strong>armour</strong>, <strong>colour</strong> and <strong>centre</strong>."}
+];
+var gmcState=GMC.map(function(){return{answered:false,firstRight:false,done:false};});
+function buildGMC(){
+  var box=document.getElementById("gmc");
+  GMC.forEach(function(it,i){
+    var d=document.createElement("div"); d.className="box q"; d.id="g"+i;
+    var h='<div><strong>'+(i+1)+'.</strong> '+it.q+'</div>';
+    it.o.forEach(function(o,j){h+='<button type="button" class="opt" data-i="'+i+'" data-j="'+j+'">'+String.fromCharCode(65+j)+'. '+o+'</button>';});
+    h+='<div class="fb" id="gfb'+i+'"></div>';
+    d.innerHTML=h; box.appendChild(d);
+  });
+  box.addEventListener("click",function(e){
+    var b=e.target.closest?e.target.closest(".opt"):e.target; if(!b||!b.classList.contains("opt"))return;
+    var i=+b.getAttribute("data-i"), j=+b.getAttribute("data-j"), st=gmcState[i], it=GMC[i];
+    if(st.done)return;
+    var ok=j===it.a; if(!st.answered){st.answered=true;st.firstRight=ok;}
+    var fb=document.getElementById("gfb"+i);
+    if(ok){st.done=true;b.classList.add("sel-right");document.getElementById("g"+i).className="box q right";fb.className="fb good";fb.innerHTML="✅ "+pick(PRAISE)+' <span class="explain">'+it.e+'</span>';}
+    else{b.classList.add("sel-wrong");document.getElementById("g"+i).className="box q wrong";fb.className="fb bad";fb.textContent="❌ Not quite, Ace. Look closely and try again.";}
+    updateScore();
+  });
+}
+
+var GFIX=[
+ {bad:"leonardo a curious artist filled thousands of pages",
+  ok:["Leonardo, a curious artist, filled thousands of pages.","Leonardo, a curious artist, filled thousands of pages!"],
+  hint:"Capitalize <em>Leonardo</em>. Put commas on both sides of the appositive <em>a curious artist</em>. End with a period."},
+ {bad:"in 1503 he begins the mona lisa",
+  ok:["In 1503 he began the Mona Lisa.","In 1503, he began the Mona Lisa."],
+  hint:"Capitalize the first word and the painting's name (<em>Mona Lisa</em>). The event is finished, so <em>begins</em> should be past tense: <em>began</em>. End with a period."},
+ {bad:"emily carr who's paintings show bc forests was born in victoria",
+  ok:["Emily Carr, whose paintings show BC forests, was born in Victoria.","Emily Carr, whose paintings show B.C. forests, was born in Victoria."],
+  hint:"Capitalize <em>Emily Carr</em>, <em>BC</em> and <em>Victoria</em>. Use <em>whose</em> (ownership), not <em>who's</em>. Put commas around the extra information <em>whose paintings show BC forests</em>. End with a period."},
+ {bad:"the paint lost it's color over the years",
+  ok:["The paint lost its colour over the years.","The paint lost its colour over the years!"],
+  hint:"Capitalize the first word. <em>It's</em> means <em>it is</em>; you need ownership: <em>its</em>. Use Canadian spelling: <em>colour</em>. End with a period."}
+];
+
+var gfixState=GFIX.map(function(){return{tries:0,correct:false,firstRight:false};});
+function norm(s){return s.replace(/[\u2018\u2019\u02BC]/g,"'").replace(/[\u201C\u201D]/g,'"').replace(/\s+/g," ").trim();}
+function checkFixAnswer(i,val){var v=norm(val);return GFIX[i].ok.some(function(a){return norm(a)===v;});}
+function buildGFix(){
+  var box=document.getElementById("gfix");
+  GFIX.forEach(function(it,i){
+    var d=document.createElement("div"); d.className="box q"; d.id="f"+i;
+    d.innerHTML='<div><strong>'+(i+1)+'.</strong> Fix: <span class="bad-sent">'+it.bad+'</span></div>'+
+     '<input class="fix" type="text" id="fi'+i+'" autocomplete="off" spellcheck="false" aria-label="Corrected sentence '+(i+1)+'">'+
+     '<div class="btnrow"><button type="button" class="go" data-act="check" data-i="'+i+'">Check</button><button type="button" class="hint" data-act="hint" data-i="'+i+'">Hint 💡</button><button type="button" class="grey" data-act="show" data-i="'+i+'" style="display:none">Show answer</button></div>'+
+     '<div class="fb" id="ffb'+i+'"></div>';
+    box.appendChild(d);
+  });
+  box.addEventListener("click",function(e){
+    var b=e.target; if(b.tagName!=="BUTTON")return;
+    var i=+b.getAttribute("data-i"), act=b.getAttribute("data-act"), fb=document.getElementById("ffb"+i);
+    if(act==="hint"){fb.className="fb";fb.style.color="#5d4037";fb.textContent="💡 "+GFIX[i].hint;return;}
+    fb.style.color="";
+    if(act==="show"){fb.className="fb";fb.innerHTML='Answer: <em>'+GFIX[i].ok[0]+'</em>'+(GFIX[i].ok.length>1?' (other correct versions are accepted too)':'');return;}
+    fixCheck(i);
+  });
+  box.addEventListener("keydown",function(e){if(e.key==="Enter"&&e.target.classList.contains("fix"))fixCheck(+e.target.id.slice(2));});
+}
+function fixCheck(i){
+  var val=document.getElementById("fi"+i).value, fb=document.getElementById("ffb"+i), st=gfixState[i];
+  fb.style.color="";
+  if(!val.trim()){fb.className="fb bad";fb.textContent="Type the corrected sentence first, Ace!";return;}
+  st.tries++;
+  if(checkFixAnswer(i,val)){ if(st.tries===1)st.firstRight=true; st.correct=true; document.getElementById("f"+i).className="box q right"; fb.className="fb good"; fb.textContent="✅ "+pick(PRAISE); }
+  else { st.correct=false; document.getElementById("f"+i).className="box q wrong"; fb.className="fb bad"; fb.textContent="❌ Not quite. Check every capital letter, apostrophe, comma, and spelling. Try again!"; if(st.tries>=2)document.querySelector('#f'+i+' [data-act=show]').style.display="inline-block"; }
+  updateScore();
+}
+
+function updateScore(){
+  var g=0; gmcState.forEach(function(s){if(s.firstRight)g++;});
+  var f=0; gfixState.forEach(function(s){if(s.correct)f++;});
+  var total=LABEL_ITEMS.length+GMC.length+GFIX.length, got=labelScore+g+f;
+  document.getElementById("scoreText").textContent="Score: "+got+" / "+total+"  (labels "+(labelChecked?labelScore:"-")+"/"+LABEL_ITEMS.length+" · grammar A "+g+"/"+GMC.length+" · grammar B "+f+"/"+GFIX.length+")";
+}
+
+var W5=["who","place","facts","senses","feel","closing"];
+function w5Save(){try{localStorage.setItem(KEY+"-5w",JSON.stringify(W5.map(function(k){return document.getElementById("w5"+k).value;})));}catch(e){}}
+function w5Restore(){try{var d=JSON.parse(localStorage.getItem(KEY+"-5w")||"null");if(d)d.forEach(function(x,i){document.getElementById("w5"+W5[i]).value=x;});}catch(e){}}
+function w5Summary(){return W5.map(function(k){return k.charAt(0).toUpperCase()+k.slice(1)+": "+document.getElementById("w5"+k).value;}).join("\n");}
+function addTemplate(){
+  var t=document.getElementById("essay");
+  var tpl="Title: The Life of ...\n\nLEAD + CONTROLLING IDEA:\n\nEARLY LIFE + TURNING POINT:\n\nACHIEVEMENT(S) WITH EXACT FACTS:\n\nCHALLENGE OR SETBACK:\n\nLEGACY:\n\nNOTE TO DAD (why I chose this person):\n\nwritten by "+NAME;
+  if(t.value.trim()&&!confirm("Add the biography layout below what you've already written?"))return;
+  t.value=(t.value.trim()?t.value.replace(/\s+$/,"")+"\n\n":"")+tpl; updateCount(); t.focus();
+}
+var KEY="ace-writing-2026-11-10";
+function countWords(t){var m=t.trim().match(/[A-Za-zÀ-ÿ0-9]+(?:['’\-][A-Za-zÀ-ÿ0-9]+)*/g);return m?m.length:0;}
+function countSentences(t){var m=t.match(/[^.!?]*[A-Za-z0-9][^.!?]*[.!?]+/g);return m?m.length:0;}
+function currentPrompt(){var r=document.querySelector('input[name=prompt]:checked');return r?r.value:"";}
+function updateCount(){
+  var t=document.getElementById("essay").value, w=countWords(t), s=countSentences(t);
+  document.getElementById("wc").textContent=w+(w===1?" word":" words");
+  document.getElementById("sc").textContent=s+(s===1?" sentence":" sentences");
+  var bar=document.getElementById("meterBar"); bar.style.width=Math.min(100,w/350*100)+"%";
+  var msg=document.getElementById("wcMsg");
+  if(w<220){bar.style.background="#ffb300";msg.className="fb";msg.textContent=w===0?"Aim for 220 to 350 words.":"Keep going, Ace! "+(220-w)+" more words to reach the goal.";}
+  else if(w<=350){bar.style.background="#43a047";msg.className="fb good";msg.textContent="🎯 You're in the target zone! Nice work, Ace!";}
+  else{bar.style.background="#1e88e5";msg.className="fb";msg.textContent="Wow, that's a lot of writing! Good biographers choose only the moments that matter. Could any sentences be cut?";}
+  try{localStorage.setItem(KEY,JSON.stringify({text:t,prompt:currentPrompt(),checks:checkStates()}));}catch(e){document.getElementById("saveNote").textContent="(This browser can't auto-save here, so use the Download button before closing!)";}
+}
+function checkStates(){return Array.prototype.map.call(document.querySelectorAll("#checklist input"),function(c){return c.checked;});}
+function checklistText(){
+  return Array.prototype.map.call(document.querySelectorAll("#checklist label"),function(l){return (l.querySelector("input").checked?"[x] ":"[ ] ")+l.textContent.trim();}).join("\n");
+}
+function buildReport(){
+  var t=document.getElementById("essay").value;
+  return "Writing Week 44: "+NAME+"\nDate: "+new Date().toLocaleString("en-CA")+"\nPrompt: "+currentPrompt()+
+    "\nWords: "+countWords(t)+"   Sentences: "+countSentences(t)+"\nPlanning notes:\n"+w5Summary()+
+    "\n\n----- "+NAME+"'s writing -----\n\n"+t+"\n\n----- Self-check -----\n"+checklistText()+
+    "\n\n----- Parent feedback -----\n\n\n";
+}
+function download(){
+  var t=document.getElementById("essay").value;
+  if(!t.trim()){document.getElementById("doneMsg").className="fb bad";document.getElementById("doneMsg").textContent="Write something first, Ace!";return;}
+  var blob=new Blob([buildReport().replace(/\n/g,"\r\n")],{type:"text/plain;charset=utf-8"});
+  var a=document.createElement("a"); a.href=URL.createObjectURL(blob); a.download=NAME+"-writing-2026-11-10"+".txt";
+  document.body.appendChild(a); a.click();
+  setTimeout(function(){URL.revokeObjectURL(a.href);a.remove();},1000);
+  var dm=document.getElementById("doneMsg"); dm.className="fb good"; dm.textContent="📄 Saved! Look in your Downloads folder and show Dad. Great job finishing, Ace!";
+}
+function esc(s){return s.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");}
+function printIt(){
+  var t=document.getElementById("essay").value;
+  if(!t.trim()){document.getElementById("doneMsg").className="fb bad";document.getElementById("doneMsg").textContent="Write something first, Ace!";return;}
+  document.getElementById("printArea").innerHTML="<h1>Writing Week 44: "+NAME+"</h1><div class='meta'>"+esc(new Date().toLocaleString("en-CA"))+"<br><strong>Prompt:</strong> "+esc(currentPrompt())+"<br>Words: "+countWords(t)+" · Sentences: "+countSentences(t)+"</div><div class='text'>"+esc(t)+"</div><div class='lines'><strong>Self-check:</strong><br>"+esc(checklistText()).replace(/\n/g,"<br>")+"</div><div class='lines'><strong>Parent feedback:</strong><br><br><br><br></div>";
+  window.print();
+}
+function restore(){
+  try{var d=JSON.parse(localStorage.getItem(KEY)||"null"); if(!d)return;
+    document.getElementById("essay").value=d.text||"";
+    Array.prototype.forEach.call(document.querySelectorAll("input[name=prompt]"),function(r){r.checked=(r.value===d.prompt);});
+    if(!document.querySelector("input[name=prompt]:checked"))document.querySelector("input[name=prompt]").checked=true;
+    var cs=document.querySelectorAll("#checklist input"); (d.checks||[]).forEach(function(v,i){if(cs[i])cs[i].checked=v;});
+  }catch(e){}
+}
+buildLabels(); buildGMC(); buildGFix(); restore(); w5Restore(); updateCount(); updateScore();
+W5.forEach(function(k){document.getElementById("w5"+k).addEventListener("input",w5Save);});
+document.getElementById("templateBtn").addEventListener("click",addTemplate);
+document.getElementById("checkLabels").addEventListener("click",checkLabels);
+document.getElementById("essay").addEventListener("input",updateCount);
+document.getElementById("checklist").addEventListener("change",function(){updateCount(); if(checkStates().every(Boolean)){var dm=document.getElementById("doneMsg");dm.className="fb good";dm.textContent="✅ All boxes checked! Now download or print it for Dad. Awesome work, Ace!";}});
+document.getElementById("prompts").addEventListener("change",updateCount);
+document.getElementById("downloadBtn").addEventListener("click",download);
+document.getElementById("printBtn").addEventListener("click",printIt);
+document.getElementById("clearBtn").addEventListener("click",function(){ if(confirm("Erase your writing and start over?")){document.getElementById("essay").value="";Array.prototype.forEach.call(document.querySelectorAll("#checklist input"),function(c){c.checked=false;});document.getElementById("doneMsg").textContent="";updateCount();} });
+</script>
+<script src="../../assets/autosave.js"></script>
+</body>
+</html>
