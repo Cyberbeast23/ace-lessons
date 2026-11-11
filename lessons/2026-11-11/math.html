@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Math (Nov. 11): Moon Power: Tides of the Bay of Fundy Tide Engineer's Math Lab</title>
+<style>
+  body{font-family:"Segoe UI",Verdana,Arial,sans-serif;font-size:20px;line-height:1.6;margin:0;background:#f5f0eb;color:#2c2416}
+  .wrap{max-width:880px;margin:0 auto;padding:20px 18px 80px}
+  a.home{font-size:.9em;color:#bf360c}
+  h1{color:#e65100;font-size:2em;margin:10px 0}
+  h2{color:#ef6c00;margin-top:36px;border-bottom:3px solid #ffcc80;padding-bottom:4px}
+  .box{background:#fff;border-radius:16px;padding:18px 22px;margin:16px 0;box-shadow:0 3px 10px rgba(0,0,0,.07)}
+  .example{border-left:8px solid #ef6c00}
+  .example h3{margin:0 0 6px;color:#e65100}
+  .step{margin:4px 0 4px 10px}
+  code,.mono{font-family:Consolas,"Courier New",monospace;background:#fff3e0;padding:1px 6px;border-radius:5px}
+  .q{border-left:8px solid #90a4ae}
+  .q.right{border-left-color:#43a047;background:#f1f8e9}
+  .q.wrong{border-left-color:#e53935;background:#fff5f5}
+  .qnum{font-weight:bold;color:#e65100}
+  .row{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:10px}
+  input[type=text]{font-size:1.05em;padding:8px 12px;border:2px solid #ffcc80;border-radius:10px;width:190px}
+  input[type=text]:focus{outline:none;border-color:#ef6c00;box-shadow:0 0 0 3px #ffe0b2}
+  button{font-size:.95em;padding:8px 16px;border:none;border-radius:10px;cursor:pointer;font-weight:bold}
+  .check{background:#ef6c00;color:#fff} .check:hover{background:#e65100}
+  .hint{background:#ffe082;color:#5d4037} .hint:hover{background:#ffd54f}
+  .sol{background:#ce93d8;color:#311b92}
+  .unit{color:#546e7a}
+  .fb{margin-top:8px;font-weight:bold;min-height:1em}
+  .fb.good{color:#2e7d32} .fb.bad{color:#c62828}
+  .hints{margin-top:8px;color:#e65100;background:#fff3e0;border-radius:10px;padding:0 12px}
+  .hints p{margin:6px 0;padding:6px 0}
+  .solution{margin-top:8px;background:#f3e5f5;border-radius:10px;padding:8px 12px;display:none}
+  #scoreBox{position:sticky;bottom:0;background:#e65100;color:#fff;border-radius:16px 16px 0 0;padding:12px 20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-top:30px}
+  #scoreBox button{background:#ffca28;color:#3e2723}
+  #final{display:none;font-size:1.15em;text-align:center;border:4px solid #43a047}
+  .tipbox{background:#fff8e1;border-left:8px solid #ffb300}
+</style>
+</head>
+<body>
+<div class="wrap">
+<a class="home" href="../../index.html">&larr; Back to all lessons</a>
+<h1>🌊 Math Week 45: Moon Power: Tides of the Bay of Fundy Tide Engineer's Math Lab</h1>
+<p>Ace, twice a day, the ocean on Canada's east coast breathes in and out. In the <strong>Bay of Fundy</strong>, between New Brunswick and Nova Scotia, the water can rise higher than a four-storey building and then drain away until boats sit on the mud. These are the <strong>highest tides in the world</strong>, and they happen because the <em>Moon's gravity</em> pulls on Earth's oceans. Today you are a tide engineer. You'll use <strong>negative numbers for the tidal range, elapsed time for tide cycles, rates in cm per minute, the volume of a tidal basin, energy from a tidal turbine, percent decrease in a tide-pool survey, speed and time for a tidal bore, degrees per day for the Moon's orbit, map scale, a two-step equation, the mean from a tide table, GST + PST on beach gear, the sailors' "rule of twelfths," spring and neap tides, and the mass of seawater</strong>.</p>
+
+<h2>Part 1: Learn the Moves</h2>
+
+<div class="box tipbox">
+  <strong>The 4-Step Problem Solver (your tide engineer's checklist):</strong>
+  <ol>
+    <li><strong>Read</strong>: What is the question actually asking? Underline the numbers and units (m, cm, km, km/h, min, h, m², m³, kg, kWh, MW, °, $, %).</li>
+    <li><strong>Plan</strong>: Do the units match? Change metres to centimetres or hours to minutes <em>before</em> you answer.</li>
+    <li><strong>Solve</strong>: Do one step at a time and write each step down.</li>
+    <li><strong>Check</strong>: Is my answer reasonable? A tide might rise 15 m, but not 15 km!</li>
+  </ol>
+</div>
+
+
+
+
+<div class="box example">
+  <h3>Worked Example 1: Range with negative numbers</h3>
+  <p class="step">Tide heights are measured from a reference line called <strong>chart datum</strong>. A very low tide can be <strong>below</strong> that line, so it is negative. <strong>Range = highest − lowest</strong>, and subtracting a negative is the same as adding.</p>
+  <p class="step">High 6.5 m, low −0.5 m: 6.5 − (−0.5) = 6.5 + 0.5 = <strong>7 m</strong>.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 2: Working in minutes</h3>
+  <p class="step">Change hours and minutes into <strong>minutes</strong> before you divide: 1 h = 60 min, 1 day = 24 × 60 = <strong>1 440 min</strong>.</p>
+  <p class="step">2 h 30 min = 120 + 30 = <strong>150 min</strong>. How many complete 150-minute cycles fit in one day? 1 440 ÷ 150 = 9.6, so <strong>9 complete</strong> cycles (the 0.6 isn't a whole cycle).</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 3: Volume of water in a basin</h3>
+  <p class="step">When the tide rises, the extra water in a bay is about <strong>area × rise</strong>. Make sure all lengths are in <strong>metres</strong> first (1 km = 1 000 m).</p>
+  <p class="step">A basin 2 km × 1 km is 2 000 m × 1 000 m = 2 000 000 m². If the tide rises 5 m: 2 000 000 × 5 = <strong>10 000 000 m³</strong> = 10 million m³.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 4: Power, energy and kilowatt-hours</h3>
+  <p class="step"><strong>Energy = power × time.</strong> 1 megawatt (MW) = 1 000 kilowatts (kW). A 1 MW machine running for 1 hour makes 1 MWh = <strong>1 000 kWh</strong>.</p>
+  <p class="step">A 2 MW turbine for 3 h: 2 × 3 = 6 MWh = 6 000 kWh. If a home uses 20 kWh a day: 6 000 ÷ 20 = <strong>300 homes</strong> for a day.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 5: Percent decrease</h3>
+  <p class="step"><strong>Percent decrease = (old − new) ÷ old × 100</strong>. Always divide by the <em>old</em> (starting) value.</p>
+  <p class="step">From 40 crabs to 30 crabs: decrease = 10. 10 ÷ 40 = 0.25, so a <strong>25%</strong> decrease.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 6: The rule of twelfths</h3>
+  <p class="step">Sailors know that a tide doesn't rise at a steady speed. Over about 6 hours it rises <strong>1/12, 2/12, 3/12, 3/12, 2/12, 1/12</strong> of the range, hour by hour: slow, then fast in the middle, then slow again.</p>
+  <p class="step">Range 6 m: in the 1st hour it rises 1/12 × 6 = 0.5 m; in the 3rd hour 3/12 × 6 = <strong>1.5 m</strong>.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 7: Speed, distance and time</h3>
+  <p class="step"><strong>Time = distance ÷ speed.</strong> If the speed is in km/h, the answer is in hours; multiply by 60 to get minutes.</p>
+  <p class="step">2 km at 8 km/h: 2 ÷ 8 = 0.25 h. 0.25 × 60 = <strong>15 min</strong>.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 8: Two taxes at once</h3>
+  <p class="step">In British Columbia many items have <strong>5% GST + 7% PST = 12%</strong> tax. Multiply the subtotal by <strong>1.12</strong>, then round to the nearest cent.</p>
+  <p class="step">$25.00 × 1.12 = <strong>$28.00</strong>.</p>
+</div>
+<h2>Part 2: The Challenge (15 problems)</h2>
+<p>Type your answer and press <strong>Check</strong> (or Enter). Fractions like <span class="mono">3/4</span>, mixed numbers like <span class="mono">1 3/4</span>, or decimals like <span class="mono">1.75</span> are fine. Don't type the units, $ signs, or % signs, and you may use spaces or commas in big numbers (1 000 000). Stuck? Press <strong>Hint</strong>. After 2 tries, you can see a full solution.</p>
+
+<div id="questions"></div>
+<div class="box" id="final"></div>
+<div id="scoreBox">
+  <span id="scoreText">Score: 0 / 15 correct</span>
+  <button id="finishBtn" type="button">I'm done! Show my final score</button>
+</div>
+</div>
+
+<script>
+var NAME = "Ace";
+var TABLE = '<table style="border-collapse:collapse;margin:10px 0;font-size:.95em;background:#fff"><caption style="font-weight:bold;text-align:left;padding-bottom:4px">Highest tide each day at a Saint John, NB tide gauge</caption><tr><th style="border:1px solid #bdbdbd;padding:4px 10px;background:#eceff1">Day</th><th style="border:1px solid #bdbdbd;padding:4px 10px;background:#eceff1">High tide (m)</th></tr><tr><td style="border:1px solid #bdbdbd;padding:4px 10px">Monday</td><td style="border:1px solid #bdbdbd;padding:4px 10px;font-family:monospace">7.8</td></tr><tr><td style="border:1px solid #bdbdbd;padding:4px 10px">Tuesday</td><td style="border:1px solid #bdbdbd;padding:4px 10px;font-family:monospace">8.1</td></tr><tr><td style="border:1px solid #bdbdbd;padding:4px 10px">Wednesday</td><td style="border:1px solid #bdbdbd;padding:4px 10px;font-family:monospace">8.6</td></tr><tr><td style="border:1px solid #bdbdbd;padding:4px 10px">Thursday</td><td style="border:1px solid #bdbdbd;padding:4px 10px;font-family:monospace">8.4</td></tr><tr><td style="border:1px solid #bdbdbd;padding:4px 10px">Friday</td><td style="border:1px solid #bdbdbd;padding:4px 10px;font-family:monospace">7.6</td></tr></table>';
+var QUESTIONS = [
+ {t:"During a very big spring tide at Burntcoat Head, Nova Scotia, the high tide reaches <strong>15.4 m</strong> above chart datum, and the low tide falls to <strong>−0.8 m</strong> (below chart datum). What is the <strong>tidal range</strong>, in metres?", a:"16.2", u:"m",
+  h:["Range = highest − lowest.","15.4 − (−0.8) is the same as 15.4 + 0.8."],
+  s:"15.4 − (−0.8) = 15.4 + 0.8 = 16.2 m. That's about as tall as a five-storey building!"},
+ {t:"High tides in the Bay of Fundy come about every <strong>12 h 25 min</strong>. How many <strong>complete</strong> tide cycles (high tide to the next high tide) fit into a <strong>31-day</strong> month?", a:"59", u:"cycles",
+  h:["Change 12 h 25 min into minutes: 12 × 60 + 25.","Minutes in 31 days = 31 × 1 440. Divide, and keep only the whole number."],
+  s:"12 h 25 min = 745 min. 31 × 1 440 = 44 640 min. 44 640 ÷ 745 ≈ 59.9, so 59 complete cycles (745 × 60 = 44 700 is too many)."},
+ {t:"At one wharf the water rises <strong>15 m</strong> between low tide and high tide, which takes <strong>6 h 15 min</strong>. On average, how many <strong>centimetres per minute</strong> does the water rise?", a:"4", u:"cm/min",
+  h:["Change 15 m into cm and 6 h 15 min into minutes.","1 500 cm ÷ 375 min = ?"],
+  s:"15 m = 1 500 cm. 6 h 15 min = 360 + 15 = 375 min. 1 500 ÷ 375 = 4 cm per minute, fast enough to watch it climb a ladder!"},
+ {t:"A tidal basin is shaped roughly like a rectangle <strong>4 km long</strong> and <strong>2.5 km wide</strong>. The tide rises <strong>12 m</strong>. About how many <strong>million cubic metres</strong> of seawater flow in?", a:"120", u:"million m³",
+  h:["Change km to m: 4 000 m and 2 500 m.","Volume = 4 000 × 2 500 × 12, then divide by 1 000 000."],
+  s:"4 000 × 2 500 = 10 000 000 m². × 12 = 120 000 000 m³ = 120 million m³."},
+ {t:"An underwater <strong>tidal turbine</strong> works like an underwater windmill. One turbine produces <strong>1.5 MW</strong> for about <strong>9.5 hours</strong> a day while the current is strong. If a home uses about <strong>30 kWh</strong> of electricity a day, how many homes could this turbine power for one day?", a:"475", u:"homes",
+  h:["Energy = 1.5 MW × 9.5 h, in MWh. Then change MWh to kWh (× 1 000).","Divide the kWh by 30."],
+  s:"1.5 × 9.5 = 14.25 MWh = 14 250 kWh. 14 250 ÷ 30 = 475 homes."},
+ {t:"A class counts sea stars in the same tide pools every year. Last year they counted <strong>48</strong> sea stars; this year they counted <strong>39</strong>. What is the <strong>percent decrease</strong>?", a:"18.75", u:"%",
+  h:["Decrease = 48 − 39.","Percent decrease = decrease ÷ 48 × 100."],
+  s:"48 − 39 = 9. 9 ÷ 48 = 0.1875, which is an 18.75% decrease."},
+ {t:"When the tide rushes in, a wave called a <strong>tidal bore</strong> travels up the Petitcodiac River. If the bore moves at <strong>12 km/h</strong>, how many <strong>minutes</strong> does it take to travel <strong>3.4 km</strong>?", a:"17", u:"min",
+  h:["Time = distance ÷ speed = 3.4 ÷ 12 hours.","Change hours to minutes: multiply by 60."],
+  s:"3.4 ÷ 12 ≈ 0.2833 h. 0.2833… × 60 = 17 min. (Shortcut: 12 km/h = 0.2 km per minute, and 3.4 ÷ 0.2 = 17.)"},
+ {t:"The Moon travels all the way around Earth (<strong>360°</strong>) in about <strong>27.3 days</strong>. About how many <strong>degrees</strong> does it move each day? Round to the nearest tenth.", a:"13.2", u:"°",
+  h:["Degrees per day = 360 ÷ 27.3.","Divide, then round to one decimal place."],
+  s:"360 ÷ 27.3 ≈ 13.19, which rounds to 13.2° per day. That's one reason high tide comes a little later each day!"},
+ {t:"On a nautical chart with a scale of <strong>1 : 250 000</strong>, the mouth of a bay measures <strong>4.2 cm</strong> across. How wide is it in real life, in <strong>km</strong>?", a:"10.5", u:"km",
+  h:["Real distance = 4.2 × 250 000 cm.","Change cm to km: divide by 100 000."],
+  s:"4.2 × 250 000 = 1 050 000 cm. 1 050 000 ÷ 100 000 = 10.5 km."},
+ {t:"A sea-kayak tour costs <strong>$20</strong> for a safety lesson plus <strong>$12.50 per hour</strong>. Ace's family pays <strong>$107.50</strong> for one kayak. Solve 12.5h + 20 = 107.5 to find how many hours they paddled.", a:"7", u:"hours",
+  h:["Undo the + 20 first: 12.5h = 87.5.","87.5 ÷ 12.5 = ?"],
+  s:"12.5h + 20 = 107.5 → 12.5h = 87.5 → h = 7. Check: 12.5 × 7 + 20 = 87.5 + 20 = 107.5 ✔"},
+ {t:TABLE+"Find the <strong>mean</strong> high-tide height for these five days, in metres.", a:"8.1", u:"m",
+  h:["Add all five heights.","Divide the total by 5."],
+  s:"7.8 + 8.1 + 8.6 + 8.4 + 7.6 = 40.5 m. 40.5 ÷ 5 = 8.1 m."},
+ {t:"Ace buys gear for exploring tide pools: <strong>rubber boots for $34.99</strong> and <strong>a dip net for $18.50</strong>. The store charges <strong>12% tax</strong> (5% GST + 7% PST). What is the total, in dollars, to the nearest cent?", a:"59.91", u:"$",
+  h:["Subtotal: 34.99 + 18.50.","Multiply the subtotal by 1.12 and round to the nearest cent."],
+  s:"34.99 + 18.50 = $53.49. 53.49 × 1.12 = 59.9088, which rounds to $59.91."},
+ {t:"Use the <strong>rule of twelfths</strong> (1/12, 2/12, 3/12, 3/12, 2/12, 1/12 of the range in hours 1 to 6). The tidal range today is <strong>9.6 m</strong>. How many metres does the water rise during the <strong>3rd and 4th hours together</strong>?", a:"4.8", u:"m",
+  h:["Hours 3 and 4 are 3/12 + 3/12 = 6/12 of the range.","6/12 of 9.6 = 9.6 ÷ 2."],
+  s:"3/12 + 3/12 = 6/12 = 1/2. Half of 9.6 m = 4.8 m. Half of the whole rise happens in just those two middle hours!"},
+ {t:"In one place, the Sun's gravity raises the ocean <strong>0.45 m</strong> and the Moon's gravity raises it <strong>2.2 times</strong> as much. At a <strong>neap tide</strong>, the Sun and Moon pull at right angles, so the Sun's effect is <em>subtracted</em> from the Moon's. What is the neap-tide bulge, in metres?", a:"0.54", u:"m",
+  h:["Moon's effect = 2.2 × 0.45.","Neap tide = Moon's effect − Sun's effect."],
+  s:"2.2 × 0.45 = 0.99 m. 0.99 − 0.45 = 0.54 m. (At a spring tide they add: 0.99 + 0.45 = 1.44 m.)"},
+ {t:"A rock pool is about <strong>2.4 m long</strong>, <strong>1.5 m wide</strong> and <strong>0.4 m deep</strong>. Seawater has a density of about <strong>1 025 kg per m³</strong> (salt makes it heavier than fresh water). What is the mass of the water in the pool, in kg?", a:"1476", u:"kg",
+  h:["Volume = 2.4 × 1.5 × 0.4 (in m³).","Mass = 1 025 × volume."],
+  s:"2.4 × 1.5 = 3.6. 3.6 × 0.4 = 1.44 m³. 1 025 × 1.44 = 1 476 kg, about as heavy as a small car!"}
+];
+
+var PRAISE = ["Nice work, Ace!","Correct! Tide-engineer level! 🌊","Yes! The Moon would be proud!","Excellent, Ace. That was a tough one!","Right on target! 🎯","Brilliant thinking, Ace!","High-tide answer, Ace! 🌕"];
+var ENCOURAGE = ["Not quite. Check your steps and try again!","Close call. Try again, Ace! Maybe use a hint?","Hmm, not yet. Re-read the question carefully.","Keep going, Ace. Mistakes help your brain grow!"];
+
+function parseAnswer(str){
+  if(str===undefined||str===null) return NaN;
+  var s=String(str).trim().toLowerCase();
+  s=s.replace(/[\u2212\u2013]/g,"-");
+  s=s.replace(/(\d),(?=\d{3}(\D|$))/g,"$1");
+  s=s.replace(/[^0-9.\/\- ]/g," ").replace(/\s+/g," ").trim();
+  s=s.replace(/\s*\/\s*/g,"/");
+  var m;
+  if((m=s.match(/^(-?\d+) (\d+)\/(\d+)$/))){ var w=parseFloat(m[1]),n=parseFloat(m[2]),d=parseFloat(m[3]); if(d===0)return NaN; return w<0? w-n/d : w+n/d; }
+  if((m=s.match(/^(-?\d+(?:\.\d+)?)\/(\d+(?:\.\d+)?)$/))){ var d2=parseFloat(m[2]); if(d2===0)return NaN; return parseFloat(m[1])/d2; }
+  s=s.replace(/ /g,"");
+  if(/^-?(\d+\.?\d*|\.\d+)$/.test(s)) return parseFloat(s);
+  return NaN;
+}
+function isCorrect(input,key){
+  var a=parseAnswer(input), k=parseAnswer(key);
+  if(isNaN(a)) return false;
+  var isInt=Math.abs(k-Math.round(k))<1e-12;
+  var tol=isInt?1e-9:0.005;
+  return Math.abs(a-k)<=tol;
+}
+
+function isRomanCorrect(input,key){ return String(input).replace(/\s+/g,"").toUpperCase()===key; }
+var state=[];
+function render(){
+  var box=document.getElementById("questions");
+  QUESTIONS.forEach(function(q,i){
+    state.push({correct:false,tries:0,hints:0});
+    var d=document.createElement("div");
+    d.className="box q"; d.id="q"+i;
+    d.innerHTML='<div><span class="qnum">'+(i+1)+'.</span> '+q.t+'</div>'+
+      '<div class="row"><input type="text"'+(q.r?' placeholder="e.g. MMXXVI"':'')+' id="in'+i+'" aria-label="Answer to question '+(i+1)+'" autocomplete="off"> <span class="unit">'+q.u+'</span>'+
+      '<button type="button" class="check" data-i="'+i+'">Check</button>'+
+      '<button type="button" class="hint" data-i="'+i+'">Hint 💡</button>'+
+      '<button type="button" class="sol" data-i="'+i+'" style="display:none">Show solution</button></div>'+
+      '<div class="fb" id="fb'+i+'"></div><div class="hints" id="hints'+i+'"></div>'+
+      '<div class="solution" id="sol'+i+'"><strong>Solution:</strong> '+q.s+'</div>';
+    box.appendChild(d);
+  });
+  box.addEventListener("click",function(e){
+    var b=e.target; if(b.tagName!=="BUTTON")return;
+    var i=+b.getAttribute("data-i");
+    if(b.className==="check") check(i);
+    else if(b.className==="hint") hint(i);
+    else if(b.className==="sol") document.getElementById("sol"+i).style.display="block";
+  });
+  box.addEventListener("keydown",function(e){
+    if(e.key==="Enter"&&e.target.tagName==="INPUT"){ check(+e.target.id.slice(2)); }
+  });
+}
+function pick(arr){return arr[Math.floor(Math.random()*arr.length)];}
+function check(i){
+  var val=document.getElementById("in"+i).value;
+  var fb=document.getElementById("fb"+i), card=document.getElementById("q"+i);
+  if(val.trim()===""){fb.className="fb bad";fb.textContent="Type an answer first, Ace!";return;}
+  var isR=!!QUESTIONS[i].r;
+  if(isR&&!/^[ivxlcdm\s]+$/i.test(val)){fb.className="fb bad";fb.textContent="Use only Roman numeral letters: I, V, X, L, C, D, M.";return;}
+  if(!isR&&isNaN(parseAnswer(val))){fb.className="fb bad";fb.textContent="I can't read that as a number. Try something like 42, 3.5, 3/4 or 1 3/4.";return;}
+  state[i].tries++;
+  if(isR?isRomanCorrect(val,QUESTIONS[i].a):isCorrect(val,QUESTIONS[i].a)){
+    state[i].correct=true; card.className="box q right"; fb.className="fb good";
+    fb.textContent="✅ "+pick(PRAISE)+(state[i].tries===1?" (first try!)":"");
+  } else {
+    state[i].correct=false; card.className="box q wrong"; fb.className="fb bad";
+    fb.textContent="❌ "+pick(ENCOURAGE);
+    if(state[i].tries>=2) card.querySelector(".sol").style.display="inline-block";
+  }
+  updateScore();
+}
+function hint(i){
+  var q=QUESTIONS[i], s=state[i], hb=document.getElementById("hints"+i);
+  if(s.hints<q.h.length){
+    var p=document.createElement("p"); p.textContent="💡 Hint "+(s.hints+1)+": "+q.h[s.hints]; hb.appendChild(p); s.hints++;
+  }
+  if(s.hints>=q.h.length) document.querySelector("#q"+i+" .hint").disabled=true;
+  updateScore();
+}
+function counts(){
+  var c=0,first=0,h=0;
+  state.forEach(function(s){ if(s.correct){c++; if(s.tries===1)first++;} h+=s.hints; });
+  return {correct:c,first:first,hints:h};
+}
+function updateScore(){
+  var k=counts();
+  document.getElementById("scoreText").textContent="Score: "+k.correct+" / "+QUESTIONS.length+" correct · hints used: "+k.hints;
+}
+function finish(){
+  var k=counts(), n=QUESTIONS.length, pct=Math.round(100*k.correct/n);
+  var msg;
+  if(pct===100) msg="🏆 PERFECT SCORE! Incredible work, Ace. The Bay of Fundy tide crew would hire you!";
+  else if(pct>=85) msg="🌟 Outstanding, Ace! That's a Grade 6–7 level performance!";
+  else if(pct>=65) msg="💪 Great effort, Ace! Review the ones you missed and try them again.";
+  else if(pct>=40) msg="👍 Good start, Ace! These problems are tough. Use the hints and solutions to learn the tricks, then try again.";
+  else msg="🌱 These are challenge problems, well above grade level. Every great scientist started as a beginner! Go through the worked examples and try again, Ace!";
+  var f=document.getElementById("final");
+  f.style.display="block";
+  f.innerHTML="<h2 style='border:none;margin-top:0'>Final Score: "+k.correct+" / "+n+" ("+pct+"%)</h2>"+
+    "<p>Correct on the first try: "+k.first+" · Hints used: "+k.hints+"</p><p>"+msg+"</p>"+
+    "<p style='font-size:.85em;color:#546e7a'>Finished on "+new Date().toLocaleString("en-CA")+"</p>";
+  f.scrollIntoView({behavior:"smooth"});
+}
+render();
+updateScore();
+document.getElementById("finishBtn").addEventListener("click",finish);
+</script>
+<script src="../../assets/autosave.js"></script>
+</body>
+</html>
