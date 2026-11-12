@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Math (Nov. 12): Food's Fantastic Voyage: Digestion Detective's Math Lab</title>
+<style>
+  body{font-family:"Segoe UI",Verdana,Arial,sans-serif;font-size:20px;line-height:1.6;margin:0;background:#f5f0eb;color:#2c2416}
+  .wrap{max-width:880px;margin:0 auto;padding:20px 18px 80px}
+  a.home{font-size:.9em;color:#bf360c}
+  h1{color:#e65100;font-size:2em;margin:10px 0}
+  h2{color:#ef6c00;margin-top:36px;border-bottom:3px solid #ffcc80;padding-bottom:4px}
+  .box{background:#fff;border-radius:16px;padding:18px 22px;margin:16px 0;box-shadow:0 3px 10px rgba(0,0,0,.07)}
+  .example{border-left:8px solid #ef6c00}
+  .example h3{margin:0 0 6px;color:#e65100}
+  .step{margin:4px 0 4px 10px}
+  code,.mono{font-family:Consolas,"Courier New",monospace;background:#fff3e0;padding:1px 6px;border-radius:5px}
+  .q{border-left:8px solid #90a4ae}
+  .q.right{border-left-color:#43a047;background:#f1f8e9}
+  .q.wrong{border-left-color:#e53935;background:#fff5f5}
+  .qnum{font-weight:bold;color:#e65100}
+  .row{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:10px}
+  input[type=text]{font-size:1.05em;padding:8px 12px;border:2px solid #ffcc80;border-radius:10px;width:190px}
+  input[type=text]:focus{outline:none;border-color:#ef6c00;box-shadow:0 0 0 3px #ffe0b2}
+  button{font-size:.95em;padding:8px 16px;border:none;border-radius:10px;cursor:pointer;font-weight:bold}
+  .check{background:#ef6c00;color:#fff} .check:hover{background:#e65100}
+  .hint{background:#ffe082;color:#5d4037} .hint:hover{background:#ffd54f}
+  .sol{background:#ce93d8;color:#311b92}
+  .unit{color:#546e7a}
+  .fb{margin-top:8px;font-weight:bold;min-height:1em}
+  .fb.good{color:#2e7d32} .fb.bad{color:#c62828}
+  .hints{margin-top:8px;color:#e65100;background:#fff3e0;border-radius:10px;padding:0 12px}
+  .hints p{margin:6px 0;padding:6px 0}
+  .solution{margin-top:8px;background:#f3e5f5;border-radius:10px;padding:8px 12px;display:none}
+  #scoreBox{position:sticky;bottom:0;background:#e65100;color:#fff;border-radius:16px 16px 0 0;padding:12px 20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-top:30px}
+  #scoreBox button{background:#ffca28;color:#3e2723}
+  #final{display:none;font-size:1.15em;text-align:center;border:4px solid #43a047}
+  .tipbox{background:#fff8e1;border-left:8px solid #ffb300}
+</style>
+</head>
+<body>
+<div class="wrap">
+<a class="home" href="../../index.html">&larr; Back to all lessons</a>
+<h1>🍎 Math Week 46: Food's Fantastic Voyage: Digestion Detective's Math Lab</h1>
+<p>Ace, every bite you take goes on a <strong>9-metre journey</strong>. Your teeth chop it, your <strong>stomach</strong> churns it in acid, your <strong>small intestine</strong> soaks up the good stuff, and trillions of microbes in your <strong>large intestine</strong> finish the job. Today you are a digestion detective. You'll use <strong>24-hour clock time, ratios, area, unit rates, converting cm per second into m per minute, powers of ten for the pH scale, fractions of a whole, "how many times bigger," percentages, scale diagrams, a two-step equation, mean vs median, unit prices at the grocery store, and percent increase</strong>.</p>
+
+<h2>Part 1: Learn the Moves</h2>
+
+<div class="box tipbox">
+  <strong>The 4-Step Problem Solver (your digestion detective's checklist):</strong>
+  <ol>
+    <li><strong>Read</strong>: What is the question actually asking? Underline the numbers and units (m, cm, mm, m², L, mL, g, s, min, h, $, ¢, %).</li>
+    <li><strong>Plan</strong>: Do the units match? Change metres to centimetres or hours to minutes <em>before</em> you answer.</li>
+    <li><strong>Solve</strong>: Do one step at a time and write each step down.</li>
+    <li><strong>Check</strong>: Is my answer reasonable? A small intestine might be 6.5 m long, but not 6.5 km!</li>
+  </ol>
+</div>
+
+
+
+
+<div class="box example">
+  <h3>Worked Example 1: The 24-hour clock</h3>
+  <p class="step">Doctors and hospitals use the <strong>24-hour clock</strong>: after 12:00 noon, add 12 to the hour. So 1:00 p.m. is <strong>13:00</strong> and 6:30 p.m. is <strong>18:30</strong>.</p>
+  <p class="step">To add time, add hours and minutes separately, then trade 60 min for 1 h: 9:50 + 2 h 25 min = 11 h 75 min = <strong>12:15</strong>.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 2: Changing a rate's units</h3>
+  <p class="step">To change <strong>cm per second</strong> into <strong>m per minute</strong>: multiply by 60 (seconds → minutes), then divide by 100 (cm → m).</p>
+  <p class="step">5 cm/s × 60 = 300 cm/min. 300 ÷ 100 = <strong>3 m/min</strong>.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 3: Powers of ten and the pH scale</h3>
+  <p class="step">The <strong>pH scale</strong> measures how acidic something is. Lower = more acidic. Each step down makes it <strong>10 times</strong> more acidic.</p>
+  <p class="step">pH 4 compared with pH 7 is 3 steps: 10 × 10 × 10 = 10³ = <strong>1 000 times</strong> more acidic.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 4: Fractions of a whole</h3>
+  <p class="step">If parts of a whole are given as fractions, the <strong>leftover</strong> part is 1 minus the others. Use a common denominator.</p>
+  <p class="step">A 12-hour trip: 1/3 + 1/4 = 4/12 + 3/12 = 7/12, so 5/12 is left. 5/12 × 12 h = <strong>5 h</strong>.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 5: Percent of a total, and percent increase</h3>
+  <p class="step"><strong>Percent = part ÷ whole × 100.</strong> 3 out of 4 = 0.75 = 75%.</p>
+  <p class="step"><strong>Percent increase = (new − old) ÷ old × 100.</strong> From 40 to 50: 10 ÷ 40 = 0.25 = <strong>25%</strong> increase.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 6: Mean vs median</h3>
+  <p class="step">The <strong>mean</strong> is the total ÷ how many. The <strong>median</strong> is the middle value once you put the numbers <em>in order</em>.</p>
+  <p class="step">4, 10, 7: mean = 21 ÷ 3 = 7. In order 4, 7, 10, so the median is also <strong>7</strong>. One very big number pulls the mean up, but barely moves the median.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 7: Unit price</h3>
+  <p class="step">To find the better buy, find the price for the <strong>same amount</strong> of each, like the price per 100 g.</p>
+  <p class="step">$3.00 for 500 g: 500 g is 5 groups of 100 g, so $3.00 ÷ 5 = <strong>$0.60 per 100 g</strong> (60¢).</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 8: Scale diagrams</h3>
+  <p class="step">A scale of <strong>1 : 10</strong> means 1 cm on the diagram stands for 10 cm in real life. To shrink a real length onto paper, <strong>divide</strong> by 10.</p>
+  <p class="step">A real 80 cm bone at 1 : 10 is 80 ÷ 10 = <strong>8 cm</strong> on paper. (Change metres to centimetres first!)</p>
+</div>
+<h2>Part 2: The Challenge (15 problems)</h2>
+<p>Type your answer and press <strong>Check</strong> (or Enter). For clock times, type 24-hour time like <span class="mono">14:05</span>. Fractions like <span class="mono">3/4</span>, mixed numbers like <span class="mono">1 3/4</span>, or decimals like <span class="mono">1.75</span> are fine. Don't type the units, $ signs, or % signs, and you may use spaces or commas in big numbers (1 000 000). Stuck? Press <strong>Hint</strong>. After 2 tries, you can see a full solution.</p>
+
+<div id="questions"></div>
+<div class="box" id="final"></div>
+<div id="scoreBox">
+  <span id="scoreText">Score: 0 / 15 correct</span>
+  <button id="finishBtn" type="button">I'm done! Show my final score</button>
+</div>
+</div>
+
+<script>
+var NAME = "Ace";
+var TABLE = '<table style="border-collapse:collapse;margin:10px 0;font-size:.95em;background:#fff"><caption style="font-weight:bold;text-align:left;padding-bottom:4px">Ace\'s chewing experiment: chews per bite before swallowing</caption><tr><th style="border:1px solid #bdbdbd;padding:4px 10px;background:#eceff1">Food</th><th style="border:1px solid #bdbdbd;padding:4px 10px;background:#eceff1">Chews per bite</th></tr><tr><td style="border:1px solid #bdbdbd;padding:4px 10px">Raw carrot</td><td style="border:1px solid #bdbdbd;padding:4px 10px;font-family:monospace">32</td></tr><tr><td style="border:1px solid #bdbdbd;padding:4px 10px">Banana</td><td style="border:1px solid #bdbdbd;padding:4px 10px;font-family:monospace">9</td></tr><tr><td style="border:1px solid #bdbdbd;padding:4px 10px">Whole-grain bread</td><td style="border:1px solid #bdbdbd;padding:4px 10px;font-family:monospace">18</td></tr><tr><td style="border:1px solid #bdbdbd;padding:4px 10px">Apple</td><td style="border:1px solid #bdbdbd;padding:4px 10px;font-family:monospace">24</td></tr><tr><td style="border:1px solid #bdbdbd;padding:4px 10px">Cheese</td><td style="border:1px solid #bdbdbd;padding:4px 10px;font-family:monospace">12</td></tr></table>';
+var QUESTIONS = [
+ {t:"Ace eats breakfast at <strong>7:40</strong>. His food stays in his stomach for about <strong>3 h 50 min</strong>, then moves through his small intestine for another <strong>5 h 25 min</strong>. At what time does it leave the small intestine? Give your answer in <strong>24-hour time</strong> (like 14:05).", a:"16:55", u:"(24-hour time)",
+  h:["Add the hours: 7 + 3 + 5. Add the minutes: 40 + 50 + 25.","115 minutes = 1 h 55 min. Add that to the hours, then write it in 24-hour time."],
+  s:"Hours: 7 + 3 + 5 = 15. Minutes: 40 + 50 + 25 = 115 min = 1 h 55 min. 15 h + 1 h 55 min = 16:55 (that's 4:55 p.m.)."},
+ {t:"An adult's small intestine is about <strong>6.5 m</strong> long. Ace is <strong>1.4 m</strong> tall. About how many times Ace's height is that? Round to the nearest <strong>tenth</strong>.", a:"4.6", u:"times",
+  h:["How many times = 6.5 ÷ 1.4.","6.5 ÷ 1.4 ≈ 4.64. Round to one decimal place."],
+  s:"6.5 ÷ 1.4 ≈ 4.64, which rounds to 4.6 times. It fits inside your belly because it is folded and coiled like a garden hose!"},
+ {t:"Tiny finger-like bumps called <strong>villi</strong> give the inside of the small intestine a surface area of about <strong>32 m²</strong>. How many square tiles, each <strong>40 cm</strong> on a side, would it take to cover that much floor?", a:"200", u:"tiles",
+  h:["Change 40 cm to metres: 0.4 m. One tile's area = 0.4 × 0.4.","Divide 32 m² by the area of one tile."],
+  s:"0.4 × 0.4 = 0.16 m² per tile. 32 ÷ 0.16 = 200 tiles."},
+ {t:"Your salivary glands make about <strong>1.2 L</strong> of saliva every day. On average, how many <strong>millilitres per hour</strong> is that?", a:"50", u:"mL/h",
+  h:["Change litres to millilitres: 1 L = 1 000 mL.","1 200 mL ÷ 24 hours = ?"],
+  s:"1.2 L = 1 200 mL. 1 200 ÷ 24 = 50 mL every hour, even while you sleep (though a bit less then)."},
+ {t:"When you swallow, muscle waves push food <strong>24 cm</strong> down your esophagus in about <strong>8 seconds</strong>. What is that speed in <strong>metres per minute</strong>?", a:"1.8", u:"m/min",
+  h:["First find cm per second: 24 ÷ 8.","Multiply by 60 to get cm per minute, then divide by 100 to get metres per minute."],
+  s:"24 ÷ 8 = 3 cm/s. 3 × 60 = 180 cm/min. 180 ÷ 100 = 1.8 m/min."},
+ {t:"Stomach acid can have a pH of about <strong>2</strong>. Pure water has a pH of <strong>7</strong>. Each step down the pH scale is <strong>10 times</strong> more acidic. How many times more acidic is stomach acid than water?", a:"100000", u:"times",
+  h:["How many steps is it from 7 down to 2?","5 steps means 10 × 10 × 10 × 10 × 10 = 10⁵."],
+  s:"7 − 2 = 5 steps. 10⁵ = 100 000 times more acidic! A thick layer of mucus keeps the acid from digesting your own stomach."},
+ {t:"Suppose a meal takes <strong>24 hours</strong> to travel all the way through. It spends <strong>1/8</strong> of the time in the stomach and <strong>1/4</strong> of the time in the small intestine. It spends the <strong>rest</strong> of the time in the large intestine. How many hours is that?", a:"15", u:"hours",
+  h:["1/8 + 1/4 = 1/8 + 2/8 = 3/8. What fraction is left?","5/8 of 24 hours = 24 ÷ 8 × 5."],
+  s:"1/8 + 2/8 = 3/8, so 5/8 is left. 24 ÷ 8 = 3, and 3 × 5 = 15 hours in the large intestine. (Stomach: 3 h, small intestine: 6 h.)"},
+ {t:"An empty stomach holds only about <strong>75 mL</strong>, but it can stretch to hold about <strong>1.5 L</strong> after a big meal. How many times bigger is the full volume than the empty volume?", a:"20", u:"times",
+  h:["Change 1.5 L into mL first.","1 500 ÷ 75 = ?"],
+  s:"1.5 L = 1 500 mL. 1 500 ÷ 75 = 20 times bigger. Folds in the stomach wall, called rugae, unfold like an accordion."},
+ {t:"Each day, about <strong>8 L</strong> of liquid enters an adult's digestive system (drinks, saliva and digestive juices). The small intestine absorbs about <strong>6.8 L</strong> of it. What <strong>percent</strong> is absorbed by the small intestine?", a:"85", u:"%",
+  h:["Percent = part ÷ whole × 100.","6.8 ÷ 8 = ?"],
+  s:"6.8 ÷ 8 = 0.85 = 85%. The large intestine soaks up most of the rest."},
+ {t:"Fibre feeds the helpful microbes in your gut. Ace eats an apple (<strong>4.4 g</strong> of fibre), a bowl of oatmeal (<strong>4.0 g</strong>) and a pear (<strong>5.6 g</strong>). His daily fibre target is <strong>28 g</strong>. What percent of his target has he eaten?", a:"50", u:"%",
+  h:["Total fibre: 4.4 + 4.0 + 5.6.","Percent = total ÷ 28 × 100."],
+  s:"4.4 + 4.0 + 5.6 = 14 g. 14 ÷ 28 = 0.5 = 50%. Halfway there!"},
+ {t:"The large intestine is about <strong>1.5 m</strong> long. Ace draws a diagram of the digestive system at a scale of <strong>1 : 20</strong>. How long should he draw the large intestine, in <strong>cm</strong>?", a:"7.5", u:"cm",
+  h:["Change 1.5 m into centimetres: 150 cm.","Divide by 20 to shrink it to the diagram."],
+  s:"1.5 m = 150 cm. 150 ÷ 20 = 7.5 cm on the diagram."},
+ {t:"Together, the small and large intestines are about <strong>8 m</strong> long. The small intestine is <strong>0.5 m longer than 4 times</strong> the large intestine. If L is the length of the large intestine, solve <strong>L + (4L + 0.5) = 8</strong> to find L, in metres.", a:"1.5", u:"m",
+  h:["Combine like terms: L + 4L = 5L, so 5L + 0.5 = 8.","Subtract 0.5, then divide by 5."],
+  s:"5L + 0.5 = 8 → 5L = 7.5 → L = 1.5 m. Check: small intestine = 4 × 1.5 + 0.5 = 6.5 m, and 1.5 + 6.5 = 8 ✔"},
+ {t:TABLE+"Find the <strong>mean</strong> and the <strong>median</strong> number of chews. How much <strong>greater</strong> is the mean than the median?", a:"1", u:"chews",
+  h:["Mean: add all five numbers and divide by 5.","Median: put them in order (9, 12, …) and find the middle one. Then subtract."],
+  s:"Total = 32 + 9 + 18 + 24 + 12 = 95, so the mean = 95 ÷ 5 = 19. In order: 9, 12, 18, 24, 32, so the median = 18. 19 − 18 = 1 chew."},
+ {t:"Yogurt A costs <strong>$4.55 for 650 g</strong>. Yogurt B costs <strong>$6.20 for 1 kg</strong>. Find each price per 100 g. How many <strong>cents</strong> cheaper per 100 g is the better buy?", a:"8", u:"¢",
+  h:["Yogurt A: 650 g is 6.5 groups of 100 g, so $4.55 ÷ 6.5. Yogurt B: 1 kg = 1 000 g = 10 groups of 100 g.","A = $0.70 per 100 g. B = $0.62 per 100 g. Subtract."],
+  s:"A: 4.55 ÷ 6.5 = $0.70 per 100 g. B: 6.20 ÷ 10 = $0.62 per 100 g. B is cheaper by $0.08 = 8¢ per 100 g."},
+ {t:"Children have <strong>20</strong> baby teeth. Most adults have <strong>32</strong> permanent teeth. What is the <strong>percent increase</strong> from 20 teeth to 32 teeth?", a:"60", u:"%",
+  h:["Increase = 32 − 20.","Percent increase = increase ÷ 20 × 100."],
+  s:"32 − 20 = 12. 12 ÷ 20 = 0.6 = a 60% increase. Your molars help grind food into tiny pieces your enzymes can work on."}
+];
+
+var PRAISE = ["Nice work, Ace!","Correct! Digestion-detective level! 🍎","Yes! Your brain digested that one!","Excellent, Ace. That was a tough one!","Right on target! 🎯","Brilliant thinking, Ace!","Gut-feeling genius, Ace! 🦷"];
+var ENCOURAGE = ["Not quite. Check your steps and try again!","Close call. Try again, Ace! Maybe use a hint?","Hmm, not yet. Re-read the question carefully.","Keep going, Ace. Mistakes help your brain grow!"];
+
+function parseAnswer(str){
+  if(str===undefined||str===null) return NaN;
+  var s=String(str).trim().toLowerCase();
+  s=s.replace(/[\u2212\u2013]/g,"-");
+  s=s.replace(/(\d),(?=\d{3}(\D|$))/g,"$1");
+  s=s.replace(/[^0-9.\/\- ]/g," ").replace(/\s+/g," ").trim();
+  s=s.replace(/\s*\/\s*/g,"/");
+  var m;
+  if((m=s.match(/^(-?\d+) (\d+)\/(\d+)$/))){ var w=parseFloat(m[1]),n=parseFloat(m[2]),d=parseFloat(m[3]); if(d===0)return NaN; return w<0? w-n/d : w+n/d; }
+  if((m=s.match(/^(-?\d+(?:\.\d+)?)\/(\d+(?:\.\d+)?)$/))){ var d2=parseFloat(m[2]); if(d2===0)return NaN; return parseFloat(m[1])/d2; }
+  s=s.replace(/ /g,"");
+  if(/^-?(\d+\.?\d*|\.\d+)$/.test(s)) return parseFloat(s);
+  return NaN;
+}
+function isCorrect(input,key){
+  var a=parseAnswer(input), k=parseAnswer(key);
+  if(isNaN(a)) return false;
+  var isInt=Math.abs(k-Math.round(k))<1e-12;
+  var tol=isInt?1e-9:0.005;
+  return Math.abs(a-k)<=tol;
+}
+
+function isRomanCorrect(input,key){ return String(input).replace(/\s+/g,"").toUpperCase()===key; }
+var state=[];
+function render(){
+  var box=document.getElementById("questions");
+  QUESTIONS.forEach(function(q,i){
+    state.push({correct:false,tries:0,hints:0});
+    var d=document.createElement("div");
+    d.className="box q"; d.id="q"+i;
+    d.innerHTML='<div><span class="qnum">'+(i+1)+'.</span> '+q.t+'</div>'+
+      '<div class="row"><input type="text"'+(q.r?' placeholder="e.g. MMXXVI"':'')+' id="in'+i+'" aria-label="Answer to question '+(i+1)+'" autocomplete="off"> <span class="unit">'+q.u+'</span>'+
+      '<button type="button" class="check" data-i="'+i+'">Check</button>'+
+      '<button type="button" class="hint" data-i="'+i+'">Hint 💡</button>'+
+      '<button type="button" class="sol" data-i="'+i+'" style="display:none">Show solution</button></div>'+
+      '<div class="fb" id="fb'+i+'"></div><div class="hints" id="hints'+i+'"></div>'+
+      '<div class="solution" id="sol'+i+'"><strong>Solution:</strong> '+q.s+'</div>';
+    box.appendChild(d);
+  });
+  box.addEventListener("click",function(e){
+    var b=e.target; if(b.tagName!=="BUTTON")return;
+    var i=+b.getAttribute("data-i");
+    if(b.className==="check") check(i);
+    else if(b.className==="hint") hint(i);
+    else if(b.className==="sol") document.getElementById("sol"+i).style.display="block";
+  });
+  box.addEventListener("keydown",function(e){
+    if(e.key==="Enter"&&e.target.tagName==="INPUT"){ check(+e.target.id.slice(2)); }
+  });
+}
+function pick(arr){return arr[Math.floor(Math.random()*arr.length)];}
+function check(i){
+  var val=document.getElementById("in"+i).value;
+  var fb=document.getElementById("fb"+i), card=document.getElementById("q"+i);
+  if(val.trim()===""){fb.className="fb bad";fb.textContent="Type an answer first, Ace!";return;}
+  var isR=!!QUESTIONS[i].r;
+  if(isR&&!/^[ivxlcdm\s]+$/i.test(val)){fb.className="fb bad";fb.textContent="Use only Roman numeral letters: I, V, X, L, C, D, M.";return;}
+  if(!isR&&isNaN(parseAnswer(val))){fb.className="fb bad";fb.textContent="I can't read that as a number. Try something like 42, 3.5, 3/4 or 1 3/4.";return;}
+  state[i].tries++;
+  if(isR?isRomanCorrect(val,QUESTIONS[i].a):isCorrect(val,QUESTIONS[i].a)){
+    state[i].correct=true; card.className="box q right"; fb.className="fb good";
+    fb.textContent="✅ "+pick(PRAISE)+(state[i].tries===1?" (first try!)":"");
+  } else {
+    state[i].correct=false; card.className="box q wrong"; fb.className="fb bad";
+    fb.textContent="❌ "+pick(ENCOURAGE);
+    if(state[i].tries>=2) card.querySelector(".sol").style.display="inline-block";
+  }
+  updateScore();
+}
+function hint(i){
+  var q=QUESTIONS[i], s=state[i], hb=document.getElementById("hints"+i);
+  if(s.hints<q.h.length){
+    var p=document.createElement("p"); p.textContent="💡 Hint "+(s.hints+1)+": "+q.h[s.hints]; hb.appendChild(p); s.hints++;
+  }
+  if(s.hints>=q.h.length) document.querySelector("#q"+i+" .hint").disabled=true;
+  updateScore();
+}
+function counts(){
+  var c=0,first=0,h=0;
+  state.forEach(function(s){ if(s.correct){c++; if(s.tries===1)first++;} h+=s.hints; });
+  return {correct:c,first:first,hints:h};
+}
+function updateScore(){
+  var k=counts();
+  document.getElementById("scoreText").textContent="Score: "+k.correct+" / "+QUESTIONS.length+" correct · hints used: "+k.hints;
+}
+function finish(){
+  var k=counts(), n=QUESTIONS.length, pct=Math.round(100*k.correct/n);
+  var msg;
+  if(pct===100) msg="🏆 PERFECT SCORE! Incredible work, Ace. Your gut microbes are cheering for you!";
+  else if(pct>=85) msg="🌟 Outstanding, Ace! That's a Grade 6–7 level performance!";
+  else if(pct>=65) msg="💪 Great effort, Ace! Review the ones you missed and try them again.";
+  else if(pct>=40) msg="👍 Good start, Ace! These problems are tough. Use the hints and solutions to learn the tricks, then try again.";
+  else msg="🌱 These are challenge problems, well above grade level. Every great scientist started as a beginner! Go through the worked examples and try again, Ace!";
+  var f=document.getElementById("final");
+  f.style.display="block";
+  f.innerHTML="<h2 style='border:none;margin-top:0'>Final Score: "+k.correct+" / "+n+" ("+pct+"%)</h2>"+
+    "<p>Correct on the first try: "+k.first+" · Hints used: "+k.hints+"</p><p>"+msg+"</p>"+
+    "<p style='font-size:.85em;color:#546e7a'>Finished on "+new Date().toLocaleString("en-CA")+"</p>";
+  f.scrollIntoView({behavior:"smooth"});
+}
+render();
+updateScore();
+document.getElementById("finishBtn").addEventListener("click",finish);
+</script>
+<script src="../../assets/autosave.js"></script>
+</body>
+</html>
