@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Writing (Nov. 13): Technical Explanation with a Flow Chart (How Clean Water Gets to Your Tap) + Grammar Clinic</title>
+<style>
+  body{font-family:"Segoe UI",Verdana,Arial,sans-serif;font-size:20px;line-height:1.6;margin:0;background:#fff8f0;color:#2c2416}
+  .wrap{max-width:880px;margin:0 auto;padding:20px 18px 80px}
+  a.home{font-size:.9em;color:#bf360c}
+  h1{color:#e65100;font-size:2em;margin:10px 0}
+  h2{color:#ef6c00;margin-top:36px;border-bottom:3px solid #ffcc80;padding-bottom:4px}
+  h3{color:#ef6c00}
+  .box{background:#fff;border-radius:16px;padding:18px 22px;margin:16px 0;box-shadow:0 3px 10px rgba(0,0,0,.07)}
+  .tipbox{background:#fff8e1;border-left:8px solid #ffb300}
+  .senses{display:grid;gap:8px;margin:10px 0;grid-template-columns:repeat(auto-fit,minmax(140px,1fr))}
+  .senses .side{border-radius:14px;padding:10px 16px;background:#fff3e0}
+  .ts{background:#ffcc80;border-radius:5px;padding:1px 3px}
+  .ev{background:#c8e6c9;border-radius:5px;padding:1px 3px}
+  .ex{background:#ffe0b2;border-radius:5px;padding:1px 3px}
+  .cs{background:#e1bee7;border-radius:5px;padding:1px 3px}
+  .legend span{display:inline-block;margin:4px 8px 4px 0;font-size:.85em}
+  .model{font-family:Georgia,"Times New Roman",serif;font-size:1.05em;line-height:1.9}
+  .row{padding:10px 6px;border-bottom:1px dashed #ddd}
+  .row.right{background:#f1f8e9} .row.wrong{background:#fff5f5}
+  select{font-size:.9em;padding:5px 8px;border-radius:8px;border:2px solid #ffb74d;font-family:inherit}
+  .q{border-left:8px solid #b0bec5}
+  .q.right{border-left-color:#43a047;background:#f1f8e9}
+  .q.wrong{border-left-color:#e53935;background:#fff5f5}
+  .opt{display:block;width:100%;text-align:left;font-size:.95em;background:#fafafa;border:2px solid #e0e0e0;border-radius:10px;padding:8px 14px;margin:8px 0;cursor:pointer;font-family:inherit}
+  .opt:hover{border-color:#ffb74d;background:#fff}
+  .opt.sel-right{background:#c8e6c9;border-color:#43a047}
+  .opt.sel-wrong{background:#ffcdd2;border-color:#e53935}
+  .fb{margin-top:6px;font-weight:bold}
+  .fb.good{color:#2e7d32} .fb.bad{color:#c62828}
+  .explain{font-weight:normal;color:#e65100}
+  .bad-sent{font-family:Consolas,"Courier New",monospace;background:#ffebee;padding:6px 10px;border-radius:8px;display:inline-block;margin:6px 0}
+  input.fix{width:100%;box-sizing:border-box;font-size:1em;padding:8px 12px;border:2px solid #ffb74d;border-radius:10px;font-family:inherit}
+  button{font-size:.95em;padding:8px 16px;border:none;border-radius:10px;cursor:pointer;font-weight:bold;font-family:inherit}
+  .go{background:#ef6c00;color:#fff} .go:hover{background:#e65100}
+  .hint{background:#ffe082;color:#5d4037}
+  .blue{background:#1e88e5;color:#fff}
+  .purple{background:#8e24aa;color:#fff}
+  .grey{background:#cfd8dc;color:#263238}
+  .btnrow{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px}
+  textarea{width:100%;box-sizing:border-box;min-height:300px;font-size:1.05em;line-height:1.7;font-family:Georgia,"Times New Roman",serif;padding:14px;border:3px solid #ffb74d;border-radius:12px}
+  textarea:focus{outline:none;border-color:#ef6c00}
+  .counter{display:flex;flex-wrap:wrap;gap:20px;align-items:center;margin:8px 0;font-weight:bold}
+  .meter{flex:1;min-width:200px;height:18px;background:#e0e0e0;border-radius:9px;overflow:hidden}
+  .meter div{height:100%;width:0;background:#ffb300;transition:width .2s}
+  .checklist label{display:block;padding:6px 4px;cursor:pointer}
+  .checklist input{transform:scale(1.4);margin-right:10px}
+  .prompts label{display:block;background:#fff3e0;border-radius:10px;padding:10px 14px;margin:8px 0;cursor:pointer}
+  .flow{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin:10px 0;font-size:.85em}
+  .flow span.st{background:#e3f2fd;border:2px solid #1e88e5;border-radius:8px;padding:4px 10px;font-weight:bold;color:#0d47a1}
+  .flow span.ar{color:#1e88e5;font-weight:bold}
+  .prompts input{transform:scale(1.3);margin-right:8px}
+  #scoreBox{position:sticky;bottom:0;background:#e65100;color:#fff;border-radius:16px 16px 0 0;padding:12px 20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-top:30px}
+  .w5{display:grid;gap:8px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));margin:10px 0}
+  .w5 label{display:block;font-weight:bold;color:#e65100}
+  .w5 input{width:100%;box-sizing:border-box;font-size:.95em;padding:6px 10px;border:2px solid #ffb74d;border-radius:8px;font-family:inherit}
+  #printArea{display:none}
+  @media print{
+    body{background:#fff;font-size:14pt}
+    .wrap,#scoreBox{display:none !important}
+    #printArea{display:block;font-family:Georgia,serif;line-height:1.8}
+    #printArea h1{font-size:18pt;margin:0 0 6pt}
+    #printArea .meta{font-size:11pt;color:#444}
+    #printArea .text{white-space:pre-wrap;border-top:1px solid #999;padding-top:10pt;margin-top:10pt}
+    #printArea .lines{margin-top:24pt;border-top:1px solid #999;padding-top:6pt;font-size:11pt}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+<a class="home" href="../../index.html">&larr; Back to all lessons</a>
+<h1>✍️ Writing Week 47: Technical Explanation with a Flow Chart — How Clean Water Gets to Your Tap 🚰📐</h1>
+<p>Yesterday you told a true science journey as a story. Today, Ace, you'll write like a real engineer in a brand-new genre: a <strong>technical explanation with a flow chart</strong>. Engineers, scientists and city water departments use this kind of writing to explain <strong>how a system works</strong>: what happens at each stage, in what order, and <strong>why each stage is needed</strong>. It is not a how-to guide that tells the reader what to do, and it is not a story. It is a clear, precise explanation, backed up by a diagram, that someone could use to understand (or even fix!) the system.</p>
+
+<h2>Part 1: The Lesson</h2>
+<div class="box">
+  <h3 style="margin-top:0">The six parts of a strong technical explanation 📐</h3>
+  <p>A technical explanation answers two big questions: <strong>How does it work?</strong> and <strong>Why is each step there?</strong> The flow chart shows the "how" at a glance; the paragraphs explain the details and the "why."</p>
+  <div class="senses">
+    <div class="side"><strong>1. Title + overview:</strong> a clear title and one or two sentences that say what the whole system does</div>
+    <div class="side"><strong>2. Flow chart:</strong> boxes connected by arrows (→) that show every stage in order, with short labels</div>
+    <div class="side"><strong>3. Step explanation:</strong> one sentence or more for each stage, using sequence words (<em>First, Next, Then, After that, Finally</em>)</div>
+    <div class="side"><strong>4. Why it's needed:</strong> the purpose of each stage, using cause-and-effect words (<em>because, so, in order to, which prevents</em>)</div>
+    <div class="side"><strong>5. Precise data + units:</strong> exact numbers with units (1.8 billion L a day, 24 filters, 1 m³ = 1 000 L) instead of "lots"</div>
+    <div class="side"><strong>6. Conclusion + significance:</strong> a summary of how the stages work together and why the system matters</div>
+  </div>
+  <h3>Four tricks technical writers use</h3>
+  <ul>
+    <li><strong>Define technical words right away:</strong> use an <em>appositive</em>, a phrase between commas that explains a word: <em>"Floc, fluffy clumps of dirt, sinks to the bottom."</em></li>
+    <li><strong>Match the flow chart and the text:</strong> every box in the chart should appear in the paragraphs, in the same order, with the same name.</li>
+    <li><strong>Be precise, not chatty:</strong> ❌ <em>"Then some stuff gets added and it's really cool."</em> ✅ <em>"Next, a coagulant is added, which makes tiny particles sticky."</em></li>
+    <li><strong>Use the present tense:</strong> a system works the same way every day, so write <em>flows, traps, kills</em>, not <em>flowed, trapped, killed</em>.</li>
+  </ul>
+  <p><strong>Technical writing rule:</strong> a reader who has never seen a treatment plant should be able to redraw your flow chart from your words alone.</p>
+</div>
+
+<div class="box tipbox">
+  <h3 style="margin-top:0">Mini-lesson: writing like an engineer 🔧</h3>
+  <p><strong>Passive voice (when the "who" doesn't matter):</strong> technical writers often focus on <em>what happens</em>, not who does it. Active: <em>Operators add chlorine.</em> Passive: <em>Chlorine <u>is added</u>.</em> Form it with <strong>is/are + past participle</strong>: <em>is added, are trapped, is stored</em>. Use it sometimes, not in every sentence!</p>
+  <p><strong>Appositives need two commas</strong> (unless they end the sentence): <em>The reservoir, a human-made lake, stores water for summer.</em></p>
+  <p><strong>Subject-verb agreement with a phrase in the middle:</strong> find the real subject. <em>The water <s>in the pipes</s> <u>flows</u> downhill.</em> (The subject is <em>water</em>, not <em>pipes</em>.)</p>
+  <p><strong>Commas after sequence words:</strong> <em>Next, the water trickles through sand.</em> Canadian spelling: <strong>litre, metre, centre, neighbourhood, colour</strong>.</p>
+</div>
+
+<div class="box">
+  <h3 style="margin-top:0">Model technical explanation (about 210 words)</h3>
+  <p class="legend"><span class="ts">Title + overview</span><span class="ev">Flow chart + step explanation</span><span class="ex">Why it's needed + data</span><span class="cs">Conclusion + significance</span></p>
+  <div class="model">
+    <span class="ts"><strong>How Rain Becomes Tap Water</strong><br>Clean tap water is produced by a system that collects, treats and delivers water. In Metro Vancouver, the process begins in protected mountain watersheds and ends at your kitchen tap.</span>
+    <div class="flow" aria-label="Flow chart"><span class="st">Watershed</span><span class="ar">→</span><span class="st">Reservoir</span><span class="ar">→</span><span class="st">Coagulation</span><span class="ar">→</span><span class="st">Flocculation</span><span class="ar">→</span><span class="st">Filtration</span><span class="ar">→</span><span class="st">UV disinfection</span><span class="ar">→</span><span class="st">Chlorine</span><span class="ar">→</span><span class="st">Water mains</span><span class="ar">→</span><span class="st">Your tap</span></div>
+    <span class="ev">First, rain and snowmelt drain into reservoirs, human-made lakes that store water for dry summers. Next, at the treatment plant, a coagulant is added so that tiny particles become sticky. Then, during flocculation, slow paddles gather the particles into floc, fluffy clumps of dirt. After that, the water trickles through deep filters of sand and crushed coal, which trap the floc.</span>
+    <span class="ex">Disinfection is the most important stage because germs that slip through could make people sick. Ultraviolet light damages the germs' genetic material, so they cannot multiply. Finally, a small amount of chlorine is added in order to protect the water during its trip through the water mains. The Seymour-Capilano Filtration Plant can treat up to 1.8 billion litres a day.</span>
+    <span class="cs">Each stage removes a different problem, so the stages work together like a team of guards. Because of this system, more than three million people can drink safely from the tap.</span>
+  </div>
+  <p><strong>Notice:</strong> the overview says what the whole system does; every box in the flow chart appears in the paragraphs in the same order; technical words (reservoirs, floc) are defined with appositives; <em>because, so, in order to</em> explain why each stage is needed; numbers have units; the writer uses the present tense, with a few passive sentences (<em>is added</em>); the conclusion explains why the system matters.</p>
+</div>
+
+<h2>Part 2: Name That Technical Explanation Part</h2>
+<div class="box">
+  <p>Each line comes from a student's technical explanation called <strong>"Where Does the Water Go When I Flush?"</strong> Choose which <strong>part</strong> it shows best.</p>
+  <div id="labelRows"></div>
+  <div class="btnrow"><button type="button" class="go" id="checkLabels">Check my answers</button></div>
+  <div class="fb" id="labelFb"></div>
+</div>
+
+<h2>Part 3: Grammar Clinic 📏</h2>
+<div class="box tipbox">Every engineer needs a careful editor! <strong>Section A:</strong> pick the correct sentence. <strong>Section B:</strong> type the sentence again with <em>all</em> mistakes fixed. We use <strong>Canadian spelling</strong> (litre, metre, centre, neighbourhood, colour). Today, watch <strong>present tense for processes</strong>, <strong>passive voice</strong>, <strong>commas around appositives</strong>, <strong>commas after sequence words</strong>, <strong>subject-verb agreement</strong>, <strong>apostrophes</strong>, <strong>capital letters for names and places</strong>, and <strong>run-on sentences</strong>.</div>
+<h3>Section A: Pick the correct sentence</h3>
+<div id="gmc"></div>
+<h3>Section B: Fix the sentence</h3>
+<p>Retype the whole sentence correctly, with capital letters and punctuation. Each one has <strong>at least two</strong> mistakes.</p>
+<div id="gfix"></div>
+
+<h2>Part 4: Your Turn to Write</h2>
+<div class="box">
+  <h3 style="margin-top:0">Step 1: Choose your system</h3>
+  <p>Pick <strong>one</strong> system to explain. Use today's reading (and what you already know) for your facts. Start by sketching your flow chart in the planning boxes, then explain it.</p>
+  <div class="prompts" id="prompts">
+    <label><input type="radio" name="prompt" value="Option A: From Mountain to Tap: How a City Cleans Its Water" checked> 🏔️ <strong>Option A: From Mountain to Tap.</strong> Explain how rain in a protected watershed becomes safe tap water: reservoir, treatment steps, disinfection and pipes.</label>
+    <label><input type="radio" name="prompt" value="Option B: Where Does the Water Go When I Flush?"> 🚽 <strong>Option B: Where Does the Water Go When I Flush?</strong> Explain the trip of used water through the sewers and a wastewater treatment plant (screens, settling, helpful bacteria) and back to a river or the ocean.</label>
+    <label><input type="radio" name="prompt" value="Option C: How the Water Cycle Refills a Reservoir"> 🌧️ <strong>Option C: How the Water Cycle Refills a Reservoir.</strong> Explain how the Sun, evaporation, condensation, precipitation, snowpack and runoff keep a mountain reservoir full, and why summer is the hardest season.</label>
+  </div>
+  <p><strong>Plan your explanation:</strong> jot a few words for each box. (These notes save with your writing.)</p>
+  <div class="w5" id="w5">
+    <div><label for="w5who">Title + overview (what does the system do?)</label><input id="w5who" type="text" autocomplete="off"></div>
+    <div><label for="w5place">Flow chart (Stage → Stage → Stage …)</label><input id="w5place" type="text" autocomplete="off"></div>
+    <div><label for="w5facts">Technical words + quick definitions</label><input id="w5facts" type="text" autocomplete="off"></div>
+    <div><label for="w5senses">Why each stage is needed (because…)</label><input id="w5senses" type="text" autocomplete="off"></div>
+    <div><label for="w5feel">Precise numbers + units</label><input id="w5feel" type="text" autocomplete="off"></div>
+    <div><label for="w5closing">Conclusion: why the system matters</label><input id="w5closing" type="text" autocomplete="off"></div>
+  </div>
+
+  <h3>Step 2: Write your technical explanation</h3>
+  <p><strong>Goal:</strong> <strong>220 to 350 words</strong>: a title and an overview, then a <strong>flow chart</strong> typed with arrows (at least <strong>five stages</strong>, like <em>Watershed → Reservoir → …</em>), then <strong>2 to 3 paragraphs</strong> that explain every stage in the same order, then a conclusion. Include at least <strong>four sequence words</strong> followed by commas, at least <strong>three technical words defined</strong> (try an appositive!), at least <strong>three "why" reasons</strong> (<em>because, so, in order to</em>), at least <strong>two numbers with units</strong>, at least <strong>one passive-voice sentence</strong>, and the <strong>present tense</strong> throughout. Then add <strong>2–3 sentences to Dad</strong> about which stage surprised you most. Bonus: use two words from today's spelling list (like <em>coagulation</em> or <em>infrastructure</em>) correctly!</p>
+  <p><button type="button" class="hint" id="templateBtn">📋 Add the layout for me</button></p>
+  <label for="essay"><strong>Write here, Ace:</strong></label>
+  <textarea id="essay" placeholder="Title: ..."></textarea>
+  <div class="counter">
+    <span id="wc">0 words</span>
+    <span id="sc">0 sentences</span>
+    <div class="meter" aria-hidden="true"><div id="meterBar"></div></div>
+  </div>
+  <div class="fb" id="wcMsg">Aim for 220 to 350 words.</div>
+  <p style="font-size:.8em;color:#607d8b" id="saveNote">Your writing is saved automatically in this browser as you type.</p>
+
+  <h3>Self-check before you finish ✅</h3>
+  <div class="checklist" id="checklist">
+    <label><input type="checkbox"> My <strong>title and overview</strong> tell the reader what the whole system does.</label>
+    <label><input type="checkbox"> My <strong>flow chart</strong> has at least <strong>five stages</strong> joined by arrows, in the right order.</label>
+    <label><input type="checkbox"> Every stage in my flow chart is <strong>explained in my paragraphs</strong>, in the same order, with <strong>sequence words + commas</strong>.</label>
+    <label><input type="checkbox"> I explained <strong>why</strong> stages are needed at least three times (<em>because, so, in order to</em>).</label>
+    <label><input type="checkbox"> I <strong>defined technical words</strong> (with appositives and two commas) and used <strong>numbers with units</strong>.</label>
+    <label><input type="checkbox"> I wrote in the <strong>present tense</strong>, used at least one <strong>passive-voice</strong> sentence, and checked subject-verb agreement.</label>
+    <label><input type="checkbox"> My <strong>conclusion</strong> explains why the system matters, and I checked Canadian spelling (litre, metre, centre).</label>
+  </div>
+  <div class="btnrow">
+    <button type="button" class="blue" id="downloadBtn">⬇️ Download my writing (for Dad)</button>
+    <button type="button" class="purple" id="printBtn">🖨️ Print my writing</button>
+    <button type="button" class="grey" id="clearBtn">Start over</button>
+  </div>
+  <div class="fb" id="doneMsg"></div>
+</div>
+
+<div id="scoreBox"><span id="scoreText"></span><span>Keep going, engineer Ace! 🚰</span></div>
+</div>
+
+<div id="printArea"></div>
+
+<script>
+var NAME="Ace";
+var PRAISE=["Nice work, Ace!","Correct! Great editing eye!","Yes! Ace fixed it!","Excellent, engineer Ace!","Bravo! That edit is crystal clear! 💧"];
+function pick(a){return a[Math.floor(Math.random()*a.length)];}
+
+var LABELS=["Title + overview", "Flow chart", "Step explanation", "Why it's needed", "Precise data + units", "Conclusion + significance"];
+var LABEL_ITEMS=[
+ {s:"Toilet → Sewer pipes → Screens → Settling tanks → Bacteria tanks → River or ocean", a:"Flow chart"},
+ {s:"Screens are needed because large objects, such as rags and sticks, could clog the pumps.", a:"Why it's needed"},
+ {s:"Where Does the Water Go When I Flush? A wastewater treatment plant cleans used water from homes so it can be safely returned to a river or the ocean.", a:"Title + overview"},
+ {s:"In our town's plant, each settling tank holds 4 000 m³ of water, which is 4 million litres.", a:"Precise data + units"},
+ {s:"Next, the water rests in settling tanks, where heavy solids sink to the bottom.", a:"Step explanation"},
+ {s:"Without this system, untreated waste would harm fish and close beaches, so every flush depends on these stages working together.", a:"Conclusion + significance"}
+];
+var labelScore=0, labelChecked=false;
+function buildLabels(){
+  var box=document.getElementById("labelRows");
+  LABEL_ITEMS.forEach(function(it,i){
+    var d=document.createElement("div"); d.className="row"; d.id="lr"+i;
+    var sel='<select id="ls'+i+'" aria-label="Job of sentence '+(i+1)+'"><option value="">- choose -</option>';
+    LABELS.forEach(function(l){sel+='<option>'+l+'</option>';});
+    sel+='</select>';
+    d.innerHTML='<strong>'+(i+1)+'.</strong> '+it.s+'<br>'+sel+' <span id="lm'+i+'"></span>';
+    box.appendChild(d);
+  });
+}
+function checkLabels(){
+  var sc=0;
+  LABEL_ITEMS.forEach(function(it,i){
+    var ok=document.getElementById("ls"+i).value===it.a; if(ok)sc++;
+    document.getElementById("lr"+i).className="row "+(ok?"right":"wrong");
+    document.getElementById("lm"+i).textContent=ok?"✅":"❌";
+  });
+  labelScore=sc; labelChecked=true;
+  var fb=document.getElementById("labelFb");
+  if(sc===LABEL_ITEMS.length){fb.className="fb good";fb.textContent="🌟 "+sc+" / "+LABEL_ITEMS.length+". "+pick(PRAISE)+" You know exactly how a technical explanation is built!";}
+  else{fb.className="fb bad";fb.textContent=sc+" / "+LABEL_ITEMS.length+". Hint: what the whole system does = overview; boxes and arrows = flow chart; a sequence word + what happens = step; 'because' + a purpose = why it's needed; exact numbers and units = data; how it all works together + why it matters = conclusion.";}
+  updateScore();
+}
+
+var GMC=[
+ {q:"Which sentence explains a process in a <strong>consistent present tense</strong>?",
+  o:["The water flows into the plant, and the filters trapped the floc.", "The water flowed into the plant, and the filters trap the floc.", "The water flows into the plant, and the filters trap the floc.", "The water flowing into the plant, and the filters trap the floc."],
+  a:2,e:"A system works the same way every day, so technical writers use the present tense: <strong>flows</strong> and <strong>trap</strong>."},
+ {q:"Which sentence uses the <strong>passive voice</strong> correctly?",
+  o:["Chlorine are added to the water.", "Chlorine is add to the water.", "Chlorine is added to the water.", "Chlorine adding to the water."],
+  a:2,e:"Passive voice = <strong>is/are + past participle</strong>: <em>is added</em>. Chlorine is singular, so use <em>is</em>."},
+ {q:"Which sentence uses commas around an <strong>appositive</strong> correctly?",
+  o:["Floc the fluffy clumps of dirt, sinks to the bottom.", "Floc, the fluffy clumps of dirt, sinks to the bottom.", "Floc, the fluffy clumps of dirt sinks to the bottom.", "Floc the fluffy clumps, of dirt sinks to the bottom."],
+  a:1,e:"An appositive in the middle of a sentence needs a comma <strong>before and after</strong> it: <em>Floc, the fluffy clumps of dirt, sinks…</em>"},
+ {q:"Which sentence has correct <strong>subject-verb agreement</strong>?",
+  o:["The water in the pipes flow downhill.", "The water in the pipes flows downhill.", "The water in the pipes are flowing downhill.", "The water in the pipes have flowed downhill."],
+  a:1,e:"The subject is <em>water</em> (singular), not <em>pipes</em>. Ignore the phrase in the middle: <em>The water … <strong>flows</strong></em>."},
+ {q:"Which sentence uses an <strong>apostrophe</strong> correctly?",
+  o:["About 2.5% of Earths' water is fresh.", "About 2.5% of Earth's water is fresh.", "About 2.5% of Earths water is fresh.", "About 2.5% of Earth water's is fresh."],
+  a:1,e:"The water belongs to Earth (one planet), so add <strong>'s</strong>: <em>Earth's water</em>."},
+ {q:"Which sentence uses <strong>Canadian spelling</strong> correctly?",
+  o:["Each one-meter pipe carries a liter of water to the neighborhood center.", "Each one-metre pipe carries a litre of water to the neighbourhood centre.", "Each one-metre pipe carries a liter of water to the neighbourhood center.", "Each one-meter pipe carries a litre of water to the neighborhood centre."],
+  a:1,e:"In Canada we write <strong>metre</strong>, <strong>litre</strong>, <strong>neighbourhood</strong> and <strong>centre</strong>."},
+ {q:"Which choice fixes the <strong>run-on sentence</strong> correctly?",
+  o:["The floc sinks to the bottom, the clear water moves on to the filters.", "The floc sinks to the bottom the clear water moves on to the filters.", "The floc sinks to the bottom. The clear water moves on to the filters.", "The floc sinks, to the bottom the clear water, moves on to the filters."],
+  a:2,e:"Two complete sentences need a period (or a semicolon) between them. A comma alone makes a <em>comma splice</em>."}
+];
+var gmcState=GMC.map(function(){return{answered:false,firstRight:false,done:false};});
+function buildGMC(){
+  var box=document.getElementById("gmc");
+  GMC.forEach(function(it,i){
+    var d=document.createElement("div"); d.className="box q"; d.id="g"+i;
+    var h='<div><strong>'+(i+1)+'.</strong> '+it.q+'</div>';
+    it.o.forEach(function(o,j){h+='<button type="button" class="opt" data-i="'+i+'" data-j="'+j+'">'+String.fromCharCode(65+j)+'. '+o+'</button>';});
+    h+='<div class="fb" id="gfb'+i+'"></div>';
+    d.innerHTML=h; box.appendChild(d);
+  });
+  box.addEventListener("click",function(e){
+    var b=e.target.closest?e.target.closest(".opt"):e.target; if(!b||!b.classList.contains("opt"))return;
+    var i=+b.getAttribute("data-i"), j=+b.getAttribute("data-j"), st=gmcState[i], it=GMC[i];
+    if(st.done)return;
+    var ok=j===it.a; if(!st.answered){st.answered=true;st.firstRight=ok;}
+    var fb=document.getElementById("gfb"+i);
+    if(ok){st.done=true;b.classList.add("sel-right");document.getElementById("g"+i).className="box q right";fb.className="fb good";fb.innerHTML="✅ "+pick(PRAISE)+' <span class="explain">'+it.e+'</span>';}
+    else{b.classList.add("sel-wrong");document.getElementById("g"+i).className="box q wrong";fb.className="fb bad";fb.textContent="❌ Not quite, Ace. Look closely and try again.";}
+    updateScore();
+  });
+}
+
+var GFIX=[
+ {bad:"first operators adds a chemical that make the particles sticky",
+  ok:["First, operators add a chemical that makes the particles sticky.","First, operators add a chemical that makes particles sticky."],
+  hint:"Capitalize First and put a comma after it. Operators is plural, so use add. A chemical is singular, so use makes. End with a period."},
+ {bad:"the seymour-capilano filtration plant opened in 2009 it is the largest in canada",
+  ok:["The Seymour-Capilano Filtration Plant opened in 2009. It is the largest in Canada.","The Seymour-Capilano Filtration Plant opened in 2009; it is the largest in Canada.","The Seymour-Capilano Filtration Plant opened in 2009, and it is the largest in Canada."],
+  hint:"Capitalize the full name of the plant (each important word) and Canada. This is a run-on, so split it into two sentences after 2009 (or use a semicolon)."},
+ {bad:"next the reservoir a human-made lake store water for the dry summer",
+  ok:["Next, the reservoir, a human-made lake, stores water for the dry summer.","Next, the reservoir, a human-made lake, stores water for dry summers."],
+  hint:"Capitalize Next and add a comma after it. Put commas before and after the appositive (a human-made lake). The subject is reservoir (singular), so use stores. End with a period."},
+ {bad:"in 1854 doctor john snow mapped a cholera outbreak in londons soho neighborhood",
+  ok:["In 1854, Doctor John Snow mapped a cholera outbreak in London's Soho neighbourhood.","In 1854 Doctor John Snow mapped a cholera outbreak in London's Soho neighbourhood.","In 1854, doctor John Snow mapped a cholera outbreak in London's Soho neighbourhood.","In 1854, Dr. John Snow mapped a cholera outbreak in London's Soho neighbourhood."],
+  hint:"Capitalize In, John Snow, London and Soho. London's needs an apostrophe. Use Canadian spelling: neighbourhood. A comma after In 1854 is a good idea. End with a period."}
+];
+
+var gfixState=GFIX.map(function(){return{tries:0,correct:false,firstRight:false};});
+function norm(s){return s.replace(/[\u2018\u2019\u02BC]/g,"'").replace(/[\u201C\u201D]/g,'"').replace(/\s+/g," ").trim();}
+function checkFixAnswer(i,val){var v=norm(val);return GFIX[i].ok.some(function(a){return norm(a)===v;});}
+function buildGFix(){
+  var box=document.getElementById("gfix");
+  GFIX.forEach(function(it,i){
+    var d=document.createElement("div"); d.className="box q"; d.id="f"+i;
+    d.innerHTML='<div><strong>'+(i+1)+'.</strong> Fix: <span class="bad-sent">'+it.bad+'</span></div>'+
+     '<input class="fix" type="text" id="fi'+i+'" autocomplete="off" spellcheck="false" aria-label="Corrected sentence '+(i+1)+'">'+
+     '<div class="btnrow"><button type="button" class="go" data-act="check" data-i="'+i+'">Check</button><button type="button" class="hint" data-act="hint" data-i="'+i+'">Hint 💡</button><button type="button" class="grey" data-act="show" data-i="'+i+'" style="display:none">Show answer</button></div>'+
+     '<div class="fb" id="ffb'+i+'"></div>';
+    box.appendChild(d);
+  });
+  box.addEventListener("click",function(e){
+    var b=e.target; if(b.tagName!=="BUTTON")return;
+    var i=+b.getAttribute("data-i"), act=b.getAttribute("data-act"), fb=document.getElementById("ffb"+i);
+    if(act==="hint"){fb.className="fb";fb.style.color="#5d4037";fb.textContent="💡 "+GFIX[i].hint;return;}
+    fb.style.color="";
+    if(act==="show"){fb.className="fb";fb.innerHTML='Answer: <em>'+GFIX[i].ok[0]+'</em>'+(GFIX[i].ok.length>1?' (other correct versions are accepted too)':'');return;}
+    fixCheck(i);
+  });
+  box.addEventListener("keydown",function(e){if(e.key==="Enter"&&e.target.classList.contains("fix"))fixCheck(+e.target.id.slice(2));});
+}
+function fixCheck(i){
+  var val=document.getElementById("fi"+i).value, fb=document.getElementById("ffb"+i), st=gfixState[i];
+  fb.style.color="";
+  if(!val.trim()){fb.className="fb bad";fb.textContent="Type the corrected sentence first, Ace!";return;}
+  st.tries++;
+  if(checkFixAnswer(i,val)){ if(st.tries===1)st.firstRight=true; st.correct=true; document.getElementById("f"+i).className="box q right"; fb.className="fb good"; fb.textContent="✅ "+pick(PRAISE); }
+  else { st.correct=false; document.getElementById("f"+i).className="box q wrong"; fb.className="fb bad"; fb.textContent="❌ Not quite. Check every capital letter, apostrophe, comma, and spelling. Try again!"; if(st.tries>=2)document.querySelector('#f'+i+' [data-act=show]').style.display="inline-block"; }
+  updateScore();
+}
+
+function updateScore(){
+  var g=0; gmcState.forEach(function(s){if(s.firstRight)g++;});
+  var f=0; gfixState.forEach(function(s){if(s.correct)f++;});
+  var total=LABEL_ITEMS.length+GMC.length+GFIX.length, got=labelScore+g+f;
+  document.getElementById("scoreText").textContent="Score: "+got+" / "+total+"  (labels "+(labelChecked?labelScore:"-")+"/"+LABEL_ITEMS.length+" · grammar A "+g+"/"+GMC.length+" · grammar B "+f+"/"+GFIX.length+")";
+}
+
+var W5=["who","place","facts","senses","feel","closing"];
+function w5Save(){try{localStorage.setItem(KEY+"-5w",JSON.stringify(W5.map(function(k){return document.getElementById("w5"+k).value;})));}catch(e){}}
+function w5Restore(){try{var d=JSON.parse(localStorage.getItem(KEY+"-5w")||"null");if(d)d.forEach(function(x,i){document.getElementById("w5"+W5[i]).value=x;});}catch(e){}}
+function w5Summary(){return W5.map(function(k){return k.charAt(0).toUpperCase()+k.slice(1)+": "+document.getElementById("w5"+k).value;}).join("\n");}
+function addTemplate(){
+  var t=document.getElementById("essay");
+  var tpl="Title: ...\n\nOVERVIEW (what does this system do?):\n\nFLOW CHART (Stage 1 → Stage 2 → Stage 3 → Stage 4 → Stage 5):\n\nSTEPS EXPLAINED (First, … Next, … Then, … After that, … Finally, …):\n\nWHY EACH STAGE IS NEEDED + DATA (because, so, in order to):\n\nCONCLUSION (why the system matters):\n\nNOTE TO DAD (the stage that surprised me most):\n\nwritten by "+NAME;
+  if(t.value.trim()&&!confirm("Add the technical explanation layout below what you've already written?"))return;
+  t.value=(t.value.trim()?t.value.replace(/\s+$/,"")+"\n\n":"")+tpl; updateCount(); t.focus();
+}
+var KEY="ace-writing-2026-11-13";
+function countWords(t){var m=t.trim().match(/[A-Za-zÀ-ÿ0-9]+(?:['’\-][A-Za-zÀ-ÿ0-9]+)*/g);return m?m.length:0;}
+function countSentences(t){var m=t.match(/[^.!?]*[A-Za-z0-9][^.!?]*[.!?]+/g);return m?m.length:0;}
+function currentPrompt(){var r=document.querySelector('input[name=prompt]:checked');return r?r.value:"";}
+function updateCount(){
+  var t=document.getElementById("essay").value, w=countWords(t), s=countSentences(t);
+  document.getElementById("wc").textContent=w+(w===1?" word":" words");
+  document.getElementById("sc").textContent=s+(s===1?" sentence":" sentences");
+  var bar=document.getElementById("meterBar"); bar.style.width=Math.min(100,w/350*100)+"%";
+  var msg=document.getElementById("wcMsg");
+  if(w<220){bar.style.background="#ffb300";msg.className="fb";msg.textContent=w===0?"Aim for 220 to 350 words.":"Keep going, Ace! "+(220-w)+" more words to reach the goal.";}
+  else if(w<=350){bar.style.background="#43a047";msg.className="fb good";msg.textContent="🎯 You're in the target zone! Nice work, Ace!";}
+  else{bar.style.background="#1e88e5";msg.className="fb";msg.textContent="Wow, that's a lot of writing! Good technical writers are precise and brief. Could any sentences be cut?";}
+  try{localStorage.setItem(KEY,JSON.stringify({text:t,prompt:currentPrompt(),checks:checkStates()}));}catch(e){document.getElementById("saveNote").textContent="(This browser can't auto-save here, so use the Download button before closing!)";}
+}
+function checkStates(){return Array.prototype.map.call(document.querySelectorAll("#checklist input"),function(c){return c.checked;});}
+function checklistText(){
+  return Array.prototype.map.call(document.querySelectorAll("#checklist label"),function(l){return (l.querySelector("input").checked?"[x] ":"[ ] ")+l.textContent.trim();}).join("\n");
+}
+function buildReport(){
+  var t=document.getElementById("essay").value;
+  return "Writing Week 47: "+NAME+"\nDate: "+new Date().toLocaleString("en-CA")+"\nPrompt: "+currentPrompt()+
+    "\nWords: "+countWords(t)+"   Sentences: "+countSentences(t)+"\nPlanning notes:\n"+w5Summary()+
+    "\n\n----- "+NAME+"'s writing -----\n\n"+t+"\n\n----- Self-check -----\n"+checklistText()+
+    "\n\n----- Parent feedback -----\n\n\n";
+}
+function download(){
+  var t=document.getElementById("essay").value;
+  if(!t.trim()){document.getElementById("doneMsg").className="fb bad";document.getElementById("doneMsg").textContent="Write something first, Ace!";return;}
+  var blob=new Blob([buildReport().replace(/\n/g,"\r\n")],{type:"text/plain;charset=utf-8"});
+  var a=document.createElement("a"); a.href=URL.createObjectURL(blob); a.download=NAME+"-writing-2026-11-13"+".txt";
+  document.body.appendChild(a); a.click();
+  setTimeout(function(){URL.revokeObjectURL(a.href);a.remove();},1000);
+  var dm=document.getElementById("doneMsg"); dm.className="fb good"; dm.textContent="📄 Saved! Look in your Downloads folder and show Dad. Great job finishing, Ace!";
+}
+function esc(s){return s.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");}
+function printIt(){
+  var t=document.getElementById("essay").value;
+  if(!t.trim()){document.getElementById("doneMsg").className="fb bad";document.getElementById("doneMsg").textContent="Write something first, Ace!";return;}
+  document.getElementById("printArea").innerHTML="<h1>Writing Week 47: "+NAME+"</h1><div class='meta'>"+esc(new Date().toLocaleString("en-CA"))+"<br><strong>Prompt:</strong> "+esc(currentPrompt())+"<br>Words: "+countWords(t)+" · Sentences: "+countSentences(t)+"</div><div class='text'>"+esc(t)+"</div><div class='lines'><strong>Self-check:</strong><br>"+esc(checklistText()).replace(/\n/g,"<br>")+"</div><div class='lines'><strong>Parent feedback:</strong><br><br><br><br></div>";
+  window.print();
+}
+function restore(){
+  try{var d=JSON.parse(localStorage.getItem(KEY)||"null"); if(!d)return;
+    document.getElementById("essay").value=d.text||"";
+    Array.prototype.forEach.call(document.querySelectorAll("input[name=prompt]"),function(r){r.checked=(r.value===d.prompt);});
+    if(!document.querySelector("input[name=prompt]:checked"))document.querySelector("input[name=prompt]").checked=true;
+    var cs=document.querySelectorAll("#checklist input"); (d.checks||[]).forEach(function(v,i){if(cs[i])cs[i].checked=v;});
+  }catch(e){}
+}
+buildLabels(); buildGMC(); buildGFix(); restore(); w5Restore(); updateCount(); updateScore();
+W5.forEach(function(k){document.getElementById("w5"+k).addEventListener("input",w5Save);});
+document.getElementById("templateBtn").addEventListener("click",addTemplate);
+document.getElementById("checkLabels").addEventListener("click",checkLabels);
+document.getElementById("essay").addEventListener("input",updateCount);
+document.getElementById("checklist").addEventListener("change",function(){updateCount(); if(checkStates().every(Boolean)){var dm=document.getElementById("doneMsg");dm.className="fb good";dm.textContent="✅ All boxes checked! Now download or print it for Dad. Awesome work, Ace!";}});
+document.getElementById("prompts").addEventListener("change",updateCount);
+document.getElementById("downloadBtn").addEventListener("click",download);
+document.getElementById("printBtn").addEventListener("click",printIt);
+document.getElementById("clearBtn").addEventListener("click",function(){ if(confirm("Erase your writing and start over?")){document.getElementById("essay").value="";Array.prototype.forEach.call(document.querySelectorAll("#checklist input"),function(c){c.checked=false;});document.getElementById("doneMsg").textContent="";updateCount();} });
+</script>
+<script src="../../assets/autosave.js"></script>
+</body>
+</html>

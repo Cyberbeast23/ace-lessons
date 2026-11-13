@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Math (Nov. 13): From Mountain to Tap: Water Engineer's Math Lab</title>
+<style>
+  body{font-family:"Segoe UI",Verdana,Arial,sans-serif;font-size:20px;line-height:1.6;margin:0;background:#f5f0eb;color:#2c2416}
+  .wrap{max-width:880px;margin:0 auto;padding:20px 18px 80px}
+  a.home{font-size:.9em;color:#bf360c}
+  h1{color:#e65100;font-size:2em;margin:10px 0}
+  h2{color:#ef6c00;margin-top:36px;border-bottom:3px solid #ffcc80;padding-bottom:4px}
+  .box{background:#fff;border-radius:16px;padding:18px 22px;margin:16px 0;box-shadow:0 3px 10px rgba(0,0,0,.07)}
+  .example{border-left:8px solid #ef6c00}
+  .example h3{margin:0 0 6px;color:#e65100}
+  .step{margin:4px 0 4px 10px}
+  code,.mono{font-family:Consolas,"Courier New",monospace;background:#fff3e0;padding:1px 6px;border-radius:5px}
+  .q{border-left:8px solid #90a4ae}
+  .q.right{border-left-color:#43a047;background:#f1f8e9}
+  .q.wrong{border-left-color:#e53935;background:#fff5f5}
+  .qnum{font-weight:bold;color:#e65100}
+  .row{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:10px}
+  input[type=text]{font-size:1.05em;padding:8px 12px;border:2px solid #ffcc80;border-radius:10px;width:190px}
+  input[type=text]:focus{outline:none;border-color:#ef6c00;box-shadow:0 0 0 3px #ffe0b2}
+  button{font-size:.95em;padding:8px 16px;border:none;border-radius:10px;cursor:pointer;font-weight:bold}
+  .check{background:#ef6c00;color:#fff} .check:hover{background:#e65100}
+  .hint{background:#ffe082;color:#5d4037} .hint:hover{background:#ffd54f}
+  .sol{background:#ce93d8;color:#311b92}
+  .unit{color:#546e7a}
+  .fb{margin-top:8px;font-weight:bold;min-height:1em}
+  .fb.good{color:#2e7d32} .fb.bad{color:#c62828}
+  .hints{margin-top:8px;color:#e65100;background:#fff3e0;border-radius:10px;padding:0 12px}
+  .hints p{margin:6px 0;padding:6px 0}
+  .solution{margin-top:8px;background:#f3e5f5;border-radius:10px;padding:8px 12px;display:none}
+  #scoreBox{position:sticky;bottom:0;background:#e65100;color:#fff;border-radius:16px 16px 0 0;padding:12px 20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-top:30px}
+  #scoreBox button{background:#ffca28;color:#3e2723}
+  #final{display:none;font-size:1.15em;text-align:center;border:4px solid #43a047}
+  .tipbox{background:#fff8e1;border-left:8px solid #ffb300}
+</style>
+</head>
+<body>
+<div class="wrap">
+<a class="home" href="../../index.html">&larr; Back to all lessons</a>
+<h1>🚰 Math Week 47: From Mountain to Tap: Water Engineer's Math Lab</h1>
+<p>Ace, every time you turn on the tap, you're using one of the greatest engineering systems ever built. Rain and snow fall on protected mountain watersheds, collect in <strong>reservoirs</strong>, get cleaned at a <strong>treatment plant</strong>, and then travel through hundreds of kilometres of <strong>pipes</strong>, mostly pushed along by gravity. Today you are a water engineer. You'll use <strong>unit rates, volumes of rectangular prisms and cylinders, converting cubic metres to litres, flow rates in L/s and ML/day, percentages, chlorine dosing in mg/L, integers below sea level, map scales, mean vs median, a two-step equation for a water bill, ratios, and a multi-step capacity problem</strong>.</p>
+
+<h2>Part 1: Learn the Moves</h2>
+
+<div class="box tipbox">
+  <strong>The 4-Step Problem Solver (your water engineer's checklist):</strong>
+  <ol>
+    <li><strong>Read</strong>: What is the question actually asking? Underline the numbers and units (m, cm, km, m³, L, mL, ML, mg/L, kg, s, min, h, $, %).</li>
+    <li><strong>Plan</strong>: Do the units match? Change metres to centimetres or hours to minutes <em>before</em> you answer.</li>
+    <li><strong>Solve</strong>: Do one step at a time and write each step down.</li>
+    <li><strong>Check</strong>: Is my answer reasonable? A family might use hundreds of litres a day, but not hundreds of megalitres!</li>
+  </ol>
+</div>
+
+
+
+
+<div class="box example">
+  <h3>Worked Example 1: Volume and litres</h3>
+  <p class="step"><strong>Rectangular prism:</strong> V = length × width × height. <strong>Cylinder:</strong> V = π × r × r × height (use π ≈ 3.14; r is the <em>radius</em>, half the diameter).</p>
+  <p class="step"><strong>1 m³ = 1 000 L.</strong> A tank 5 m × 4 m × 2 m = 40 m³ = 40 × 1 000 = <strong>40 000 L</strong>. A cylinder with r = 2 m and height 3 m: 3.14 × 2 × 2 × 3 = <strong>37.68 m³</strong>.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 2: Big water units</h3>
+  <p class="step">Water engineers measure huge amounts in <strong>megalitres (ML)</strong>. <strong>1 ML = 1 000 000 L</strong> (one million litres, about the water in a 1 000 m³ tank).</p>
+  <p class="step">There are 60 × 60 × 24 = <strong>86 400 seconds</strong> in a day. A pipe flowing at 10 L/s carries 10 × 86 400 = 864 000 L = <strong>0.864 ML per day</strong>.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 3: Dosing in mg/L</h3>
+  <p class="step">A dose of <strong>1 mg/L</strong> means 1 milligram of chemical in every litre. Multiply the dose by the number of litres to get the total.</p>
+  <p class="step">0.5 mg/L in 400 000 L: 0.5 × 400 000 = 200 000 mg. Since 1 000 mg = 1 g, that's 200 g, and 1 000 g = 1 kg, so <strong>0.2 kg</strong>.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 4: Integers above and below sea level</h3>
+  <p class="step">Heights above sea level are positive; depths below sea level are negative. The distance between two heights = higher − lower.</p>
+  <p class="step">From +90 m down to −20 m: 90 − (−20) = 90 + 20 = <strong>110 m</strong>. Subtracting a negative is the same as adding!</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 5: Map scales</h3>
+  <p class="step">A scale of <strong>1 : 50 000</strong> means 1 cm on the map stands for 50 000 cm in real life. To grow a map length into a real length, <strong>multiply</strong>.</p>
+  <p class="step">6 cm × 50 000 = 300 000 cm. Divide by 100 to get metres (3 000 m), then by 1 000 to get kilometres: <strong>3 km</strong>.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 6: Percent of a total, and percent increase</h3>
+  <p class="step"><strong>Percent = part ÷ whole × 100.</strong> 30 out of 200 = 0.15 = 15%.</p>
+  <p class="step"><strong>Increase by a percent:</strong> to make 500 bigger by 20%, multiply by 1.20: 500 × 1.20 = <strong>600</strong>.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 7: Mean vs median</h3>
+  <p class="step">The <strong>mean</strong> is the total ÷ how many. The <strong>median</strong> is the middle value once you put the numbers <em>in order</em>.</p>
+  <p class="step">100, 120, 300: mean = 520 ÷ 3 ≈ 173, but the median is <strong>120</strong>. One unusually big day (like filling a paddling pool) pulls the mean up but barely moves the median.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 8: Two-step equations</h3>
+  <p class="step">Undo the steps in <strong>reverse order</strong>: first undo adding (subtract), then undo multiplying (divide).</p>
+  <p class="step">2x + 15 = 51 → 2x = 36 → <strong>x = 18</strong>. Check: 2 × 18 + 15 = 51 ✔</p>
+</div>
+<h2>Part 2: The Challenge (15 problems)</h2>
+<p>Type your answer and press <strong>Check</strong> (or Enter). Negative numbers like <span class="mono">-35</span>, fractions like <span class="mono">3/4</span>, mixed numbers like <span class="mono">1 3/4</span>, or decimals like <span class="mono">1.75</span> are fine. Don't type the units, $ signs, or % signs, and you may use spaces or commas in big numbers (1 000 000). Stuck? Press <strong>Hint</strong>. After 2 tries, you can see a full solution.</p>
+
+<div id="questions"></div>
+<div class="box" id="final"></div>
+<div id="scoreBox">
+  <span id="scoreText">Score: 0 / 15 correct</span>
+  <button id="finishBtn" type="button">I'm done! Show my final score</button>
+</div>
+</div>
+
+<script>
+var NAME = "Ace";
+var TABLE = '<table style="border-collapse:collapse;margin:10px 0;font-size:.95em;background:#fff"><caption style="font-weight:bold;text-align:left;padding-bottom:4px">One person\'s water use for a week (litres per day)</caption><tr><th style="border:1px solid #bdbdbd;padding:4px 10px;background:#eceff1">Day</th><th style="border:1px solid #bdbdbd;padding:4px 10px;background:#eceff1">Litres</th></tr><tr><td style="border:1px solid #bdbdbd;padding:4px 10px">Monday</td><td style="border:1px solid #bdbdbd;padding:4px 10px;font-family:monospace">142</td></tr><tr><td style="border:1px solid #bdbdbd;padding:4px 10px">Tuesday</td><td style="border:1px solid #bdbdbd;padding:4px 10px;font-family:monospace">158</td></tr><tr><td style="border:1px solid #bdbdbd;padding:4px 10px">Wednesday</td><td style="border:1px solid #bdbdbd;padding:4px 10px;font-family:monospace">135</td></tr><tr><td style="border:1px solid #bdbdbd;padding:4px 10px">Thursday (laundry + watering the garden)</td><td style="border:1px solid #bdbdbd;padding:4px 10px;font-family:monospace">310</td></tr><tr><td style="border:1px solid #bdbdbd;padding:4px 10px">Friday</td><td style="border:1px solid #bdbdbd;padding:4px 10px;font-family:monospace">150</td></tr><tr><td style="border:1px solid #bdbdbd;padding:4px 10px">Saturday</td><td style="border:1px solid #bdbdbd;padding:4px 10px;font-family:monospace">147</td></tr><tr><td style="border:1px solid #bdbdbd;padding:4px 10px">Sunday</td><td style="border:1px solid #bdbdbd;padding:4px 10px;font-family:monospace">134</td></tr></table>';
+var QUESTIONS = [
+ {t:"Ace's household of <strong>4 people</strong> used <strong>4 200 L</strong> of water in one week. On average, how many <strong>litres per person per day</strong> is that?", a:"150", u:"L per person per day",
+  h:["First find litres per day for the whole house: 4 200 ÷ 7.","Then share that among 4 people."],
+  s:"4 200 ÷ 7 = 600 L per day for the household. 600 ÷ 4 = 150 L per person per day."},
+ {t:"A rectangular settling tank at a treatment plant is <strong>40 m</strong> long, <strong>25 m</strong> wide and <strong>6 m</strong> deep. How many <strong>megalitres (ML)</strong> does it hold when full? (1 m³ = 1 000 L and 1 ML = 1 000 000 L)", a:"6", u:"ML",
+  h:["Volume = 40 × 25 × 6 cubic metres.","Multiply the m³ by 1 000 to get litres, then divide by 1 000 000 to get ML."],
+  s:"40 × 25 × 6 = 6 000 m³. 6 000 × 1 000 = 6 000 000 L = 6 ML."},
+ {t:"A cylindrical water tower tank has a <strong>diameter of 10 m</strong> and a height of <strong>12 m</strong>. Using <strong>π ≈ 3.14</strong>, what is its volume in <strong>cubic metres</strong>?", a:"942", u:"m³",
+  h:["The radius is half the diameter: r = 5 m.","V = 3.14 × 5 × 5 × 12."],
+  s:"r = 10 ÷ 2 = 5 m. 3.14 × 25 = 78.5 m² (the area of the circle). 78.5 × 12 = 942 m³. That's 942 000 L!"},
+ {t:"A large water main carries <strong>250 L every second</strong>. How many <strong>megalitres per day</strong> is that? (1 day = 86 400 s)", a:"21.6", u:"ML/day",
+  h:["Litres per day = 250 × 86 400.","Divide by 1 000 000 to change litres into megalitres."],
+  s:"250 × 86 400 = 21 600 000 L per day. 21 600 000 ÷ 1 000 000 = 21.6 ML/day."},
+ {t:"An empty storage reservoir in the city holds <strong>90 ML</strong>. Water flows in at <strong>500 L/s</strong>. How many <strong>hours</strong> will it take to fill?", a:"50", u:"hours",
+  h:["90 ML = 90 000 000 L. Seconds = 90 000 000 ÷ 500.","Change seconds to hours by dividing by 3 600 (60 × 60)."],
+  s:"90 000 000 ÷ 500 = 180 000 s. 180 000 ÷ 3 600 = 50 hours (just over two days)."},
+ {t:"Only about <strong>2.5%</strong> of all the water on Earth is fresh water; the rest is salty. If all of Earth's water were shrunk down to fit in a <strong>2 L</strong> bottle, how many <strong>millilitres</strong> would be fresh water?", a:"50", u:"mL",
+  h:["2 L = 2 000 mL.","2.5% of 2 000 = 0.025 × 2 000."],
+  s:"0.025 × 2 000 = 50 mL, about three and a half tablespoons out of a whole 2 L bottle. And much of that fresh water is frozen in ice or hidden underground!"},
+ {t:"An old neighbourhood's water pipes are fed <strong>3 200 000 L</strong> a day, but the customers' water meters record only <strong>2 720 000 L</strong>. The rest leaks out of cracked pipes. What <strong>percent</strong> of the water is lost to leaks?", a:"15", u:"%",
+  h:["Water lost = 3 200 000 − 2 720 000.","Percent = lost ÷ 3 200 000 × 100."],
+  s:"3 200 000 − 2 720 000 = 480 000 L lost. 480 000 ÷ 3 200 000 = 0.15 = 15%. That is why cities replace old pipes!"},
+ {t:"Operators add chlorine at a dose of <strong>0.8 mg/L</strong>. How many <strong>kilograms</strong> of chlorine do they need for <strong>2.5 ML</strong> of water? (1 000 mg = 1 g, 1 000 g = 1 kg)", a:"2", u:"kg",
+  h:["2.5 ML = 2 500 000 L. Total mg = 0.8 × 2 500 000.","Divide by 1 000 to get grams, then by 1 000 again to get kilograms."],
+  s:"0.8 × 2 500 000 = 2 000 000 mg = 2 000 g = 2 kg. A tiny dose per litre adds up to a lot when the volume is huge!"},
+ {t:"Water leaves a mountain reservoir at <strong>+210 m</strong> (above sea level). To cross under an ocean inlet, the pipe tunnel dips to <strong>−35 m</strong> (below sea level). How many metres does the water <strong>drop</strong> from the reservoir to the lowest point of the tunnel?", a:"245", u:"m",
+  h:["Distance = higher − lower = 210 − (−35).","Subtracting a negative is the same as adding: 210 + 35."],
+  s:"210 − (−35) = 210 + 35 = 245 m. Because the reservoir is so high, gravity pushes the water down and back up the other side without pumps, like water finding its own level in a bent straw."},
+ {t:"On a map of a city's pipe network with a scale of <strong>1 : 25 000</strong>, a water main measures <strong>14.4 cm</strong>. How long is the real pipe, in <strong>kilometres</strong>?", a:"3.6", u:"km",
+  h:["Real length in cm = 14.4 × 25 000.","Divide by 100 for metres, then by 1 000 for kilometres (or divide by 100 000 in one step)."],
+  s:"14.4 × 25 000 = 360 000 cm = 3 600 m = 3.6 km."},
+ {t:TABLE+"Find the <strong>mean</strong> and the <strong>median</strong> daily water use. How many litres <strong>greater</strong> is the mean than the median?", a:"21", u:"L",
+  h:["Mean: add all seven numbers and divide by 7.","Median: put the numbers in order and find the 4th (middle) one. Then subtract."],
+  s:"Total = 142 + 158 + 135 + 310 + 150 + 147 + 134 = 1 176 L, so the mean = 1 176 ÷ 7 = 168 L. In order: 134, 135, 142, 147, 150, 158, 310, so the median = 147 L. 168 − 147 = 21 L. Thursday's big day pulls the mean up."},
+ {t:"A town's water bill is a <strong>$32 base fee</strong> plus <strong>$1.45 for every cubic metre</strong> of water used. One family's bill was <strong>$90</strong>. Solve <strong>1.45c + 32 = 90</strong> to find how many cubic metres (c) they used.", a:"40", u:"m³",
+  h:["Undo the adding first: 1.45c = 90 − 32.","Then divide by 1.45."],
+  s:"1.45c = 58 → c = 58 ÷ 1.45 = 40 m³. Check: 1.45 × 40 + 32 = 58 + 32 = 90 ✔ (40 m³ is 40 000 L.)"},
+ {t:"Ace's old shower head sprays <strong>9.5 L/min</strong>. A new low-flow one sprays <strong>7.6 L/min</strong>. If Ace showers for <strong>8 minutes</strong> every day, how many litres will he save in a <strong>30-day</strong> month?", a:"456", u:"L",
+  h:["Litres saved each minute: 9.5 − 7.6.","Multiply by 8 minutes, then by 30 days."],
+  s:"9.5 − 7.6 = 1.9 L/min. 1.9 × 8 = 15.2 L per shower. 15.2 × 30 = 456 L saved per month, more than four full bathtubs."},
+ {t:"A filter bed is built from two layers: sand and crushed coal (anthracite) in the ratio <strong>sand : coal = 2 : 3</strong>. The whole bed is <strong>1.5 m</strong> deep. How deep is the <strong>coal</strong> layer, in <strong>centimetres</strong>?", a:"90", u:"cm",
+  h:["2 + 3 = 5 equal parts. 1.5 m = 150 cm.","One part = 150 ÷ 5. The coal is 3 parts."],
+  s:"150 ÷ 5 = 30 cm per part. Coal = 3 × 30 = 90 cm (and sand = 2 × 30 = 60 cm). 60 + 90 = 150 ✔"},
+ {t:"A treatment plant can deliver at most <strong>1 800 ML/day</strong>. Right now, average demand is <strong>1 000 ML/day</strong>, and on the hottest summer days demand is <strong>45% higher</strong> than average. If the city grows and average demand rises by <strong>20%</strong>, how many ML/day of spare capacity will the plant have on the hottest summer days?", a:"60", u:"ML/day",
+  h:["New average = 1 000 × 1.20. Summer peak = new average × 1.45.","Spare capacity = 1 800 − summer peak."],
+  s:"New average = 1 000 × 1.20 = 1 200 ML/day. Summer peak = 1 200 × 1.45 = 1 740 ML/day. Spare = 1 800 − 1 740 = 60 ML/day. That is cutting it close, which is why engineers plan new pipes and encourage people to save water years ahead!"}
+];
+
+var PRAISE = ["Nice work, Ace!","Correct! Water-engineer level! 🚰","Yes! That answer flows perfectly!","Excellent, Ace. That was a tough one!","Right on target! 🎯","Brilliant thinking, Ace!","Crystal-clear thinking, Ace! 💧"];
+var ENCOURAGE = ["Not quite. Check your steps and try again!","Close call. Try again, Ace! Maybe use a hint?","Hmm, not yet. Re-read the question carefully.","Keep going, Ace. Mistakes help your brain grow!"];
+
+function parseAnswer(str){
+  if(str===undefined||str===null) return NaN;
+  var s=String(str).trim().toLowerCase();
+  s=s.replace(/[\u2212\u2013]/g,"-");
+  s=s.replace(/(\d),(?=\d{3}(\D|$))/g,"$1");
+  s=s.replace(/[^0-9.\/\- ]/g," ").replace(/\s+/g," ").trim();
+  s=s.replace(/\s*\/\s*/g,"/");
+  var m;
+  if((m=s.match(/^(-?\d+) (\d+)\/(\d+)$/))){ var w=parseFloat(m[1]),n=parseFloat(m[2]),d=parseFloat(m[3]); if(d===0)return NaN; return w<0? w-n/d : w+n/d; }
+  if((m=s.match(/^(-?\d+(?:\.\d+)?)\/(\d+(?:\.\d+)?)$/))){ var d2=parseFloat(m[2]); if(d2===0)return NaN; return parseFloat(m[1])/d2; }
+  s=s.replace(/ /g,"");
+  if(/^-?(\d+\.?\d*|\.\d+)$/.test(s)) return parseFloat(s);
+  return NaN;
+}
+function isCorrect(input,key){
+  var a=parseAnswer(input), k=parseAnswer(key);
+  if(isNaN(a)) return false;
+  var isInt=Math.abs(k-Math.round(k))<1e-12;
+  var tol=isInt?1e-9:0.005;
+  return Math.abs(a-k)<=tol;
+}
+
+function isRomanCorrect(input,key){ return String(input).replace(/\s+/g,"").toUpperCase()===key; }
+var state=[];
+function render(){
+  var box=document.getElementById("questions");
+  QUESTIONS.forEach(function(q,i){
+    state.push({correct:false,tries:0,hints:0});
+    var d=document.createElement("div");
+    d.className="box q"; d.id="q"+i;
+    d.innerHTML='<div><span class="qnum">'+(i+1)+'.</span> '+q.t+'</div>'+
+      '<div class="row"><input type="text"'+(q.r?' placeholder="e.g. MMXXVI"':'')+' id="in'+i+'" aria-label="Answer to question '+(i+1)+'" autocomplete="off"> <span class="unit">'+q.u+'</span>'+
+      '<button type="button" class="check" data-i="'+i+'">Check</button>'+
+      '<button type="button" class="hint" data-i="'+i+'">Hint 💡</button>'+
+      '<button type="button" class="sol" data-i="'+i+'" style="display:none">Show solution</button></div>'+
+      '<div class="fb" id="fb'+i+'"></div><div class="hints" id="hints'+i+'"></div>'+
+      '<div class="solution" id="sol'+i+'"><strong>Solution:</strong> '+q.s+'</div>';
+    box.appendChild(d);
+  });
+  box.addEventListener("click",function(e){
+    var b=e.target; if(b.tagName!=="BUTTON")return;
+    var i=+b.getAttribute("data-i");
+    if(b.className==="check") check(i);
+    else if(b.className==="hint") hint(i);
+    else if(b.className==="sol") document.getElementById("sol"+i).style.display="block";
+  });
+  box.addEventListener("keydown",function(e){
+    if(e.key==="Enter"&&e.target.tagName==="INPUT"){ check(+e.target.id.slice(2)); }
+  });
+}
+function pick(arr){return arr[Math.floor(Math.random()*arr.length)];}
+function check(i){
+  var val=document.getElementById("in"+i).value;
+  var fb=document.getElementById("fb"+i), card=document.getElementById("q"+i);
+  if(val.trim()===""){fb.className="fb bad";fb.textContent="Type an answer first, Ace!";return;}
+  var isR=!!QUESTIONS[i].r;
+  if(isR&&!/^[ivxlcdm\s]+$/i.test(val)){fb.className="fb bad";fb.textContent="Use only Roman numeral letters: I, V, X, L, C, D, M.";return;}
+  if(!isR&&isNaN(parseAnswer(val))){fb.className="fb bad";fb.textContent="I can't read that as a number. Try something like 42, 3.5, 3/4 or 1 3/4.";return;}
+  state[i].tries++;
+  if(isR?isRomanCorrect(val,QUESTIONS[i].a):isCorrect(val,QUESTIONS[i].a)){
+    state[i].correct=true; card.className="box q right"; fb.className="fb good";
+    fb.textContent="✅ "+pick(PRAISE)+(state[i].tries===1?" (first try!)":"");
+  } else {
+    state[i].correct=false; card.className="box q wrong"; fb.className="fb bad";
+    fb.textContent="❌ "+pick(ENCOURAGE);
+    if(state[i].tries>=2) card.querySelector(".sol").style.display="inline-block";
+  }
+  updateScore();
+}
+function hint(i){
+  var q=QUESTIONS[i], s=state[i], hb=document.getElementById("hints"+i);
+  if(s.hints<q.h.length){
+    var p=document.createElement("p"); p.textContent="💡 Hint "+(s.hints+1)+": "+q.h[s.hints]; hb.appendChild(p); s.hints++;
+  }
+  if(s.hints>=q.h.length) document.querySelector("#q"+i+" .hint").disabled=true;
+  updateScore();
+}
+function counts(){
+  var c=0,first=0,h=0;
+  state.forEach(function(s){ if(s.correct){c++; if(s.tries===1)first++;} h+=s.hints; });
+  return {correct:c,first:first,hints:h};
+}
+function updateScore(){
+  var k=counts();
+  document.getElementById("scoreText").textContent="Score: "+k.correct+" / "+QUESTIONS.length+" correct · hints used: "+k.hints;
+}
+function finish(){
+  var k=counts(), n=QUESTIONS.length, pct=Math.round(100*k.correct/n);
+  var msg;
+  if(pct===100) msg="🏆 PERFECT SCORE! Incredible work, Ace. The water engineers would hire you today!";
+  else if(pct>=85) msg="🌟 Outstanding, Ace! That's a Grade 6–7 level performance!";
+  else if(pct>=65) msg="💪 Great effort, Ace! Review the ones you missed and try them again.";
+  else if(pct>=40) msg="👍 Good start, Ace! These problems are tough. Use the hints and solutions to learn the tricks, then try again.";
+  else msg="🌱 These are challenge problems, well above grade level. Every great scientist started as a beginner! Go through the worked examples and try again, Ace!";
+  var f=document.getElementById("final");
+  f.style.display="block";
+  f.innerHTML="<h2 style='border:none;margin-top:0'>Final Score: "+k.correct+" / "+n+" ("+pct+"%)</h2>"+
+    "<p>Correct on the first try: "+k.first+" · Hints used: "+k.hints+"</p><p>"+msg+"</p>"+
+    "<p style='font-size:.85em;color:#546e7a'>Finished on "+new Date().toLocaleString("en-CA")+"</p>";
+  f.scrollIntoView({behavior:"smooth"});
+}
+render();
+updateScore();
+document.getElementById("finishBtn").addEventListener("click",finish);
+</script>
+<script src="../../assets/autosave.js"></script>
+</body>
+</html>

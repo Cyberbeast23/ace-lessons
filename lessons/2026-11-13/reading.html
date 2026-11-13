@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reading (Nov. 13): From Mountain to Tap: The Amazing Engineering of Clean Water</title>
+<style>
+  body{font-family:"Segoe UI",Verdana,Arial,sans-serif;font-size:20px;line-height:1.65;margin:0;background:#f5f0eb;color:#2c2416}
+  .wrap{max-width:880px;margin:0 auto;padding:20px 18px 80px}
+  a.home{font-size:.9em;color:#bf360c}
+  h1{color:#e65100;font-size:2em;margin:10px 0}
+  h2{color:#ef6c00;margin-top:36px;border-bottom:3px solid #ffcc80;padding-bottom:4px}
+  .box{background:#fff;border-radius:16px;padding:18px 22px;margin:16px 0;box-shadow:0 3px 10px rgba(0,0,0,.07)}
+  .passage{font-family:Georgia,"Times New Roman",serif;font-size:1.1em;line-height:1.8}
+  .passage h3{text-align:center;font-family:"Segoe UI",Verdana,sans-serif;color:#e65100;font-size:1.4em;margin:4px 0 14px}
+  .passage p{text-indent:1.5em;margin:0 0 14px}
+  mark.v{background:#fff59d;padding:0 3px;border-radius:4px;font-weight:bold}
+  .tipbox{background:#fff8e1;border-left:8px solid #ffb300}
+  .q{border-left:8px solid #ffcc80}
+  .q.right{border-left-color:#43a047;background:#f1f8e9}
+  .q.wrong{border-left-color:#e53935;background:#fff5f5}
+  .tag{display:inline-block;font-size:.7em;background:#ef6c00;color:#fff;border-radius:8px;padding:1px 8px;margin-left:6px;vertical-align:middle}
+  .opt{display:block;width:100%;text-align:left;font-size:.95em;background:#fafafa;border:2px solid #e0e0e0;border-radius:10px;padding:8px 14px;margin:8px 0;cursor:pointer;font-family:inherit}
+  .opt:hover{border-color:#ffb74d;background:#fff}
+  .opt.sel-right{background:#c8e6c9;border-color:#43a047}
+  .opt.sel-wrong{background:#ffcdd2;border-color:#e53935}
+  .fb{margin-top:6px;font-weight:bold}
+  .fb.good{color:#2e7d32} .fb.bad{color:#c62828}
+  .explain{color:#e65100;font-weight:normal}
+  select{font-size:.95em;padding:6px 8px;border-radius:8px;border:2px solid #ffb74d;max-width:100%;font-family:inherit}
+  .vrow{display:flex;flex-wrap:wrap;align-items:center;gap:10px;padding:8px 6px;border-bottom:1px dashed #eee}
+  .vrow .w{font-weight:bold;min-width:140px}
+  .vrow.right{background:#f1f8e9} .vrow.wrong{background:#fff5f5}
+  .mark{font-size:1.2em;min-width:30px}
+  button.main{font-size:1em;padding:10px 20px;border:none;border-radius:10px;cursor:pointer;font-weight:bold;background:#ef6c00;color:#fff;margin-top:10px}
+  button.main:hover{background:#e65100}
+  button.sec{font-size:.95em;padding:8px 16px;border:none;border-radius:10px;cursor:pointer;font-weight:bold;background:#ffe082;color:#5d4037}
+  textarea{width:100%;box-sizing:border-box;font-size:1em;font-family:inherit;padding:10px;border:2px solid #ffb74d;border-radius:10px;min-height:120px}
+  #model{display:none;background:#fff3e0;border-radius:10px;padding:10px 14px;margin-top:10px}
+  #scoreBox{position:sticky;bottom:0;background:#e65100;color:#fff;border-radius:16px 16px 0 0;padding:12px 20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-top:30px}
+  #scoreBox button{font-size:.95em;padding:8px 16px;border:none;border-radius:10px;cursor:pointer;font-weight:bold;background:#ffca28;color:#3e2723}
+  #final{display:none;text-align:center;border:4px solid #43a047;font-size:1.1em}
+</style>
+</head>
+<body>
+<div class="wrap">
+<a class="home" href="../../index.html">&larr; Back to all lessons</a>
+<h1>📖 Reading Week 47: From Mountain to Tap: The Amazing Engineering of Clean Water</h1>
+
+<div class="box tipbox">
+  <strong>Before you read, Ace:</strong> Yesterday's passage followed one simple sequence. Today's passage is more complex: it <strong>mixes text structures</strong>. Part of it is a <strong>sequence</strong> (the steps that clean water), part is <strong>cause and effect</strong> (why things happen), and part is <strong>problem and solution</strong> (what happens when clean water is missing). Good readers notice when the structure changes.
+  <ul>
+    <li><strong>Preview:</strong> The title says "From Mountain to Tap." Predict: what has to happen to rain on a mountain before it is safe to drink?</li>
+    <li><strong>Pause:</strong> After paragraph 5, close your eyes and list the treatment steps, in order, without looking.</li>
+    <li><strong>Root detective:</strong> Engineering words often come from Latin:
+      <span style="display:block;margin-top:6px"><strong>aqua</strong> = "water" (aquarium, aqueduct) · <strong>coagulare</strong> = "to curdle, to clump" (coagulation) · <strong>floccus</strong> = "a tuft of wool" (floc, flocculation) · <strong>sedimentum</strong> = "a settling" (sedimentation) · <strong>dis-</strong> = "remove" + <strong>infect</strong> (disinfect) · <strong>ultra-</strong> = "beyond" + <strong>violet</strong> (ultraviolet)</span></li>
+    <li><strong>Words in <mark class="v">yellow</mark></strong> are vocabulary words. Use the sentence around them (the <em>context</em>) to figure out what they mean.</li>
+  </ul>
+</div>
+
+<div class="box passage" id="passage">
+<h3>From Mountain to Tap: The Amazing Engineering of Clean Water</h3>
+<p>Turn on the tap, fill a glass, and take a sip. It takes about five seconds. Yet the water in that glass may have started its journey months earlier, as a snowflake landing on a mountainside. Between the mountain and your mouth stands one of the most important engineering systems ever built: a network that collects, cleans, tests and delivers safe drinking water every hour of every day. Most of the time, nobody even notices it is there.</p>
+<p>In Metro Vancouver, where more than three million people live, the story begins high in the Coast Mountains. Rain and melting snow trickle down steep, forested slopes into three protected areas: the Capilano, Seymour and Coquitlam <mark class="v">watersheds</mark>. A watershed is all the land that drains into the same river, lake or reservoir, so whatever happens on that land ends up in the water. That is why these watersheds are closed to the public. There are no houses, no farms, no factories and no hiking trails inside them. Keeping people out is the first line of defence, because it is far easier to keep water clean than to clean it after it becomes dirty.</p>
+<p>Concrete dams block the rivers and hold the water back, forming <mark class="v">reservoirs</mark>, large human-made lakes that store water until it is needed. Metro Vancouver's reservoirs fill up mostly in the fall and winter, when rain pours down for weeks. The stored water then has to last through the long, dry days of summer, when people drink more, water gardens and fill pools. This explains why cities sometimes limit lawn watering in July and August: the reservoirs are not being refilled as fast as people are emptying them.</p>
+<p>Even sparkling mountain water is not ready to drink. It carries tiny <mark class="v">particles</mark> of soil and rotting leaves, plus microscopic organisms that can make people sick. So the water travels to a treatment plant, where it is cleaned in a series of steps. Many treatment plants follow a similar recipe. First, during <em>coagulation</em>, operators add a chemical that makes the tiny particles sticky. Next, during <em>flocculation</em>, slow paddles stir the water gently so the sticky particles bump into each other and grow into fluffy clumps called <em>floc</em>. In many plants, the water then rests in huge, calm tanks for <em>sedimentation</em>, where the heavy floc sinks to the bottom. After that comes <em>filtration</em>: the water trickles through deep beds of sand and crushed coal that trap the smaller bits left behind.</p>
+<p>The last and most important step is to <mark class="v">disinfect</mark> the water, which means killing or switching off any germs that slipped through. Some plants shine ultraviolet (UV) light through the water, which damages the germs' genetic material so they cannot multiply. Others add chlorine, or use both. A small amount of chlorine is left in the water on purpose, so it keeps protecting the water during its long trip through the pipes. Metro Vancouver's Seymour-Capilano Filtration Plant, which opened in 2009, is the largest drinking-water filtration plant in Canada and can treat up to 1.8 billion litres a day. Interestingly, it skips the big settling tanks: after flocculation, the floc goes straight to the filters, a design called <em>direct filtration</em>. Then come UV lamps and chlorine. Coquitlam's water, which is usually clearer, is cleaned at a different plant using ozone, UV light and chlorine. Engineers design each plant to match the water it receives.</p>
+<p>Clean water is useless if it cannot reach you. From the plants, it flows through hundreds of kilometres of large pipes called water mains, then through each city's smaller pipes, until it arrives at your kitchen tap. Because the reservoirs sit high in the mountains, <mark class="v">gravity</mark>, the force that pulls everything downward, does much of the work. The weight of water sitting higher up creates pressure that pushes water through the pipes, even uphill for short distances. Pumps help where the land is hilly or the buildings are tall. All along the way, workers collect water samples and test them in laboratories for bacteria, chlorine levels and cloudiness, so problems can be caught early.</p>
+<p>What happens after you flush the toilet or pull the plug in the bathtub? That used water, called wastewater, travels through a completely separate set of pipes, the sewers, to a wastewater treatment plant. There, screens remove large objects, solids settle out, and helpful bacteria eat much of the remaining waste before the cleaned water is released into a river or the ocean. Drinking-water pipes and sewer pipes must never mix.</p>
+<p>Why do cities go to all this trouble? History gives a grim answer. In 1854, a terrifying outbreak of cholera struck the Soho neighbourhood of London, England, killing hundreds of people in a few weeks. At the time, most people believed diseases spread through foul-smelling air. A doctor named John Snow had a different idea. He made a map marking where the victims had lived and noticed that the deaths clustered around a public water pump on Broad Street. Snow convinced local officials to remove the pump's handle so nobody could use it, and new cases soon dwindled, although the outbreak may already have been fading. Later investigators found that a leaking cesspit (a pit for human waste) near the well had <mark class="v">contaminated</mark> the water. Snow's detective work helped convince the world that dirty water can spread deadly disease.</p>
+<p>Sadly, safe tap water is still not guaranteed for everyone in Canada. For years, a number of First Nations communities have lived under long-term drinking water <mark class="v">advisories</mark>, official warnings that tell people to boil their water before using it, or not to drink it at all. In some communities, these warnings have lasted for more than a decade. The causes include treatment plants that were too old or too small, remote locations that are hard to reach, and a lack of funding and support for training local water operators. Since 2015, many long-term advisories have been lifted as First Nations and governments have built and upgraded water systems and trained more operators, but some communities are still waiting. Indigenous water protectors, such as Anishinaabe youth leader Autumn Peltier, who spoke at the United Nations when she was just 13, have reminded the world that clean water is a right that must be protected.</p>
+<p>Next time you fill a glass, think about its journey: a snowflake on a mountain, a dam, sticky floc, beds of sand, glowing UV lamps, kilometres of pipes, and the scientists who test every step. Clean water may look simple, but it is an engineering marvel, and it is worth protecting for everyone.</p>
+<p style="text-indent:0;font-size:.8em;color:#546e7a;text-align:right">About 1 100 words</p>
+</div>
+
+<h2>Part 1: Comprehension</h2>
+<p>Click the best answer. You'll find out right away if you're correct. Only your <strong>first click</strong> counts toward your score, but you can keep trying to find the right answer.</p>
+<div id="mc"></div>
+
+<h2>Part 2: Think Deeper (not scored)</h2>
+<div class="box">
+  <p><strong>The author says "it is far easier to keep water clean than to clean it after it becomes dirty." In 3 to 5 sentences, explain whether you agree. Use at least <em>two</em> pieces of evidence from different parts of the passage (for example, the watersheds, the treatment steps, John Snow, or the drinking water advisories).</strong></p>
+  <textarea id="openAns" placeholder="Write your answer here, Ace..."></textarea>
+  <p><button type="button" class="sec" id="showModel">Compare with a model answer</button></p>
+  <div id="model"><strong>Model answer:</strong> I agree that it is easier to keep water clean than to clean it later. Metro Vancouver closes its watersheds to houses, farms and hikers so that less dirt and fewer germs get into the water in the first place. Once water is dirty, it takes a whole treatment plant with coagulation, flocculation, filtration and disinfection to make it safe, which needs huge buildings, chemicals and trained operators. The story of John Snow shows what can happen when protection fails: a cesspit contaminated one well and hundreds of people died. The drinking water advisories in some First Nations communities also show that when treatment systems are too old or too small, people can go years without safe water.<br><em>Did you take a clear position and support it with two pieces of evidence from different paragraphs? If so, excellent thinking!</em></div>
+</div>
+
+<h2>Part 3: Vocabulary</h2>
+<div class="box">
+  <h3 style="margin-top:0">A. Match each word to its meaning</h3>
+  <p>Choose the meaning that fits how the word is used in the passage.</p>
+  <div id="vmatch"></div>
+  <h3>B. Fill in the blank</h3>
+  <p>Choose the vocabulary word that best completes each sentence.</p>
+  <div id="vfill"></div>
+  <button type="button" class="main" id="checkVocab">Check my vocabulary</button>
+  <div class="fb" id="vocabFb"></div>
+</div>
+
+<div class="box" id="final"></div>
+<div id="scoreBox">
+  <span id="scoreText"></span>
+  <button type="button" id="finishBtn">I'm done! Show my final score</button>
+</div>
+</div>
+
+<script>
+var MC = [
+ {q:"Which sentence best states the <strong>main idea</strong> of the whole passage?",
+  o:["John Snow removed the handle from a water pump in 1854.", "Safe drinking water depends on a carefully engineered system of protecting, cleaning, testing and delivering water, and not everyone has it yet.", "Metro Vancouver gets its water from three watersheds.", "Chlorine is better than UV light."],
+  a:1, e:"The other choices are details. Only B sums up the system the whole passage describes, including the problem in the second-last paragraph."},
+ {q:"Put the treatment steps in the <strong>correct order</strong> for a typical treatment plant.", tag:"Sequencing",
+  o:["Filtration → coagulation → sedimentation → flocculation → disinfection", "Coagulation → flocculation → sedimentation → filtration → disinfection", "Disinfection → filtration → flocculation → coagulation → sedimentation", "Flocculation → coagulation → disinfection → sedimentation → filtration"],
+  a:1, e:"Paragraphs 4 and 5: <em>First</em> coagulation (make particles sticky), <em>next</em> flocculation (grow floc), <em>then</em> sedimentation (floc sinks), <em>after that</em> filtration, and the <em>last</em> step is disinfection."},
+ {q:"Why are the Capilano, Seymour and Coquitlam watersheds <strong>closed to the public</strong>?", tag:"Cause and effect",
+  o:["Because the mountains are too dangerous to climb", "Because the dams are secret", "Because animals need the water more than people do", "Because whatever happens on the land ends up in the water, and keeping people out keeps the water cleaner from the start"],
+  a:3, e:"Paragraph 2: \"whatever happens on that land ends up in the water,\" and keeping people out is \"the first line of defence.\""},
+ {q:"In paragraph 4, what does <strong>particles</strong> mean?", tag:"Vocabulary in context",
+  o:["Very small pieces of something", "Large rocks", "Chemicals added by operators", "Fish living in the reservoir"],
+  a:0, e:"The passage says \"tiny particles of soil and rotting leaves\" that clump together and get trapped by sand. They are very small bits."},
+ {q:"Based on paragraph 3, what can you <strong>infer</strong> would happen if a winter had much less rain and snow than usual?", tag:"Inference",
+  o:["The reservoirs might not fill, so the city could need stricter water limits the next summer.", "The treatment plant would stop using chlorine.", "The watersheds would open to hikers.", "Nothing would change, because reservoirs refill in summer."],
+  a:0, e:"The reservoirs fill mostly in fall and winter and must last through summer. Less rain and snow means less stored water when it is needed most."},
+ {q:"At the Seymour-Capilano plant, what does <strong>direct filtration</strong> mean?", tag:"Key details",
+  o:["It sends the floc straight to the filters, skipping the big settling tanks.", "It uses no filters at all.", "It filters the water through ozone.", "It sends water directly from the mountain to homes without treatment."],
+  a:0, e:"Paragraph 5: \"after flocculation, the floc goes straight to the filters, a design called direct filtration.\""},
+ {q:"Why is a small amount of chlorine <strong>left in the water on purpose</strong>?", tag:"Cause and effect",
+  o:["To give the water a nice taste", "To make the water flow faster", "To keep protecting the water from germs during its long trip through the pipes", "To make the floc sink"],
+  a:2, e:"Paragraph 5: chlorine is left in \"so it keeps protecting the water during its long trip through the pipes.\""},
+ {q:"How does <strong>gravity</strong> help deliver Metro Vancouver's water?", tag:"Key details",
+  o:["It pulls the clouds closer to the mountains.", "It makes the chlorine sink.", "It stops pipes from leaking.", "Because the reservoirs are high up, the weight of the water creates pressure that pushes it through the pipes."],
+  a:3, e:"Paragraph 6: \"The weight of water sitting higher up creates pressure that pushes water through the pipes.\""},
+ {q:"Why did the author most likely include the story of <strong>John Snow</strong>?", tag:"Author's purpose",
+  o:["To show that London has better water than Vancouver", "To explain how to draw maps", "To show, with a real example from history, why cities work so hard to keep drinking water clean", "To prove that diseases spread through bad air"],
+  a:2, e:"The paragraph begins \"Why do cities go to all this trouble? History gives a grim answer.\" Snow's story shows how contaminated water spread deadly disease."},
+ {q:"According to the passage, which is one <strong>cause</strong> of long-term drinking water advisories in some First Nations communities?", tag:"Problem and solution",
+  o:["People there do not want clean water.", "Treatment plants that were too old or too small, and a lack of funding and support for training local water operators", "There is no rain in those places.", "The water is too cold to treat."],
+  a:1, e:"The passage lists old or small treatment plants, remote locations, and a lack of funding and support for training operators. Many advisories have been lifted since 2015, but some communities are still waiting."}
+];
+
+var VOCAB = ["watersheds", "reservoirs", "particles", "disinfect", "gravity", "contaminated", "advisories"];
+var DEFS = {
+ watersheds:"areas of land where all the rain and snowmelt drains into the same river, lake or reservoir",
+ reservoirs:"large human-made lakes, often behind dams, that store water until it is needed",
+ particles:"very small pieces of something",
+ disinfect:"to kill or switch off germs so they cannot make people sick",
+ gravity:"the force that pulls things down toward Earth",
+ contaminated:"made dirty or unsafe by something harmful getting mixed in",
+ advisories:"official warnings that tell people what to do to stay safe"
+};
+var FILL = [
+ {s:"After the soccer game, Ace used a wipe to ____ the scraped knee before putting on a bandage.", a:"disinfect"},
+ {s:"Sunlight shining through the window showed thousands of dust ____ floating in the air.", a:"particles"},
+ {s:"When the river flooded, the town issued boil-water ____ until tests showed the water was safe again.", a:"advisories"},
+ {s:"Because of ____, the ball Ace threw always came back down.", a:"gravity"}
+];
+var FILL_OPTIONS = ["watersheds", "reservoirs", "particles", "disinfect", "gravity", "contaminated", "advisories"];
+
+var PRAISE=["Nice work, Ace!","Correct! Sharp reading, Ace!","Yes! You followed the evidence!","Excellent thinking, water engineer Ace!","Right! Crystal-clear thinking! 💧"];
+function pick(a){return a[Math.floor(Math.random()*a.length)];}
+function shuffled(arr,seed){var a=arr.slice(),s=seed;for(var i=a.length-1;i>0;i--){s=(s*9301+49297)%233280;var j=Math.floor(s/233280*(i+1));var t=a[i];a[i]=a[j];a[j]=t;}return a;}
+
+var mcState=MC.map(function(){return {answered:false,firstRight:false,done:false};});
+var vocabScore=0, vocabChecked=false;
+var VOCAB_TOTAL=VOCAB.length+FILL.length;
+
+function buildMC(){
+  var box=document.getElementById("mc");
+  MC.forEach(function(item,i){
+    var d=document.createElement("div"); d.className="box q"; d.id="mc"+i;
+    var html="<div><strong>"+(i+1)+".</strong> "+item.q+(item.tag?'<span class="tag">'+item.tag+'</span>':"")+"</div>";
+    item.o.forEach(function(opt,j){ html+='<button type="button" class="opt" data-i="'+i+'" data-j="'+j+'">'+String.fromCharCode(65+j)+". "+opt+"</button>"; });
+    html+='<div class="fb" id="mcfb'+i+'"></div>';
+    d.innerHTML=html; box.appendChild(d);
+  });
+  box.addEventListener("click",function(e){
+    var b=e.target.closest?e.target.closest(".opt"):e.target; if(!b||!b.classList.contains("opt"))return;
+    answerMC(+b.getAttribute("data-i"),+b.getAttribute("data-j"),b);
+  });
+}
+function answerMC(i,j,btn){
+  var st=mcState[i], item=MC[i], fb=document.getElementById("mcfb"+i), card=document.getElementById("mc"+i);
+  if(st.done) return;
+  var right=(j===item.a);
+  if(!st.answered){ st.answered=true; st.firstRight=right; }
+  if(right){
+    st.done=true; btn.classList.add("sel-right"); card.className="box q right";
+    fb.className="fb good"; fb.innerHTML="✅ "+pick(PRAISE)+' <span class="explain">'+item.e+"</span>";
+  } else {
+    btn.classList.add("sel-wrong"); card.className="box q wrong";
+    fb.className="fb bad"; fb.innerHTML="❌ Not quite, Ace. Look back at the passage and try another answer.";
+  }
+  updateScore();
+}
+function buildVocab(){
+  var m=document.getElementById("vmatch");
+  var defOrder=shuffled(VOCAB,44);
+  VOCAB.forEach(function(w,i){
+    var row=document.createElement("div"); row.className="vrow"; row.id="vm"+i;
+    var sel='<select id="vsel'+i+'" aria-label="Meaning of '+w+'"><option value="">- choose a meaning -</option>';
+    defOrder.forEach(function(k){ sel+='<option value="'+k+'">'+DEFS[k]+'</option>'; });
+    sel+="</select>";
+    row.innerHTML='<span class="mark" id="vmk'+i+'"></span><span class="w">'+w+'</span>'+sel;
+    m.appendChild(row);
+  });
+  var f=document.getElementById("vfill");
+  FILL.forEach(function(item,i){
+    var row=document.createElement("div"); row.className="vrow"; row.id="vf"+i;
+    var sel='<select id="fsel'+i+'" aria-label="Blank '+(i+1)+'"><option value="">- choose -</option>';
+    FILL_OPTIONS.forEach(function(w){ sel+='<option value="'+w+'">'+w+'</option>'; });
+    sel+="</select>";
+    var parts=item.s.split("____");
+    row.innerHTML='<span class="mark" id="vfk'+i+'"></span><span>'+(i+1)+'. '+parts[0]+sel+parts[1]+'</span>';
+    f.appendChild(row);
+  });
+}
+function checkVocab(){
+  var score=0, blank=0;
+  VOCAB.forEach(function(w,i){
+    var v=document.getElementById("vsel"+i).value, ok=(v===w);
+    if(!v) blank++;
+    if(ok) score++;
+    document.getElementById("vm"+i).className="vrow "+(ok?"right":"wrong");
+    document.getElementById("vmk"+i).textContent=ok?"✅":"❌";
+  });
+  FILL.forEach(function(item,i){
+    var v=document.getElementById("fsel"+i).value, ok=(v===item.a);
+    if(!v) blank++;
+    if(ok) score++;
+    document.getElementById("vf"+i).className="vrow "+(ok?"right":"wrong");
+    document.getElementById("vfk"+i).textContent=ok?"✅":"❌";
+  });
+  vocabScore=score; vocabChecked=true;
+  var fb=document.getElementById("vocabFb");
+  if(score===VOCAB_TOTAL){ fb.className="fb good"; fb.textContent="🌟 "+score+" / "+VOCAB_TOTAL+". Perfect! Your vocabulary is crystal clear, Ace! 💧"; }
+  else { fb.className="fb bad"; fb.textContent=score+" / "+VOCAB_TOTAL+" correct"+(blank?" ("+blank+" left blank)":"")+". Fix the ❌ ones and check again. Try finding the word in the passage for clues!"; }
+  updateScore();
+}
+function scores(){
+  var mc=0,answered=0; mcState.forEach(function(s){ if(s.firstRight) mc++; if(s.answered) answered++; });
+  return {mc:mc,answered:answered,vocab:vocabScore};
+}
+function updateScore(){
+  var s=scores();
+  document.getElementById("scoreText").textContent="Comprehension: "+s.mc+" / "+MC.length+" · Vocabulary: "+(vocabChecked?s.vocab:"-")+" / "+VOCAB_TOTAL;
+}
+function finish(){
+  if(!vocabChecked) checkVocab();
+  var s=scores(), total=MC.length+VOCAB_TOTAL, got=s.mc+s.vocab, pct=Math.round(100*got/total);
+  var msg = pct===100 ? "🏆 A perfect score! Outstanding reading, Ace!" :
+            pct>=80 ? "🌟 Fantastic work, Ace! You read like a Grade 7 student!" :
+            pct>=60 ? "💪 Solid effort, Ace! Reread the paragraphs for the questions you missed." :
+                      "🌱 This was a challenging passage. Read it once more, slowly, and try again. You've got this, Ace!";
+  var f=document.getElementById("final"); f.style.display="block";
+  f.innerHTML="<h2 style='border:none;margin-top:0'>Final Score: "+got+" / "+total+" ("+pct+"%)</h2>"+
+    "<p>Comprehension (first tries): "+s.mc+" / "+MC.length+(s.answered<MC.length?" (you skipped "+(MC.length-s.answered)+")":"")+"<br>Vocabulary: "+s.vocab+" / "+VOCAB_TOTAL+"</p><p>"+msg+"</p>"+
+    "<p style='font-size:.85em;color:#546e7a'>Finished on "+new Date().toLocaleString("en-CA")+"</p>";
+  f.scrollIntoView({behavior:"smooth"});
+}
+buildMC(); buildVocab(); updateScore();
+document.getElementById("checkVocab").addEventListener("click",checkVocab);
+document.getElementById("finishBtn").addEventListener("click",finish);
+document.getElementById("showModel").addEventListener("click",function(){document.getElementById("model").style.display="block";});
+</script>
+<script src="../../assets/autosave.js"></script>
+</body>
+</html>
