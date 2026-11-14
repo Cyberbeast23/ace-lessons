@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Math (Nov. 14): Empire in the Clouds: Inca Quipu Keeper's Math Lab</title>
+<style>
+  body{font-family:"Segoe UI",Verdana,Arial,sans-serif;font-size:20px;line-height:1.6;margin:0;background:#f5f0eb;color:#2c2416}
+  .wrap{max-width:880px;margin:0 auto;padding:20px 18px 80px}
+  a.home{font-size:.9em;color:#bf360c}
+  h1{color:#e65100;font-size:2em;margin:10px 0}
+  h2{color:#ef6c00;margin-top:36px;border-bottom:3px solid #ffcc80;padding-bottom:4px}
+  .box{background:#fff;border-radius:16px;padding:18px 22px;margin:16px 0;box-shadow:0 3px 10px rgba(0,0,0,.07)}
+  .example{border-left:8px solid #ef6c00}
+  .example h3{margin:0 0 6px;color:#e65100}
+  .step{margin:4px 0 4px 10px}
+  code,.mono{font-family:Consolas,"Courier New",monospace;background:#fff3e0;padding:1px 6px;border-radius:5px}
+  .q{border-left:8px solid #90a4ae}
+  .q.right{border-left-color:#43a047;background:#f1f8e9}
+  .q.wrong{border-left-color:#e53935;background:#fff5f5}
+  .qnum{font-weight:bold;color:#e65100}
+  .row{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:10px}
+  input[type=text]{font-size:1.05em;padding:8px 12px;border:2px solid #ffcc80;border-radius:10px;width:190px}
+  input[type=text]:focus{outline:none;border-color:#ef6c00;box-shadow:0 0 0 3px #ffe0b2}
+  button{font-size:.95em;padding:8px 16px;border:none;border-radius:10px;cursor:pointer;font-weight:bold}
+  .check{background:#ef6c00;color:#fff} .check:hover{background:#e65100}
+  .hint{background:#ffe082;color:#5d4037} .hint:hover{background:#ffd54f}
+  .sol{background:#ce93d8;color:#311b92}
+  .unit{color:#546e7a}
+  .fb{margin-top:8px;font-weight:bold;min-height:1em}
+  .fb.good{color:#2e7d32} .fb.bad{color:#c62828}
+  .hints{margin-top:8px;color:#e65100;background:#fff3e0;border-radius:10px;padding:0 12px}
+  .hints p{margin:6px 0;padding:6px 0}
+  .solution{margin-top:8px;background:#f3e5f5;border-radius:10px;padding:8px 12px;display:none}
+  #scoreBox{position:sticky;bottom:0;background:#e65100;color:#fff;border-radius:16px 16px 0 0;padding:12px 20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-top:30px}
+  #scoreBox button{background:#ffca28;color:#3e2723}
+  #final{display:none;font-size:1.15em;text-align:center;border:4px solid #43a047}
+  .tipbox{background:#fff8e1;border-left:8px solid #ffb300}
+</style>
+</head>
+<body>
+<div class="wrap">
+<a class="home" href="../../index.html">&larr; Back to all lessons</a>
+<h1>🏔️ Math Week 48: Empire in the Clouds: Inca Quipu Keeper's Math Lab</h1>
+<p>Ace, about 500 years ago the Inca built the largest empire in the Americas, stretching more than 4 000 km along the Andes Mountains of South America. They had no iron tools, no wheels for carts and no written alphabet, yet they ran roads, bridges, farms and storehouses for millions of people. Their secret record-keepers were the <strong>quipucamayocs</strong> ("knot keepers"), who stored numbers on bundles of knotted strings called <strong>quipus</strong>, using a base-ten place-value system like ours. Today you are a quipu keeper. You'll use <strong>place value on knotted cords, relay rates and speed in km/h, integer temperature changes, the area of a trapezoid, volume and density, percents, ratios, the area of a circle, map scales, the mean (and working backward from it), a two-step equation, powers of ten, probability, and a multi-step bridge problem</strong>.</p>
+
+<h2>Part 1: Learn the Moves</h2>
+
+<div class="box tipbox">
+  <strong>The 4-Step Problem Solver (your quipu keeper's checklist):</strong>
+  <ol>
+    <li><strong>Read</strong>: What is the question actually asking? Underline the numbers and units (m, cm, km, m², m³, kg, °C, s, min, h, %).</li>
+    <li><strong>Plan</strong>: Do the units match? Change metres to centimetres or hours to minutes <em>before</em> you answer.</li>
+    <li><strong>Solve</strong>: Do one step at a time and write each step down.</li>
+    <li><strong>Check</strong>: Is my answer reasonable? A llama can carry about 30 kg, but not 300 kg!</li>
+  </ol>
+</div>
+
+
+
+
+<div class="box example">
+  <h3>Worked Example 1: Reading a quipu (place value)</h3>
+  <p class="step">On a quipu cord, knot clusters sit in rows. The cluster <strong>nearest the top</strong> is the biggest place value; the one at the <strong>bottom</strong> is the ones. A <strong>blank space</strong> means zero, just like the 0 in 305.</p>
+  <p class="step">Top to bottom: 3 knots, (blank), 5 knots → 3 hundreds, 0 tens, 5 ones = <strong>305</strong>. A "main cord" often held the <strong>total</strong> of the cords hanging from it.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 2: Speed and relay rates</h3>
+  <p class="step"><strong>Speed = distance ÷ time.</strong> To get km/h, the time must be in <strong>hours</strong>: 15 min = 15 ÷ 60 = 0.25 h.</p>
+  <p class="step">A runner covers 3 km in 15 min: 3 ÷ 0.25 = <strong>12 km/h</strong>. A relay team that hands off every 2 km needs 50 runners to cover 100 km (100 ÷ 2).</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 3: Integer change</h3>
+  <p class="step">Change = final − start. From −6 °C to 11 °C: 11 − (−6) = 11 + 6 = <strong>17 °C warmer</strong>. On a number line, count 6 up to zero, then 11 more.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 4: Area of a trapezoid</h3>
+  <p class="step">A <strong>trapezoid</strong> has two parallel sides (a and b). <strong>Area = (a + b) ÷ 2 × h</strong>, where h is the distance between the parallel sides. You are finding the average length, then multiplying by the height, just like a rectangle!</p>
+  <p class="step">a = 10 m, b = 6 m, h = 4 m: (10 + 6) ÷ 2 × 4 = 8 × 4 = <strong>32 m²</strong>.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 5: Volume and density</h3>
+  <p class="step"><strong>Density</strong> tells how much mass is packed into each cubic metre. <strong>Mass = volume × density.</strong></p>
+  <p class="step">A block 2 m × 1 m × 0.5 m = 1 m³. If the stone's density is 2 600 kg/m³, the block's mass is 1 × 2 600 = <strong>2 600 kg</strong> (heavier than a car!).</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 6: Area of a circle</h3>
+  <p class="step"><strong>A = π × r × r</strong> (use π ≈ 3.14; r = radius = half the diameter).</p>
+  <p class="step">Diameter 10 m → r = 5 m → 3.14 × 5 × 5 = <strong>78.5 m²</strong>.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 7: Powers of ten</h3>
+  <p class="step">10<sup>3</sup> = 10 × 10 × 10 = 1 000. So <strong>3 × 10<sup>4</sup></strong> = 3 × 10 000 = <strong>30 000</strong>. Scientists write huge numbers this way so they are easy to read and compare.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 8: Probability</h3>
+  <p class="step"><strong>Probability = favourable outcomes ÷ total outcomes</strong>, written as a fraction in lowest terms. 3 blue cords out of 12 cords → 3/12 = <strong>1/4</strong>.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 9: Working backward from a mean</h3>
+  <p class="step">Mean × how many = total. If 4 numbers have a mean of 10, their total is 40. To make 5 numbers have a mean of 12, the total must be 5 × 12 = 60, so the new number must be 60 − 40 = <strong>20</strong>.</p>
+</div>
+<h2>Part 2: The Challenge (15 problems)</h2>
+<p>Type your answer and press <strong>Check</strong> (or Enter). Negative numbers like <span class="mono">-35</span>, fractions like <span class="mono">3/4</span>, mixed numbers like <span class="mono">1 3/4</span>, or decimals like <span class="mono">1.75</span> are fine. Don't type the units, $ signs, or % signs, and you may use spaces or commas in big numbers (1 000 000). Stuck? Press <strong>Hint</strong>. After 2 tries, you can see a full solution.</p>
+
+<div id="questions"></div>
+<div class="box" id="final"></div>
+<div id="scoreBox">
+  <span id="scoreText">Score: 0 / 15 correct</span>
+  <button id="finishBtn" type="button">I'm done! Show my final score</button>
+</div>
+</div>
+
+<script>
+var NAME = "Ace";
+var TABLE = '<table style="border-collapse:collapse;margin:10px 0;font-size:.95em;background:#fff"><caption style="font-weight:bold;text-align:left;padding-bottom:4px">Loads carried by a llama caravan (kg)</caption><tr><th style="border:1px solid #bdbdbd;padding:4px 10px;background:#eceff1">Llama</th><th style="border:1px solid #bdbdbd;padding:4px 10px;background:#eceff1">Load (kg)</th></tr><tr><td style="border:1px solid #bdbdbd;padding:4px 10px">Llama 1</td><td style="border:1px solid #bdbdbd;padding:4px 10px;font-family:monospace">28</td></tr><tr><td style="border:1px solid #bdbdbd;padding:4px 10px">Llama 2</td><td style="border:1px solid #bdbdbd;padding:4px 10px;font-family:monospace">32</td></tr><tr><td style="border:1px solid #bdbdbd;padding:4px 10px">Llama 3</td><td style="border:1px solid #bdbdbd;padding:4px 10px;font-family:monospace">25</td></tr><tr><td style="border:1px solid #bdbdbd;padding:4px 10px">Llama 4</td><td style="border:1px solid #bdbdbd;padding:4px 10px;font-family:monospace">30</td></tr><tr><td style="border:1px solid #bdbdbd;padding:4px 10px">Llama 5</td><td style="border:1px solid #bdbdbd;padding:4px 10px;font-family:monospace">34</td></tr><tr><td style="border:1px solid #bdbdbd;padding:4px 10px">Llama 6</td><td style="border:1px solid #bdbdbd;padding:4px 10px;font-family:monospace">27</td></tr><tr><td style="border:1px solid #bdbdbd;padding:4px 10px">Llama 7</td><td style="border:1px solid #bdbdbd;padding:4px 10px;font-family:monospace">34</td></tr></table>';
+var QUESTIONS = [
+ {t:"A quipu keeper ties two pendant cords. <strong>Cord A</strong> (top to bottom): 4 knots, 0 knots (blank), 7 knots, 5 knots. <strong>Cord B</strong>: 2 knots, 9 knots, 3 knots, 8 knots. Each cord has four places: thousands, hundreds, tens, ones. What number should the keeper tie on the <strong>main cord</strong> to show the <strong>total</strong> of A and B?", a:"7013", u:"",
+  h:["Cord A = 4 thousands, 0 hundreds, 7 tens, 5 ones = 4 075. Write Cord B the same way.","Cord B = 2 938. Now add 4 075 + 2 938."],
+  s:"Cord A = 4 075 and Cord B = 2 938. 4 075 + 2 938 = 7 013. On the main cord: 7 knots, a blank space, 1 knot, 3 knots."},
+ {t:"Inca relay runners called <strong>chasquis</strong> could carry a message about <strong>240 km in one day</strong>. Each runner sprinted only a short stretch, about <strong>2.4 km</strong>, before passing the message (and the quipu) to the next runner. How many runners would carry a message for one full day?", a:"100", u:"runners",
+  h:["Divide the total distance by the distance each runner covers.","240 ÷ 2.4 is the same as 2 400 ÷ 24."],
+  s:"240 ÷ 2.4 = 100 runners. Teamwork made the message move far faster than any one person could go."},
+ {t:"A chasqui runs his <strong>2.4 km</strong> stretch of mountain road in <strong>12 minutes</strong>. What is his average speed in <strong>km/h</strong>?", a:"12", u:"km/h",
+  h:["Change 12 minutes into hours: 12 ÷ 60.","Speed = 2.4 ÷ 0.2."],
+  s:"12 min = 12 ÷ 60 = 0.2 h. Speed = 2.4 ÷ 0.2 = 12 km/h (or: 12 min is one-fifth of an hour, so 2.4 × 5 = 12 km in one hour). That is fast on steep, thin-air trails!"},
+ {t:"On a high Andes pass at 4 600 m, the temperature at dawn is <strong>−7 °C</strong>. By early afternoon it is <strong>14 °C</strong>. By how many degrees did the temperature <strong>rise</strong>?", a:"21", u:"°C",
+  h:["Change = final − start = 14 − (−7).","Subtracting a negative is the same as adding."],
+  s:"14 − (−7) = 14 + 7 = 21 °C. Freezing nights and warm days helped the Inca freeze-dry potatoes into chuño!"},
+ {t:"Inca farmers carved hillsides into flat steps called <strong>terraces</strong>. One terrace field is a <strong>trapezoid</strong>: its two parallel edges are <strong>30 m</strong> and <strong>22 m</strong> long, and the distance between them is <strong>8 m</strong>. What is its area in <strong>m²</strong>?", a:"208", u:"m²",
+  h:["Area of a trapezoid = (a + b) ÷ 2 × h.","(30 + 22) ÷ 2 = 26. Now multiply by 8."],
+  s:"(30 + 22) ÷ 2 × 8 = 26 × 8 = 208 m²."},
+ {t:"Inca stonemasons cut granite blocks that fit together so tightly that a knife blade cannot slide between them, with no mortar! One block measures <strong>1.5 m × 1.2 m × 0.8 m</strong>. Granite has a density of about <strong>2 700 kg/m³</strong>. What is the block's mass in <strong>kilograms</strong>?", a:"3888", u:"kg",
+  h:["Volume = 1.5 × 1.2 × 0.8 cubic metres.","Mass = volume × 2 700."],
+  s:"1.5 × 1.2 = 1.8; 1.8 × 0.8 = 1.44 m³. 1.44 × 2 700 = 3 888 kg, about the mass of two and a half cars, moved without wheels or iron tools!"},
+ {t:"A mountainside has <strong>180 terraces</strong>. Farmers plant potatoes on <strong>45%</strong> of them. How many terraces grow potatoes?", a:"81", u:"terraces",
+  h:["45% = 0.45.","0.45 × 180, or find 10% (18) and 5% (9) and build up."],
+  s:"0.45 × 180 = 81. (10% = 18, so 40% = 72; 5% = 9; 72 + 9 = 81.)"},
+ {t:"To make <strong>chuño</strong>, freeze-dried potatoes that can be stored for years, the Andean people freeze, thaw, trample and dry fresh potatoes. About <strong>5 kg</strong> of fresh potatoes make <strong>1 kg</strong> of chuño. How many kilograms of fresh potatoes are needed to make <strong>18 kg</strong> of chuño?", a:"90", u:"kg",
+  h:["The ratio fresh : chuño is 5 : 1.","Multiply 18 by 5."],
+  s:"5 : 1 = ? : 18, so ? = 5 × 18 = 90 kg of fresh potatoes. Most of the weight lost is water, which is why chuño is so light to carry and store."},
+ {t:"The Inca stored food in round stone storehouses called <strong>qollqas</strong>. One qollqa has a circular floor with a <strong>diameter of 6 m</strong>. Using <strong>π ≈ 3.14</strong>, what is the floor area in <strong>m²</strong>?", a:"28.26", u:"m²",
+  h:["Radius = half the diameter = 3 m.","A = 3.14 × 3 × 3."],
+  s:"r = 3 m. A = 3.14 × 9 = 28.26 m²."},
+ {t:"On a map with a scale of <strong>1 : 200 000</strong>, a section of Inca road measures <strong>7.5 cm</strong>. How long is the real road, in <strong>kilometres</strong>?", a:"15", u:"km",
+  h:["Real length in cm = 7.5 × 200 000.","Divide by 100 000 to change centimetres into kilometres."],
+  s:"7.5 × 200 000 = 1 500 000 cm = 15 000 m = 15 km."},
+ {t:TABLE+"The Inca used llamas to carry goods along their roads. The table shows the loads of a caravan of 7 llamas. An <strong>eighth llama</strong> joins the caravan. How many kilograms must it carry so that the <strong>mean</strong> load of all 8 llamas is <strong>31 kg</strong>?", a:"38", u:"kg",
+  h:["Total of the 7 loads now: add them up (the mean is total ÷ 7).","For 8 llamas to have a mean of 31 kg, the total must be 8 × 31. Subtract the current total."],
+  s:"28 + 32 + 25 + 30 + 34 + 27 + 34 = 210 kg (mean 30 kg). New total needed: 8 × 31 = 248 kg. 248 − 210 = 38 kg."},
+ {t:"Workers are rebuilding an Inca stone wall. They have already finished <strong>26 m</strong>, and they add <strong>4.5 m</strong> each day. Solve <strong>4.5d + 26 = 80</strong> to find how many more days (d) until the wall is 80 m long.", a:"12", u:"days",
+  h:["Undo the adding first: 4.5d = 80 − 26.","Then divide by 4.5."],
+  s:"4.5d = 54 → d = 54 ÷ 4.5 = 12 days. Check: 4.5 × 12 + 26 = 54 + 26 = 80 ✔"},
+ {t:"The Inca road network, the <em>Qhapaq Ñan</em>, was about <strong>4 × 10<sup>4</sup> km</strong> long. If a modern car could drive the whole network at a steady <strong>80 km/h</strong> without stopping, how many <strong>hours</strong> would it take?", a:"500", u:"hours",
+  h:["4 × 10⁴ = 4 × 10 000 = 40 000 km.","Time = distance ÷ speed = 40 000 ÷ 80."],
+  s:"4 × 10⁴ = 40 000 km. 40 000 ÷ 80 = 500 hours, almost 21 days of non-stop driving!"},
+ {t:"A quipu keeper's basket holds <strong>5 red</strong>, <strong>3 yellow</strong> and <strong>4 green</strong> cords, all the same length. Without looking, he pulls out one cord. What is the <strong>probability</strong> that it is green? Give your answer as a fraction in lowest terms.", a:"1/3", u:"",
+  h:["Total cords = 5 + 3 + 4.","Probability = 4 ÷ 12. Simplify the fraction."],
+  s:"There are 12 cords and 4 are green: 4/12 = 1/3."},
+ {t:"Every June, families in the Peruvian Andes rebuild the <strong>Q'eswachaka</strong> rope bridge from grass, just as their ancestors did. Suppose the bridge needs <strong>6 thick cables</strong>, each twisted from <strong>120 thin cords</strong>, and each thin cord must be <strong>30 m</strong> long. If each family braids <strong>90 m</strong> of thin cord, how many families are needed?", a:"240", u:"families",
+  h:["Total thin cords = 6 × 120. Total length = number of cords × 30 m.","Families = total length ÷ 90."],
+  s:"6 × 120 = 720 thin cords. 720 × 30 = 21 600 m (21.6 km!) of cord. 21 600 ÷ 90 = 240 families. A whole community working together builds the bridge in just a few days."}
+];
+
+var PRAISE = ["Nice work, Ace!","Correct! Quipu-keeper level! 🪢","Yes! The emperor would be proud!","Excellent, Ace. That was a tough one!","Right on target! 🎯","Brilliant thinking, Ace!","Mountain-high thinking, Ace! 🏔️"];
+var ENCOURAGE = ["Not quite. Check your steps and try again!","Close call. Try again, Ace! Maybe use a hint?","Hmm, not yet. Re-read the question carefully.","Keep going, Ace. Mistakes help your brain grow!"];
+
+function parseAnswer(str){
+  if(str===undefined||str===null) return NaN;
+  var s=String(str).trim().toLowerCase();
+  s=s.replace(/[\u2212\u2013]/g,"-");
+  s=s.replace(/(\d),(?=\d{3}(\D|$))/g,"$1");
+  s=s.replace(/[^0-9.\/\- ]/g," ").replace(/\s+/g," ").trim();
+  s=s.replace(/\s*\/\s*/g,"/");
+  var m;
+  if((m=s.match(/^(-?\d+) (\d+)\/(\d+)$/))){ var w=parseFloat(m[1]),n=parseFloat(m[2]),d=parseFloat(m[3]); if(d===0)return NaN; return w<0? w-n/d : w+n/d; }
+  if((m=s.match(/^(-?\d+(?:\.\d+)?)\/(\d+(?:\.\d+)?)$/))){ var d2=parseFloat(m[2]); if(d2===0)return NaN; return parseFloat(m[1])/d2; }
+  s=s.replace(/ /g,"");
+  if(/^-?(\d+\.?\d*|\.\d+)$/.test(s)) return parseFloat(s);
+  return NaN;
+}
+function isCorrect(input,key){
+  var a=parseAnswer(input), k=parseAnswer(key);
+  if(isNaN(a)) return false;
+  var isInt=Math.abs(k-Math.round(k))<1e-12;
+  var tol=isInt?1e-9:0.005;
+  return Math.abs(a-k)<=tol;
+}
+
+function isRomanCorrect(input,key){ return String(input).replace(/\s+/g,"").toUpperCase()===key; }
+var state=[];
+function render(){
+  var box=document.getElementById("questions");
+  QUESTIONS.forEach(function(q,i){
+    state.push({correct:false,tries:0,hints:0});
+    var d=document.createElement("div");
+    d.className="box q"; d.id="q"+i;
+    d.innerHTML='<div><span class="qnum">'+(i+1)+'.</span> '+q.t+'</div>'+
+      '<div class="row"><input type="text"'+(q.r?' placeholder="e.g. MMXXVI"':'')+' id="in'+i+'" aria-label="Answer to question '+(i+1)+'" autocomplete="off"> <span class="unit">'+q.u+'</span>'+
+      '<button type="button" class="check" data-i="'+i+'">Check</button>'+
+      '<button type="button" class="hint" data-i="'+i+'">Hint 💡</button>'+
+      '<button type="button" class="sol" data-i="'+i+'" style="display:none">Show solution</button></div>'+
+      '<div class="fb" id="fb'+i+'"></div><div class="hints" id="hints'+i+'"></div>'+
+      '<div class="solution" id="sol'+i+'"><strong>Solution:</strong> '+q.s+'</div>';
+    box.appendChild(d);
+  });
+  box.addEventListener("click",function(e){
+    var b=e.target; if(b.tagName!=="BUTTON")return;
+    var i=+b.getAttribute("data-i");
+    if(b.className==="check") check(i);
+    else if(b.className==="hint") hint(i);
+    else if(b.className==="sol") document.getElementById("sol"+i).style.display="block";
+  });
+  box.addEventListener("keydown",function(e){
+    if(e.key==="Enter"&&e.target.tagName==="INPUT"){ check(+e.target.id.slice(2)); }
+  });
+}
+function pick(arr){return arr[Math.floor(Math.random()*arr.length)];}
+function check(i){
+  var val=document.getElementById("in"+i).value;
+  var fb=document.getElementById("fb"+i), card=document.getElementById("q"+i);
+  if(val.trim()===""){fb.className="fb bad";fb.textContent="Type an answer first, Ace!";return;}
+  var isR=!!QUESTIONS[i].r;
+  if(isR&&!/^[ivxlcdm\s]+$/i.test(val)){fb.className="fb bad";fb.textContent="Use only Roman numeral letters: I, V, X, L, C, D, M.";return;}
+  if(!isR&&isNaN(parseAnswer(val))){fb.className="fb bad";fb.textContent="I can't read that as a number. Try something like 42, 3.5, 3/4 or 1 3/4.";return;}
+  state[i].tries++;
+  if(isR?isRomanCorrect(val,QUESTIONS[i].a):isCorrect(val,QUESTIONS[i].a)){
+    state[i].correct=true; card.className="box q right"; fb.className="fb good";
+    fb.textContent="✅ "+pick(PRAISE)+(state[i].tries===1?" (first try!)":"");
+  } else {
+    state[i].correct=false; card.className="box q wrong"; fb.className="fb bad";
+    fb.textContent="❌ "+pick(ENCOURAGE);
+    if(state[i].tries>=2) card.querySelector(".sol").style.display="inline-block";
+  }
+  updateScore();
+}
+function hint(i){
+  var q=QUESTIONS[i], s=state[i], hb=document.getElementById("hints"+i);
+  if(s.hints<q.h.length){
+    var p=document.createElement("p"); p.textContent="💡 Hint "+(s.hints+1)+": "+q.h[s.hints]; hb.appendChild(p); s.hints++;
+  }
+  if(s.hints>=q.h.length) document.querySelector("#q"+i+" .hint").disabled=true;
+  updateScore();
+}
+function counts(){
+  var c=0,first=0,h=0;
+  state.forEach(function(s){ if(s.correct){c++; if(s.tries===1)first++;} h+=s.hints; });
+  return {correct:c,first:first,hints:h};
+}
+function updateScore(){
+  var k=counts();
+  document.getElementById("scoreText").textContent="Score: "+k.correct+" / "+QUESTIONS.length+" correct · hints used: "+k.hints;
+}
+function finish(){
+  var k=counts(), n=QUESTIONS.length, pct=Math.round(100*k.correct/n);
+  var msg;
+  if(pct===100) msg="🏆 PERFECT SCORE! Incredible work, Ace. The Inca would make you chief quipu keeper!";
+  else if(pct>=85) msg="🌟 Outstanding, Ace! That's a Grade 6–7 level performance!";
+  else if(pct>=65) msg="💪 Great effort, Ace! Review the ones you missed and try them again.";
+  else if(pct>=40) msg="👍 Good start, Ace! These problems are tough. Use the hints and solutions to learn the tricks, then try again.";
+  else msg="🌱 These are challenge problems, well above grade level. Every great scientist started as a beginner! Go through the worked examples and try again, Ace!";
+  var f=document.getElementById("final");
+  f.style.display="block";
+  f.innerHTML="<h2 style='border:none;margin-top:0'>Final Score: "+k.correct+" / "+n+" ("+pct+"%)</h2>"+
+    "<p>Correct on the first try: "+k.first+" · Hints used: "+k.hints+"</p><p>"+msg+"</p>"+
+    "<p style='font-size:.85em;color:#546e7a'>Finished on "+new Date().toLocaleString("en-CA")+"</p>";
+  f.scrollIntoView({behavior:"smooth"});
+}
+render();
+updateScore();
+document.getElementById("finishBtn").addEventListener("click",finish);
+</script>
+<script src="../../assets/autosave.js"></script>
+</body>
+</html>
