@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Writing (Nov. 15): Reflective Personal Essay (What the Night Sky Taught Me) + Grammar Clinic</title>
+<style>
+  body{font-family:"Segoe UI",Verdana,Arial,sans-serif;font-size:20px;line-height:1.6;margin:0;background:#fff8f0;color:#2c2416}
+  .wrap{max-width:880px;margin:0 auto;padding:20px 18px 80px}
+  a.home{font-size:.9em;color:#bf360c}
+  h1{color:#e65100;font-size:2em;margin:10px 0}
+  h2{color:#ef6c00;margin-top:36px;border-bottom:3px solid #ffcc80;padding-bottom:4px}
+  h3{color:#ef6c00}
+  .box{background:#fff;border-radius:16px;padding:18px 22px;margin:16px 0;box-shadow:0 3px 10px rgba(0,0,0,.07)}
+  .tipbox{background:#fff8e1;border-left:8px solid #ffb300}
+  .senses{display:grid;gap:8px;margin:10px 0;grid-template-columns:repeat(auto-fit,minmax(140px,1fr))}
+  .senses .side{border-radius:14px;padding:10px 16px;background:#fff3e0}
+  .ts{background:#ffcc80;border-radius:5px;padding:1px 3px}
+  .ev{background:#c8e6c9;border-radius:5px;padding:1px 3px}
+  .ex{background:#ffe0b2;border-radius:5px;padding:1px 3px}
+  .cs{background:#e1bee7;border-radius:5px;padding:1px 3px}
+  .legend span{display:inline-block;margin:4px 8px 4px 0;font-size:.85em}
+  .model{font-family:Georgia,"Times New Roman",serif;font-size:1.05em;line-height:1.9}
+  .row{padding:10px 6px;border-bottom:1px dashed #ddd}
+  .row.right{background:#f1f8e9} .row.wrong{background:#fff5f5}
+  select{font-size:.9em;padding:5px 8px;border-radius:8px;border:2px solid #ffb74d;font-family:inherit}
+  .q{border-left:8px solid #b0bec5}
+  .q.right{border-left-color:#43a047;background:#f1f8e9}
+  .q.wrong{border-left-color:#e53935;background:#fff5f5}
+  .opt{display:block;width:100%;text-align:left;font-size:.95em;background:#fafafa;border:2px solid #e0e0e0;border-radius:10px;padding:8px 14px;margin:8px 0;cursor:pointer;font-family:inherit}
+  .opt:hover{border-color:#ffb74d;background:#fff}
+  .opt.sel-right{background:#c8e6c9;border-color:#43a047}
+  .opt.sel-wrong{background:#ffcdd2;border-color:#e53935}
+  .fb{margin-top:6px;font-weight:bold}
+  .fb.good{color:#2e7d32} .fb.bad{color:#c62828}
+  .explain{font-weight:normal;color:#e65100}
+  .bad-sent{font-family:Consolas,"Courier New",monospace;background:#ffebee;padding:6px 10px;border-radius:8px;display:inline-block;margin:6px 0}
+  input.fix{width:100%;box-sizing:border-box;font-size:1em;padding:8px 12px;border:2px solid #ffb74d;border-radius:10px;font-family:inherit}
+  button{font-size:.95em;padding:8px 16px;border:none;border-radius:10px;cursor:pointer;font-weight:bold;font-family:inherit}
+  .go{background:#ef6c00;color:#fff} .go:hover{background:#e65100}
+  .hint{background:#ffe082;color:#5d4037}
+  .blue{background:#1e88e5;color:#fff}
+  .purple{background:#8e24aa;color:#fff}
+  .grey{background:#cfd8dc;color:#263238}
+  .btnrow{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px}
+  textarea{width:100%;box-sizing:border-box;min-height:300px;font-size:1.05em;line-height:1.7;font-family:Georgia,"Times New Roman",serif;padding:14px;border:3px solid #ffb74d;border-radius:12px}
+  textarea:focus{outline:none;border-color:#ef6c00}
+  .counter{display:flex;flex-wrap:wrap;gap:20px;align-items:center;margin:8px 0;font-weight:bold}
+  .meter{flex:1;min-width:200px;height:18px;background:#e0e0e0;border-radius:9px;overflow:hidden}
+  .meter div{height:100%;width:0;background:#ffb300;transition:width .2s}
+  .checklist label{display:block;padding:6px 4px;cursor:pointer}
+  .checklist input{transform:scale(1.4);margin-right:10px}
+  .prompts label{display:block;background:#fff3e0;border-radius:10px;padding:10px 14px;margin:8px 0;cursor:pointer}
+  .flow{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin:10px 0;font-size:.85em}
+  .flow span.st{background:#e3f2fd;border:2px solid #1e88e5;border-radius:8px;padding:4px 10px;font-weight:bold;color:#0d47a1}
+  .flow span.ar{color:#1e88e5;font-weight:bold}
+  .prompts input{transform:scale(1.3);margin-right:8px}
+  #scoreBox{position:sticky;bottom:0;background:#e65100;color:#fff;border-radius:16px 16px 0 0;padding:12px 20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-top:30px}
+  .w5{display:grid;gap:8px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));margin:10px 0}
+  .w5 label{display:block;font-weight:bold;color:#e65100}
+  .w5 input{width:100%;box-sizing:border-box;font-size:.95em;padding:6px 10px;border:2px solid #ffb74d;border-radius:8px;font-family:inherit}
+  #printArea{display:none}
+  @media print{
+    body{background:#fff;font-size:14pt}
+    .wrap,#scoreBox{display:none !important}
+    #printArea{display:block;font-family:Georgia,serif;line-height:1.8}
+    #printArea h1{font-size:18pt;margin:0 0 6pt}
+    #printArea .meta{font-size:11pt;color:#444}
+    #printArea .text{white-space:pre-wrap;border-top:1px solid #999;padding-top:10pt;margin-top:10pt}
+    #printArea .lines{margin-top:24pt;border-top:1px solid #999;padding-top:6pt;font-size:11pt}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+<a class="home" href="../../index.html">&larr; Back to all lessons</a>
+<h1>✍️ Writing Week 49: Reflective Personal Essay — What the Night Sky Taught Me 🌌✨</h1>
+<p>Yesterday you explained causes and effects like a historian. Today, Ace, you'll try a brand-new genre that is very different: the <strong>reflective personal essay</strong>. In a reflective essay, you start with a <strong>real moment from your own life</strong> (or one you imagine very clearly), connect it to something you <strong>learned</strong>, and then <strong>think on the page</strong>: what does it make you wonder? What did it change about how you see the world? It is not a story that just tells what happened, and it is not a report full of facts. It is a <em>conversation with yourself</em> that the reader gets to overhear. Writers like this genre because it turns small moments, like lying on your back and looking at stars, into big ideas.</p>
+
+<h2>Part 1: The Lesson</h2>
+<div class="box">
+  <h3 style="margin-top:0">The six parts of a strong reflective essay 🌠</h3>
+  <p>A reflective essay moves from the <strong>outside</strong> (what happened, what you saw) to the <strong>inside</strong> (what you think, feel and now understand). Picture a telescope: you start with one small point of light, then zoom out to see the whole galaxy around it.</p>
+  <div class="senses">
+    <div class="side"><strong>1. Hook (a vivid moment):</strong> drop the reader into one specific moment: a time, a place, a voice</div>
+    <div class="side"><strong>2. Observation:</strong> sensory details: what you saw, heard, felt, even smelled</div>
+    <div class="side"><strong>3. Science connection:</strong> a fact you learned that changed how you saw the moment</div>
+    <div class="side"><strong>4. Reflection:</strong> "thinking on the page": questions you asked yourself and what you felt</div>
+    <div class="side"><strong>5. Bigger insight:</strong> the lesson or idea that reaches beyond the sky, into your life</div>
+    <div class="side"><strong>6. Full-circle ending:</strong> return to the opening moment, but with new eyes</div>
+  </div>
+  <h3>Four tricks reflective writers use</h3>
+  <ul>
+    <li><strong>Show, don't just tell:</strong> ❌ <em>"The stars were amazing."</em> ✅ <em>"My mouth fell open, and I forgot all about my freezing toes."</em></li>
+    <li><strong>Think out loud with reflective phrases:</strong> <em>I keep wondering… · At first I thought…, but now I realize… · What surprised me most was… · Maybe… · This made me see that…</em></li>
+    <li><strong>Shift tense on purpose:</strong> tell the <strong>memory</strong> in the past tense (<em>we lay on the dock</em>), and your <strong>thinking now</strong> in the present tense (<em>now I realize, I still wonder</em>). Never switch by accident in the middle of the memory.</li>
+    <li><strong>Be honest and specific:</strong> real feelings (even small, strange or mixed ones) make a reflective essay powerful. One true detail beats ten general ones.</li>
+  </ul>
+  <p><strong>Reflective writer's rule:</strong> by the end, the reader should know not just <em>what you saw</em>, but <em>how it changed what you think</em>.</p>
+</div>
+
+<div class="box tipbox">
+  <h3 style="margin-top:0">Mini-lesson: punctuation and pronouns for personal writing ✨</h3>
+  <p><strong>The colon (:) introduces an explanation or a big reveal.</strong> Use it after a <em>complete sentence</em>: <em>I finally understood the secret<u>:</u> the stars are always changing.</em> ❌ Don't put a colon right after a verb: <em>The stars are<s>:</s> bright and old.</em></p>
+  <p><strong>Its vs. it's:</strong> <em>it's</em> = <strong>it is</strong> (or it has). <em>its</em> = belonging to it (no apostrophe, just like <em>his</em>). <em>The star burns through <u>its</u> fuel, and <u>it's</u> going to become a red giant.</em></p>
+  <p><strong>Dad and I / Dad and me:</strong> take the other person away and test it. <em><u>Dad and I</u> watched the stars</em> (I watched ✔). <em>Grandma showed <u>Dad and me</u> the Big Dipper</em> (showed me ✔). Put yourself <strong>last</strong>, and capitalize <em>Dad</em> when you use it as a name.</p>
+  <p><strong>Comma after an introductory phrase:</strong> <em>Far from the city lights<u>,</u> the sky was crowded with stars.</em> Canadian spelling: <strong>colour, centre, metre, neighbour, favourite</strong>. Capitalize names in space: <strong>the Sun, the Moon, the Milky Way, Orion, Betelgeuse</strong>.</p>
+</div>
+
+<div class="box">
+  <h3 style="margin-top:0">Model reflective essay (about 250 words)</h3>
+  <p class="legend"><span class="ts">Hook + observation</span><span class="ev">Science connection</span><span class="ex">Reflection + bigger insight</span><span class="cs">Full-circle ending</span></p>
+  <div class="model">
+    <span class="ts"><strong>Old Light</strong><br>The dock was still warm from the day when my aunt clicked off her flashlight and said, "Give your eyes ten minutes." At first I saw only a few stars. Then, little by little, the sky filled up until it looked like someone had spilled a jar of sugar across black paper. A loon called somewhere across the lake, and I could smell the smoke from our campfire.</span>
+    <div class="flow" aria-label="Reflective essay path"><span class="st">Moment</span><span class="ar">→</span><span class="st">Notice</span><span class="ar">→</span><span class="st">Learn</span><span class="ar">→</span><span class="st">Wonder</span><span class="ar">→</span><span class="st">Insight</span></div>
+    <span class="ev">Later that week, I read that starlight is old. The light from Rigel, the blue-white star in Orion's foot, left it hundreds of years ago, long before anyone in my family was born. Light is fast, but space is so huge that even light needs centuries to cross it.</span>
+    <span class="ex">I keep thinking about that: every time I look up, I am seeing the past. At first it made me feel tiny. Now I realize it also makes me feel connected, because the same light has been travelling all that time just to land in my eyes. Maybe people are a little like stars. What we see of someone today is light that left them a while ago, and it takes time and patience to really understand who they are now.</span>
+    <span class="cs">Now, whenever I step onto that dock at night, I wait ten minutes, and I don't just look up. I look back in time.</span>
+  </div>
+  <p><strong>Notice:</strong> the hook drops you onto the dock; sensory details (warm dock, spilled sugar, a loon, campfire smoke) <em>show</em> the moment; one science fact (old starlight) changes how the writer sees it; reflective phrases (<em>I keep thinking, At first…, Now I realize, Maybe</em>) let you hear the writer think; the memory is in the past tense and the thinking is in the present tense; a colon introduces the big reveal; the ending returns to the dock with new eyes.</p>
+</div>
+
+<h2>Part 2: Name That Reflective Essay Part</h2>
+<div class="box">
+  <p>Each line comes from a student's reflective essay called <strong>"The Night the Sky Got Bigger."</strong> Choose which <strong>part</strong> it shows best.</p>
+  <div id="labelRows"></div>
+  <div class="btnrow"><button type="button" class="go" id="checkLabels">Check my answers</button></div>
+  <div class="fb" id="labelFb"></div>
+</div>
+
+<h2>Part 3: Grammar Clinic 📏</h2>
+<div class="box tipbox">Every writer needs a careful editor, even for personal writing! <strong>Section A:</strong> pick the correct sentence. <strong>Section B:</strong> type the sentence again with <em>all</em> mistakes fixed. We use <strong>Canadian spelling</strong> (colour, centre, metre, neighbour, favourite). Today, watch <strong>colons</strong>, <strong>its vs. it's</strong>, <strong>Dad and I / Dad and me</strong>, <strong>commas after introductory phrases</strong>, <strong>purposeful tense shifts</strong>, <strong>capital letters for names in space</strong>, and <strong>showing instead of telling</strong>.</div>
+<h3>Section A: Pick the correct sentence</h3>
+<div id="gmc"></div>
+<h3>Section B: Fix the sentence</h3>
+<p>Retype the whole sentence correctly, with capital letters and punctuation. Each one has <strong>at least two</strong> mistakes.</p>
+<div id="gfix"></div>
+
+<h2>Part 4: Your Turn to Write</h2>
+<div class="box">
+  <h3 style="margin-top:0">Step 1: Choose your question</h3>
+  <p>Pick <strong>one</strong> prompt. Use a real memory if you can (or imagine one very clearly), and use today's reading (and math!) for your science connection. Jot your ideas in the planning boxes first, then write.</p>
+  <div class="prompts" id="prompts">
+    <label><input type="radio" name="prompt" value="Option A: The Night I Looked Up" checked> 🌌 <strong>Option A: The Night I Looked Up.</strong> Write about a time you looked at the night sky (camping, at the cabin, in the backyard, on a winter walk). Connect it to a fact about stars, like old light, star colours or how far away stars are. What did it make you wonder?</label>
+    <label><input type="radio" name="prompt" value="Option B: Made of Star-Stuff"> ✨ <strong>Option B: Made of Star-Stuff.</strong> The iron in your blood and the calcium in your bones were made inside stars. Start with a moment when you noticed your own body (a scraped knee, a loose tooth, a fast heartbeat after a race), then reflect: how does it feel to know you are made of star-stuff?</label>
+    <label><input type="radio" name="prompt" value="Option C: Big Things Take Time"> ⏳ <strong>Option C: Big Things Take Time.</strong> A star takes millions of years to form, and some starlight takes centuries to reach us. Write about something in your life that took a long time (learning a skill, a friendship, saving for something), connect it to the slow life of stars, and reflect on what patience taught you.</label>
+  </div>
+  <p><strong>Plan your essay:</strong> jot a few words for each box. (These notes save with your writing.)</p>
+  <div class="w5" id="w5">
+    <div><label for="w5who">Hook: the moment (when, where, who)</label><input id="w5who" type="text" autocomplete="off"></div>
+    <div><label for="w5place">Sensory details (see, hear, feel, smell)</label><input id="w5place" type="text" autocomplete="off"></div>
+    <div><label for="w5facts">Science connection (a fact you learned)</label><input id="w5facts" type="text" autocomplete="off"></div>
+    <div><label for="w5senses">Reflection: what I wondered / felt</label><input id="w5senses" type="text" autocomplete="off"></div>
+    <div><label for="w5feel">Bigger insight (lesson for life)</label><input id="w5feel" type="text" autocomplete="off"></div>
+    <div><label for="w5closing">Full-circle ending</label><input id="w5closing" type="text" autocomplete="off"></div>
+  </div>
+
+  <h3>Step 2: Write your reflective essay</h3>
+  <p><strong>Goal:</strong> <strong>220 to 350 words</strong>: a title, then <strong>4 to 5 paragraphs</strong> that move through the six parts (hook, observation, science connection, reflection, bigger insight, full-circle ending). Include at least <strong>three sensory details</strong>, at least <strong>one science fact</strong> (a number helps!), at least <strong>three reflective phrases</strong> (<em>I keep wondering, At first I thought… but now I realize, Maybe, This made me see that</em>), at least <strong>one colon</strong> that introduces an explanation or reveal, the <strong>past tense for the memory</strong> and the <strong>present tense for your thinking now</strong>, and an ending that <strong>returns to your opening moment</strong>. Then add <strong>2–3 sentences to Dad</strong> about what was hardest to put into words. Bonus: use two words from today's spelling list (like <em>nebula</em> or <em>observatory</em>) correctly!</p>
+  <p><button type="button" class="hint" id="templateBtn">📋 Add the layout for me</button></p>
+  <label for="essay"><strong>Write here, Ace:</strong></label>
+  <textarea id="essay" placeholder="Title: ..."></textarea>
+  <div class="counter">
+    <span id="wc">0 words</span>
+    <span id="sc">0 sentences</span>
+    <div class="meter" aria-hidden="true"><div id="meterBar"></div></div>
+  </div>
+  <div class="fb" id="wcMsg">Aim for 220 to 350 words.</div>
+  <p style="font-size:.8em;color:#607d8b" id="saveNote">Your writing is saved automatically in this browser as you type.</p>
+
+  <h3>Self-check before you finish ✅</h3>
+  <div class="checklist" id="checklist">
+    <label><input type="checkbox"> My <strong>hook</strong> drops the reader into one specific moment (a time, a place, a person).</label>
+    <label><input type="checkbox"> I used at least <strong>three sensory details</strong> to <em>show</em>, not just tell.</label>
+    <label><input type="checkbox"> I included a <strong>science connection</strong> that changed how I saw the moment.</label>
+    <label><input type="checkbox"> I <strong>thought on the page</strong> with at least three reflective phrases (I keep wondering, Now I realize, Maybe…).</label>
+    <label><input type="checkbox"> I shared a <strong>bigger insight</strong> that reaches beyond the sky into my own life.</label>
+    <label><input type="checkbox"> I told the memory in the <strong>past tense</strong> and my thinking now in the <strong>present tense</strong>, and used a <strong>colon</strong> correctly.</label>
+    <label><input type="checkbox"> I checked <strong>its/it's</strong> and <strong>Dad and I / me</strong>, capitalized names in space, and my ending comes <strong>full circle</strong>.</label>
+  </div>
+  <div class="btnrow">
+    <button type="button" class="blue" id="downloadBtn">⬇️ Download my writing (for Dad)</button>
+    <button type="button" class="purple" id="printBtn">🖨️ Print my writing</button>
+    <button type="button" class="grey" id="clearBtn">Start over</button>
+  </div>
+  <div class="fb" id="doneMsg"></div>
+</div>
+
+<div id="scoreBox"><span id="scoreText"></span><span>Keep shining, writer Ace! 🌟</span></div>
+</div>
+
+<div id="printArea"></div>
+
+<script>
+var NAME="Ace";
+var PRAISE=["Nice work, Ace!","Correct! Great editing eye!","Yes! Ace fixed it!","Excellent, writer Ace!","Bravo! That edit shines like a supernova! 🌟"];
+function pick(a){return a[Math.floor(Math.random()*a.length)];}
+
+var LABELS=["Hook (a vivid moment)", "Observation (sensory details)", "Science connection", "Reflection (thinking on the page)", "Bigger insight", "Full-circle ending"];
+var LABEL_ITEMS=[
+ {s:"Later I learned that the pale stripe was the Milky Way, and that some of its starlight had left its stars thousands of years ago.", a:"Science connection"},
+ {s:"Thousands of stars crowded the sky, the cold air stung my nose, and a pale, milky stripe stretched from the treetops to the far side of the lake.", a:"Observation (sensory details)"},
+ {s:"Now, whenever I step out onto that dock, I don't just look up. I look back in time.", a:"Full-circle ending"},
+ {s:"The dock was still warm from the sun when Dad switched off his flashlight and whispered, \"Now look up.\"", a:"Hook (a vivid moment)"},
+ {s:"Maybe that's true about people too: what we see of someone is only part of their story, and it takes time to understand them.", a:"Bigger insight"},
+ {s:"I keep wondering: if I'm seeing old light, then some of those stars might not even be there anymore.", a:"Reflection (thinking on the page)"}
+];
+var labelScore=0, labelChecked=false;
+function buildLabels(){
+  var box=document.getElementById("labelRows");
+  LABEL_ITEMS.forEach(function(it,i){
+    var d=document.createElement("div"); d.className="row"; d.id="lr"+i;
+    var sel='<select id="ls'+i+'" aria-label="Job of sentence '+(i+1)+'"><option value="">- choose -</option>';
+    LABELS.forEach(function(l){sel+='<option>'+l+'</option>';});
+    sel+='</select>';
+    d.innerHTML='<strong>'+(i+1)+'.</strong> '+it.s+'<br>'+sel+' <span id="lm'+i+'"></span>';
+    box.appendChild(d);
+  });
+}
+function checkLabels(){
+  var sc=0;
+  LABEL_ITEMS.forEach(function(it,i){
+    var ok=document.getElementById("ls"+i).value===it.a; if(ok)sc++;
+    document.getElementById("lr"+i).className="row "+(ok?"right":"wrong");
+    document.getElementById("lm"+i).textContent=ok?"✅":"❌";
+  });
+  labelScore=sc; labelChecked=true;
+  var fb=document.getElementById("labelFb");
+  if(sc===LABEL_ITEMS.length){fb.className="fb good";fb.textContent="🌟 "+sc+" / "+LABEL_ITEMS.length+". "+pick(PRAISE)+" You know exactly how a reflective essay is built!";}
+  else{fb.className="fb bad";fb.textContent=sc+" / "+LABEL_ITEMS.length+". Hint: drops you into one moment = hook; what the writer saw, heard or felt = observation; a fact the writer learned = science connection; the writer wondering or thinking out loud = reflection; a lesson about life beyond the sky = bigger insight; returns to the opening moment with new eyes = full-circle ending.";}
+  updateScore();
+}
+
+var GMC=[
+ {q:"Which sentence uses a <strong>colon</strong> correctly?",
+  o:["The stars are: bright, old and far away.", "I finally understood the secret of the stars: they are always changing.", "I finally: understood the secret of the stars.", "My favourite stars are: Rigel and Vega."],
+  a:1,e:"A colon comes after a <strong>complete sentence</strong> and introduces an explanation or reveal. In A and D the colon interrupts the sentence right after a verb, and in C it splits the verb phrase."},
+ {q:"Which sentence uses <strong>its / it's</strong> correctly?",
+  o:["The star burns through it's fuel, and its going to become a red giant.", "The star burns through its fuel, and it's going to become a red giant.", "The star burns through its' fuel, and it's going to become a red giant.", "The star burns through it's fuel, and it's going to become a red giant."],
+  a:1,e:"<em>its fuel</em> = the fuel belonging to it (no apostrophe). <em>it's going</em> = <strong>it is</strong> going."},
+ {q:"Which sentence is correct?",
+  o:["Me and Dad watched the meteor shower.", "Dad and me watched the meteor shower.", "Dad and I watched the meteor shower.", "I and Dad watched the meteor shower."],
+  a:2,e:"Test it: take Dad away. \"<strong>I</strong> watched\" is correct, so it is <em>Dad and I</em>, with yourself last."},
+ {q:"Which sentence is correct?",
+  o:["Grandma showed Dad and I the Big Dipper.", "Grandma showed Dad and me the Big Dipper.", "Grandma showed me and dad the Big Dipper.", "Grandma showed I and Dad the Big Dipper."],
+  a:1,e:"Test it: take Dad away. \"Grandma showed <strong>me</strong>\" is correct, so it is <em>Dad and me</em>. Capitalize Dad when it is used as a name."},
+ {q:"A writer is telling a memory and then reflecting on it. Which choice <strong>shifts tense on purpose</strong>, correctly?",
+  o:["Last summer I lie on the dock and counted shooting stars. Now I realize each one was a tiny rock burning up.", "Last summer I lay on the dock and count shooting stars. Now I realized each one is a tiny rock burning up.", "Last summer I lay on the dock and counted shooting stars. Now I realize each one was a tiny rock burning up.", "Last summer I am lying on the dock and counted shooting stars. Now I realized each one was a tiny rock burning up."],
+  a:2,e:"The <strong>memory</strong> stays in the past tense (<em>lay, counted, was</em>), and the writer's <strong>thinking now</strong> is in the present tense (<em>Now I realize</em>). The other choices switch tense by accident."},
+ {q:"Which sentence best <strong>shows</strong> (instead of tells) that the writer was amazed?",
+  o:["The stars were really amazing.", "I was very amazed by the stars.", "My mouth fell open, and I forgot all about my freezing toes.", "It was an amazing and very good night."],
+  a:2,e:"A, B and D just <em>tell</em> us the feeling with the word <em>amazing</em>. C <strong>shows</strong> it with actions the reader can picture."},
+ {q:"Which sentence uses <strong>Canadian spelling</strong> and <strong>capital letters</strong> correctly?",
+  o:["The color of the sun changes near the center of the sky.", "The colour of the Sun looks different from the centre of the Milky Way.", "The colour of the sun looks different from the centre of the milky way.", "The color of the Sun looks different from the center of the Milky Way."],
+  a:1,e:"Canadian spelling: <strong>colour</strong>, <strong>centre</strong>. Names in space are proper nouns: <strong>the Sun</strong>, <strong>the Milky Way</strong>."}
+];
+var gmcState=GMC.map(function(){return{answered:false,firstRight:false,done:false};});
+function buildGMC(){
+  var box=document.getElementById("gmc");
+  GMC.forEach(function(it,i){
+    var d=document.createElement("div"); d.className="box q"; d.id="g"+i;
+    var h='<div><strong>'+(i+1)+'.</strong> '+it.q+'</div>';
+    it.o.forEach(function(o,j){h+='<button type="button" class="opt" data-i="'+i+'" data-j="'+j+'">'+String.fromCharCode(65+j)+'. '+o+'</button>';});
+    h+='<div class="fb" id="gfb'+i+'"></div>';
+    d.innerHTML=h; box.appendChild(d);
+  });
+  box.addEventListener("click",function(e){
+    var b=e.target.closest?e.target.closest(".opt"):e.target; if(!b||!b.classList.contains("opt"))return;
+    var i=+b.getAttribute("data-i"), j=+b.getAttribute("data-j"), st=gmcState[i], it=GMC[i];
+    if(st.done)return;
+    var ok=j===it.a; if(!st.answered){st.answered=true;st.firstRight=ok;}
+    var fb=document.getElementById("gfb"+i);
+    if(ok){st.done=true;b.classList.add("sel-right");document.getElementById("g"+i).className="box q right";fb.className="fb good";fb.innerHTML="✅ "+pick(PRAISE)+' <span class="explain">'+it.e+'</span>';}
+    else{b.classList.add("sel-wrong");document.getElementById("g"+i).className="box q wrong";fb.className="fb bad";fb.textContent="❌ Not quite, Ace. Look closely and try again.";}
+    updateScore();
+  });
+}
+
+var GFIX=[
+ {bad:"last summer me and dad drove to the observatory",
+  ok:["Last summer, Dad and I drove to the observatory.","Last summer Dad and I drove to the observatory."],
+  hint:"Capitalize Last and Dad (used as a name). Take Dad away: \"me drove\" sounds wrong, so use Dad and I, with yourself last. A comma after Last summer is a good idea. End with a period."},
+ {bad:"the star is running out of it's fuel its becoming a red giant",
+  ok:["The star is running out of its fuel. It's becoming a red giant.","The star is running out of its fuel; it's becoming a red giant.","The star is running out of its fuel, and it's becoming a red giant."],
+  hint:"Capitalize The. The fuel belongs to the star, so use its (no apostrophe). The second part means it is becoming, so use it's. This is a run-on: split it after fuel (or use a semicolon, or , and). End with a period."},
+ {bad:"i learned one surprising fact the sun is a star",
+  ok:["I learned one surprising fact: the Sun is a star.","I learned one surprising fact: the sun is a star."],
+  hint:"Capitalize I. Put a colon after fact to introduce the surprising reveal. Capitalize Sun as the name of our star. End with a period."},
+ {bad:"far from the city lights the milky way looked like spilled sugar across the sky",
+  ok:["Far from the city lights, the Milky Way looked like spilled sugar across the sky.","Far from the city lights the Milky Way looked like spilled sugar across the sky."],
+  hint:"Capitalize Far and Milky Way (the name of our galaxy). Put a comma after the introductory phrase (after lights). End with a period."}
+];
+
+var gfixState=GFIX.map(function(){return{tries:0,correct:false,firstRight:false};});
+function norm(s){return s.replace(/[\u2018\u2019\u02BC]/g,"'").replace(/[\u201C\u201D]/g,'"').replace(/\s+/g," ").trim();}
+function checkFixAnswer(i,val){var v=norm(val);return GFIX[i].ok.some(function(a){return norm(a)===v;});}
+function buildGFix(){
+  var box=document.getElementById("gfix");
+  GFIX.forEach(function(it,i){
+    var d=document.createElement("div"); d.className="box q"; d.id="f"+i;
+    d.innerHTML='<div><strong>'+(i+1)+'.</strong> Fix: <span class="bad-sent">'+it.bad+'</span></div>'+
+     '<input class="fix" type="text" id="fi'+i+'" autocomplete="off" spellcheck="false" aria-label="Corrected sentence '+(i+1)+'">'+
+     '<div class="btnrow"><button type="button" class="go" data-act="check" data-i="'+i+'">Check</button><button type="button" class="hint" data-act="hint" data-i="'+i+'">Hint 💡</button><button type="button" class="grey" data-act="show" data-i="'+i+'" style="display:none">Show answer</button></div>'+
+     '<div class="fb" id="ffb'+i+'"></div>';
+    box.appendChild(d);
+  });
+  box.addEventListener("click",function(e){
+    var b=e.target; if(b.tagName!=="BUTTON")return;
+    var i=+b.getAttribute("data-i"), act=b.getAttribute("data-act"), fb=document.getElementById("ffb"+i);
+    if(act==="hint"){fb.className="fb";fb.style.color="#5d4037";fb.textContent="💡 "+GFIX[i].hint;return;}
+    fb.style.color="";
+    if(act==="show"){fb.className="fb";fb.innerHTML='Answer: <em>'+GFIX[i].ok[0]+'</em>'+(GFIX[i].ok.length>1?' (other correct versions are accepted too)':'');return;}
+    fixCheck(i);
+  });
+  box.addEventListener("keydown",function(e){if(e.key==="Enter"&&e.target.classList.contains("fix"))fixCheck(+e.target.id.slice(2));});
+}
+function fixCheck(i){
+  var val=document.getElementById("fi"+i).value, fb=document.getElementById("ffb"+i), st=gfixState[i];
+  fb.style.color="";
+  if(!val.trim()){fb.className="fb bad";fb.textContent="Type the corrected sentence first, Ace!";return;}
+  st.tries++;
+  if(checkFixAnswer(i,val)){ if(st.tries===1)st.firstRight=true; st.correct=true; document.getElementById("f"+i).className="box q right"; fb.className="fb good"; fb.textContent="✅ "+pick(PRAISE); }
+  else { st.correct=false; document.getElementById("f"+i).className="box q wrong"; fb.className="fb bad"; fb.textContent="❌ Not quite. Check every capital letter, apostrophe, comma, and spelling. Try again!"; if(st.tries>=2)document.querySelector('#f'+i+' [data-act=show]').style.display="inline-block"; }
+  updateScore();
+}
+
+function updateScore(){
+  var g=0; gmcState.forEach(function(s){if(s.firstRight)g++;});
+  var f=0; gfixState.forEach(function(s){if(s.correct)f++;});
+  var total=LABEL_ITEMS.length+GMC.length+GFIX.length, got=labelScore+g+f;
+  document.getElementById("scoreText").textContent="Score: "+got+" / "+total+"  (labels "+(labelChecked?labelScore:"-")+"/"+LABEL_ITEMS.length+" · grammar A "+g+"/"+GMC.length+" · grammar B "+f+"/"+GFIX.length+")";
+}
+
+var W5=["who","place","facts","senses","feel","closing"];
+function w5Save(){try{localStorage.setItem(KEY+"-5w",JSON.stringify(W5.map(function(k){return document.getElementById("w5"+k).value;})));}catch(e){}}
+function w5Restore(){try{var d=JSON.parse(localStorage.getItem(KEY+"-5w")||"null");if(d)d.forEach(function(x,i){document.getElementById("w5"+W5[i]).value=x;});}catch(e){}}
+function w5Summary(){return W5.map(function(k){return k.charAt(0).toUpperCase()+k.slice(1)+": "+document.getElementById("w5"+k).value;}).join("\n");}
+function addTemplate(){
+  var t=document.getElementById("essay");
+  var tpl="Title: ...\n\nHOOK (drop the reader into one moment):\n\nOBSERVATION (what I saw, heard, felt, smelled):\n\nSCIENCE CONNECTION (a fact that changed how I saw it):\n\nREFLECTION (I keep wondering… / At first I thought…, but now I realize…):\n\nBIGGER INSIGHT (what this teaches me about life):\n\nFULL-CIRCLE ENDING (back to the moment, with new eyes):\n\nNOTE TO DAD (what was hardest to put into words):\n\nwritten by "+NAME;
+  if(t.value.trim()&&!confirm("Add the reflective essay layout below what you've already written?"))return;
+  t.value=(t.value.trim()?t.value.replace(/\s+$/,"")+"\n\n":"")+tpl; updateCount(); t.focus();
+}
+var KEY="ace-writing-2026-11-15";
+function countWords(t){var m=t.trim().match(/[A-Za-zÀ-ÿ0-9]+(?:['’\-][A-Za-zÀ-ÿ0-9]+)*/g);return m?m.length:0;}
+function countSentences(t){var m=t.match(/[^.!?]*[A-Za-z0-9][^.!?]*[.!?]+/g);return m?m.length:0;}
+function currentPrompt(){var r=document.querySelector('input[name=prompt]:checked');return r?r.value:"";}
+function updateCount(){
+  var t=document.getElementById("essay").value, w=countWords(t), s=countSentences(t);
+  document.getElementById("wc").textContent=w+(w===1?" word":" words");
+  document.getElementById("sc").textContent=s+(s===1?" sentence":" sentences");
+  var bar=document.getElementById("meterBar"); bar.style.width=Math.min(100,w/350*100)+"%";
+  var msg=document.getElementById("wcMsg");
+  if(w<220){bar.style.background="#ffb300";msg.className="fb";msg.textContent=w===0?"Aim for 220 to 350 words.":"Keep going, Ace! "+(220-w)+" more words to reach the goal.";}
+  else if(w<=350){bar.style.background="#43a047";msg.className="fb good";msg.textContent="🎯 You're in the target zone! Nice work, Ace!";}
+  else{bar.style.background="#1e88e5";msg.className="fb";msg.textContent="Wow, that's a lot of writing! Good reflective writers are clear and focused. Could any sentences be cut?";}
+  try{localStorage.setItem(KEY,JSON.stringify({text:t,prompt:currentPrompt(),checks:checkStates()}));}catch(e){document.getElementById("saveNote").textContent="(This browser can't auto-save here, so use the Download button before closing!)";}
+}
+function checkStates(){return Array.prototype.map.call(document.querySelectorAll("#checklist input"),function(c){return c.checked;});}
+function checklistText(){
+  return Array.prototype.map.call(document.querySelectorAll("#checklist label"),function(l){return (l.querySelector("input").checked?"[x] ":"[ ] ")+l.textContent.trim();}).join("\n");
+}
+function buildReport(){
+  var t=document.getElementById("essay").value;
+  return "Writing Week 49: "+NAME+"\nDate: "+new Date().toLocaleString("en-CA")+"\nPrompt: "+currentPrompt()+
+    "\nWords: "+countWords(t)+"   Sentences: "+countSentences(t)+"\nPlanning notes:\n"+w5Summary()+
+    "\n\n----- "+NAME+"'s writing -----\n\n"+t+"\n\n----- Self-check -----\n"+checklistText()+
+    "\n\n----- Parent feedback -----\n\n\n";
+}
+function download(){
+  var t=document.getElementById("essay").value;
+  if(!t.trim()){document.getElementById("doneMsg").className="fb bad";document.getElementById("doneMsg").textContent="Write something first, Ace!";return;}
+  var blob=new Blob([buildReport().replace(/\n/g,"\r\n")],{type:"text/plain;charset=utf-8"});
+  var a=document.createElement("a"); a.href=URL.createObjectURL(blob); a.download=NAME+"-writing-2026-11-15"+".txt";
+  document.body.appendChild(a); a.click();
+  setTimeout(function(){URL.revokeObjectURL(a.href);a.remove();},1000);
+  var dm=document.getElementById("doneMsg"); dm.className="fb good"; dm.textContent="📄 Saved! Look in your Downloads folder and show Dad. Great job finishing, Ace!";
+}
+function esc(s){return s.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");}
+function printIt(){
+  var t=document.getElementById("essay").value;
+  if(!t.trim()){document.getElementById("doneMsg").className="fb bad";document.getElementById("doneMsg").textContent="Write something first, Ace!";return;}
+  document.getElementById("printArea").innerHTML="<h1>Writing Week 49: "+NAME+"</h1><div class='meta'>"+esc(new Date().toLocaleString("en-CA"))+"<br><strong>Prompt:</strong> "+esc(currentPrompt())+"<br>Words: "+countWords(t)+" · Sentences: "+countSentences(t)+"</div><div class='text'>"+esc(t)+"</div><div class='lines'><strong>Self-check:</strong><br>"+esc(checklistText()).replace(/\n/g,"<br>")+"</div><div class='lines'><strong>Parent feedback:</strong><br><br><br><br></div>";
+  window.print();
+}
+function restore(){
+  try{var d=JSON.parse(localStorage.getItem(KEY)||"null"); if(!d)return;
+    document.getElementById("essay").value=d.text||"";
+    Array.prototype.forEach.call(document.querySelectorAll("input[name=prompt]"),function(r){r.checked=(r.value===d.prompt);});
+    if(!document.querySelector("input[name=prompt]:checked"))document.querySelector("input[name=prompt]").checked=true;
+    var cs=document.querySelectorAll("#checklist input"); (d.checks||[]).forEach(function(v,i){if(cs[i])cs[i].checked=v;});
+  }catch(e){}
+}
+buildLabels(); buildGMC(); buildGFix(); restore(); w5Restore(); updateCount(); updateScore();
+W5.forEach(function(k){document.getElementById("w5"+k).addEventListener("input",w5Save);});
+document.getElementById("templateBtn").addEventListener("click",addTemplate);
+document.getElementById("checkLabels").addEventListener("click",checkLabels);
+document.getElementById("essay").addEventListener("input",updateCount);
+document.getElementById("checklist").addEventListener("change",function(){updateCount(); if(checkStates().every(Boolean)){var dm=document.getElementById("doneMsg");dm.className="fb good";dm.textContent="✅ All boxes checked! Now download or print it for Dad. Awesome work, Ace!";}});
+document.getElementById("prompts").addEventListener("change",updateCount);
+document.getElementById("downloadBtn").addEventListener("click",download);
+document.getElementById("printBtn").addEventListener("click",printIt);
+document.getElementById("clearBtn").addEventListener("click",function(){ if(confirm("Erase your writing and start over?")){document.getElementById("essay").value="";Array.prototype.forEach.call(document.querySelectorAll("#checklist input"),function(c){c.checked=false;});document.getElementById("doneMsg").textContent="";updateCount();} });
+</script>
+<script src="../../assets/autosave.js"></script>
+</body>
+</html>

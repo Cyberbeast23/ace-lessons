@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Math (Nov. 15): Star Stories: Astronomer's Math Lab</title>
+<style>
+  body{font-family:"Segoe UI",Verdana,Arial,sans-serif;font-size:20px;line-height:1.6;margin:0;background:#f5f0eb;color:#2c2416}
+  .wrap{max-width:880px;margin:0 auto;padding:20px 18px 80px}
+  a.home{font-size:.9em;color:#bf360c}
+  h1{color:#e65100;font-size:2em;margin:10px 0}
+  h2{color:#ef6c00;margin-top:36px;border-bottom:3px solid #ffcc80;padding-bottom:4px}
+  .box{background:#fff;border-radius:16px;padding:18px 22px;margin:16px 0;box-shadow:0 3px 10px rgba(0,0,0,.07)}
+  .example{border-left:8px solid #ef6c00}
+  .example h3{margin:0 0 6px;color:#e65100}
+  .step{margin:4px 0 4px 10px}
+  code,.mono{font-family:Consolas,"Courier New",monospace;background:#fff3e0;padding:1px 6px;border-radius:5px}
+  .q{border-left:8px solid #90a4ae}
+  .q.right{border-left-color:#43a047;background:#f1f8e9}
+  .q.wrong{border-left-color:#e53935;background:#fff5f5}
+  .qnum{font-weight:bold;color:#e65100}
+  .row{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:10px}
+  input[type=text]{font-size:1.05em;padding:8px 12px;border:2px solid #ffcc80;border-radius:10px;width:190px}
+  input[type=text]:focus{outline:none;border-color:#ef6c00;box-shadow:0 0 0 3px #ffe0b2}
+  button{font-size:.95em;padding:8px 16px;border:none;border-radius:10px;cursor:pointer;font-weight:bold}
+  .check{background:#ef6c00;color:#fff} .check:hover{background:#e65100}
+  .hint{background:#ffe082;color:#5d4037} .hint:hover{background:#ffd54f}
+  .sol{background:#ce93d8;color:#311b92}
+  .unit{color:#546e7a}
+  .fb{margin-top:8px;font-weight:bold;min-height:1em}
+  .fb.good{color:#2e7d32} .fb.bad{color:#c62828}
+  .hints{margin-top:8px;color:#e65100;background:#fff3e0;border-radius:10px;padding:0 12px}
+  .hints p{margin:6px 0;padding:6px 0}
+  .solution{margin-top:8px;background:#f3e5f5;border-radius:10px;padding:8px 12px;display:none}
+  #scoreBox{position:sticky;bottom:0;background:#e65100;color:#fff;border-radius:16px 16px 0 0;padding:12px 20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-top:30px}
+  #scoreBox button{background:#ffca28;color:#3e2723}
+  #final{display:none;font-size:1.15em;text-align:center;border:4px solid #43a047}
+  .tipbox{background:#fff8e1;border-left:8px solid #ffb300}
+</style>
+</head>
+<body>
+<div class="wrap">
+<a class="home" href="../../index.html">&larr; Back to all lessons</a>
+<h1>🌟 Math Week 49: Star Stories: Astronomer's Math Lab</h1>
+<p>Ace, every star you see at night is a gigantic ball of glowing gas, and many of them are bigger and brighter than our Sun. Stars are so far away that astronomers measure their distances in <strong>light-years</strong>: the distance light travels in one year, about 9.5 trillion kilometres! Light is the fastest thing in the universe, racing along at about <strong>300 000 km every second</strong>. Today you are an astronomer at an observatory. You'll use <strong>time = distance ÷ speed, powers of ten, integer differences, multi-step percents, scale factors, how volume and area grow when you scale something up, the mean and the median, a two-step equation, the area of a circle, probability, and a multi-step "time machine" problem</strong>.</p>
+
+<h2>Part 1: Learn the Moves</h2>
+
+<div class="box tipbox">
+  <strong>The 4-Step Problem Solver (your astronomer's checklist):</strong>
+  <ol>
+    <li><strong>Read</strong>: What is the question actually asking? Underline the numbers and units (mm, cm, m, km, m², km/s, °C, s, years, light-years, %).</li>
+    <li><strong>Plan</strong>: Do the units match? Change metres to centimetres or hours to minutes <em>before</em> you answer.</li>
+    <li><strong>Solve</strong>: Do one step at a time and write each step down.</li>
+    <li><strong>Check</strong>: Is my answer reasonable? Light from the Moon reaches us in about a second, not in a week!</li>
+  </ol>
+</div>
+
+
+
+
+<div class="box example">
+  <h3>Worked Example 1: Time = distance ÷ speed</h3>
+  <p class="step">If you know how far and how fast, divide to find <strong>how long</strong>. Light travels about <strong>300 000 km/s</strong>.</p>
+  <p class="step">Light crossing 900 000 km takes 900 000 ÷ 300 000 = <strong>3 seconds</strong>. Tip: cross off the same number of zeros first: 9 000 ÷ 3 000 = 9 ÷ 3.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 2: Powers of ten and "scientific notation"</h3>
+  <p class="step">Astronomers write giant numbers as <strong>a number × a power of ten</strong>. 10<sup>12</sup> is a 1 with 12 zeros (one <strong>trillion</strong>).</p>
+  <p class="step">One light-year ≈ <strong>9.5 × 10<sup>12</sup> km</strong> = 9.5 trillion km. So 2 light-years ≈ 2 × 9.5 = <strong>19 trillion km</strong>. Multiply the front numbers and keep the power of ten!</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 3: Difference between a positive and a negative</h3>
+  <p class="step">Difference = higher − lower. From −100 °C up to 400 °C: 400 − (−100) = 400 + 100 = <strong>500 degrees</strong>. Subtracting a negative means adding.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 4: The "leftover" percent</h3>
+  <p class="step">If 60% of a bag is red and 30% is blue, the rest is 100 − 60 − 30 = <strong>10%</strong>. 10% of 500 g = 0.10 × 500 = <strong>50 g</strong>.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 5: Scaling up (length, area, volume)</h3>
+  <p class="step">If you make a ball <strong>2 times</strong> wider, its <strong>area</strong> (like a mirror or a shadow) grows <strong>2 × 2 = 4 times</strong>, and its <strong>volume</strong> grows <strong>2 × 2 × 2 = 8 times</strong>.</p>
+  <p class="step">Rule: scale factor <strong>k</strong> → area × k², volume × k³. A ball 3 times wider holds 3³ = <strong>27 times</strong> as much!</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 6: Mean vs. median</h3>
+  <p class="step"><strong>Mean</strong> = total ÷ how many. <strong>Median</strong> = the middle value after you put the numbers in order. With an <em>even</em> count, the median is the mean of the <strong>two</strong> middle numbers.</p>
+  <p class="step">2, 9, 4, 7 → order: 2, 4, 7, 9. Mean = 22 ÷ 4 = 5.5. Median = (4 + 7) ÷ 2 = <strong>5.5</strong>.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 7: Two-step equation</h3>
+  <p class="step">Solve 12w + 30 = 90. Undo the adding first: 12w = 60. Then undo the multiplying: w = 60 ÷ 12 = <strong>5</strong>. Check: 12 × 5 + 30 = 90 ✔</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 8: Area of a circle</h3>
+  <p class="step"><strong>A = π × r × r</strong> (use π ≈ 3.14; r = half the diameter). A mirror 2 m across: r = 1 m, A = 3.14 × 1 × 1 = <strong>3.14 m²</strong>.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 9: Probability</h3>
+  <p class="step"><strong>Probability = favourable outcomes ÷ total outcomes</strong>, in lowest terms. 6 blue stars out of 24 → 6/24 = <strong>1/4</strong>. "Not blue" = 18/24 = <strong>3/4</strong>.</p>
+</div>
+<h2>Part 2: The Challenge (15 problems)</h2>
+<p>Type your answer and press <strong>Check</strong> (or Enter). Negative numbers like <span class="mono">-35</span>, fractions like <span class="mono">3/4</span>, mixed numbers like <span class="mono">1 3/4</span>, or decimals like <span class="mono">1.75</span> are fine. Don't type the units, $ signs, or % signs, and you may use spaces or commas in big numbers (1 000 000). Stuck? Press <strong>Hint</strong>. After 2 tries, you can see a full solution.</p>
+
+<div id="questions"></div>
+<div class="box" id="final"></div>
+<div id="scoreBox">
+  <span id="scoreText">Score: 0 / 15 correct</span>
+  <button id="finishBtn" type="button">I'm done! Show my final score</button>
+</div>
+</div>
+
+<script>
+var NAME = "Ace";
+var TABLE = '<table style="border-collapse:collapse;margin:10px 0;font-size:.95em;background:#fff"><caption style="font-weight:bold;text-align:left;padding-bottom:4px">Distance from Earth to some bright stars (light-years, rounded)</caption><tr><th style="border:1px solid #bdbdbd;padding:4px 10px;background:#eceff1">Star</th><th style="border:1px solid #bdbdbd;padding:4px 10px;background:#eceff1">Distance (light-years)</th></tr><tr><td style="border:1px solid #bdbdbd;padding:4px 10px">Proxima Centauri</td><td style="border:1px solid #bdbdbd;padding:4px 10px;font-family:monospace">4</td></tr><tr><td style="border:1px solid #bdbdbd;padding:4px 10px">Sirius</td><td style="border:1px solid #bdbdbd;padding:4px 10px;font-family:monospace">9</td></tr><tr><td style="border:1px solid #bdbdbd;padding:4px 10px">Procyon</td><td style="border:1px solid #bdbdbd;padding:4px 10px;font-family:monospace">11</td></tr><tr><td style="border:1px solid #bdbdbd;padding:4px 10px">Altair</td><td style="border:1px solid #bdbdbd;padding:4px 10px;font-family:monospace">17</td></tr><tr><td style="border:1px solid #bdbdbd;padding:4px 10px">Vega</td><td style="border:1px solid #bdbdbd;padding:4px 10px;font-family:monospace">25</td></tr><tr><td style="border:1px solid #bdbdbd;padding:4px 10px">Pollux</td><td style="border:1px solid #bdbdbd;padding:4px 10px;font-family:monospace">34</td></tr><tr><td style="border:1px solid #bdbdbd;padding:4px 10px">Arcturus</td><td style="border:1px solid #bdbdbd;padding:4px 10px;font-family:monospace">37</td></tr><tr><td style="border:1px solid #bdbdbd;padding:4px 10px">Capella</td><td style="border:1px solid #bdbdbd;padding:4px 10px;font-family:monospace">43</td></tr></table>';
+var QUESTIONS = [
+ {t:"The Sun is about <strong>150 000 000 km</strong> from Earth. Light travels about <strong>300 000 km every second</strong>. How many <strong>seconds</strong> does sunlight take to reach Earth?", a:"500", u:"seconds",
+  h:["Time = distance ÷ speed = 150 000 000 ÷ 300 000.","Cross off five zeros from each number: 1 500 ÷ 3."],
+  s:"150 000 000 ÷ 300 000 = 1 500 ÷ 3 = 500 seconds, or 8 minutes 20 seconds. The sunlight on your face right now left the Sun over 8 minutes ago!"},
+ {t:"The Moon is about <strong>384 000 km</strong> away. How many <strong>seconds</strong> does moonlight (really, sunlight bouncing off the Moon) take to reach Earth? Use 300 000 km/s and give a decimal answer.", a:"1.28", u:"seconds",
+  h:["Time = 384 000 ÷ 300 000.","Cross off three zeros: 384 ÷ 300. That is a little more than 1."],
+  s:"384 000 ÷ 300 000 = 384 ÷ 300 = 1.28 seconds. When astronauts on the Moon talked to Earth, their radio messages took about 1.28 s each way."},
+ {t:"The closest star to the Sun, <strong>Proxima Centauri</strong>, is about <strong>4 light-years</strong> away. One light-year is about <strong>9.5 × 10<sup>12</sup> km</strong> (9.5 trillion km). About how many <strong>trillion kilometres</strong> away is Proxima Centauri?", a:"38", u:"trillion km",
+  h:["Multiply the front numbers: 4 × 9.5. Keep the \"trillion\".","4 × 9 = 36 and 4 × 0.5 = 2."],
+  s:"4 × 9.5 = 38, so about 38 × 10¹² km = 38 trillion km (38 000 000 000 000 km). Even the nearest star is unbelievably far away!"},
+ {t:"The surface of the Sun is about <strong>5 500 °C</strong>. Deep space, far from any star, is about <strong>−270 °C</strong>. What is the <strong>difference</strong> between these two temperatures?", a:"5770", u:"°C",
+  h:["Difference = higher − lower = 5 500 − (−270).","Subtracting a negative is the same as adding."],
+  s:"5 500 − (−270) = 5 500 + 270 = 5 770 degrees."},
+ {t:"By mass, the Sun is about <strong>73% hydrogen</strong> and <strong>25% helium</strong>; everything else (oxygen, carbon, iron…) makes up the rest. In a <strong>2 400 kg</strong> sample of Sun-like gas, how many kilograms would be elements <strong>other than</strong> hydrogen and helium?", a:"48", u:"kg",
+  h:["First find the leftover percent: 100 − 73 − 25.","2% of 2 400 = 0.02 × 2 400."],
+  s:"100 − 73 − 25 = 2%. 0.02 × 2 400 = 48 kg. Those \"other\" elements are tiny in a star but they make up most of planets, and of you!"},
+ {t:"The Sun's diameter is about <strong>109 times</strong> Earth's diameter. In a class model, Earth is a bead <strong>2 cm</strong> across. How many <strong>centimetres</strong> across should the model Sun be?", a:"218", u:"cm",
+  h:["The scale factor is 109.","109 × 2."],
+  s:"109 × 2 = 218 cm, more than 2 metres across: bigger than a door! And the 2 cm Earth would have to sit about 235 m away."},
+ {t:"When a Sun-like star gets old, it swells into a <strong>red giant</strong>. Suppose its radius becomes <strong>10 times</strong> bigger. By how many times does its <strong>volume</strong> grow?", a:"1000", u:"times",
+  h:["Volume grows by the scale factor cubed (k³).","10 × 10 × 10."],
+  s:"10³ = 10 × 10 × 10 = 1 000 times the volume. Real red giants can grow 100 times wider than the Sun, which means 1 000 000 times the volume!"},
+ {t:"A <strong>neutron star</strong> is the crushed core left after a giant star explodes. It is so dense that just <strong>1 mL</strong> of it has a mass of about <strong>4 × 10<sup>8</sup> tonnes</strong>. What would a <strong>5 mL teaspoon</strong> of neutron star have a mass of, in <strong>tonnes</strong>? Type the whole number.", a:"2000000000", u:"tonnes",
+  h:["5 × 4 × 10⁸ = 20 × 10⁸.","20 × 10⁸ = 2 × 10⁹, a 2 followed by nine zeros."],
+  s:"5 × 4 × 10⁸ = 20 × 10⁸ = 2 × 10⁹ = 2 000 000 000 tonnes (two billion tonnes) in one teaspoon, heavier than every person on Earth put together!"},
+ {t:TABLE+"Look at the table. What is the <strong>mean</strong> distance of these 8 stars, in light-years?", a:"22.5", u:"light-years",
+  h:["Add all 8 distances.","The total is 180. Now divide by 8."],
+  s:"4 + 9 + 11 + 17 + 25 + 34 + 37 + 43 = 180. 180 ÷ 8 = 22.5 light-years."},
+ {t:"Using the same table, what is the <strong>median</strong> distance, in light-years?", a:"21", u:"light-years",
+  h:["The table is already in order from nearest to farthest. With 8 values, there are two middle numbers (the 4th and 5th).","The 4th and 5th values are 17 and 25. Find the number halfway between them."],
+  s:"In order: 4, 9, 11, <strong>17, 25</strong>, 34, 37, 43. Median = (17 + 25) ÷ 2 = 21 light-years. The mean (22.5) is a bit higher because faraway Capella pulls it up."},
+ {t:"Ace wants a beginner telescope that costs <strong>$240</strong>. He already has <strong>$45</strong> and saves <strong>$15</strong> each week. Solve <strong>15w + 45 = 240</strong> to find how many weeks (w) he must save.", a:"13", u:"weeks",
+  h:["Undo the adding first: 15w = 240 − 45.","15w = 195. Divide by 15."],
+  s:"15w = 195 → w = 195 ÷ 15 = 13 weeks. Check: 15 × 13 + 45 = 195 + 45 = 240 ✔"},
+ {t:"The giant Gemini North telescope in Hawaii (Canada is one of its partners!) has a main mirror about <strong>8 m</strong> across. Using <strong>π ≈ 3.14</strong>, what is the area of the mirror's face in <strong>m²</strong>?", a:"50.24", u:"m²",
+  h:["Radius = half of 8 m = 4 m.","A = 3.14 × 4 × 4."],
+  s:"r = 4 m. A = 3.14 × 16 = 50.24 m², about the floor area of a big classroom, all polished mirror!"},
+ {t:"A telescope collects light the way a bucket collects rain: the bigger the opening, the more it catches. The pupil of your eye in the dark is about <strong>7 mm</strong> across. A small telescope's lens is <strong>70 mm</strong> across. How many times <strong>more light</strong> does the telescope collect than your eye? (Hint: light collected depends on the <em>area</em>.)", a:"100", u:"times",
+  h:["The telescope is 70 ÷ 7 = 10 times wider.","Area grows by the scale factor squared (k²)."],
+  s:"Scale factor = 70 ÷ 7 = 10. Area grows by 10² = 100. So the telescope gathers 100 times more light, which is why you can see faint stars through it that are invisible to your eyes."},
+ {t:"Of the 100 stars nearest to the Sun, about <strong>75</strong> are small, cool <strong>red dwarfs</strong>. If you pick one of these 100 stars at random, what is the probability that it is <strong>not</strong> a red dwarf? Give a fraction in lowest terms.", a:"1/4", u:"",
+  h:["Not red dwarfs = 100 − 75.","25/100. Simplify."],
+  s:"100 − 75 = 25 stars, so 25/100 = 1/4. Red dwarfs are the most common stars in our galaxy, yet not one is bright enough to see without a telescope!"},
+ {t:"In the year <strong>1054</strong>, astronomers in China recorded a \"guest star\" so bright it could be seen in daytime. It was a <strong>supernova</strong>, and today we see its leftover cloud, the Crab Nebula. The Crab is about <strong>6 500 light-years</strong> away, so its light took 6 500 years to reach Earth. Counting back from the year <strong>2026</strong>, about how many <strong>years ago</strong> did the star actually explode?", a:"7472", u:"years ago",
+  h:["The light arrived in 1054. How many years ago was 1054? (2026 − 1054)","The explosion happened 6 500 years before the light arrived. Add the two amounts."],
+  s:"2026 − 1054 = 972 years since the light arrived. The star exploded 6 500 years before that: 972 + 6 500 = 7 472 years ago. Looking at the sky is like looking back in time!"}
+];
+
+var PRAISE = ["Nice work, Ace!","Correct! Astronomer level! 🔭","Yes! That answer shines like a supernova! 💥","Excellent, Ace. That was a tough one!","Right on target! 🎯","Brilliant thinking, Ace!","Stellar thinking, Ace! 🌟"];
+var ENCOURAGE = ["Not quite. Check your steps and try again!","Close call. Try again, Ace! Maybe use a hint?","Hmm, not yet. Re-read the question carefully.","Keep going, Ace. Mistakes help your brain grow!"];
+
+function parseAnswer(str){
+  if(str===undefined||str===null) return NaN;
+  var s=String(str).trim().toLowerCase();
+  s=s.replace(/[\u2212\u2013]/g,"-");
+  s=s.replace(/(\d),(?=\d{3}(\D|$))/g,"$1");
+  s=s.replace(/[^0-9.\/\- ]/g," ").replace(/\s+/g," ").trim();
+  s=s.replace(/\s*\/\s*/g,"/");
+  var m;
+  if((m=s.match(/^(-?\d+) (\d+)\/(\d+)$/))){ var w=parseFloat(m[1]),n=parseFloat(m[2]),d=parseFloat(m[3]); if(d===0)return NaN; return w<0? w-n/d : w+n/d; }
+  if((m=s.match(/^(-?\d+(?:\.\d+)?)\/(\d+(?:\.\d+)?)$/))){ var d2=parseFloat(m[2]); if(d2===0)return NaN; return parseFloat(m[1])/d2; }
+  s=s.replace(/ /g,"");
+  if(/^-?(\d+\.?\d*|\.\d+)$/.test(s)) return parseFloat(s);
+  return NaN;
+}
+function isCorrect(input,key){
+  var a=parseAnswer(input), k=parseAnswer(key);
+  if(isNaN(a)) return false;
+  var isInt=Math.abs(k-Math.round(k))<1e-12;
+  var tol=isInt?1e-9:0.005;
+  return Math.abs(a-k)<=tol;
+}
+
+function isRomanCorrect(input,key){ return String(input).replace(/\s+/g,"").toUpperCase()===key; }
+var state=[];
+function render(){
+  var box=document.getElementById("questions");
+  QUESTIONS.forEach(function(q,i){
+    state.push({correct:false,tries:0,hints:0});
+    var d=document.createElement("div");
+    d.className="box q"; d.id="q"+i;
+    d.innerHTML='<div><span class="qnum">'+(i+1)+'.</span> '+q.t+'</div>'+
+      '<div class="row"><input type="text"'+(q.r?' placeholder="e.g. MMXXVI"':'')+' id="in'+i+'" aria-label="Answer to question '+(i+1)+'" autocomplete="off"> <span class="unit">'+q.u+'</span>'+
+      '<button type="button" class="check" data-i="'+i+'">Check</button>'+
+      '<button type="button" class="hint" data-i="'+i+'">Hint 💡</button>'+
+      '<button type="button" class="sol" data-i="'+i+'" style="display:none">Show solution</button></div>'+
+      '<div class="fb" id="fb'+i+'"></div><div class="hints" id="hints'+i+'"></div>'+
+      '<div class="solution" id="sol'+i+'"><strong>Solution:</strong> '+q.s+'</div>';
+    box.appendChild(d);
+  });
+  box.addEventListener("click",function(e){
+    var b=e.target; if(b.tagName!=="BUTTON")return;
+    var i=+b.getAttribute("data-i");
+    if(b.className==="check") check(i);
+    else if(b.className==="hint") hint(i);
+    else if(b.className==="sol") document.getElementById("sol"+i).style.display="block";
+  });
+  box.addEventListener("keydown",function(e){
+    if(e.key==="Enter"&&e.target.tagName==="INPUT"){ check(+e.target.id.slice(2)); }
+  });
+}
+function pick(arr){return arr[Math.floor(Math.random()*arr.length)];}
+function check(i){
+  var val=document.getElementById("in"+i).value;
+  var fb=document.getElementById("fb"+i), card=document.getElementById("q"+i);
+  if(val.trim()===""){fb.className="fb bad";fb.textContent="Type an answer first, Ace!";return;}
+  var isR=!!QUESTIONS[i].r;
+  if(isR&&!/^[ivxlcdm\s]+$/i.test(val)){fb.className="fb bad";fb.textContent="Use only Roman numeral letters: I, V, X, L, C, D, M.";return;}
+  if(!isR&&isNaN(parseAnswer(val))){fb.className="fb bad";fb.textContent="I can't read that as a number. Try something like 42, 3.5, 3/4 or 1 3/4.";return;}
+  state[i].tries++;
+  if(isR?isRomanCorrect(val,QUESTIONS[i].a):isCorrect(val,QUESTIONS[i].a)){
+    state[i].correct=true; card.className="box q right"; fb.className="fb good";
+    fb.textContent="✅ "+pick(PRAISE)+(state[i].tries===1?" (first try!)":"");
+  } else {
+    state[i].correct=false; card.className="box q wrong"; fb.className="fb bad";
+    fb.textContent="❌ "+pick(ENCOURAGE);
+    if(state[i].tries>=2) card.querySelector(".sol").style.display="inline-block";
+  }
+  updateScore();
+}
+function hint(i){
+  var q=QUESTIONS[i], s=state[i], hb=document.getElementById("hints"+i);
+  if(s.hints<q.h.length){
+    var p=document.createElement("p"); p.textContent="💡 Hint "+(s.hints+1)+": "+q.h[s.hints]; hb.appendChild(p); s.hints++;
+  }
+  if(s.hints>=q.h.length) document.querySelector("#q"+i+" .hint").disabled=true;
+  updateScore();
+}
+function counts(){
+  var c=0,first=0,h=0;
+  state.forEach(function(s){ if(s.correct){c++; if(s.tries===1)first++;} h+=s.hints; });
+  return {correct:c,first:first,hints:h};
+}
+function updateScore(){
+  var k=counts();
+  document.getElementById("scoreText").textContent="Score: "+k.correct+" / "+QUESTIONS.length+" correct · hints used: "+k.hints;
+}
+function finish(){
+  var k=counts(), n=QUESTIONS.length, pct=Math.round(100*k.correct/n);
+  var msg;
+  if(pct===100) msg="🏆 PERFECT SCORE! Incredible work, Ace. The observatory would make you head astronomer!";
+  else if(pct>=85) msg="🌟 Outstanding, Ace! That's a Grade 6–7 level performance!";
+  else if(pct>=65) msg="💪 Great effort, Ace! Review the ones you missed and try them again.";
+  else if(pct>=40) msg="👍 Good start, Ace! These problems are tough. Use the hints and solutions to learn the tricks, then try again.";
+  else msg="🌱 These are challenge problems, well above grade level. Every great scientist started as a beginner! Go through the worked examples and try again, Ace!";
+  var f=document.getElementById("final");
+  f.style.display="block";
+  f.innerHTML="<h2 style='border:none;margin-top:0'>Final Score: "+k.correct+" / "+n+" ("+pct+"%)</h2>"+
+    "<p>Correct on the first try: "+k.first+" · Hints used: "+k.hints+"</p><p>"+msg+"</p>"+
+    "<p style='font-size:.85em;color:#546e7a'>Finished on "+new Date().toLocaleString("en-CA")+"</p>";
+  f.scrollIntoView({behavior:"smooth"});
+}
+render();
+updateScore();
+document.getElementById("finishBtn").addEventListener("click",finish);
+</script>
+<script src="../../assets/autosave.js"></script>
+</body>
+</html>
