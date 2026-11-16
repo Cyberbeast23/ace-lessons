@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Math (Nov. 16): From Fins to Feet: Fossil Timekeeper's Math Lab</title>
+<style>
+  body{font-family:"Segoe UI",Verdana,Arial,sans-serif;font-size:20px;line-height:1.6;margin:0;background:#f5f0eb;color:#2c2416}
+  .wrap{max-width:880px;margin:0 auto;padding:20px 18px 80px}
+  a.home{font-size:.9em;color:#bf360c}
+  h1{color:#e65100;font-size:2em;margin:10px 0}
+  h2{color:#ef6c00;margin-top:36px;border-bottom:3px solid #ffcc80;padding-bottom:4px}
+  .box{background:#fff;border-radius:16px;padding:18px 22px;margin:16px 0;box-shadow:0 3px 10px rgba(0,0,0,.07)}
+  .example{border-left:8px solid #ef6c00}
+  .example h3{margin:0 0 6px;color:#e65100}
+  .step{margin:4px 0 4px 10px}
+  code,.mono{font-family:Consolas,"Courier New",monospace;background:#fff3e0;padding:1px 6px;border-radius:5px}
+  .q{border-left:8px solid #90a4ae}
+  .q.right{border-left-color:#43a047;background:#f1f8e9}
+  .q.wrong{border-left-color:#e53935;background:#fff5f5}
+  .qnum{font-weight:bold;color:#e65100}
+  .row{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:10px}
+  input[type=text]{font-size:1.05em;padding:8px 12px;border:2px solid #ffcc80;border-radius:10px;width:190px}
+  input[type=text]:focus{outline:none;border-color:#ef6c00;box-shadow:0 0 0 3px #ffe0b2}
+  button{font-size:.95em;padding:8px 16px;border:none;border-radius:10px;cursor:pointer;font-weight:bold}
+  .check{background:#ef6c00;color:#fff} .check:hover{background:#e65100}
+  .hint{background:#ffe082;color:#5d4037} .hint:hover{background:#ffd54f}
+  .sol{background:#ce93d8;color:#311b92}
+  .unit{color:#546e7a}
+  .fb{margin-top:8px;font-weight:bold;min-height:1em}
+  .fb.good{color:#2e7d32} .fb.bad{color:#c62828}
+  .hints{margin-top:8px;color:#e65100;background:#fff3e0;border-radius:10px;padding:0 12px}
+  .hints p{margin:6px 0;padding:6px 0}
+  .solution{margin-top:8px;background:#f3e5f5;border-radius:10px;padding:8px 12px;display:none}
+  #scoreBox{position:sticky;bottom:0;background:#e65100;color:#fff;border-radius:16px 16px 0 0;padding:12px 20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-top:30px}
+  #scoreBox button{background:#ffca28;color:#3e2723}
+  #final{display:none;font-size:1.15em;text-align:center;border:4px solid #43a047}
+  .tipbox{background:#fff8e1;border-left:8px solid #ffb300}
+</style>
+</head>
+<body>
+<div class="wrap">
+<a class="home" href="../../index.html">&larr; Back to all lessons</a>
+<h1>🐟 Math Week 50: From Fins to Feet: Fossil Timekeeper's Math Lab</h1>
+<p>Ace, about <strong>375 million years ago</strong>, a strange fish with a flat head, a neck and sturdy, bony fins was poking around the shallow streams of a warm, swampy land. Today its bones lie in the frozen rocks of <strong>Ellesmere Island, Nunavut</strong>, in Canada's High Arctic. Its name is <strong>Tiktaalik</strong> (tik-TAH-lik), a word suggested by Inuit elders, and it shows how fish slowly evolved into the first four-legged animals. Today you are a fossil timekeeper on the expedition that found it. You'll use <strong>timeline scale models, negative numbers on a timeline, half-lives (repeated halving), rates of rock build-up, Venn diagrams for sorting animals, a fraction of a fraction, scale drawings that shrink and enlarge, surface area of a rectangular prism, coordinates in all four quadrants, order of operations, percents of Earth's history, and counting pairs</strong>.</p>
+
+<h2>Part 1: Learn the Moves</h2>
+
+<div class="box tipbox">
+  <strong>The 4-Step Problem Solver (your fossil timekeeper's checklist):</strong>
+  <ol>
+    <li><strong>Read</strong>: What is the question actually asking? Underline the numbers and units (mm, cm, m, m², cm², kg, mg, years, million years, %).</li>
+    <li><strong>Plan</strong>: Do the units match? Change metres to centimetres or hours to minutes <em>before</em> you answer.</li>
+    <li><strong>Solve</strong>: Do one step at a time and write each step down.</li>
+    <li><strong>Check</strong>: Is my answer reasonable? A fish fossil is about a metre long, not a kilometre!</li>
+  </ol>
+</div>
+
+
+
+
+<div class="box example">
+  <h3>Worked Example 1: A timeline scale model</h3>
+  <p class="step">Earth is about <strong>4.6 billion years</strong> old (4 600 million years). Squeeze that onto a <strong>46 m</strong> rope, and every metre stands for 4 600 ÷ 46 = <strong>100 million years</strong>.</p>
+  <p class="step">Something that happened 250 million years ago sits 250 ÷ 100 = <strong>2.5 m</strong> from the "today" end of the rope.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 2: "Years ago" as negative numbers</h3>
+  <p class="step">On a timeline, today is 0, so 300 million years ago is <strong>−300</strong> (million). The time between −300 and −260 is −260 − (−300) = <strong>40 million years</strong>.</p>
+  <p class="step">What fraction of the way from −300 to −260 is −290? It is 10 of the 40 steps along, so 10/40 = <strong>1/4</strong> of the way.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 3: Half-life (repeated halving)</h3>
+  <p class="step">Some atoms in rocks slowly change into other atoms, like a clock ticking. A <strong>half-life</strong> is the time it takes for <strong>half</strong> of them to change. Scientists use these "rock clocks" to find the age of ancient rocks.</p>
+  <p class="step">Start with 40 mg. After 1 half-life: 20 mg. After 2: 10 mg. After 3: <strong>5 mg</strong>. Each half-life, divide by 2.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 4: Rates (how fast rock layers build up)</h3>
+  <p class="step">If mud piles up <strong>3 cm every 1 000 years</strong>, then a layer 12 cm thick took 12 ÷ 3 = 4 groups of 1 000 years = <strong>4 000 years</strong>. Always make the units match first (change metres to centimetres!).</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 5: Venn diagrams for sorting (classification)</h3>
+  <p class="step">20 animals: 12 can swim, 9 can fly, and 4 can do <strong>both</strong>. If you add 12 + 9, you count the 4 "both" animals twice! So swim <em>or</em> fly = 12 + 9 − 4 = 17, and <strong>neither</strong> = 20 − 17 = <strong>3</strong>.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 6: A fraction of a fraction</h3>
+  <p class="step">"Of" means <strong>multiply</strong>. 2/3 of 3/4 = (2 × 3)/(3 × 4) = 6/12 = <strong>1/2</strong>. Multiply tops, multiply bottoms, then simplify.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 7: Scale drawings (shrink and enlarge)</h3>
+  <p class="step">Scientific illustrators draw at a <strong>scale</strong>. At <strong>1:10</strong>, the drawing is 10 times <em>smaller</em>: a 150 cm skeleton is drawn 150 ÷ 10 = <strong>15 cm</strong> long.</p>
+  <p class="step">At <strong>4:1</strong>, the drawing is 4 times <em>bigger</em>: a tooth drawn 2 cm long is really 2 ÷ 4 = <strong>0.5 cm</strong> (5 mm).</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 8: Surface area of a rectangular prism</h3>
+  <p class="step">A box has <strong>6 faces</strong> in 3 matching pairs. Surface area = 2 × (l × w + l × h + w × h).</p>
+  <p class="step">Box 10 cm × 5 cm × 2 cm: 2 × (50 + 20 + 10) = 2 × 80 = <strong>160 cm²</strong>.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 9: Coordinates in all four quadrants</h3>
+  <p class="step">A point (x, y) goes <strong>x</strong> left or right, then <strong>y</strong> up or down. Negative x = left of the centre, negative y = below it.</p>
+  <p class="step">From (−3, 1) to (4, 1) the y-values match, so the distance is 4 − (−3) = <strong>7 units</strong>.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 10: Order of operations</h3>
+  <p class="step">Brackets first, then × and ÷, then + and −. 100 − (3 × 20 + 15) = 100 − (60 + 15) = 100 − 75 = <strong>25</strong>.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 11: Counting pairs</h3>
+  <p class="step">To compare every animal with every other animal once: each of n animals pairs with (n − 1) others, but that counts every pair twice. Pairs = <strong>n × (n − 1) ÷ 2</strong>. For 4 animals: 4 × 3 ÷ 2 = <strong>6 pairs</strong>.</p>
+</div>
+<h2>Part 2: The Challenge (15 problems)</h2>
+<p>Type your answer and press <strong>Check</strong> (or Enter). Negative numbers like <span class="mono">-35</span>, fractions like <span class="mono">3/4</span>, mixed numbers like <span class="mono">1 3/4</span>, or decimals like <span class="mono">1.75</span> are fine. Don't type the units, $ signs, or % signs, and you may use spaces or commas in big numbers (1 000 000). Stuck? Press <strong>Hint</strong>. After 2 tries, you can see a full solution.</p>
+
+<div id="questions"></div>
+<div class="box" id="final"></div>
+<div id="scoreBox">
+  <span id="scoreText">Score: 0 / 15 correct</span>
+  <button id="finishBtn" type="button">I'm done! Show my final score</button>
+</div>
+</div>
+
+<script>
+var NAME = "Ace";
+var TABLE = '<table style="border-collapse:collapse;margin:10px 0;font-size:.95em;background:#fff"><caption style="font-weight:bold;text-align:left;padding-bottom:4px">From fins to feet: six famous Devonian animals (about how many million years ago they lived)</caption><tr><th style="border:1px solid #bdbdbd;padding:4px 10px;background:#eceff1">Animal</th><th style="border:1px solid #bdbdbd;padding:4px 10px;background:#eceff1">Million years ago</th></tr><tr><td style="border:1px solid #bdbdbd;padding:4px 10px">Eusthenopteron (fish, Quebec)</td><td style="border:1px solid #bdbdbd;padding:4px 10px;font-family:monospace">385</td></tr><tr><td style="border:1px solid #bdbdbd;padding:4px 10px">Panderichthys (fish)</td><td style="border:1px solid #bdbdbd;padding:4px 10px;font-family:monospace">380</td></tr><tr><td style="border:1px solid #bdbdbd;padding:4px 10px">Elpistostege (fish, Quebec)</td><td style="border:1px solid #bdbdbd;padding:4px 10px;font-family:monospace">380</td></tr><tr><td style="border:1px solid #bdbdbd;padding:4px 10px">Tiktaalik (fish with a neck, Nunavut)</td><td style="border:1px solid #bdbdbd;padding:4px 10px;font-family:monospace">375</td></tr><tr><td style="border:1px solid #bdbdbd;padding:4px 10px">Acanthostega (four limbs)</td><td style="border:1px solid #bdbdbd;padding:4px 10px;font-family:monospace">365</td></tr><tr><td style="border:1px solid #bdbdbd;padding:4px 10px">Ichthyostega (four limbs)</td><td style="border:1px solid #bdbdbd;padding:4px 10px;font-family:monospace">365</td></tr></table>';
+var QUESTIONS = [
+ {t:"The expedition team builds a timeline on a <strong>46 m</strong> rope, where the whole rope stands for Earth's <strong>4 600 million years</strong>. How many <strong>metres</strong> from the \"today\" end should they tie the flag for <strong>Tiktaalik</strong>, which lived about <strong>375 million years ago</strong>?", a:"3.75", u:"m",
+  h:["First find what 1 m stands for: 4 600 ÷ 46.","1 m = 100 million years. Now 375 ÷ 100."],
+  s:"4 600 ÷ 46 = 100 million years per metre. 375 ÷ 100 = 3.75 m. Almost the whole 46 m rope is from before Tiktaalik!"},
+ {t:"On the same rope, modern humans appeared about <strong>300 000 years ago</strong>. How many <strong>millimetres</strong> from the \"today\" end is the human flag?", a:"3", u:"mm",
+  h:["1 m = 100 million years = 100 000 000 years. So 300 000 years is 300 000 ÷ 100 000 000 of a metre.","That is 0.003 m. There are 1 000 mm in a metre."],
+  s:"300 000 ÷ 100 000 000 = 0.003 m = 3 mm. All of human history fits in the last 3 mm of a 46 m rope!"},
+ {t:"The <strong>Devonian Period</strong>, the \"Age of Fishes,\" began about <strong>419</strong> million years ago and ended about <strong>359</strong> million years ago. On a timeline, write these as −419 and −359. Tiktaalik lived at about −375. What <strong>fraction</strong> of the Devonian had already passed when Tiktaalik lived? Give a fraction in lowest terms.", a:"11/15", u:"of the Devonian",
+  h:["Length of the Devonian: −359 − (−419). Time already passed: −375 − (−419).","That is 44 out of 60 million years. Simplify 44/60."],
+  s:"Devonian length = −359 − (−419) = 60 million years. Passed = −375 − (−419) = 44 million years. 44/60 = 11/15 (divide both by 4)."},
+ {t:"Scientists date ancient rocks with \"rock clocks.\" Suppose a tiny crystal started with <strong>64 mg</strong> of a radioactive element whose <strong>half-life</strong> is <strong>1.3 billion years</strong>. How many <strong>mg</strong> are left after <strong>3.9 billion years</strong>?", a:"8", u:"mg",
+  h:["How many half-lives fit in 3.9 billion years? 3.9 ÷ 1.3.","3 half-lives: halve 64 three times."],
+  s:"3.9 ÷ 1.3 = 3 half-lives. 64 → 32 → 16 → 8 mg."},
+ {t:"In a quiet Devonian stream, mud and sand built up at about <strong>2 cm every 1 000 years</strong>. About how many <strong>years</strong> did it take to build a rock layer <strong>1.5 m</strong> thick?", a:"75000", u:"years",
+  h:["Change 1.5 m to centimetres first: 1.5 × 100.","150 cm ÷ 2 cm = 75 groups of 1 000 years."],
+  s:"1.5 m = 150 cm. 150 ÷ 2 = 75, and 75 × 1 000 = 75 000 years. Rock layers are like pages in a very slow book!"},
+ {t:"A museum drawer holds <strong>30</strong> Devonian fossils. <strong>18</strong> have lobe fins (fins with bones inside), <strong>12</strong> have a neck, and <strong>5</strong> have <strong>both</strong> (like Tiktaalik). How many fossils have <strong>neither</strong> lobe fins nor a neck?", a:"5", u:"fossils",
+  h:["Draw a Venn diagram. Lobe fins OR a neck = 18 + 12 − 5 (don't count the \"both\" fossils twice).","That is 25. Now subtract from 30."],
+  s:"18 + 12 − 5 = 25 fossils have at least one of the features. 30 − 25 = 5 have neither."},
+ {t:"On one expedition, <strong>3/4</strong> of the fossils found were fish, and <strong>2/5</strong> of those fish were lobe-finned fish. What <strong>fraction of all the fossils</strong> were lobe-finned fish? Give a fraction in lowest terms.", a:"3/10", u:"",
+  h:["\"Of\" means multiply: 2/5 × 3/4.","(2 × 3)/(5 × 4) = 6/20. Simplify."],
+  s:"2/5 × 3/4 = 6/20 = 3/10 of all the fossils."},
+ {t:"A scientific illustrator draws a full Tiktaalik skeleton, about <strong>2.7 m</strong> long, at a scale of <strong>1:15</strong>. How many <strong>centimetres</strong> long is the drawing?", a:"18", u:"cm",
+  h:["Change 2.7 m to centimetres: 270 cm.","1:15 means the drawing is 15 times smaller: 270 ÷ 15."],
+  s:"2.7 m = 270 cm. 270 ÷ 15 = 18 cm, a drawing that fits nicely on a page."},
+ {t:"To show tiny details, the illustrator draws one fish scale <strong>enlarged</strong> at a scale of <strong>5:1</strong>. In the drawing, the scale is <strong>0.8 cm</strong> wide. How many <strong>millimetres</strong> wide is the real scale?", a:"1.6", u:"mm",
+  h:["5:1 means the drawing is 5 times bigger than real life, so divide: 0.8 ÷ 5.","0.16 cm. Now change cm to mm (× 10)."],
+  s:"0.8 ÷ 5 = 0.16 cm = 1.6 mm."},
+ {t:"A block of rock holding a fossil measures <strong>40 cm × 30 cm × 20 cm</strong>. To protect it for the flight home, the team covers <strong>every face</strong> in plaster. What is the block's total <strong>surface area</strong> in cm²?", a:"5200", u:"cm²",
+  h:["The three different faces are 40 × 30, 40 × 20 and 30 × 20.","1 200 + 800 + 600 = 2 600. Each face has a matching partner."],
+  s:"2 × (1 200 + 800 + 600) = 2 × 2 600 = 5 200 cm²."},
+ {t:"The team maps the dig on a grid where each square is <strong>10 m</strong> wide. Camp is at <strong>(−4, 2)</strong> and the Tiktaalik quarry is at <strong>(5, 2)</strong>. How many <strong>metres</strong> apart are they, in a straight line?", a:"90", u:"m",
+  h:["The y-values match, so count across: 5 − (−4).","9 squares × 10 m."],
+  s:"5 − (−4) = 9 units. 9 × 10 m = 90 m."},
+ {t:"The team ropes off a rectangle on the same grid (each square 10 m × 10 m) with corners at <strong>(−4, 2)</strong>, <strong>(5, 2)</strong>, <strong>(5, −3)</strong> and <strong>(−4, −3)</strong>. What is its area in <strong>m²</strong>?", a:"4500", u:"m²",
+  h:["Width: 5 − (−4) = 9 units. Height: 2 − (−3) = 5 units.","9 × 5 = 45 squares, and each square is 100 m²."],
+  s:"9 × 5 = 45 squares. 45 × 100 m² = 4 500 m²."},
+ {t:"Suppose the small plane that flies the team to Ellesmere Island can carry at most <strong>1 200 kg</strong>. There are <strong>6</strong> people averaging <strong>80 kg</strong> each, plus <strong>300 kg</strong> of camping gear. How many <strong>kg</strong> are left for food and fossil-digging tools? Solve 1 200 − (6 × 80 + 300).", a:"420", u:"kg",
+  h:["Brackets first, and inside the brackets do × before +: 6 × 80 = 480.","480 + 300 = 780. Then 1 200 − 780."],
+  s:"6 × 80 = 480, 480 + 300 = 780, and 1 200 − 780 = 420 kg."},
+ {t:"Earth is about <strong>4 600 million years</strong> old. Animals with fish-like ancestors have been crawling onto land for about the last <strong>375 million years</strong>. What <strong>percent</strong> of Earth's history is that? Round to the nearest tenth.", a:"8.2", u:"%",
+  h:["Percent = part ÷ whole × 100 = 375 ÷ 4 600 × 100.","375 ÷ 4 600 ≈ 0.0815. Multiply by 100 and round to one decimal place."],
+  s:"375 ÷ 4 600 ≈ 0.08152, which is about 8.2%. More than 90% of Earth's history happened before any animal walked on land!"},
+ {t:TABLE+"To draw a family tree (a <strong>cladogram</strong>), scientists compare the bones of every animal in the table with every other animal, <strong>one pair at a time</strong>. How many different <strong>pairs</strong> must they compare?", a:"15", u:"pairs",
+  h:["There are 6 animals. Each one pairs with the 5 others: 6 × 5.","But that counts every pair twice (A with B and B with A), so divide by 2."],
+  s:"6 × 5 ÷ 2 = 15 pairs. Comparing all those pairs helps scientists see which animals share the most features, and so which are the closest relatives."}
+];
+
+var PRAISE = ["Nice work, Ace!","Correct! Fossil timekeeper level! 🦴","Yes! That answer has legs! 🐟➡️🦎","Excellent, Ace. That was a tough one!","Right on target! 🎯","Brilliant thinking, Ace!","Spot on, palaeontologist Ace! ⛏️"];
+var ENCOURAGE = ["Not quite. Check your steps and try again!","Close call. Try again, Ace! Maybe use a hint?","Hmm, not yet. Re-read the question carefully.","Keep going, Ace. Mistakes help your brain grow!"];
+
+function parseAnswer(str){
+  if(str===undefined||str===null) return NaN;
+  var s=String(str).trim().toLowerCase();
+  s=s.replace(/[\u2212\u2013]/g,"-");
+  s=s.replace(/(\d),(?=\d{3}(\D|$))/g,"$1");
+  s=s.replace(/[^0-9.\/\- ]/g," ").replace(/\s+/g," ").trim();
+  s=s.replace(/\s*\/\s*/g,"/");
+  var m;
+  if((m=s.match(/^(-?\d+) (\d+)\/(\d+)$/))){ var w=parseFloat(m[1]),n=parseFloat(m[2]),d=parseFloat(m[3]); if(d===0)return NaN; return w<0? w-n/d : w+n/d; }
+  if((m=s.match(/^(-?\d+(?:\.\d+)?)\/(\d+(?:\.\d+)?)$/))){ var d2=parseFloat(m[2]); if(d2===0)return NaN; return parseFloat(m[1])/d2; }
+  s=s.replace(/ /g,"");
+  if(/^-?(\d+\.?\d*|\.\d+)$/.test(s)) return parseFloat(s);
+  return NaN;
+}
+function isCorrect(input,key){
+  var a=parseAnswer(input), k=parseAnswer(key);
+  if(isNaN(a)) return false;
+  var isInt=Math.abs(k-Math.round(k))<1e-12;
+  var tol=isInt?1e-9:0.005;
+  return Math.abs(a-k)<=tol;
+}
+
+function isRomanCorrect(input,key){ return String(input).replace(/\s+/g,"").toUpperCase()===key; }
+var state=[];
+function render(){
+  var box=document.getElementById("questions");
+  QUESTIONS.forEach(function(q,i){
+    state.push({correct:false,tries:0,hints:0});
+    var d=document.createElement("div");
+    d.className="box q"; d.id="q"+i;
+    d.innerHTML='<div><span class="qnum">'+(i+1)+'.</span> '+q.t+'</div>'+
+      '<div class="row"><input type="text"'+(q.r?' placeholder="e.g. MMXXVI"':'')+' id="in'+i+'" aria-label="Answer to question '+(i+1)+'" autocomplete="off"> <span class="unit">'+q.u+'</span>'+
+      '<button type="button" class="check" data-i="'+i+'">Check</button>'+
+      '<button type="button" class="hint" data-i="'+i+'">Hint 💡</button>'+
+      '<button type="button" class="sol" data-i="'+i+'" style="display:none">Show solution</button></div>'+
+      '<div class="fb" id="fb'+i+'"></div><div class="hints" id="hints'+i+'"></div>'+
+      '<div class="solution" id="sol'+i+'"><strong>Solution:</strong> '+q.s+'</div>';
+    box.appendChild(d);
+  });
+  box.addEventListener("click",function(e){
+    var b=e.target; if(b.tagName!=="BUTTON")return;
+    var i=+b.getAttribute("data-i");
+    if(b.className==="check") check(i);
+    else if(b.className==="hint") hint(i);
+    else if(b.className==="sol") document.getElementById("sol"+i).style.display="block";
+  });
+  box.addEventListener("keydown",function(e){
+    if(e.key==="Enter"&&e.target.tagName==="INPUT"){ check(+e.target.id.slice(2)); }
+  });
+}
+function pick(arr){return arr[Math.floor(Math.random()*arr.length)];}
+function check(i){
+  var val=document.getElementById("in"+i).value;
+  var fb=document.getElementById("fb"+i), card=document.getElementById("q"+i);
+  if(val.trim()===""){fb.className="fb bad";fb.textContent="Type an answer first, Ace!";return;}
+  var isR=!!QUESTIONS[i].r;
+  if(isR&&!/^[ivxlcdm\s]+$/i.test(val)){fb.className="fb bad";fb.textContent="Use only Roman numeral letters: I, V, X, L, C, D, M.";return;}
+  if(!isR&&isNaN(parseAnswer(val))){fb.className="fb bad";fb.textContent="I can't read that as a number. Try something like 42, 3.5, 3/4 or 1 3/4.";return;}
+  state[i].tries++;
+  if(isR?isRomanCorrect(val,QUESTIONS[i].a):isCorrect(val,QUESTIONS[i].a)){
+    state[i].correct=true; card.className="box q right"; fb.className="fb good";
+    fb.textContent="✅ "+pick(PRAISE)+(state[i].tries===1?" (first try!)":"");
+  } else {
+    state[i].correct=false; card.className="box q wrong"; fb.className="fb bad";
+    fb.textContent="❌ "+pick(ENCOURAGE);
+    if(state[i].tries>=2) card.querySelector(".sol").style.display="inline-block";
+  }
+  updateScore();
+}
+function hint(i){
+  var q=QUESTIONS[i], s=state[i], hb=document.getElementById("hints"+i);
+  if(s.hints<q.h.length){
+    var p=document.createElement("p"); p.textContent="💡 Hint "+(s.hints+1)+": "+q.h[s.hints]; hb.appendChild(p); s.hints++;
+  }
+  if(s.hints>=q.h.length) document.querySelector("#q"+i+" .hint").disabled=true;
+  updateScore();
+}
+function counts(){
+  var c=0,first=0,h=0;
+  state.forEach(function(s){ if(s.correct){c++; if(s.tries===1)first++;} h+=s.hints; });
+  return {correct:c,first:first,hints:h};
+}
+function updateScore(){
+  var k=counts();
+  document.getElementById("scoreText").textContent="Score: "+k.correct+" / "+QUESTIONS.length+" correct · hints used: "+k.hints;
+}
+function finish(){
+  var k=counts(), n=QUESTIONS.length, pct=Math.round(100*k.correct/n);
+  var msg;
+  if(pct===100) msg="🏆 PERFECT SCORE! Incredible work, Ace. The expedition would make you chief fossil timekeeper!";
+  else if(pct>=85) msg="🌟 Outstanding, Ace! That's a Grade 6–7 level performance!";
+  else if(pct>=65) msg="💪 Great effort, Ace! Review the ones you missed and try them again.";
+  else if(pct>=40) msg="👍 Good start, Ace! These problems are tough. Use the hints and solutions to learn the tricks, then try again.";
+  else msg="🌱 These are challenge problems, well above grade level. Every great scientist started as a beginner! Go through the worked examples and try again, Ace!";
+  var f=document.getElementById("final");
+  f.style.display="block";
+  f.innerHTML="<h2 style='border:none;margin-top:0'>Final Score: "+k.correct+" / "+n+" ("+pct+"%)</h2>"+
+    "<p>Correct on the first try: "+k.first+" · Hints used: "+k.hints+"</p><p>"+msg+"</p>"+
+    "<p style='font-size:.85em;color:#546e7a'>Finished on "+new Date().toLocaleString("en-CA")+"</p>";
+  f.scrollIntoView({behavior:"smooth"});
+}
+render();
+updateScore();
+document.getElementById("finishBtn").addEventListener("click",finish);
+</script>
+<script src="../../assets/autosave.js"></script>
+</body>
+</html>
