@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Math (Nov. 17): Fold by Fold: Origami Designer's Math Lab</title>
+<style>
+  body{font-family:"Segoe UI",Verdana,Arial,sans-serif;font-size:20px;line-height:1.6;margin:0;background:#f5f0eb;color:#2c2416}
+  .wrap{max-width:880px;margin:0 auto;padding:20px 18px 80px}
+  a.home{font-size:.9em;color:#bf360c}
+  h1{color:#e65100;font-size:2em;margin:10px 0}
+  h2{color:#ef6c00;margin-top:36px;border-bottom:3px solid #ffcc80;padding-bottom:4px}
+  .box{background:#fff;border-radius:16px;padding:18px 22px;margin:16px 0;box-shadow:0 3px 10px rgba(0,0,0,.07)}
+  .example{border-left:8px solid #ef6c00}
+  .example h3{margin:0 0 6px;color:#e65100}
+  .step{margin:4px 0 4px 10px}
+  code,.mono{font-family:Consolas,"Courier New",monospace;background:#fff3e0;padding:1px 6px;border-radius:5px}
+  .q{border-left:8px solid #90a4ae}
+  .q.right{border-left-color:#43a047;background:#f1f8e9}
+  .q.wrong{border-left-color:#e53935;background:#fff5f5}
+  .qnum{font-weight:bold;color:#e65100}
+  .row{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:10px}
+  input[type=text]{font-size:1.05em;padding:8px 12px;border:2px solid #ffcc80;border-radius:10px;width:190px}
+  input[type=text]:focus{outline:none;border-color:#ef6c00;box-shadow:0 0 0 3px #ffe0b2}
+  button{font-size:.95em;padding:8px 16px;border:none;border-radius:10px;cursor:pointer;font-weight:bold}
+  .check{background:#ef6c00;color:#fff} .check:hover{background:#e65100}
+  .hint{background:#ffe082;color:#5d4037} .hint:hover{background:#ffd54f}
+  .sol{background:#ce93d8;color:#311b92}
+  .unit{color:#546e7a}
+  .fb{margin-top:8px;font-weight:bold;min-height:1em}
+  .fb.good{color:#2e7d32} .fb.bad{color:#c62828}
+  .hints{margin-top:8px;color:#e65100;background:#fff3e0;border-radius:10px;padding:0 12px}
+  .hints p{margin:6px 0;padding:6px 0}
+  .solution{margin-top:8px;background:#f3e5f5;border-radius:10px;padding:8px 12px;display:none}
+  #scoreBox{position:sticky;bottom:0;background:#e65100;color:#fff;border-radius:16px 16px 0 0;padding:12px 20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-top:30px}
+  #scoreBox button{background:#ffca28;color:#3e2723}
+  #final{display:none;font-size:1.15em;text-align:center;border:4px solid #43a047}
+  .tipbox{background:#fff8e1;border-left:8px solid #ffb300}
+</style>
+</head>
+<body>
+<div class="wrap">
+<a class="home" href="../../index.html">&larr; Back to all lessons</a>
+<h1>🦢 Math Week 51: Fold by Fold: Origami Designer's Math Lab</h1>
+<p>Ace, take one <strong>square of paper</strong>. No scissors, no glue, no tape. With only folds, it can become a crane, a hopping frog, a box, or even a solar panel that opens up in space! The Japanese word <strong>origami</strong> (or-ih-GAH-mee) means "folding paper," and every origami designer is secretly a mathematician: each crease is a straight line, each corner is an angle, and each fold makes a shape that is <strong>congruent</strong> (exactly the same size and shape) to the one it lands on. Today you are the designer in an origami studio. You'll use <strong>area of squares and triangles, order of operations, doubling (powers of 2), angles you can fold, the angle sum of a triangle, division that must round up, proportions for scaling a model, how area grows when you scale up, the area of a parallelogram, percent and profit, a missing value in a mean, and perimeter after folding into equal parts</strong>.</p>
+
+<h2>Part 1: Learn the Moves</h2>
+
+<div class="box tipbox">
+  <strong>The 4-Step Problem Solver (your origami designer's checklist):</strong>
+  <ol>
+    <li><strong>Read</strong>: What is the question actually asking? Underline the numbers and units (mm, cm, m, cm², m², degrees, minutes, $, %).</li>
+    <li><strong>Plan</strong>: Do the units match? Change metres to centimetres or hours to minutes <em>before</em> you answer.</li>
+    <li><strong>Solve</strong>: Do one step at a time and write each step down.</li>
+    <li><strong>Check</strong>: Is my answer reasonable? A paper crane is a few centimetres tall, not a few metres!</li>
+  </ol>
+</div>
+
+
+
+
+<div class="box example">
+  <h3>Worked Example 1: Area of a square, and of half a square</h3>
+  <p class="step">A square sheet 10 cm on each side has area 10 × 10 = <strong>100 cm²</strong>.</p>
+  <p class="step">Fold it corner to corner along the <strong>diagonal</strong> and you get two <strong>congruent</strong> triangles. Each one is half the square: 100 ÷ 2 = <strong>50 cm²</strong>. (Triangle area = base × height ÷ 2 = 10 × 10 ÷ 2.)</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 2: Order of operations</h3>
+  <p class="step">Brackets first; inside the brackets, × and ÷ before + and −. 50 − (2 × 6 + 3 × 4) = 50 − (12 + 12) = 50 − 24 = <strong>26</strong>.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 3: Doubling (powers of 2)</h3>
+  <p class="step">Every time you fold a sheet in half, the number of layers <strong>doubles</strong>: 1 → 2 → 4 → 8 → 16. After n folds there are 2 × 2 × … × 2 (n times) = <strong>2ⁿ</strong> layers. After 5 folds: 2⁵ = <strong>32 layers</strong>.</p>
+  <p class="step">If one sheet is 0.1 mm thick, 32 layers are 32 × 0.1 = <strong>3.2 mm</strong> thick.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 4: Folding angles in half</h3>
+  <p class="step">Each corner of a square is a <strong>right angle</strong> (90°). Folding along the diagonal splits it into two equal angles: 90 ÷ 2 = <strong>45°</strong>. The triangle you get has two equal sides and two equal angles, so it is an <strong>isosceles</strong> right triangle (45°, 45°, 90°).</p>
+  <p class="step">Folding an edge onto a crease splits that angle in half again: 45 ÷ 2 = <strong>22.5°</strong>.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 5: The angles of a triangle add to 180°</h3>
+  <p class="step">If a folded triangle has angles of 90° and 30°, the third angle is 180 − 90 − 30 = <strong>60°</strong>.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 6: Division that must round UP</h3>
+  <p class="step">You need 50 cranes and can fold 8 a day. 50 ÷ 8 = 6.25 days. After 6 days you have only 48, so you need <strong>7 days</strong>. When you can't stop partway, round <em>up</em>.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 7: Scaling a model (proportions)</h3>
+  <p class="step">Fold the same model from a bigger square and every length grows by the same factor. A 15 cm square makes a frog 5 cm long. A 30 cm square is 30 ÷ 15 = <strong>2 times</strong> as wide, so the frog is 5 × 2 = <strong>10 cm</strong> long.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 8: When lengths double, area grows 4 times</h3>
+  <p class="step">A 10 cm square has area 100 cm². A 20 cm square has area 400 cm². The side grew <strong>2</strong> times but the area grew 2 × 2 = <strong>4</strong> times. If the side grows <strong>k</strong> times, the area grows <strong>k × k</strong> times.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 9: Area of a parallelogram</h3>
+  <p class="step">A <strong>parallelogram</strong> has two pairs of parallel sides. Cut the triangle off one end and slide it to the other end: it becomes a rectangle! So area = <strong>base × height</strong>, where the height is <strong>perpendicular</strong> (at 90°) to the base, not the slanted side.</p>
+  <p class="step">Base 5 cm, height 2 cm, slanted side 3 cm: area = 5 × 2 = <strong>10 cm²</strong> (the 3 cm is a distractor!).</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 10: Percent, then profit</h3>
+  <p class="step">75% of 20 = 0.75 × 20 = <strong>15</strong>. If you sell 15 bookmarks for $2 each, you take in $30. If the paper cost $8.50, your profit is 30 − 8.50 = <strong>$21.50</strong>.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 11: A missing value in a mean</h3>
+  <p class="step">Mean = total ÷ how many. If 4 scores must have a mean of 7, the total must be 4 × 7 = 28. If the first 3 add to 20, the last one must be 28 − 20 = <strong>8</strong>.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 12: Folding into equal parts</h3>
+  <p class="step">Fold a 12 cm square in half one way and in thirds the other way. The creases make rectangles 12 ÷ 2 = 6 cm by 12 ÷ 3 = 4 cm. Each one has perimeter 2 × (6 + 4) = <strong>20 cm</strong> and is 1/6 of the sheet.</p>
+</div>
+<h2>Part 2: The Challenge (15 problems)</h2>
+<p>Type your answer and press <strong>Check</strong> (or Enter). Negative numbers like <span class="mono">-35</span>, fractions like <span class="mono">3/4</span>, mixed numbers like <span class="mono">1 3/4</span>, or decimals like <span class="mono">1.75</span> are fine. Don't type the units, $ signs, or % signs, and you may use spaces or commas in big numbers (1 000 000). Stuck? Press <strong>Hint</strong>. After 2 tries, you can see a full solution.</p>
+
+<div id="questions"></div>
+<div class="box" id="final"></div>
+<div id="scoreBox">
+  <span id="scoreText">Score: 0 / 15 correct</span>
+  <button id="finishBtn" type="button">I'm done! Show my final score</button>
+</div>
+</div>
+
+<script>
+var NAME = "Ace";
+var TABLE = '<table style="border-collapse:collapse;margin:10px 0;font-size:.95em;background:#fff"><caption style="font-weight:bold;text-align:left;padding-bottom:4px">Ace\'s crane-folding times</caption><tr><th style="border:1px solid #bdbdbd;padding:4px 10px;background:#eceff1">Crane</th><th style="border:1px solid #bdbdbd;padding:4px 10px;background:#eceff1">Time (minutes)</th></tr><tr><td style="border:1px solid #bdbdbd;padding:4px 10px">Crane 1</td><td style="border:1px solid #bdbdbd;padding:4px 10px;text-align:right">4.5</td></tr><tr><td style="border:1px solid #bdbdbd;padding:4px 10px">Crane 2</td><td style="border:1px solid #bdbdbd;padding:4px 10px;text-align:right">6</td></tr><tr><td style="border:1px solid #bdbdbd;padding:4px 10px">Crane 3</td><td style="border:1px solid #bdbdbd;padding:4px 10px;text-align:right">5.5</td></tr><tr><td style="border:1px solid #bdbdbd;padding:4px 10px">Crane 4</td><td style="border:1px solid #bdbdbd;padding:4px 10px;text-align:right">3</td></tr><tr><td style="border:1px solid #bdbdbd;padding:4px 10px">Crane 5</td><td style="border:1px solid #bdbdbd;padding:4px 10px;text-align:right">?</td></tr></table>';
+var QUESTIONS = [
+ {t:"Ace's square of origami paper is <strong>15 cm × 15 cm</strong>. He folds it corner to corner along the diagonal, making an <strong>isosceles right triangle</strong>. What is the <strong>area</strong> of the triangle in cm²?", a:"112.5", u:"cm²",
+  h:["First find the area of the whole square: 15 × 15.","The diagonal fold makes two congruent triangles, so each is half the square."],
+  s:"15 × 15 = 225 cm². The triangle is half of that: 225 ÷ 2 = 112.5 cm²."},
+ {t:"In <strong>modular origami</strong>, each \"unit\" is folded from one square, then the units slot together without glue. A cube needs <strong>6</strong> units, an octahedron needs <strong>12</strong>, and a big star-ball needs <strong>30</strong>. Ace starts with <strong>100</strong> sheets and builds <strong>3 cubes</strong>, <strong>2 octahedra</strong> and <strong>1 star-ball</strong>. How many sheets are left? Solve 100 − (3 × 6 + 2 × 12 + 30).", a:"28", u:"sheets",
+  h:["Brackets first, and inside them do × before +: 3 × 6 = 18 and 2 × 12 = 24.","18 + 24 + 30 = 72. Now 100 − 72."],
+  s:"3 × 6 = 18, 2 × 12 = 24, and 18 + 24 + 30 = 72 sheets used. 100 − 72 = 28 sheets left."},
+ {t:"Origami paper is about <strong>0.08 mm</strong> thick. If you could fold one sheet in half <strong>6 times</strong>, how many <strong>millimetres</strong> thick would the stack be?", a:"5.12", u:"mm",
+  h:["Layers double with every fold: 2, 4, 8, … After 6 folds there are 2⁶ layers.","2⁶ = 64 layers. Now 64 × 0.08."],
+  s:"2⁶ = 64 layers. 64 × 0.08 = 5.12 mm, about half a centimetre from just one sheet! Each extra fold doubles it again."},
+ {t:"What is the <strong>smallest</strong> number of times you would need to fold a sheet in half to get <strong>more than 1 000 layers</strong>? (Real paper gets too thick to fold long before that!)", a:"10", u:"folds",
+  h:["Keep doubling: 2, 4, 8, 16, 32, 64, 128, 256, 512, …","512 is not more than 1 000 yet. One more doubling."],
+  s:"2⁹ = 512 (not enough) and 2¹⁰ = 1 024 (more than 1 000). So 10 folds."},
+ {t:"Many models begin with a <strong>24 cm × 24 cm</strong> square creased along <strong>both diagonals</strong> and <strong>both midlines</strong> (the lines through the middle, parallel to the edges). These four creases cut the square into <strong>8 congruent triangles</strong>. What is the area of <strong>one</strong> triangle in cm²?", a:"72", u:"cm²",
+  h:["Area of the whole square: 24 × 24.","576 cm² shared equally among 8 congruent triangles."],
+  s:"24 × 24 = 576 cm². 576 ÷ 8 = 72 cm² per triangle."},
+ {t:"To make a <strong>kite base</strong>, you fold a square in half along its diagonal (splitting the 90° corner in two), unfold, and then fold one edge onto that diagonal crease, splitting one of those angles in half again. How many <strong>degrees</strong> is the smallest angle you made?", a:"22.5", u:"°",
+  h:["The corner of a square is 90°. Folding along the diagonal splits it in half.","90 ÷ 2 = 45°. Folding an edge onto the crease halves it again."],
+  s:"90 ÷ 2 = 45°, and 45 ÷ 2 = 22.5°. Cranes, birds and fish all start with these 22.5° folds."},
+ {t:"One folded flap of the kite base is a triangle with a <strong>90°</strong> angle and a <strong>22.5°</strong> angle. What is its <strong>third angle</strong>, in degrees?", a:"67.5", u:"°",
+  h:["The three angles in any triangle add up to 180°.","180 − 90 − 22.5."],
+  s:"180 − 90 − 22.5 = 67.5°."},
+ {t:"In Japan, a string of <strong>1 000 paper cranes</strong> is a symbol of hope and peace. A class of <strong>24</strong> students wants to fold 1 000 cranes. If every student folds <strong>3</strong> cranes each school day, what is the <strong>smallest</strong> number of school days they need?", a:"14", u:"days",
+  h:["Cranes per day for the whole class: 24 × 3.","72 per day. 1 000 ÷ 72 is not a whole number, and they can't stop partway, so round up."],
+  s:"24 × 3 = 72 cranes a day. 1 000 ÷ 72 ≈ 13.9. After 13 days they have only 936, so they need 14 days."},
+ {t:"Folded from a <strong>15 cm</strong> square, Ace's crane stands <strong>6 cm</strong> tall. For the art show he folds the <strong>same</strong> crane from a <strong>40 cm</strong> square. How many <strong>centimetres</strong> tall will it be?", a:"16", u:"cm",
+  h:["Every length grows by the same factor: 40 ÷ 15.","Or set up a proportion: 6/15 = ?/40."],
+  s:"40 ÷ 15 = 8/3. 6 × 8/3 = 16 cm. Check: 6 ÷ 15 = 0.4 and 16 ÷ 40 = 0.4. ✔"},
+ {t:"An origami artist folds a giant crane from a square <strong>1.2 m</strong> on each side. A normal sheet is <strong>15 cm</strong> on each side. How many times <strong>more paper</strong> (area) is in the giant sheet?", a:"64", u:"times",
+  h:["Make the units match: 1.2 m = 120 cm. The side is 120 ÷ 15 = 8 times longer.","Area grows by the factor times itself."],
+  s:"120 ÷ 15 = 8, so the area is 8 × 8 = 64 times bigger. (Check: 14 400 cm² ÷ 225 cm² = 64.)"},
+ {t:"Engineers use origami folds to pack solar panels into rockets. A folded solar array measures <strong>1.5 m × 0.8 m</strong>. In space it opens into a rectangle <strong>12 m × 6 m</strong>. How many times <strong>larger</strong> is the opened area than the folded area?", a:"60", u:"times",
+  h:["Folded area: 1.5 × 0.8. Opened area: 12 × 6.","1.2 m² and 72 m². Divide."],
+  s:"1.5 × 0.8 = 1.2 m². 12 × 6 = 72 m². 72 ÷ 1.2 = 60 times larger."},
+ {t:"The <strong>Miura fold</strong> covers a sheet with congruent <strong>parallelograms</strong>. Each parallelogram has a base of <strong>4 cm</strong>, a slanted side of <strong>3.5 cm</strong>, and a perpendicular height of <strong>3 cm</strong>. The sheet has <strong>48</strong> parallelograms. What is the sheet's total area in cm²?", a:"576", u:"cm²",
+  h:["Area of a parallelogram = base × perpendicular height. The 3.5 cm slanted side is not needed.","4 × 3 = 12 cm² each. Now × 48."],
+  s:"4 × 3 = 12 cm² per parallelogram. 12 × 48 = 576 cm², exactly the area of a 24 cm square."},
+ {t:"Ace folds <strong>40</strong> jumping frogs for the school art fair. He sells <strong>85%</strong> of them for <strong>$2.50</strong> each. The paper cost <strong>$12.75</strong>. What is his <strong>profit</strong> in dollars?", a:"72.25", u:"$",
+  h:["85% of 40 = 0.85 × 40 frogs sold.","34 × $2.50 = money taken in. Then subtract the cost of the paper."],
+  s:"0.85 × 40 = 34 frogs. 34 × 2.50 = $85.00. 85.00 − 12.75 = $72.25 profit."},
+ {t:TABLE+"Ace wants the <strong>mean</strong> time for his 5 cranes to be exactly <strong>5 minutes</strong>. How many <strong>minutes</strong> can crane 5 take?", a:"6", u:"min",
+  h:["For a mean of 5 over 5 cranes, the total must be 5 × 5 = 25 minutes.","Add the first four times: 4.5 + 6 + 5.5 + 3. Subtract from 25."],
+  s:"Total needed: 25 min. First four: 4.5 + 6 + 5.5 + 3 = 19 min. 25 − 19 = 6 minutes."},
+ {t:"Ace folds a <strong>24 cm</strong> square in half, then in half again <strong>the same way</strong>, making 4 equal strips. He unfolds it and folds it into <strong>thirds</strong> the <strong>other</strong> way. The creases divide the square into small congruent rectangles. What is the <strong>perimeter</strong> of one small rectangle, in cm?", a:"28", u:"cm",
+  h:["Halving twice the same way makes strips 24 ÷ 4 = 6 cm wide. Thirds the other way: 24 ÷ 3 = 8 cm.","Each rectangle is 8 cm × 6 cm. Perimeter = 2 × (length + width)."],
+  s:"Strips: 24 ÷ 4 = 6 cm. Thirds: 24 ÷ 3 = 8 cm. Perimeter = 2 × (8 + 6) = 28 cm. There are 4 × 3 = 12 rectangles, each 1/12 of the sheet."}
+];
+
+var PRAISE = ["Nice work, Ace!","Correct! Origami master level! 🦢","Yes! That answer folds perfectly! 📄","Excellent, Ace. That was a tough one!","Right on the crease! 🎯","Brilliant thinking, Ace!","Spot on, paper engineer Ace! 📐"];
+var ENCOURAGE = ["Not quite. Check your steps and try again!","Close call. Try again, Ace! Maybe use a hint?","Hmm, not yet. Re-read the question carefully.","Keep going, Ace. Mistakes help your brain grow!"];
+
+function parseAnswer(str){
+  if(str===undefined||str===null) return NaN;
+  var s=String(str).trim().toLowerCase();
+  s=s.replace(/[\u2212\u2013]/g,"-");
+  s=s.replace(/(\d),(?=\d{3}(\D|$))/g,"$1");
+  s=s.replace(/[^0-9.\/\- ]/g," ").replace(/\s+/g," ").trim();
+  s=s.replace(/\s*\/\s*/g,"/");
+  var m;
+  if((m=s.match(/^(-?\d+) (\d+)\/(\d+)$/))){ var w=parseFloat(m[1]),n=parseFloat(m[2]),d=parseFloat(m[3]); if(d===0)return NaN; return w<0? w-n/d : w+n/d; }
+  if((m=s.match(/^(-?\d+(?:\.\d+)?)\/(\d+(?:\.\d+)?)$/))){ var d2=parseFloat(m[2]); if(d2===0)return NaN; return parseFloat(m[1])/d2; }
+  s=s.replace(/ /g,"");
+  if(/^-?(\d+\.?\d*|\.\d+)$/.test(s)) return parseFloat(s);
+  return NaN;
+}
+function isCorrect(input,key){
+  var a=parseAnswer(input), k=parseAnswer(key);
+  if(isNaN(a)) return false;
+  var isInt=Math.abs(k-Math.round(k))<1e-12;
+  var tol=isInt?1e-9:0.005;
+  return Math.abs(a-k)<=tol;
+}
+
+function isRomanCorrect(input,key){ return String(input).replace(/\s+/g,"").toUpperCase()===key; }
+var state=[];
+function render(){
+  var box=document.getElementById("questions");
+  QUESTIONS.forEach(function(q,i){
+    state.push({correct:false,tries:0,hints:0});
+    var d=document.createElement("div");
+    d.className="box q"; d.id="q"+i;
+    d.innerHTML='<div><span class="qnum">'+(i+1)+'.</span> '+q.t+'</div>'+
+      '<div class="row"><input type="text"'+(q.r?' placeholder="e.g. MMXXVI"':'')+' id="in'+i+'" aria-label="Answer to question '+(i+1)+'" autocomplete="off"> <span class="unit">'+q.u+'</span>'+
+      '<button type="button" class="check" data-i="'+i+'">Check</button>'+
+      '<button type="button" class="hint" data-i="'+i+'">Hint 💡</button>'+
+      '<button type="button" class="sol" data-i="'+i+'" style="display:none">Show solution</button></div>'+
+      '<div class="fb" id="fb'+i+'"></div><div class="hints" id="hints'+i+'"></div>'+
+      '<div class="solution" id="sol'+i+'"><strong>Solution:</strong> '+q.s+'</div>';
+    box.appendChild(d);
+  });
+  box.addEventListener("click",function(e){
+    var b=e.target; if(b.tagName!=="BUTTON")return;
+    var i=+b.getAttribute("data-i");
+    if(b.className==="check") check(i);
+    else if(b.className==="hint") hint(i);
+    else if(b.className==="sol") document.getElementById("sol"+i).style.display="block";
+  });
+  box.addEventListener("keydown",function(e){
+    if(e.key==="Enter"&&e.target.tagName==="INPUT"){ check(+e.target.id.slice(2)); }
+  });
+}
+function pick(arr){return arr[Math.floor(Math.random()*arr.length)];}
+function check(i){
+  var val=document.getElementById("in"+i).value;
+  var fb=document.getElementById("fb"+i), card=document.getElementById("q"+i);
+  if(val.trim()===""){fb.className="fb bad";fb.textContent="Type an answer first, Ace!";return;}
+  var isR=!!QUESTIONS[i].r;
+  if(isR&&!/^[ivxlcdm\s]+$/i.test(val)){fb.className="fb bad";fb.textContent="Use only Roman numeral letters: I, V, X, L, C, D, M.";return;}
+  if(!isR&&isNaN(parseAnswer(val))){fb.className="fb bad";fb.textContent="I can't read that as a number. Try something like 42, 3.5, 3/4 or 1 3/4.";return;}
+  state[i].tries++;
+  if(isR?isRomanCorrect(val,QUESTIONS[i].a):isCorrect(val,QUESTIONS[i].a)){
+    state[i].correct=true; card.className="box q right"; fb.className="fb good";
+    fb.textContent="✅ "+pick(PRAISE)+(state[i].tries===1?" (first try!)":"");
+  } else {
+    state[i].correct=false; card.className="box q wrong"; fb.className="fb bad";
+    fb.textContent="❌ "+pick(ENCOURAGE);
+    if(state[i].tries>=2) card.querySelector(".sol").style.display="inline-block";
+  }
+  updateScore();
+}
+function hint(i){
+  var q=QUESTIONS[i], s=state[i], hb=document.getElementById("hints"+i);
+  if(s.hints<q.h.length){
+    var p=document.createElement("p"); p.textContent="💡 Hint "+(s.hints+1)+": "+q.h[s.hints]; hb.appendChild(p); s.hints++;
+  }
+  if(s.hints>=q.h.length) document.querySelector("#q"+i+" .hint").disabled=true;
+  updateScore();
+}
+function counts(){
+  var c=0,first=0,h=0;
+  state.forEach(function(s){ if(s.correct){c++; if(s.tries===1)first++;} h+=s.hints; });
+  return {correct:c,first:first,hints:h};
+}
+function updateScore(){
+  var k=counts();
+  document.getElementById("scoreText").textContent="Score: "+k.correct+" / "+QUESTIONS.length+" correct · hints used: "+k.hints;
+}
+function finish(){
+  var k=counts(), n=QUESTIONS.length, pct=Math.round(100*k.correct/n);
+  var msg;
+  if(pct===100) msg="🏆 PERFECT SCORE! Incredible work, Ace. The origami studio would make you head designer!";
+  else if(pct>=85) msg="🌟 Outstanding, Ace! That's a Grade 6–7 level performance!";
+  else if(pct>=65) msg="💪 Great effort, Ace! Review the ones you missed and try them again.";
+  else if(pct>=40) msg="👍 Good start, Ace! These problems are tough. Use the hints and solutions to learn the tricks, then try again.";
+  else msg="🌱 These are challenge problems, well above grade level. Every great scientist started as a beginner! Go through the worked examples and try again, Ace!";
+  var f=document.getElementById("final");
+  f.style.display="block";
+  f.innerHTML="<h2 style='border:none;margin-top:0'>Final Score: "+k.correct+" / "+n+" ("+pct+"%)</h2>"+
+    "<p>Correct on the first try: "+k.first+" · Hints used: "+k.hints+"</p><p>"+msg+"</p>"+
+    "<p style='font-size:.85em;color:#546e7a'>Finished on "+new Date().toLocaleString("en-CA")+"</p>";
+  f.scrollIntoView({behavior:"smooth"});
+}
+render();
+updateScore();
+document.getElementById("finishBtn").addEventListener("click",finish);
+</script>
+<script src="../../assets/autosave.js"></script>
+</body>
+</html>

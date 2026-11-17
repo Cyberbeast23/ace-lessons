@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Writing (Nov. 17): Artist's Statement (Fold by Fold: The Story Behind My Creation) + Grammar Clinic</title>
+<style>
+  body{font-family:"Segoe UI",Verdana,Arial,sans-serif;font-size:20px;line-height:1.6;margin:0;background:#fff8f0;color:#2c2416}
+  .wrap{max-width:880px;margin:0 auto;padding:20px 18px 80px}
+  a.home{font-size:.9em;color:#bf360c}
+  h1{color:#e65100;font-size:2em;margin:10px 0}
+  h2{color:#ef6c00;margin-top:36px;border-bottom:3px solid #ffcc80;padding-bottom:4px}
+  h3{color:#ef6c00}
+  .box{background:#fff;border-radius:16px;padding:18px 22px;margin:16px 0;box-shadow:0 3px 10px rgba(0,0,0,.07)}
+  .tipbox{background:#fff8e1;border-left:8px solid #ffb300}
+  .senses{display:grid;gap:8px;margin:10px 0;grid-template-columns:repeat(auto-fit,minmax(140px,1fr))}
+  .senses .side{border-radius:14px;padding:10px 16px;background:#fff3e0}
+  .ts{background:#ffcc80;border-radius:5px;padding:1px 3px}
+  .ev{background:#c8e6c9;border-radius:5px;padding:1px 3px}
+  .ex{background:#ffe0b2;border-radius:5px;padding:1px 3px}
+  .cs{background:#e1bee7;border-radius:5px;padding:1px 3px}
+  .legend span{display:inline-block;margin:4px 8px 4px 0;font-size:.85em}
+  .model{font-family:Georgia,"Times New Roman",serif;font-size:1.05em;line-height:1.9}
+  .row{padding:10px 6px;border-bottom:1px dashed #ddd}
+  .row.right{background:#f1f8e9} .row.wrong{background:#fff5f5}
+  select{font-size:.9em;padding:5px 8px;border-radius:8px;border:2px solid #ffb74d;font-family:inherit}
+  .q{border-left:8px solid #b0bec5}
+  .q.right{border-left-color:#43a047;background:#f1f8e9}
+  .q.wrong{border-left-color:#e53935;background:#fff5f5}
+  .opt{display:block;width:100%;text-align:left;font-size:.95em;background:#fafafa;border:2px solid #e0e0e0;border-radius:10px;padding:8px 14px;margin:8px 0;cursor:pointer;font-family:inherit}
+  .opt:hover{border-color:#ffb74d;background:#fff}
+  .opt.sel-right{background:#c8e6c9;border-color:#43a047}
+  .opt.sel-wrong{background:#ffcdd2;border-color:#e53935}
+  .fb{margin-top:6px;font-weight:bold}
+  .fb.good{color:#2e7d32} .fb.bad{color:#c62828}
+  .explain{font-weight:normal;color:#e65100}
+  .bad-sent{font-family:Consolas,"Courier New",monospace;background:#ffebee;padding:6px 10px;border-radius:8px;display:inline-block;margin:6px 0}
+  input.fix{width:100%;box-sizing:border-box;font-size:1em;padding:8px 12px;border:2px solid #ffb74d;border-radius:10px;font-family:inherit}
+  button{font-size:.95em;padding:8px 16px;border:none;border-radius:10px;cursor:pointer;font-weight:bold;font-family:inherit}
+  .go{background:#ef6c00;color:#fff} .go:hover{background:#e65100}
+  .hint{background:#ffe082;color:#5d4037}
+  .blue{background:#1e88e5;color:#fff}
+  .purple{background:#8e24aa;color:#fff}
+  .grey{background:#cfd8dc;color:#263238}
+  .btnrow{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px}
+  textarea{width:100%;box-sizing:border-box;min-height:300px;font-size:1.05em;line-height:1.7;font-family:Georgia,"Times New Roman",serif;padding:14px;border:3px solid #ffb74d;border-radius:12px}
+  textarea:focus{outline:none;border-color:#ef6c00}
+  .counter{display:flex;flex-wrap:wrap;gap:20px;align-items:center;margin:8px 0;font-weight:bold}
+  .meter{flex:1;min-width:200px;height:18px;background:#e0e0e0;border-radius:9px;overflow:hidden}
+  .meter div{height:100%;width:0;background:#ffb300;transition:width .2s}
+  .checklist label{display:block;padding:6px 4px;cursor:pointer}
+  .checklist input{transform:scale(1.4);margin-right:10px}
+  .prompts label{display:block;background:#fff3e0;border-radius:10px;padding:10px 14px;margin:8px 0;cursor:pointer}
+  .flow{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin:10px 0;font-size:.85em}
+  .flow span.st{background:#e3f2fd;border:2px solid #1e88e5;border-radius:8px;padding:4px 10px;font-weight:bold;color:#0d47a1}
+  .flow span.ar{color:#1e88e5;font-weight:bold}
+  .prompts input{transform:scale(1.3);margin-right:8px}
+  #scoreBox{position:sticky;bottom:0;background:#e65100;color:#fff;border-radius:16px 16px 0 0;padding:12px 20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-top:30px}
+  .w5{display:grid;gap:8px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));margin:10px 0}
+  .w5 label{display:block;font-weight:bold;color:#e65100}
+  .w5 input{width:100%;box-sizing:border-box;font-size:.95em;padding:6px 10px;border:2px solid #ffb74d;border-radius:8px;font-family:inherit}
+  #printArea{display:none}
+  @media print{
+    body{background:#fff;font-size:14pt}
+    .wrap,#scoreBox{display:none !important}
+    #printArea{display:block;font-family:Georgia,serif;line-height:1.8}
+    #printArea h1{font-size:18pt;margin:0 0 6pt}
+    #printArea .meta{font-size:11pt;color:#444}
+    #printArea .text{white-space:pre-wrap;border-top:1px solid #999;padding-top:10pt;margin-top:10pt}
+    #printArea .lines{margin-top:24pt;border-top:1px solid #999;padding-top:6pt;font-size:11pt}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+<a class="home" href="../../index.html">&larr; Back to all lessons</a>
+<h1>✍️ Writing Week 51: Artist's Statement — Fold by Fold: The Story Behind My Creation 🦢🖼️</h1>
+<p>Yesterday you built a dichotomous key like a scientist. Today, Ace, you'll write like an <strong>artist</strong>. Walk into any gallery or museum and you'll see a small card or panel beside the art: an <strong>artist's statement</strong>. It's a short piece of writing, in the artist's own voice, that tells viewers <em>what</em> the work is, <em>what inspired</em> it, <em>how</em> it was made, and <em>why</em> the artist made the choices they did. A good statement doesn't brag ("This is the best crane ever!") and doesn't just list steps. It helps a stranger <strong>see the work more deeply</strong>. It's a brand-new genre for you: part description, part explanation, part reflection, all in the <strong>first person</strong> ("I folded…", "I chose…").</p>
+
+<h2>Part 1: The Lesson</h2>
+<div class="box">
+  <h3 style="margin-top:0">The six parts of a strong artist's statement 🖼️</h3>
+  <p>Think of it as a guided tour of your artwork, given by the person who knows it best: you.</p>
+  <div class="senses">
+    <div class="side"><strong>1. Title + medium:</strong> the name of the work and what it's made of ("one uncut 15 cm square of washi paper")</div>
+    <div class="side"><strong>2. Description:</strong> what a viewer will see: shape, size (metric!), colour, texture, how it stands or hangs</div>
+    <div class="side"><strong>3. Inspiration:</strong> the idea, memory, person, place or reading that gave you the idea</div>
+    <div class="side"><strong>4. Process + challenge:</strong> how you made it, with precise technique words (valley fold, squash fold), and one problem you solved</div>
+    <div class="side"><strong>5. Choices + meaning:</strong> why you chose this colour, size, pose or paper, and what those choices express</div>
+    <div class="side"><strong>6. Invitation to the viewer:</strong> what you hope people notice, feel or wonder about when they look</div>
+  </div>
+  <h3>Five habits of strong artist's statements</h3>
+  <ul>
+    <li><strong>First person, present tense for the work:</strong> <em>"In this piece, I <u>show</u>…"</em> Use past tense for what you <em>did</em>: <em>"I <u>folded</u> it twelve times before…"</em></li>
+    <li><strong>Precise art and technique words</strong> instead of vague ones. ❌ <em>"I did some folds and stuff."</em> ✅ <em>"I made a squash fold, then two inside-reverse folds for the neck and tail."</em></li>
+    <li><strong>Explain choices, not just steps:</strong> every "I chose…" should be followed by a "because…" or "so that…".</li>
+    <li><strong>Show, don't brag:</strong> let the details do the work. ❌ <em>"It looks amazing."</em> ✅ <em>"The wings tilt 30° upward, as if the crane has just pushed off from water."</em></li>
+    <li><strong>Be honest about the struggle:</strong> viewers love hearing what went wrong and how you fixed it. It shows <em>patience</em> (耐心!).</li>
+  </ul>
+  <p><strong>Artist's rule:</strong> after reading your statement, a viewer should look at your work again and notice something they missed the first time.</p>
+</div>
+
+<div class="box tipbox">
+  <h3 style="margin-top:0">Mini-lesson: grammar for writing about art 🎨</h3>
+  <p><strong>Titles of artworks:</strong> when you type, put the title of a piece of art, a book or a film in <em>italics</em>: <em>Crane at First Light</em>. When you write by hand (or can't use italics), use quotation marks: "Crane at First Light." Capitalize the first word, the last word and every important word in between, but not short words like <em>a, the, at, of, and</em> (unless they come first or last).</p>
+  <p><strong>Commas between coordinate adjectives:</strong> if two adjectives describe a noun <em>equally</em> and you could put <em>and</em> between them (or swap their order), separate them with a comma: <em>a <u>crisp, thin</u> sheet</em> (crisp and thin ✔). If you can't, no comma: <em>a <u>bright red</u> crane</em> ("bright and red" ✘ because <em>bright</em> describes the red).</p>
+  <p><strong>Capitalize languages and nationalities:</strong> <em>Japanese</em> paper, a <em>Canadian</em> artist, an <em>English</em> title. But art words stay lowercase: <em>origami, valley fold, washi</em>.</p>
+  <p><strong>Its vs. it's, one more time:</strong> <em>its</em> = belonging to it (<em>the crane spread its wings</em>); <em>it's</em> = it is (<em>it's made of one square</em>). Canadian spelling: <strong>colour, centre, metre, grey, favourite</strong>.</p>
+</div>
+
+<div class="box">
+  <h3 style="margin-top:0">Model artist's statement (about 240 words)</h3>
+  <p class="legend"><span class="ts">Title, medium + description</span><span class="ev">Inspiration + process</span><span class="ex">Choices + meaning</span><span class="cs">Invitation to the viewer</span></p>
+  <div class="model">
+    <span class="ts"><strong><em>A Thousand Small Steps</em></strong><br>Medium: one uncut 15 cm square of grey-blue Japanese washi paper. My crane stands 6 cm tall on a plain white card. Its wings are spread wide and tilted slightly upward, and the soft paper has a faint, cloudy texture that catches the light.</span>
+    <span class="ev">I was inspired by Sadako Sasaki, the girl from Hiroshima who folded paper cranes as a wish to get well. When I read her story, I wanted to fold one crane slowly and carefully, as if it were the first of a thousand. The hardest step was the petal fold. My first three tries tore at the centre because I pressed too hard, so I learned to make every crease gently, then sharpen it with my thumbnail.</span>
+    <span class="ex">I chose grey-blue instead of a bright colour because it reminds me of early morning, when the day is quiet and hopeful. I left the crane small so that viewers have to lean in close, the way you lean in to hear someone whisper a wish.</span>
+    <span class="cs">When you look at my crane, I hope you notice that it's made from one sheet with no cuts. Then I hope you wonder: what wish would you fold into it?</span>
+  </div>
+  <p><strong>Notice:</strong> the title is in italics; the medium and size are precise and metric; the writer uses the first person; the inspiration names a real source; the process includes one honest problem and how it was solved; every choice comes with a <em>because</em> or <em>so that</em>; the ending speaks directly to the viewer. Look for the comma in <em>faint, cloudy texture</em> (faint and cloudy ✔), the capital J in <em>Japanese</em>, and <em>its</em> vs. <em>it's</em>.</p>
+</div>
+
+<h2>Part 2: Name That Statement Part</h2>
+<div class="box">
+  <p>Each line comes from a student's artist's statement for an origami piece called <strong><em>Frog Pond Jump</em></strong>. Choose which <strong>part</strong> of the statement it shows best.</p>
+  <div id="labelRows"></div>
+  <div class="btnrow"><button type="button" class="go" id="checkLabels">Check my answers</button></div>
+  <div class="fb" id="labelFb"></div>
+</div>
+
+<h2>Part 3: Grammar Clinic 📏</h2>
+<div class="box tipbox">Every artist needs a careful editor! <strong>Section A:</strong> pick the correct sentence. <strong>Section B:</strong> type the sentence again with <em>all</em> mistakes fixed. We use <strong>Canadian spelling</strong> (colour, centre, metre, grey, favourite). Today, watch <strong>titles of artworks</strong>, <strong>commas between coordinate adjectives</strong>, <strong>capitals for languages and nationalities</strong>, <strong>its vs. it's</strong>, <strong>precise words instead of vague ones</strong>, and <strong>tense</strong> (present for the work, past for what you did).</div>
+<h3>Section A: Pick the correct sentence</h3>
+<div id="gmc"></div>
+<h3>Section B: Fix the sentence</h3>
+<p>Retype the whole sentence correctly, with capital letters and punctuation. Each one has <strong>at least two</strong> mistakes.</p>
+<div id="gfix"></div>
+
+<h2>Part 4: Your Turn to Write</h2>
+<div class="box">
+  <h3 style="margin-top:0">Step 1: Choose your artwork</h3>
+  <p>Pick <strong>one</strong> prompt. Use today's reading (and math!) for ideas. Jot your plan in the boxes first, then write.</p>
+  <div class="prompts" id="prompts">
+    <label><input type="radio" name="prompt" value="Option A: Fold It, Then Write It" checked> 🦢 <strong>Option A: Fold It, Then Write It.</strong> Fold a real origami model today: a crane, a jumping frog, a fortune teller, a box, or anything from a diagram (ask Dad to help find one). Measure it, name it, and write the artist's statement that would sit beside it in a gallery.</label>
+    <label><input type="radio" name="prompt" value="Option B: My Dream Exhibit Piece"> 🖼️ <strong>Option B: My Dream Exhibit Piece.</strong> Imagine the origami piece you would make if you had a year and unlimited paper: a mobile of a thousand cranes, a Miura-folded sculpture that opens and closes, a giant tessellation of hexagons, an orca folded from one 1 m square. Write its statement as if it were finished and hanging in the Vancouver Art Gallery.</label>
+    <label><input type="radio" name="prompt" value="Option C: Something I Already Made"> 🧱 <strong>Option C: Something I Already Made.</strong> Write an artist's statement for a creation you've already made: a LEGO build, a drawing, a clay figure, a Minecraft structure or a model. Treat it like real art: title, medium, inspiration, process, choices and an invitation to the viewer.</label>
+  </div>
+  <p><strong>Plan your statement:</strong> jot a few words for each box. (These notes save with your writing.)</p>
+  <div class="w5" id="w5">
+    <div><label for="w5who">Title + medium (what it's made of)</label><input id="w5who" type="text" autocomplete="off"></div>
+    <div><label for="w5place">Description (size in cm, colour, texture, pose)</label><input id="w5place" type="text" autocomplete="off"></div>
+    <div><label for="w5facts">Inspiration (who or what gave me the idea)</label><input id="w5facts" type="text" autocomplete="off"></div>
+    <div><label for="w5senses">Process + one challenge I solved</label><input id="w5senses" type="text" autocomplete="off"></div>
+    <div><label for="w5feel">Choices + meaning (I chose… because…)</label><input id="w5feel" type="text" autocomplete="off"></div>
+    <div><label for="w5closing">Invitation: what I hope viewers notice or wonder</label><input id="w5closing" type="text" autocomplete="off"></div>
+  </div>
+
+  <h3>Step 2: Write your statement</h3>
+  <p><strong>Goal:</strong> <strong>180 to 320 words</strong> in <strong>first person</strong>: a <strong>title in italics or quotation marks</strong> with the <strong>medium</strong>; a <strong>description</strong> with at least one <strong>metric measurement</strong>; your <strong>inspiration</strong>; your <strong>process</strong> with at least <strong>two precise technique words</strong> and <strong>one challenge</strong> you solved; at least <strong>two choices</strong>, each with a <em>because</em> or <em>so that</em>; and an ending that speaks to the <strong>viewer</strong>. Use at least <strong>one pair of coordinate adjectives</strong> with a comma (like <em>crisp, thin paper</em>). No bragging words (amazing, awesome, best ever): let the details show it. Then add <strong>2–3 sentences to Dad</strong> about which part of the statement was hardest to write and why. Bonus: use two words from today's spelling list correctly! Extra bonus: read your statement to Dad <em>before</em> he sees your artwork, and ask him to picture it.</p>
+  <p><button type="button" class="hint" id="templateBtn">📋 Add the layout for me</button></p>
+  <label for="essay"><strong>Write here, Ace:</strong></label>
+  <textarea id="essay" placeholder="Title: ..."></textarea>
+  <div class="counter">
+    <span id="wc">0 words</span>
+    <span id="sc">0 sentences</span>
+    <div class="meter" aria-hidden="true"><div id="meterBar"></div></div>
+  </div>
+  <div class="fb" id="wcMsg">Aim for 180 to 320 words.</div>
+  <p style="font-size:.8em;color:#607d8b" id="saveNote">Your writing is saved automatically in this browser as you type.</p>
+
+  <h3>Self-check before you finish ✅</h3>
+  <div class="checklist" id="checklist">
+    <label><input type="checkbox"> My <strong>title</strong> is in italics or quotation marks with the right capitals, and I named the <strong>medium</strong>.</label>
+    <label><input type="checkbox"> My <strong>description</strong> helps a viewer picture the work and includes a <strong>metric measurement</strong>.</label>
+    <label><input type="checkbox"> I explained my <strong>inspiration</strong> and my <strong>process</strong>, with precise technique words and <strong>one challenge</strong> I solved.</label>
+    <label><input type="checkbox"> Every <strong>choice</strong> I describe has a <em>because</em> or <em>so that</em>, and I didn't use bragging words.</label>
+    <label><input type="checkbox"> My ending <strong>invites the viewer</strong> to notice, feel or wonder something.</label>
+    <label><input type="checkbox"> I checked <strong>first person + tense</strong>, <strong>coordinate-adjective commas</strong>, <strong>capitals for languages/nationalities</strong> and <strong>its / it's</strong>.</label>
+  </div>
+  <div class="btnrow">
+    <button type="button" class="blue" id="downloadBtn">⬇️ Download my writing (for Dad)</button>
+    <button type="button" class="purple" id="printBtn">🖨️ Print my writing</button>
+    <button type="button" class="grey" id="clearBtn">Start over</button>
+  </div>
+  <div class="fb" id="doneMsg"></div>
+</div>
+
+<div id="scoreBox"><span id="scoreText"></span><span>Keep creating, artist Ace! 🦢</span></div>
+</div>
+
+<div id="printArea"></div>
+
+<script>
+var NAME="Ace";
+var PRAISE=["Nice work, Ace!","Correct! Great editing eye!","Yes! Ace fixed it!","Excellent, artist Ace!","Bravo! That edit is as crisp as a fresh crease! 🦢"];
+function pick(a){return a[Math.floor(Math.random()*a.length)];}
+
+var LABELS=["Title + medium", "Description", "Inspiration", "Process + challenge", "Choices + meaning", "Invitation to the viewer"];
+var LABEL_ITEMS=[
+ {s:"My first frogs wouldn't jump because the back fold was too loose, so I added a second, tighter pleat that works like a spring.", a:"Process + challenge"},
+ {s:"Frog Pond Jump. Medium: three uncut 7.5 cm squares of green origami paper.", a:"Title + medium"},
+ {s:"I chose three different greens because frogs in a real pond blend into the reeds, so you have to look twice to find them all.", a:"Choices + meaning"},
+ {s:"The idea came from a summer evening at the lake, when I heard dozens of frogs but could only spot one.", a:"Inspiration"},
+ {s:"Three small frogs, each about 4 cm long, crouch on a blue paper lily pad as if they are about to leap.", a:"Description"},
+ {s:"Press gently on a frog's back, and see if you can make it land on the lily pad.", a:"Invitation to the viewer"}
+];
+var labelScore=0, labelChecked=false;
+function buildLabels(){
+  var box=document.getElementById("labelRows");
+  LABEL_ITEMS.forEach(function(it,i){
+    var d=document.createElement("div"); d.className="row"; d.id="lr"+i;
+    var sel='<select id="ls'+i+'" aria-label="Job of sentence '+(i+1)+'"><option value="">- choose -</option>';
+    LABELS.forEach(function(l){sel+='<option>'+l+'</option>';});
+    sel+='</select>';
+    d.innerHTML='<strong>'+(i+1)+'.</strong> '+it.s+'<br>'+sel+' <span id="lm'+i+'"></span>';
+    box.appendChild(d);
+  });
+}
+function checkLabels(){
+  var sc=0;
+  LABEL_ITEMS.forEach(function(it,i){
+    var ok=document.getElementById("ls"+i).value===it.a; if(ok)sc++;
+    document.getElementById("lr"+i).className="row "+(ok?"right":"wrong");
+    document.getElementById("lm"+i).textContent=ok?"✅":"❌";
+  });
+  labelScore=sc; labelChecked=true;
+  var fb=document.getElementById("labelFb");
+  if(sc===LABEL_ITEMS.length){fb.className="fb good";fb.textContent="🌟 "+sc+" / "+LABEL_ITEMS.length+". "+pick(PRAISE)+" You know exactly how an artist's statement is built!";}
+  else{fb.className="fb bad";fb.textContent=sc+" / "+LABEL_ITEMS.length+". Hint: the name and the materials = title + medium; what a viewer sees (size, colour, pose) = description; where the idea came from = inspiration; how it was made and a problem fixed = process + challenge; I chose… because… = choices + meaning; speaking directly to the person looking = invitation to the viewer.";}
+  updateScore();
+}
+
+var GMC=[
+ {q:"Which sentence writes the <strong>title of an artwork</strong> correctly (typed)?",
+  o:["My crane is called <em>crane at first light</em>.", "My crane is called <em>Crane at First Light</em>.", "My crane is called <em>Crane At First Light</em>.", "My crane is called crane at first light."],
+  a:1,e:"Typed titles go in <em>italics</em>. Capitalize the first, last and important words, but not short words like <em>at</em> in the middle: <strong><em>Crane at First Light</em></strong>."},
+ {q:"Which sentence uses a comma between <strong>coordinate adjectives</strong> correctly?",
+  o:["I folded it from a crisp thin sheet.", "I folded it from a crisp, thin sheet.", "I folded it from a crisp, thin, sheet.", "I folded it from a, crisp thin sheet."],
+  a:1,e:"<em>Crisp</em> and <em>thin</em> each describe the sheet equally (crisp <em>and</em> thin works), so they need a comma between them, but never a comma between the last adjective and the noun."},
+ {q:"Which sentence does <strong>not</strong> need a comma between the adjectives?",
+  o:["She used a bright, cheerful colour.", "It was a long, careful process.", "He folded a bright red crane.", "It had a soft, cloudy texture."],
+  a:2,e:"\"Bright and red crane\" sounds wrong, because <em>bright</em> describes the <em>red</em>, not the crane. So no comma: <strong>a bright red crane</strong>. The others pass the \"and\" test."},
+ {q:"Which sentence uses <strong>capital letters</strong> correctly?",
+  o:["I used japanese washi paper, like a Canadian artist I admire.", "I used Japanese Washi paper, like a canadian artist I admire.", "I used Japanese washi paper, like a Canadian artist I admire.", "I used Japanese washi Paper, like a Canadian Artist I admire."],
+  a:2,e:"Languages and nationalities get capitals: <strong>Japanese</strong>, <strong>Canadian</strong>. Ordinary nouns like <em>washi, paper, artist</em> stay lowercase."},
+ {q:"Which sentence uses <strong>its</strong> and <strong>it's</strong> correctly?",
+  o:["It's wings are folded, and its made from one square.", "Its wings are folded, and it's made from one square.", "It's wings are folded, and it's made from one square.", "Its wings are folded, and its made from one square."],
+  a:1,e:"<em>Its</em> wings = the wings belonging to it (no apostrophe). <em>It's</em> made = <em>it is</em> made."},
+ {q:"Which sentence is the strongest for an artist's statement?",
+  o:["My crane looks really amazing and awesome.", "I did some folds and stuff, and then it was done.", "I made a squash fold, then two inside-reverse folds to shape the neck and tail.", "It is the best crane anyone has ever made."],
+  a:2,e:"C uses <strong>precise technique words</strong> and tells the viewer something real. A and D brag; B is vague (\"some folds and stuff\")."},
+ {q:"Which sentence uses <strong>tense</strong> the way artists' statements usually do?",
+  o:["In this piece, I show a crane at sunrise. I folded it from one square.", "In this piece, I showed a crane at sunrise. I fold it yesterday from one square.", "In this piece, I will show a crane at sunrise. I am folding it from one square last week.", "In this piece, I showing a crane at sunrise. I folded it from one square."],
+  a:0,e:"Describe what the finished work <em>does</em> in the present tense (<em>I show</em>), and what you <em>did</em> to make it in the past tense (<em>I folded</em>)."}
+];
+var gmcState=GMC.map(function(){return{answered:false,firstRight:false,done:false};});
+function buildGMC(){
+  var box=document.getElementById("gmc");
+  GMC.forEach(function(it,i){
+    var d=document.createElement("div"); d.className="box q"; d.id="g"+i;
+    var h='<div><strong>'+(i+1)+'.</strong> '+it.q+'</div>';
+    it.o.forEach(function(o,j){h+='<button type="button" class="opt" data-i="'+i+'" data-j="'+j+'">'+String.fromCharCode(65+j)+'. '+o+'</button>';});
+    h+='<div class="fb" id="gfb'+i+'"></div>';
+    d.innerHTML=h; box.appendChild(d);
+  });
+  box.addEventListener("click",function(e){
+    var b=e.target.closest?e.target.closest(".opt"):e.target; if(!b||!b.classList.contains("opt"))return;
+    var i=+b.getAttribute("data-i"), j=+b.getAttribute("data-j"), st=gmcState[i], it=GMC[i];
+    if(st.done)return;
+    var ok=j===it.a; if(!st.answered){st.answered=true;st.firstRight=ok;}
+    var fb=document.getElementById("gfb"+i);
+    if(ok){st.done=true;b.classList.add("sel-right");document.getElementById("g"+i).className="box q right";fb.className="fb good";fb.innerHTML="✅ "+pick(PRAISE)+' <span class="explain">'+it.e+'</span>';}
+    else{b.classList.add("sel-wrong");document.getElementById("g"+i).className="box q wrong";fb.className="fb bad";fb.textContent="❌ Not quite, Ace. Look closely and try again.";}
+    updateScore();
+  });
+}
+
+var GFIX=[
+ {bad:"my sculpture is called spring garden of cranes",
+  ok:["My sculpture is called Spring Garden of Cranes.","My sculpture is called \"Spring Garden of Cranes.\"","My sculpture is called \"Spring Garden of Cranes\"."],
+  hint:"Capitalize My. Capitalize the important words in the title (Spring, Garden, Cranes) but not the short word of in the middle. End with a period."},
+ {bad:"the crane spread it's wings over a smooth shiny pond",
+  ok:["The crane spread its wings over a smooth, shiny pond."],
+  hint:"Capitalize The. The wings belong to the crane, so use its (no apostrophe). Smooth and shiny both describe the pond equally, so put a comma between them. End with a period."},
+ {bad:"i learned origami from a japanese artist who visited our school in vancouver",
+  ok:["I learned origami from a Japanese artist who visited our school in Vancouver."],
+  hint:"Capitalize I, Japanese (a nationality) and Vancouver (a city). Origami stays lowercase. End with a period."},
+ {bad:"i chose a grey colour because it remind me of fog over the ocean",
+  ok:["I chose a grey colour because it reminds me of fog over the ocean."],
+  hint:"Capitalize I. The subject it is singular, so the verb needs an s: it reminds. Grey and colour are already Canadian spelling. End with a period."}
+];
+
+var gfixState=GFIX.map(function(){return{tries:0,correct:false,firstRight:false};});
+function norm(s){return s.replace(/[\u2018\u2019\u02BC]/g,"'").replace(/[\u201C\u201D]/g,'"').replace(/\s+/g," ").trim();}
+function checkFixAnswer(i,val){var v=norm(val);return GFIX[i].ok.some(function(a){return norm(a)===v;});}
+function buildGFix(){
+  var box=document.getElementById("gfix");
+  GFIX.forEach(function(it,i){
+    var d=document.createElement("div"); d.className="box q"; d.id="f"+i;
+    d.innerHTML='<div><strong>'+(i+1)+'.</strong> Fix: <span class="bad-sent">'+it.bad+'</span></div>'+
+     '<input class="fix" type="text" id="fi'+i+'" autocomplete="off" spellcheck="false" aria-label="Corrected sentence '+(i+1)+'">'+
+     '<div class="btnrow"><button type="button" class="go" data-act="check" data-i="'+i+'">Check</button><button type="button" class="hint" data-act="hint" data-i="'+i+'">Hint 💡</button><button type="button" class="grey" data-act="show" data-i="'+i+'" style="display:none">Show answer</button></div>'+
+     '<div class="fb" id="ffb'+i+'"></div>';
+    box.appendChild(d);
+  });
+  box.addEventListener("click",function(e){
+    var b=e.target; if(b.tagName!=="BUTTON")return;
+    var i=+b.getAttribute("data-i"), act=b.getAttribute("data-act"), fb=document.getElementById("ffb"+i);
+    if(act==="hint"){fb.className="fb";fb.style.color="#5d4037";fb.textContent="💡 "+GFIX[i].hint;return;}
+    fb.style.color="";
+    if(act==="show"){fb.className="fb";fb.innerHTML='Answer: <em>'+GFIX[i].ok[0]+'</em>'+(GFIX[i].ok.length>1?' (other correct versions are accepted too)':'');return;}
+    fixCheck(i);
+  });
+  box.addEventListener("keydown",function(e){if(e.key==="Enter"&&e.target.classList.contains("fix"))fixCheck(+e.target.id.slice(2));});
+}
+function fixCheck(i){
+  var val=document.getElementById("fi"+i).value, fb=document.getElementById("ffb"+i), st=gfixState[i];
+  fb.style.color="";
+  if(!val.trim()){fb.className="fb bad";fb.textContent="Type the corrected sentence first, Ace!";return;}
+  st.tries++;
+  if(checkFixAnswer(i,val)){ if(st.tries===1)st.firstRight=true; st.correct=true; document.getElementById("f"+i).className="box q right"; fb.className="fb good"; fb.textContent="✅ "+pick(PRAISE); }
+  else { st.correct=false; document.getElementById("f"+i).className="box q wrong"; fb.className="fb bad"; fb.textContent="❌ Not quite. Check every capital letter, apostrophe, comma, and spelling. Try again!"; if(st.tries>=2)document.querySelector('#f'+i+' [data-act=show]').style.display="inline-block"; }
+  updateScore();
+}
+
+function updateScore(){
+  var g=0; gmcState.forEach(function(s){if(s.firstRight)g++;});
+  var f=0; gfixState.forEach(function(s){if(s.correct)f++;});
+  var total=LABEL_ITEMS.length+GMC.length+GFIX.length, got=labelScore+g+f;
+  document.getElementById("scoreText").textContent="Score: "+got+" / "+total+"  (labels "+(labelChecked?labelScore:"-")+"/"+LABEL_ITEMS.length+" · grammar A "+g+"/"+GMC.length+" · grammar B "+f+"/"+GFIX.length+")";
+}
+
+var W5=["who","place","facts","senses","feel","closing"];
+function w5Save(){try{localStorage.setItem(KEY+"-5w",JSON.stringify(W5.map(function(k){return document.getElementById("w5"+k).value;})));}catch(e){}}
+function w5Restore(){try{var d=JSON.parse(localStorage.getItem(KEY+"-5w")||"null");if(d)d.forEach(function(x,i){document.getElementById("w5"+W5[i]).value=x;});}catch(e){}}
+function w5Summary(){return W5.map(function(k){return k.charAt(0).toUpperCase()+k.slice(1)+": "+document.getElementById("w5"+k).value;}).join("\n");}
+function addTemplate(){
+  var t=document.getElementById("essay");
+  var tpl="Title (in italics or \"quotation marks\"): ...\nMedium: ...\n\nDESCRIPTION (what a viewer sees: size in cm, colour, texture, pose):\n\nINSPIRATION (who or what gave me the idea):\n\nPROCESS + CHALLENGE (technique words, and one problem I solved):\n\nCHOICES + MEANING (I chose… because… / so that…):\n\nINVITATION TO THE VIEWER (what I hope you notice, feel or wonder):\n\nNOTE TO DAD (which part was hardest to write, and why):\n\nby "+NAME;
+  if(t.value.trim()&&!confirm("Add the classification key layout below what you've already written?"))return;
+  t.value=(t.value.trim()?t.value.replace(/\s+$/,"")+"\n\n":"")+tpl; updateCount(); t.focus();
+}
+var KEY="ace-writing-2026-11-17";
+function countWords(t){var m=t.trim().match(/[A-Za-zÀ-ÿ0-9]+(?:['’\-][A-Za-zÀ-ÿ0-9]+)*/g);return m?m.length:0;}
+function countSentences(t){var m=t.match(/[^.!?]*[A-Za-z0-9][^.!?]*[.!?]+/g);return m?m.length:0;}
+function currentPrompt(){var r=document.querySelector('input[name=prompt]:checked');return r?r.value:"";}
+function updateCount(){
+  var t=document.getElementById("essay").value, w=countWords(t), s=countSentences(t);
+  document.getElementById("wc").textContent=w+(w===1?" word":" words");
+  document.getElementById("sc").textContent=s+(s===1?" sentence":" sentences");
+  var bar=document.getElementById("meterBar"); bar.style.width=Math.min(100,w/320*100)+"%";
+  var msg=document.getElementById("wcMsg");
+  if(w<180){bar.style.background="#ffb300";msg.className="fb";msg.textContent=w===0?"Aim for 180 to 320 words.":"Keep going, Ace! "+(180-w)+" more words to reach the goal.";}
+  else if(w<=320){bar.style.background="#43a047";msg.className="fb good";msg.textContent="🎯 You're in the target zone! Nice work, Ace!";}
+  else{bar.style.background="#1e88e5";msg.className="fb";msg.textContent="Wow, that's a lot of writing! Strong artist's statements are short and precise. Could any sentences be cut?";}
+  try{localStorage.setItem(KEY,JSON.stringify({text:t,prompt:currentPrompt(),checks:checkStates()}));}catch(e){document.getElementById("saveNote").textContent="(This browser can't auto-save here, so use the Download button before closing!)";}
+}
+function checkStates(){return Array.prototype.map.call(document.querySelectorAll("#checklist input"),function(c){return c.checked;});}
+function checklistText(){
+  return Array.prototype.map.call(document.querySelectorAll("#checklist label"),function(l){return (l.querySelector("input").checked?"[x] ":"[ ] ")+l.textContent.trim();}).join("\n");
+}
+function buildReport(){
+  var t=document.getElementById("essay").value;
+  return "Writing Week 51: "+NAME+"\nDate: "+new Date().toLocaleString("en-CA")+"\nPrompt: "+currentPrompt()+
+    "\nWords: "+countWords(t)+"   Sentences: "+countSentences(t)+"\nPlanning notes:\n"+w5Summary()+
+    "\n\n----- "+NAME+"'s writing -----\n\n"+t+"\n\n----- Self-check -----\n"+checklistText()+
+    "\n\n----- Parent feedback -----\n\n\n";
+}
+function download(){
+  var t=document.getElementById("essay").value;
+  if(!t.trim()){document.getElementById("doneMsg").className="fb bad";document.getElementById("doneMsg").textContent="Write something first, Ace!";return;}
+  var blob=new Blob([buildReport().replace(/\n/g,"\r\n")],{type:"text/plain;charset=utf-8"});
+  var a=document.createElement("a"); a.href=URL.createObjectURL(blob); a.download=NAME+"-writing-2026-11-17"+".txt";
+  document.body.appendChild(a); a.click();
+  setTimeout(function(){URL.revokeObjectURL(a.href);a.remove();},1000);
+  var dm=document.getElementById("doneMsg"); dm.className="fb good"; dm.textContent="📄 Saved! Look in your Downloads folder and show Dad. Great job finishing, Ace!";
+}
+function esc(s){return s.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");}
+function printIt(){
+  var t=document.getElementById("essay").value;
+  if(!t.trim()){document.getElementById("doneMsg").className="fb bad";document.getElementById("doneMsg").textContent="Write something first, Ace!";return;}
+  document.getElementById("printArea").innerHTML="<h1>Writing Week 51: "+NAME+"</h1><div class='meta'>"+esc(new Date().toLocaleString("en-CA"))+"<br><strong>Prompt:</strong> "+esc(currentPrompt())+"<br>Words: "+countWords(t)+" · Sentences: "+countSentences(t)+"</div><div class='text'>"+esc(t)+"</div><div class='lines'><strong>Self-check:</strong><br>"+esc(checklistText()).replace(/\n/g,"<br>")+"</div><div class='lines'><strong>Parent feedback:</strong><br><br><br><br></div>";
+  window.print();
+}
+function restore(){
+  try{var d=JSON.parse(localStorage.getItem(KEY)||"null"); if(!d)return;
+    document.getElementById("essay").value=d.text||"";
+    Array.prototype.forEach.call(document.querySelectorAll("input[name=prompt]"),function(r){r.checked=(r.value===d.prompt);});
+    if(!document.querySelector("input[name=prompt]:checked"))document.querySelector("input[name=prompt]").checked=true;
+    var cs=document.querySelectorAll("#checklist input"); (d.checks||[]).forEach(function(v,i){if(cs[i])cs[i].checked=v;});
+  }catch(e){}
+}
+buildLabels(); buildGMC(); buildGFix(); restore(); w5Restore(); updateCount(); updateScore();
+W5.forEach(function(k){document.getElementById("w5"+k).addEventListener("input",w5Save);});
+document.getElementById("templateBtn").addEventListener("click",addTemplate);
+document.getElementById("checkLabels").addEventListener("click",checkLabels);
+document.getElementById("essay").addEventListener("input",updateCount);
+document.getElementById("checklist").addEventListener("change",function(){updateCount(); if(checkStates().every(Boolean)){var dm=document.getElementById("doneMsg");dm.className="fb good";dm.textContent="✅ All boxes checked! Now download or print it for Dad. Awesome work, Ace!";}});
+document.getElementById("prompts").addEventListener("change",updateCount);
+document.getElementById("downloadBtn").addEventListener("click",download);
+document.getElementById("printBtn").addEventListener("click",printIt);
+document.getElementById("clearBtn").addEventListener("click",function(){ if(confirm("Erase your writing and start over?")){document.getElementById("essay").value="";Array.prototype.forEach.call(document.querySelectorAll("#checklist input"),function(c){c.checked=false;});document.getElementById("doneMsg").textContent="";updateCount();} });
+</script>
+<script src="../../assets/autosave.js"></script>
+</body>
+</html>
