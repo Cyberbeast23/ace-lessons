@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Writing (Nov. 18): Play-by-Play &amp; Colour Commentary Script (Live from the Rink!) + Grammar Clinic</title>
+<style>
+  body{font-family:"Segoe UI",Verdana,Arial,sans-serif;font-size:20px;line-height:1.6;margin:0;background:#fff8f0;color:#2c2416}
+  .wrap{max-width:880px;margin:0 auto;padding:20px 18px 80px}
+  a.home{font-size:.9em;color:#bf360c}
+  h1{color:#e65100;font-size:2em;margin:10px 0}
+  h2{color:#ef6c00;margin-top:36px;border-bottom:3px solid #ffcc80;padding-bottom:4px}
+  h3{color:#ef6c00}
+  .box{background:#fff;border-radius:16px;padding:18px 22px;margin:16px 0;box-shadow:0 3px 10px rgba(0,0,0,.07)}
+  .tipbox{background:#fff8e1;border-left:8px solid #ffb300}
+  .senses{display:grid;gap:8px;margin:10px 0;grid-template-columns:repeat(auto-fit,minmax(140px,1fr))}
+  .senses .side{border-radius:14px;padding:10px 16px;background:#fff3e0}
+  .ts{background:#ffcc80;border-radius:5px;padding:1px 3px}
+  .ev{background:#c8e6c9;border-radius:5px;padding:1px 3px}
+  .ex{background:#ffe0b2;border-radius:5px;padding:1px 3px}
+  .cs{background:#e1bee7;border-radius:5px;padding:1px 3px}
+  .legend span{display:inline-block;margin:4px 8px 4px 0;font-size:.85em}
+  .model{font-family:Georgia,"Times New Roman",serif;font-size:1.05em;line-height:1.9}
+  .row{padding:10px 6px;border-bottom:1px dashed #ddd}
+  .row.right{background:#f1f8e9} .row.wrong{background:#fff5f5}
+  select{font-size:.9em;padding:5px 8px;border-radius:8px;border:2px solid #ffb74d;font-family:inherit}
+  .q{border-left:8px solid #b0bec5}
+  .q.right{border-left-color:#43a047;background:#f1f8e9}
+  .q.wrong{border-left-color:#e53935;background:#fff5f5}
+  .opt{display:block;width:100%;text-align:left;font-size:.95em;background:#fafafa;border:2px solid #e0e0e0;border-radius:10px;padding:8px 14px;margin:8px 0;cursor:pointer;font-family:inherit}
+  .opt:hover{border-color:#ffb74d;background:#fff}
+  .opt.sel-right{background:#c8e6c9;border-color:#43a047}
+  .opt.sel-wrong{background:#ffcdd2;border-color:#e53935}
+  .fb{margin-top:6px;font-weight:bold}
+  .fb.good{color:#2e7d32} .fb.bad{color:#c62828}
+  .explain{font-weight:normal;color:#e65100}
+  .bad-sent{font-family:Consolas,"Courier New",monospace;background:#ffebee;padding:6px 10px;border-radius:8px;display:inline-block;margin:6px 0}
+  input.fix{width:100%;box-sizing:border-box;font-size:1em;padding:8px 12px;border:2px solid #ffb74d;border-radius:10px;font-family:inherit}
+  button{font-size:.95em;padding:8px 16px;border:none;border-radius:10px;cursor:pointer;font-weight:bold;font-family:inherit}
+  .go{background:#ef6c00;color:#fff} .go:hover{background:#e65100}
+  .hint{background:#ffe082;color:#5d4037}
+  .blue{background:#1e88e5;color:#fff}
+  .purple{background:#8e24aa;color:#fff}
+  .grey{background:#cfd8dc;color:#263238}
+  .btnrow{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px}
+  textarea{width:100%;box-sizing:border-box;min-height:300px;font-size:1.05em;line-height:1.7;font-family:Georgia,"Times New Roman",serif;padding:14px;border:3px solid #ffb74d;border-radius:12px}
+  textarea:focus{outline:none;border-color:#ef6c00}
+  .counter{display:flex;flex-wrap:wrap;gap:20px;align-items:center;margin:8px 0;font-weight:bold}
+  .meter{flex:1;min-width:200px;height:18px;background:#e0e0e0;border-radius:9px;overflow:hidden}
+  .meter div{height:100%;width:0;background:#ffb300;transition:width .2s}
+  .checklist label{display:block;padding:6px 4px;cursor:pointer}
+  .checklist input{transform:scale(1.4);margin-right:10px}
+  .prompts label{display:block;background:#fff3e0;border-radius:10px;padding:10px 14px;margin:8px 0;cursor:pointer}
+  .flow{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin:10px 0;font-size:.85em}
+  .flow span.st{background:#e3f2fd;border:2px solid #1e88e5;border-radius:8px;padding:4px 10px;font-weight:bold;color:#0d47a1}
+  .flow span.ar{color:#1e88e5;font-weight:bold}
+  .prompts input{transform:scale(1.3);margin-right:8px}
+  #scoreBox{position:sticky;bottom:0;background:#e65100;color:#fff;border-radius:16px 16px 0 0;padding:12px 20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-top:30px}
+  .w5{display:grid;gap:8px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));margin:10px 0}
+  .w5 label{display:block;font-weight:bold;color:#e65100}
+  .w5 input{width:100%;box-sizing:border-box;font-size:.95em;padding:6px 10px;border:2px solid #ffb74d;border-radius:8px;font-family:inherit}
+  #printArea{display:none}
+  @media print{
+    body{background:#fff;font-size:14pt}
+    .wrap,#scoreBox{display:none !important}
+    #printArea{display:block;font-family:Georgia,serif;line-height:1.8}
+    #printArea h1{font-size:18pt;margin:0 0 6pt}
+    #printArea .meta{font-size:11pt;color:#444}
+    #printArea .text{white-space:pre-wrap;border-top:1px solid #999;padding-top:10pt;margin-top:10pt}
+    #printArea .lines{margin-top:24pt;border-top:1px solid #999;padding-top:6pt;font-size:11pt}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+<a class="home" href="../../index.html">&larr; Back to all lessons</a>
+<h1>✍️ Writing Week 52: Play-by-Play &amp; Colour Commentary Script — Live from the Rink! 🏒🎙️</h1>
+<p>Yesterday you wrote a calm, thoughtful artist's statement. Today, Ace, you'll write something that is meant to be <strong>heard</strong>, fast and loud: a <strong>sports commentary script</strong>. On a hockey broadcast there are usually two voices. The <strong>play-by-play</strong> announcer tells listeners exactly what is happening <em>right now</em>, in quick, vivid, present-tense sentences. The <strong>colour commentator</strong>, often a former player or coach, explains <em>why</em> it happened, adds a statistic or a story, and helps the audience understand the strategy. Together they turn a game into a story that someone listening on the radio, who can't see a thing, can follow and feel. Today's genre is a <strong>script</strong>: writing for two speakers, with names, lines and short stage directions.</p>
+
+<h2>Part 1: The Lesson</h2>
+<div class="box">
+  <h3 style="margin-top:0">The six parts of a strong commentary script 🎙️</h3>
+  <p>Think of it as a mini-story told by two people who take turns.</p>
+  <div class="senses">
+    <div class="side"><strong>1. Scene-setter:</strong> where we are, who is playing, the score, the time left and what's at stake</div>
+    <div class="side"><strong>2. Play-by-play:</strong> short, present-tense action lines with strong verbs: who has the puck and where it goes</div>
+    <div class="side"><strong>3. Colour commentary:</strong> the expert explains <em>why</em>, with a fact or a statistic (a rate, not just a total!)</div>
+    <div class="side"><strong>4. The big moment:</strong> the build-up and the climax: a goal, a huge save, a breakaway</div>
+    <div class="side"><strong>5. Replay + analysis:</strong> slow it down and explain the key detail that made the play work</div>
+    <div class="side"><strong>6. Sign-off:</strong> the final score, what it means, and a memorable last line</div>
+  </div>
+  <h3>Five habits of great commentators</h3>
+  <ul>
+    <li><strong>Present tense for live action:</strong> <em>"Maya <u>picks</u> up the puck… she <u>is</u> flying down the wing!"</em> Switch to past tense only in the replay: <em>"Watch how she <u>faked</u> the shot."</em></li>
+    <li><strong>Strong, precise verbs</strong> instead of weak ones. ❌ <em>"He hits the puck and it goes in."</em> ✅ <em>"He <u>snaps</u> a wrist shot that <u>rockets</u> over the goalie's glove."</em></li>
+    <li><strong>Paint the picture for a listener who can't see:</strong> say <em>where</em> the puck is (blue line, left circle, top of the crease) and <em>who</em> has it.</li>
+    <li><strong>Make the colour commentator earn their spot:</strong> every colour line should add a <em>reason</em>, a <em>strategy</em> or a <em>fair statistic</em>, not just "Wow, that was great!"</li>
+    <li><strong>Vary sentence length:</strong> short, punchy sentences speed up the action. <em>"She shoots. She scores!"</em> Longer sentences slow it down for analysis.</li>
+  </ul>
+  <p><strong>Broadcaster's rule:</strong> close your eyes and have someone read your script out loud. If you can picture every play, it works.</p>
+</div>
+
+<div class="box tipbox">
+  <h3 style="margin-top:0">Mini-lesson: grammar for scripts and sports writing 📻</h3>
+  <p><strong>Script format:</strong> write each speaker's name in capital letters, followed by a colon, then the line: <em>PLAY-BY-PLAY: Here comes the opening faceoff.</em> Put short stage directions (sounds and actions, not spoken words) in square brackets: <em>[The crowd roars.]</em> No quotation marks are needed around the spoken lines in a script.</p>
+  <p><strong>Collective nouns take a singular verb</strong> in Canadian English: <em>the team <u>is</u></em>, <em>the crowd <u>roars</u></em>, <em>the Rapids defence <u>has</u> been strong</em>. (But a team's name in the plural, like <em>the Rapids</em>, takes a plural verb: <em>the Rapids <u>are</u> ahead</em>.)</p>
+  <p><strong>Possessives: team's vs. teams':</strong> one team owns it → <em>the team's coach</em>. Two or more teams own it → <em>both teams' goalies</em>. Plural names: <em>the Rapids' power play</em>.</p>
+  <p><strong>Numbers:</strong> use numerals for scores, times and stats (<em>3–2</em>, <em>with 45 seconds left</em>, <em>a 92% save percentage</em>), but spell out a number that starts a sentence (<em>Forty-five seconds to go!</em>). Canadian spelling: <strong>colour, centre, defence, favourite, metre</strong>.</p>
+</div>
+
+<div class="box">
+  <h3 style="margin-top:0">Model commentary script (about 250 words)</h3>
+  <p class="legend"><span class="ts">Scene-setter</span><span class="ev">Play-by-play + big moment</span><span class="ex">Colour commentary + replay</span><span class="cs">Sign-off</span></p>
+  <div class="model">
+    <span class="ts">PLAY-BY-PLAY: Good evening, hockey fans, and welcome to a packed Riverside Arena! It's the third period of the Peewee final, the Hillcrest Thunder lead the Riverside Rapids 2–1, and just 90 seconds remain.<br>COLOUR: The Thunder's goalie has been a brick wall tonight, with 27 saves on 29 shots. That's a save percentage of about 93%.</span><br>
+    <span class="ev">PLAY-BY-PLAY: Rapids win the faceoff! Sam slides it back to the point. He wires a pass across the blue line to Maya. Maya dekes around one defender, cuts to the middle… she's in alone! [The crowd rises.] She shoots… SHE SCORES! Top corner, glove side! It's tied 2–2!</span><br>
+    <span class="ex">COLOUR: Let's look at the replay. Watch Maya's eyes. She looked to the right, so the goalie slid right, and then she snapped it to the left. Maya scores on about 15% of her shots, but from the slot she's even more dangerous. That's why the coach keeps telling her to drive to the middle.</span><br>
+    <span class="cs">PLAY-BY-PLAY: What a finish! We're headed to overtime here at Riverside Arena. Stay with us, folks; this one isn't over yet!</span>
+  </div>
+  <p><strong>Notice:</strong> speaker names are in capitals with a colon; the stage direction is in square brackets; live action is in the <strong>present tense</strong> with strong verbs (<em>slides, wires, dekes, snapped</em> in the replay); the colour lines give a <strong>reason</strong> and a fair <strong>rate</strong>; the short sentences speed up the big moment. Look for <em>The Thunder's goalie</em> (possessive) and the numerals in <em>2–1</em> and <em>90 seconds</em>.</p>
+</div>
+
+<h2>Part 2: Name That Script Part</h2>
+<div class="box">
+  <p>Each line comes from a student's commentary script for a game between the <strong>Lakeview Loons</strong> and the <strong>Ridgeway Ravens</strong>. Choose which <strong>part</strong> of the script it shows best.</p>
+  <div id="labelRows"></div>
+  <div class="btnrow"><button type="button" class="go" id="checkLabels">Check my answers</button></div>
+  <div class="fb" id="labelFb"></div>
+</div>
+
+<h2>Part 3: Grammar Clinic 📏</h2>
+<div class="box tipbox">Every broadcaster needs a careful script editor! <strong>Section A:</strong> pick the correct sentence. <strong>Section B:</strong> type the sentence again with <em>all</em> mistakes fixed. We use <strong>Canadian spelling</strong> (colour, centre, defence, favourite, metre). Today, watch <strong>script format</strong>, <strong>present tense for live action</strong>, <strong>strong verbs</strong>, <strong>collective nouns</strong>, <strong>team's vs. teams'</strong> and <strong>numbers in sports writing</strong>.</div>
+<h3>Section A: Pick the correct sentence</h3>
+<div id="gmc"></div>
+<h3>Section B: Fix the sentence</h3>
+<p>Retype the whole sentence correctly, with capital letters and punctuation. Each one has <strong>at least two</strong> mistakes.</p>
+<div id="gfix"></div>
+
+<h2>Part 4: Your Turn to Write</h2>
+<div class="box">
+  <h3 style="margin-top:0">Step 1: Choose your broadcast</h3>
+  <p>Pick <strong>one</strong> prompt. Use today's reading (and math!) for ideas. Jot your plan in the boxes first, then write.</p>
+  <div class="prompts" id="prompts">
+    <label><input type="radio" name="prompt" value="Option A: The Championship Final" checked> 🏒 <strong>Option A: The Championship Final.</strong> Invent two hockey teams and write the last two minutes of a championship game, with one goal or one giant save that decides it. Use at least one statistic from your math lesson (a save percentage, a shooting percentage, a puck speed in km/h).</label>
+    <label><input type="radio" name="prompt" value="Option B: My Own Game, Live"> ⚽ <strong>Option B: My Own Game, Live.</strong> Write commentary for a real game, practice or match you played in or watched (hockey, soccer, basketball, ball hockey on the street). You and a friend or Dad can be the two commentators.</label>
+    <label><input type="radio" name="prompt" value="Option C: The Unusual Broadcast"> 🐿️ <strong>Option C: The Unusual Broadcast.</strong> Give play-by-play and colour commentary for something that isn't a sport: a squirrel stealing seeds from a bird feeder, Dad trying to cook pancakes, or a race between two raindrops on a window. Keep the real sports style!</label>
+  </div>
+  <p><strong>Plan your script:</strong> jot a few words for each box. (These notes save with your writing.)</p>
+  <div class="w5" id="w5">
+    <div><label for="w5who">Scene-setter (where, who, score, time left)</label><input id="w5who" type="text" autocomplete="off"></div>
+    <div><label for="w5place">My two commentators' names</label><input id="w5place" type="text" autocomplete="off"></div>
+    <div><label for="w5facts">A fact or fair statistic for the colour commentator</label><input id="w5facts" type="text" autocomplete="off"></div>
+    <div><label for="w5senses">Strong verbs I'll use (snaps, dekes, rockets…)</label><input id="w5senses" type="text" autocomplete="off"></div>
+    <div><label for="w5feel">The big moment (goal, save, breakaway)</label><input id="w5feel" type="text" autocomplete="off"></div>
+    <div><label for="w5closing">Sign-off line (final score + what it means)</label><input id="w5closing" type="text" autocomplete="off"></div>
+  </div>
+
+  <h3>Step 2: Write your script</h3>
+  <p><strong>Goal:</strong> <strong>200 to 350 words</strong> in <strong>script format</strong> with <strong>two speakers</strong> (names in capitals + a colon). Include all six parts: a <strong>scene-setter</strong> with the score and time; <strong>play-by-play</strong> in the <strong>present tense</strong> with at least <strong>five strong verbs</strong>; at least <strong>two colour lines</strong> that explain <em>why</em>, including <strong>one fair statistic</strong> (a rate or percent, not just a total); a <strong>big moment</strong>; a <strong>replay</strong>; and a <strong>sign-off</strong>. Use at least <strong>one stage direction</strong> in [square brackets] and at least <strong>one possessive</strong> (team's / teams' / Rapids'). Then add <strong>2–3 sentences to Dad</strong> about which commentator was harder to write and why. Bonus: use two words from today's spelling list correctly! Extra bonus: perform your script out loud with Dad, each of you taking one voice.</p>
+  <p><button type="button" class="hint" id="templateBtn">📋 Add the layout for me</button></p>
+  <label for="essay"><strong>Write here, Ace:</strong></label>
+  <textarea id="essay" placeholder="PLAY-BY-PLAY: Good evening, hockey fans..."></textarea>
+  <div class="counter">
+    <span id="wc">0 words</span>
+    <span id="sc">0 sentences</span>
+    <div class="meter" aria-hidden="true"><div id="meterBar"></div></div>
+  </div>
+  <div class="fb" id="wcMsg">Aim for 200 to 350 words.</div>
+  <p style="font-size:.8em;color:#607d8b" id="saveNote">Your writing is saved automatically in this browser as you type.</p>
+
+  <h3>Self-check before you finish ✅</h3>
+  <div class="checklist" id="checklist">
+    <label><input type="checkbox"> I used <strong>script format</strong>: speaker names in capitals with a colon, and at least one [stage direction].</label>
+    <label><input type="checkbox"> My <strong>scene-setter</strong> tells where we are, who's playing, the score and the time left.</label>
+    <label><input type="checkbox"> My <strong>play-by-play</strong> is in the <strong>present tense</strong> with at least five <strong>strong verbs</strong>.</label>
+    <label><input type="checkbox"> My <strong>colour commentator</strong> explains <em>why</em> and uses one <strong>fair statistic</strong> (a rate or percent).</label>
+    <label><input type="checkbox"> I included a <strong>big moment</strong>, a <strong>replay</strong> and a <strong>sign-off</strong> with the final score.</label>
+    <label><input type="checkbox"> I checked <strong>collective nouns</strong>, <strong>possessives</strong> (team's / teams'), <strong>numbers</strong> and <strong>Canadian spelling</strong>.</label>
+  </div>
+  <div class="btnrow">
+    <button type="button" class="blue" id="downloadBtn">⬇️ Download my writing (for Dad)</button>
+    <button type="button" class="purple" id="printBtn">🖨️ Print my writing</button>
+    <button type="button" class="grey" id="clearBtn">Start over</button>
+  </div>
+  <div class="fb" id="doneMsg"></div>
+</div>
+
+<div id="scoreBox"><span id="scoreText"></span><span>Keep broadcasting, Ace! 🏒🎙️</span></div>
+</div>
+
+<div id="printArea"></div>
+
+<script>
+var NAME="Ace";
+var PRAISE=["Nice work, Ace!","Correct! Great editing eye!","Yes! Ace fixed it!","Excellent, broadcaster Ace!","He shoots, he scores! That edit is top shelf! 🏒"];
+function pick(a){return a[Math.floor(Math.random()*a.length)];}
+
+var LABELS=["Scene-setter", "Play-by-play", "Colour commentary", "The big moment", "Replay + analysis", "Sign-off"];
+var LABEL_ITEMS=[
+ {s:"COLOUR: The Ravens have scored on only 4 of their last 30 power plays, about 13%, so the Loons won't mind taking this penalty.", a:"Colour commentary"},
+ {s:"PLAY-BY-PLAY: Welcome to Lakeview Arena, where the Loons and the Ravens are tied 1–1 with three minutes left in the third period.", a:"Scene-setter"},
+ {s:"PLAY-BY-PLAY: Priya carries it over the blue line… drop pass to Leo… Leo winds up…", a:"Play-by-play"},
+ {s:"PLAY-BY-PLAY: Leo blasts it… OFF THE POST AND IN! [The horn blares.] The Loons lead with eleven seconds to go!", a:"The big moment"},
+ {s:"COLOUR: Let's see that again. Notice how Priya skated toward the boards first, which pulled the defender away and opened up the lane for Leo.", a:"Replay + analysis"},
+ {s:"PLAY-BY-PLAY: That's the final: Loons 2, Ravens 1, and the Loons are headed to the provincial championship. Good night, everybody!", a:"Sign-off"}
+];
+var labelScore=0, labelChecked=false;
+function buildLabels(){
+  var box=document.getElementById("labelRows");
+  LABEL_ITEMS.forEach(function(it,i){
+    var d=document.createElement("div"); d.className="row"; d.id="lr"+i;
+    var sel='<select id="ls'+i+'" aria-label="Job of sentence '+(i+1)+'"><option value="">- choose -</option>';
+    LABELS.forEach(function(l){sel+='<option>'+l+'</option>';});
+    sel+='</select>';
+    d.innerHTML='<strong>'+(i+1)+'.</strong> '+it.s+'<br>'+sel+' <span id="lm'+i+'"></span>';
+    box.appendChild(d);
+  });
+}
+function checkLabels(){
+  var sc=0;
+  LABEL_ITEMS.forEach(function(it,i){
+    var ok=document.getElementById("ls"+i).value===it.a; if(ok)sc++;
+    document.getElementById("lr"+i).className="row "+(ok?"right":"wrong");
+    document.getElementById("lm"+i).textContent=ok?"✅":"❌";
+  });
+  labelScore=sc; labelChecked=true;
+  var fb=document.getElementById("labelFb");
+  if(sc===LABEL_ITEMS.length){fb.className="fb good";fb.textContent="🌟 "+sc+" / "+LABEL_ITEMS.length+". "+pick(PRAISE)+" You know exactly how a commentary script is built!";}
+  else{fb.className="fb bad";fb.textContent=sc+" / "+LABEL_ITEMS.length+". Hint: where, who, score and time = scene-setter; quick present-tense action = play-by-play; an expert explaining why, often with a stat = colour commentary; the goal or save itself = the big moment; slowing down to explain a play that already happened = replay + analysis; the final score and goodbye = sign-off.";}
+  updateScore();
+}
+
+var GMC=[
+ {q:"Which line uses <strong>script format</strong> correctly?",
+  o:["\"Play-by-play: Here comes the faceoff.\"", "PLAY-BY-PLAY: Here comes the faceoff.", "PLAY-BY-PLAY said here comes the faceoff", "Play-by-play, here comes the faceoff."],
+  a:1,e:"In a script, the speaker's name goes in capitals followed by a colon, then the spoken words, with no quotation marks needed."},
+ {q:"Which play-by-play line uses the <strong>present tense</strong> for live action?",
+  o:["Maya grabbed the puck and skated up the ice.", "Maya will grab the puck and skate up the ice.", "Maya grabs the puck and races up the ice!", "Maya had grabbed the puck and skated up the ice."],
+  a:2,e:"Live action happens <em>now</em>, so play-by-play uses the present tense: <strong>grabs</strong>, <strong>races</strong>. Past tense belongs in the replay."},
+ {q:"Which sentence uses the <strong>strongest, most precise verbs</strong>?",
+  o:["He hits the puck and it goes in the net.", "He does a shot and the puck gets in.", "He snaps a wrist shot that rockets past the goalie's glove.", "He shoots the puck and it is a goal."],
+  a:2,e:"<em>Snaps</em> and <em>rockets</em> help a listener <strong>see and hear</strong> the play. <em>Hits, goes, does, gets</em> are weak, vague verbs."},
+ {q:"Which sentence uses a <strong>collective noun</strong> with the correct verb?",
+  o:["The crowd are on their feet!", "The crowd is on its feet!", "The crowd were on its feet!", "The crowd be on their feet!"],
+  a:1,e:"In Canadian English, a collective noun like <em>crowd</em> or <em>team</em> usually acts as one group, so it takes a singular verb: <strong>the crowd is</strong>, with <strong>its</strong> feet."},
+ {q:"Both goalies are wearing new masks. Which sentence uses the <strong>possessive</strong> correctly?",
+  o:["Both team's goalies have new masks.", "Both teams goalies have new masks.", "Both teams' goalies have new masks.", "Both teams's goalies have new masks."],
+  a:2,e:"<em>Two</em> teams own the goalies, so the plural <em>teams</em> gets an apostrophe after the s: <strong>teams'</strong>. One team would be <em>the team's goalie</em>."},
+ {q:"Which sentence handles <strong>numbers</strong> the way sports writers do?",
+  o:["45 seconds to go, and the score is three to two!", "Forty-five seconds to go, and the score is 3–2!", "Forty-five seconds to go, and the score is three–two!", "45 Seconds to go, and the score is 3–2!"],
+  a:1,e:"Spell out a number that <strong>starts a sentence</strong> (<em>Forty-five</em>), but use numerals for scores and stats (<strong>3–2</strong>)."},
+ {q:"Which line is the most useful <strong>colour commentary</strong>?",
+  o:["Wow, that was great!", "That's a goal. The score is now 2–1.", "She's scored on 9 of her 30 breakaways this year, 30%, and that's why the coach sends her out late in close games.", "I really like her jersey."],
+  a:2,e:"Good colour commentary explains <strong>why</strong> and uses a fair statistic (a percent, not just a total). A is empty praise, B just repeats the play-by-play, and D isn't about the game."}
+];
+var gmcState=GMC.map(function(){return{answered:false,firstRight:false,done:false};});
+function buildGMC(){
+  var box=document.getElementById("gmc");
+  GMC.forEach(function(it,i){
+    var d=document.createElement("div"); d.className="box q"; d.id="g"+i;
+    var h='<div><strong>'+(i+1)+'.</strong> '+it.q+'</div>';
+    it.o.forEach(function(o,j){h+='<button type="button" class="opt" data-i="'+i+'" data-j="'+j+'">'+String.fromCharCode(65+j)+'. '+o+'</button>';});
+    h+='<div class="fb" id="gfb'+i+'"></div>';
+    d.innerHTML=h; box.appendChild(d);
+  });
+  box.addEventListener("click",function(e){
+    var b=e.target.closest?e.target.closest(".opt"):e.target; if(!b||!b.classList.contains("opt"))return;
+    var i=+b.getAttribute("data-i"), j=+b.getAttribute("data-j"), st=gmcState[i], it=GMC[i];
+    if(st.done)return;
+    var ok=j===it.a; if(!st.answered){st.answered=true;st.firstRight=ok;}
+    var fb=document.getElementById("gfb"+i);
+    if(ok){st.done=true;b.classList.add("sel-right");document.getElementById("g"+i).className="box q right";fb.className="fb good";fb.innerHTML="✅ "+pick(PRAISE)+' <span class="explain">'+it.e+'</span>';}
+    else{b.classList.add("sel-wrong");document.getElementById("g"+i).className="box q wrong";fb.className="fb bad";fb.textContent="❌ Not quite, Ace. Look closely and try again.";}
+    updateScore();
+  });
+}
+
+var GFIX=[
+ {bad:"the rapids defence have been strong all season",
+  ok:["The Rapids defence has been strong all season.","The Rapids' defence has been strong all season."],
+  hint:"Capitalize The and the team name Rapids. Defence is one group (a collective noun), so use has, not have. Defence is already Canadian spelling. End with a period."},
+ {bad:"the teams goalie make a huge save",
+  ok:["The team's goalie makes a huge save.","The team's goalie makes a huge save!"],
+  hint:"Capitalize The. The goalie belongs to one team, so write team's. The subject goalie is singular, so the verb needs an s: makes. End with a period or an exclamation mark."},
+ {bad:"maya grabbed the puck and she shoot it into the net",
+  ok:["Maya grabs the puck and she shoots it into the net.","Maya grabs the puck and shoots it into the net.","Maya grabs the puck and she shoots it into the net!","Maya grabs the puck and shoots it into the net!"],
+  hint:"Capitalize Maya. This is live play-by-play, so use the present tense for both verbs: grabs and shoots. End with a period or an exclamation mark."},
+ {bad:"ten seconds left and the score is tied two to two",
+  ok:["Ten seconds left, and the score is tied 2–2.","Ten seconds left, and the score is tied 2-2.","Ten seconds left, and the score is tied 2–2!","Ten seconds left, and the score is tied 2-2!","Ten seconds left and the score is tied 2–2.","Ten seconds left and the score is tied 2-2.","Ten seconds left and the score is tied 2–2!","Ten seconds left and the score is tied 2-2!"],
+  hint:"Capitalize Ten (it starts the sentence, so keep it spelled out). Scores use numerals with a dash: 2–2 (a hyphen 2-2 is fine when typing). A comma before and is optional. End with a period or an exclamation mark."}
+];
+
+var gfixState=GFIX.map(function(){return{tries:0,correct:false,firstRight:false};});
+function norm(s){return s.replace(/[\u2018\u2019\u02BC]/g,"'").replace(/[\u201C\u201D]/g,'"').replace(/\s+/g," ").trim();}
+function checkFixAnswer(i,val){var v=norm(val);return GFIX[i].ok.some(function(a){return norm(a)===v;});}
+function buildGFix(){
+  var box=document.getElementById("gfix");
+  GFIX.forEach(function(it,i){
+    var d=document.createElement("div"); d.className="box q"; d.id="f"+i;
+    d.innerHTML='<div><strong>'+(i+1)+'.</strong> Fix: <span class="bad-sent">'+it.bad+'</span></div>'+
+     '<input class="fix" type="text" id="fi'+i+'" autocomplete="off" spellcheck="false" aria-label="Corrected sentence '+(i+1)+'">'+
+     '<div class="btnrow"><button type="button" class="go" data-act="check" data-i="'+i+'">Check</button><button type="button" class="hint" data-act="hint" data-i="'+i+'">Hint 💡</button><button type="button" class="grey" data-act="show" data-i="'+i+'" style="display:none">Show answer</button></div>'+
+     '<div class="fb" id="ffb'+i+'"></div>';
+    box.appendChild(d);
+  });
+  box.addEventListener("click",function(e){
+    var b=e.target; if(b.tagName!=="BUTTON")return;
+    var i=+b.getAttribute("data-i"), act=b.getAttribute("data-act"), fb=document.getElementById("ffb"+i);
+    if(act==="hint"){fb.className="fb";fb.style.color="#5d4037";fb.textContent="💡 "+GFIX[i].hint;return;}
+    fb.style.color="";
+    if(act==="show"){fb.className="fb";fb.innerHTML='Answer: <em>'+GFIX[i].ok[0]+'</em>'+(GFIX[i].ok.length>1?' (other correct versions are accepted too)':'');return;}
+    fixCheck(i);
+  });
+  box.addEventListener("keydown",function(e){if(e.key==="Enter"&&e.target.classList.contains("fix"))fixCheck(+e.target.id.slice(2));});
+}
+function fixCheck(i){
+  var val=document.getElementById("fi"+i).value, fb=document.getElementById("ffb"+i), st=gfixState[i];
+  fb.style.color="";
+  if(!val.trim()){fb.className="fb bad";fb.textContent="Type the corrected sentence first, Ace!";return;}
+  st.tries++;
+  if(checkFixAnswer(i,val)){ if(st.tries===1)st.firstRight=true; st.correct=true; document.getElementById("f"+i).className="box q right"; fb.className="fb good"; fb.textContent="✅ "+pick(PRAISE); }
+  else { st.correct=false; document.getElementById("f"+i).className="box q wrong"; fb.className="fb bad"; fb.textContent="❌ Not quite. Check every capital letter, apostrophe, comma, and spelling. Try again!"; if(st.tries>=2)document.querySelector('#f'+i+' [data-act=show]').style.display="inline-block"; }
+  updateScore();
+}
+
+function updateScore(){
+  var g=0; gmcState.forEach(function(s){if(s.firstRight)g++;});
+  var f=0; gfixState.forEach(function(s){if(s.correct)f++;});
+  var total=LABEL_ITEMS.length+GMC.length+GFIX.length, got=labelScore+g+f;
+  document.getElementById("scoreText").textContent="Score: "+got+" / "+total+"  (labels "+(labelChecked?labelScore:"-")+"/"+LABEL_ITEMS.length+" · grammar A "+g+"/"+GMC.length+" · grammar B "+f+"/"+GFIX.length+")";
+}
+
+var W5=["who","place","facts","senses","feel","closing"];
+function w5Save(){try{localStorage.setItem(KEY+"-5w",JSON.stringify(W5.map(function(k){return document.getElementById("w5"+k).value;})));}catch(e){}}
+function w5Restore(){try{var d=JSON.parse(localStorage.getItem(KEY+"-5w")||"null");if(d)d.forEach(function(x,i){document.getElementById("w5"+W5[i]).value=x;});}catch(e){}}
+function w5Summary(){return W5.map(function(k){return k.charAt(0).toUpperCase()+k.slice(1)+": "+document.getElementById("w5"+k).value;}).join("\n");}
+function addTemplate(){
+  var t=document.getElementById("essay");
+  var tpl="TITLE OF MY BROADCAST: ...\nCOMMENTATORS: PLAY-BY-PLAY = ...   COLOUR = ...\n\nSCENE-SETTER\nPLAY-BY-PLAY: (where are we? who is playing? score? time left?)\nCOLOUR: (what's at stake? a fair statistic?)\n\nPLAY-BY-PLAY (present tense, strong verbs):\n\nCOLOUR (explain why):\n\nTHE BIG MOMENT\nPLAY-BY-PLAY:\n[stage direction]\n\nREPLAY + ANALYSIS\nCOLOUR:\n\nSIGN-OFF\nPLAY-BY-PLAY: (final score + what it means)\n\nNOTE TO DAD (which commentator was harder to write, and why):\n\nby "+NAME;
+  if(t.value.trim()&&!confirm("Add the script layout below what you've already written?"))return;
+  t.value=(t.value.trim()?t.value.replace(/\s+$/,"")+"\n\n":"")+tpl; updateCount(); t.focus();
+}
+var KEY="ace-writing-2026-11-18";
+function countWords(t){var m=t.trim().match(/[A-Za-zÀ-ÿ0-9]+(?:['’\-][A-Za-zÀ-ÿ0-9]+)*/g);return m?m.length:0;}
+function countSentences(t){var m=t.match(/[^.!?]*[A-Za-z0-9][^.!?]*[.!?]+/g);return m?m.length:0;}
+function currentPrompt(){var r=document.querySelector('input[name=prompt]:checked');return r?r.value:"";}
+function updateCount(){
+  var t=document.getElementById("essay").value, w=countWords(t), s=countSentences(t);
+  document.getElementById("wc").textContent=w+(w===1?" word":" words");
+  document.getElementById("sc").textContent=s+(s===1?" sentence":" sentences");
+  var bar=document.getElementById("meterBar"); bar.style.width=Math.min(100,w/350*100)+"%";
+  var msg=document.getElementById("wcMsg");
+  if(w<200){bar.style.background="#ffb300";msg.className="fb";msg.textContent=w===0?"Aim for 200 to 350 words.":"Keep going, Ace! "+(200-w)+" more words to reach the goal.";}
+  else if(w<=350){bar.style.background="#43a047";msg.className="fb good";msg.textContent="🎯 You're in the target zone! Nice work, Ace!";}
+  else{bar.style.background="#1e88e5";msg.className="fb";msg.textContent="Wow, that's a lot of writing! Real broadcasts move fast. Could any lines be cut to keep the action quick?";}
+  try{localStorage.setItem(KEY,JSON.stringify({text:t,prompt:currentPrompt(),checks:checkStates()}));}catch(e){document.getElementById("saveNote").textContent="(This browser can't auto-save here, so use the Download button before closing!)";}
+}
+function checkStates(){return Array.prototype.map.call(document.querySelectorAll("#checklist input"),function(c){return c.checked;});}
+function checklistText(){
+  return Array.prototype.map.call(document.querySelectorAll("#checklist label"),function(l){return (l.querySelector("input").checked?"[x] ":"[ ] ")+l.textContent.trim();}).join("\n");
+}
+function buildReport(){
+  var t=document.getElementById("essay").value;
+  return "Writing Week 52: "+NAME+"\nDate: "+new Date().toLocaleString("en-CA")+"\nPrompt: "+currentPrompt()+
+    "\nWords: "+countWords(t)+"   Sentences: "+countSentences(t)+"\nPlanning notes:\n"+w5Summary()+
+    "\n\n----- "+NAME+"'s writing -----\n\n"+t+"\n\n----- Self-check -----\n"+checklistText()+
+    "\n\n----- Parent feedback -----\n\n\n";
+}
+function download(){
+  var t=document.getElementById("essay").value;
+  if(!t.trim()){document.getElementById("doneMsg").className="fb bad";document.getElementById("doneMsg").textContent="Write something first, Ace!";return;}
+  var blob=new Blob([buildReport().replace(/\n/g,"\r\n")],{type:"text/plain;charset=utf-8"});
+  var a=document.createElement("a"); a.href=URL.createObjectURL(blob); a.download=NAME+"-writing-2026-11-18"+".txt";
+  document.body.appendChild(a); a.click();
+  setTimeout(function(){URL.revokeObjectURL(a.href);a.remove();},1000);
+  var dm=document.getElementById("doneMsg"); dm.className="fb good"; dm.textContent="📄 Saved! Look in your Downloads folder and show Dad. Great job finishing, Ace!";
+}
+function esc(s){return s.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");}
+function printIt(){
+  var t=document.getElementById("essay").value;
+  if(!t.trim()){document.getElementById("doneMsg").className="fb bad";document.getElementById("doneMsg").textContent="Write something first, Ace!";return;}
+  document.getElementById("printArea").innerHTML="<h1>Writing Week 52: "+NAME+"</h1><div class='meta'>"+esc(new Date().toLocaleString("en-CA"))+"<br><strong>Prompt:</strong> "+esc(currentPrompt())+"<br>Words: "+countWords(t)+" · Sentences: "+countSentences(t)+"</div><div class='text'>"+esc(t)+"</div><div class='lines'><strong>Self-check:</strong><br>"+esc(checklistText()).replace(/\n/g,"<br>")+"</div><div class='lines'><strong>Parent feedback:</strong><br><br><br><br></div>";
+  window.print();
+}
+function restore(){
+  try{var d=JSON.parse(localStorage.getItem(KEY)||"null"); if(!d)return;
+    document.getElementById("essay").value=d.text||"";
+    Array.prototype.forEach.call(document.querySelectorAll("input[name=prompt]"),function(r){r.checked=(r.value===d.prompt);});
+    if(!document.querySelector("input[name=prompt]:checked"))document.querySelector("input[name=prompt]").checked=true;
+    var cs=document.querySelectorAll("#checklist input"); (d.checks||[]).forEach(function(v,i){if(cs[i])cs[i].checked=v;});
+  }catch(e){}
+}
+buildLabels(); buildGMC(); buildGFix(); restore(); w5Restore(); updateCount(); updateScore();
+W5.forEach(function(k){document.getElementById("w5"+k).addEventListener("input",w5Save);});
+document.getElementById("templateBtn").addEventListener("click",addTemplate);
+document.getElementById("checkLabels").addEventListener("click",checkLabels);
+document.getElementById("essay").addEventListener("input",updateCount);
+document.getElementById("checklist").addEventListener("change",function(){updateCount(); if(checkStates().every(Boolean)){var dm=document.getElementById("doneMsg");dm.className="fb good";dm.textContent="✅ All boxes checked! Now download or print it for Dad. Awesome work, Ace!";}});
+document.getElementById("prompts").addEventListener("change",updateCount);
+document.getElementById("downloadBtn").addEventListener("click",download);
+document.getElementById("printBtn").addEventListener("click",printIt);
+document.getElementById("clearBtn").addEventListener("click",function(){ if(confirm("Erase your writing and start over?")){document.getElementById("essay").value="";Array.prototype.forEach.call(document.querySelectorAll("#checklist input"),function(c){c.checked=false;});document.getElementById("doneMsg").textContent="";updateCount();} });
+</script>
+<script src="../../assets/autosave.js"></script>
+</body>
+</html>

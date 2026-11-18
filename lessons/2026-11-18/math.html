@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Math (Nov. 18): Hockey by the Numbers: Team Statistician's Math Lab</title>
+<style>
+  body{font-family:"Segoe UI",Verdana,Arial,sans-serif;font-size:20px;line-height:1.6;margin:0;background:#f5f0eb;color:#2c2416}
+  .wrap{max-width:880px;margin:0 auto;padding:20px 18px 80px}
+  a.home{font-size:.9em;color:#bf360c}
+  h1{color:#e65100;font-size:2em;margin:10px 0}
+  h2{color:#ef6c00;margin-top:36px;border-bottom:3px solid #ffcc80;padding-bottom:4px}
+  .box{background:#fff;border-radius:16px;padding:18px 22px;margin:16px 0;box-shadow:0 3px 10px rgba(0,0,0,.07)}
+  .example{border-left:8px solid #ef6c00}
+  .example h3{margin:0 0 6px;color:#e65100}
+  .step{margin:4px 0 4px 10px}
+  code,.mono{font-family:Consolas,"Courier New",monospace;background:#fff3e0;padding:1px 6px;border-radius:5px}
+  .q{border-left:8px solid #90a4ae}
+  .q.right{border-left-color:#43a047;background:#f1f8e9}
+  .q.wrong{border-left-color:#e53935;background:#fff5f5}
+  .qnum{font-weight:bold;color:#e65100}
+  .row{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:10px}
+  input[type=text]{font-size:1.05em;padding:8px 12px;border:2px solid #ffcc80;border-radius:10px;width:190px}
+  input[type=text]:focus{outline:none;border-color:#ef6c00;box-shadow:0 0 0 3px #ffe0b2}
+  button{font-size:.95em;padding:8px 16px;border:none;border-radius:10px;cursor:pointer;font-weight:bold}
+  .check{background:#ef6c00;color:#fff} .check:hover{background:#e65100}
+  .hint{background:#ffe082;color:#5d4037} .hint:hover{background:#ffd54f}
+  .sol{background:#ce93d8;color:#311b92}
+  .unit{color:#546e7a}
+  .fb{margin-top:8px;font-weight:bold;min-height:1em}
+  .fb.good{color:#2e7d32} .fb.bad{color:#c62828}
+  .hints{margin-top:8px;color:#e65100;background:#fff3e0;border-radius:10px;padding:0 12px}
+  .hints p{margin:6px 0;padding:6px 0}
+  .solution{margin-top:8px;background:#f3e5f5;border-radius:10px;padding:8px 12px;display:none}
+  #scoreBox{position:sticky;bottom:0;background:#e65100;color:#fff;border-radius:16px 16px 0 0;padding:12px 20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-top:30px}
+  #scoreBox button{background:#ffca28;color:#3e2723}
+  #final{display:none;font-size:1.15em;text-align:center;border:4px solid #43a047}
+  .tipbox{background:#fff8e1;border-left:8px solid #ffb300}
+</style>
+</head>
+<body>
+<div class="wrap">
+<a class="home" href="../../index.html">&larr; Back to all lessons</a>
+<h1>🏒 Math Week 52: Hockey by the Numbers: Team Statistician's Math Lab</h1>
+<p>Ace, every NHL team, every junior team and even many minor hockey clubs now have someone whose job is to turn the game into <strong>numbers</strong>: a <strong>statistician</strong> (stat-ih-STISH-un). They count shots, saves, goals, passes and seconds of ice time, then use math to answer real questions: Which goalie is really stopping more pucks? Is our power play getting better? How fast does a slapshot fly? Today you are the statistician for the <strong>Riverside Rapids</strong>, a made-up Peewee team. You'll use <strong>area of a rectangle, percents and rates (shooting percentage and save percentage), goals-against average, converting m/s to km/h, distance = speed × time, the team standings formula, ratios as percents, integers (plus/minus), median vs. mean, the probability of two events, the volume of a cylinder, very thin layers in millimetres, a one-step algebra equation, and a "how many more do we need?" percent problem</strong>.</p>
+
+<h2>Part 1: Learn the Moves</h2>
+
+<div class="box tipbox">
+  <strong>The 4-Step Problem Solver (your team statistician's checklist):</strong>
+  <ol>
+    <li><strong>Read</strong>: What is the question actually asking? Underline the numbers and units (m, cm, mm, m², cm³, L, m/s, km/h, seconds, minutes, %).</li>
+    <li><strong>Plan</strong>: Do the units match? Change litres to cubic metres or seconds to minutes <em>before</em> you answer.</li>
+    <li><strong>Solve</strong>: Do one step at a time and write each step down.</li>
+    <li><strong>Check</strong>: Is my answer reasonable? A save percentage can't be more than 100%, and a puck doesn't fly 5 000 km/h!</li>
+  </ol>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 1: Area of the ice</h3>
+  <p class="step">A practice rink is 50 m long and 25 m wide. If we pretend the rounded corners are square, its area is 50 × 25 = <strong>1 250 m²</strong>.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 2: Shooting percentage</h3>
+  <p class="step">Shooting percentage = goals ÷ shots on goal × 100. A player with 6 goals on 40 shots: 6 ÷ 40 = 0.15, so <strong>15%</strong>. That means about 15 of every 100 shots go in.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 3: Save percentage</h3>
+  <p class="step">A goalie faces 25 shots and lets in 2 goals, so she makes 25 − 2 = 23 saves. Save percentage = saves ÷ shots × 100 = 23 ÷ 25 × 100 = <strong>92%</strong>. (The NHL often writes it as a decimal: .920.)</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 4: Goals-against average (a rate)</h3>
+  <p class="step">Goals-against average (GAA) = goals allowed × 60 ÷ minutes played. It answers: "How many goals would this goalie allow in one full 60-minute game, on average?" 5 goals in 150 minutes: 5 × 60 ÷ 150 = <strong>2.0</strong>.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 5: m/s to km/h</h3>
+  <p class="step">1 m/s means 1 m every second. An hour has 3 600 seconds, so that's 3 600 m = 3.6 km every hour. To change m/s to km/h, <strong>multiply by 3.6</strong>. 25 m/s × 3.6 = <strong>90 km/h</strong>.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 6: Time = distance ÷ speed</h3>
+  <p class="step">A pass travels 12 m at 20 m/s. Time = 12 ÷ 20 = <strong>0.6 seconds</strong>.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 7: Standings points</h3>
+  <p class="step">In many leagues a win = 2 points, an overtime (OT) loss = 1 point, and a loss in regular time = 0 points. 10 wins, 5 regulation losses and 3 OT losses: 10 × 2 + 3 × 1 = <strong>23 points</strong>.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 8: A ratio as a percent of the whole</h3>
+  <p class="step">If the shots were 30 for us and 20 for them, the ratio is 30 : 20, and the whole is 30 + 20 = 50 shots. Our share = 30 ÷ 50 = 0.6 = <strong>60%</strong>.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 9: Integers and plus/minus</h3>
+  <p class="step">A player gets +1 when her team scores while she's on the ice and −1 when the other team scores. On for 9 goals for and 12 against: 9 − 12 = <strong>−3</strong>.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 10: Median vs. mean</h3>
+  <p class="step">Goals in 5 games: 1, 6, 2, 1, 0. Mean = (1 + 6 + 2 + 1 + 0) ÷ 5 = 10 ÷ 5 = 2. Median: put them in order (0, 1, 1, 2, 6) and take the middle one: <strong>1</strong>. One big game (6 goals) pulls the mean up, but not the median.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 11: Probability of two things both happening</h3>
+  <p class="step">If something happens with probability 1/2 and then (separately) something else with probability 1/4, the chance that <em>both</em> happen is 1/2 × 1/4 = <strong>1/8</strong>. Multiply the probabilities.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 12: Volume of a cylinder</h3>
+  <p class="step">Volume of a cylinder = area of the circle × height = π × r × r × h. Use π ≈ 3.14. Radius 2 cm, height 5 cm: 3.14 × 2 × 2 × 5 = <strong>62.8 cm³</strong>. Remember: the <strong>radius</strong> is half the diameter!</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 13: Spreading water very thin</h3>
+  <p class="step">1 m³ = 1 000 L. Spread 500 L (0.5 m³) over 1 000 m²: thickness = volume ÷ area = 0.5 ÷ 1 000 = 0.0005 m = <strong>0.5 mm</strong>.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 14: Equations with "times as many"</h3>
+  <p class="step">Points = goals + assists. If a player has 2 times as many assists as goals and 18 points: call goals <em>g</em>. Then g + 2g = 18, so 3g = 18 and <strong>g = 6</strong> goals (and 12 assists).</p>
+</div>
+<h2>Part 2: The Challenge (15 problems)</h2>
+<p>Type your answer and press <strong>Check</strong> (or Enter). Negative numbers like <span class="mono">-35</span>, fractions like <span class="mono">3/4</span>, mixed numbers like <span class="mono">1 3/4</span>, or decimals like <span class="mono">1.75</span> are fine. Don't type the units or % signs, and you may use spaces or commas in big numbers (1 000 000). Stuck? Press <strong>Hint</strong>. After 2 tries, you can see a full solution.</p>
+
+<div id="questions"></div>
+<div class="box" id="final"></div>
+<div id="scoreBox">
+  <span id="scoreText">Score: 0 / 15 correct</span>
+  <button id="finishBtn" type="button">I'm done! Show my final score</button>
+</div>
+</div>
+
+<script>
+var NAME = "Ace";
+var TABLE = '<table style="border-collapse:collapse;margin:10px 0;font-size:.95em;background:#fff"><caption style="font-weight:bold;text-align:left;padding-bottom:4px">Rapids goals per game (last 7 games)</caption><tr><th style="border:1px solid #bdbdbd;padding:4px 10px;background:#eceff1">Game</th><th style="border:1px solid #bdbdbd;padding:4px 10px;background:#eceff1">1</th><th style="border:1px solid #bdbdbd;padding:4px 10px;background:#eceff1">2</th><th style="border:1px solid #bdbdbd;padding:4px 10px;background:#eceff1">3</th><th style="border:1px solid #bdbdbd;padding:4px 10px;background:#eceff1">4</th><th style="border:1px solid #bdbdbd;padding:4px 10px;background:#eceff1">5</th><th style="border:1px solid #bdbdbd;padding:4px 10px;background:#eceff1">6</th><th style="border:1px solid #bdbdbd;padding:4px 10px;background:#eceff1">7</th></tr><tr><td style="border:1px solid #bdbdbd;padding:4px 10px">Goals</td><td style="border:1px solid #bdbdbd;padding:4px 10px">2</td><td style="border:1px solid #bdbdbd;padding:4px 10px">1</td><td style="border:1px solid #bdbdbd;padding:4px 10px">4</td><td style="border:1px solid #bdbdbd;padding:4px 10px">0</td><td style="border:1px solid #bdbdbd;padding:4px 10px">2</td><td style="border:1px solid #bdbdbd;padding:4px 10px">9</td><td style="border:1px solid #bdbdbd;padding:4px 10px">3</td></tr></table>';
+var QUESTIONS = [
+ {t:"An NHL rink is about <strong>61 m</strong> long and <strong>26 m</strong> wide. Pretend the rounded corners are square. What is the <strong>area</strong> of the ice in m²?", a:"1586", u:"m²",
+  h:["Area of a rectangle = length × width.","61 × 26: try 60 × 26 = 1 560, then add one more 26."],
+  s:"61 × 26 = 1 560 + 26 = 1 586 m². (The real rink is a little less because the corners are rounded.)"},
+ {t:"Rapids forward <strong>Maya</strong> has scored <strong>12 goals</strong> on <strong>80 shots</strong> on goal this season. What is her <strong>shooting percentage</strong>?", a:"15", u:"%",
+  h:["Shooting percentage = goals ÷ shots × 100.","12 ÷ 80 = 0.15."],
+  s:"12 ÷ 80 = 0.15 = 15%. About 15 of every 100 of her shots go in."},
+ {t:"In Saturday's game, Rapids goalie <strong>Jordan</strong> faced <strong>32 shots</strong> and let in <strong>2 goals</strong>. What was Jordan's <strong>save percentage</strong>? (Give the exact percent, like 87.5. Don't round.)", a:"93.75", u:"%",
+  h:["First find the saves: shots − goals allowed.","30 saves out of 32 shots: 30 ÷ 32 × 100."],
+  s:"32 − 2 = 30 saves. 30 ÷ 32 = 0.9375 = 93.75%. (The NHL would write .938.)"},
+ {t:"Over a tournament, Jordan allowed <strong>9 goals</strong> in <strong>270 minutes</strong> of play. What is Jordan's <strong>goals-against average</strong> (goals per 60 minutes)?", a:"2", u:"goals per game",
+  h:["GAA = goals allowed × 60 ÷ minutes played.","9 × 60 = 540. Now divide by 270."],
+  s:"9 × 60 = 540, and 540 ÷ 270 = 2.0. Jordan allows about 2 goals in a full 60-minute game. (270 minutes = 4.5 games, and 9 ÷ 4.5 = 2 too!)"},
+ {t:"A strong NHL slapshot can travel about <strong>45 m/s</strong>. How fast is that in <strong>km/h</strong>?", a:"162", u:"km/h",
+  h:["To change m/s to km/h, multiply by 3.6.","45 × 3.6 = 45 × 3 + 45 × 0.6."],
+  s:"45 × 3.6 = 135 + 27 = 162 km/h, faster than a car on the highway!"},
+ {t:"A puck shot at <strong>36 m/s</strong> travels <strong>18 m</strong> from the blue line to the net. How many <strong>seconds</strong> does the goalie have to react?", a:"0.5", u:"s",
+  h:["Time = distance ÷ speed.","18 ÷ 36."],
+  s:"18 ÷ 36 = 0.5 seconds, half a second! That's why goalies watch the shooter's stick, not just the puck."},
+ {t:"The Rapids' record is <strong>20 wins</strong>, <strong>8 regulation losses</strong> and <strong>4 overtime losses</strong>. A win is worth 2 points and an OT loss 1 point. Their <strong>points percentage</strong> = points earned ÷ points possible (2 per game) × 100. What is their points percentage?", a:"68.75", u:"%",
+  h:["Points: 20 × 2 + 4 × 1. Games played: 20 + 8 + 4.","44 points out of a possible 32 × 2 = 64."],
+  s:"Points = 40 + 4 = 44. Games = 32, so possible points = 64. 44 ÷ 64 = 0.6875 = 68.75%."},
+ {t:"Against the Hillcrest Thunder, shots were <strong>36 : 24</strong> in the Rapids' favour. What <strong>percent</strong> of all the shots in the game did the Rapids take?", a:"60", u:"%",
+  h:["The whole is all the shots: 36 + 24.","36 ÷ 60 × 100."],
+  s:"36 + 24 = 60 shots in total. 36 ÷ 60 = 0.6 = 60%. Statisticians call this a team's shot share."},
+ {t:"Defender <strong>Sam</strong> was on the ice for <strong>14</strong> even-strength goals by the Rapids and <strong>19</strong> by the other teams. What is Sam's <strong>plus/minus</strong>? (Type a negative number with a minus sign.)", a:"-5", u:"",
+  h:["+1 for each goal for, −1 for each goal against.","14 − 19."],
+  s:"14 − 19 = −5. (But careful: a defender on a team that gives up lots of shots can have a low plus/minus even if he plays well. One number never tells the whole story.)"},
+ {t:TABLE+"The coach says, \"We average 3 goals a game!\" The mean really is 3. What is the <strong>median</strong> number of goals per game?", a:"2", u:"goals",
+  h:["Put the 7 numbers in order from least to greatest.","0, 1, 2, 2, 3, 4, 9. The middle (4th) number is the median."],
+  s:"In order: 0, 1, 2, 2, 3, 4, 9. The median is the 4th value: 2 goals. The one 9-goal game pulls the mean up to 3, so the median gives a fairer picture of a \"typical\" game."},
+ {t:"In shootouts, Maya scores on <strong>1/3</strong> of her attempts. Assume each attempt is separate. What is the probability she scores on <strong>both</strong> of her next <strong>2</strong> attempts? (Type a fraction like 1/5.)", a:"1/9", u:"",
+  h:["For two separate events both to happen, multiply their probabilities.","1/3 × 1/3."],
+  s:"1/3 × 1/3 = 1/9, about 11%. Scoring on one attempt is common for her; scoring on two in a row is much rarer."},
+ {t:"A hockey puck is a cylinder of rubber about <strong>7.6 cm</strong> across (diameter) and <strong>2.5 cm</strong> thick. Using π ≈ 3.14, what is its <strong>volume</strong> to the nearest <strong>whole cm³</strong>?", a:"113", u:"cm³",
+  h:["The radius is half the diameter: 7.6 ÷ 2 = 3.8 cm.","Volume = 3.14 × 3.8 × 3.8 × 2.5. 3.8 × 3.8 = 14.44."],
+  s:"r = 3.8 cm. 3.8 × 3.8 = 14.44. 14.44 × 2.5 = 36.1. 36.1 × 3.14 = 113.354, so about 113 cm³."},
+ {t:"Between periods, an ice resurfacer spreads about <strong>476 L</strong> of hot water over the whole <strong>1 586 m²</strong> NHL rink (your answer from question 1). About how many <strong>millimetres</strong> thick is the new layer of water? Round to the nearest <strong>tenth</strong> of a millimetre.", a:"0.3", u:"mm",
+  h:["Change litres to cubic metres: 476 L = 0.476 m³.","Thickness = volume ÷ area = 0.476 ÷ 1 586 m. Then × 1 000 for millimetres."],
+  s:"0.476 ÷ 1 586 ≈ 0.0003 m. × 1 000 = 0.3 mm, thinner than a credit card! That thin layer freezes in minutes into smooth new ice."},
+ {t:"Points = goals + assists. Ace's favourite player has <strong>3 times as many assists as goals</strong> and <strong>28 points</strong>. How many <strong>goals</strong> does the player have?", a:"7", u:"goals",
+  h:["Let g = goals. Then assists = 3g, and g + 3g = 28.","4g = 28."],
+  s:"g + 3g = 4g = 28, so g = 7 goals (and 21 assists). Check: 7 + 21 = 28. ✔"},
+ {t:"The Rapids' power play has scored <strong>9 goals</strong> on <strong>45</strong> chances (20%). The coach wants a <strong>25%</strong> power play after their next <strong>15</strong> chances. How many power-play goals do they need in those 15 chances?", a:"6", u:"goals",
+  h:["After 15 more chances, there will be 45 + 15 = 60 chances in total.","25% of 60 is the total number of goals needed. Subtract the 9 they already have."],
+  s:"45 + 15 = 60 chances. 25% of 60 = 15 goals in total. 15 − 9 = 6 more goals. Check: 15 ÷ 60 = 25%. ✔"}
+];
+
+var PRAISE = ["Nice work, Ace!","Correct! Top-shelf thinking! 🏒","Yes! That answer hits the back of the net! 🥅","Excellent, Ace. That was a tough one!","He shoots, he scores! 🎯","Brilliant thinking, Ace!","Spot on, team statistician Ace! 📊"];
+var ENCOURAGE = ["Not quite. Check your steps and try again!","Close call. Try again, Ace! Maybe use a hint?","Hmm, not yet. Re-read the question carefully.","Keep going, Ace. Mistakes help your brain grow!"];
+
+function parseAnswer(str){
+  if(str===undefined||str===null) return NaN;
+  var s=String(str).trim().toLowerCase();
+  s=s.replace(/[\u2212\u2013]/g,"-");
+  s=s.replace(/(\d),(?=\d{3}(\D|$))/g,"$1");
+  s=s.replace(/[^0-9.\/\- ]/g," ").replace(/\s+/g," ").trim();
+  s=s.replace(/\s*\/\s*/g,"/");
+  var m;
+  if((m=s.match(/^(-?\d+) (\d+)\/(\d+)$/))){ var w=parseFloat(m[1]),n=parseFloat(m[2]),d=parseFloat(m[3]); if(d===0)return NaN; return w<0? w-n/d : w+n/d; }
+  if((m=s.match(/^(-?\d+(?:\.\d+)?)\/(\d+(?:\.\d+)?)$/))){ var d2=parseFloat(m[2]); if(d2===0)return NaN; return parseFloat(m[1])/d2; }
+  s=s.replace(/ /g,"");
+  if(/^-?(\d+\.?\d*|\.\d+)$/.test(s)) return parseFloat(s);
+  return NaN;
+}
+function isCorrect(input,key){
+  var a=parseAnswer(input), k=parseAnswer(key);
+  if(isNaN(a)) return false;
+  var isInt=Math.abs(k-Math.round(k))<1e-12;
+  var tol=isInt?1e-9:0.005;
+  return Math.abs(a-k)<=tol;
+}
+
+function isRomanCorrect(input,key){ return String(input).replace(/\s+/g,"").toUpperCase()===key; }
+var state=[];
+function render(){
+  var box=document.getElementById("questions");
+  QUESTIONS.forEach(function(q,i){
+    state.push({correct:false,tries:0,hints:0});
+    var d=document.createElement("div");
+    d.className="box q"; d.id="q"+i;
+    d.innerHTML='<div><span class="qnum">'+(i+1)+'.</span> '+q.t+'</div>'+
+      '<div class="row"><input type="text"'+(q.r?' placeholder="e.g. MMXXVI"':'')+' id="in'+i+'" aria-label="Answer to question '+(i+1)+'" autocomplete="off"> <span class="unit">'+q.u+'</span>'+
+      '<button type="button" class="check" data-i="'+i+'">Check</button>'+
+      '<button type="button" class="hint" data-i="'+i+'">Hint 💡</button>'+
+      '<button type="button" class="sol" data-i="'+i+'" style="display:none">Show solution</button></div>'+
+      '<div class="fb" id="fb'+i+'"></div><div class="hints" id="hints'+i+'"></div>'+
+      '<div class="solution" id="sol'+i+'"><strong>Solution:</strong> '+q.s+'</div>';
+    box.appendChild(d);
+  });
+  box.addEventListener("click",function(e){
+    var b=e.target; if(b.tagName!=="BUTTON")return;
+    var i=+b.getAttribute("data-i");
+    if(b.className==="check") check(i);
+    else if(b.className==="hint") hint(i);
+    else if(b.className==="sol") document.getElementById("sol"+i).style.display="block";
+  });
+  box.addEventListener("keydown",function(e){
+    if(e.key==="Enter"&&e.target.tagName==="INPUT"){ check(+e.target.id.slice(2)); }
+  });
+}
+function pick(arr){return arr[Math.floor(Math.random()*arr.length)];}
+function check(i){
+  var val=document.getElementById("in"+i).value;
+  var fb=document.getElementById("fb"+i), card=document.getElementById("q"+i);
+  if(val.trim()===""){fb.className="fb bad";fb.textContent="Type an answer first, Ace!";return;}
+  var isR=!!QUESTIONS[i].r;
+  if(isR&&!/^[ivxlcdm\s]+$/i.test(val)){fb.className="fb bad";fb.textContent="Use only Roman numeral letters: I, V, X, L, C, D, M.";return;}
+  if(!isR&&isNaN(parseAnswer(val))){fb.className="fb bad";fb.textContent="I can't read that as a number. Try something like 42, 3.5, 3/4 or 1 3/4.";return;}
+  state[i].tries++;
+  if(isR?isRomanCorrect(val,QUESTIONS[i].a):isCorrect(val,QUESTIONS[i].a)){
+    state[i].correct=true; card.className="box q right"; fb.className="fb good";
+    fb.textContent="✅ "+pick(PRAISE)+(state[i].tries===1?" (first try!)":"");
+  } else {
+    state[i].correct=false; card.className="box q wrong"; fb.className="fb bad";
+    fb.textContent="❌ "+pick(ENCOURAGE);
+    if(state[i].tries>=2) card.querySelector(".sol").style.display="inline-block";
+  }
+  updateScore();
+}
+function hint(i){
+  var q=QUESTIONS[i], s=state[i], hb=document.getElementById("hints"+i);
+  if(s.hints<q.h.length){
+    var p=document.createElement("p"); p.textContent="💡 Hint "+(s.hints+1)+": "+q.h[s.hints]; hb.appendChild(p); s.hints++;
+  }
+  if(s.hints>=q.h.length) document.querySelector("#q"+i+" .hint").disabled=true;
+  updateScore();
+}
+function counts(){
+  var c=0,first=0,h=0;
+  state.forEach(function(s){ if(s.correct){c++; if(s.tries===1)first++;} h+=s.hints; });
+  return {correct:c,first:first,hints:h};
+}
+function updateScore(){
+  var k=counts();
+  document.getElementById("scoreText").textContent="Score: "+k.correct+" / "+QUESTIONS.length+" correct · hints used: "+k.hints;
+}
+function finish(){
+  var k=counts(), n=QUESTIONS.length, pct=Math.round(100*k.correct/n);
+  var msg;
+  if(pct===100) msg="🏆 PERFECT SCORE! Incredible work, Ace. The Rapids would hire you as head statistician!";
+  else if(pct>=85) msg="🌟 Outstanding, Ace! That's a Grade 6–7 level performance!";
+  else if(pct>=65) msg="💪 Great effort, Ace! Review the ones you missed and try them again.";
+  else if(pct>=40) msg="👍 Good start, Ace! These problems are tough. Use the hints and solutions to learn the tricks, then try again.";
+  else msg="🌱 These are challenge problems, well above grade level. Every great scientist started as a beginner! Go through the worked examples and try again, Ace!";
+  var f=document.getElementById("final");
+  f.style.display="block";
+  f.innerHTML="<h2 style='border:none;margin-top:0'>Final Score: "+k.correct+" / "+n+" ("+pct+"%)</h2>"+
+    "<p>Correct on the first try: "+k.first+" · Hints used: "+k.hints+"</p><p>"+msg+"</p>"+
+    "<p style='font-size:.85em;color:#546e7a'>Finished on "+new Date().toLocaleString("en-CA")+"</p>";
+  f.scrollIntoView({behavior:"smooth"});
+}
+render();
+updateScore();
+document.getElementById("finishBtn").addEventListener("click",finish);
+</script>
+<script src="../../assets/autosave.js"></script>
+</body>
+</html>
