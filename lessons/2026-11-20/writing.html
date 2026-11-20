@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Writing (Nov. 20): FAQ Page (Avalanche Safety Questions &amp; Answers) + Grammar Clinic</title>
+<style>
+  body{font-family:"Segoe UI",Verdana,Arial,sans-serif;font-size:20px;line-height:1.6;margin:0;background:#fff8f0;color:#2c2416}
+  .wrap{max-width:880px;margin:0 auto;padding:20px 18px 80px}
+  a.home{font-size:.9em;color:#bf360c}
+  h1{color:#e65100;font-size:2em;margin:10px 0}
+  h2{color:#ef6c00;margin-top:36px;border-bottom:3px solid #ffcc80;padding-bottom:4px}
+  h3{color:#ef6c00}
+  .box{background:#fff;border-radius:16px;padding:18px 22px;margin:16px 0;box-shadow:0 3px 10px rgba(0,0,0,.07)}
+  .tipbox{background:#fff8e1;border-left:8px solid #ffb300}
+  .senses{display:grid;gap:8px;margin:10px 0;grid-template-columns:repeat(auto-fit,minmax(140px,1fr))}
+  .senses .side{border-radius:14px;padding:10px 16px;background:#fff3e0}
+  .ts{background:#ffcc80;border-radius:5px;padding:1px 3px}
+  .ev{background:#c8e6c9;border-radius:5px;padding:1px 3px}
+  .ex{background:#ffe0b2;border-radius:5px;padding:1px 3px}
+  .cs{background:#e1bee7;border-radius:5px;padding:1px 3px}
+  .legend span{display:inline-block;margin:4px 8px 4px 0;font-size:.85em}
+  .model{font-family:Georgia,"Times New Roman",serif;font-size:1.05em;line-height:1.9}
+  .row{padding:10px 6px;border-bottom:1px dashed #ddd}
+  .row.right{background:#f1f8e9} .row.wrong{background:#fff5f5}
+  select{font-size:.9em;padding:5px 8px;border-radius:8px;border:2px solid #ffb74d;font-family:inherit}
+  .q{border-left:8px solid #b0bec5}
+  .q.right{border-left-color:#43a047;background:#f1f8e9}
+  .q.wrong{border-left-color:#e53935;background:#fff5f5}
+  .opt{display:block;width:100%;text-align:left;font-size:.95em;background:#fafafa;border:2px solid #e0e0e0;border-radius:10px;padding:8px 14px;margin:8px 0;cursor:pointer;font-family:inherit}
+  .opt:hover{border-color:#ffb74d;background:#fff}
+  .opt.sel-right{background:#c8e6c9;border-color:#43a047}
+  .opt.sel-wrong{background:#ffcdd2;border-color:#e53935}
+  .fb{margin-top:6px;font-weight:bold}
+  .fb.good{color:#2e7d32} .fb.bad{color:#c62828}
+  .explain{font-weight:normal;color:#e65100}
+  .bad-sent{font-family:Consolas,"Courier New",monospace;background:#ffebee;padding:6px 10px;border-radius:8px;display:inline-block;margin:6px 0}
+  input.fix{width:100%;box-sizing:border-box;font-size:1em;padding:8px 12px;border:2px solid #ffb74d;border-radius:10px;font-family:inherit}
+  button{font-size:.95em;padding:8px 16px;border:none;border-radius:10px;cursor:pointer;font-weight:bold;font-family:inherit}
+  .go{background:#ef6c00;color:#fff} .go:hover{background:#e65100}
+  .hint{background:#ffe082;color:#5d4037}
+  .blue{background:#1e88e5;color:#fff}
+  .purple{background:#8e24aa;color:#fff}
+  .grey{background:#cfd8dc;color:#263238}
+  .btnrow{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px}
+  textarea{width:100%;box-sizing:border-box;min-height:300px;font-size:1.05em;line-height:1.7;font-family:Georgia,"Times New Roman",serif;padding:14px;border:3px solid #ffb74d;border-radius:12px}
+  textarea:focus{outline:none;border-color:#ef6c00}
+  .counter{display:flex;flex-wrap:wrap;gap:20px;align-items:center;margin:8px 0;font-weight:bold}
+  .meter{flex:1;min-width:200px;height:18px;background:#e0e0e0;border-radius:9px;overflow:hidden}
+  .meter div{height:100%;width:0;background:#ffb300;transition:width .2s}
+  .checklist label{display:block;padding:6px 4px;cursor:pointer}
+  .checklist input{transform:scale(1.4);margin-right:10px}
+  .prompts label{display:block;background:#fff3e0;border-radius:10px;padding:10px 14px;margin:8px 0;cursor:pointer}
+  .flow{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin:10px 0;font-size:.85em}
+  .flow span.st{background:#e3f2fd;border:2px solid #1e88e5;border-radius:8px;padding:4px 10px;font-weight:bold;color:#0d47a1}
+  .flow span.ar{color:#1e88e5;font-weight:bold}
+  .prompts input{transform:scale(1.3);margin-right:8px}
+  #scoreBox{position:sticky;bottom:0;background:#e65100;color:#fff;border-radius:16px 16px 0 0;padding:12px 20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-top:30px}
+  .w5{display:grid;gap:8px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));margin:10px 0}
+  .w5 label{display:block;font-weight:bold;color:#e65100}
+  .w5 input{width:100%;box-sizing:border-box;font-size:.95em;padding:6px 10px;border:2px solid #ffb74d;border-radius:8px;font-family:inherit}
+  #printArea{display:none}
+  @media print{
+    body{background:#fff;font-size:14pt}
+    .wrap,#scoreBox{display:none !important}
+    #printArea{display:block;font-family:Georgia,serif;line-height:1.8}
+    #printArea h1{font-size:18pt;margin:0 0 6pt}
+    #printArea .meta{font-size:11pt;color:#444}
+    #printArea .text{white-space:pre-wrap;border-top:1px solid #999;padding-top:10pt;margin-top:10pt}
+    #printArea .lines{margin-top:24pt;border-top:1px solid #999;padding-top:6pt;font-size:11pt}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+<a class="home" href="../../index.html">&larr; Back to all lessons</a>
+<h1>✍️ Writing Week 54: FAQ Page — Avalanche Safety Questions &amp; Answers ❓🏔️</h1>
+<p>Yesterday you wrote a ballad, a story meant to be sung. Today, Ace, you'll write one of the most useful kinds of writing on the internet: an <strong>FAQ page</strong>. FAQ stands for <strong>Frequently Asked Questions</strong>. Parks, hospitals, airlines, games and schools all have one. An FAQ writer has to do something tricky: <strong>guess what readers will wonder</strong>, then answer each question <strong>quickly, clearly and accurately</strong>, so a busy reader can find what they need in seconds. Avalanche Canada, ski resorts and Parks Canada all publish safety FAQs, and on a mountain, a clear answer can save a life. Today's genre is the <strong>FAQ page</strong>: questions in the reader's own words, with direct, precise answers.</p>
+
+<h2>Part 1: The Lesson</h2>
+<div class="box">
+  <h3 style="margin-top:0">The six parts of a strong FAQ ❓</h3>
+  <p>An FAQ is built from a title and a set of question-and-answer blocks. Each answer has its own small structure.</p>
+  <div class="senses">
+    <div class="side"><strong>1. Title and audience line:</strong> what the FAQ is about and who it's for (<em>"…for families planning a first winter hike"</em>)</div>
+    <div class="side"><strong>2. Reader's question:</strong> written the way a real reader would ask it, ending with a question mark</div>
+    <div class="side"><strong>3. Direct answer first:</strong> the very first sentence answers the question (<em>Yes. / No. / Usually not, if…</em>)</div>
+    <div class="side"><strong>4. Explanation with a reason or fact:</strong> one or two sentences that tell <em>why</em>, using a true fact or number</div>
+    <div class="side"><strong>5. Example or comparison:</strong> a picture in the reader's mind that makes the answer stick</div>
+    <div class="side"><strong>6. Where to learn more:</strong> a trustworthy place to get more help (a website, a ranger, a course)</div>
+  </div>
+  <h3>Five habits of great FAQ writers</h3>
+  <ul>
+    <li><strong>Think like the reader:</strong> list the questions a beginner would <em>really</em> ask (<em>"Do I need special gear?"</em>), not the ones an expert finds interesting.</li>
+    <li><strong>Put the answer first:</strong> ❌ <em>"Snow is a complicated material made of crystals that…"</em> ✅ <em>"No. Most groomed ski runs are protected by ski patrol."</em> Busy readers may only read your first sentence.</li>
+    <li><strong>Be precise, not scary or careless:</strong> use the qualifiers you practised in reading. ❌ <em>"Gentle slopes are always safe."</em> ✅ <em>"Gentle slopes rarely slide, unless a steeper slope rises above them."</em></li>
+    <li><strong>Order the questions:</strong> start with the most common or most basic question, and group related questions together.</li>
+    <li><strong>Keep answers short:</strong> about 2 to 4 sentences each. If an answer needs a whole page, it's probably two questions.</li>
+  </ul>
+  <p><strong>FAQ writer's rule:</strong> read only the <em>first sentence</em> of each answer. If those sentences alone answer the questions, your FAQ is working.</p>
+</div>
+
+<div class="box tipbox">
+  <h3 style="margin-top:0">Mini-lesson: grammar for questions and answers ❓</h3>
+  <p><strong>Question word order:</strong> in most questions, a helping verb comes <em>before</em> the subject: <em>Why <strong>do</strong> avalanches happen?</em> (not <em>Why avalanches happen?</em>). <em>Can I ski here? Is the trail open? Should we turn back?</em> Every direct question ends with a <strong>question mark</strong>.</p>
+  <p><strong>Direct vs. indirect questions:</strong> an <em>indirect</em> question is a statement <em>about</em> a question, so it ends with a period and uses normal word order: <em>I wonder whether the trail is safe.</em> <em>Dad asked why we turned back.</em></p>
+  <p><strong>Parallel lists:</strong> items in a list should match in form. ❌ <em>Get training, the forecast, and having gear.</em> ✅ <em>Get the training, get the forecast and get the gear.</em></p>
+  <p><strong>No comma splices:</strong> a comma alone cannot join two complete sentences. ❌ <em>Snow fell all night, the danger rose.</em> ✅ <em>Snow fell all night, so the danger rose.</em> or <em>Snow fell all night; the danger rose.</em></p>
+  <p><strong>Canadian spelling:</strong> <em>centre, metre, colour, travelled</em>, and watch this pair: <strong>practice</strong> is the noun (<em>avalanche practice</em>) and <strong>practise</strong> is the verb (<em>we practise searches</em>), just like <em>advice / advise</em>.</p>
+</div>
+
+<div class="box">
+  <h3 style="margin-top:0">Model FAQ: "Winter Mountain Safety FAQ for Kids" (about 200 words)</h3>
+  <p class="legend"><span class="ts">Title + audience</span><span class="ev">Reader's questions</span><span class="ex">Direct answer + reason + example</span><span class="cs">Where to learn more</span></p>
+  <div class="model">
+    <span class="ts"><strong>Winter Mountain Safety FAQ</strong><br>Answers for kids who love snow and want to stay safe</span><br><br>
+    <span class="ev"><strong>Can an avalanche happen on a ski hill?</strong></span><br>
+    <span class="ex">It's very unlikely on open, marked runs. Ski patrollers check the snow every morning and sometimes set off small avalanches on purpose before the lifts open. It's like a crossing guard who checks the road before you cross.</span><br><br>
+    <span class="ev"><strong>Why are steep slopes dangerous?</strong></span><br>
+    <span class="ex">Most avalanches start on slopes between about 30° and 45°. That's about as steep as a playground slide, so if it looks like a slide, think twice.</span><br><br>
+    <span class="ev"><strong>What should I carry in the backcountry?</strong></span><br>
+    <span class="ex">Carry a transceiver, a probe and a shovel, and practise using them. Friends can dig a buried person out much faster than rescuers can arrive.</span><br><br>
+    <span class="ev"><strong>Is it safe to go alone?</strong></span><br>
+    <span class="ex">No. A partner is your best rescuer. Even experts travel in groups.</span><br><br>
+    <span class="cs"><strong>Want to learn more?</strong> Check the daily avalanche forecast before every trip, and ask about a youth avalanche safety course.</span>
+  </div>
+  <p><strong>Notice:</strong> every answer starts with a direct answer (<em>It's very unlikely… / Most avalanches… / Carry… / No.</em>). Each one adds a <strong>reason</strong> and many add a <strong>comparison</strong> (<em>like a crossing guard</em>, <em>as steep as a playground slide</em>). The questions use correct question word order (<em>Can an avalanche happen…? Why are…? What should I…? Is it…?</em>). Look for the precise qualifiers <em>very unlikely</em>, <em>most</em>, <em>about</em> and <em>sometimes</em>, the parallel list <em>a transceiver, a probe and a shovel</em>, and the verb <em>practise</em>.</p>
+</div>
+
+<h2>Part 2: Name That FAQ Part</h2>
+<div class="box">
+  <p>Each line comes from a student's FAQ called <strong>"Snowshoeing Safety FAQ."</strong> Choose which <strong>part</strong> of the FAQ it shows best.</p>
+  <div id="labelRows"></div>
+  <div class="btnrow"><button type="button" class="go" id="checkLabels">Check my answers</button></div>
+  <div class="fb" id="labelFb"></div>
+</div>
+
+<h2>Part 3: Grammar Clinic 📏</h2>
+<div class="box tipbox">Every FAQ writer needs a careful editor! <strong>Section A:</strong> pick the correct choice. <strong>Section B:</strong> type the sentence again with <em>all</em> mistakes fixed. We use <strong>Canadian spelling</strong> (centre, metre, colour, practise as a verb). Today, watch <strong>question word order</strong>, <strong>question marks vs. periods</strong>, <strong>parallel lists</strong>, <strong>comma splices</strong>, <strong>practice / practise</strong> and <strong>precise helping verbs</strong>.</div>
+<h3>Section A: Pick the correct choice</h3>
+<div id="gmc"></div>
+<h3>Section B: Fix the sentence</h3>
+<p>Retype the whole sentence correctly, with capital letters and punctuation. Each one has <strong>at least two</strong> mistakes.</p>
+<div id="gfix"></div>
+
+<h2>Part 4: Your Turn to Write</h2>
+<div class="box">
+  <h3 style="margin-top:0">Step 1: Choose your FAQ</h3>
+  <p>Pick <strong>one</strong> prompt. Use today's reading (and math!) for ideas. Jot your plan in the boxes first, then write.</p>
+  <div class="prompts" id="prompts">
+    <label><input type="radio" name="prompt" value="Option A: Avalanche Safety FAQ for Kids" checked> 🏔️ <strong>Option A: Avalanche Safety FAQ for Kids.</strong> Write an FAQ for kids your age who are going skiing, snowboarding or snowshoeing in BC. Use true facts from today's reading: slab avalanches, the 30° to 45° slopes, triggers, the danger scale, the 15-minute race against time, and the three rescue tools.</label>
+    <label><input type="radio" name="prompt" value="Option B: FAQ About Something I Know Well"> 🎮 <strong>Option B: FAQ About Something I Know Well.</strong> Write an FAQ for a beginner about something you're an expert in: a sport, a game, an instrument, building with LEGO, caring for a pet, or learning Cantonese.</label>
+    <label><input type="radio" name="prompt" value="Option C: New Student FAQ for My School"> 🏫 <strong>Option C: New Student FAQ.</strong> A new Grade 5 student is joining your class next week. Write an FAQ that answers the questions they'll be too nervous to ask (where to go, what to bring, what recess is like, who to ask for help).</label>
+  </div>
+  <p><strong>Plan your FAQ:</strong> jot a few words for each box. (These notes save with your writing.)</p>
+  <div class="w5" id="w5">
+    <div><label for="w5who">My title and who the FAQ is for</label><input id="w5who" type="text" autocomplete="off"></div>
+    <div><label for="w5place">The 4 to 6 questions readers will really ask</label><input id="w5place" type="text" autocomplete="off"></div>
+    <div><label for="w5facts">True facts or numbers I'll use in my answers</label><input id="w5facts" type="text" autocomplete="off"></div>
+    <div><label for="w5senses">A comparison or example to make an answer stick</label><input id="w5senses" type="text" autocomplete="off"></div>
+    <div><label for="w5feel">Qualifiers I'll use to stay precise (usually, rarely, if…)</label><input id="w5feel" type="text" autocomplete="off"></div>
+    <div><label for="w5closing">Where readers can learn more</label><input id="w5closing" type="text" autocomplete="off"></div>
+  </div>
+
+  <h3>Step 2: Write your FAQ</h3>
+  <p><strong>Goal:</strong> <strong>200 to 350 words</strong>: a <strong>title</strong> and <strong>audience line</strong>, then <strong>4 to 6 questions</strong>, each with an answer of <strong>2 to 4 sentences</strong>. Put the <strong>most basic question first</strong>. Every question must use correct <strong>question word order</strong> and end with a <strong>question mark</strong>. Every answer must start with a <strong>direct answer</strong>, then give a <strong>reason or fact</strong>. Include at least <strong>two comparisons or examples</strong>, at least <strong>three precise qualifiers</strong> (most, usually, rarely, about, if, unless…), <strong>one parallel list</strong>, and finish with a <strong>"Want to learn more?"</strong> line. Then add <strong>2–3 sentences to Dad</strong> about the answer you're proudest of and why. Bonus: use two words from today's spelling list correctly! Extra bonus: ask Dad to read only the first sentence of each answer. Did he learn the answers?</p>
+  <p><button type="button" class="hint" id="templateBtn">📋 Add the layout for me</button></p>
+  <label for="essay"><strong>Write here, Ace:</strong></label>
+  <textarea id="essay" placeholder="TITLE: ... FAQ&#10;For: ...&#10;&#10;Q: ...?&#10;A: ..."></textarea>
+  <div class="counter">
+    <span id="wc">0 words</span>
+    <span id="sc">0 sentences</span>
+    <div class="meter" aria-hidden="true"><div id="meterBar"></div></div>
+  </div>
+  <div class="fb" id="wcMsg">Aim for 200 to 350 words.</div>
+  <p style="font-size:.8em;color:#607d8b" id="saveNote">Your writing is saved automatically in this browser as you type.</p>
+
+  <h3>Self-check before you finish ✅</h3>
+  <div class="checklist" id="checklist">
+    <label><input type="checkbox"> My FAQ has a <strong>title</strong> and says <strong>who it's for</strong>.</label>
+    <label><input type="checkbox"> I wrote <strong>4 to 6 questions</strong> a real reader would ask, with the most basic one first.</label>
+    <label><input type="checkbox"> Every question uses correct <strong>word order</strong> and ends with a <strong>question mark</strong>.</label>
+    <label><input type="checkbox"> Every answer <strong>starts with a direct answer</strong>, then gives a <strong>reason or fact</strong>.</label>
+    <label><input type="checkbox"> I used <strong>comparisons or examples</strong> and <strong>precise qualifiers</strong> (no careless "always" or "never").</label>
+    <label><input type="checkbox"> I checked for <strong>comma splices</strong>, <strong>parallel lists</strong>, <strong>capitals</strong> and <strong>Canadian spelling</strong> (practise, centre, metre).</label>
+  </div>
+  <div class="btnrow">
+    <button type="button" class="blue" id="downloadBtn">⬇️ Download my writing (for Dad)</button>
+    <button type="button" class="purple" id="printBtn">🖨️ Print my writing</button>
+    <button type="button" class="grey" id="clearBtn">Start over</button>
+  </div>
+  <div class="fb" id="doneMsg"></div>
+</div>
+
+<div id="scoreBox"><span id="scoreText"></span><span>Keep asking great questions, Ace! ❓🏔️</span></div>
+</div>
+
+<div id="printArea"></div>
+
+<script>
+var NAME="Ace";
+var PRAISE=["Nice work, Ace!","Correct! Great editing eye!","Yes! Ace fixed it!","Excellent, FAQ writer Ace!","Clear as a bluebird sky after a storm! 🏔️"];
+function pick(a){return a[Math.floor(Math.random()*a.length)];}
+
+var LABELS=["Title and audience line", "Reader's question", "Direct answer first", "Explanation with a reason or fact", "Example or comparison", "Where to learn more"];
+var LABEL_ITEMS=[
+ {s:"\"Snowshoeing Safety FAQ: Answers for families planning their first winter hike\"", a:"Title and audience line"},
+ {s:"\"Do I need avalanche gear on a snowshoe trail?\"", a:"Reader's question"},
+ {s:"\"Usually not, if you stay on marked, gentle trails away from steep slopes.\"", a:"Direct answer first"},
+ {s:"\"That's because most avalanches start on slopes between about 30° and 45°, and most family trails stay on much gentler ground.\"", a:"Explanation with a reason or fact"},
+ {s:"\"Think of a steep, snowy slope above a trail like a heavy box balanced on a high shelf: it may stay put, but you wouldn't want to stand under it.\"", a:"Example or comparison"},
+ {s:"\"Check the daily avalanche forecast, or ask a park ranger before you set out.\"", a:"Where to learn more"}
+];
+var labelScore=0, labelChecked=false;
+function buildLabels(){
+  var box=document.getElementById("labelRows");
+  LABEL_ITEMS.forEach(function(it,i){
+    var d=document.createElement("div"); d.className="row"; d.id="lr"+i;
+    var sel='<select id="ls'+i+'" aria-label="Job of sentence '+(i+1)+'"><option value="">- choose -</option>';
+    LABELS.forEach(function(l){sel+='<option>'+l+'</option>';});
+    sel+='</select>';
+    d.innerHTML='<strong>'+(i+1)+'.</strong> '+it.s+'<br>'+sel+' <span id="lm'+i+'"></span>';
+    box.appendChild(d);
+  });
+}
+function checkLabels(){
+  var sc=0;
+  LABEL_ITEMS.forEach(function(it,i){
+    var ok=document.getElementById("ls"+i).value===it.a; if(ok)sc++;
+    document.getElementById("lr"+i).className="row "+(ok?"right":"wrong");
+    document.getElementById("lm"+i).textContent=ok?"✅":"❌";
+  });
+  labelScore=sc; labelChecked=true;
+  var fb=document.getElementById("labelFb");
+  if(sc===LABEL_ITEMS.length){fb.className="fb good";fb.textContent="🌟 "+sc+" / "+LABEL_ITEMS.length+". "+pick(PRAISE)+" You know exactly how an FAQ is built!";}
+  else{fb.className="fb bad";fb.textContent=sc+" / "+LABEL_ITEMS.length+". Hint: what the page is about and who it is for = title and audience line; a line ending with a question mark = reader's question; Yes / No / Usually not = direct answer first; a sentence starting with because or that's because = explanation; like or think of = comparison; a place to get more help = where to learn more.";}
+  updateScore();
+}
+
+var GMC=[
+ {q:"Which question uses correct <strong>question word order</strong> and punctuation?",
+  o:["Why slab avalanches are so dangerous?", "Why are slab avalanches so dangerous?", "Why are slab avalanches so dangerous.", "Slab avalanches why are so dangerous?"],
+  a:1,e:"In a direct question, the verb <strong>are</strong> comes before the subject <strong>slab avalanches</strong>, and it ends with a question mark."},
+ {q:"Which sentence is punctuated correctly? (Hint: one is an <strong>indirect</strong> question.)",
+  o:["I wonder whether the trail is safe?", "I wonder whether is the trail safe.", "I wonder whether the trail is safe.", "I wonder, whether the trail is safe?"],
+  a:2,e:"<em>I wonder whether…</em> is a statement <strong>about</strong> a question, so it uses normal word order and ends with a <strong>period</strong>."},
+ {q:"Which list is <strong>parallel</strong>?",
+  o:["Before a trip, check the forecast, packing your gear, and a partner.", "Before a trip, check the forecast, pack your gear and find a partner.", "Before a trip, checking the forecast, pack your gear and a partner found.", "Before a trip, the forecast, to pack your gear and finding a partner."],
+  a:1,e:"Each item starts with the same kind of word, a command verb: <strong>check</strong>, <strong>pack</strong>, <strong>find</strong>."},
+ {q:"Which sentence is <strong>not</strong> a comma splice?",
+  o:["The slope was steep, we turned back.", "The slope was steep, so we turned back.", "The slope was steep, we turned, back.", "The slope, was steep we turned back."],
+  a:1,e:"Two complete sentences need more than a comma. Adding <strong>so</strong> (a joining word) fixes it. A period or a semicolon would work too."},
+ {q:"Which sentence uses <strong>Canadian spelling</strong> correctly?",
+  o:["We practice transceiver searches at the community center.", "We practise transceiver searches at the community centre.", "We practise transceiver searches at the community center.", "We practice transceiver searches at the community centre."],
+  a:1,e:"In Canadian spelling, the <strong>verb</strong> is <strong>practise</strong> (we practise), and <strong>centre</strong> ends in -re."},
+ {q:"Which answer is the most <strong>precise</strong> and accurate, based on today's reading?",
+  o:["A skier will always trigger an avalanche on a steep slope.", "A skier's weight can trigger an avalanche if the snowpack has a weak layer.", "Skiers can never trigger avalanches.", "Every slope over 30° will slide today."],
+  a:1,e:"<strong>Can</strong> shows it's possible, and the condition <strong>if the snowpack has a weak layer</strong> says when. <em>Always</em>, <em>never</em> and <em>every</em> claim too much."},
+ {q:"A reader asks: <strong>\"Can avalanches happen in spring?\"</strong> Which answer follows the FAQ rule <strong>answer first</strong>?",
+  o:["Snow is made of ice crystals that change shape over time in many interesting ways.", "Yes. Warm spring sun can soften and loosen wet snow, especially in the afternoon, so plan to be off steep slopes early.", "That is a very good question that many people ask.", "Spring is a season that comes after winter."],
+  a:1,e:"B starts with a direct answer (<strong>Yes.</strong>), then gives a reason and useful advice. The others make the reader wait, or never answer at all."}
+];
+var gmcState=GMC.map(function(){return{answered:false,firstRight:false,done:false};});
+function buildGMC(){
+  var box=document.getElementById("gmc");
+  GMC.forEach(function(it,i){
+    var d=document.createElement("div"); d.className="box q"; d.id="g"+i;
+    var h='<div><strong>'+(i+1)+'.</strong> '+it.q+'</div>';
+    it.o.forEach(function(o,j){h+='<button type="button" class="opt" data-i="'+i+'" data-j="'+j+'">'+String.fromCharCode(65+j)+'. '+o+'</button>';});
+    h+='<div class="fb" id="gfb'+i+'"></div>';
+    d.innerHTML=h; box.appendChild(d);
+  });
+  box.addEventListener("click",function(e){
+    var b=e.target.closest?e.target.closest(".opt"):e.target; if(!b||!b.classList.contains("opt"))return;
+    var i=+b.getAttribute("data-i"), j=+b.getAttribute("data-j"), st=gmcState[i], it=GMC[i];
+    if(st.done)return;
+    var ok=j===it.a; if(!st.answered){st.answered=true;st.firstRight=ok;}
+    var fb=document.getElementById("gfb"+i);
+    if(ok){st.done=true;b.classList.add("sel-right");document.getElementById("g"+i).className="box q right";fb.className="fb good";fb.innerHTML="✅ "+pick(PRAISE)+' <span class="explain">'+it.e+'</span>';}
+    else{b.classList.add("sel-wrong");document.getElementById("g"+i).className="box q wrong";fb.className="fb bad";fb.textContent="❌ Not quite, Ace. Look closely and try again.";}
+    updateScore();
+  });
+}
+
+var GFIX=[
+ {bad:"why do avalanches happen in the selkirk mountains.",
+  ok:["Why do avalanches happen in the Selkirk Mountains?"],
+  hint:"Capitalize Why and both words of the place name Selkirk Mountains. A direct question ends with a question mark, not a period."},
+ {bad:"the snow fell all night, the danger rose quickly",
+  ok:["The snow fell all night, so the danger rose quickly.","The snow fell all night; the danger rose quickly.","The snow fell all night. The danger rose quickly.","The snow fell all night, and the danger rose quickly."],
+  hint:"Capitalize The. This is a comma splice: two complete sentences joined by only a comma. Add so (or and) after the comma, or use a semicolon or a period. End with a period."},
+ {bad:"we practice searching with our transceivers at the community center",
+  ok:["We practise searching with our transceivers at the community centre."],
+  hint:"Capitalize We. In Canadian spelling the verb is practise (with an s), and centre ends in -re. End with a period."},
+ {bad:"bring a shovel a probe and a transceiver and dont go alone",
+  ok:["Bring a shovel, a probe and a transceiver, and don't go alone.","Bring a shovel, a probe, and a transceiver, and don't go alone.","Bring a shovel, a probe and a transceiver and don't go alone.","Bring a shovel, a probe, and a transceiver and don't go alone.","Bring a shovel, a probe and a transceiver, and don't go alone!","Bring a shovel, a probe, and a transceiver, and don't go alone!","Bring a shovel, a probe and a transceiver and don't go alone!","Bring a shovel, a probe, and a transceiver and don't go alone!"],
+  hint:"Capitalize Bring. Put commas between the items in the list (shovel, probe…). Don't is a contraction of do not, so it needs an apostrophe. End with a period."}
+];
+
+var gfixState=GFIX.map(function(){return{tries:0,correct:false,firstRight:false};});
+function norm(s){return s.replace(/[\u2018\u2019\u02BC]/g,"'").replace(/[\u201C\u201D]/g,'"').replace(/\s+/g," ").trim();}
+function checkFixAnswer(i,val){var v=norm(val);return GFIX[i].ok.some(function(a){return norm(a)===v;});}
+function buildGFix(){
+  var box=document.getElementById("gfix");
+  GFIX.forEach(function(it,i){
+    var d=document.createElement("div"); d.className="box q"; d.id="f"+i;
+    d.innerHTML='<div><strong>'+(i+1)+'.</strong> Fix: <span class="bad-sent">'+it.bad+'</span></div>'+
+     '<input class="fix" type="text" id="fi'+i+'" autocomplete="off" spellcheck="false" aria-label="Corrected sentence '+(i+1)+'">'+
+     '<div class="btnrow"><button type="button" class="go" data-act="check" data-i="'+i+'">Check</button><button type="button" class="hint" data-act="hint" data-i="'+i+'">Hint 💡</button><button type="button" class="grey" data-act="show" data-i="'+i+'" style="display:none">Show answer</button></div>'+
+     '<div class="fb" id="ffb'+i+'"></div>';
+    box.appendChild(d);
+  });
+  box.addEventListener("click",function(e){
+    var b=e.target; if(b.tagName!=="BUTTON")return;
+    var i=+b.getAttribute("data-i"), act=b.getAttribute("data-act"), fb=document.getElementById("ffb"+i);
+    if(act==="hint"){fb.className="fb";fb.style.color="#5d4037";fb.textContent="💡 "+GFIX[i].hint;return;}
+    fb.style.color="";
+    if(act==="show"){fb.className="fb";fb.innerHTML='Answer: <em>'+GFIX[i].ok[0]+'</em>'+(GFIX[i].ok.length>1?' (other correct versions are accepted too)':'');return;}
+    fixCheck(i);
+  });
+  box.addEventListener("keydown",function(e){if(e.key==="Enter"&&e.target.classList.contains("fix"))fixCheck(+e.target.id.slice(2));});
+}
+function fixCheck(i){
+  var val=document.getElementById("fi"+i).value, fb=document.getElementById("ffb"+i), st=gfixState[i];
+  fb.style.color="";
+  if(!val.trim()){fb.className="fb bad";fb.textContent="Type the corrected sentence first, Ace!";return;}
+  st.tries++;
+  if(checkFixAnswer(i,val)){ if(st.tries===1)st.firstRight=true; st.correct=true; document.getElementById("f"+i).className="box q right"; fb.className="fb good"; fb.textContent="✅ "+pick(PRAISE); }
+  else { st.correct=false; document.getElementById("f"+i).className="box q wrong"; fb.className="fb bad"; fb.textContent="❌ Not quite. Check every capital letter, apostrophe, comma, and spelling. Try again!"; if(st.tries>=2)document.querySelector('#f'+i+' [data-act=show]').style.display="inline-block"; }
+  updateScore();
+}
+
+function updateScore(){
+  var g=0; gmcState.forEach(function(s){if(s.firstRight)g++;});
+  var f=0; gfixState.forEach(function(s){if(s.correct)f++;});
+  var total=LABEL_ITEMS.length+GMC.length+GFIX.length, got=labelScore+g+f;
+  document.getElementById("scoreText").textContent="Score: "+got+" / "+total+"  (labels "+(labelChecked?labelScore:"-")+"/"+LABEL_ITEMS.length+" · grammar A "+g+"/"+GMC.length+" · grammar B "+f+"/"+GFIX.length+")";
+}
+
+var W5=["who","place","facts","senses","feel","closing"];
+function w5Save(){try{localStorage.setItem(KEY+"-5w",JSON.stringify(W5.map(function(k){return document.getElementById("w5"+k).value;})));}catch(e){}}
+function w5Restore(){try{var d=JSON.parse(localStorage.getItem(KEY+"-5w")||"null");if(d)d.forEach(function(x,i){document.getElementById("w5"+W5[i]).value=x;});}catch(e){}}
+function w5Summary(){return W5.map(function(k){return k.charAt(0).toUpperCase()+k.slice(1)+": "+document.getElementById("w5"+k).value;}).join("\n");}
+function addTemplate(){
+  var t=document.getElementById("essay");
+  var tpl="TITLE: ... FAQ\nWHO IT IS FOR: ...\n\nQ1 (the most basic question): ...?\nA: (direct answer first) ... (reason or fact) ... (example or comparison) ...\n\nQ2: ...?\nA: ...\n\nQ3: ...?\nA: ...\n\nQ4: ...?\nA: ...\n\nWANT TO LEARN MORE? ...\n\nNOTE TO DAD (the answer I am proudest of, and why):\n\nby "+NAME;
+  if(t.value.trim()&&!confirm("Add the FAQ layout below what you've already written?"))return;
+  t.value=(t.value.trim()?t.value.replace(/\s+$/,"")+"\n\n":"")+tpl; updateCount(); t.focus();
+}
+var KEY="ace-writing-2026-11-20";
+function countWords(t){var m=t.trim().match(/[A-Za-zÀ-ÿ0-9]+(?:['’\-][A-Za-zÀ-ÿ0-9]+)*/g);return m?m.length:0;}
+function countSentences(t){var m=t.match(/[^.!?]*[A-Za-z0-9][^.!?]*[.!?]+/g);return m?m.length:0;}
+function currentPrompt(){var r=document.querySelector('input[name=prompt]:checked');return r?r.value:"";}
+function updateCount(){
+  var t=document.getElementById("essay").value, w=countWords(t), s=countSentences(t);
+  document.getElementById("wc").textContent=w+(w===1?" word":" words");
+  document.getElementById("sc").textContent=s+(s===1?" sentence":" sentences");
+  var bar=document.getElementById("meterBar"); bar.style.width=Math.min(100,w/350*100)+"%";
+  var msg=document.getElementById("wcMsg");
+  if(w<200){bar.style.background="#ffb300";msg.className="fb";msg.textContent=w===0?"Aim for 200 to 350 words.":"Keep going, Ace! "+(200-w)+" more words to reach the goal.";}
+  else if(w<=350){bar.style.background="#43a047";msg.className="fb good";msg.textContent="🎯 You're in the target zone! Nice work, Ace!";}
+  else{bar.style.background="#1e88e5";msg.className="fb";msg.textContent="Wow, that's a lot of writing! Great FAQ answers are short. Could any answer be split into two questions, or trimmed?";}
+  try{localStorage.setItem(KEY,JSON.stringify({text:t,prompt:currentPrompt(),checks:checkStates()}));}catch(e){document.getElementById("saveNote").textContent="(This browser can't auto-save here, so use the Download button before closing!)";}
+}
+function checkStates(){return Array.prototype.map.call(document.querySelectorAll("#checklist input"),function(c){return c.checked;});}
+function checklistText(){
+  return Array.prototype.map.call(document.querySelectorAll("#checklist label"),function(l){return (l.querySelector("input").checked?"[x] ":"[ ] ")+l.textContent.trim();}).join("\n");
+}
+function buildReport(){
+  var t=document.getElementById("essay").value;
+  return "Writing Week 54: "+NAME+"\nDate: "+new Date().toLocaleString("en-CA")+"\nPrompt: "+currentPrompt()+
+    "\nWords: "+countWords(t)+"   Sentences: "+countSentences(t)+"\nPlanning notes:\n"+w5Summary()+
+    "\n\n----- "+NAME+"'s writing -----\n\n"+t+"\n\n----- Self-check -----\n"+checklistText()+
+    "\n\n----- Parent feedback -----\n\n\n";
+}
+function download(){
+  var t=document.getElementById("essay").value;
+  if(!t.trim()){document.getElementById("doneMsg").className="fb bad";document.getElementById("doneMsg").textContent="Write something first, Ace!";return;}
+  var blob=new Blob([buildReport().replace(/\n/g,"\r\n")],{type:"text/plain;charset=utf-8"});
+  var a=document.createElement("a"); a.href=URL.createObjectURL(blob); a.download=NAME+"-writing-2026-11-20"+".txt";
+  document.body.appendChild(a); a.click();
+  setTimeout(function(){URL.revokeObjectURL(a.href);a.remove();},1000);
+  var dm=document.getElementById("doneMsg"); dm.className="fb good"; dm.textContent="📄 Saved! Look in your Downloads folder and show Dad. Great job finishing, Ace!";
+}
+function esc(s){return s.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");}
+function printIt(){
+  var t=document.getElementById("essay").value;
+  if(!t.trim()){document.getElementById("doneMsg").className="fb bad";document.getElementById("doneMsg").textContent="Write something first, Ace!";return;}
+  document.getElementById("printArea").innerHTML="<h1>Writing Week 54: "+NAME+"</h1><div class='meta'>"+esc(new Date().toLocaleString("en-CA"))+"<br><strong>Prompt:</strong> "+esc(currentPrompt())+"<br>Words: "+countWords(t)+" · Sentences: "+countSentences(t)+"</div><div class='text'>"+esc(t)+"</div><div class='lines'><strong>Self-check:</strong><br>"+esc(checklistText()).replace(/\n/g,"<br>")+"</div><div class='lines'><strong>Parent feedback:</strong><br><br><br><br></div>";
+  window.print();
+}
+function restore(){
+  try{var d=JSON.parse(localStorage.getItem(KEY)||"null"); if(!d)return;
+    document.getElementById("essay").value=d.text||"";
+    Array.prototype.forEach.call(document.querySelectorAll("input[name=prompt]"),function(r){r.checked=(r.value===d.prompt);});
+    if(!document.querySelector("input[name=prompt]:checked"))document.querySelector("input[name=prompt]").checked=true;
+    var cs=document.querySelectorAll("#checklist input"); (d.checks||[]).forEach(function(v,i){if(cs[i])cs[i].checked=v;});
+  }catch(e){}
+}
+buildLabels(); buildGMC(); buildGFix(); restore(); w5Restore(); updateCount(); updateScore();
+W5.forEach(function(k){document.getElementById("w5"+k).addEventListener("input",w5Save);});
+document.getElementById("templateBtn").addEventListener("click",addTemplate);
+document.getElementById("checkLabels").addEventListener("click",checkLabels);
+document.getElementById("essay").addEventListener("input",updateCount);
+document.getElementById("checklist").addEventListener("change",function(){updateCount(); if(checkStates().every(Boolean)){var dm=document.getElementById("doneMsg");dm.className="fb good";dm.textContent="✅ All boxes checked! Now download or print it for Dad. Awesome work, Ace!";}});
+document.getElementById("prompts").addEventListener("change",updateCount);
+document.getElementById("downloadBtn").addEventListener("click",download);
+document.getElementById("printBtn").addEventListener("click",printIt);
+document.getElementById("clearBtn").addEventListener("click",function(){ if(confirm("Erase your writing and start over?")){document.getElementById("essay").value="";Array.prototype.forEach.call(document.querySelectorAll("#checklist input"),function(c){c.checked=false;});document.getElementById("doneMsg").textContent="";updateCount();} });
+</script>
+<script src="../../assets/autosave.js"></script>
+</body>
+</html>

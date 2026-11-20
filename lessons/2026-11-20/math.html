@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Math (Nov. 20): White Thunder: Avalanche Forecaster's Math Lab</title>
+<style>
+  body{font-family:"Segoe UI",Verdana,Arial,sans-serif;font-size:20px;line-height:1.6;margin:0;background:#f5f0eb;color:#2c2416}
+  .wrap{max-width:880px;margin:0 auto;padding:20px 18px 80px}
+  a.home{font-size:.9em;color:#bf360c}
+  h1{color:#e65100;font-size:2em;margin:10px 0}
+  h2{color:#ef6c00;margin-top:36px;border-bottom:3px solid #ffcc80;padding-bottom:4px}
+  .box{background:#fff;border-radius:16px;padding:18px 22px;margin:16px 0;box-shadow:0 3px 10px rgba(0,0,0,.07)}
+  .example{border-left:8px solid #ef6c00}
+  .example h3{margin:0 0 6px;color:#e65100}
+  .step{margin:4px 0 4px 10px}
+  code,.mono{font-family:Consolas,"Courier New",monospace;background:#fff3e0;padding:1px 6px;border-radius:5px}
+  .q{border-left:8px solid #90a4ae}
+  .q.right{border-left-color:#43a047;background:#f1f8e9}
+  .q.wrong{border-left-color:#e53935;background:#fff5f5}
+  .qnum{font-weight:bold;color:#e65100}
+  .row{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:10px}
+  input[type=text]{font-size:1.05em;padding:8px 12px;border:2px solid #ffcc80;border-radius:10px;width:190px}
+  input[type=text]:focus{outline:none;border-color:#ef6c00;box-shadow:0 0 0 3px #ffe0b2}
+  button{font-size:.95em;padding:8px 16px;border:none;border-radius:10px;cursor:pointer;font-weight:bold}
+  .check{background:#ef6c00;color:#fff} .check:hover{background:#e65100}
+  .hint{background:#ffe082;color:#5d4037} .hint:hover{background:#ffd54f}
+  .sol{background:#ce93d8;color:#311b92}
+  .unit{color:#546e7a}
+  .fb{margin-top:8px;font-weight:bold;min-height:1em}
+  .fb.good{color:#2e7d32} .fb.bad{color:#c62828}
+  .hints{margin-top:8px;color:#e65100;background:#fff3e0;border-radius:10px;padding:0 12px}
+  .hints p{margin:6px 0;padding:6px 0}
+  .solution{margin-top:8px;background:#f3e5f5;border-radius:10px;padding:8px 12px;display:none}
+  #scoreBox{position:sticky;bottom:0;background:#e65100;color:#fff;border-radius:16px 16px 0 0;padding:12px 20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-top:30px}
+  #scoreBox button{background:#ffca28;color:#3e2723}
+  #final{display:none;font-size:1.15em;text-align:center;border:4px solid #43a047}
+  .tipbox{background:#fff8e1;border-left:8px solid #ffb300}
+</style>
+</head>
+<body>
+<div class="wrap">
+<a class="home" href="../../index.html">&larr; Back to all lessons</a>
+<h1>🏔️ Math Week 54: White Thunder: Avalanche Forecaster's Math Lab</h1>
+<p>Ace, every winter morning, before most people are awake, avalanche forecasters in British Columbia are already at work. They dig pits in the snow, measure temperatures layer by layer, weigh samples of new snow, check weather stations high in the mountains, and then decide how dangerous the slopes will be that day. Skiers, snowmobilers, highway crews and railway workers all depend on their numbers. Today you're on the forecasting team. You'll use <strong>complementary angles, snow-to-water ratios, density (mass per cubic metre), volume in cubic metres and tonnes, converting km/h to m/s, temperature gradients, how air cools as you climb, percent of a total, search-pattern distances, the area of a triangle, volume from area × depth, working backward from a percent decrease, probability as a simplified fraction, comparing rates, and the mean of integers</strong>.</p>
+
+<h2>Part 1: Learn the Moves</h2>
+
+<div class="box tipbox">
+  <strong>The 4-Step Problem Solver (your forecaster's checklist):</strong>
+  <ol>
+    <li><strong>Read</strong>: What is the question actually asking? Underline the numbers and units (cm, m, km, kg, t, m², m³, km/h, m/s, °C, %).</li>
+    <li><strong>Plan</strong>: Do the units match? Change centimetres to metres or km/h to m/s <em>before</em> you calculate.</li>
+    <li><strong>Solve</strong>: Do one step at a time and write each step down.</li>
+    <li><strong>Check</strong>: Is my answer reasonable? Snow can't be heavier than water, and a slope can't be steeper than 90°.</li>
+  </ol>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 1: Complementary angles</h3>
+  <p class="step">Two angles that add up to <strong>90°</strong> are <em>complementary</em>. A tree grows straight up (vertical), and the ground is level (horizontal), so they meet at 90°. If a slope is tilted 25° from level, it is 90° − 25° = <strong>65°</strong> from the vertical tree trunk.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 2: Snow to water</h3>
+  <p class="step">Fluffy new snow is mostly air. If snow is about <strong>10% water</strong>, then 20 cm of snow melts down to 20 × 0.1 = <strong>2 cm</strong> of water. Forecasters call this the <em>water equivalent</em>.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 3: Density</h3>
+  <p class="step"><em>Density</em> tells you how much mass fits in a space. Water is 1 000 kg/m³. New snow might be 100 kg/m³. A layer of snow 0.4 m deep covering 1 m² has a volume of 0.4 m³, so its mass is 0.4 × 100 = <strong>40 kg</strong>.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 4: Volume and tonnes</h3>
+  <p class="step">A box of snow 10 m × 20 m × 0.5 m has a volume of 10 × 20 × 0.5 = 100 m³. At 300 kg/m³ that's 30 000 kg. Since 1 tonne = 1 000 kg, that's <strong>30 t</strong>.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 5: km/h to m/s</h3>
+  <p class="step">1 km/h = 1 000 m in 3 600 s. A quick trick: <strong>divide km/h by 3.6</strong> to get m/s. So 72 km/h ÷ 3.6 = <strong>20 m/s</strong>. At 20 m/s, 300 m takes 300 ÷ 20 = 15 s.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 6: A temperature gradient</h3>
+  <p class="step">A <em>gradient</em> is how much something changes over a distance. If the snow surface is −10 °C and the ground under 100 cm of snow is 0 °C, the change is 10 degrees over 100 cm, or 10 ÷ 10 = <strong>1 °C per 10 cm</strong>.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 7: Air cools as you climb</h3>
+  <p class="step">On a typical day, air cools by about <strong>6.5 °C for every 1 000 m</strong> you go up. If it is 5 °C in a town at 500 m, then at 1 500 m (1 000 m higher) it is about 5 − 6.5 = <strong>−1.5 °C</strong>.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 8: Percent of a total</h3>
+  <p class="step">If 36 out of 40 students wore helmets, that's 36 ÷ 40 = 0.9 = <strong>90%</strong>.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 9: Covering an area in strips</h3>
+  <p class="step">To search a field 50 m wide and 100 m long in strips 10 m wide, you need 50 ÷ 10 = 5 strips. Walking the 100 m length of each strip: 5 × 100 = <strong>500 m</strong>. At 1 m/s, that's 500 s, a little over 8 minutes.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 10: Area of a triangle, then volume</h3>
+  <p class="step">Area of a triangle = base × height ÷ 2. A triangle with base 40 m and height 30 m has area 40 × 30 ÷ 2 = <strong>600 m²</strong>. If something covers that area 2 m deep, its volume is 600 × 2 = <strong>1 200 m³</strong>.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 11: Working backward from a percent decrease</h3>
+  <p class="step">New snow <em>settles</em> (gets shallower) as it packs down. If it settled by 20%, 80% (0.8) is left. If it is now 40 cm deep: original × 0.8 = 40, so original = 40 ÷ 0.8 = <strong>50 cm</strong>.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 12: Probability as a simplified fraction</h3>
+  <p class="step">If 8 of 20 days were snowy, the probability that a randomly chosen day was snowy is 8/20. Divide the top and bottom by 4: <strong>2/5</strong>.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 13: Comparing rates ("how many times faster?")</h3>
+  <p class="step">If Team A finishes a job in 15 minutes and Team B takes 90 minutes, Team A is 90 ÷ 15 = <strong>6 times</strong> faster.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 14: The mean of integers</h3>
+  <p class="step">Mean = total ÷ how many. For −4, −2, 3 and −1 °C: −4 + (−2) + 3 + (−1) = −4, and −4 ÷ 4 = <strong>−1 °C</strong>. Add negatives carefully!</p>
+</div>
+
+<h2>Part 2: The Challenge (15 problems)</h2>
+<p>Type your answer and press <strong>Check</strong> (or Enter). Negative numbers like <span class="mono">-35</span>, fractions like <span class="mono">3/4</span>, mixed numbers like <span class="mono">1 3/4</span>, or decimals like <span class="mono">1.75</span> are fine. Don't type the units or % signs, and you may use spaces or commas in big numbers (1 000 000). Stuck? Press <strong>Hint</strong>. After 2 tries, you can see a full solution.</p>
+
+<div id="questions"></div>
+<div class="box" id="final"></div>
+<div id="scoreBox">
+  <span id="scoreText">Score: 0 / 15 correct</span>
+  <button id="finishBtn" type="button">I'm done! Show my final score</button>
+</div>
+</div>
+
+<script>
+var NAME = "Ace";
+var TABLE = '';
+var QUESTIONS = [
+ {t:"Most big avalanches start on slopes between about 30° and 45°. A forecaster measures a slope tilted <strong>38°</strong> from level ground. A spruce tree on the slope grows straight up (vertical). What is the angle between the trunk (pointing up) and the snow surface (pointing <em>uphill</em>)? (Hint: vertical and horizontal meet at 90°.)", a:"52", u:"°",
+  h:["The slope's angle from level and its angle from the vertical trunk add up to 90°.","90 − 38 = ?"],
+  s:"The angles are complementary: 90° − 38° = 52°."},
+ {t:"A storm drops <strong>45 cm</strong> of fluffy new snow. This snow is about <strong>10% water</strong>. If you melted it, how many <strong>centimetres</strong> of water would you get?", a:"4.5", u:"cm",
+  h:["10% = 0.1.","45 × 0.1 = ?"],
+  s:"45 × 0.1 = 4.5 cm of water. That's the water equivalent forecasters record."},
+ {t:"Forecasters weigh snow to find out how much load a storm added. New snow <strong>60 cm</strong> deep has a density of <strong>120 kg/m³</strong>. What is the mass of the new snow sitting on <strong>1 m²</strong> of slope, in kilograms?", a:"72", u:"kg",
+  h:["Change 60 cm to metres first: 0.6 m. Then the volume on 1 m² is 0.6 m³.","0.6 × 120 = ?"],
+  s:"60 cm = 0.6 m, so the volume is 0.6 m³. 0.6 × 120 = 72 kg on every square metre, about the mass of an adult!"},
+ {t:"A <strong>slab</strong> of snow breaks loose. It is <strong>150 m</strong> wide, <strong>200 m</strong> long and <strong>0.5 m</strong> thick, with a density of <strong>200 kg/m³</strong>. What is its mass in <strong>tonnes</strong>? (1 t = 1 000 kg)", a:"3000", u:"t",
+  h:["Volume = 150 × 200 × 0.5 m³.","15 000 m³ × 200 kg/m³ = 3 000 000 kg. Now divide by 1 000."],
+  s:"150 × 200 × 0.5 = 15 000 m³. 15 000 × 200 = 3 000 000 kg = 3 000 t, about as heavy as 2 000 cars."},
+ {t:"A large avalanche can reach <strong>108 km/h</strong>. At that speed, how many <strong>seconds</strong> would it take to travel <strong>600 m</strong> down the slope?", a:"20", u:"s",
+  h:["Change km/h to m/s: divide by 3.6.","108 ÷ 3.6 = 30 m/s. Time = distance ÷ speed."],
+  s:"108 ÷ 3.6 = 30 m/s. 600 ÷ 30 = 20 seconds. That's why nobody can outrun a big avalanche."},
+ {t:"In a snow pit, the surface of the snow is <strong>−18 °C</strong> and the ground at the bottom of the <strong>120 cm</strong> snowpack is <strong>0 °C</strong>. What is the temperature gradient in <strong>°C per 10 cm</strong>? (Forecasters worry when it is more than 1 °C per 10 cm, because weak, sugary crystals can grow.)", a:"1.5", u:"°C per 10 cm",
+  h:["Temperature change = 0 − (−18) = 18 degrees.","How many 10 cm pieces are in 120 cm? 18 ÷ 12 = ?"],
+  s:"The change is 18 degrees over 120 cm = 12 pieces of 10 cm. 18 ÷ 12 = 1.5 °C per 10 cm, a strong gradient, so weak layers may be growing."},
+ {t:"In a valley town at <strong>400 m</strong> above sea level, it is <strong>+2 °C</strong>. Air cools about <strong>6.5 °C for every 1 000 m</strong> you climb. About what is the temperature at a ridge-top weather station at <strong>2 400 m</strong>? (Type a negative number with a minus sign.)", a:"-11", u:"°C",
+  h:["How much higher is the station? 2 400 − 400 = 2 000 m.","2 000 m means 2 × 6.5 = 13 degrees colder. 2 − 13 = ?"],
+  s:"2 400 − 400 = 2 000 m higher. 2 × 6.5 = 13 °C cooler. 2 − 13 = −11 °C. It can rain in town while it snows on the ridge!"},
+ {t:"A study looked at <strong>200</strong> avalanche accidents. In <strong>180</strong> of them, the avalanche was triggered by the people caught or by someone in their group. What <strong>percent</strong> is that?", a:"90", u:"%",
+  h:["Percent = part ÷ total × 100.","180 ÷ 200 = 0.9."],
+  s:"180 ÷ 200 = 0.9 = 90%. Most avalanche accidents are triggered by the people involved, which is why good decisions matter so much."},
+ {t:"A rescuer with a transceiver searches an avalanche deposit <strong>120 m</strong> long and <strong>80 m</strong> wide. She walks the full <strong>120 m</strong> length in strips <strong>20 m</strong> apart, at <strong>0.8 m/s</strong>. Ignoring the short turns at the ends, how many <strong>minutes</strong> does the whole search take?", a:"10", u:"minutes",
+  h:["Number of strips = 80 ÷ 20. Total distance = strips × 120 m.","480 m ÷ 0.8 m/s = 600 s. Change seconds to minutes."],
+  s:"80 ÷ 20 = 4 strips. 4 × 120 = 480 m. 480 ÷ 0.8 = 600 s = 10 minutes."},
+ {t:"The pile of snow at the bottom of an avalanche path, called the <strong>deposit</strong>, is shaped roughly like a <strong>triangle</strong> with a base of <strong>90 m</strong> and a height of <strong>140 m</strong>. What is its <strong>area</strong> in m²?", a:"6300", u:"m²",
+  h:["Area of a triangle = base × height ÷ 2.","90 × 140 = 12 600. Now divide by 2."],
+  s:"90 × 140 ÷ 2 = 12 600 ÷ 2 = 6 300 m²."},
+ {t:"That same triangle-shaped deposit (area <strong>6 300 m²</strong>) is an average of <strong>2.5 m</strong> deep. What is the <strong>volume</strong> of snow in the deposit, in m³?", a:"15750", u:"m³",
+  h:["Volume = area × depth.","6 300 × 2.5 = ?"],
+  s:"6 300 × 2.5 = 15 750 m³ of packed snow, enough to fill about six Olympic swimming pools."},
+ {t:"Over two days, new snow <strong>settled</strong> by <strong>30%</strong> of its depth as it packed down. Now it is <strong>42 cm</strong> deep. How deep was it when it first fell, in cm?", a:"60", u:"cm",
+  h:["If it settled by 30%, then 70% (0.7) of the original depth is left.","Original × 0.7 = 42, so original = 42 ÷ 0.7."],
+  s:"42 ÷ 0.7 = 60 cm. Check: 60 − 30% of 60 = 60 − 18 = 42 cm. ✓"},
+ {t:"In one 30-day period, the avalanche danger rating for a mountain range was <strong>Low</strong> on 3 days, <strong>Moderate</strong> on 9 days, <strong>Considerable</strong> on 12 days and <strong>High</strong> on 6 days. If you pick one of those days at random, what is the probability that the rating was <strong>Considerable or High</strong>? Type it as a <strong>simplified</strong> fraction.", a:"3/5", u:"",
+  h:["Considerable or High: 12 + 6 = 18 days out of 30.","18/30: divide the top and bottom by 6."],
+  s:"12 + 6 = 18 days. 18/30 = 3/5 (= 0.6, or 60%)."},
+ {t:"A trained avalanche rescue dog can search a 1-hectare area in about <strong>30 minutes</strong>. A team of 20 people probing by hand needs about <strong>4 hours</strong> for the same area. How many <strong>times faster</strong> is the dog?", a:"8", u:"times faster",
+  h:["Make the units match: 4 hours = 240 minutes.","240 ÷ 30 = ?"],
+  s:"4 h = 240 min. 240 ÷ 30 = 8. The dog is 8 times faster than 20 people!"},
+ {t:"A forecaster records the low temperature at a mountain station for five days: <strong>−8, −14, −3, +2</strong> and <strong>−7 °C</strong>. What is the <strong>mean</strong> low temperature? (Type a negative number with a minus sign.)", a:"-6", u:"°C",
+  h:["Add them up carefully: −8 + (−14) + (−3) + 2 + (−7).","The total is −30. Now divide by 5."],
+  s:"−8 − 14 − 3 + 2 − 7 = −30. −30 ÷ 5 = −6 °C."}
+];
+
+var PRAISE = ["Nice work, Ace!","Correct! Solid as a well-bonded snowpack! 🏔️","Yes! Forecast accurate! ❄️","Excellent, Ace. That was a tough one!","Right on target! 🎯","Brilliant thinking, Ace!","Spot on, forecaster Ace! 📈"];
+var ENCOURAGE = ["Not quite. Check your steps and try again!","Close call. Try again, Ace! Maybe use a hint?","Hmm, not yet. Re-read the question carefully.","Keep going, Ace. Mistakes help your brain grow!"];
+
+function parseAnswer(str){
+  if(str===undefined||str===null) return NaN;
+  var s=String(str).trim().toLowerCase();
+  s=s.replace(/[\u2212\u2013]/g,"-");
+  s=s.replace(/(\d),(?=\d{3}(\D|$))/g,"$1");
+  s=s.replace(/[^0-9.\/\- ]/g," ").replace(/\s+/g," ").trim();
+  s=s.replace(/\s*\/\s*/g,"/");
+  var m;
+  if((m=s.match(/^(-?\d+) (\d+)\/(\d+)$/))){ var w=parseFloat(m[1]),n=parseFloat(m[2]),d=parseFloat(m[3]); if(d===0)return NaN; return w<0? w-n/d : w+n/d; }
+  if((m=s.match(/^(-?\d+(?:\.\d+)?)\/(\d+(?:\.\d+)?)$/))){ var d2=parseFloat(m[2]); if(d2===0)return NaN; return parseFloat(m[1])/d2; }
+  s=s.replace(/ /g,"");
+  if(/^-?(\d+\.?\d*|\.\d+)$/.test(s)) return parseFloat(s);
+  return NaN;
+}
+function isCorrect(input,key){
+  var a=parseAnswer(input), k=parseAnswer(key);
+  if(isNaN(a)) return false;
+  var isInt=Math.abs(k-Math.round(k))<1e-12;
+  var tol=isInt?1e-9:0.005;
+  return Math.abs(a-k)<=tol;
+}
+
+function isRomanCorrect(input,key){ return String(input).replace(/\s+/g,"").toUpperCase()===key; }
+var state=[];
+function render(){
+  var box=document.getElementById("questions");
+  QUESTIONS.forEach(function(q,i){
+    state.push({correct:false,tries:0,hints:0});
+    var d=document.createElement("div");
+    d.className="box q"; d.id="q"+i;
+    d.innerHTML='<div><span class="qnum">'+(i+1)+'.</span> '+q.t+'</div>'+
+      '<div class="row"><input type="text"'+(q.r?' placeholder="e.g. MMXXVI"':'')+' id="in'+i+'" aria-label="Answer to question '+(i+1)+'" autocomplete="off"> <span class="unit">'+q.u+'</span>'+
+      '<button type="button" class="check" data-i="'+i+'">Check</button>'+
+      '<button type="button" class="hint" data-i="'+i+'">Hint 💡</button>'+
+      '<button type="button" class="sol" data-i="'+i+'" style="display:none">Show solution</button></div>'+
+      '<div class="fb" id="fb'+i+'"></div><div class="hints" id="hints'+i+'"></div>'+
+      '<div class="solution" id="sol'+i+'"><strong>Solution:</strong> '+q.s+'</div>';
+    box.appendChild(d);
+  });
+  box.addEventListener("click",function(e){
+    var b=e.target; if(b.tagName!=="BUTTON")return;
+    var i=+b.getAttribute("data-i");
+    if(b.className==="check") check(i);
+    else if(b.className==="hint") hint(i);
+    else if(b.className==="sol") document.getElementById("sol"+i).style.display="block";
+  });
+  box.addEventListener("keydown",function(e){
+    if(e.key==="Enter"&&e.target.tagName==="INPUT"){ check(+e.target.id.slice(2)); }
+  });
+}
+function pick(arr){return arr[Math.floor(Math.random()*arr.length)];}
+function check(i){
+  var val=document.getElementById("in"+i).value;
+  var fb=document.getElementById("fb"+i), card=document.getElementById("q"+i);
+  if(val.trim()===""){fb.className="fb bad";fb.textContent="Type an answer first, Ace!";return;}
+  var isR=!!QUESTIONS[i].r;
+  if(isR&&!/^[ivxlcdm\s]+$/i.test(val)){fb.className="fb bad";fb.textContent="Use only Roman numeral letters: I, V, X, L, C, D, M.";return;}
+  if(!isR&&isNaN(parseAnswer(val))){fb.className="fb bad";fb.textContent="I can't read that as a number. Try something like 42, 3.5, 3/4 or 1 3/4.";return;}
+  state[i].tries++;
+  if(isR?isRomanCorrect(val,QUESTIONS[i].a):isCorrect(val,QUESTIONS[i].a)){
+    state[i].correct=true; card.className="box q right"; fb.className="fb good";
+    fb.textContent="✅ "+pick(PRAISE)+(state[i].tries===1?" (first try!)":"");
+  } else {
+    state[i].correct=false; card.className="box q wrong"; fb.className="fb bad";
+    fb.textContent="❌ "+pick(ENCOURAGE);
+    if(state[i].tries>=2) card.querySelector(".sol").style.display="inline-block";
+  }
+  updateScore();
+}
+function hint(i){
+  var q=QUESTIONS[i], s=state[i], hb=document.getElementById("hints"+i);
+  if(s.hints<q.h.length){
+    var p=document.createElement("p"); p.textContent="💡 Hint "+(s.hints+1)+": "+q.h[s.hints]; hb.appendChild(p); s.hints++;
+  }
+  if(s.hints>=q.h.length) document.querySelector("#q"+i+" .hint").disabled=true;
+  updateScore();
+}
+function counts(){
+  var c=0,first=0,h=0;
+  state.forEach(function(s){ if(s.correct){c++; if(s.tries===1)first++;} h+=s.hints; });
+  return {correct:c,first:first,hints:h};
+}
+function updateScore(){
+  var k=counts();
+  document.getElementById("scoreText").textContent="Score: "+k.correct+" / "+QUESTIONS.length+" correct · hints used: "+k.hints;
+}
+function finish(){
+  var k=counts(), n=QUESTIONS.length, pct=Math.round(100*k.correct/n);
+  var msg;
+  if(pct===100) msg="🏆 PERFECT SCORE! Incredible work, Ace. Avalanche Canada would hire you as a forecaster!";
+  else if(pct>=85) msg="🌟 Outstanding, Ace! That's a Grade 6–7 level performance!";
+  else if(pct>=65) msg="💪 Great effort, Ace! Review the ones you missed and try them again.";
+  else if(pct>=40) msg="👍 Good start, Ace! These problems are tough. Use the hints and solutions to learn the tricks, then try again.";
+  else msg="🌱 These are challenge problems, well above grade level. Every great scientist started as a beginner! Go through the worked examples and try again, Ace!";
+  var f=document.getElementById("final");
+  f.style.display="block";
+  f.innerHTML="<h2 style='border:none;margin-top:0'>Final Score: "+k.correct+" / "+n+" ("+pct+"%)</h2>"+
+    "<p>Correct on the first try: "+k.first+" · Hints used: "+k.hints+"</p><p>"+msg+"</p>"+
+    "<p style='font-size:.85em;color:#546e7a'>Finished on "+new Date().toLocaleString("en-CA")+"</p>";
+  f.scrollIntoView({behavior:"smooth"});
+}
+render();
+updateScore();
+document.getElementById("finishBtn").addEventListener("click",finish);
+</script>
+<script src="../../assets/autosave.js"></script>
+</body>
+</html>
