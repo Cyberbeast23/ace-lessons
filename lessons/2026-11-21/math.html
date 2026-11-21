@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Math (Nov. 21): Open Wide! Dental Detective's Math Lab</title>
+<style>
+  body{font-family:"Segoe UI",Verdana,Arial,sans-serif;font-size:20px;line-height:1.6;margin:0;background:#f5f0eb;color:#2c2416}
+  .wrap{max-width:880px;margin:0 auto;padding:20px 18px 80px}
+  a.home{font-size:.9em;color:#bf360c}
+  h1{color:#e65100;font-size:2em;margin:10px 0}
+  h2{color:#ef6c00;margin-top:36px;border-bottom:3px solid #ffcc80;padding-bottom:4px}
+  .box{background:#fff;border-radius:16px;padding:18px 22px;margin:16px 0;box-shadow:0 3px 10px rgba(0,0,0,.07)}
+  .example{border-left:8px solid #ef6c00}
+  .example h3{margin:0 0 6px;color:#e65100}
+  .step{margin:4px 0 4px 10px}
+  code,.mono{font-family:Consolas,"Courier New",monospace;background:#fff3e0;padding:1px 6px;border-radius:5px}
+  .q{border-left:8px solid #90a4ae}
+  .q.right{border-left-color:#43a047;background:#f1f8e9}
+  .q.wrong{border-left-color:#e53935;background:#fff5f5}
+  .qnum{font-weight:bold;color:#e65100}
+  .row{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:10px}
+  input[type=text]{font-size:1.05em;padding:8px 12px;border:2px solid #ffcc80;border-radius:10px;width:190px}
+  input[type=text]:focus{outline:none;border-color:#ef6c00;box-shadow:0 0 0 3px #ffe0b2}
+  button{font-size:.95em;padding:8px 16px;border:none;border-radius:10px;cursor:pointer;font-weight:bold}
+  .check{background:#ef6c00;color:#fff} .check:hover{background:#e65100}
+  .hint{background:#ffe082;color:#5d4037} .hint:hover{background:#ffd54f}
+  .sol{background:#ce93d8;color:#311b92}
+  .unit{color:#546e7a}
+  .fb{margin-top:8px;font-weight:bold;min-height:1em}
+  .fb.good{color:#2e7d32} .fb.bad{color:#c62828}
+  .hints{margin-top:8px;color:#e65100;background:#fff3e0;border-radius:10px;padding:0 12px}
+  .hints p{margin:6px 0;padding:6px 0}
+  .solution{margin-top:8px;background:#f3e5f5;border-radius:10px;padding:8px 12px;display:none}
+  #scoreBox{position:sticky;bottom:0;background:#e65100;color:#fff;border-radius:16px 16px 0 0;padding:12px 20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-top:30px}
+  #scoreBox button{background:#ffca28;color:#3e2723}
+  #final{display:none;font-size:1.15em;text-align:center;border:4px solid #43a047}
+  .tipbox{background:#fff8e1;border-left:8px solid #ffb300}
+</style>
+</head>
+<body>
+<div class="wrap">
+<a class="home" href="../../index.html">&larr; Back to all lessons</a>
+<h1>🦷 Math Week 55: Open Wide! Dental Detective's Math Lab</h1>
+<p>Ace, a dental office runs on numbers. Dentists and dental hygienists count teeth, measure gums in millimetres, read X-rays that are enlarged on a screen, schedule appointments to the minute, and figure out how much fluoride is in a town's tap water. Today you're joining the team as a <strong>dental detective</strong>. You'll use <strong>percent of a total, minutes-to-hours conversions, dividing decimals, rounding down when you need whole items, rates in mg per litre, scale factors, the mean with mixed units, percent of an amount, probability with "not", elapsed time and scheduling, the volume of a cylinder, working backward from a percent discount, two-step equations and multi-step rate problems</strong>.</p>
+
+<h2>Part 1: Learn the Moves</h2>
+
+<div class="box tipbox">
+  <strong>The 4-Step Problem Solver (your dental detective's checklist):</strong>
+  <ol>
+    <li><strong>Read</strong>: What is the question actually asking? Underline the numbers and units (mm, cm, m, mL, L, g, mg, min, h, $, %).</li>
+    <li><strong>Plan</strong>: Do the units match? Change metres to centimetres or minutes to hours <em>before</em> you calculate.</li>
+    <li><strong>Solve</strong>: Do one step at a time and write each step down.</li>
+    <li><strong>Check</strong>: Is my answer reasonable? Nobody has 50 teeth, and a family can't pay more than the whole bill.</li>
+  </ol>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 1: Percent of a total</h3>
+  <p class="step">If 18 out of 24 students brushed this morning, that's 18 ÷ 24 = 0.75 = <strong>75%</strong>.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 2: Minutes to hours</h3>
+  <p class="step">There are 60 minutes in an hour. 3 minutes a day for 100 days is 300 minutes, and 300 ÷ 60 = <strong>5 hours</strong>.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 3: Dividing with decimals</h3>
+  <p class="step">A granola bar has 14 g of sugar. If 1 teaspoon of sugar is about 4 g, that's 14 ÷ 4 = <strong>3.5 teaspoons</strong>.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 4: Rounding down for whole items</h3>
+  <p class="step">A 10 m roll of ribbon is cut into 30 cm pieces. 10 m = 1 000 cm, and 1 000 ÷ 30 = 33.3…, so you get <strong>33</strong> whole pieces. You can't use the leftover bit as a full piece, so round <em>down</em>.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 5: Rates in mg per litre</h3>
+  <p class="step">A rate like <strong>2 mg/L</strong> means 2 milligrams in every litre. In 3 L there are 3 × 2 = <strong>6 mg</strong>. In half a litre there are 0.5 × 2 = 1 mg.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 6: Scale factor</h3>
+  <p class="step">A drawing of a tooth is 12 cm tall, but the real tooth is 2 cm tall. The drawing is 12 ÷ 2 = <strong>6 times</strong> as big as the real thing. (Scale factor = image size ÷ real size.)</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 7: The mean with mixed units</h3>
+  <p class="step">To average 1 min, 40 s and 1 min 20 s, change everything to seconds first: 60 + 40 + 80 = 180 s, and 180 ÷ 3 = <strong>60 s</strong>.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 8: Percent of an amount</h3>
+  <p class="step">If a bill is $200 and insurance pays 70%, the insurance pays 0.7 × 200 = $140, and the family pays the other 30%: 200 − 140 = <strong>$60</strong>.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 9: Probability with "not"</h3>
+  <p class="step">If 6 of 20 marbles are red, then 20 − 6 = 14 are <em>not</em> red. P(not red) = 14/20 = <strong>7/10</strong>. (Or: 1 − 6/20.)</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 10: Elapsed time and scheduling</h3>
+  <p class="step">From 9:00 a.m. to 1:30 p.m. is 4 h 30 min = 270 min. If each visit is 45 min, that's 270 ÷ 45 = <strong>6</strong> visits.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 11: Volume of a cylinder</h3>
+  <p class="step">Volume = π × r × r × h. A cup with radius 2 cm and height 5 cm: 3.14 × 2 × 2 × 5 = <strong>62.8 cm³</strong>. Since 1 cm³ = 1 mL, it holds 62.8 mL.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 12: Working backward from a discount</h3>
+  <p class="step">A sale price is 20% off, so you pay 80% (0.8) of the original. If the sale price is $40: original × 0.8 = 40, so original = 40 ÷ 0.8 = <strong>$50</strong>.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 13: Two-step equations</h3>
+  <p class="step">"3 more than twice a number is 13" means 2n + 3 = 13. Undo the steps in reverse order: 13 − 3 = 10, then 10 ÷ 2 = <strong>5</strong>.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 14: Multi-step rate problems</h3>
+  <p class="step">If one person needs a new item every 4 months, then in 1 year (12 months) they need 12 ÷ 4 = 3. A family of 5 needs 5 × 3 = <strong>15</strong> a year.</p>
+</div>
+
+<h2>Part 2: The Challenge (15 problems)</h2>
+<p>Type your answer and press <strong>Check</strong> (or Enter). Negative numbers like <span class="mono">-35</span>, fractions like <span class="mono">3/4</span>, mixed numbers like <span class="mono">1 3/4</span>, or decimals like <span class="mono">1.75</span> are fine. Don't type the units or % signs, and you may use spaces or commas in big numbers (1 000 000). Stuck? Press <strong>Hint</strong>. After 2 tries, you can see a full solution.</p>
+
+<div id="questions"></div>
+<div class="box" id="final"></div>
+<div id="scoreBox">
+  <span id="scoreText">Score: 0 / 15 correct</span>
+  <button id="finishBtn" type="button">I'm done! Show my final score</button>
+</div>
+</div>
+
+<script>
+var NAME = "Ace";
+var TABLE = '';
+var QUESTIONS = [
+ {t:"Children usually have <strong>20</strong> baby teeth. Adults usually have <strong>32</strong> permanent teeth. The number of baby teeth is what <strong>percent</strong> of the number of adult teeth?", a:"62.5", u:"%",
+  h:["Percent = part ÷ total × 100. Here the \"part\" is 20 and the \"total\" is 32.","20 ÷ 32 = 0.625."],
+  s:"20 ÷ 32 = 0.625 = 62.5%. You get 12 more teeth as an adult, including four wisdom teeth."},
+ {t:"Dentists recommend brushing for <strong>2 minutes</strong>, <strong>twice a day</strong>. If you do that every day for one year (<strong>365 days</strong>), how many <strong>hours</strong> of brushing is that? Round to the nearest whole hour.", a:"24", u:"hours",
+  h:["Minutes per day = 2 × 2 = 4. Minutes per year = 4 × 365.","1 460 minutes ÷ 60 = 24.33…"],
+  s:"4 × 365 = 1 460 minutes. 1 460 ÷ 60 = 24.33…, which rounds to 24 hours: about one whole day of brushing per year!"},
+ {t:"A 355 mL can of pop contains about <strong>39 g</strong> of sugar. One teaspoon of sugar has a mass of about <strong>4 g</strong>. How many <strong>teaspoons</strong> of sugar are in the can? (Give a decimal.)", a:"9.75", u:"teaspoons",
+  h:["Divide the total mass of sugar by the mass of one teaspoon.","39 ÷ 4 = ?"],
+  s:"39 ÷ 4 = 9.75 teaspoons. Imagine spooning almost 10 teaspoons of sugar into a glass of water!"},
+ {t:"Each time you eat or drink something sugary, the bacteria in plaque make acid that attacks your enamel for about <strong>20 minutes</strong>. One day, Jordan has <strong>3 meals</strong> and <strong>4 sugary snacks or drinks</strong>, each at a different time. About how many <strong>minutes</strong> of acid attack is that?", a:"140", u:"minutes",
+  h:["Count the separate times Jordan ate or drank: 3 + 4.","7 × 20 = ?"],
+  s:"3 + 4 = 7 separate times. 7 × 20 = 140 minutes, over 2 hours! Sipping and snacking all day means more acid attacks than eating at meal times."},
+ {t:"A container holds <strong>50 m</strong> of dental floss. You use <strong>45 cm</strong> each day. How many <strong>full days</strong> will the floss last?", a:"111", u:"days",
+  h:["Change 50 m to centimetres: 50 × 100 = 5 000 cm.","5 000 ÷ 45 = 111.1… Can you use a part-day?"],
+  s:"50 m = 5 000 cm. 5 000 ÷ 45 = 111.1…, so the floss lasts 111 full days (the leftover 5 cm isn't enough for a whole day)."},
+ {t:"An electric toothbrush is on sale for <strong>25% off</strong>. The sale price is <strong>$54</strong>. What was the <strong>original price</strong>, in dollars?", a:"72", u:"$",
+  h:["25% off means you pay 75% (0.75) of the original price.","Original × 0.75 = 54, so original = 54 ÷ 0.75."],
+  s:"54 ÷ 0.75 = $72. Check: 25% of 72 is 18, and 72 − 18 = 54. ✓"},
+ {t:"In many Canadian towns, a small amount of fluoride is added to tap water to help protect teeth. Health Canada's recommended level is <strong>0.7 mg per litre</strong>. If Ace drinks <strong>1.5 L</strong> of tap water in a day, how many <strong>milligrams</strong> of fluoride is that?", a:"1.05", u:"mg",
+  h:["0.7 mg in every litre, and there are 1.5 litres.","1.5 × 0.7 = ?"],
+  s:"1.5 × 0.7 = 1.05 mg. That's a tiny amount: a milligram is one-thousandth of a gram."},
+ {t:"On the dentist's computer screen, an X-ray image of a molar is <strong>6 cm</strong> tall. The real tooth is <strong>2.4 cm</strong> tall. What is the <strong>scale factor</strong> (how many times bigger is the image)?", a:"2.5", u:"times",
+  h:["Scale factor = image size ÷ real size.","6 ÷ 2.4 = 60 ÷ 24."],
+  s:"6 ÷ 2.4 = 2.5. The image is 2.5 times as tall as the real tooth."},
+ {t:"A dental hygienist timed how long five students brushed: <strong>45 s</strong>, <strong>2 min</strong>, <strong>1 min 30 s</strong>, <strong>2 min 15 s</strong> and <strong>1 min</strong>. What was the <strong>mean</strong> brushing time, in <strong>seconds</strong>?", a:"90", u:"s",
+  h:["Change every time to seconds: 45, 120, 90, 135, 60.","The total is 450 s. Divide by 5."],
+  s:"45 + 120 + 90 + 135 + 60 = 450 s. 450 ÷ 5 = 90 s, only a minute and a half, well short of the 2-minute goal."},
+ {t:"A family's dental check-up costs <strong>$180</strong>. Their insurance plan pays <strong>80%</strong> of the cost. How many <strong>dollars</strong> does the family pay?", a:"36", u:"$",
+  h:["If insurance pays 80%, the family pays the other 20%.","20% of 180 = 0.2 × 180."],
+  s:"100% − 80% = 20%. 0.2 × 180 = $36. (Or: insurance pays 0.8 × 180 = $144, and 180 − 144 = $36.)"},
+ {t:"A dental office gives each young patient a new toothbrush from a basket of <strong>40</strong>: <strong>12</strong> blue, <strong>10</strong> green, <strong>8</strong> red and <strong>10</strong> purple. If a brush is picked at random, what is the probability that it is <strong>not blue</strong>? Type it as a <strong>simplified</strong> fraction.", a:"7/10", u:"",
+  h:["How many brushes are not blue? 40 − 12.","28/40: divide the top and bottom by 4."],
+  s:"40 − 12 = 28 brushes are not blue. 28/40 = 7/10."},
+ {t:"A dentist works from <strong>8:00 a.m.</strong> to <strong>4:30 p.m.</strong> with a <strong>1-hour</strong> lunch break. She has already booked <strong>six 45-minute</strong> appointments. How many <strong>30-minute</strong> check-ups can she fit into the rest of her working time?", a:"6", u:"check-ups",
+  h:["8:00 a.m. to 4:30 p.m. is 8 h 30 min. Take away 1 h for lunch: 7 h 30 min = 450 min.","Six 45-minute appointments = 270 min. 450 − 270 = 180 min left."],
+  s:"8 h 30 min − 1 h = 7 h 30 min = 450 min. 6 × 45 = 270 min. 450 − 270 = 180 min. 180 ÷ 30 = 6 check-ups."},
+ {t:"A rinse cup is shaped like a <strong>cylinder</strong> with a radius of <strong>3 cm</strong> and a height of <strong>7 cm</strong>. Using <strong>π ≈ 3.14</strong>, how many <strong>millilitres</strong> does it hold when full? (1 cm³ = 1 mL. Don't round.)", a:"197.82", u:"mL",
+  h:["Volume = π × r × r × h = 3.14 × 3 × 3 × 7.","3.14 × 9 = 28.26. Now multiply by 7."],
+  s:"3.14 × 3 × 3 × 7 = 28.26 × 7 = 197.82 cm³ = 197.82 mL, just under 200 mL."},
+ {t:"Dentists say to replace a toothbrush about every <strong>3 months</strong>. How many toothbrushes does a family of <strong>4</strong> need over <strong>2 years</strong>?", a:"32", u:"toothbrushes",
+  h:["2 years = 24 months. How many 3-month periods is that?","24 ÷ 3 = 8 brushes per person. Now multiply by the number of people."],
+  s:"24 ÷ 3 = 8 toothbrushes per person. 8 × 4 = 32 toothbrushes."},
+ {t:"Maya has lost some baby teeth. By her 10th birthday she had lost a total of <strong>11</strong> teeth, which is <strong>3 more than twice</strong> the number she had lost by her 7th birthday. How many teeth had she lost by her 7th birthday?", a:"4", u:"teeth",
+  h:["Write an equation: 2n + 3 = 11.","Undo the steps in reverse order: subtract 3, then divide by 2."],
+  s:"2n + 3 = 11. 11 − 3 = 8. 8 ÷ 2 = 4. Check: twice 4 is 8, and 3 more is 11. ✓"}
+];
+
+var PRAISE = ["Nice work, Ace!","Correct! That answer has real bite! 🦷","Yes! Cavity-free calculation! ✨","Excellent, Ace. That was a tough one!","Right on target! 🎯","Brilliant thinking, Ace!","Spot on, Dental Detective Ace! 🔍"];
+var ENCOURAGE = ["Not quite. Check your steps and try again!","Close call. Try again, Ace! Maybe use a hint?","Hmm, not yet. Re-read the question carefully.","Keep going, Ace. Mistakes help your brain grow!"];
+
+function parseAnswer(str){
+  if(str===undefined||str===null) return NaN;
+  var s=String(str).trim().toLowerCase();
+  s=s.replace(/[\u2212\u2013]/g,"-");
+  s=s.replace(/(\d),(?=\d{3}(\D|$))/g,"$1");
+  s=s.replace(/[^0-9.\/\- ]/g," ").replace(/\s+/g," ").trim();
+  s=s.replace(/\s*\/\s*/g,"/");
+  var m;
+  if((m=s.match(/^(-?\d+) (\d+)\/(\d+)$/))){ var w=parseFloat(m[1]),n=parseFloat(m[2]),d=parseFloat(m[3]); if(d===0)return NaN; return w<0? w-n/d : w+n/d; }
+  if((m=s.match(/^(-?\d+(?:\.\d+)?)\/(\d+(?:\.\d+)?)$/))){ var d2=parseFloat(m[2]); if(d2===0)return NaN; return parseFloat(m[1])/d2; }
+  s=s.replace(/ /g,"");
+  if(/^-?(\d+\.?\d*|\.\d+)$/.test(s)) return parseFloat(s);
+  return NaN;
+}
+function isCorrect(input,key){
+  var a=parseAnswer(input), k=parseAnswer(key);
+  if(isNaN(a)) return false;
+  var isInt=Math.abs(k-Math.round(k))<1e-12;
+  var tol=isInt?1e-9:0.005;
+  return Math.abs(a-k)<=tol;
+}
+
+function isRomanCorrect(input,key){ return String(input).replace(/\s+/g,"").toUpperCase()===key; }
+var state=[];
+function render(){
+  var box=document.getElementById("questions");
+  QUESTIONS.forEach(function(q,i){
+    state.push({correct:false,tries:0,hints:0});
+    var d=document.createElement("div");
+    d.className="box q"; d.id="q"+i;
+    d.innerHTML='<div><span class="qnum">'+(i+1)+'.</span> '+q.t+'</div>'+
+      '<div class="row"><input type="text"'+(q.r?' placeholder="e.g. MMXXVI"':'')+' id="in'+i+'" aria-label="Answer to question '+(i+1)+'" autocomplete="off"> <span class="unit">'+q.u+'</span>'+
+      '<button type="button" class="check" data-i="'+i+'">Check</button>'+
+      '<button type="button" class="hint" data-i="'+i+'">Hint 💡</button>'+
+      '<button type="button" class="sol" data-i="'+i+'" style="display:none">Show solution</button></div>'+
+      '<div class="fb" id="fb'+i+'"></div><div class="hints" id="hints'+i+'"></div>'+
+      '<div class="solution" id="sol'+i+'"><strong>Solution:</strong> '+q.s+'</div>';
+    box.appendChild(d);
+  });
+  box.addEventListener("click",function(e){
+    var b=e.target; if(b.tagName!=="BUTTON")return;
+    var i=+b.getAttribute("data-i");
+    if(b.className==="check") check(i);
+    else if(b.className==="hint") hint(i);
+    else if(b.className==="sol") document.getElementById("sol"+i).style.display="block";
+  });
+  box.addEventListener("keydown",function(e){
+    if(e.key==="Enter"&&e.target.tagName==="INPUT"){ check(+e.target.id.slice(2)); }
+  });
+}
+function pick(arr){return arr[Math.floor(Math.random()*arr.length)];}
+function check(i){
+  var val=document.getElementById("in"+i).value;
+  var fb=document.getElementById("fb"+i), card=document.getElementById("q"+i);
+  if(val.trim()===""){fb.className="fb bad";fb.textContent="Type an answer first, Ace!";return;}
+  var isR=!!QUESTIONS[i].r;
+  if(isR&&!/^[ivxlcdm\s]+$/i.test(val)){fb.className="fb bad";fb.textContent="Use only Roman numeral letters: I, V, X, L, C, D, M.";return;}
+  if(!isR&&isNaN(parseAnswer(val))){fb.className="fb bad";fb.textContent="I can't read that as a number. Try something like 42, 3.5, 3/4 or 1 3/4.";return;}
+  state[i].tries++;
+  if(isR?isRomanCorrect(val,QUESTIONS[i].a):isCorrect(val,QUESTIONS[i].a)){
+    state[i].correct=true; card.className="box q right"; fb.className="fb good";
+    fb.textContent="✅ "+pick(PRAISE)+(state[i].tries===1?" (first try!)":"");
+  } else {
+    state[i].correct=false; card.className="box q wrong"; fb.className="fb bad";
+    fb.textContent="❌ "+pick(ENCOURAGE);
+    if(state[i].tries>=2) card.querySelector(".sol").style.display="inline-block";
+  }
+  updateScore();
+}
+function hint(i){
+  var q=QUESTIONS[i], s=state[i], hb=document.getElementById("hints"+i);
+  if(s.hints<q.h.length){
+    var p=document.createElement("p"); p.textContent="💡 Hint "+(s.hints+1)+": "+q.h[s.hints]; hb.appendChild(p); s.hints++;
+  }
+  if(s.hints>=q.h.length) document.querySelector("#q"+i+" .hint").disabled=true;
+  updateScore();
+}
+function counts(){
+  var c=0,first=0,h=0;
+  state.forEach(function(s){ if(s.correct){c++; if(s.tries===1)first++;} h+=s.hints; });
+  return {correct:c,first:first,hints:h};
+}
+function updateScore(){
+  var k=counts();
+  document.getElementById("scoreText").textContent="Score: "+k.correct+" / "+QUESTIONS.length+" correct · hints used: "+k.hints;
+}
+function finish(){
+  var k=counts(), n=QUESTIONS.length, pct=Math.round(100*k.correct/n);
+  var msg;
+  if(pct===100) msg="🏆 PERFECT SCORE! Incredible work, Ace. The dental team would hire you as head Dental Detective!";
+  else if(pct>=85) msg="🌟 Outstanding, Ace! That's a Grade 6–7 level performance!";
+  else if(pct>=65) msg="💪 Great effort, Ace! Review the ones you missed and try them again.";
+  else if(pct>=40) msg="👍 Good start, Ace! These problems are tough. Use the hints and solutions to learn the tricks, then try again.";
+  else msg="🌱 These are challenge problems, well above grade level. Every great scientist started as a beginner! Go through the worked examples and try again, Ace!";
+  var f=document.getElementById("final");
+  f.style.display="block";
+  f.innerHTML="<h2 style='border:none;margin-top:0'>Final Score: "+k.correct+" / "+n+" ("+pct+"%)</h2>"+
+    "<p>Correct on the first try: "+k.first+" · Hints used: "+k.hints+"</p><p>"+msg+"</p>"+
+    "<p style='font-size:.85em;color:#546e7a'>Finished on "+new Date().toLocaleString("en-CA")+"</p>";
+  f.scrollIntoView({behavior:"smooth"});
+}
+render();
+updateScore();
+document.getElementById("finishBtn").addEventListener("click",finish);
+</script>
+<script src="../../assets/autosave.js"></script>
+</body>
+</html>

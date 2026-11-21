@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Writing (Nov. 21): Picture Book for Younger Readers (The Sugar Bug Battle) + Grammar Clinic</title>
+<style>
+  body{font-family:"Segoe UI",Verdana,Arial,sans-serif;font-size:20px;line-height:1.6;margin:0;background:#fff8f0;color:#2c2416}
+  .wrap{max-width:880px;margin:0 auto;padding:20px 18px 80px}
+  a.home{font-size:.9em;color:#bf360c}
+  h1{color:#e65100;font-size:2em;margin:10px 0}
+  h2{color:#ef6c00;margin-top:36px;border-bottom:3px solid #ffcc80;padding-bottom:4px}
+  h3{color:#ef6c00}
+  .box{background:#fff;border-radius:16px;padding:18px 22px;margin:16px 0;box-shadow:0 3px 10px rgba(0,0,0,.07)}
+  .tipbox{background:#fff8e1;border-left:8px solid #ffb300}
+  .senses{display:grid;gap:8px;margin:10px 0;grid-template-columns:repeat(auto-fit,minmax(140px,1fr))}
+  .senses .side{border-radius:14px;padding:10px 16px;background:#fff3e0}
+  .ts{background:#ffcc80;border-radius:5px;padding:1px 3px}
+  .ev{background:#c8e6c9;border-radius:5px;padding:1px 3px}
+  .ex{background:#ffe0b2;border-radius:5px;padding:1px 3px}
+  .cs{background:#e1bee7;border-radius:5px;padding:1px 3px}
+  .legend span{display:inline-block;margin:4px 8px 4px 0;font-size:.85em}
+  .model{font-family:Georgia,"Times New Roman",serif;font-size:1.05em;line-height:1.9}
+  .row{padding:10px 6px;border-bottom:1px dashed #ddd}
+  .row.right{background:#f1f8e9} .row.wrong{background:#fff5f5}
+  select{font-size:.9em;padding:5px 8px;border-radius:8px;border:2px solid #ffb74d;font-family:inherit}
+  .q{border-left:8px solid #b0bec5}
+  .q.right{border-left-color:#43a047;background:#f1f8e9}
+  .q.wrong{border-left-color:#e53935;background:#fff5f5}
+  .opt{display:block;width:100%;text-align:left;font-size:.95em;background:#fafafa;border:2px solid #e0e0e0;border-radius:10px;padding:8px 14px;margin:8px 0;cursor:pointer;font-family:inherit}
+  .opt:hover{border-color:#ffb74d;background:#fff}
+  .opt.sel-right{background:#c8e6c9;border-color:#43a047}
+  .opt.sel-wrong{background:#ffcdd2;border-color:#e53935}
+  .fb{margin-top:6px;font-weight:bold}
+  .fb.good{color:#2e7d32} .fb.bad{color:#c62828}
+  .explain{font-weight:normal;color:#e65100}
+  .bad-sent{font-family:Consolas,"Courier New",monospace;background:#ffebee;padding:6px 10px;border-radius:8px;display:inline-block;margin:6px 0}
+  input.fix{width:100%;box-sizing:border-box;font-size:1em;padding:8px 12px;border:2px solid #ffb74d;border-radius:10px;font-family:inherit}
+  button{font-size:.95em;padding:8px 16px;border:none;border-radius:10px;cursor:pointer;font-weight:bold;font-family:inherit}
+  .go{background:#ef6c00;color:#fff} .go:hover{background:#e65100}
+  .hint{background:#ffe082;color:#5d4037}
+  .blue{background:#1e88e5;color:#fff}
+  .purple{background:#8e24aa;color:#fff}
+  .grey{background:#cfd8dc;color:#263238}
+  .btnrow{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px}
+  textarea{width:100%;box-sizing:border-box;min-height:300px;font-size:1.05em;line-height:1.7;font-family:Georgia,"Times New Roman",serif;padding:14px;border:3px solid #ffb74d;border-radius:12px}
+  textarea:focus{outline:none;border-color:#ef6c00}
+  .counter{display:flex;flex-wrap:wrap;gap:20px;align-items:center;margin:8px 0;font-weight:bold}
+  .meter{flex:1;min-width:200px;height:18px;background:#e0e0e0;border-radius:9px;overflow:hidden}
+  .meter div{height:100%;width:0;background:#ffb300;transition:width .2s}
+  .checklist label{display:block;padding:6px 4px;cursor:pointer}
+  .checklist input{transform:scale(1.4);margin-right:10px}
+  .prompts label{display:block;background:#fff3e0;border-radius:10px;padding:10px 14px;margin:8px 0;cursor:pointer}
+  .flow{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin:10px 0;font-size:.85em}
+  .flow span.st{background:#e3f2fd;border:2px solid #1e88e5;border-radius:8px;padding:4px 10px;font-weight:bold;color:#0d47a1}
+  .flow span.ar{color:#1e88e5;font-weight:bold}
+  .prompts input{transform:scale(1.3);margin-right:8px}
+  #scoreBox{position:sticky;bottom:0;background:#e65100;color:#fff;border-radius:16px 16px 0 0;padding:12px 20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-top:30px}
+  .w5{display:grid;gap:8px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));margin:10px 0}
+  .w5 label{display:block;font-weight:bold;color:#e65100}
+  .w5 input{width:100%;box-sizing:border-box;font-size:.95em;padding:6px 10px;border:2px solid #ffb74d;border-radius:8px;font-family:inherit}
+  #printArea{display:none}
+  @media print{
+    body{background:#fff;font-size:14pt}
+    .wrap,#scoreBox{display:none !important}
+    #printArea{display:block;font-family:Georgia,serif;line-height:1.8}
+    #printArea h1{font-size:18pt;margin:0 0 6pt}
+    #printArea .meta{font-size:11pt;color:#444}
+    #printArea .text{white-space:pre-wrap;border-top:1px solid #999;padding-top:10pt;margin-top:10pt}
+    #printArea .lines{margin-top:24pt;border-top:1px solid #999;padding-top:6pt;font-size:11pt}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+<a class="home" href="../../index.html">&larr; Back to all lessons</a>
+<h1>✍️ Writing Week 55: Picture Book for Younger Readers — The Sugar Bug Battle 📚🦷</h1>
+<p>Yesterday you wrote an FAQ page for readers your own age. Today, Ace, you'll write for a <strong>much younger</strong> audience: a <strong>picture book</strong> for kindergarten or Grade 1 kids. This is harder than it sounds! A picture-book author has to take a real science idea (like how cavities form) and explain it in <strong>short sentences and simple words</strong>, without saying anything false, and make it fun enough that a five-year-old begs to hear it again. Authors also plan what the <strong>pictures</strong> will show, because in a picture book the words and the pictures share the job. Today's genre is the <strong>picture book for younger readers</strong>: a story with a character, a problem, a repeating line, simple true science, and a happy ending.</p>
+
+<h2>Part 1: The Lesson</h2>
+<div class="box">
+  <h3 style="margin-top:0">The six parts of a strong science picture book 📚</h3>
+  <p>Most picture books are about 12 to 16 pages, with only 1 to 3 short sentences on each page.</p>
+  <div class="senses">
+    <div class="side"><strong>1. Title and cover line:</strong> a catchy title (rhyme or alliteration helps) and a line that tells the young reader what's inside (<em>"A story about keeping your smile strong"</em>)</div>
+    <div class="side"><strong>2. Meet the main character:</strong> a character little kids care about (a kid, an animal, even a talking tooth) and what makes them special</div>
+    <div class="side"><strong>3. The problem:</strong> something goes wrong that the character has to deal with (<em>a sweet snack, a sore tooth, a scary first visit</em>)</div>
+    <div class="side"><strong>4. Repeating pattern line:</strong> a fun line that comes back again and again, so young listeners can join in</div>
+    <div class="side"><strong>5. Simple science explanation:</strong> the true idea, in words a five-year-old knows, often with a comparison (<em>"Plaque is like sticky glue for germs."</em>)</div>
+    <div class="side"><strong>6. Happy ending and reader tip:</strong> the problem is solved, and the last page gives the reader something to do (<em>"Now it's your turn to brush!"</em>)</div>
+  </div>
+  <h3>Five habits of great picture-book authors</h3>
+  <ul>
+    <li><strong>Know your reader:</strong> a five-year-old knows words like <em>sticky</em>, <em>germs</em> and <em>sweet</em>, but not <em>enamel</em>, <em>bacteria</em> or <em>acid</em>. If you use a science word, explain it right away in kid words.</li>
+    <li><strong>Simplify, but never say something false:</strong> ❌ <em>"Candy drills holes in your teeth."</em> ✅ <em>"Germs love sugar. When they eat it, they make sour acid that can make holes in teeth."</em></li>
+    <li><strong>Use sound and pattern:</strong> repetition, rhyme, rhythm and sound words (<em>scrub, swish, crunch!</em>) make a book fun to read aloud.</li>
+    <li><strong>Let the pictures help:</strong> write <em>[Picture: …]</em> notes so the illustrator shows what the words don't need to say. You don't have to write "Sam had a red shirt" if the picture shows it.</li>
+    <li><strong>Show, don't lecture:</strong> let the character <em>learn</em> the lesson through what happens, instead of the narrator saying "You must brush!" on every page.</li>
+  </ul>
+  <p><strong>Picture-book author's rule:</strong> read your book out loud. If you run out of breath in a sentence, or a little kid would ask "What does that mean?", fix it.</p>
+</div>
+
+<div class="box tipbox">
+  <h3 style="margin-top:0">Mini-lesson: grammar for storytellers 💬</h3>
+  <p><strong>Dialogue punctuation:</strong> put quotation marks around the exact words spoken, and put the comma, question mark or exclamation mark <em>inside</em> the closing quotation mark: <em>"Open wide," said Dr. Patel.</em> <em>"Is it my turn?" asked Sam.</em> Start a new paragraph each time a new character speaks.</p>
+  <p><strong>Commas after introductory words:</strong> <em>First, Sam brushed the top teeth. Every night, Sam flosses. After lunch, Sam swished with water.</em></p>
+  <p><strong>Their / there / they're:</strong> <em>their</em> = belonging to them (<em>their toothbrushes</em>), <em>there</em> = a place (<em>over there</em>), <em>they're</em> = they are (<em>they're brushing</em>).</p>
+  <p><strong>Exclamation marks:</strong> one is exciting; three in every sentence is shouting. Save them for the big moments: <em>Crunch!</em></p>
+  <p><strong>Canadian spelling:</strong> <em>colour, favourite, flavour, neighbour, centre</em>. A picture book's <em>favourite colour</em> keeps its <em>u</em>!</p>
+</div>
+
+<div class="box">
+  <h3 style="margin-top:0">Model picture book: "Sam and the Sugar Bugs" (about 200 words)</h3>
+  <p class="legend"><span class="ts">Title + main character</span><span class="ev">Problem + repeating line</span><span class="ex">Simple science + picture notes</span><span class="cs">Happy ending + reader tip</span></p>
+  <div class="model">
+    <span class="ts"><strong>Sam and the Sugar Bugs</strong><br>A story about keeping your smile strong<br><br>PAGE 1: This is Sam. Sam has twenty shiny teeth, and Sam loves to smile. [Picture: Sam grinning in a mirror.]</span><br><br>
+    <span class="ev">PAGE 2: One day, Sam ate a sticky, sweet candy. Then another. Then ANOTHER. [Picture: a pile of wrappers.]<br>PAGE 3: Tiny sugar bugs (germs too small to see) cheered. "Yum, yum, sugar for us!"<br>PAGE 4: That night, Sam was sleepy. "I'll skip brushing," Sam yawned.<br>The sugar bugs giggled. "Yum, yum, sugar for us!"</span><br><br>
+    <span class="ex">PAGE 5: Sugar bugs eat sugar, and then they make sour acid. The acid is like a tiny eraser that can rub a hole in a tooth. [Picture: a small, worried tooth.]<br>PAGE 6: The next morning, Sam's tooth felt funny. Mom took Sam to see Dr. Patel, the dentist. "Open wide," she said.</span><br><br>
+    <span class="cs">PAGE 7: Dr. Patel showed Sam how to brush for two whole minutes. Scrub, scrub, swish! "No sugar for you!" Sam laughed.<br>PAGE 8: Now Sam brushes every morning and every night. Sam's smile is strong again.<br><br>Now it's your turn. Grab your toothbrush. Scrub, scrub, swish!</span>
+  </div>
+  <p><strong>Notice:</strong> the sentences are short, and every hard idea is put into kid words (<em>sugar bugs (germs too small to see)</em>, <em>acid is like a tiny eraser</em>). The repeating line <em>"Yum, yum, sugar for us!"</em> comes back, then flips into <em>"No sugar for you!"</em> at the turning point. Sam <em>learns</em> the lesson through the story. Look for dialogue punctuation (<em>"Open wide," she said.</em>), the sound words <em>scrub, scrub, swish</em>, the picture notes, and the reader tip on the last page.</p>
+</div>
+
+<h2>Part 2: Name That Picture-Book Part</h2>
+<div class="box">
+  <p>Each line comes from a student's picture book called <strong>"Molly Molar's Big Day."</strong> Choose which <strong>part</strong> of the picture book it shows best.</p>
+  <div id="labelRows"></div>
+  <div class="btnrow"><button type="button" class="go" id="checkLabels">Check my answers</button></div>
+  <div class="fb" id="labelFb"></div>
+</div>
+
+<h2>Part 3: Grammar Clinic 📏</h2>
+<div class="box tipbox">Every author needs a careful editor, even picture-book authors! <strong>Section A:</strong> pick the correct choice. <strong>Section B:</strong> type the sentence again with <em>all</em> mistakes fixed. We use <strong>Canadian spelling</strong> (colour, favourite, flavour, centre). Today, watch <strong>dialogue punctuation</strong>, <strong>commas after introductory words</strong>, <strong>their / there / they're</strong>, <strong>Canadian -our spelling</strong> and <strong>writing for a young reader</strong>.</div>
+<h3>Section A: Pick the correct choice</h3>
+<div id="gmc"></div>
+<h3>Section B: Fix the sentence</h3>
+<p>Retype the whole sentence correctly, with capital letters and punctuation. Each one has <strong>at least two</strong> mistakes.</p>
+<div id="gfix"></div>
+
+<h2>Part 4: Your Turn to Write</h2>
+<div class="box">
+  <h3 style="margin-top:0">Step 1: Choose your picture book</h3>
+  <p>Pick <strong>one</strong> prompt. Use today's reading (and math!) for ideas. Jot your plan in the boxes first, then write.</p>
+  <div class="prompts" id="prompts">
+    <label><input type="radio" name="prompt" value="Option A: A Healthy-Teeth Picture Book for Kindergarten" checked> 🦷 <strong>Option A: A Healthy-Teeth Picture Book for Kindergarten.</strong> Write a picture book that teaches five-year-olds why brushing and flossing matter. Use true facts from today's reading (plaque, sugar and acid, why baby teeth matter, brushing for two minutes twice a day), but explain them in kid words.</label>
+    <label><input type="radio" name="prompt" value="Option B: A Picture Book About Another Science Idea"> 🐝 <strong>Option B: A Picture Book About Another Science Idea.</strong> Turn something you've learned in an earlier lesson into a picture book for Grade 1: how bees make honey, why avalanches happen, how fish like Tiktaalik led to animals that walked on land, or how the heart pumps blood.</label>
+    <label><input type="radio" name="prompt" value="Option C: Brave at the Dentist (or Somewhere New)"> 🌟 <strong>Option C: Brave at the Dentist (or Somewhere New).</strong> Write a picture book for a little kid who is nervous about a first visit somewhere: the dentist, a new school, swimming lessons or a doctor's appointment. Show the character feeling scared, finding out what really happens, and feeling proud.</label>
+  </div>
+  <p><strong>Plan your picture book:</strong> jot a few words for each box. (These notes save with your writing.)</p>
+  <div class="w5" id="w5">
+    <div><label for="w5who">My title and my young reader (how old?)</label><input id="w5who" type="text" autocomplete="off"></div>
+    <div><label for="w5place">Main character and the problem</label><input id="w5place" type="text" autocomplete="off"></div>
+    <div><label for="w5facts">True science facts I'll explain in kid words</label><input id="w5facts" type="text" autocomplete="off"></div>
+    <div><label for="w5senses">My repeating pattern line (and sound words)</label><input id="w5senses" type="text" autocomplete="off"></div>
+    <div><label for="w5feel">Picture ideas for two pages</label><input id="w5feel" type="text" autocomplete="off"></div>
+    <div><label for="w5closing">Happy ending and tip for the reader</label><input id="w5closing" type="text" autocomplete="off"></div>
+  </div>
+
+  <h3>Step 2: Write your picture book</h3>
+  <p><strong>Goal:</strong> <strong>200 to 350 words</strong>: a <strong>title</strong> and <strong>cover line</strong>, then <strong>8 to 12 pages</strong>, each with <strong>1 to 3 short sentences</strong>. Start each page with <strong>PAGE 1:</strong>, <strong>PAGE 2:</strong> and so on. Include a <strong>main character</strong>, a <strong>problem</strong>, a <strong>repeating line</strong> that comes back at least <strong>three times</strong>, at least <strong>two sound words</strong>, at least <strong>two lines of correctly punctuated dialogue</strong>, at least <strong>three [Picture: …] notes</strong>, a science idea explained with a <strong>comparison</strong>, and a <strong>happy ending with a reader tip</strong>. Every fact must be <strong>true</strong>, even if the characters are pretend. Then add <strong>2–3 sentences to Dad</strong> about which page you think a little kid will like best and why. Bonus: use two words from today's spelling list correctly (and explain them in kid words)! Extra bonus: read your book aloud to someone younger.</p>
+  <p><button type="button" class="hint" id="templateBtn">📋 Add the layout for me</button></p>
+  <label for="essay"><strong>Write here, Ace:</strong></label>
+  <textarea id="essay" placeholder="TITLE: ...&#10;Cover line: ...&#10;&#10;PAGE 1: ... [Picture: ...]&#10;PAGE 2: ..."></textarea>
+  <div class="counter">
+    <span id="wc">0 words</span>
+    <span id="sc">0 sentences</span>
+    <div class="meter" aria-hidden="true"><div id="meterBar"></div></div>
+  </div>
+  <div class="fb" id="wcMsg">Aim for 200 to 350 words.</div>
+  <p style="font-size:.8em;color:#607d8b" id="saveNote">Your writing is saved automatically in this browser as you type.</p>
+
+  <h3>Self-check before you finish ✅</h3>
+  <div class="checklist" id="checklist">
+    <label><input type="checkbox"> My book has a <strong>title</strong>, a <strong>cover line</strong> and <strong>8 to 12 pages</strong>.</label>
+    <label><input type="checkbox"> I have a <strong>main character</strong> with a <strong>problem</strong> and a <strong>happy ending</strong>.</label>
+    <label><input type="checkbox"> My <strong>repeating line</strong> comes back at least three times, and I used <strong>sound words</strong>.</label>
+    <label><input type="checkbox"> Every science fact is <strong>true</strong>, and every hard word is explained in <strong>kid words</strong> or a comparison.</label>
+    <label><input type="checkbox"> My sentences are <strong>short</strong>, and I added <strong>[Picture: …]</strong> notes.</label>
+    <label><input type="checkbox"> I checked <strong>dialogue punctuation</strong>, <strong>commas after introductory words</strong>, <strong>their / there / they're</strong> and <strong>Canadian spelling</strong> (colour, favourite).</label>
+  </div>
+  <div class="btnrow">
+    <button type="button" class="blue" id="downloadBtn">⬇️ Download my writing (for Dad)</button>
+    <button type="button" class="purple" id="printBtn">🖨️ Print my writing</button>
+    <button type="button" class="grey" id="clearBtn">Start over</button>
+  </div>
+  <div class="fb" id="doneMsg"></div>
+</div>
+
+<div id="scoreBox"><span id="scoreText"></span><span>Keep those stories (and smiles) bright, Ace! 📚🦷</span></div>
+</div>
+
+<div id="printArea"></div>
+
+<script>
+var NAME="Ace";
+var PRAISE=["Nice work, Ace!","Correct! Great editing eye!","Yes! Ace fixed it!","Excellent, author Ace!","Sparkling clean, like a fresh-brushed smile! 🦷"];
+function pick(a){return a[Math.floor(Math.random()*a.length)];}
+
+var LABELS=["Title and cover line", "Meet the main character", "The problem", "Repeating pattern line", "Simple science explanation", "Happy ending and reader tip"];
+var LABEL_ITEMS=[
+ {s:"\"Molly Molar's Big Day: A story about the strongest tooth in the mouth\"", a:"Title and cover line"},
+ {s:"\"Molly is a big, flat molar who lives at the very back of Ben's mouth. She is the best chewer in town!\"", a:"Meet the main character"},
+ {s:"\"But Ben sipped sweet juice all day long, and Molly started to feel achy.\"", a:"The problem"},
+ {s:"\"Sip, sip, sip! Molly groaned. 'Not again!'\" (This line appears on four different pages.)", a:"Repeating pattern line"},
+ {s:"\"Germs in the sticky stuff on teeth love sugar. When they eat it, they make sour acid, a bit like lemon juice, that can make holes in teeth.\"", a:"Simple science explanation"},
+ {s:"\"Now Ben drinks water between meals, and Molly feels strong again. Can you find your molars with your tongue?\"", a:"Happy ending and reader tip"}
+];
+var labelScore=0, labelChecked=false;
+function buildLabels(){
+  var box=document.getElementById("labelRows");
+  LABEL_ITEMS.forEach(function(it,i){
+    var d=document.createElement("div"); d.className="row"; d.id="lr"+i;
+    var sel='<select id="ls'+i+'" aria-label="Job of sentence '+(i+1)+'"><option value="">- choose -</option>';
+    LABELS.forEach(function(l){sel+='<option>'+l+'</option>';});
+    sel+='</select>';
+    d.innerHTML='<strong>'+(i+1)+'.</strong> '+it.s+'<br>'+sel+' <span id="lm'+i+'"></span>';
+    box.appendChild(d);
+  });
+}
+function checkLabels(){
+  var sc=0;
+  LABEL_ITEMS.forEach(function(it,i){
+    var ok=document.getElementById("ls"+i).value===it.a; if(ok)sc++;
+    document.getElementById("lr"+i).className="row "+(ok?"right":"wrong");
+    document.getElementById("lm"+i).textContent=ok?"✅":"❌";
+  });
+  labelScore=sc; labelChecked=true;
+  var fb=document.getElementById("labelFb");
+  if(sc===LABEL_ITEMS.length){fb.className="fb good";fb.textContent="🌟 "+sc+" / "+LABEL_ITEMS.length+". "+pick(PRAISE)+" You know exactly how a picture book is built!";}
+  else{fb.className="fb bad";fb.textContent=sc+" / "+LABEL_ITEMS.length+". Hint: the name of the book = title and cover line; who the story is about = main character; something going wrong = the problem; a line that comes back again and again = repeating line; a true fact in kid words = simple science; things getting better plus something for the reader to do = happy ending and reader tip.";}
+  updateScore();
+}
+
+var GMC=[
+ {q:"Which sentence punctuates the <strong>dialogue</strong> correctly?",
+  o:["\"Open wide\" said Dr. Patel.", "\"Open wide,\" said Dr. Patel.", "\"Open wide\", said Dr. Patel.", "Open wide, \"said Dr. Patel.\""],
+  a:1,e:"The comma goes <strong>inside</strong> the closing quotation mark, and only the spoken words are inside the quotation marks."},
+ {q:"Which sentence uses a <strong>comma after an introductory word or phrase</strong> correctly?",
+  o:["Every night Sam, brushes for two minutes.", "Every, night Sam brushes for two minutes.", "Every night, Sam brushes for two minutes.", "Every night Sam brushes, for two minutes."],
+  a:2,e:"<strong>Every night</strong> introduces the sentence, so the comma goes right after it, before the subject <strong>Sam</strong>."},
+ {q:"Which sentence uses <strong>their / there / they're</strong> correctly?",
+  o:["They're toothbrushes are over their.", "Their toothbrushes are over there.", "There toothbrushes are over they're.", "Their toothbrushes are over they're."],
+  a:1,e:"<strong>Their</strong> = belonging to them; <strong>there</strong> = a place. <em>They're</em> means <em>they are</em>."},
+ {q:"Which sentence uses <strong>Canadian spelling</strong> correctly?",
+  o:["My favorite toothpaste color is blue.", "My favourite toothpaste color is blue.", "My favorite toothpaste colour is blue.", "My favourite toothpaste colour is blue."],
+  a:3,e:"Canadian spelling keeps the <strong>u</strong> in <strong>favourite</strong> and <strong>colour</strong> (also flavour, neighbour, humour)."},
+ {q:"You're writing for <strong>five-year-olds</strong>. Which sentence is the best choice?",
+  o:["Bacteria metabolize carbohydrates and produce acids that demineralize enamel.", "Germs love sugar. When they eat it, they make sour acid that can hurt your teeth.", "The pH of the oral cavity decreases after sucrose consumption.", "Teeth are complicated structures made of several mineralized tissues."],
+  a:1,e:"B says the same true idea in short sentences and words a five-year-old knows (<em>germs, sugar, sour</em>). The others are accurate, but they're written for scientists."},
+ {q:"Which sentence <strong>simplifies</strong> the science without saying something <strong>false</strong>?",
+  o:["Candy has tiny drills that make holes in your teeth.", "If you eat one cookie, you will get a cavity.", "Brushing washes away the sticky germs that can make holes in teeth.", "Baby teeth don't need brushing because they fall out."],
+  a:2,e:"C is simple <em>and</em> true. A is false (candy has no drills), B claims too much (<em>will</em> after one cookie), and D is the counterargument today's reading rebutted."},
+ {q:"Where should you start a <strong>new paragraph</strong> (or new line) in a story with dialogue?",
+  o:["Every time a different character starts speaking", "Only at the very end of the book", "In the middle of a word", "Never; dialogue should all be in one paragraph"],
+  a:0,e:"Each new speaker gets a new paragraph, so readers always know who is talking."}
+];
+var gmcState=GMC.map(function(){return{answered:false,firstRight:false,done:false};});
+function buildGMC(){
+  var box=document.getElementById("gmc");
+  GMC.forEach(function(it,i){
+    var d=document.createElement("div"); d.className="box q"; d.id="g"+i;
+    var h='<div><strong>'+(i+1)+'.</strong> '+it.q+'</div>';
+    it.o.forEach(function(o,j){h+='<button type="button" class="opt" data-i="'+i+'" data-j="'+j+'">'+String.fromCharCode(65+j)+'. '+o+'</button>';});
+    h+='<div class="fb" id="gfb'+i+'"></div>';
+    d.innerHTML=h; box.appendChild(d);
+  });
+  box.addEventListener("click",function(e){
+    var b=e.target.closest?e.target.closest(".opt"):e.target; if(!b||!b.classList.contains("opt"))return;
+    var i=+b.getAttribute("data-i"), j=+b.getAttribute("data-j"), st=gmcState[i], it=GMC[i];
+    if(st.done)return;
+    var ok=j===it.a; if(!st.answered){st.answered=true;st.firstRight=ok;}
+    var fb=document.getElementById("gfb"+i);
+    if(ok){st.done=true;b.classList.add("sel-right");document.getElementById("g"+i).className="box q right";fb.className="fb good";fb.innerHTML="✅ "+pick(PRAISE)+' <span class="explain">'+it.e+'</span>';}
+    else{b.classList.add("sel-wrong");document.getElementById("g"+i).className="box q wrong";fb.className="fb bad";fb.textContent="❌ Not quite, Ace. Look closely and try again.";}
+    updateScore();
+  });
+}
+
+var GFIX=[
+ {bad:"after lunch sam swished with water and said my teeth feel clean",
+  ok:["After lunch, Sam swished with water and said, \"My teeth feel clean.\"","After lunch, Sam swished with water and said, \"My teeth feel clean!\"","After lunch Sam swished with water and said, \"My teeth feel clean.\"","After lunch Sam swished with water and said, \"My teeth feel clean!\""],
+  hint:"Capitalize After and the name Sam. Put a comma after the introductory phrase After lunch and before the quotation. Put the exact words in quotation marks, starting with a capital My, with the period inside the closing quotation mark."},
+ {bad:"theyre going to the dentist with there favorite stuffed animals",
+  ok:["They're going to the dentist with their favourite stuffed animals."],
+  hint:"Capitalize They're, which needs an apostrophe (they are). The stuffed animals belong to them, so use their. Canadian spelling: favourite. End with a period."},
+ {bad:"is it my turn asked ben",
+  ok:["\"Is it my turn?\" asked Ben."],
+  hint:"Put the spoken words in quotation marks, starting with a capital Is. The question mark goes inside the closing quotation mark. Capitalize the name Ben, and end the sentence with a period."}
+];
+
+var gfixState=GFIX.map(function(){return{tries:0,correct:false,firstRight:false};});
+function norm(s){return s.replace(/[\u2018\u2019\u02BC]/g,"'").replace(/[\u201C\u201D]/g,'"').replace(/\s+/g," ").trim();}
+function checkFixAnswer(i,val){var v=norm(val);return GFIX[i].ok.some(function(a){return norm(a)===v;});}
+function buildGFix(){
+  var box=document.getElementById("gfix");
+  GFIX.forEach(function(it,i){
+    var d=document.createElement("div"); d.className="box q"; d.id="f"+i;
+    d.innerHTML='<div><strong>'+(i+1)+'.</strong> Fix: <span class="bad-sent">'+it.bad+'</span></div>'+
+     '<input class="fix" type="text" id="fi'+i+'" autocomplete="off" spellcheck="false" aria-label="Corrected sentence '+(i+1)+'">'+
+     '<div class="btnrow"><button type="button" class="go" data-act="check" data-i="'+i+'">Check</button><button type="button" class="hint" data-act="hint" data-i="'+i+'">Hint 💡</button><button type="button" class="grey" data-act="show" data-i="'+i+'" style="display:none">Show answer</button></div>'+
+     '<div class="fb" id="ffb'+i+'"></div>';
+    box.appendChild(d);
+  });
+  box.addEventListener("click",function(e){
+    var b=e.target; if(b.tagName!=="BUTTON")return;
+    var i=+b.getAttribute("data-i"), act=b.getAttribute("data-act"), fb=document.getElementById("ffb"+i);
+    if(act==="hint"){fb.className="fb";fb.style.color="#5d4037";fb.textContent="💡 "+GFIX[i].hint;return;}
+    fb.style.color="";
+    if(act==="show"){fb.className="fb";fb.innerHTML='Answer: <em>'+GFIX[i].ok[0]+'</em>'+(GFIX[i].ok.length>1?' (other correct versions are accepted too)':'');return;}
+    fixCheck(i);
+  });
+  box.addEventListener("keydown",function(e){if(e.key==="Enter"&&e.target.classList.contains("fix"))fixCheck(+e.target.id.slice(2));});
+}
+function fixCheck(i){
+  var val=document.getElementById("fi"+i).value, fb=document.getElementById("ffb"+i), st=gfixState[i];
+  fb.style.color="";
+  if(!val.trim()){fb.className="fb bad";fb.textContent="Type the corrected sentence first, Ace!";return;}
+  st.tries++;
+  if(checkFixAnswer(i,val)){ if(st.tries===1)st.firstRight=true; st.correct=true; document.getElementById("f"+i).className="box q right"; fb.className="fb good"; fb.textContent="✅ "+pick(PRAISE); }
+  else { st.correct=false; document.getElementById("f"+i).className="box q wrong"; fb.className="fb bad"; fb.textContent="❌ Not quite. Check every capital letter, apostrophe, comma, and spelling. Try again!"; if(st.tries>=2)document.querySelector('#f'+i+' [data-act=show]').style.display="inline-block"; }
+  updateScore();
+}
+
+function updateScore(){
+  var g=0; gmcState.forEach(function(s){if(s.firstRight)g++;});
+  var f=0; gfixState.forEach(function(s){if(s.correct)f++;});
+  var total=LABEL_ITEMS.length+GMC.length+GFIX.length, got=labelScore+g+f;
+  document.getElementById("scoreText").textContent="Score: "+got+" / "+total+"  (labels "+(labelChecked?labelScore:"-")+"/"+LABEL_ITEMS.length+" · grammar A "+g+"/"+GMC.length+" · grammar B "+f+"/"+GFIX.length+")";
+}
+
+var W5=["who","place","facts","senses","feel","closing"];
+function w5Save(){try{localStorage.setItem(KEY+"-5w",JSON.stringify(W5.map(function(k){return document.getElementById("w5"+k).value;})));}catch(e){}}
+function w5Restore(){try{var d=JSON.parse(localStorage.getItem(KEY+"-5w")||"null");if(d)d.forEach(function(x,i){document.getElementById("w5"+W5[i]).value=x;});}catch(e){}}
+function w5Summary(){return W5.map(function(k){return k.charAt(0).toUpperCase()+k.slice(1)+": "+document.getElementById("w5"+k).value;}).join("\n");}
+function addTemplate(){
+  var t=document.getElementById("essay");
+  var tpl="TITLE: ...\nCOVER LINE: ...\nMY YOUNG READER IS: ... years old\n\nPAGE 1 (meet the main character): ... [Picture: ...]\n\nPAGE 2: ...\n\nPAGE 3 (the problem): ...\n\nPAGE 4 (repeating line): ...\n\nPAGE 5 (simple science + comparison): ... [Picture: ...]\n\nPAGE 6: ...\n\nPAGE 7 (turning point): ...\n\nPAGE 8 (happy ending + reader tip): ... [Picture: ...]\n\nNOTE TO DAD (the page a little kid will like best, and why):\n\nby "+NAME;
+  if(t.value.trim()&&!confirm("Add the picture-book layout below what you've already written?"))return;
+  t.value=(t.value.trim()?t.value.replace(/\s+$/,"")+"\n\n":"")+tpl; updateCount(); t.focus();
+}
+var KEY="ace-writing-2026-11-21";
+function countWords(t){var m=t.trim().match(/[A-Za-zÀ-ÿ0-9]+(?:['’\-][A-Za-zÀ-ÿ0-9]+)*/g);return m?m.length:0;}
+function countSentences(t){var m=t.match(/[^.!?]*[A-Za-z0-9][^.!?]*[.!?]+/g);return m?m.length:0;}
+function currentPrompt(){var r=document.querySelector('input[name=prompt]:checked');return r?r.value:"";}
+function updateCount(){
+  var t=document.getElementById("essay").value, w=countWords(t), s=countSentences(t);
+  document.getElementById("wc").textContent=w+(w===1?" word":" words");
+  document.getElementById("sc").textContent=s+(s===1?" sentence":" sentences");
+  var bar=document.getElementById("meterBar"); bar.style.width=Math.min(100,w/350*100)+"%";
+  var msg=document.getElementById("wcMsg");
+  if(w<200){bar.style.background="#ffb300";msg.className="fb";msg.textContent=w===0?"Aim for 200 to 350 words.":"Keep going, Ace! "+(200-w)+" more words to reach the goal.";}
+  else if(w<=350){bar.style.background="#43a047";msg.className="fb good";msg.textContent="🎯 You're in the target zone! Nice work, Ace!";}
+  else{bar.style.background="#1e88e5";msg.className="fb";msg.textContent="Wow, that's a lot of writing! Picture books use only a few words per page. Could any page be trimmed so a little kid stays interested?";}
+  try{localStorage.setItem(KEY,JSON.stringify({text:t,prompt:currentPrompt(),checks:checkStates()}));}catch(e){document.getElementById("saveNote").textContent="(This browser can't auto-save here, so use the Download button before closing!)";}
+}
+function checkStates(){return Array.prototype.map.call(document.querySelectorAll("#checklist input"),function(c){return c.checked;});}
+function checklistText(){
+  return Array.prototype.map.call(document.querySelectorAll("#checklist label"),function(l){return (l.querySelector("input").checked?"[x] ":"[ ] ")+l.textContent.trim();}).join("\n");
+}
+function buildReport(){
+  var t=document.getElementById("essay").value;
+  return "Writing Week 55: "+NAME+"\nDate: "+new Date().toLocaleString("en-CA")+"\nPrompt: "+currentPrompt()+
+    "\nWords: "+countWords(t)+"   Sentences: "+countSentences(t)+"\nPlanning notes:\n"+w5Summary()+
+    "\n\n----- "+NAME+"'s writing -----\n\n"+t+"\n\n----- Self-check -----\n"+checklistText()+
+    "\n\n----- Parent feedback -----\n\n\n";
+}
+function download(){
+  var t=document.getElementById("essay").value;
+  if(!t.trim()){document.getElementById("doneMsg").className="fb bad";document.getElementById("doneMsg").textContent="Write something first, Ace!";return;}
+  var blob=new Blob([buildReport().replace(/\n/g,"\r\n")],{type:"text/plain;charset=utf-8"});
+  var a=document.createElement("a"); a.href=URL.createObjectURL(blob); a.download=NAME+"-writing-2026-11-21"+".txt";
+  document.body.appendChild(a); a.click();
+  setTimeout(function(){URL.revokeObjectURL(a.href);a.remove();},1000);
+  var dm=document.getElementById("doneMsg"); dm.className="fb good"; dm.textContent="📄 Saved! Look in your Downloads folder and show Dad. Great job finishing, Ace!";
+}
+function esc(s){return s.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");}
+function printIt(){
+  var t=document.getElementById("essay").value;
+  if(!t.trim()){document.getElementById("doneMsg").className="fb bad";document.getElementById("doneMsg").textContent="Write something first, Ace!";return;}
+  document.getElementById("printArea").innerHTML="<h1>Writing Week 55: "+NAME+"</h1><div class='meta'>"+esc(new Date().toLocaleString("en-CA"))+"<br><strong>Prompt:</strong> "+esc(currentPrompt())+"<br>Words: "+countWords(t)+" · Sentences: "+countSentences(t)+"</div><div class='text'>"+esc(t)+"</div><div class='lines'><strong>Self-check:</strong><br>"+esc(checklistText()).replace(/\n/g,"<br>")+"</div><div class='lines'><strong>Parent feedback:</strong><br><br><br><br></div>";
+  window.print();
+}
+function restore(){
+  try{var d=JSON.parse(localStorage.getItem(KEY)||"null"); if(!d)return;
+    document.getElementById("essay").value=d.text||"";
+    Array.prototype.forEach.call(document.querySelectorAll("input[name=prompt]"),function(r){r.checked=(r.value===d.prompt);});
+    if(!document.querySelector("input[name=prompt]:checked"))document.querySelector("input[name=prompt]").checked=true;
+    var cs=document.querySelectorAll("#checklist input"); (d.checks||[]).forEach(function(v,i){if(cs[i])cs[i].checked=v;});
+  }catch(e){}
+}
+buildLabels(); buildGMC(); buildGFix(); restore(); w5Restore(); updateCount(); updateScore();
+W5.forEach(function(k){document.getElementById("w5"+k).addEventListener("input",w5Save);});
+document.getElementById("templateBtn").addEventListener("click",addTemplate);
+document.getElementById("checkLabels").addEventListener("click",checkLabels);
+document.getElementById("essay").addEventListener("input",updateCount);
+document.getElementById("checklist").addEventListener("change",function(){updateCount(); if(checkStates().every(Boolean)){var dm=document.getElementById("doneMsg");dm.className="fb good";dm.textContent="✅ All boxes checked! Now download or print it for Dad. Awesome work, Ace!";}});
+document.getElementById("prompts").addEventListener("change",updateCount);
+document.getElementById("downloadBtn").addEventListener("click",download);
+document.getElementById("printBtn").addEventListener("click",printIt);
+document.getElementById("clearBtn").addEventListener("click",function(){ if(confirm("Erase your writing and start over?")){document.getElementById("essay").value="";Array.prototype.forEach.call(document.querySelectorAll("#checklist input"),function(c){c.checked=false;});document.getElementById("doneMsg").textContent="";updateCount();} });
+</script>
+<script src="../../assets/autosave.js"></script>
+</body>
+</html>
