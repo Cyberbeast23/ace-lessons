@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Writing (Nov. 22): Cover Letter (Apply to Join the Skyscraper Team!) + Grammar Clinic</title>
+<style>
+  body{font-family:"Segoe UI",Verdana,Arial,sans-serif;font-size:20px;line-height:1.6;margin:0;background:#fff8f0;color:#2c2416}
+  .wrap{max-width:880px;margin:0 auto;padding:20px 18px 80px}
+  a.home{font-size:.9em;color:#bf360c}
+  h1{color:#e65100;font-size:2em;margin:10px 0}
+  h2{color:#ef6c00;margin-top:36px;border-bottom:3px solid #ffcc80;padding-bottom:4px}
+  h3{color:#ef6c00}
+  .box{background:#fff;border-radius:16px;padding:18px 22px;margin:16px 0;box-shadow:0 3px 10px rgba(0,0,0,.07)}
+  .tipbox{background:#fff8e1;border-left:8px solid #ffb300}
+  .senses{display:grid;gap:8px;margin:10px 0;grid-template-columns:repeat(auto-fit,minmax(140px,1fr))}
+  .senses .side{border-radius:14px;padding:10px 16px;background:#fff3e0}
+  .ts{background:#ffcc80;border-radius:5px;padding:1px 3px}
+  .ev{background:#c8e6c9;border-radius:5px;padding:1px 3px}
+  .ex{background:#ffe0b2;border-radius:5px;padding:1px 3px}
+  .cs{background:#e1bee7;border-radius:5px;padding:1px 3px}
+  .legend span{display:inline-block;margin:4px 8px 4px 0;font-size:.85em}
+  .model{font-family:Georgia,"Times New Roman",serif;font-size:1.05em;line-height:1.9}
+  .row{padding:10px 6px;border-bottom:1px dashed #ddd}
+  .row.right{background:#f1f8e9} .row.wrong{background:#fff5f5}
+  select{font-size:.9em;padding:5px 8px;border-radius:8px;border:2px solid #ffb74d;font-family:inherit}
+  .q{border-left:8px solid #b0bec5}
+  .q.right{border-left-color:#43a047;background:#f1f8e9}
+  .q.wrong{border-left-color:#e53935;background:#fff5f5}
+  .opt{display:block;width:100%;text-align:left;font-size:.95em;background:#fafafa;border:2px solid #e0e0e0;border-radius:10px;padding:8px 14px;margin:8px 0;cursor:pointer;font-family:inherit}
+  .opt:hover{border-color:#ffb74d;background:#fff}
+  .opt.sel-right{background:#c8e6c9;border-color:#43a047}
+  .opt.sel-wrong{background:#ffcdd2;border-color:#e53935}
+  .fb{margin-top:6px;font-weight:bold}
+  .fb.good{color:#2e7d32} .fb.bad{color:#c62828}
+  .explain{font-weight:normal;color:#e65100}
+  .bad-sent{font-family:Consolas,"Courier New",monospace;background:#ffebee;padding:6px 10px;border-radius:8px;display:inline-block;margin:6px 0}
+  input.fix{width:100%;box-sizing:border-box;font-size:1em;padding:8px 12px;border:2px solid #ffb74d;border-radius:10px;font-family:inherit}
+  button{font-size:.95em;padding:8px 16px;border:none;border-radius:10px;cursor:pointer;font-weight:bold;font-family:inherit}
+  .go{background:#ef6c00;color:#fff} .go:hover{background:#e65100}
+  .hint{background:#ffe082;color:#5d4037}
+  .blue{background:#1e88e5;color:#fff}
+  .purple{background:#8e24aa;color:#fff}
+  .grey{background:#cfd8dc;color:#263238}
+  .btnrow{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px}
+  textarea{width:100%;box-sizing:border-box;min-height:300px;font-size:1.05em;line-height:1.7;font-family:Georgia,"Times New Roman",serif;padding:14px;border:3px solid #ffb74d;border-radius:12px}
+  textarea:focus{outline:none;border-color:#ef6c00}
+  .counter{display:flex;flex-wrap:wrap;gap:20px;align-items:center;margin:8px 0;font-weight:bold}
+  .meter{flex:1;min-width:200px;height:18px;background:#e0e0e0;border-radius:9px;overflow:hidden}
+  .meter div{height:100%;width:0;background:#ffb300;transition:width .2s}
+  .checklist label{display:block;padding:6px 4px;cursor:pointer}
+  .checklist input{transform:scale(1.4);margin-right:10px}
+  .prompts label{display:block;background:#fff3e0;border-radius:10px;padding:10px 14px;margin:8px 0;cursor:pointer}
+  .flow{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin:10px 0;font-size:.85em}
+  .flow span.st{background:#e3f2fd;border:2px solid #1e88e5;border-radius:8px;padding:4px 10px;font-weight:bold;color:#0d47a1}
+  .flow span.ar{color:#1e88e5;font-weight:bold}
+  .prompts input{transform:scale(1.3);margin-right:8px}
+  #scoreBox{position:sticky;bottom:0;background:#e65100;color:#fff;border-radius:16px 16px 0 0;padding:12px 20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-top:30px}
+  .w5{display:grid;gap:8px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));margin:10px 0}
+  .w5 label{display:block;font-weight:bold;color:#e65100}
+  .w5 input{width:100%;box-sizing:border-box;font-size:.95em;padding:6px 10px;border:2px solid #ffb74d;border-radius:8px;font-family:inherit}
+  #printArea{display:none}
+  @media print{
+    body{background:#fff;font-size:14pt}
+    .wrap,#scoreBox{display:none !important}
+    #printArea{display:block;font-family:Georgia,serif;line-height:1.8}
+    #printArea h1{font-size:18pt;margin:0 0 6pt}
+    #printArea .meta{font-size:11pt;color:#444}
+    #printArea .text{white-space:pre-wrap;border-top:1px solid #999;padding-top:10pt;margin-top:10pt}
+    #printArea .lines{margin-top:24pt;border-top:1px solid #999;padding-top:6pt;font-size:11pt}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+<a class="home" href="../../index.html">&larr; Back to all lessons</a>
+<h1>✍️ Writing Week 56: Cover Letter — Apply to Join the Skyscraper Team! 🏙️📨</h1>
+<p>Yesterday you wrote a picture book for five-year-olds. Today, Ace, you'll write for one of the toughest audiences there is: a <strong>busy adult who is deciding whether to hire you</strong>. When people apply for a job, a scholarship, a summer camp leadership spot or a volunteer position, they usually send a <strong>cover letter</strong>: a one-page formal letter that says which job they want, <strong>proves</strong> they're a good fit by matching their skills to what the job needs, and asks politely for the next step. A great cover letter is short, specific and confident, without bragging. Today's genre is the <strong>cover letter (formal letter of application)</strong>.</p>
+
+<h2>Part 1: The Lesson</h2>
+<div class="box">
+  <h3 style="margin-top:0">The six parts of a strong cover letter 📨</h3>
+  <p>Most cover letters fit on one page: about 200 to 350 words in three or four short paragraphs.</p>
+  <div class="senses">
+    <div class="side"><strong>1. Heading and greeting:</strong> the date, then a formal greeting using the person's name if you know it (<em>Dear Ms. Chen,</em>) or <em>Dear Hiring Team,</em> if you don't</div>
+    <div class="side"><strong>2. Opening paragraph:</strong> name the exact job you're applying for, where you saw it, and one sentence that makes the reader want to keep reading</div>
+    <div class="side"><strong>3. Matching skills with evidence:</strong> pick two or three things the job asks for and <em>prove</em> you have them with a real example (<em>"I built…", "I led…", "I solved…"</em>)</div>
+    <div class="side"><strong>4. Why this job (show you did research):</strong> a fact about the company or the work that shows you care about <em>this</em> job, not just any job</div>
+    <div class="side"><strong>5. Closing paragraph:</strong> thank the reader, and ask politely for the next step (<em>"I would welcome the chance to meet with you."</em>)</div>
+    <div class="side"><strong>6. Sign-off:</strong> a formal closing with a comma (<em>Sincerely,</em> or <em>Yours truly,</em>), then your name</div>
+  </div>
+  <h3>Five habits of great cover-letter writers</h3>
+  <ul>
+    <li><strong>Read the job posting like a detective:</strong> underline each thing the employer wants. Your letter should answer those exact needs.</li>
+    <li><strong>Show, don't just tell:</strong> ❌ <em>"I am a hard worker."</em> ✅ <em>"I rebuilt my bridge model three times until it held 2 kg."</em> Evidence is more convincing than adjectives.</li>
+    <li><strong>Use a formal, polite tone:</strong> no slang (<em>super, awesome, stuff, gonna</em>), no emojis, and complete sentences. Formal doesn't mean stiff: you can still sound friendly and excited.</li>
+    <li><strong>Make it about them, too:</strong> explain how your skills will <em>help the company</em>, not only why you want the job.</li>
+    <li><strong>Keep it short and proofread it:</strong> an employer may read 100 letters. One spelling mistake in a letter that says "I pay attention to detail" can cost you the job!</li>
+  </ul>
+  <p><strong>Cover-letter writer's rule:</strong> for every claim you make about yourself, ask, "What is my proof?" If you have no example, cut the claim or find one.</p>
+</div>
+
+<div class="box tipbox">
+  <h3 style="margin-top:0">Mini-lesson: grammar for formal letters 📏</h3>
+  <p><strong>Commas in dates:</strong> put a comma between the day and the year, and after the year if the sentence keeps going: <em>On November 22, 2026, I visited a construction site.</em></p>
+  <p><strong>Greeting and closing punctuation:</strong> <em>Dear Ms. Chen,</em> (comma after the greeting; <em>Ms.</em> and <em>Mr.</em> take a period in Canadian style) and <em>Sincerely,</em> (only the first word of the closing is capitalized: <em>Yours truly,</em>).</p>
+  <p><strong>"My teacher and I" or "my teacher and me"?</strong> Cover the other person and test it. <em>I built a model</em> ✅ so <em>My teacher and I built a model.</em> <em>She helped me</em> ✅ so <em>She helped my teacher and me.</em></p>
+  <p><strong>Capitals for proper nouns:</strong> names of companies, schools, cities and buildings: <em>Skyline Builders, Vancouver, Brock Commons</em>.</p>
+  <p><strong>Canadian spelling:</strong> <em>metre, centre, colour, neighbour, labour</em>. An engineer's letter should measure in <em>metres</em>!</p>
+</div>
+
+<div class="box">
+  <h3 style="margin-top:0">The job posting</h3>
+  <div class="model" style="background:#fffde7">
+    <strong>JUNIOR ENGINEER (Youth Summer Program), Skyline Builders, Vancouver</strong><br>
+    Skyline Builders designs and builds safe, earthquake-ready towers, including mass-timber buildings. We are looking for a curious young person to join our design team for a summer program. <strong>You should:</strong> (1) enjoy solving problems and testing ideas, (2) be careful and accurate with measurements and math, and (3) work well on a team. Send a cover letter to Ms. Ana Chen, Program Leader.
+  </div>
+  <h3>Model cover letter (about 250 words)</h3>
+  <p class="legend"><span class="ts">Heading, greeting + opening</span><span class="ev">Matching skills with evidence</span><span class="ex">Why this job (research)</span><span class="cs">Closing + sign-off</span></p>
+  <div class="model">
+    <span class="ts">November 22, 2026<br><br>Dear Ms. Chen,<br><br>I am writing to apply for the Junior Engineer position in the Youth Summer Program at Skyline Builders, which I saw on your website. Ever since I watched a crane lift a steel beam forty storeys into the air, I have wanted to know how tall buildings stay standing.</span><br><br>
+    <span class="ev">Your posting asks for someone who enjoys solving problems and testing ideas. Last spring, my classmates and I built a tower out of straws and tape for our science fair. It collapsed during the first shake test, so we added triangle braces and a heavier base and tested it four more times. Our final tower was 1.2 metres tall and survived every test. You also want someone accurate with math. I measure carefully, and I use math every day to check my work. Finally, I work well on a team: I helped organize our group so that everyone had a job, and we finished early.</span><br><br>
+    <span class="ex">I am especially excited about your mass-timber buildings. I learned that wood stores carbon and that prefabricated panels can let a crew build about two floors a week. I would love to learn how engineers make wooden towers safe in earthquakes.</span><br><br>
+    <span class="cs">Thank you for considering my application. I would welcome the chance to meet with you and show you my tower designs.<br><br>Sincerely,<br>Jordan Lee</span>
+  </div>
+  <p><strong>Notice:</strong> the opening names the <em>exact</em> job and hooks the reader with a real moment. The middle paragraph answers the posting's needs <em>in the same order</em> (problem-solving, math, teamwork), and the problem-solving claim is backed by real proof: a tower that failed, was improved, and passed. The research paragraph shows Jordan knows what <em>this</em> company does. Look for the comma in the date, <em>Dear Ms. Chen,</em>, <em>my classmates and I</em>, the Canadian spelling <em>metres</em> and the formal closing <em>Sincerely,</em>. One thing Jordan could still improve: <em>"I use math every day"</em> has no specific proof yet!</p>
+</div>
+
+<h2>Part 2: Name That Cover-Letter Part</h2>
+<div class="box">
+  <p>Each line comes from a student's cover letter applying to be a <strong>Junior Tour Guide at the city's Science Centre</strong>. Choose which <strong>part</strong> of the cover letter it shows best.</p>
+  <div id="labelRows"></div>
+  <div class="btnrow"><button type="button" class="go" id="checkLabels">Check my answers</button></div>
+  <div class="fb" id="labelFb"></div>
+</div>
+
+<h2>Part 3: Grammar Clinic 📏</h2>
+<div class="box tipbox">Every applicant needs a careful editor, because one mistake can cost you the job! <strong>Section A:</strong> pick the correct choice. <strong>Section B:</strong> type the sentence again with <em>all</em> mistakes fixed. We use <strong>Canadian spelling</strong> (metre, centre, colour, neighbour). Today, watch <strong>commas in dates</strong>, <strong>greeting and closing punctuation</strong>, <strong>"my teacher and I" vs. "me"</strong>, <strong>capitals for proper nouns</strong> and <strong>formal tone</strong>.</div>
+<h3>Section A: Pick the correct choice</h3>
+<div id="gmc"></div>
+<h3>Section B: Fix the sentence</h3>
+<p>Retype the whole sentence correctly, with capital letters and punctuation. Each one has <strong>at least two</strong> mistakes.</p>
+<div id="gfix"></div>
+
+<h2>Part 4: Your Turn to Write</h2>
+<div class="box">
+  <h3 style="margin-top:0">Step 1: Choose your job</h3>
+  <p>Pick <strong>one</strong> prompt. Use today's reading (and math!) for ideas. Jot your plan in the boxes first, then write.</p>
+  <div class="prompts" id="prompts">
+    <label><input type="radio" name="prompt" value="Option A: Junior Engineer at Skyline Builders" checked> 🏙️ <strong>Option A: Junior Engineer at Skyline Builders.</strong> Apply for the job in today's posting. Match each of the three things the posting asks for with your own real evidence, and use at least one true fact from today's reading in your research paragraph.</label>
+    <label><input type="radio" name="prompt" value="Option B: Junior Tour Guide at the Science Centre"> 🔬 <strong>Option B: Junior Tour Guide at the Science Centre.</strong> The Science Centre wants a young guide who (1) can explain science clearly to younger kids, (2) is friendly and patient, and (3) is reliable. Prove it with real examples (maybe the picture book you wrote yesterday!).</label>
+    <label><input type="radio" name="prompt" value="Option C: A Job from an Earlier Lesson"> 🌟 <strong>Option C: A Job from an Earlier Lesson.</strong> Apply to be a junior helper for someone you've learned about: an avalanche forecaster, a palaeontologist on a fossil dig, a dental hygienist, a hockey team statistician or a voyageur crew. First write a three-point "job posting" in your plan, then answer it.</label>
+  </div>
+  <p><strong>Plan your cover letter:</strong> jot a few words for each box. (These notes save with your writing.)</p>
+  <div class="w5" id="w5">
+    <div><label for="w5who">The job, the company, and who I'm writing to</label><input id="w5who" type="text" autocomplete="off"></div>
+    <div><label for="w5place">My hook for the opening paragraph</label><input id="w5place" type="text" autocomplete="off"></div>
+    <div><label for="w5facts">What the job needs (2 or 3 things)</label><input id="w5facts" type="text" autocomplete="off"></div>
+    <div><label for="w5senses">My proof for each one (real examples)</label><input id="w5senses" type="text" autocomplete="off"></div>
+    <div><label for="w5feel">A fact I know about this company or job</label><input id="w5feel" type="text" autocomplete="off"></div>
+    <div><label for="w5closing">My polite closing and next step</label><input id="w5closing" type="text" autocomplete="off"></div>
+  </div>
+
+  <h3>Step 2: Write your cover letter</h3>
+  <p><strong>Goal:</strong> <strong>200 to 350 words</strong> in a formal letter: the <strong>date</strong>, a <strong>greeting</strong> with a comma, an <strong>opening paragraph</strong> that names the exact job, a <strong>skills paragraph</strong> that matches at least <strong>two</strong> needs from the posting with <strong>real evidence</strong> (at least one example with a number or a measurement), a <strong>research paragraph</strong>, a <strong>closing paragraph</strong> that thanks the reader and asks for the next step, and a formal <strong>sign-off</strong>. Use a polite, formal tone (no slang or emojis), use <strong>"and I"</strong> correctly at least once, and write the date with a comma. Then add <strong>2–3 sentences to Dad</strong> about which piece of evidence you think is your most convincing and why. Bonus: use two words from today's spelling list correctly! Extra bonus: ask Dad to read it as if he were the employer. Would he hire you?</p>
+  <p><button type="button" class="hint" id="templateBtn">📋 Add the layout for me</button></p>
+  <label for="essay"><strong>Write here, Ace:</strong></label>
+  <textarea id="essay" placeholder="November 22, 2026&#10;&#10;Dear ...,&#10;&#10;I am writing to apply for ..."></textarea>
+  <div class="counter">
+    <span id="wc">0 words</span>
+    <span id="sc">0 sentences</span>
+    <div class="meter" aria-hidden="true"><div id="meterBar"></div></div>
+  </div>
+  <div class="fb" id="wcMsg">Aim for 200 to 350 words.</div>
+  <p style="font-size:.8em;color:#607d8b" id="saveNote">Your writing is saved automatically in this browser as you type.</p>
+
+  <h3>Self-check before you finish ✅</h3>
+  <div class="checklist" id="checklist">
+    <label><input type="checkbox"> My letter has the <strong>date</strong>, a <strong>greeting</strong> with a comma, and a formal <strong>sign-off</strong>.</label>
+    <label><input type="checkbox"> My opening names the <strong>exact job</strong> and has a <strong>hook</strong>.</label>
+    <label><input type="checkbox"> I matched at least <strong>two needs</strong> from the posting with <strong>real evidence</strong>, including a number or measurement.</label>
+    <label><input type="checkbox"> My research paragraph shows I know something true about <strong>this</strong> job or company.</label>
+    <label><input type="checkbox"> I thanked the reader and asked politely for the <strong>next step</strong>, and my tone is formal (no slang or emojis).</label>
+    <label><input type="checkbox"> I checked <strong>commas in dates</strong>, <strong>"and I" / "and me"</strong>, <strong>capitals for proper nouns</strong> and <strong>Canadian spelling</strong> (metre, centre).</label>
+  </div>
+  <div class="btnrow">
+    <button type="button" class="blue" id="downloadBtn">⬇️ Download my writing (for Dad)</button>
+    <button type="button" class="purple" id="printBtn">🖨️ Print my writing</button>
+    <button type="button" class="grey" id="clearBtn">Start over</button>
+  </div>
+  <div class="fb" id="doneMsg"></div>
+</div>
+
+<div id="scoreBox"><span id="scoreText"></span><span>Aim high, Ace! Your future employer is lucky! 🏙️📨</span></div>
+</div>
+
+<div id="printArea"></div>
+
+<script>
+var NAME="Ace";
+var PRAISE=["Nice work, Ace!","Correct! Great editing eye!","Yes! Ace fixed it!","Excellent, applicant Ace!","Hired! That sentence is built to last! 🏗️"];
+function pick(a){return a[Math.floor(Math.random()*a.length)];}
+
+var LABELS=["Heading and greeting", "Opening paragraph", "Matching skills with evidence", "Why this job (research)", "Closing paragraph", "Sign-off"];
+var LABEL_ITEMS=[
+ {s:"\"November 22, 2026 / Dear Mr. Okafor,\"", a:"Heading and greeting"},
+ {s:"\"I am writing to apply for the Junior Tour Guide position at the Science Centre, which my teacher shared with our class.\"", a:"Opening paragraph"},
+ {s:"\"You are looking for someone who can explain science to younger children. Every Friday this term, I have read science books aloud to a Grade 1 class.\"", a:"Matching skills with evidence"},
+ {s:"\"I know that the Science Centre welcomes thousands of school groups every year, and I would love to help them enjoy their visit as much as I enjoyed mine.\"", a:"Why this job (research)"},
+ {s:"\"Thank you for reading my letter. I would be happy to visit for an interview at any time that suits you.\"", a:"Closing paragraph"},
+ {s:"\"Sincerely, / Ace\"", a:"Sign-off"}
+];
+var labelScore=0, labelChecked=false;
+function buildLabels(){
+  var box=document.getElementById("labelRows");
+  LABEL_ITEMS.forEach(function(it,i){
+    var d=document.createElement("div"); d.className="row"; d.id="lr"+i;
+    var sel='<select id="ls'+i+'" aria-label="Job of sentence '+(i+1)+'"><option value="">- choose -</option>';
+    LABELS.forEach(function(l){sel+='<option>'+l+'</option>';});
+    sel+='</select>';
+    d.innerHTML='<strong>'+(i+1)+'.</strong> '+it.s+'<br>'+sel+' <span id="lm'+i+'"></span>';
+    box.appendChild(d);
+  });
+}
+function checkLabels(){
+  var sc=0;
+  LABEL_ITEMS.forEach(function(it,i){
+    var ok=document.getElementById("ls"+i).value===it.a; if(ok)sc++;
+    document.getElementById("lr"+i).className="row "+(ok?"right":"wrong");
+    document.getElementById("lm"+i).textContent=ok?"✅":"❌";
+  });
+  labelScore=sc; labelChecked=true;
+  var fb=document.getElementById("labelFb");
+  if(sc===LABEL_ITEMS.length){fb.className="fb good";fb.textContent="🌟 "+sc+" / "+LABEL_ITEMS.length+". "+pick(PRAISE)+" You know exactly how a cover letter is built!";}
+  else{fb.className="fb bad";fb.textContent=sc+" / "+LABEL_ITEMS.length+". Hint: the date and 'Dear…' = heading and greeting; naming the job you want = opening; proving you can do what the job needs = matching skills with evidence; a fact about the company = research; thanking and asking for the next step = closing; 'Sincerely' and your name = sign-off.";}
+  updateScore();
+}
+
+var GMC=[
+ {q:"Which sentence uses <strong>commas in a date</strong> correctly?",
+  o:["On November 22 2026 I toured a construction site.", "On November, 22 2026, I toured a construction site.", "On November 22, 2026, I toured a construction site.", "On, November 22, 2026 I toured a construction site."],
+  a:2,e:"Put a comma between the day and the year, and another after the year when the sentence keeps going."},
+ {q:"Which is the correct <strong>greeting</strong> for a formal letter?",
+  o:["Hey Ms. Chen!", "Dear Ms. Chen,", "dear ms chen", "Dear Ms. Chen"],
+  a:1,e:"A formal greeting starts with <strong>Dear</strong>, uses a capital for the name and title, and ends with a comma."},
+ {q:"Which sentence is correct?",
+  o:["My teacher and me built a model tower.", "Me and my teacher built a model tower.", "My teacher and I built a model tower.", "I and my teacher built a model tower."],
+  a:2,e:"Cover \"my teacher and\": <em>I built a model tower</em> sounds right. It's polite to put the other person first: <em>My teacher and I</em>."},
+ {q:"Which <strong>closing</strong> is punctuated and capitalized correctly?",
+  o:["Yours Truly,", "yours truly", "Yours truly,", "Yours truly."],
+  a:2,e:"Capitalize only the first word of the closing and end it with a comma: <strong>Yours truly,</strong> or <strong>Sincerely,</strong>."},
+ {q:"Which sentence has the best <strong>formal tone</strong> for a cover letter?",
+  o:["I'm super awesome at math and stuff.", "Math is, like, totally my thing!!! 😎", "I enjoy math, and last term I earned the top score on our class problem-solving challenge.", "Gonna be honest, I'd be great at this job."],
+  a:2,e:"C is polite, complete and backed by evidence. The others use slang (<em>super, stuff, like, gonna</em>), emojis or too many exclamation marks."},
+ {q:"Which sentence <strong>shows</strong> a skill with evidence instead of just telling?",
+  o:["I am very good at solving problems.", "I am a hard worker and I never give up.", "When my bridge model sagged, I added two triangle braces, and it then held 3 kg.", "Everyone says I am smart."],
+  a:2,e:"C gives a real example with a number. A, B and D are claims with no proof."},
+ {q:"Which sentence uses <strong>Canadian spelling</strong> and <strong>capitals for proper nouns</strong> correctly?",
+  o:["Our tower at the science center was one meter tall.", "Our tower at the Vancouver Science Centre was one metre tall.", "Our tower at the vancouver science centre was one metre tall.", "Our tower at the Vancouver Science Center was one meter tall."],
+  a:1,e:"Canadian spelling: <strong>centre</strong> and <strong>metre</strong>. The name of a specific place (<strong>Vancouver Science Centre</strong>) is a proper noun, so each important word gets a capital."}
+];
+var gmcState=GMC.map(function(){return{answered:false,firstRight:false,done:false};});
+function buildGMC(){
+  var box=document.getElementById("gmc");
+  GMC.forEach(function(it,i){
+    var d=document.createElement("div"); d.className="box q"; d.id="g"+i;
+    var h='<div><strong>'+(i+1)+'.</strong> '+it.q+'</div>';
+    it.o.forEach(function(o,j){h+='<button type="button" class="opt" data-i="'+i+'" data-j="'+j+'">'+String.fromCharCode(65+j)+'. '+o+'</button>';});
+    h+='<div class="fb" id="gfb'+i+'"></div>';
+    d.innerHTML=h; box.appendChild(d);
+  });
+  box.addEventListener("click",function(e){
+    var b=e.target.closest?e.target.closest(".opt"):e.target; if(!b||!b.classList.contains("opt"))return;
+    var i=+b.getAttribute("data-i"), j=+b.getAttribute("data-j"), st=gmcState[i], it=GMC[i];
+    if(st.done)return;
+    var ok=j===it.a; if(!st.answered){st.answered=true;st.firstRight=ok;}
+    var fb=document.getElementById("gfb"+i);
+    if(ok){st.done=true;b.classList.add("sel-right");document.getElementById("g"+i).className="box q right";fb.className="fb good";fb.innerHTML="✅ "+pick(PRAISE)+' <span class="explain">'+it.e+'</span>';}
+    else{b.classList.add("sel-wrong");document.getElementById("g"+i).className="box q wrong";fb.className="fb bad";fb.textContent="❌ Not quite, Ace. Look closely and try again.";}
+    updateScore();
+  });
+}
+
+var GFIX=[
+ {bad:"i am writing to apply for the position of junior engineer at skyline builders in vancouver",
+  ok:["I am writing to apply for the position of junior engineer at Skyline Builders in Vancouver.", "I am writing to apply for the position of Junior Engineer at Skyline Builders in Vancouver."],
+  hint:"Capitalize I at the start, and the proper nouns Skyline Builders and Vancouver (the job title can be lowercase or capitalized). End with a period."},
+ {bad:"my teacher and me built a model tower that was one meter tall",
+  ok:["My teacher and I built a model tower that was one metre tall."],
+  hint:"Capitalize My. Test it: \"me built\" is wrong, so use \"My teacher and I.\" Canadian spelling is metre. End with a period."},
+ {bad:"on november 22 2026 i visited the science centre with my class",
+  ok:["On November 22, 2026, I visited the science centre with my class.", "On November 22, 2026, I visited the Science Centre with my class.", "On November 22, 2026I visited the science centre with my class.", "On November 22, 2026I visited the Science Centre with my class."],
+  hint:"Capitalize On, the month November and the word I. Put a comma between 22 and 2026, and another comma after 2026 (the introductory phrase). Keep the Canadian spelling centre. End with a period."}
+];
+
+var gfixState=GFIX.map(function(){return{tries:0,correct:false,firstRight:false};});
+function norm(s){return s.replace(/[\u2018\u2019\u02BC]/g,"'").replace(/[\u201C\u201D]/g,'"').replace(/\s+/g," ").trim();}
+function checkFixAnswer(i,val){var v=norm(val);return GFIX[i].ok.some(function(a){return norm(a)===v;});}
+function buildGFix(){
+  var box=document.getElementById("gfix");
+  GFIX.forEach(function(it,i){
+    var d=document.createElement("div"); d.className="box q"; d.id="f"+i;
+    d.innerHTML='<div><strong>'+(i+1)+'.</strong> Fix: <span class="bad-sent">'+it.bad+'</span></div>'+
+     '<input class="fix" type="text" id="fi'+i+'" autocomplete="off" spellcheck="false" aria-label="Corrected sentence '+(i+1)+'">'+
+     '<div class="btnrow"><button type="button" class="go" data-act="check" data-i="'+i+'">Check</button><button type="button" class="hint" data-act="hint" data-i="'+i+'">Hint 💡</button><button type="button" class="grey" data-act="show" data-i="'+i+'" style="display:none">Show answer</button></div>'+
+     '<div class="fb" id="ffb'+i+'"></div>';
+    box.appendChild(d);
+  });
+  box.addEventListener("click",function(e){
+    var b=e.target; if(b.tagName!=="BUTTON")return;
+    var i=+b.getAttribute("data-i"), act=b.getAttribute("data-act"), fb=document.getElementById("ffb"+i);
+    if(act==="hint"){fb.className="fb";fb.style.color="#5d4037";fb.textContent="💡 "+GFIX[i].hint;return;}
+    fb.style.color="";
+    if(act==="show"){fb.className="fb";fb.innerHTML='Answer: <em>'+GFIX[i].ok[0]+'</em>'+(GFIX[i].ok.length>1?' (other correct versions are accepted too)':'');return;}
+    fixCheck(i);
+  });
+  box.addEventListener("keydown",function(e){if(e.key==="Enter"&&e.target.classList.contains("fix"))fixCheck(+e.target.id.slice(2));});
+}
+function fixCheck(i){
+  var val=document.getElementById("fi"+i).value, fb=document.getElementById("ffb"+i), st=gfixState[i];
+  fb.style.color="";
+  if(!val.trim()){fb.className="fb bad";fb.textContent="Type the corrected sentence first, Ace!";return;}
+  st.tries++;
+  if(checkFixAnswer(i,val)){ if(st.tries===1)st.firstRight=true; st.correct=true; document.getElementById("f"+i).className="box q right"; fb.className="fb good"; fb.textContent="✅ "+pick(PRAISE); }
+  else { st.correct=false; document.getElementById("f"+i).className="box q wrong"; fb.className="fb bad"; fb.textContent="❌ Not quite. Check every capital letter, apostrophe, comma, and spelling. Try again!"; if(st.tries>=2)document.querySelector('#f'+i+' [data-act=show]').style.display="inline-block"; }
+  updateScore();
+}
+
+function updateScore(){
+  var g=0; gmcState.forEach(function(s){if(s.firstRight)g++;});
+  var f=0; gfixState.forEach(function(s){if(s.correct)f++;});
+  var total=LABEL_ITEMS.length+GMC.length+GFIX.length, got=labelScore+g+f;
+  document.getElementById("scoreText").textContent="Score: "+got+" / "+total+"  (labels "+(labelChecked?labelScore:"-")+"/"+LABEL_ITEMS.length+" · grammar A "+g+"/"+GMC.length+" · grammar B "+f+"/"+GFIX.length+")";
+}
+
+var W5=["who","place","facts","senses","feel","closing"];
+function w5Save(){try{localStorage.setItem(KEY+"-5w",JSON.stringify(W5.map(function(k){return document.getElementById("w5"+k).value;})));}catch(e){}}
+function w5Restore(){try{var d=JSON.parse(localStorage.getItem(KEY+"-5w")||"null");if(d)d.forEach(function(x,i){document.getElementById("w5"+W5[i]).value=x;});}catch(e){}}
+function w5Summary(){return W5.map(function(k){return k.charAt(0).toUpperCase()+k.slice(1)+": "+document.getElementById("w5"+k).value;}).join("\n");}
+function addTemplate(){
+  var t=document.getElementById("essay");
+  var tpl="November 22, 2026\n\nDear ...,\n\n(OPENING: the exact job, where you saw it, and a hook) I am writing to apply for ...\n\n(SKILLS + EVIDENCE: match two or three needs from the posting with real examples) Your posting asks for ...\n\n(WHY THIS JOB: a fact you know about the company or the work) I am especially excited about ...\n\n(CLOSING: thank the reader and ask for the next step) Thank you for ...\n\nSincerely,\n"+NAME+"\n\nNOTE TO DAD (my most convincing piece of evidence, and why):\n";
+  if(t.value.trim()&&!confirm("Add the cover-letter layout below what you've already written?"))return;
+  t.value=(t.value.trim()?t.value.replace(/\s+$/,"")+"\n\n":"")+tpl; updateCount(); t.focus();
+}
+var KEY="ace-writing-2026-11-22";
+function countWords(t){var m=t.trim().match(/[A-Za-zÀ-ÿ0-9]+(?:['’\-][A-Za-zÀ-ÿ0-9]+)*/g);return m?m.length:0;}
+function countSentences(t){var m=t.match(/[^.!?]*[A-Za-z0-9][^.!?]*[.!?]+/g);return m?m.length:0;}
+function currentPrompt(){var r=document.querySelector('input[name=prompt]:checked');return r?r.value:"";}
+function updateCount(){
+  var t=document.getElementById("essay").value, w=countWords(t), s=countSentences(t);
+  document.getElementById("wc").textContent=w+(w===1?" word":" words");
+  document.getElementById("sc").textContent=s+(s===1?" sentence":" sentences");
+  var bar=document.getElementById("meterBar"); bar.style.width=Math.min(100,w/350*100)+"%";
+  var msg=document.getElementById("wcMsg");
+  if(w<200){bar.style.background="#ffb300";msg.className="fb";msg.textContent=w===0?"Aim for 200 to 350 words.":"Keep going, Ace! "+(200-w)+" more words to reach the goal.";}
+  else if(w<=350){bar.style.background="#43a047";msg.className="fb good";msg.textContent="🎯 You're in the target zone! Nice work, Ace!";}
+  else{bar.style.background="#1e88e5";msg.className="fb";msg.textContent="Wow, that's a lot of writing! A busy employer may read 100 letters. Could you cut any sentence that doesn't prove you fit the job?";}
+  try{localStorage.setItem(KEY,JSON.stringify({text:t,prompt:currentPrompt(),checks:checkStates()}));}catch(e){document.getElementById("saveNote").textContent="(This browser can't auto-save here, so use the Download button before closing!)";}
+}
+function checkStates(){return Array.prototype.map.call(document.querySelectorAll("#checklist input"),function(c){return c.checked;});}
+function checklistText(){
+  return Array.prototype.map.call(document.querySelectorAll("#checklist label"),function(l){return (l.querySelector("input").checked?"[x] ":"[ ] ")+l.textContent.trim();}).join("\n");
+}
+function buildReport(){
+  var t=document.getElementById("essay").value;
+  return "Writing Week 56: "+NAME+"\nDate: "+new Date().toLocaleString("en-CA")+"\nPrompt: "+currentPrompt()+
+    "\nWords: "+countWords(t)+"   Sentences: "+countSentences(t)+"\nPlanning notes:\n"+w5Summary()+
+    "\n\n----- "+NAME+"'s writing -----\n\n"+t+"\n\n----- Self-check -----\n"+checklistText()+
+    "\n\n----- Parent feedback -----\n\n\n";
+}
+function download(){
+  var t=document.getElementById("essay").value;
+  if(!t.trim()){document.getElementById("doneMsg").className="fb bad";document.getElementById("doneMsg").textContent="Write something first, Ace!";return;}
+  var blob=new Blob([buildReport().replace(/\n/g,"\r\n")],{type:"text/plain;charset=utf-8"});
+  var a=document.createElement("a"); a.href=URL.createObjectURL(blob); a.download=NAME+"-writing-2026-11-22"+".txt";
+  document.body.appendChild(a); a.click();
+  setTimeout(function(){URL.revokeObjectURL(a.href);a.remove();},1000);
+  var dm=document.getElementById("doneMsg"); dm.className="fb good"; dm.textContent="📄 Saved! Look in your Downloads folder and show Dad. Great job finishing, Ace!";
+}
+function esc(s){return s.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");}
+function printIt(){
+  var t=document.getElementById("essay").value;
+  if(!t.trim()){document.getElementById("doneMsg").className="fb bad";document.getElementById("doneMsg").textContent="Write something first, Ace!";return;}
+  document.getElementById("printArea").innerHTML="<h1>Writing Week 56: "+NAME+"</h1><div class='meta'>"+esc(new Date().toLocaleString("en-CA"))+"<br><strong>Prompt:</strong> "+esc(currentPrompt())+"<br>Words: "+countWords(t)+" · Sentences: "+countSentences(t)+"</div><div class='text'>"+esc(t)+"</div><div class='lines'><strong>Self-check:</strong><br>"+esc(checklistText()).replace(/\n/g,"<br>")+"</div><div class='lines'><strong>Parent feedback:</strong><br><br><br><br></div>";
+  window.print();
+}
+function restore(){
+  try{var d=JSON.parse(localStorage.getItem(KEY)||"null"); if(!d)return;
+    document.getElementById("essay").value=d.text||"";
+    Array.prototype.forEach.call(document.querySelectorAll("input[name=prompt]"),function(r){r.checked=(r.value===d.prompt);});
+    if(!document.querySelector("input[name=prompt]:checked"))document.querySelector("input[name=prompt]").checked=true;
+    var cs=document.querySelectorAll("#checklist input"); (d.checks||[]).forEach(function(v,i){if(cs[i])cs[i].checked=v;});
+  }catch(e){}
+}
+buildLabels(); buildGMC(); buildGFix(); restore(); w5Restore(); updateCount(); updateScore();
+W5.forEach(function(k){document.getElementById("w5"+k).addEventListener("input",w5Save);});
+document.getElementById("templateBtn").addEventListener("click",addTemplate);
+document.getElementById("checkLabels").addEventListener("click",checkLabels);
+document.getElementById("essay").addEventListener("input",updateCount);
+document.getElementById("checklist").addEventListener("change",function(){updateCount(); if(checkStates().every(Boolean)){var dm=document.getElementById("doneMsg");dm.className="fb good";dm.textContent="✅ All boxes checked! Now download or print it for Dad. Awesome work, Ace!";}});
+document.getElementById("prompts").addEventListener("change",updateCount);
+document.getElementById("downloadBtn").addEventListener("click",download);
+document.getElementById("printBtn").addEventListener("click",printIt);
+document.getElementById("clearBtn").addEventListener("click",function(){ if(confirm("Erase your writing and start over?")){document.getElementById("essay").value="";Array.prototype.forEach.call(document.querySelectorAll("#checklist input"),function(c){c.checked=false;});document.getElementById("doneMsg").textContent="";updateCount();} });
+</script>
+<script src="../../assets/autosave.js"></script>
+</body>
+</html>

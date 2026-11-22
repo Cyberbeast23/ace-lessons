@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Math (Nov. 22): Reaching for the Sky! Skyscraper Engineer's Math Lab</title>
+<style>
+  body{font-family:"Segoe UI",Verdana,Arial,sans-serif;font-size:20px;line-height:1.6;margin:0;background:#f5f0eb;color:#2c2416}
+  .wrap{max-width:880px;margin:0 auto;padding:20px 18px 80px}
+  a.home{font-size:.9em;color:#bf360c}
+  h1{color:#e65100;font-size:2em;margin:10px 0}
+  h2{color:#ef6c00;margin-top:36px;border-bottom:3px solid #ffcc80;padding-bottom:4px}
+  .box{background:#fff;border-radius:16px;padding:18px 22px;margin:16px 0;box-shadow:0 3px 10px rgba(0,0,0,.07)}
+  .example{border-left:8px solid #ef6c00}
+  .example h3{margin:0 0 6px;color:#e65100}
+  .step{margin:4px 0 4px 10px}
+  code,.mono{font-family:Consolas,"Courier New",monospace;background:#fff3e0;padding:1px 6px;border-radius:5px}
+  .q{border-left:8px solid #90a4ae}
+  .q.right{border-left-color:#43a047;background:#f1f8e9}
+  .q.wrong{border-left-color:#e53935;background:#fff5f5}
+  .qnum{font-weight:bold;color:#e65100}
+  .row{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:10px}
+  input[type=text]{font-size:1.05em;padding:8px 12px;border:2px solid #ffcc80;border-radius:10px;width:190px}
+  input[type=text]:focus{outline:none;border-color:#ef6c00;box-shadow:0 0 0 3px #ffe0b2}
+  button{font-size:.95em;padding:8px 16px;border:none;border-radius:10px;cursor:pointer;font-weight:bold}
+  .check{background:#ef6c00;color:#fff} .check:hover{background:#e65100}
+  .hint{background:#ffe082;color:#5d4037} .hint:hover{background:#ffd54f}
+  .sol{background:#ce93d8;color:#311b92}
+  .unit{color:#546e7a}
+  .fb{margin-top:8px;font-weight:bold;min-height:1em}
+  .fb.good{color:#2e7d32} .fb.bad{color:#c62828}
+  .hints{margin-top:8px;color:#e65100;background:#fff3e0;border-radius:10px;padding:0 12px}
+  .hints p{margin:6px 0;padding:6px 0}
+  .solution{margin-top:8px;background:#f3e5f5;border-radius:10px;padding:8px 12px;display:none}
+  #scoreBox{position:sticky;bottom:0;background:#e65100;color:#fff;border-radius:16px 16px 0 0;padding:12px 20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-top:30px}
+  #scoreBox button{background:#ffca28;color:#3e2723}
+  #final{display:none;font-size:1.15em;text-align:center;border:4px solid #43a047}
+  .tipbox{background:#fff8e1;border-left:8px solid #ffb300}
+</style>
+</head>
+<body>
+<div class="wrap">
+<a class="home" href="../../index.html">&larr; Back to all lessons</a>
+<h1>🏙️ Math Week 56: Reaching for the Sky! Skyscraper Engineer's Math Lab</h1>
+<p>Ace, every skyscraper begins as a page of numbers. Before a single crane arrives, structural engineers work out how tall each storey will be, how heavy each concrete floor is, how fast the elevators must travel, how much the top of the tower may sway in the wind, and how many weeks the construction crew will need. Today you're joining the design team as a <strong>skyscraper engineer</strong>. You'll use <strong>multi-step expressions, comparing with division and rounding, rates of speed, scale drawings, volume and mass, percent decrease, rounding up for whole weeks, surface area of walls, integers on a number line, converting km/h to m/s, combined work rates, the mean, two-step equations, volume of a hollow prism and multiplying by a rate</strong>.</p>
+
+<h2>Part 1: Learn the Moves</h2>
+
+<div class="box tipbox">
+  <strong>The 4-Step Problem Solver (your engineer's checklist):</strong>
+  <ol>
+    <li><strong>Read</strong>: What is the question actually asking? Underline the numbers and units (cm, m, km, m², m³, t, s, h, km/h, %).</li>
+    <li><strong>Plan</strong>: Do the units match? Change centimetres to metres or hours to seconds <em>before</em> you calculate.</li>
+    <li><strong>Solve</strong>: Do one step at a time and write each step down.</li>
+    <li><strong>Check</strong>: Is my answer reasonable? A storey is about 3 m tall, not 30 m, and an elevator can't reach the top of a tower in half a second.</li>
+  </ol>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 1: Multi-step expressions</h3>
+  <p class="step">A building has 12 storeys that are each 3 m tall, plus a 4 m roof. Height = 12 × 3 + 4 = 36 + 4 = <strong>40 m</strong>. (Multiply before you add.)</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 2: Comparing with division</h3>
+  <p class="step">A 90 m tower is how many times as tall as a 40 m one? 90 ÷ 40 = 2.25, which rounds to <strong>2.3 times</strong> (nearest tenth).</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 3: Speed, distance and time</h3>
+  <p class="step">Time = distance ÷ speed. An elevator moving at 4 m/s takes 100 ÷ 4 = <strong>25 s</strong> to rise 100 m.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 4: Scale drawings and models</h3>
+  <p class="step">On a 1:200 model, every 1 cm on the model stands for 200 cm in real life. A 15 cm model is 15 × 200 = 3 000 cm = <strong>30 m</strong> tall. (100 cm = 1 m.)</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 5: Volume, then mass</h3>
+  <p class="step">A concrete slab 10 m × 5 m × 0.2 m has a volume of 10 × 5 × 0.2 = 10 m³. If 1 m³ of concrete has a mass of about 2.4 t, the slab is 10 × 2.4 = <strong>24 t</strong>.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 6: Percent decrease</h3>
+  <p class="step">If something drops from 50 to 40, the decrease is 10. Percent decrease = 10 ÷ 50 × 100 = <strong>20%</strong>. Always divide by the <em>starting</em> amount.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 7: Rounding up for whole weeks</h3>
+  <p class="step">If a crew needs 6.5 weeks of work, it can't stop halfway through a week and call it done, so the job takes <strong>7</strong> weeks. When you need enough time (or buses, or boxes), round <em>up</em>.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 8: Area of the outside walls</h3>
+  <p class="step">A building with a square base 10 m on each side has a perimeter of 4 × 10 = 40 m. If it is 20 m tall, its four walls cover 40 × 20 = <strong>800 m²</strong>.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 9: Integers on a number line</h3>
+  <p class="step">From level −2 (two floors underground) up to level 5 is 5 − (−2) = 5 + 2 = <strong>7</strong> floors.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 10: Converting km/h to m/s</h3>
+  <p class="step">1 km = 1 000 m and 1 h = 3 600 s. So 36 km/h = 36 000 m ÷ 3 600 s = <strong>10 m/s</strong>. Shortcut: divide km/h by 3.6.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 11: Combined work rates</h3>
+  <p class="step">One crew paints 20 windows an hour. Two crews paint 2 × 20 = 40 an hour, so 300 windows take 300 ÷ 40 = <strong>7.5 hours</strong>.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 12: The mean</h3>
+  <p class="step">Mean = total ÷ how many. For 120, 100 and 140: 120 + 100 + 140 = 360, and 360 ÷ 3 = <strong>120</strong>.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 13: Two-step equations</h3>
+  <p class="step">"A 5 m lobby plus n storeys of 3 m each makes 65 m" means 5 + 3n = 65. Undo in reverse: 65 − 5 = 60, then 60 ÷ 3 = <strong>20</strong> storeys.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 14: Volume of a hollow prism</h3>
+  <p class="step">A hollow box is a big prism minus the empty space inside. Outside 4 m × 4 m, hollow 2 m × 2 m, height 10 m: (16 − 4) × 10 = <strong>120 m³</strong>.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 15: Multiplying by a rate</h3>
+  <p class="step">If every cubic metre of something stores 0.5 t, then 300 m³ stores 300 × 0.5 = <strong>150 t</strong>.</p>
+</div>
+
+<h2>Part 2: The Challenge (15 problems)</h2>
+<p>Type your answer and press <strong>Check</strong> (or Enter). Negative numbers like <span class="mono">-35</span>, fractions like <span class="mono">3/4</span>, mixed numbers like <span class="mono">1 3/4</span>, or decimals like <span class="mono">1.75</span> are fine. Don't type the units or % signs, and you may use spaces or commas in big numbers (1 000 000). Stuck? Press <strong>Hint</strong>. After 2 tries, you can see a full solution.</p>
+
+<div id="questions"></div>
+<div class="box" id="final"></div>
+<div id="scoreBox">
+  <span id="scoreText">Score: 0 / 15 correct</span>
+  <button id="finishBtn" type="button">I'm done! Show my final score</button>
+</div>
+</div>
+
+<script>
+var NAME = "Ace";
+var TABLE = '';
+var QUESTIONS = [
+ {t:"An office tower has <strong>40 storeys</strong>. Each storey is <strong>3.2 m</strong> tall, and a <strong>6 m</strong> spire sits on top of the roof. How tall is the tower, in <strong>metres</strong>, from the ground to the top of the spire?", a:"134", u:"m",
+  h:["Multiply first: 40 × 3.2 = ?","40 × 3.2 = 128. Now add the spire."],
+  s:"40 × 3.2 = 128 m. 128 + 6 = 134 m."},
+ {t:"Many people call the <strong>Home Insurance Building</strong> in Chicago (1885), which was about <strong>42 m</strong> tall, the world's first skyscraper. The <strong>Burj Khalifa</strong> in Dubai (2010) is about <strong>828 m</strong> tall. About how many <strong>times</strong> as tall as the Home Insurance Building is the Burj Khalifa? Round to the nearest <strong>tenth</strong>.", a:"19.7", u:"times",
+  h:["Divide the bigger height by the smaller one: 828 ÷ 42.","828 ÷ 42 = 19.714… Look at the hundredths digit to round."],
+  s:"828 ÷ 42 = 19.714…, which rounds to 19.7. You could stack almost 20 of the first skyscraper to reach the top of the Burj Khalifa!"},
+ {t:"An express elevator rises at <strong>9.5 m/s</strong>. How many <strong>seconds</strong> does it take to climb <strong>456 m</strong> without stopping?", a:"48", u:"s",
+  h:["Time = distance ÷ speed.","456 ÷ 9.5 is the same as 4 560 ÷ 95."],
+  s:"456 ÷ 9.5 = 48 s. Check: 9.5 × 48 = 456. ✓ Fast elevators slow down gently near the top so your ears and stomach stay happy."},
+ {t:"An architect builds a model of a tower at a scale of <strong>1:500</strong>. The model is <strong>42 cm</strong> tall. How tall will the real tower be, in <strong>metres</strong>?", a:"210", u:"m",
+  h:["Every 1 cm on the model stands for 500 cm in real life: 42 × 500 = ? cm.","Change centimetres to metres: divide by 100."],
+  s:"42 × 500 = 21 000 cm. 21 000 ÷ 100 = 210 m."},
+ {t:"One concrete floor slab is <strong>30 m</strong> long, <strong>20 m</strong> wide and <strong>0.2 m</strong> thick. Concrete has a mass of about <strong>2.4 tonnes per cubic metre</strong>. What is the mass of the slab, in <strong>tonnes</strong>?", a:"288", u:"t",
+  h:["Volume = length × width × thickness = 30 × 20 × 0.2.","The volume is 120 m³. Now multiply by 2.4."],
+  s:"30 × 20 × 0.2 = 120 m³. 120 × 2.4 = 288 t. That's one floor! This is why tall buildings need deep, strong foundations."},
+ {t:"In a wind-tunnel test, the top of a model tower swayed the equivalent of <strong>80 cm</strong> in a storm. After engineers added a <strong>tuned mass damper</strong> (a giant weight that swings the opposite way), it swayed only <strong>52 cm</strong>. What was the <strong>percent decrease</strong> in sway?", a:"35", u:"%",
+  h:["Decrease = 80 − 52 = 28 cm.","Percent decrease = 28 ÷ 80 × 100."],
+  s:"80 − 52 = 28. 28 ÷ 80 = 0.35 = 35%."},
+ {t:"A mass-timber residence has <strong>17</strong> wooden storeys to build on top of a concrete base. The crew can put up <strong>2 storeys per week</strong>. How many <strong>weeks</strong> must the schedule allow to finish all 17 storeys?", a:"9", u:"weeks",
+  h:["17 ÷ 2 = 8.5 weeks of work.","Can the job be finished after only 8 weeks? Round the right way."],
+  s:"17 ÷ 2 = 8.5. After 8 weeks only 16 storeys are up, so the schedule needs 9 weeks (round up)."},
+ {t:"A tower has a <strong>square base</strong> that is <strong>24 m</strong> on each side and is <strong>105 m</strong> tall. Glass covers <strong>70%</strong> of the area of its four outside walls. How many <strong>square metres</strong> of glass is that?", a:"7056", u:"m²",
+  h:["Perimeter = 4 × 24 = 96 m. Wall area = perimeter × height.","96 × 105 = 10 080 m². Now find 70% of that."],
+  s:"4 × 24 = 96 m. 96 × 105 = 10 080 m². 0.7 × 10 080 = 7 056 m² of glass."},
+ {t:"In a tower, the lobby is level <strong>0</strong>. The lowest parking level is <strong>P3</strong>, which is level <strong>−3</strong>. A worker rides the elevator from level −3 straight up to level <strong>47</strong>. How many <strong>levels</strong> does she rise?", a:"50", u:"levels",
+  h:["Rise = top level − bottom level = 47 − (−3).","Subtracting a negative is the same as adding."],
+  s:"47 − (−3) = 47 + 3 = 50 levels."},
+ {t:"Engineers test a tower design for a gust of wind of <strong>90 km/h</strong>. How fast is that in <strong>metres per second</strong>?", a:"25", u:"m/s",
+  h:["90 km = 90 000 m, and 1 h = 3 600 s.","90 000 ÷ 3 600 = ? (Or 90 ÷ 3.6.)"],
+  s:"90 000 m ÷ 3 600 s = 25 m/s. (Shortcut: 90 ÷ 3.6 = 25.)"},
+ {t:"A tower has <strong>1 200</strong> windows to wash. Each window-washing crew cleans <strong>48 windows per hour</strong>, and <strong>2 crews</strong> work at the same time. How many <strong>hours</strong> will it take to wash every window?", a:"12.5", u:"hours",
+  h:["Together the crews clean 2 × 48 = 96 windows per hour.","1 200 ÷ 96 = ?"],
+  s:"2 × 48 = 96 windows per hour. 1 200 ÷ 96 = 12.5 hours."},
+ {t:"Five towers in a city skyline are <strong>201 m</strong>, <strong>187 m</strong>, <strong>158 m</strong>, <strong>150 m</strong> and <strong>149 m</strong> tall. What is their <strong>mean</strong> height, in metres?", a:"169", u:"m",
+  h:["Add all five heights.","The total is 845 m. Divide by 5."],
+  s:"201 + 187 + 158 + 150 + 149 = 845. 845 ÷ 5 = 169 m."},
+ {t:"A skyscraper is <strong>260 m</strong> tall. It has a <strong>4 m</strong> tall entrance hall, and every storey above it is <strong>3.2 m</strong> tall. Solve <strong>4 + 3.2n = 260</strong> to find how many storeys (n) are above the entrance hall.", a:"80", u:"storeys",
+  h:["Undo the + 4 first: 260 − 4 = 256.","Then undo × 3.2: 256 ÷ 3.2 = 2 560 ÷ 32."],
+  s:"260 − 4 = 256. 256 ÷ 3.2 = 80 storeys. Check: 4 + 3.2 × 80 = 4 + 256 = 260. ✓"},
+ {t:"The concrete <strong>core</strong> of a tower (the strong spine that holds the elevators and stairs) is a hollow rectangular prism. Its outside measures <strong>10 m × 8 m</strong>, the hollow space inside measures <strong>8 m × 6 m</strong>, and it is <strong>120 m</strong> tall. What volume of <strong>concrete</strong> is in the core, in <strong>cubic metres</strong>?", a:"3840", u:"m³",
+  h:["Area of concrete in one floor of the core = outside area − hollow area = 80 − 48.","32 m² × 120 m = ?"],
+  s:"10 × 8 = 80 m². 8 × 6 = 48 m². 80 − 48 = 32 m². 32 × 120 = 3 840 m³."},
+ {t:"Wood stores carbon that the tree pulled out of the air as it grew. Suppose each cubic metre of building timber stores about <strong>0.9 tonnes</strong> of carbon dioxide. A mass-timber building uses <strong>2 200 m³</strong> of wood. About how many <strong>tonnes</strong> of carbon dioxide are stored in its wood?", a:"1980", u:"t",
+  h:["Multiply the volume by the rate: 2 200 × 0.9.","2 200 × 0.9 = 2 200 − 220."],
+  s:"2 200 × 0.9 = 1 980 t of carbon dioxide, locked inside the walls and floors for as long as the building stands."}
+];
+
+var PRAISE = ["Nice work, Ace!","Correct! That answer is rock-solid! 🏗️","Yes! Built to last! ✨","Excellent, Ace. That was a tough one!","Right on target! 🎯","Brilliant thinking, Ace!","Spot on, Engineer Ace! 🏙️"];
+var ENCOURAGE = ["Not quite. Check your steps and try again!","Close call. Try again, Ace! Maybe use a hint?","Hmm, not yet. Re-read the question carefully.","Keep going, Ace. Mistakes help your brain grow!"];
+
+function parseAnswer(str){
+  if(str===undefined||str===null) return NaN;
+  var s=String(str).trim().toLowerCase();
+  s=s.replace(/[\u2212\u2013]/g,"-");
+  s=s.replace(/(\d),(?=\d{3}(\D|$))/g,"$1");
+  s=s.replace(/[^0-9.\/\- ]/g," ").replace(/\s+/g," ").trim();
+  s=s.replace(/\s*\/\s*/g,"/");
+  var m;
+  if((m=s.match(/^(-?\d+) (\d+)\/(\d+)$/))){ var w=parseFloat(m[1]),n=parseFloat(m[2]),d=parseFloat(m[3]); if(d===0)return NaN; return w<0? w-n/d : w+n/d; }
+  if((m=s.match(/^(-?\d+(?:\.\d+)?)\/(\d+(?:\.\d+)?)$/))){ var d2=parseFloat(m[2]); if(d2===0)return NaN; return parseFloat(m[1])/d2; }
+  s=s.replace(/ /g,"");
+  if(/^-?(\d+\.?\d*|\.\d+)$/.test(s)) return parseFloat(s);
+  return NaN;
+}
+function isCorrect(input,key){
+  var a=parseAnswer(input), k=parseAnswer(key);
+  if(isNaN(a)) return false;
+  var isInt=Math.abs(k-Math.round(k))<1e-12;
+  var tol=isInt?1e-9:0.005;
+  return Math.abs(a-k)<=tol;
+}
+
+function isRomanCorrect(input,key){ return String(input).replace(/\s+/g,"").toUpperCase()===key; }
+var state=[];
+function render(){
+  var box=document.getElementById("questions");
+  QUESTIONS.forEach(function(q,i){
+    state.push({correct:false,tries:0,hints:0});
+    var d=document.createElement("div");
+    d.className="box q"; d.id="q"+i;
+    d.innerHTML='<div><span class="qnum">'+(i+1)+'.</span> '+q.t+'</div>'+
+      '<div class="row"><input type="text"'+(q.r?' placeholder="e.g. MMXXVI"':'')+' id="in'+i+'" aria-label="Answer to question '+(i+1)+'" autocomplete="off"> <span class="unit">'+q.u+'</span>'+
+      '<button type="button" class="check" data-i="'+i+'">Check</button>'+
+      '<button type="button" class="hint" data-i="'+i+'">Hint 💡</button>'+
+      '<button type="button" class="sol" data-i="'+i+'" style="display:none">Show solution</button></div>'+
+      '<div class="fb" id="fb'+i+'"></div><div class="hints" id="hints'+i+'"></div>'+
+      '<div class="solution" id="sol'+i+'"><strong>Solution:</strong> '+q.s+'</div>';
+    box.appendChild(d);
+  });
+  box.addEventListener("click",function(e){
+    var b=e.target; if(b.tagName!=="BUTTON")return;
+    var i=+b.getAttribute("data-i");
+    if(b.className==="check") check(i);
+    else if(b.className==="hint") hint(i);
+    else if(b.className==="sol") document.getElementById("sol"+i).style.display="block";
+  });
+  box.addEventListener("keydown",function(e){
+    if(e.key==="Enter"&&e.target.tagName==="INPUT"){ check(+e.target.id.slice(2)); }
+  });
+}
+function pick(arr){return arr[Math.floor(Math.random()*arr.length)];}
+function check(i){
+  var val=document.getElementById("in"+i).value;
+  var fb=document.getElementById("fb"+i), card=document.getElementById("q"+i);
+  if(val.trim()===""){fb.className="fb bad";fb.textContent="Type an answer first, Ace!";return;}
+  var isR=!!QUESTIONS[i].r;
+  if(isR&&!/^[ivxlcdm\s]+$/i.test(val)){fb.className="fb bad";fb.textContent="Use only Roman numeral letters: I, V, X, L, C, D, M.";return;}
+  if(!isR&&isNaN(parseAnswer(val))){fb.className="fb bad";fb.textContent="I can't read that as a number. Try something like 42, 3.5, 3/4 or 1 3/4.";return;}
+  state[i].tries++;
+  if(isR?isRomanCorrect(val,QUESTIONS[i].a):isCorrect(val,QUESTIONS[i].a)){
+    state[i].correct=true; card.className="box q right"; fb.className="fb good";
+    fb.textContent="✅ "+pick(PRAISE)+(state[i].tries===1?" (first try!)":"");
+  } else {
+    state[i].correct=false; card.className="box q wrong"; fb.className="fb bad";
+    fb.textContent="❌ "+pick(ENCOURAGE);
+    if(state[i].tries>=2) card.querySelector(".sol").style.display="inline-block";
+  }
+  updateScore();
+}
+function hint(i){
+  var q=QUESTIONS[i], s=state[i], hb=document.getElementById("hints"+i);
+  if(s.hints<q.h.length){
+    var p=document.createElement("p"); p.textContent="💡 Hint "+(s.hints+1)+": "+q.h[s.hints]; hb.appendChild(p); s.hints++;
+  }
+  if(s.hints>=q.h.length) document.querySelector("#q"+i+" .hint").disabled=true;
+  updateScore();
+}
+function counts(){
+  var c=0,first=0,h=0;
+  state.forEach(function(s){ if(s.correct){c++; if(s.tries===1)first++;} h+=s.hints; });
+  return {correct:c,first:first,hints:h};
+}
+function updateScore(){
+  var k=counts();
+  document.getElementById("scoreText").textContent="Score: "+k.correct+" / "+QUESTIONS.length+" correct · hints used: "+k.hints;
+}
+function finish(){
+  var k=counts(), n=QUESTIONS.length, pct=Math.round(100*k.correct/n);
+  var msg;
+  if(pct===100) msg="🏆 PERFECT SCORE! Incredible work, Ace. The design team would hire you as chief structural engineer!";
+  else if(pct>=85) msg="🌟 Outstanding, Ace! That's a Grade 6–7 level performance!";
+  else if(pct>=65) msg="💪 Great effort, Ace! Review the ones you missed and try them again.";
+  else if(pct>=40) msg="👍 Good start, Ace! These problems are tough. Use the hints and solutions to learn the tricks, then try again.";
+  else msg="🌱 These are challenge problems, well above grade level. Every great scientist started as a beginner! Go through the worked examples and try again, Ace!";
+  var f=document.getElementById("final");
+  f.style.display="block";
+  f.innerHTML="<h2 style='border:none;margin-top:0'>Final Score: "+k.correct+" / "+n+" ("+pct+"%)</h2>"+
+    "<p>Correct on the first try: "+k.first+" · Hints used: "+k.hints+"</p><p>"+msg+"</p>"+
+    "<p style='font-size:.85em;color:#546e7a'>Finished on "+new Date().toLocaleString("en-CA")+"</p>";
+  f.scrollIntoView({behavior:"smooth"});
+}
+render();
+updateScore();
+document.getElementById("finishBtn").addEventListener("click",finish);
+</script>
+<script src="../../assets/autosave.js"></script>
+</body>
+</html>
