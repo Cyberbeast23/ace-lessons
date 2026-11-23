@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Math (Nov. 23): Land Between the Rivers! Mesopotamian Scribe's Math Lab</title>
+<style>
+  body{font-family:"Segoe UI",Verdana,Arial,sans-serif;font-size:20px;line-height:1.6;margin:0;background:#f5f0eb;color:#2c2416}
+  .wrap{max-width:880px;margin:0 auto;padding:20px 18px 80px}
+  a.home{font-size:.9em;color:#bf360c}
+  h1{color:#e65100;font-size:2em;margin:10px 0}
+  h2{color:#ef6c00;margin-top:36px;border-bottom:3px solid #ffcc80;padding-bottom:4px}
+  .box{background:#fff;border-radius:16px;padding:18px 22px;margin:16px 0;box-shadow:0 3px 10px rgba(0,0,0,.07)}
+  .example{border-left:8px solid #ef6c00}
+  .example h3{margin:0 0 6px;color:#e65100}
+  .step{margin:4px 0 4px 10px}
+  code,.mono{font-family:Consolas,"Courier New",monospace;background:#fff3e0;padding:1px 6px;border-radius:5px}
+  .q{border-left:8px solid #90a4ae}
+  .q.right{border-left-color:#43a047;background:#f1f8e9}
+  .q.wrong{border-left-color:#e53935;background:#fff5f5}
+  .qnum{font-weight:bold;color:#e65100}
+  .row{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:10px}
+  input[type=text]{font-size:1.05em;padding:8px 12px;border:2px solid #ffcc80;border-radius:10px;width:190px}
+  input[type=text]:focus{outline:none;border-color:#ef6c00;box-shadow:0 0 0 3px #ffe0b2}
+  button{font-size:.95em;padding:8px 16px;border:none;border-radius:10px;cursor:pointer;font-weight:bold}
+  .check{background:#ef6c00;color:#fff} .check:hover{background:#e65100}
+  .hint{background:#ffe082;color:#5d4037} .hint:hover{background:#ffd54f}
+  .sol{background:#ce93d8;color:#311b92}
+  .unit{color:#546e7a}
+  .fb{margin-top:8px;font-weight:bold;min-height:1em}
+  .fb.good{color:#2e7d32} .fb.bad{color:#c62828}
+  .hints{margin-top:8px;color:#e65100;background:#fff3e0;border-radius:10px;padding:0 12px}
+  .hints p{margin:6px 0;padding:6px 0}
+  .solution{margin-top:8px;background:#f3e5f5;border-radius:10px;padding:8px 12px;display:none}
+  #scoreBox{position:sticky;bottom:0;background:#e65100;color:#fff;border-radius:16px 16px 0 0;padding:12px 20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-top:30px}
+  #scoreBox button{background:#ffca28;color:#3e2723}
+  #final{display:none;font-size:1.15em;text-align:center;border:4px solid #43a047}
+  .tipbox{background:#fff8e1;border-left:8px solid #ffb300}
+</style>
+</head>
+<body>
+<div class="wrap">
+<a class="home" href="../../index.html">&larr; Back to all lessons</a>
+<h1>🏺 Math Week 57: Land Between the Rivers! Mesopotamian Scribe's Math Lab</h1>
+<p>Ace, more than 5 000 years ago, in the land between the Tigris and Euphrates rivers (today mostly Iraq), the Sumerians invented one of the world's first writing systems, and the very first things they wrote down were <em>numbers</em>: sacks of barley, jars of oil and herds of sheep. Their scribes counted in groups of <strong>60</strong>, and we still use their system every time we read a clock or measure an angle. Today you're training at a scribe school, the <em>edubba</em> or "tablet house." You'll use <strong>base-60 place value, unit conversions with 60s, area of a rectangle, volume of a rectangular prism, rounding down for whole items, multi-step rates, percent of a total, BCE/CE timelines with no year 0, speed-distance-time, fractions of an amount, probability of independent events, two-step equations and map scales</strong>.</p>
+
+<h2>Part 1: Learn the Moves</h2>
+
+<div class="box tipbox">
+  <strong>The 4-Step Problem Solver (a scribe's checklist):</strong>
+  <ol>
+    <li><strong>Read</strong>: What is the question actually asking? Underline the numbers and units (cm, m, km, cm³, m³, L, s, h, years).</li>
+    <li><strong>Plan</strong>: Do the units match? Change metres to centimetres or hours to seconds <em>before</em> you calculate.</li>
+    <li><strong>Solve</strong>: Do one step at a time and write each step down (scribes pressed every step into wet clay!).</li>
+    <li><strong>Check</strong>: Is my answer reasonable? A clay tablet isn't 3 m wide, and BCE years count <em>down</em> toward year 1.</li>
+  </ol>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 1: Base-60 place value</h3>
+  <p class="step">We count in tens: 345 = 3 hundreds + 4 tens + 5 ones. Babylonian scribes counted in <strong>sixties</strong>. Their places were ones, sixties, and 3 600s (60 × 60). So "1 sixty and 30 ones" = 60 + 30 = <strong>90</strong>, and "2 three-thousand-six-hundreds" = 2 × 3 600 = 7 200.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 2: Breaking a number into sixties</h3>
+  <p class="step">To write 200 the Babylonian way, ask how many 60s fit: 200 ÷ 60 = 3 remainder 20. So 200 = <strong>3 sixties and 20 ones</strong>. Check: 3 × 60 + 20 = 200. ✓</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 3: Conversions that use 60</h3>
+  <p class="step">1 hour = 60 minutes and 1 minute = 60 seconds, so 1 hour = 60 × 60 = <strong>3 600 seconds</strong>. A circle has 360 degrees, and each degree can be split into 60 smaller parts called <em>minutes of arc</em>.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 4: Area of a rectangle</h3>
+  <p class="step">Area = length × width. A tablet 7 cm long and 4.5 cm wide has an area of 7 × 4.5 = <strong>31.5 cm²</strong>.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 5: Volume of a rectangular prism</h3>
+  <p class="step">Volume = length × width × height. A box 10 m × 5 m × 2 m holds 10 × 5 × 2 = <strong>100 m³</strong>.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 6: Rounding down for whole items</h3>
+  <p class="step">1 m³ = 100 cm × 100 cm × 100 cm = 1 000 000 cm³. If a block is 5 000 cm³, then 1 000 000 ÷ 5 000 = 200 blocks. If the answer were 200.7, you could only fit <strong>200</strong> whole blocks, so round <em>down</em>.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 7: Multi-step rates</h3>
+  <p class="step">If each worker gets 2 L of oil per month, then 10 workers get 20 L per month, and in 6 months they get 20 × 6 = <strong>120 L</strong>.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 8: Percent of a total</h3>
+  <p class="step">If 45 of 60 tablets are about trade, that's 45 ÷ 60 = 0.75 = <strong>75%</strong>.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 9: Timelines: BCE to BCE</h3>
+  <p class="step">BCE years count <em>down</em> toward year 1. From 3000 BCE to 2500 BCE is 3 000 − 2 500 = <strong>500 years</strong>. (The bigger BCE number is the older date!)</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 10: Timelines: BCE to CE</h3>
+  <p class="step">There is <strong>no year 0</strong>: 1 BCE is followed directly by 1 CE. From 500 BCE to 500 CE is 500 + 500 − 1 = <strong>999 years</strong>.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 11: Speed, distance and time</h3>
+  <p class="step">Distance = speed × time. Change the time to seconds if the speed is in metres per second. At 2 m/s for 1 hour: 2 × 3 600 = 7 200 m = <strong>7.2 km</strong>.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 12: Fractions of an amount, step by step</h3>
+  <p class="step">If someone takes 1/4 of 400 L, they get 100 L, leaving 300 L. If <em>then</em> 1/10 of what's left is paid as a tax, that's 30 L, leaving <strong>270 L</strong>. Always ask: a fraction of <em>what</em>?</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 13: Probability of independent events</h3>
+  <p class="step">When things don't affect each other, multiply their probabilities. The chance of a coin landing heads twice in a row is 1/2 × 1/2 = <strong>1/4</strong>.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 14: Two-step equations</h3>
+  <p class="step">"4 more than 5 times a number is 39" means 5n + 4 = 39. Undo the steps in reverse order: 39 − 4 = 35, then 35 ÷ 5 = <strong>7</strong>.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 15: Map scales</h3>
+  <p class="step">On a 1 : 1 000 000 map, 1 cm on the map is 1 000 000 cm = 10 000 m = 10 km in real life. So 3.5 cm on the map is 3.5 × 10 = <strong>35 km</strong>.</p>
+</div>
+
+<h2>Part 2: The Challenge (15 problems)</h2>
+<p>Type your answer and press <strong>Check</strong> (or Enter). Negative numbers like <span class="mono">-35</span>, fractions like <span class="mono">3/4</span>, mixed numbers like <span class="mono">1 3/4</span>, or decimals like <span class="mono">1.75</span> are fine. Don't type the units or % signs, and you may use spaces or commas in big numbers (1 000 000). Stuck? Press <strong>Hint</strong>. After 2 tries, you can see a full solution.</p>
+
+<div id="questions"></div>
+<div class="box" id="final"></div>
+<div id="scoreBox">
+  <span id="scoreText">Score: 0 / 15 correct</span>
+  <button id="finishBtn" type="button">I'm done! Show my final score</button>
+</div>
+</div>
+
+<script>
+var NAME = "Ace";
+var TABLE = '';
+var QUESTIONS = [
+ {t:"Babylonian scribes wrote numbers in groups of 60. On a practice tablet, a student wrote a number as <strong>2 sixties and 25 ones</strong>. What is that number in our base-10 system?", a:"145", u:"",
+  h:["Each \"sixty\" is worth 60. Two of them is 2 × 60.","120 + 25 = ?"],
+  s:"2 × 60 = 120, and 120 + 25 = 145."},
+ {t:"The Babylonians gave us the 360-degree circle. Each degree is split into <strong>60 minutes of arc</strong>. How many minutes of arc are in a <strong>full circle</strong>?", a:"21600", u:"minutes of arc",
+  h:["A full circle is 360 degrees, and each degree has 60 minutes of arc.","360 × 60 = 36 × 6 × 100."],
+  s:"360 × 60 = 21 600 minutes of arc. Navigators and astronomers still use these units today!"},
+ {t:"A Babylonian scribe writes <strong>4 000</strong> using three places: <strong>3 600s</strong>, <strong>sixties</strong> and <strong>ones</strong>. It has 1 group of 3 600. How many <strong>sixties</strong> does it have? (The rest will be ones.)", a:"6", u:"sixties",
+  h:["Take away the 3 600 first: 4 000 − 3 600 = 400.","How many whole 60s fit in 400? 400 ÷ 60 = 6 remainder …"],
+  s:"4 000 − 3 600 = 400. 400 ÷ 60 = 6 remainder 40. So 4 000 = 1 three-thousand-six-hundred + 6 sixties + 40 ones. Check: 3 600 + 360 + 40 = 4 000. ✓"},
+ {t:"A clay school tablet is a rectangle <strong>8 cm</strong> long and <strong>6.5 cm</strong> wide. What is its <strong>area</strong> in square centimetres?", a:"52", u:"cm²",
+  h:["Area of a rectangle = length × width.","8 × 6.5 = 8 × 6 + 8 × 0.5."],
+  s:"8 × 6.5 = 48 + 4 = 52 cm². That's about the size of a smartphone screen."},
+ {t:"The great ziggurat (stepped temple tower) of Ur was built about 4 000 years ago. Its bottom level was roughly a rectangular prism about <strong>64 m</strong> long, <strong>46 m</strong> wide and <strong>11 m</strong> high. What was the <strong>volume</strong> of that bottom level, in cubic metres?", a:"32384", u:"m³",
+  h:["Volume = length × width × height = 64 × 46 × 11.","64 × 46 = 2 944. Now multiply by 11."],
+  s:"64 × 46 = 2 944 m². 2 944 × 11 = 32 384 m³. The inside was packed with mud bricks, with a tough outer layer of baked bricks."},
+ {t:"A mud brick from Ur measures <strong>30 cm × 30 cm × 8 cm</strong>. How many <strong>whole</strong> bricks could fit into <strong>1 cubic metre</strong> (ignore the gaps for mortar)?", a:"138", u:"bricks",
+  h:["One brick: 30 × 30 × 8 = 7 200 cm³. One cubic metre = 100 × 100 × 100 = 1 000 000 cm³.","1 000 000 ÷ 7 200 = 138.8… Can you use part of a brick?"],
+  s:"30 × 30 × 8 = 7 200 cm³. 1 000 000 ÷ 7 200 = 138.8…, so only 138 whole bricks fit. Round down!"},
+ {t:"Temple workers in Sumer were often paid in barley. Suppose each worker received about <strong>60 litres</strong> of barley per month. How many litres would a crew of <strong>25 workers</strong> receive over <strong>3 months</strong>?", a:"4500", u:"L",
+  h:["One month for the whole crew: 60 × 25.","1 500 L per month × 3 months."],
+  s:"60 × 25 = 1 500 L per month. 1 500 × 3 = 4 500 L. Scribes recorded payments like this on thousands of tablets."},
+ {t:"Archaeologists studying a collection of <strong>1 200</strong> tablets found that <strong>840</strong> of them were business records (receipts, loans and ration lists). What <strong>percent</strong> of the tablets were business records?", a:"70", u:"%",
+  h:["Percent = part ÷ total × 100.","840 ÷ 1 200 = 84 ÷ 120 = 7 ÷ 10."],
+  s:"840 ÷ 1 200 = 0.7 = 70%. Most early writing was bookkeeping, not stories!"},
+ {t:"Writing began in Mesopotamia around <strong>3200 BCE</strong>. King Hammurabi's famous law code was carved around <strong>1754 BCE</strong>. About how many <strong>years</strong> passed between them?", a:"1446", u:"years",
+  h:["Both dates are BCE, so subtract the smaller number from the bigger one.","3 200 − 1 754 = ?"],
+  s:"3 200 − 1 754 = 1 446 years. Writing was already very old by Hammurabi's time!"},
+ {t:"How many years are there from <strong>3200 BCE</strong> (the start of writing) to <strong>2026 CE</strong>? Remember: there is <strong>no year 0</strong>.", a:"5225", u:"years",
+  h:["Add the years on both sides of the BCE/CE line: 3 200 + 2 026.","Then subtract 1, because the calendar jumps from 1 BCE straight to 1 CE."],
+  s:"3 200 + 2 026 − 1 = 5 225 years. People have been writing for over five thousand years."},
+ {t:"Farmers dug canals to carry river water to their fields. If water flows along a canal at <strong>0.6 m/s</strong>, how many <strong>kilometres</strong> does it travel in <strong>2 hours</strong>?", a:"4.32", u:"km",
+  h:["2 hours = 2 × 3 600 = 7 200 seconds.","7 200 × 0.6 = 4 320 m. Change metres to kilometres."],
+  s:"2 h = 7 200 s. 7 200 × 0.6 = 4 320 m = 4.32 km."},
+ {t:"A tenant farmer harvests <strong>1 800 L</strong> of barley. First, the landowner takes <strong>1/3</strong> of the harvest. Then the farmer pays a temple tax of <strong>1/10 of what is left</strong>. How many litres does the farmer keep?", a:"1080", u:"L",
+  h:["1/3 of 1 800 = 600, leaving 1 200 L.","The tax is 1/10 of 1 200 (not of 1 800!)."],
+  s:"1 800 ÷ 3 = 600, so 1 800 − 600 = 1 200 L remain. 1/10 of 1 200 = 120. 1 200 − 120 = 1 080 L."},
+ {t:"The Royal Game of Ur, one of the world's oldest board games, uses <strong>4</strong> pyramid-shaped dice. Each die has a <strong>1/2</strong> chance of landing with a marked tip pointing up. You move one space for each marked tip. What is the probability that <strong>none</strong> of the 4 dice shows a marked tip (so you can't move)? Type a fraction.", a:"1/16", u:"",
+  h:["Each die has a 1/2 chance of showing NO marked tip.","The dice don't affect each other, so multiply: 1/2 × 1/2 × 1/2 × 1/2."],
+  s:"1/2 × 1/2 × 1/2 × 1/2 = 1/16. About once every 16 throws, you're stuck!"},
+ {t:"A student scribe copied cuneiform signs for practice. On Tuesday he copied <strong>77</strong> signs, which was <strong>5 more than 3 times</strong> the number he copied on Monday. How many signs did he copy on Monday?", a:"24", u:"signs",
+  h:["Write an equation: 3n + 5 = 77.","Undo in reverse order: subtract 5, then divide by 3."],
+  s:"3n + 5 = 77. 77 − 5 = 72. 72 ÷ 3 = 24. Check: 3 × 24 + 5 = 77. ✓"},
+ {t:"On a map with a scale of <strong>1 : 5 000 000</strong>, the ancient cities of Uruk and Babylon are <strong>5.4 cm</strong> apart. About how many <strong>kilometres</strong> apart are they in real life?", a:"270", u:"km",
+  h:["1 cm on the map = 5 000 000 cm in real life = 50 000 m = 50 km.","5.4 × 50 = ?"],
+  s:"1 cm stands for 50 km, so 5.4 × 50 = 270 km."}
+];
+
+var PRAISE = ["Nice work, Ace!","Correct! Pressed into clay forever! 🏺","Yes! A true scribe's answer! ✨","Excellent, Ace. That was a tough one!","Right on target! 🎯","Brilliant thinking, Ace!","Spot on, Scribe Ace! 📜"];
+var ENCOURAGE = ["Not quite. Check your steps and try again!","Close call. Try again, Ace! Maybe use a hint?","Hmm, not yet. Re-read the question carefully.","Keep going, Ace. Mistakes help your brain grow!"];
+
+function parseAnswer(str){
+  if(str===undefined||str===null) return NaN;
+  var s=String(str).trim().toLowerCase();
+  s=s.replace(/[\u2212\u2013]/g,"-");
+  s=s.replace(/(\d),(?=\d{3}(\D|$))/g,"$1");
+  s=s.replace(/[^0-9.\/\- ]/g," ").replace(/\s+/g," ").trim();
+  s=s.replace(/\s*\/\s*/g,"/");
+  var m;
+  if((m=s.match(/^(-?\d+) (\d+)\/(\d+)$/))){ var w=parseFloat(m[1]),n=parseFloat(m[2]),d=parseFloat(m[3]); if(d===0)return NaN; return w<0? w-n/d : w+n/d; }
+  if((m=s.match(/^(-?\d+(?:\.\d+)?)\/(\d+(?:\.\d+)?)$/))){ var d2=parseFloat(m[2]); if(d2===0)return NaN; return parseFloat(m[1])/d2; }
+  s=s.replace(/ /g,"");
+  if(/^-?(\d+\.?\d*|\.\d+)$/.test(s)) return parseFloat(s);
+  return NaN;
+}
+function isCorrect(input,key){
+  var a=parseAnswer(input), k=parseAnswer(key);
+  if(isNaN(a)) return false;
+  var isInt=Math.abs(k-Math.round(k))<1e-12;
+  var tol=isInt?1e-9:0.005;
+  return Math.abs(a-k)<=tol;
+}
+
+function isRomanCorrect(input,key){ return String(input).replace(/\s+/g,"").toUpperCase()===key; }
+var state=[];
+function render(){
+  var box=document.getElementById("questions");
+  QUESTIONS.forEach(function(q,i){
+    state.push({correct:false,tries:0,hints:0});
+    var d=document.createElement("div");
+    d.className="box q"; d.id="q"+i;
+    d.innerHTML='<div><span class="qnum">'+(i+1)+'.</span> '+q.t+'</div>'+
+      '<div class="row"><input type="text"'+(q.r?' placeholder="e.g. MMXXVI"':'')+' id="in'+i+'" aria-label="Answer to question '+(i+1)+'" autocomplete="off"> <span class="unit">'+q.u+'</span>'+
+      '<button type="button" class="check" data-i="'+i+'">Check</button>'+
+      '<button type="button" class="hint" data-i="'+i+'">Hint 💡</button>'+
+      '<button type="button" class="sol" data-i="'+i+'" style="display:none">Show solution</button></div>'+
+      '<div class="fb" id="fb'+i+'"></div><div class="hints" id="hints'+i+'"></div>'+
+      '<div class="solution" id="sol'+i+'"><strong>Solution:</strong> '+q.s+'</div>';
+    box.appendChild(d);
+  });
+  box.addEventListener("click",function(e){
+    var b=e.target; if(b.tagName!=="BUTTON")return;
+    var i=+b.getAttribute("data-i");
+    if(b.className==="check") check(i);
+    else if(b.className==="hint") hint(i);
+    else if(b.className==="sol") document.getElementById("sol"+i).style.display="block";
+  });
+  box.addEventListener("keydown",function(e){
+    if(e.key==="Enter"&&e.target.tagName==="INPUT"){ check(+e.target.id.slice(2)); }
+  });
+}
+function pick(arr){return arr[Math.floor(Math.random()*arr.length)];}
+function check(i){
+  var val=document.getElementById("in"+i).value;
+  var fb=document.getElementById("fb"+i), card=document.getElementById("q"+i);
+  if(val.trim()===""){fb.className="fb bad";fb.textContent="Type an answer first, Ace!";return;}
+  var isR=!!QUESTIONS[i].r;
+  if(isR&&!/^[ivxlcdm\s]+$/i.test(val)){fb.className="fb bad";fb.textContent="Use only Roman numeral letters: I, V, X, L, C, D, M.";return;}
+  if(!isR&&isNaN(parseAnswer(val))){fb.className="fb bad";fb.textContent="I can't read that as a number. Try something like 42, 3.5, 3/4 or 1 3/4.";return;}
+  state[i].tries++;
+  if(isR?isRomanCorrect(val,QUESTIONS[i].a):isCorrect(val,QUESTIONS[i].a)){
+    state[i].correct=true; card.className="box q right"; fb.className="fb good";
+    fb.textContent="✅ "+pick(PRAISE)+(state[i].tries===1?" (first try!)":"");
+  } else {
+    state[i].correct=false; card.className="box q wrong"; fb.className="fb bad";
+    fb.textContent="❌ "+pick(ENCOURAGE);
+    if(state[i].tries>=2) card.querySelector(".sol").style.display="inline-block";
+  }
+  updateScore();
+}
+function hint(i){
+  var q=QUESTIONS[i], s=state[i], hb=document.getElementById("hints"+i);
+  if(s.hints<q.h.length){
+    var p=document.createElement("p"); p.textContent="💡 Hint "+(s.hints+1)+": "+q.h[s.hints]; hb.appendChild(p); s.hints++;
+  }
+  if(s.hints>=q.h.length) document.querySelector("#q"+i+" .hint").disabled=true;
+  updateScore();
+}
+function counts(){
+  var c=0,first=0,h=0;
+  state.forEach(function(s){ if(s.correct){c++; if(s.tries===1)first++;} h+=s.hints; });
+  return {correct:c,first:first,hints:h};
+}
+function updateScore(){
+  var k=counts();
+  document.getElementById("scoreText").textContent="Score: "+k.correct+" / "+QUESTIONS.length+" correct · hints used: "+k.hints;
+}
+function finish(){
+  var k=counts(), n=QUESTIONS.length, pct=Math.round(100*k.correct/n);
+  var msg;
+  if(pct===100) msg="🏆 PERFECT SCORE! Incredible work, Ace. The king would make you chief scribe of the tablet house!";
+  else if(pct>=85) msg="🌟 Outstanding, Ace! That's a Grade 6–7 level performance!";
+  else if(pct>=65) msg="💪 Great effort, Ace! Review the ones you missed and try them again.";
+  else if(pct>=40) msg="👍 Good start, Ace! These problems are tough. Use the hints and solutions to learn the tricks, then try again.";
+  else msg="🌱 These are challenge problems, well above grade level. Every great scientist started as a beginner! Go through the worked examples and try again, Ace!";
+  var f=document.getElementById("final");
+  f.style.display="block";
+  f.innerHTML="<h2 style='border:none;margin-top:0'>Final Score: "+k.correct+" / "+n+" ("+pct+"%)</h2>"+
+    "<p>Correct on the first try: "+k.first+" · Hints used: "+k.hints+"</p><p>"+msg+"</p>"+
+    "<p style='font-size:.85em;color:#546e7a'>Finished on "+new Date().toLocaleString("en-CA")+"</p>";
+  f.scrollIntoView({behavior:"smooth"});
+}
+render();
+updateScore();
+document.getElementById("finishBtn").addEventListener("click",finish);
+</script>
+<script src="../../assets/autosave.js"></script>
+</body>
+</html>
