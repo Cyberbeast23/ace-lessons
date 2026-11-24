@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reading (Nov. 24): Masters of the Mesozoic Skies: The Puzzle of the Pterosaurs</title>
+<style>
+  body{font-family:"Segoe UI",Verdana,Arial,sans-serif;font-size:20px;line-height:1.65;margin:0;background:#f5f0eb;color:#2c2416}
+  .wrap{max-width:880px;margin:0 auto;padding:20px 18px 80px}
+  a.home{font-size:.9em;color:#bf360c}
+  h1{color:#e65100;font-size:2em;margin:10px 0}
+  h2{color:#ef6c00;margin-top:36px;border-bottom:3px solid #ffcc80;padding-bottom:4px}
+  .box{background:#fff;border-radius:16px;padding:18px 22px;margin:16px 0;box-shadow:0 3px 10px rgba(0,0,0,.07)}
+  .passage{font-family:Georgia,"Times New Roman",serif;font-size:1.1em;line-height:1.8}
+  .passage h3{text-align:center;font-family:"Segoe UI",Verdana,sans-serif;color:#e65100;font-size:1.4em;margin:4px 0 14px}
+  .passage p{text-indent:1.5em;margin:0 0 14px}
+  mark.v{background:#fff59d;padding:0 3px;border-radius:4px;font-weight:bold}
+  .tipbox{background:#fff8e1;border-left:8px solid #ffb300}
+  .q{border-left:8px solid #ffcc80}
+  .q.right{border-left-color:#43a047;background:#f1f8e9}
+  .q.wrong{border-left-color:#e53935;background:#fff5f5}
+  .tag{display:inline-block;font-size:.7em;background:#ef6c00;color:#fff;border-radius:8px;padding:1px 8px;margin-left:6px;vertical-align:middle}
+  .opt{display:block;width:100%;text-align:left;font-size:.95em;background:#fafafa;border:2px solid #e0e0e0;border-radius:10px;padding:8px 14px;margin:8px 0;cursor:pointer;font-family:inherit}
+  .opt:hover{border-color:#ffb74d;background:#fff}
+  .opt.sel-right{background:#c8e6c9;border-color:#43a047}
+  .opt.sel-wrong{background:#ffcdd2;border-color:#e53935}
+  .fb{margin-top:6px;font-weight:bold}
+  .fb.good{color:#2e7d32} .fb.bad{color:#c62828}
+  .explain{color:#e65100;font-weight:normal}
+  select{font-size:.95em;padding:6px 8px;border-radius:8px;border:2px solid #ffb74d;max-width:100%;font-family:inherit}
+  .vrow{display:flex;flex-wrap:wrap;align-items:center;gap:10px;padding:8px 6px;border-bottom:1px dashed #eee}
+  .vrow .w{font-weight:bold;min-width:140px}
+  .vrow.right{background:#f1f8e9} .vrow.wrong{background:#fff5f5}
+  .mark{font-size:1.2em;min-width:30px}
+  button.main{font-size:1em;padding:10px 20px;border:none;border-radius:10px;cursor:pointer;font-weight:bold;background:#ef6c00;color:#fff;margin-top:10px}
+  button.main:hover{background:#e65100}
+  button.sec{font-size:.95em;padding:8px 16px;border:none;border-radius:10px;cursor:pointer;font-weight:bold;background:#ffe082;color:#5d4037}
+  textarea{width:100%;box-sizing:border-box;font-size:1em;font-family:inherit;padding:10px;border:2px solid #ffb74d;border-radius:10px;min-height:120px}
+  #model{display:none;background:#fff3e0;border-radius:10px;padding:10px 14px;margin-top:10px}
+  #scoreBox{position:sticky;bottom:0;background:#e65100;color:#fff;border-radius:16px 16px 0 0;padding:12px 20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-top:30px}
+  #scoreBox button{font-size:.95em;padding:8px 16px;border:none;border-radius:10px;cursor:pointer;font-weight:bold;background:#ffca28;color:#3e2723}
+  #final{display:none;text-align:center;border:4px solid #43a047;font-size:1.1em}
+</style>
+</head>
+<body>
+<div class="wrap">
+<a class="home" href="../../index.html">&larr; Back to all lessons</a>
+<h1>📖 Reading Week 58: Masters of the Mesozoic Skies: The Puzzle of the Pterosaurs</h1>
+
+<div class="box tipbox">
+  <strong>Before you read, Ace:</strong> Yesterday you figured out an author's purpose and tone. Today's skill is one that strong readers use without even noticing: <strong>asking questions while you read, and knowing where the answer lives</strong>. Some answers are sitting right in one sentence, some have to be pieced together, some need your own thinking, and some questions can't be answered by anyone yet! Reading teachers call these four kinds of <strong>Question-Answer Relationships</strong>:
+  <ul>
+    <li><strong>1. Right There:</strong> the answer is stated in <em>one place</em> in the text, often using the same words as the question. (Point to the sentence!)</li>
+    <li><strong>2. Think and Search:</strong> the answer is in the text, but in <em>more than one place</em>. You have to gather pieces from different paragraphs, a table, or both texts, and put them together.</li>
+    <li><strong>3. Author and Me:</strong> the answer is <em>not</em> written down. You combine clues from the text with what you already know to make an inference.</li>
+    <li><strong>4. On My Own:</strong> you can answer from your own knowledge or experience, even without the text. These questions help you connect the topic to your life.</li>
+    <li><strong>5. Still-open questions:</strong> in science writing, watch for signal phrases such as <em>no one knows, scientists still debate, may have, one idea is</em>. They tell you the question isn't settled yet, so the best answer is "Here's what scientists think so far, and why."</li>
+    <li><strong>Word detective:</strong> Greek <strong>pteron</strong> = "wing" + <strong>sauros</strong> = "lizard," so a <strong>pterosaur</strong> is a "wing lizard" (and a helicopter is a "spiral wing": <em>helix</em> + <em>pteron</em>!) · Greek <strong>daktylos</strong> = "finger," so <strong>pterodactyl</strong> = "wing finger" · Greek <strong>mesos</strong> = "middle" + <strong>zoion</strong> = "animal," so the <strong>Mesozoic</strong> is the "middle age of animals" · Latin <strong>quattuor</strong> = "four" + <strong>pes</strong> = "foot," so <strong>quadrupedal</strong> = "walking on four feet"</li>
+    <li><strong>Words in <mark class="v">yellow</mark></strong> are vocabulary words. Use the sentence around them (the <em>context</em>) to figure out what they mean.</li>
+  </ul>
+</div>
+
+<div class="box passage" id="passage">
+<h3>Text 1: Masters of the Mesozoic Skies: The Puzzle of the Pterosaurs</h3>
+<p>Picture yourself on the shore of a warm, shallow sea about 85 million years ago. Back then, a long ocean split North America in two, from the Arctic all the way to the Gulf of Mexico. A shadow sweeps across the water. You look up and see a creature with wings wider than a minivan is long, a long toothless beak and a bony crest pointing backward from its head. It barely flaps. It simply glides, rides the wind and then swoops down to snatch a fish. This is <em>Pteranodon</em>, and it is not a bird, not a bat and not a dinosaur. It is a <strong>pterosaur</strong>.</p>
+<p><strong>The first flyers with backbones.</strong> Pterosaurs were reptiles that lived from about 228 million years ago until 66 million years ago. They were close cousins of the dinosaurs, but they formed their own separate branch of the reptile family tree. Insects had already been flying for more than 100 million years, but pterosaurs were the first animals with backbones to evolve <em>powered flight</em>, which means flapping to climb and stay <mark class="v">aloft</mark> instead of only gliding downward. They took to the air more than 70 million years before the first birds appeared.</p>
+<p><strong>A wing built on one finger.</strong> A bird's wing is made of feathers attached to its arm. A bat's wing is skin stretched between several long fingers. A pterosaur did something completely different. Its wing was a <mark class="v">membrane</mark> of skin and muscle, stiffened by thin fibres, that stretched from the tip of one hugely elongated fourth finger back to the animal's legs. That single finger could be longer than the rest of the arm. The other three fingers stayed short, with small claws that were probably used for climbing and grabbing.</p>
+<p><strong>Built light, but tough.</strong> Many pterosaur bones were hollow, with walls sometimes only a few millimetres thick, and they were connected to air sacs linked to the lungs, much like a bird's. Thin-walled tubes are light, but they are also surprisingly <mark class="v">robust</mark>, which is why bike frames are built the same way. Many pterosaurs were also covered in short, hair-like fuzz called <em>pycnofibres</em>, which may have helped keep them warm.</p>
+<p style="text-indent:0"><strong>Table: A few pterosaurs, oldest to youngest</strong></p>
+<table style="border-collapse:collapse;margin:4px 0 14px;font-size:.85em;background:#fff;font-family:'Segoe UI',Verdana,sans-serif">
+<tr><th style="border:1px solid #bdbdbd;padding:4px 10px;background:#eceff1">Pterosaur</th><th style="border:1px solid #bdbdbd;padding:4px 10px;background:#eceff1">Lived about</th><th style="border:1px solid #bdbdbd;padding:4px 10px;background:#eceff1">Fossils found in</th><th style="border:1px solid #bdbdbd;padding:4px 10px;background:#eceff1">Wingspan</th><th style="border:1px solid #bdbdbd;padding:4px 10px;background:#eceff1">Probably ate</th></tr>
+<tr><td style="border:1px solid #bdbdbd;padding:4px 10px"><em>Dimorphodon</em></td><td style="border:1px solid #bdbdbd;padding:4px 10px">195 million years ago</td><td style="border:1px solid #bdbdbd;padding:4px 10px">England</td><td style="border:1px solid #bdbdbd;padding:4px 10px">about 1.4 m</td><td style="border:1px solid #bdbdbd;padding:4px 10px">insects and small animals</td></tr>
+<tr><td style="border:1px solid #bdbdbd;padding:4px 10px"><em>Rhamphorhynchus</em></td><td style="border:1px solid #bdbdbd;padding:4px 10px">150 million years ago</td><td style="border:1px solid #bdbdbd;padding:4px 10px">Germany</td><td style="border:1px solid #bdbdbd;padding:4px 10px">about 1.8 m</td><td style="border:1px solid #bdbdbd;padding:4px 10px">fish</td></tr>
+<tr><td style="border:1px solid #bdbdbd;padding:4px 10px"><em>Pterodaustro</em></td><td style="border:1px solid #bdbdbd;padding:4px 10px">105 million years ago</td><td style="border:1px solid #bdbdbd;padding:4px 10px">Argentina</td><td style="border:1px solid #bdbdbd;padding:4px 10px">about 2.5 m</td><td style="border:1px solid #bdbdbd;padding:4px 10px">tiny water animals, strained through about 1 000 bristle-like teeth</td></tr>
+<tr><td style="border:1px solid #bdbdbd;padding:4px 10px"><em>Pteranodon</em></td><td style="border:1px solid #bdbdbd;padding:4px 10px">85 million years ago</td><td style="border:1px solid #bdbdbd;padding:4px 10px">Kansas, U.S.A.</td><td style="border:1px solid #bdbdbd;padding:4px 10px">up to about 6.5 m</td><td style="border:1px solid #bdbdbd;padding:4px 10px">fish</td></tr>
+<tr><td style="border:1px solid #bdbdbd;padding:4px 10px"><em>Quetzalcoatlus</em></td><td style="border:1px solid #bdbdbd;padding:4px 10px">68 million years ago</td><td style="border:1px solid #bdbdbd;padding:4px 10px">Texas, U.S.A.</td><td style="border:1px solid #bdbdbd;padding:4px 10px">about 10 to 11 m</td><td style="border:1px solid #bdbdbd;padding:4px 10px">small animals caught on the ground</td></tr>
+</table>
+<p><strong>The take-off puzzle.</strong> How does an animal as tall as a giraffe get <em>airborne</em>? For a long time, many scientists thought giant pterosaurs must have jumped off cliffs or run into the wind like an albatross. Today, one of the most <mark class="v">plausible</mark> ideas is the <em>quad launch</em>. Pterosaurs walked on all four limbs, and their arms were far stronger than their legs. According to this idea, a pterosaur crouched, then pushed off powerfully with its arms, vaulting into the air like a pole-vaulter, and began flapping. Computer models and studies of bone strength support the idea, but scientists are still testing exactly how it worked for the very largest species.</p>
+<p><strong>Babies of the sky.</strong> In 2017, scientists in China described more than 200 eggs of a pterosaur called <em>Hamipterus</em>, found together at one site. The eggs had soft, leathery shells, more like many lizard eggs than hard bird eggs. Some researchers think pterosaur hatchlings could fly within days of hatching and looked after themselves. Others think the young needed care from their parents for a while. Whether the babies could fly so early is still debated, and there is no <mark class="v">consensus</mark> yet.</p>
+<p><strong>Why fossils are so rare.</strong> Pterosaur fossils are <mark class="v">scarce</mark> compared with dinosaur bones. Those light, hollow bones were easily crushed or scattered after an animal died. The best fossils formed when a body sank quickly into soft, fine mud at the bottom of a calm sea or lake, where it was buried before it could fall apart. Then, 66 million years ago, the same disaster that wiped out the non-bird dinosaurs ended the age of the pterosaurs. Why some birds survived it and every pterosaur did not is a question scientists are still trying to answer.</p>
+</div>
+
+<div class="box passage" id="passage2">
+<h3>Text 2: The Frozen Dragon of Alberta</h3>
+<p>In 1992, a fossil crew working in Dinosaur Provincial Park, in southern Alberta, dug up part of a skeleton of a very large pterosaur, including a big bone from its neck. Its rocks were about 77 million years old. Because the bones looked a lot like those of the giant <em>Quetzalcoatlus</em> from Texas, many people assumed it was the same kind of animal, or a close relative.</p>
+<p>Almost thirty years later, a team of scientists studied the Alberta bones carefully and compared them with those of other giant pterosaurs. They found small but important differences in the shape of the neck bones. In 2019, they announced that it was a new species, and they named it <em>Cryodrakon boreas</em>, which means "frozen dragon of the north wind." (Alberta was actually warm when it lived there. The name is a nod to Canada's chilly weather today!)</p>
+<p>How big was it? The scientists estimated that a large adult may have had a wingspan of about 10 m, but that estimate comes from comparing a few bones with those of its relatives, not from a complete skeleton. Like its cousins, <em>Cryodrakon</em> probably stalked across open land on all four limbs, picking up lizards, small mammals and even baby dinosaurs, a bit like a gigantic stork. Only a handful of its bones have been found, so palaeontologists are hoping the badlands of Alberta will give up more.</p>
+<p style="text-indent:0;font-size:.8em;color:#546e7a;text-align:right">About 1 000 words in two texts, including a table</p>
+</div>
+
+<h2>Part 1: Comprehension</h2>
+<p>Click the best answer. You'll find out right away if you're correct. Only your <strong>first click</strong> counts toward your score, but you can keep trying to find the right answer.</p>
+<div id="mc"></div>
+
+<h2>Part 2: Think Deeper (not scored)</h2>
+<div class="box">
+  <p><strong>Be the question-writer!</strong> Write <strong>four questions</strong> about today's texts, one of each kind: <strong>Right There</strong>, <strong>Think and Search</strong>, <strong>Author and Me</strong> and <strong>On My Own</strong>. Then write one <strong>still-open question</strong> that the texts say scientists can't fully answer yet, and explain which words in the text told you it was still open.</p>
+  <textarea id="openAns" placeholder="Right There: ...&#10;Think and Search: ...&#10;Author and Me: ...&#10;On My Own: ...&#10;Still-open question: ... The words that told me were ..."></textarea>
+  <p><button type="button" class="sec" id="showModel">Compare with a model answer</button></p>
+  <div id="model"><strong>Model answer:</strong><br><strong>Right There:</strong> In what year was <em>Cryodrakon</em> named? (2019, stated in one sentence of Text 2.)<br><strong>Think and Search:</strong> How did <em>Pteranodon</em> and <em>Pterodaustro</em> get their food in different ways? (The opening paragraph says <em>Pteranodon</em> swooped to snatch fish; the table says <em>Pterodaustro</em> strained tiny animals through bristle-like teeth.)<br><strong>Author and Me:</strong> Why would a pterosaur need such strong arms? (The text says they walked on all fours and may have launched with their arms; I know that pushing off the ground takes strong muscles, so strong arms helped them walk and take off.)<br><strong>On My Own:</strong> What large flying birds have I seen in BC, and how do they take off? (Bald eagles and great blue herons push off with their legs and flap hard.)<br><strong>Still-open question:</strong> Could baby pterosaurs fly right after hatching? The words "Some researchers think… Others think…" and "is still debated, and there is no consensus yet" told me scientists haven't agreed.</div>
+</div>
+
+<h2>Part 3: Vocabulary</h2>
+<div class="box">
+  <h3 style="margin-top:0">A. Match each word to its meaning</h3>
+  <p>Choose the meaning that fits how the word is used in the passage.</p>
+  <div id="vmatch"></div>
+  <h3>B. Fill in the blank</h3>
+  <p>Choose the vocabulary word that best completes each sentence.</p>
+  <div id="vfill"></div>
+  <button type="button" class="main" id="checkVocab">Check my vocabulary</button>
+  <div class="fb" id="vocabFb"></div>
+</div>
+
+<div class="box" id="final"></div>
+<div id="scoreBox">
+  <span id="scoreText"></span>
+  <button type="button" id="finishBtn">I'm done! Show my final score</button>
+</div>
+</div>
+
+<script>
+var MC = [
+ {q:"According to Text 1, what does the name <strong>pterosaur</strong> come from, and which part of the animal held up most of its wing?", tag:"Right There",
+  o:["\"Flying dragon\"; its feathers", "\"Wing lizard\"; one hugely elongated fourth finger", "\"Terrible lizard\"; several long fingers, like a bat", "\"Wing finger\"; its tail"],
+  a:1, e:"The Word detective box says <em>pteron</em> = wing + <em>sauros</em> = lizard, and Text 1 says the wing stretched \"from the tip of one hugely elongated fourth finger.\" A <strong>Right There</strong> answer can be found in one spot and pointed to."},
+ {q:"Pterosaurs were the first animals with backbones to evolve <strong>powered flight</strong>. What does <em>powered flight</em> mean in Text 1?", tag:"Right There",
+  o:["Flying with the help of strong winds only", "Flying faster than any bird", "Gliding off cliffs", "Flapping to climb and stay up, instead of only gliding downward"],
+  a:3, e:"Text 1 defines it right in the sentence: \"flapping to climb and stay aloft instead of only gliding downward.\" Writers often explain a new term right after it, so look nearby."},
+ {q:"Using the <strong>table</strong>, which pterosaur lived <strong>most recently</strong>, and how long before the pterosaurs died out did it live?", tag:"Think and Search",
+  o:["<em>Pteranodon</em>; about 19 million years before", "<em>Dimorphodon</em>; about 129 million years before", "<em>Quetzalcoatlus</em>; about 2 million years before", "<em>Cryodrakon</em>; about 11 million years before"],
+  a:2, e:"The table shows <em>Quetzalcoatlus</em> at 68 million years ago, the smallest (most recent) number. The text says pterosaurs died out 66 million years ago, and 68 − 66 = 2. You needed <strong>two places</strong> (the table and a paragraph) to answer, so it's a <strong>Think and Search</strong> question."},
+ {q:"Why are pterosaur fossils so <strong>rare</strong>? Choose the answer that gathers the evidence from <strong>more than one paragraph</strong>.", tag:"Think and Search",
+  o:["Their bones were light, hollow and thin-walled, so they were easily crushed or scattered, and good fossils needed a body to be buried quickly in fine mud.", "Pterosaurs lived only in Alberta.", "Scientists stopped looking for them in 1992.", "Pterosaurs were too small to leave fossils."],
+  a:0, e:"\"Built light, but tough\" tells you the bones were hollow with very thin walls; \"Why fossils are so rare\" explains they were easily crushed and needed quick burial in soft mud. Putting those pieces together is <strong>Think and Search</strong>."},
+ {q:"Text 1 says pycnofibres \"may have helped keep them warm.\" What can you <strong>infer</strong> from this, using what you already know about animals?", tag:"Author and Me",
+  o:["Pterosaurs lived only in very cold places.", "Pterosaurs were cold-blooded and needed the sun.", "Pycnofibres were used for flying.", "Pterosaurs probably made their own body heat, like birds and mammals, because fur or feathers help animals hold in heat they produce."],
+  a:3, e:"The text gives the clue (fuzz that kept them warm), and your own knowledge supplies the rest: animals with fur or feathers, like you and a robin, make their own heat and use a fuzzy layer to keep it in. That's an <strong>Author and Me</strong> inference."},
+ {q:"In Text 2, the Alberta bones were found in 1992, but <em>Cryodrakon</em> wasn't named until 2019. What is the <strong>best inference</strong> about why it took so long?", tag:"Author and Me",
+  o:["The fossils were lost for 27 years.", "Only a few bones were found and they looked a lot like <em>Quetzalcoatlus</em>, so it took careful comparing to prove the small differences were real.", "Scientists aren't interested in Canadian fossils.", "The rocks were too young to study."],
+  a:1, e:"Text 2 says the bones \"looked a lot like\" <em>Quetzalcoatlus</em>, that scientists \"compared them\" carefully, and that the differences were \"small but important.\" With only a handful of bones, being sure takes time. The answer isn't stated, so you combine clues with your own thinking."},
+ {q:"Ace asks: <em>\"How exactly did a 10-metre pterosaur get into the air?\"</em> What is the <strong>best</strong> way to answer using Text 1?", tag:"Still-open question",
+  o:["\"It jumped off cliffs. The text proves it.\"", "\"The text doesn't mention take-off at all.\"", "\"Many scientists think it used a quad launch, vaulting off with its strong arms, and models support this, but the text says scientists are still testing exactly how it worked for the largest species.\"", "\"No one has any ideas about this.\""],
+  a:2, e:"For a <strong>still-open question</strong>, give the leading idea, the evidence for it, and the fact that it isn't fully settled. Signal words: \"one of the most plausible ideas,\" \"According to this idea,\" \"still testing.\" The cliff idea is an <em>older</em> one, not proven."},
+ {q:"Which question is an <strong>On My Own</strong> question (you could answer it without the texts)?", tag:"Identify the question type",
+  o:["What did <em>Pterodaustro</em> probably eat?", "What does <em>Cryodrakon boreas</em> mean?", "Have you ever watched a gull or an eagle glide, and what did its wings do?", "How many eggs of <em>Hamipterus</em> were found?"],
+  a:2, e:"Only C depends on your own experience. A and D are answered in the texts, and B is stated in Text 2. <strong>On My Own</strong> questions help you connect a topic to your life before or after you read."},
+ {q:"Which sentence from the texts is the clearest signal that scientists have <strong>not</strong> agreed on an answer?", tag:"Signal phrases",
+  o:["\"Pterosaurs were reptiles that lived from about 228 million years ago until 66 million years ago.\"", "\"Whether the babies could fly so early is still debated, and there is no consensus yet.\"", "\"In 1992, a fossil crew… dug up part of a skeleton.\"", "\"The eggs had soft, leathery shells.\""],
+  a:1, e:"\"Still debated\" and \"no consensus\" are classic signals of a <strong>still-open question</strong>. The other sentences report facts that are well supported by fossils."},
+ {q:"Text 2 says the 10 m wingspan of <em>Cryodrakon</em> is an <strong>estimate</strong>. Why is it important that the author points this out?", tag:"Author and Me",
+  o:["It tells readers the number is a careful scientific guess based on a few bones and could change if a more complete skeleton is found.", "It means the scientists made the number up.", "It proves <em>Cryodrakon</em> was the biggest animal ever.", "It shows the author doesn't trust scientists."],
+  a:0, e:"The author explains the estimate \"comes from comparing a few bones with those of its relatives, not from a complete skeleton.\" An estimate is evidence-based, but new fossils could change it. Good readers notice <em>how sure</em> a fact is."}
+];
+
+var VOCAB = ["aloft", "membrane", "robust", "plausible", "consensus", "scarce"];
+var DEFS = {
+ aloft:"up in the air; flying or floating high above the ground",
+ membrane:"a thin, flexible layer of skin or tissue",
+ robust:"strong and sturdy; not easily broken or damaged",
+ plausible:"seeming reasonable and possibly true",
+ consensus:"general agreement among most members of a group",
+ scarce:"hard to find because there is very little of it"
+};
+var FILL = [
+ {s:"Fresh water was so ____ on the tiny island that the campers saved every drop.", a:"scarce"},
+ {s:"After a long discussion, the class reached a ____ and chose the museum for their field trip.", a:"consensus"},
+ {s:"Ace's excuse sounded ____ until Dad noticed the cookie crumbs on his shirt.", a:"plausible"},
+ {s:"The kite stayed ____ for an hour, riding the strong breeze over the beach.", a:"aloft"}
+];
+var FILL_OPTIONS = ["aloft", "membrane", "robust", "plausible", "consensus", "scarce"];
+
+var PRAISE=["Nice work, Ace!","Correct! You know exactly where that answer lives!","Yes! You're soaring, Ace! 🪽","Excellent thinking, Palaeontologist Ace!","Sharp eyes, like a Pteranodon hunting fish! 🐟"];
+function pick(a){return a[Math.floor(Math.random()*a.length)];}
+function shuffled(arr,seed){var a=arr.slice(),s=seed;for(var i=a.length-1;i>0;i--){s=(s*9301+49297)%233280;var j=Math.floor(s/233280*(i+1));var t=a[i];a[i]=a[j];a[j]=t;}return a;}
+
+var mcState=MC.map(function(){return {answered:false,firstRight:false,done:false};});
+var vocabScore=0, vocabChecked=false;
+var VOCAB_TOTAL=VOCAB.length+FILL.length;
+
+function buildMC(){
+  var box=document.getElementById("mc");
+  MC.forEach(function(item,i){
+    var d=document.createElement("div"); d.className="box q"; d.id="mc"+i;
+    var html="<div><strong>"+(i+1)+".</strong> "+item.q+(item.tag?'<span class="tag">'+item.tag+'</span>':"")+"</div>";
+    item.o.forEach(function(opt,j){ html+='<button type="button" class="opt" data-i="'+i+'" data-j="'+j+'">'+String.fromCharCode(65+j)+". "+opt+"</button>"; });
+    html+='<div class="fb" id="mcfb'+i+'"></div>';
+    d.innerHTML=html; box.appendChild(d);
+  });
+  box.addEventListener("click",function(e){
+    var b=e.target.closest?e.target.closest(".opt"):e.target; if(!b||!b.classList.contains("opt"))return;
+    answerMC(+b.getAttribute("data-i"),+b.getAttribute("data-j"),b);
+  });
+}
+function answerMC(i,j,btn){
+  var st=mcState[i], item=MC[i], fb=document.getElementById("mcfb"+i), card=document.getElementById("mc"+i);
+  if(st.done) return;
+  var right=(j===item.a);
+  if(!st.answered){ st.answered=true; st.firstRight=right; }
+  if(right){
+    st.done=true; btn.classList.add("sel-right"); card.className="box q right";
+    fb.className="fb good"; fb.innerHTML="✅ "+pick(PRAISE)+' <span class="explain">'+item.e+"</span>";
+  } else {
+    btn.classList.add("sel-wrong"); card.className="box q wrong";
+    fb.className="fb bad"; fb.innerHTML="❌ Not quite, Ace. Look back at the passage and try another answer.";
+  }
+  updateScore();
+}
+function buildVocab(){
+  var m=document.getElementById("vmatch");
+  var defOrder=shuffled(VOCAB,44);
+  VOCAB.forEach(function(w,i){
+    var row=document.createElement("div"); row.className="vrow"; row.id="vm"+i;
+    var sel='<select id="vsel'+i+'" aria-label="Meaning of '+w+'"><option value="">- choose a meaning -</option>';
+    defOrder.forEach(function(k){ sel+='<option value="'+k+'">'+DEFS[k]+'</option>'; });
+    sel+="</select>";
+    row.innerHTML='<span class="mark" id="vmk'+i+'"></span><span class="w">'+w+'</span>'+sel;
+    m.appendChild(row);
+  });
+  var f=document.getElementById("vfill");
+  FILL.forEach(function(item,i){
+    var row=document.createElement("div"); row.className="vrow"; row.id="vf"+i;
+    var sel='<select id="fsel'+i+'" aria-label="Blank '+(i+1)+'"><option value="">- choose -</option>';
+    FILL_OPTIONS.forEach(function(w){ sel+='<option value="'+w+'">'+w+'</option>'; });
+    sel+="</select>";
+    var parts=item.s.split("____");
+    row.innerHTML='<span class="mark" id="vfk'+i+'"></span><span>'+(i+1)+'. '+parts[0]+sel+parts[1]+'</span>';
+    f.appendChild(row);
+  });
+}
+function checkVocab(){
+  var score=0, blank=0;
+  VOCAB.forEach(function(w,i){
+    var v=document.getElementById("vsel"+i).value, ok=(v===w);
+    if(!v) blank++;
+    if(ok) score++;
+    document.getElementById("vm"+i).className="vrow "+(ok?"right":"wrong");
+    document.getElementById("vmk"+i).textContent=ok?"✅":"❌";
+  });
+  FILL.forEach(function(item,i){
+    var v=document.getElementById("fsel"+i).value, ok=(v===item.a);
+    if(!v) blank++;
+    if(ok) score++;
+    document.getElementById("vf"+i).className="vrow "+(ok?"right":"wrong");
+    document.getElementById("vfk"+i).textContent=ok?"✅":"❌";
+  });
+  vocabScore=score; vocabChecked=true;
+  var fb=document.getElementById("vocabFb");
+  if(score===VOCAB_TOTAL){ fb.className="fb good"; fb.textContent="🌟 "+score+" / "+VOCAB_TOTAL+". Perfect! Your vocabulary is flying high, Ace! 🪽"; }
+  else { fb.className="fb bad"; fb.textContent=score+" / "+VOCAB_TOTAL+" correct"+(blank?" ("+blank+" left blank)":"")+". Fix the ❌ ones and check again. Try finding the word in the passage for clues!"; }
+  updateScore();
+}
+function scores(){
+  var mc=0,answered=0; mcState.forEach(function(s){ if(s.firstRight) mc++; if(s.answered) answered++; });
+  return {mc:mc,answered:answered,vocab:vocabScore};
+}
+function updateScore(){
+  var s=scores();
+  document.getElementById("scoreText").textContent="Comprehension: "+s.mc+" / "+MC.length+" · Vocabulary: "+(vocabChecked?s.vocab:"-")+" / "+VOCAB_TOTAL;
+}
+function finish(){
+  if(!vocabChecked) checkVocab();
+  var s=scores(), total=MC.length+VOCAB_TOTAL, got=s.mc+s.vocab, pct=Math.round(100*got/total);
+  var msg = pct===100 ? "🏆 A perfect score! Outstanding reading, Ace!" :
+            pct>=80 ? "🌟 Fantastic work, Ace! You read like a Grade 7 student!" :
+            pct>=60 ? "💪 Solid effort, Ace! Reread the paragraphs for the questions you missed." :
+                      "🌱 This was a challenging passage. Read it once more, slowly, and try again. You've got this, Ace!";
+  var f=document.getElementById("final"); f.style.display="block";
+  f.innerHTML="<h2 style='border:none;margin-top:0'>Final Score: "+got+" / "+total+" ("+pct+"%)</h2>"+
+    "<p>Comprehension (first tries): "+s.mc+" / "+MC.length+(s.answered<MC.length?" (you skipped "+(MC.length-s.answered)+")":"")+"<br>Vocabulary: "+s.vocab+" / "+VOCAB_TOTAL+"</p><p>"+msg+"</p>"+
+    "<p style='font-size:.85em;color:#546e7a'>Finished on "+new Date().toLocaleString("en-CA")+"</p>";
+  f.scrollIntoView({behavior:"smooth"});
+}
+buildMC(); buildVocab(); updateScore();
+document.getElementById("checkVocab").addEventListener("click",checkVocab);
+document.getElementById("finishBtn").addEventListener("click",finish);
+document.getElementById("showModel").addEventListener("click",function(){document.getElementById("model").style.display="block";});
+</script>
+<script src="../../assets/autosave.js"></script>
+</body>
+</html>

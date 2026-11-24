@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Math (Nov. 24): Wings of the Mesozoic! Pterosaur Flight Lab</title>
+<style>
+  body{font-family:"Segoe UI",Verdana,Arial,sans-serif;font-size:20px;line-height:1.6;margin:0;background:#f5f0eb;color:#2c2416}
+  .wrap{max-width:880px;margin:0 auto;padding:20px 18px 80px}
+  a.home{font-size:.9em;color:#bf360c}
+  h1{color:#e65100;font-size:2em;margin:10px 0}
+  h2{color:#ef6c00;margin-top:36px;border-bottom:3px solid #ffcc80;padding-bottom:4px}
+  .box{background:#fff;border-radius:16px;padding:18px 22px;margin:16px 0;box-shadow:0 3px 10px rgba(0,0,0,.07)}
+  .example{border-left:8px solid #ef6c00}
+  .example h3{margin:0 0 6px;color:#e65100}
+  .step{margin:4px 0 4px 10px}
+  code,.mono{font-family:Consolas,"Courier New",monospace;background:#fff3e0;padding:1px 6px;border-radius:5px}
+  .q{border-left:8px solid #90a4ae}
+  .q.right{border-left-color:#43a047;background:#f1f8e9}
+  .q.wrong{border-left-color:#e53935;background:#fff5f5}
+  .qnum{font-weight:bold;color:#e65100}
+  .row{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:10px}
+  input[type=text]{font-size:1.05em;padding:8px 12px;border:2px solid #ffcc80;border-radius:10px;width:190px}
+  input[type=text]:focus{outline:none;border-color:#ef6c00;box-shadow:0 0 0 3px #ffe0b2}
+  button{font-size:.95em;padding:8px 16px;border:none;border-radius:10px;cursor:pointer;font-weight:bold}
+  .check{background:#ef6c00;color:#fff} .check:hover{background:#e65100}
+  .hint{background:#ffe082;color:#5d4037} .hint:hover{background:#ffd54f}
+  .sol{background:#ce93d8;color:#311b92}
+  .unit{color:#546e7a}
+  .fb{margin-top:8px;font-weight:bold;min-height:1em}
+  .fb.good{color:#2e7d32} .fb.bad{color:#c62828}
+  .hints{margin-top:8px;color:#e65100;background:#fff3e0;border-radius:10px;padding:0 12px}
+  .hints p{margin:6px 0;padding:6px 0}
+  .solution{margin-top:8px;background:#f3e5f5;border-radius:10px;padding:8px 12px;display:none}
+  #scoreBox{position:sticky;bottom:0;background:#e65100;color:#fff;border-radius:16px 16px 0 0;padding:12px 20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-top:30px}
+  #scoreBox button{background:#ffca28;color:#3e2723}
+  #final{display:none;font-size:1.15em;text-align:center;border:4px solid #43a047}
+  .tipbox{background:#fff8e1;border-left:8px solid #ffb300}
+</style>
+</head>
+<body>
+<div class="wrap">
+<a class="home" href="../../index.html">&larr; Back to all lessons</a>
+<h1>🦴 Math Week 58: Wings of the Mesozoic! Pterosaur Flight Lab</h1>
+<p>Ace, long before the first bird flapped its wings, the skies belonged to <strong>pterosaurs</strong> (say it TERR-oh-sore; the <em>p</em> is silent!). They were reptiles, close cousins of the dinosaurs but <em>not</em> dinosaurs, and they were the first animals with backbones to truly fly. Some were as small as a sparrow; the biggest had a wingspan wider than a small airplane. Today you're an engineer in a pterosaur flight lab. You'll use <strong>dividing large numbers, timelines in millions of years, scale and ratios, fractions of a length, unit conversions (m, cm, mm, m/s, km/h), area of a triangle, rates such as kilograms per square metre, percent, scale models, the mean, probability of two events and two-step equations</strong>.</p>
+
+<h2>Part 1: Learn the Moves</h2>
+
+<div class="box tipbox">
+  <strong>The 4-Step Problem Solver (a flight engineer's checklist):</strong>
+  <ol>
+    <li><strong>Read</strong>: What is the question actually asking? Underline the numbers and units (mm, cm, m, km, m², kg, m/s, km/h, millions of years).</li>
+    <li><strong>Plan</strong>: Do the units match? Change metres to centimetres, or millimetres to centimetres, <em>before</em> you compare or divide.</li>
+    <li><strong>Solve</strong>: Do one step at a time and write each step down.</li>
+    <li><strong>Check</strong>: Is my answer reasonable? A pterosaur's wing bone isn't 40 m long, and nothing in the Mesozoic flew at 5 000 km/h!</li>
+  </ol>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 1: Dividing big numbers by cancelling zeros</h3>
+  <p class="step">How many times bigger is 8 000 000 than 400 000? Cross off the same number of zeros from each: 8 000 000 ÷ 400 000 = 80 ÷ 4 = <strong>20</strong>.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 2: Timelines in millions of years</h3>
+  <p class="step">"Millions of years ago" counts <em>back</em> from today, so the bigger number is older. From 200 million years ago to 150 million years ago is 200 − 150 = <strong>50 million years</strong>. On a timeline where 1 cm = 5 million years, that's 50 ÷ 5 = <strong>10 cm</strong>.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 3: How many times longer? (ratios)</h3>
+  <p class="step">To compare two lengths, divide: a 6 m rope is 6 ÷ 1.5 = <strong>4 times</strong> as long as a 1.5 m rope. Both lengths must be in the same unit first!</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 4: A fraction of a length</h3>
+  <p class="step">2/5 of 4.5 m: find 1/5 first (4.5 ÷ 5 = 0.9 m), then double it: 0.9 × 2 = <strong>1.8 m</strong> = 180 cm.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 5: Millimetres, centimetres and metres</h3>
+  <p class="step">1 cm = 10 mm and 1 m = 100 cm. To compare 5 cm with 2.5 mm, change 5 cm to 50 mm: 50 ÷ 2.5 = <strong>20 times</strong>.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 6: Area of a triangle</h3>
+  <p class="step">Area = base × height ÷ 2. A triangle with a base of 2 m and a height of 0.6 m has an area of 2 × 0.6 ÷ 2 = <strong>0.6 m²</strong>.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 7: A rate: kilograms per square metre</h3>
+  <p class="step">Engineers divide mass by wing area to get <em>wing loading</em>. A glider of 90 kg with 15 m² of wing has 90 ÷ 15 = <strong>6 kg/m²</strong>. Lower wing loading usually means slower, easier gliding.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 8: Metres per second to kilometres per hour</h3>
+  <p class="step">1 hour = 3 600 s, and 1 km = 1 000 m. So 1 m/s = 3 600 m per hour = 3.6 km/h. To convert, multiply by 3.6: 10 m/s × 3.6 = <strong>36 km/h</strong>.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 9: Distance = speed × time</h3>
+  <p class="step">At 5 m/s for 2 hours: 2 h = 7 200 s, and 5 × 7 200 = 36 000 m = <strong>36 km</strong>.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 10: Percent of a total</h3>
+  <p class="step">If 9 of 60 fossils are teeth, that's 9 ÷ 60 = 0.15 = <strong>15%</strong>.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 11: Scale models</h3>
+  <p class="step">On a 1 : 10 model, every real length is divided by 10. A real 4 m wing becomes 4 ÷ 10 = 0.4 m = <strong>40 cm</strong>.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 12: The mean (average)</h3>
+  <p class="step">Add all the values, then divide by how many there are. The mean of 2, 3 and 7 is (2 + 3 + 7) ÷ 3 = 12 ÷ 3 = <strong>4</strong>.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 13: Probability of two events</h3>
+  <p class="step">If you pick a marble, put it back, then pick again, the two picks don't affect each other, so multiply. With 2 red out of 10: 2/10 × 2/10 = <strong>4/100</strong> (which simplifies to 1/25).</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 14: Two-step equations</h3>
+  <p class="step">"3 more than 6 times a number is 21" means 6n + 3 = 21. Undo in reverse order: 21 − 3 = 18, then 18 ÷ 6 = <strong>3</strong>.</p>
+</div>
+
+<h2>Part 2: The Challenge (15 problems)</h2>
+<p>Type your answer and press <strong>Check</strong> (or Enter). Negative numbers like <span class="mono">-35</span>, fractions like <span class="mono">3/4</span>, mixed numbers like <span class="mono">1 3/4</span>, or decimals like <span class="mono">1.75</span> are fine. Don't type the units or % signs, and you may use spaces or commas in big numbers (1 000 000). Stuck? Press <strong>Hint</strong>. After 2 tries, you can see a full solution.</p>
+
+<div id="questions"></div>
+<div class="box" id="final"></div>
+<div id="scoreBox">
+  <span id="scoreText">Score: 0 / 15 correct</span>
+  <button id="finishBtn" type="button">I'm done! Show my final score</button>
+</div>
+</div>
+
+<script>
+var NAME = "Ace";
+var TABLE = '';
+var QUESTIONS = [
+ {t:"The last pterosaurs died out about <strong>66 000 000</strong> years ago. Our own species, <em>Homo sapiens</em>, appeared only about <strong>300 000</strong> years ago. How many times longer ago did the pterosaurs disappear than humans appear?", a:"220", u:"times",
+  h:["Divide: 66 000 000 ÷ 300 000.","Cross off five zeros from each number: 660 ÷ 3."],
+  s:"66 000 000 ÷ 300 000 = 660 ÷ 3 = 220. Pterosaurs vanished 220 times longer ago than our species appeared!"},
+ {t:"Pterosaurs first appeared about <strong>228 million years ago</strong> and died out <strong>66 million years ago</strong>. On a classroom timeline where <strong>1 cm = 2 million years</strong>, how long would the pterosaur bar be?", a:"81", u:"cm",
+  h:["First find how long pterosaurs lived: 228 − 66.","162 million years ÷ 2 million years per cm."],
+  s:"228 − 66 = 162 million years. 162 ÷ 2 = 81 cm. That's a long time to rule the skies!"},
+ {t:"<em>Quetzalcoatlus</em>, one of the largest flying animals ever, had a wingspan of about <strong>10.5 m</strong>. If Ace's arm span (fingertip to fingertip) is <strong>1.4 m</strong>, how many times wider was <em>Quetzalcoatlus</em>?", a:"7.5", u:"times",
+  h:["Divide the bigger length by the smaller one: 10.5 ÷ 1.4.","Multiply both by 10 to make it easier: 105 ÷ 14."],
+  s:"10.5 ÷ 1.4 = 105 ÷ 14 = 7.5. You'd need seven and a half Aces, arms out, to stretch from wingtip to wingtip!"},
+ {t:"A pterosaur's wing was held up mainly by one hugely <strong>elongated fourth finger</strong>. Suppose one wing is <strong>3.5 m</strong> long and the fourth finger makes up <strong>3/5</strong> of that length. How long is the finger, in <strong>centimetres</strong>?", a:"210", u:"cm",
+  h:["1/5 of 3.5 m is 3.5 ÷ 5 = 0.7 m. Now find 3/5.","0.7 × 3 = 2.1 m. Change to centimetres (× 100)."],
+  s:"3.5 ÷ 5 = 0.7 m, and 0.7 × 3 = 2.1 m = 210 cm. That's one finger longer than a tall adult is tall!"},
+ {t:"Big pterosaurs had hollow wing bones with very thin walls. Suppose a fossil wing bone is <strong>8 cm</strong> across, but its wall is only <strong>2 mm</strong> thick. How many times bigger is the width of the bone than the thickness of its wall?", a:"40", u:"times",
+  h:["Change both to the same unit first: 8 cm = 80 mm.","80 ÷ 2 = ?"],
+  s:"8 cm = 80 mm, and 80 ÷ 2 = 40. Thin-walled tubes are light but surprisingly strong, like the frame of a racing bike."},
+ {t:"A model of a small pterosaur's wing is shaped roughly like a triangle with a base of <strong>3 m</strong> and a height of <strong>0.8 m</strong>. What is the total area of <strong>both</strong> wings, in square metres?", a:"2.4", u:"m²",
+  h:["Area of one triangle = base × height ÷ 2 = 3 × 0.8 ÷ 2.","One wing is 1.2 m². How many wings are there?"],
+  s:"3 × 0.8 ÷ 2 = 1.2 m² for one wing, so both wings = 1.2 × 2 = 2.4 m²."},
+ {t:"Scientists estimate that a large <em>Pteranodon</em> might have had a mass of about <strong>36 kg</strong> and a total wing area of about <strong>4.5 m²</strong>. What was its <strong>wing loading</strong> (mass ÷ wing area), in kilograms per square metre?", a:"8", u:"kg/m²",
+  h:["Wing loading = mass ÷ wing area = 36 ÷ 4.5.","Double both numbers to get rid of the decimal: 72 ÷ 9."],
+  s:"36 ÷ 4.5 = 72 ÷ 9 = 8 kg/m². That low number means Pteranodon was built for soaring and gliding over the sea."},
+ {t:"Some scientists think a giant pterosaur could cruise at about <strong>20 m/s</strong>. How fast is that in <strong>kilometres per hour</strong>?", a:"72", u:"km/h",
+  h:["1 m/s = 3.6 km/h.","20 × 3.6 = ?"],
+  s:"20 × 3.6 = 72 km/h, about the speed of a car on a country highway."},
+ {t:"Suppose a pterosaur glides on rising warm air at <strong>16 m/s</strong> for <strong>3 hours</strong> without stopping. How many <strong>kilometres</strong> does it travel?", a:"172.8", u:"km",
+  h:["3 hours = 3 × 3 600 = 10 800 seconds.","16 × 10 800 = 172 800 m. Change to kilometres (÷ 1 000)."],
+  s:"3 h = 10 800 s. 16 × 10 800 = 172 800 m = 172.8 km, roughly the distance from Vancouver to Hope and back!"},
+ {t:"A museum has <strong>160</strong> pterosaur fossils in its storage drawers. <strong>24</strong> of them are skulls. What <strong>percent</strong> of the fossils are skulls?", a:"15", u:"%",
+  h:["Percent = part ÷ total × 100 = 24 ÷ 160 × 100.","24 ÷ 160 = 3 ÷ 20 = 0.15."],
+  s:"24 ÷ 160 = 0.15 = 15%. Pterosaur skulls are rare because their thin bones were easily crushed."},
+ {t:"A museum hangs a <strong>1 : 8</strong> scale model of a pterosaur with a real wingspan of <strong>10.4 m</strong>. What is the model's wingspan, in <strong>centimetres</strong>?", a:"130", u:"cm",
+  h:["On a 1 : 8 model, divide every real length by 8: 10.4 ÷ 8.","1.3 m. Now change metres to centimetres."],
+  s:"10.4 ÷ 8 = 1.3 m = 130 cm."},
+ {t:"Here are approximate wingspans of five pterosaurs: <em>Pterodactylus</em> <strong>1.0 m</strong>, <em>Rhamphorhynchus</em> <strong>1.8 m</strong>, <em>Dimorphodon</em> <strong>1.4 m</strong>, <em>Pteranodon</em> <strong>6.5 m</strong>, and Alberta's <em>Cryodrakon</em> <strong>10 m</strong>. What is the <strong>mean</strong> wingspan, in metres?", a:"4.14", u:"m",
+  h:["Add the five wingspans: 1.0 + 1.8 + 1.4 + 6.5 + 10.","20.7 ÷ 5 = ?"],
+  s:"1.0 + 1.8 + 1.4 + 6.5 + 10 = 20.7 m. 20.7 ÷ 5 = 4.14 m. Notice that only two of the five are bigger than the mean: the two giants pull it up!"},
+ {t:"<em>Pterodaustro</em> had about <strong>1 000</strong> thin, bristle-like teeth in its lower jaw, which it used to strain tiny animals from the water, like a flamingo. If each bristle was about <strong>3 cm</strong> long and you lined them all up end to end, how many <strong>metres</strong> long would the line be?", a:"30", u:"m",
+  h:["1 000 × 3 cm = 3 000 cm.","100 cm = 1 m, so divide by 100."],
+  s:"1 000 × 3 = 3 000 cm = 30 m, longer than a school bus is long, twice over!"},
+ {t:"A fossil bag holds <strong>20</strong> fragments: <strong>3</strong> pterosaur bones, <strong>12</strong> fish bones and <strong>5</strong> plant pieces. You pick one fragment at random, <strong>put it back</strong>, then pick again. What is the probability that <strong>both</strong> picks are pterosaur bones? Type a fraction.", a:"9/400", u:"",
+  h:["The chance of one pterosaur bone is 3/20.","You put it back, so the picks don't affect each other: 3/20 × 3/20."],
+  s:"3/20 × 3/20 = 9/400. That's only about 2 times in every 100 tries, which shows how rare pterosaur finds are!"},
+ {t:"Suppose an adult pterosaur's wingspan of <strong>4.2 m</strong> is <strong>0.2 m more than 8 times</strong> the wingspan of a hatchling of the same species. What was the hatchling's wingspan, in metres?", a:"0.5", u:"m",
+  h:["Write an equation: 8n + 0.2 = 4.2.","Undo in reverse order: subtract 0.2, then divide by 8."],
+  s:"8n + 0.2 = 4.2. 4.2 − 0.2 = 4. 4 ÷ 8 = 0.5 m. Check: 8 × 0.5 + 0.2 = 4.2. ✓"}
+];
+
+var PRAISE = ["Nice work, Ace!","Correct! You're soaring! 🪽","Yes! Smooth landing! ✨","Excellent, Ace. That was a tough one!","Right on target! 🎯","Brilliant thinking, Ace!","Wingtip to wingtip, perfect! 🦴"];
+var ENCOURAGE = ["Not quite. Check your steps and try again!","Close call. Try again, Ace! Maybe use a hint?","Hmm, not yet. Re-read the question carefully.","Keep going, Ace. Mistakes help your brain grow!"];
+
+function parseAnswer(str){
+  if(str===undefined||str===null) return NaN;
+  var s=String(str).trim().toLowerCase();
+  s=s.replace(/[\u2212\u2013]/g,"-");
+  s=s.replace(/(\d),(?=\d{3}(\D|$))/g,"$1");
+  s=s.replace(/[^0-9.\/\- ]/g," ").replace(/\s+/g," ").trim();
+  s=s.replace(/\s*\/\s*/g,"/");
+  var m;
+  if((m=s.match(/^(-?\d+) (\d+)\/(\d+)$/))){ var w=parseFloat(m[1]),n=parseFloat(m[2]),d=parseFloat(m[3]); if(d===0)return NaN; return w<0? w-n/d : w+n/d; }
+  if((m=s.match(/^(-?\d+(?:\.\d+)?)\/(\d+(?:\.\d+)?)$/))){ var d2=parseFloat(m[2]); if(d2===0)return NaN; return parseFloat(m[1])/d2; }
+  s=s.replace(/ /g,"");
+  if(/^-?(\d+\.?\d*|\.\d+)$/.test(s)) return parseFloat(s);
+  return NaN;
+}
+function isCorrect(input,key){
+  var a=parseAnswer(input), k=parseAnswer(key);
+  if(isNaN(a)) return false;
+  var isInt=Math.abs(k-Math.round(k))<1e-12;
+  var tol=isInt?1e-9:0.005;
+  return Math.abs(a-k)<=tol;
+}
+
+function isRomanCorrect(input,key){ return String(input).replace(/\s+/g,"").toUpperCase()===key; }
+var state=[];
+function render(){
+  var box=document.getElementById("questions");
+  QUESTIONS.forEach(function(q,i){
+    state.push({correct:false,tries:0,hints:0});
+    var d=document.createElement("div");
+    d.className="box q"; d.id="q"+i;
+    d.innerHTML='<div><span class="qnum">'+(i+1)+'.</span> '+q.t+'</div>'+
+      '<div class="row"><input type="text"'+(q.r?' placeholder="e.g. MMXXVI"':'')+' id="in'+i+'" aria-label="Answer to question '+(i+1)+'" autocomplete="off"> <span class="unit">'+q.u+'</span>'+
+      '<button type="button" class="check" data-i="'+i+'">Check</button>'+
+      '<button type="button" class="hint" data-i="'+i+'">Hint 💡</button>'+
+      '<button type="button" class="sol" data-i="'+i+'" style="display:none">Show solution</button></div>'+
+      '<div class="fb" id="fb'+i+'"></div><div class="hints" id="hints'+i+'"></div>'+
+      '<div class="solution" id="sol'+i+'"><strong>Solution:</strong> '+q.s+'</div>';
+    box.appendChild(d);
+  });
+  box.addEventListener("click",function(e){
+    var b=e.target; if(b.tagName!=="BUTTON")return;
+    var i=+b.getAttribute("data-i");
+    if(b.className==="check") check(i);
+    else if(b.className==="hint") hint(i);
+    else if(b.className==="sol") document.getElementById("sol"+i).style.display="block";
+  });
+  box.addEventListener("keydown",function(e){
+    if(e.key==="Enter"&&e.target.tagName==="INPUT"){ check(+e.target.id.slice(2)); }
+  });
+}
+function pick(arr){return arr[Math.floor(Math.random()*arr.length)];}
+function check(i){
+  var val=document.getElementById("in"+i).value;
+  var fb=document.getElementById("fb"+i), card=document.getElementById("q"+i);
+  if(val.trim()===""){fb.className="fb bad";fb.textContent="Type an answer first, Ace!";return;}
+  var isR=!!QUESTIONS[i].r;
+  if(isR&&!/^[ivxlcdm\s]+$/i.test(val)){fb.className="fb bad";fb.textContent="Use only Roman numeral letters: I, V, X, L, C, D, M.";return;}
+  if(!isR&&isNaN(parseAnswer(val))){fb.className="fb bad";fb.textContent="I can't read that as a number. Try something like 42, 3.5, 3/4 or 1 3/4.";return;}
+  state[i].tries++;
+  if(isR?isRomanCorrect(val,QUESTIONS[i].a):isCorrect(val,QUESTIONS[i].a)){
+    state[i].correct=true; card.className="box q right"; fb.className="fb good";
+    fb.textContent="✅ "+pick(PRAISE)+(state[i].tries===1?" (first try!)":"");
+  } else {
+    state[i].correct=false; card.className="box q wrong"; fb.className="fb bad";
+    fb.textContent="❌ "+pick(ENCOURAGE);
+    if(state[i].tries>=2) card.querySelector(".sol").style.display="inline-block";
+  }
+  updateScore();
+}
+function hint(i){
+  var q=QUESTIONS[i], s=state[i], hb=document.getElementById("hints"+i);
+  if(s.hints<q.h.length){
+    var p=document.createElement("p"); p.textContent="💡 Hint "+(s.hints+1)+": "+q.h[s.hints]; hb.appendChild(p); s.hints++;
+  }
+  if(s.hints>=q.h.length) document.querySelector("#q"+i+" .hint").disabled=true;
+  updateScore();
+}
+function counts(){
+  var c=0,first=0,h=0;
+  state.forEach(function(s){ if(s.correct){c++; if(s.tries===1)first++;} h+=s.hints; });
+  return {correct:c,first:first,hints:h};
+}
+function updateScore(){
+  var k=counts();
+  document.getElementById("scoreText").textContent="Score: "+k.correct+" / "+QUESTIONS.length+" correct · hints used: "+k.hints;
+}
+function finish(){
+  var k=counts(), n=QUESTIONS.length, pct=Math.round(100*k.correct/n);
+  var msg;
+  if(pct===100) msg="🏆 PERFECT SCORE! Incredible work, Ace. You'd be chief flight engineer of the Mesozoic skies!";
+  else if(pct>=85) msg="🌟 Outstanding, Ace! That's a Grade 6–7 level performance!";
+  else if(pct>=65) msg="💪 Great effort, Ace! Review the ones you missed and try them again.";
+  else if(pct>=40) msg="👍 Good start, Ace! These problems are tough. Use the hints and solutions to learn the tricks, then try again.";
+  else msg="🌱 These are challenge problems, well above grade level. Every great scientist started as a beginner! Go through the worked examples and try again, Ace!";
+  var f=document.getElementById("final");
+  f.style.display="block";
+  f.innerHTML="<h2 style='border:none;margin-top:0'>Final Score: "+k.correct+" / "+n+" ("+pct+"%)</h2>"+
+    "<p>Correct on the first try: "+k.first+" · Hints used: "+k.hints+"</p><p>"+msg+"</p>"+
+    "<p style='font-size:.85em;color:#546e7a'>Finished on "+new Date().toLocaleString("en-CA")+"</p>";
+  f.scrollIntoView({behavior:"smooth"});
+}
+render();
+updateScore();
+document.getElementById("finishBtn").addEventListener("click",finish);
+</script>
+<script src="../../assets/autosave.js"></script>
+</body>
+</html>
