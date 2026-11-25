@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reading (Nov. 25): Where Does It Go? The Hidden Journey of Your Garbage</title>
+<style>
+  body{font-family:"Segoe UI",Verdana,Arial,sans-serif;font-size:20px;line-height:1.65;margin:0;background:#f5f0eb;color:#2c2416}
+  .wrap{max-width:880px;margin:0 auto;padding:20px 18px 80px}
+  a.home{font-size:.9em;color:#bf360c}
+  h1{color:#e65100;font-size:2em;margin:10px 0}
+  h2{color:#ef6c00;margin-top:36px;border-bottom:3px solid #ffcc80;padding-bottom:4px}
+  .box{background:#fff;border-radius:16px;padding:18px 22px;margin:16px 0;box-shadow:0 3px 10px rgba(0,0,0,.07)}
+  .passage{font-family:Georgia,"Times New Roman",serif;font-size:1.1em;line-height:1.8}
+  .passage h3{text-align:center;font-family:"Segoe UI",Verdana,sans-serif;color:#e65100;font-size:1.4em;margin:4px 0 14px}
+  .passage p{text-indent:1.5em;margin:0 0 14px}
+  mark.v{background:#fff59d;padding:0 3px;border-radius:4px;font-weight:bold}
+  .tipbox{background:#fff8e1;border-left:8px solid #ffb300}
+  .q{border-left:8px solid #ffcc80}
+  .q.right{border-left-color:#43a047;background:#f1f8e9}
+  .q.wrong{border-left-color:#e53935;background:#fff5f5}
+  .tag{display:inline-block;font-size:.7em;background:#ef6c00;color:#fff;border-radius:8px;padding:1px 8px;margin-left:6px;vertical-align:middle}
+  .opt{display:block;width:100%;text-align:left;font-size:.95em;background:#fafafa;border:2px solid #e0e0e0;border-radius:10px;padding:8px 14px;margin:8px 0;cursor:pointer;font-family:inherit}
+  .opt:hover{border-color:#ffb74d;background:#fff}
+  .opt.sel-right{background:#c8e6c9;border-color:#43a047}
+  .opt.sel-wrong{background:#ffcdd2;border-color:#e53935}
+  .fb{margin-top:6px;font-weight:bold}
+  .fb.good{color:#2e7d32} .fb.bad{color:#c62828}
+  .explain{color:#e65100;font-weight:normal}
+  select{font-size:.95em;padding:6px 8px;border-radius:8px;border:2px solid #ffb74d;max-width:100%;font-family:inherit}
+  .vrow{display:flex;flex-wrap:wrap;align-items:center;gap:10px;padding:8px 6px;border-bottom:1px dashed #eee}
+  .vrow .w{font-weight:bold;min-width:140px}
+  .vrow.right{background:#f1f8e9} .vrow.wrong{background:#fff5f5}
+  .mark{font-size:1.2em;min-width:30px}
+  button.main{font-size:1em;padding:10px 20px;border:none;border-radius:10px;cursor:pointer;font-weight:bold;background:#ef6c00;color:#fff;margin-top:10px}
+  button.main:hover{background:#e65100}
+  button.sec{font-size:.95em;padding:8px 16px;border:none;border-radius:10px;cursor:pointer;font-weight:bold;background:#ffe082;color:#5d4037}
+  textarea{width:100%;box-sizing:border-box;font-size:1em;font-family:inherit;padding:10px;border:2px solid #ffb74d;border-radius:10px;min-height:120px}
+  #model{display:none;background:#fff3e0;border-radius:10px;padding:10px 14px;margin-top:10px}
+  #scoreBox{position:sticky;bottom:0;background:#e65100;color:#fff;border-radius:16px 16px 0 0;padding:12px 20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-top:30px}
+  #scoreBox button{font-size:.95em;padding:8px 16px;border:none;border-radius:10px;cursor:pointer;font-weight:bold;background:#ffca28;color:#3e2723}
+  #final{display:none;text-align:center;border:4px solid #43a047;font-size:1.1em}
+</style>
+</head>
+<body>
+<div class="wrap">
+<a class="home" href="../../index.html">&larr; Back to all lessons</a>
+<h1>📖 Reading Week 59: Where Does It Go? The Hidden Journey of Your Garbage</h1>
+
+<div class="box tipbox">
+  <strong>Before you read, Ace:</strong> Yesterday you asked questions while you read and figured out where each answer lives. Today you'll become an <strong>ad detective</strong>. Writers who want you to <em>buy</em>, <em>believe</em> or <em>do</em> something use <strong>persuasive techniques</strong> and <strong>loaded language</strong>. They aren't always lying, but they choose words to make you <em>feel</em> before you <em>think</em>. When companies use these tricks to make a product seem better for the environment than it really is, it's called <strong>greenwashing</strong>. Watch for these six moves:
+  <ul>
+    <li><strong>1. Loaded language:</strong> words packed with strong feelings, such as <em>pure, natural, toxic, guilt-free, loves the Earth</em>. Ask: "What is this word making me feel, and is there a fact behind it?"</li>
+    <li><strong>2. Vague claims:</strong> words that sound good but don't say anything you can check, such as <em>eco-friendly, green, better for the planet</em>. Ask: "Better than <em>what</em>? How much?"</li>
+    <li><strong>3. Bandwagon:</strong> "Everyone is doing it, so you should too!" Ask: "Does the number of people prove it's a good choice?"</li>
+    <li><strong>4. Testimonials and fuzzy experts:</strong> a famous person praises the product, or "experts agree" without saying who. Ask: "Is this person an expert on <em>this</em> topic? Which experts?"</li>
+    <li><strong>5. Numbers without context:</strong> "30% plant-based!" or "50% less plastic!" Ask: "30% of what? What about the other 70%? Less than what?"</li>
+    <li><strong>6. The fine print:</strong> tiny words marked with a star (*) that quietly limit the big claim. Always read the stars!</li>
+    <li><strong>Word detective:</strong> Greek <strong>bios</strong> = "life" + Latin <strong>degradare</strong> = "to step down," so something <strong>biodegradable</strong> can be broken down by living things · Latin <strong>re</strong> = "again" + Greek <strong>kyklos</strong> = "circle," so to <strong>recycle</strong> is to send around the circle again · Latin <strong>in</strong> + <strong>cinis</strong> = "ashes," so an <strong>incinerator</strong> burns things to ash · Latin <strong>per</strong> = "through" + <strong>meare</strong> = "to pass," so something <strong>impermeable</strong> won't let anything pass through</li>
+    <li><strong>Words in <mark class="v">yellow</mark></strong> are vocabulary words. Use the sentence around them (the <em>context</em>) to figure out what they mean.</li>
+  </ul>
+</div>
+
+<div class="box passage" id="passage">
+<h3>Text 1: Where Does It Go? The Hidden Journey of Your Garbage</h3>
+<p>It's garbage day. You drag the cart to the curb, a truck rumbles by, a mechanical arm lifts and tips, and your trash vanishes. Gone! Except it isn't. In Canada, each person throws out roughly 700 kg of waste a year, and every gram of it has to go somewhere. Following your garbage is like following a mystery trail, and the clues reveal a lot about how communities work.</p>
+<p><strong>Not just a hole in the ground.</strong> Most of the garbage in Canada ends up in a <em>landfill</em>. A modern landfill is a carefully engineered place. Before any garbage arrives, workers line the bottom of a huge pit with thick clay and a heavy plastic sheet, layers that are almost completely <mark class="v">impermeable</mark>. Why go to all that trouble? Rain trickles down through garbage and picks up chemicals, turning into a dark, polluted liquid called <em>leachate</em>. The liner stops leachate from seeping into the groundwater, and pipes collect it so it can be treated. Each day, bulldozers and heavy machines called compactors drive back and forth over the new garbage until it is tightly <mark class="v">compacted</mark>, and then they cover it with a layer of soil to keep away gulls, rats and smells.</p>
+<p><strong>The hot dog that wouldn't rot.</strong> You might think buried food and paper simply rot away. In the 1970s and 1980s, an American archaeologist named William Rathje decided to find out. His team drilled into landfills and dug up what they found. They pulled out newspapers that were still readable after decades, and food, including hot dogs, that could still be recognized. The reason? Garbage in a landfill is squashed so tightly that very little air gets in, and the tiny living things that break down food and paper work very slowly without oxygen. When food does rot without air, it gives off <em>methane</em>, a gas that traps much more heat in the atmosphere than carbon dioxide does. Many landfills now pipe the methane out and burn it to make electricity.</p>
+<p><strong>The blue bin's journey.</strong> Recycling goes somewhere else: a <em>material recovery facility</em>, where conveyor belts carry a river of cans, cartons, paper and plastic past machines and workers. Spinning screens bounce flat paper one way. Powerful magnets yank out steel cans. A clever machine using a spinning magnetic field actually pushes aluminum cans <em>off</em> the belt, and optical sorters "see" different plastics and blast them aside with puffs of air. Each material is squeezed into giant bales and sold to factories that turn it into new products. But the system has a weakness: <em>contamination</em>. A greasy pizza box or a jar coated in sticky food <mark class="v">residue</mark> can spoil a bale of clean paper, and a single plastic bag can wrap around a spinning screen and shut down the whole line. Putting something in the blue bin and simply hoping it can be recycled even has a nickname: <em>wishcycling</em>.</p>
+<p style="text-indent:0"><strong>Table: Where some everyday items should go (in many BC communities) and how long they might last if buried</strong></p>
+<table style="border-collapse:collapse;margin:4px 0 6px;font-size:.85em;background:#fff;font-family:'Segoe UI',Verdana,sans-serif">
+<tr><th style="border:1px solid #bdbdbd;padding:4px 10px;background:#eceff1">Item</th><th style="border:1px solid #bdbdbd;padding:4px 10px;background:#eceff1">Best place for it</th><th style="border:1px solid #bdbdbd;padding:4px 10px;background:#eceff1">Rough time to break down if buried in a landfill*</th></tr>
+<tr><td style="border:1px solid #bdbdbd;padding:4px 10px">Banana peel</td><td style="border:1px solid #bdbdbd;padding:4px 10px">Green bin (compost)</td><td style="border:1px solid #bdbdbd;padding:4px 10px">weeks in a compost pile, but it may last for years in a landfill</td></tr>
+<tr><td style="border:1px solid #bdbdbd;padding:4px 10px">Newspaper</td><td style="border:1px solid #bdbdbd;padding:4px 10px">Blue bin (recycling)</td><td style="border:1px solid #bdbdbd;padding:4px 10px">can stay readable for decades</td></tr>
+<tr><td style="border:1px solid #bdbdbd;padding:4px 10px">Aluminum can</td><td style="border:1px solid #bdbdbd;padding:4px 10px">Return depot (10¢ deposit)</td><td style="border:1px solid #bdbdbd;padding:4px 10px">about 200 years or more</td></tr>
+<tr><td style="border:1px solid #bdbdbd;padding:4px 10px">Plastic water bottle</td><td style="border:1px solid #bdbdbd;padding:4px 10px">Return depot (10¢ deposit)</td><td style="border:1px solid #bdbdbd;padding:4px 10px">hundreds of years (one common estimate is 450)</td></tr>
+<tr><td style="border:1px solid #bdbdbd;padding:4px 10px">Glass jar</td><td style="border:1px solid #bdbdbd;padding:4px 10px">Depot or recycling</td><td style="border:1px solid #bdbdbd;padding:4px 10px">may never fully break down</td></tr>
+</table>
+<p style="text-indent:0;font-size:.8em;color:#546e7a">*These are estimates, and they vary widely, because no one has watched a plastic bottle for 450 years!</p>
+<p><strong>The green bin's secret.</strong> Food scraps and yard waste that go into a green bin travel to a composting facility. There, unlike in a landfill, the piles are turned and fed with air. With plenty of oxygen, microbes break the scraps down in a few months into dark, crumbly compost that gardeners and farmers spread on the soil, and far less methane is made.</p>
+<p><strong>Why the order matters.</strong> Experts often describe a waste <mark class="v">hierarchy</mark>, a ranking of choices from best to worst: <em>reduce</em> (don't create the waste at all), <em>reuse</em> (use things again), <em>recycle</em>, then <em>recover energy</em>, and only last, <em>landfill</em>. Recycling is useful, but it still takes trucks, machines and energy to collect, sort, melt and remake materials. A refillable water bottle used 500 times beats 500 recycled bottles. That's why it pays to <mark class="v">scrutinize</mark> any product that makes <mark class="v">vague</mark> claims about being "green": the most important question is not only "Can this be recycled?" but "Do I need it at all?"</p>
+
+<h3>Text 2: An Advertisement</h3>
+<div style="border:3px dashed #43a047;border-radius:12px;padding:10px 16px;background:#f1f8e9;font-family:'Segoe UI',Verdana,sans-serif;font-size:.92em">
+<p style="text-indent:0;text-align:center;font-size:1.25em"><strong>🌿 NEW! PureLeaf Spring Water in the Planet-Hugger™ Bottle! 🌍</strong></p>
+<p style="text-indent:0">Nature's purest water, now in a bottle that <em>loves the Earth back</em>. Our revolutionary Planet-Hugger™ bottle is made with <strong>30% plant-based plastic</strong>* and is <strong>100% recyclable</strong>**!</p>
+<p style="text-indent:0">Why settle for ordinary, wasteful water when you can choose the eco-friendly, guilt-free option? <strong>Join the 2 million Canadian families who have already made the switch!</strong></p>
+<p style="text-indent:0">"I only drink PureLeaf. It's the green choice for people who care." — <em>Max Rider, Olympic snowboarder</em></p>
+<p style="text-indent:0">Experts agree: going green has never tasted so good. Every bottle you buy helps save the planet. 💚</p>
+<p style="text-indent:0;font-size:.75em;color:#616161">*Plant-based plastic is made partly from sugar cane. It is chemically the same as regular plastic and does not biodegrade. The rest of the bottle is regular plastic. **Where recycling facilities accept it. Check with your local program.</p>
+</div>
+<p style="text-indent:0;font-size:.8em;color:#546e7a;text-align:right">About 900 words in two texts, including a table. (PureLeaf is a made-up product.)</p>
+</div>
+
+<h2>Part 1: Comprehension</h2>
+<p>Click the best answer. You'll find out right away if you're correct. Only your <strong>first click</strong> counts toward your score, but you can keep trying to find the right answer.</p>
+<div id="mc"></div>
+
+<h2>Part 2: Think Deeper (not scored)</h2>
+<div class="box">
+  <p><strong>Be the ad detective!</strong> First, find <strong>three</strong> persuasive techniques in the PureLeaf ad. For each one, copy the words, name the technique, and explain what the ad wants you to feel. Then, using facts from Text 1, <strong>rewrite one sentence</strong> of the ad so it is honest and specific. Finally, answer: what would be an even better choice than buying PureLeaf, and why?</p>
+  <textarea id="openAns" placeholder="Technique 1: &quot;...&quot; is ... because ...&#10;Technique 2: ...&#10;Technique 3: ...&#10;My honest rewrite: ...&#10;A better choice: ..."></textarea>
+  <p><button type="button" class="sec" id="showModel">Compare with a model answer</button></p>
+  <div id="model"><strong>Model answer:</strong><br><strong>Technique 1:</strong> "Nature's purest water" and "loves the Earth back" are <strong>loaded language</strong>. They make me feel the water is clean and the bottle is kind to nature, but they don't give any fact I can check.<br><strong>Technique 2:</strong> "Join the 2 million Canadian families who have already made the switch!" is <strong>bandwagon</strong>. It makes me feel left out if I don't buy it, but lots of buyers doesn't prove it's good for the planet.<br><strong>Technique 3:</strong> "30% plant-based plastic*" is a <strong>number without context</strong>, and the <strong>fine print</strong> admits the plant-based plastic doesn't biodegrade and the other 70% is regular plastic. It's still a plastic bottle.<br><strong>My honest rewrite:</strong> "Our bottle is plastic, partly made from sugar cane. Return it to a depot for your 10¢ deposit so it can be recycled, because if it ends up in a landfill, it could last for hundreds of years."<br><strong>A better choice:</strong> filling a refillable bottle from the tap. Text 1 explains the waste hierarchy puts <em>reduce</em> and <em>reuse</em> above recycling, because recycling still uses trucks, machines and energy.</div>
+</div>
+
+<h2>Part 3: Vocabulary</h2>
+<div class="box">
+  <h3 style="margin-top:0">A. Match each word to its meaning</h3>
+  <p>Choose the meaning that fits how the word is used in the passage.</p>
+  <div id="vmatch"></div>
+  <h3>B. Fill in the blank</h3>
+  <p>Choose the vocabulary word that best completes each sentence.</p>
+  <div id="vfill"></div>
+  <button type="button" class="main" id="checkVocab">Check my vocabulary</button>
+  <div class="fb" id="vocabFb"></div>
+</div>
+
+<div class="box" id="final"></div>
+<div id="scoreBox">
+  <span id="scoreText"></span>
+  <button type="button" id="finishBtn">I'm done! Show my final score</button>
+</div>
+</div>
+
+<script>
+var MC = [
+ {q:"According to Text 1, what is <strong>leachate</strong>, and what keeps it out of the groundwater?", tag:"Key detail",
+  o:["Methane gas; pipes that burn it for electricity", "Polluted liquid made when rain trickles through garbage; a liner of clay and heavy plastic", "Clean rainwater; a layer of soil spread on top each day", "Compost juice; the air pumped into green-bin piles"],
+  a:1, e:"Text 1 says rain \"picks up chemicals, turning into a dark, polluted liquid called <em>leachate</em>,\" and that \"the liner stops leachate from seeping into the groundwater.\""},
+ {q:"Why could William Rathje's team still read old newspapers they dug out of landfills?", tag:"Cause and effect",
+  o:["The newspapers were printed on plastic.", "Landfill workers dried the paper out each day.", "The newspapers had only been buried for a few weeks.", "Garbage is packed so tightly that little air gets in, and the living things that break paper down work very slowly without oxygen."],
+  a:3, e:"Text 1 gives the cause right after the finding: \"very little air gets in, and the tiny living things that break down food and paper work very slowly without oxygen.\""},
+ {q:"Which phrase from the ad is the clearest example of <strong>loaded language</strong>?", tag:"Loaded language",
+  o:["\"guilt-free option\"", "\"Spring Water\"", "\"made partly from sugar cane\"", "\"Check with your local program\""],
+  a:0, e:"<strong>Guilt-free</strong> is packed with feeling. It suggests you should feel bad buying other water, and good buying this one, without giving a single fact. The other choices are plain, checkable information."},
+ {q:"\"Join the 2 million Canadian families who have already made the switch!\" Which technique is this, and what's the problem with it?", tag:"Bandwagon",
+  o:["Testimonial: a family is an expert on plastics.", "Fine print: the number is hidden in small letters.", "Bandwagon: it suggests you should buy it because many others did, but popularity doesn't prove it helps the environment.", "Vague claim: \"families\" can't be counted."],
+  a:2, e:"\"Everyone's doing it\" is <strong>bandwagon</strong>. Even if 2 million families did switch, that tells you how popular the product is, not whether it's better for the planet."},
+ {q:"Why is Max Rider's quotation <strong>weak evidence</strong> that PureLeaf is good for the environment?", tag:"Testimonial",
+  o:["Snowboarders don't drink water.", "Being a famous athlete doesn't make him an expert on plastics, recycling or the environment, and he may be paid to say it.", "He says he drinks other brands too.", "His quotation uses numbers without context."],
+  a:1, e:"A <strong>testimonial</strong> borrows a famous person's popularity. Ask: is this person an expert on <em>this</em> topic? A snowboarder knows snow, not plastic chemistry."},
+ {q:"The ad says, \"Experts agree: going green has never tasted so good.\" What should an ad detective ask first?", tag:"Fuzzy experts",
+  o:["Which experts, and what exactly did they agree about?", "How many bottles are in a case?", "Is the water cold?", "What colour is the label?"],
+  a:0, e:"\"Experts agree\" with no names is a <strong>fuzzy expert</strong> claim. Real evidence tells you <em>who</em> the experts are and <em>what</em> they found. Notice too that the sentence doesn't actually claim anything you can test!"},
+ {q:"Read the ad's first footnote (*) and Text 1's table. What do they show about the \"30% plant-based plastic\" claim?", tag:"Fine print + Text 1",
+  o:["The bottle will break down in a few weeks, like a banana peel.", "The bottle can go in the green bin.", "The bottle is 30% water and 70% sugar cane.", "It's still a plastic bottle: 70% is regular plastic, the plant-based part doesn't biodegrade, and the table says plastic bottles could last hundreds of years if buried."],
+  a:3, e:"The footnote admits plant-based plastic \"does not biodegrade\" and \"the rest of the bottle is regular plastic.\" The table says a plastic bottle could last \"hundreds of years.\" The big number <em>sounds</em> green, but it hides what matters."},
+ {q:"The ad promises the bottle is \"100% recyclable**.\" Using Text 1, why doesn't <em>recyclable</em> settle the question of whether the bottle is a good choice?", tag:"Judging a claim with Text 1",
+  o:["Because Text 1 says nothing can ever be recycled.", "Because <em>recyclable</em> only means it <em>can</em> be recycled; it still must reach a facility that accepts it, recycling uses energy, and the waste hierarchy ranks reduce and reuse above recycling.", "Because the fine print says the bottle is made of glass.", "Because recycled bottles always end up in an incinerator."],
+  a:1, e:"The ** fine print says \"where recycling facilities accept it.\" Text 1 explains that recycling still needs \"trucks, machines and energy,\" and that \"a refillable water bottle used 500 times beats 500 recycled bottles.\""},
+ {q:"Which rewrite of the ad's claim is the most <strong>honest and specific</strong>?", tag:"Vague vs. specific",
+  o:["\"Our bottle is made with 30% plastic from sugar cane. Return it to a BC depot for your 10¢ deposit so it can be recycled.\"", "\"Our bottle is totally eco-friendly and better for the planet!\"", "\"Every bottle you buy saves the Earth.\"", "\"Smart families choose PureLeaf, the natural choice.\""],
+  a:0, e:"Choice A gives facts you can check (30%, sugar cane, 10¢ deposit, a clear action). B and C are vague claims, and D mixes loaded language (<em>natural</em>) with bandwagon (<em>smart families</em>)."},
+ {q:"Compare the two texts. Which feature shows that Text 1 is trying to <strong>inform fairly</strong>, while Text 2 is trying to <strong>persuade</strong>?", tag:"Comparing texts",
+  o:["Text 1 uses more exclamation marks than Text 2.", "Text 1 includes a celebrity quotation.", "Text 1 warns that its numbers are estimates that \"vary widely,\" while Text 2 makes big promises like \"helps save the planet\" with no evidence.", "Text 1 tells readers to buy a refillable bottle from a certain company."],
+  a:2, e:"Fair, informative writers admit what isn't certain (\"These are estimates, and they vary widely\"). Persuasive writers, especially in ads, make large claims and hide the limits in fine print."}
+];
+
+var VOCAB = ["impermeable", "compacted", "hierarchy", "scrutinize", "vague", "residue"];
+var DEFS = {
+ impermeable:"not allowing liquid or gas to pass through",
+ compacted:"pressed or squashed tightly together so it takes up less space",
+ hierarchy:"a ranking of things or people from highest to lowest",
+ scrutinize:"to examine something very closely and carefully",
+ vague:"not clear or exact; hard to pin down",
+ residue:"a small amount of something left behind after most of it is gone"
+};
+var FILL = [
+ {s:"Before you recycle a peanut butter jar, scrape out the sticky ____ so it doesn't contaminate the paper.", a:"residue"},
+ {s:"\"Somewhere near the park\" was too ____ a meeting place, so we got lost.", a:"vague"},
+ {s:"Ace's rain jacket is ____, so he stayed dry during the downpour.", a:"impermeable"},
+ {s:"The judges will ____ every science fair project, checking each measurement.", a:"scrutinize"}
+];
+var FILL_OPTIONS = ["impermeable", "compacted", "hierarchy", "scrutinize", "vague", "residue"];
+
+var PRAISE=["Nice work, Ace!","Correct! No ad can fool you!","Yes! Case closed, ad detective! 🔍","Excellent thinking, Ace!","Sharp eyes! You read the fine print! ♻️"];
+function pick(a){return a[Math.floor(Math.random()*a.length)];}
+function shuffled(arr,seed){var a=arr.slice(),s=seed;for(var i=a.length-1;i>0;i--){s=(s*9301+49297)%233280;var j=Math.floor(s/233280*(i+1));var t=a[i];a[i]=a[j];a[j]=t;}return a;}
+
+var mcState=MC.map(function(){return {answered:false,firstRight:false,done:false};});
+var vocabScore=0, vocabChecked=false;
+var VOCAB_TOTAL=VOCAB.length+FILL.length;
+
+function buildMC(){
+  var box=document.getElementById("mc");
+  MC.forEach(function(item,i){
+    var d=document.createElement("div"); d.className="box q"; d.id="mc"+i;
+    var html="<div><strong>"+(i+1)+".</strong> "+item.q+(item.tag?'<span class="tag">'+item.tag+'</span>':"")+"</div>";
+    item.o.forEach(function(opt,j){ html+='<button type="button" class="opt" data-i="'+i+'" data-j="'+j+'">'+String.fromCharCode(65+j)+". "+opt+"</button>"; });
+    html+='<div class="fb" id="mcfb'+i+'"></div>';
+    d.innerHTML=html; box.appendChild(d);
+  });
+  box.addEventListener("click",function(e){
+    var b=e.target.closest?e.target.closest(".opt"):e.target; if(!b||!b.classList.contains("opt"))return;
+    answerMC(+b.getAttribute("data-i"),+b.getAttribute("data-j"),b);
+  });
+}
+function answerMC(i,j,btn){
+  var st=mcState[i], item=MC[i], fb=document.getElementById("mcfb"+i), card=document.getElementById("mc"+i);
+  if(st.done) return;
+  var right=(j===item.a);
+  if(!st.answered){ st.answered=true; st.firstRight=right; }
+  if(right){
+    st.done=true; btn.classList.add("sel-right"); card.className="box q right";
+    fb.className="fb good"; fb.innerHTML="✅ "+pick(PRAISE)+' <span class="explain">'+item.e+"</span>";
+  } else {
+    btn.classList.add("sel-wrong"); card.className="box q wrong";
+    fb.className="fb bad"; fb.innerHTML="❌ Not quite, Ace. Look back at the passage and try another answer.";
+  }
+  updateScore();
+}
+function buildVocab(){
+  var m=document.getElementById("vmatch");
+  var defOrder=shuffled(VOCAB,44);
+  VOCAB.forEach(function(w,i){
+    var row=document.createElement("div"); row.className="vrow"; row.id="vm"+i;
+    var sel='<select id="vsel'+i+'" aria-label="Meaning of '+w+'"><option value="">- choose a meaning -</option>';
+    defOrder.forEach(function(k){ sel+='<option value="'+k+'">'+DEFS[k]+'</option>'; });
+    sel+="</select>";
+    row.innerHTML='<span class="mark" id="vmk'+i+'"></span><span class="w">'+w+'</span>'+sel;
+    m.appendChild(row);
+  });
+  var f=document.getElementById("vfill");
+  FILL.forEach(function(item,i){
+    var row=document.createElement("div"); row.className="vrow"; row.id="vf"+i;
+    var sel='<select id="fsel'+i+'" aria-label="Blank '+(i+1)+'"><option value="">- choose -</option>';
+    FILL_OPTIONS.forEach(function(w){ sel+='<option value="'+w+'">'+w+'</option>'; });
+    sel+="</select>";
+    var parts=item.s.split("____");
+    row.innerHTML='<span class="mark" id="vfk'+i+'"></span><span>'+(i+1)+'. '+parts[0]+sel+parts[1]+'</span>';
+    f.appendChild(row);
+  });
+}
+function checkVocab(){
+  var score=0, blank=0;
+  VOCAB.forEach(function(w,i){
+    var v=document.getElementById("vsel"+i).value, ok=(v===w);
+    if(!v) blank++;
+    if(ok) score++;
+    document.getElementById("vm"+i).className="vrow "+(ok?"right":"wrong");
+    document.getElementById("vmk"+i).textContent=ok?"✅":"❌";
+  });
+  FILL.forEach(function(item,i){
+    var v=document.getElementById("fsel"+i).value, ok=(v===item.a);
+    if(!v) blank++;
+    if(ok) score++;
+    document.getElementById("vf"+i).className="vrow "+(ok?"right":"wrong");
+    document.getElementById("vfk"+i).textContent=ok?"✅":"❌";
+  });
+  vocabScore=score; vocabChecked=true;
+  var fb=document.getElementById("vocabFb");
+  if(score===VOCAB_TOTAL){ fb.className="fb good"; fb.textContent="🌟 "+score+" / "+VOCAB_TOTAL+". Perfect! Your vocabulary is 100% recyclable, Ace! ♻️"; }
+  else { fb.className="fb bad"; fb.textContent=score+" / "+VOCAB_TOTAL+" correct"+(blank?" ("+blank+" left blank)":"")+". Fix the ❌ ones and check again. Try finding the word in the passage for clues!"; }
+  updateScore();
+}
+function scores(){
+  var mc=0,answered=0; mcState.forEach(function(s){ if(s.firstRight) mc++; if(s.answered) answered++; });
+  return {mc:mc,answered:answered,vocab:vocabScore};
+}
+function updateScore(){
+  var s=scores();
+  document.getElementById("scoreText").textContent="Comprehension: "+s.mc+" / "+MC.length+" · Vocabulary: "+(vocabChecked?s.vocab:"-")+" / "+VOCAB_TOTAL;
+}
+function finish(){
+  if(!vocabChecked) checkVocab();
+  var s=scores(), total=MC.length+VOCAB_TOTAL, got=s.mc+s.vocab, pct=Math.round(100*got/total);
+  var msg = pct===100 ? "🏆 A perfect score! Outstanding reading, Ace!" :
+            pct>=80 ? "🌟 Fantastic work, Ace! You read like a Grade 7 student!" :
+            pct>=60 ? "💪 Solid effort, Ace! Reread the paragraphs for the questions you missed." :
+                      "🌱 This was a challenging passage. Read it once more, slowly, and try again. You've got this, Ace!";
+  var f=document.getElementById("final"); f.style.display="block";
+  f.innerHTML="<h2 style='border:none;margin-top:0'>Final Score: "+got+" / "+total+" ("+pct+"%)</h2>"+
+    "<p>Comprehension (first tries): "+s.mc+" / "+MC.length+(s.answered<MC.length?" (you skipped "+(MC.length-s.answered)+")":"")+"<br>Vocabulary: "+s.vocab+" / "+VOCAB_TOTAL+"</p><p>"+msg+"</p>"+
+    "<p style='font-size:.85em;color:#546e7a'>Finished on "+new Date().toLocaleString("en-CA")+"</p>";
+  f.scrollIntoView({behavior:"smooth"});
+}
+buildMC(); buildVocab(); updateScore();
+document.getElementById("checkVocab").addEventListener("click",checkVocab);
+document.getElementById("finishBtn").addEventListener("click",finish);
+document.getElementById("showModel").addEventListener("click",function(){document.getElementById("model").style.display="block";});
+</script>
+<script src="../../assets/autosave.js"></script>
+</body>
+</html>
