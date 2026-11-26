@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Writing (Nov. 26): Choose-Your-Path Adventure + Grammar Clinic</title>
+<style>
+  body{font-family:"Segoe UI",Verdana,Arial,sans-serif;font-size:20px;line-height:1.6;margin:0;background:#fff8f0;color:#2c2416}
+  .wrap{max-width:880px;margin:0 auto;padding:20px 18px 80px}
+  a.home{font-size:.9em;color:#bf360c}
+  h1{color:#e65100;font-size:2em;margin:10px 0}
+  h2{color:#ef6c00;margin-top:36px;border-bottom:3px solid #ffcc80;padding-bottom:4px}
+  h3{color:#ef6c00}
+  .box{background:#fff;border-radius:16px;padding:18px 22px;margin:16px 0;box-shadow:0 3px 10px rgba(0,0,0,.07)}
+  .tipbox{background:#fff8e1;border-left:8px solid #ffb300}
+  .senses{display:grid;gap:8px;margin:10px 0;grid-template-columns:repeat(auto-fit,minmax(140px,1fr))}
+  .senses .side{border-radius:14px;padding:10px 16px;background:#fff3e0}
+  .ts{background:#ffcc80;border-radius:5px;padding:1px 3px}
+  .ev{background:#c8e6c9;border-radius:5px;padding:1px 3px}
+  .ex{background:#ffe0b2;border-radius:5px;padding:1px 3px}
+  .cs{background:#e1bee7;border-radius:5px;padding:1px 3px}
+  .legend span{display:inline-block;margin:4px 8px 4px 0;font-size:.85em}
+  .model{font-family:Georgia,"Times New Roman",serif;font-size:1.05em;line-height:1.9}
+  .row{padding:10px 6px;border-bottom:1px dashed #ddd}
+  .row.right{background:#f1f8e9} .row.wrong{background:#fff5f5}
+  select{font-size:.9em;padding:5px 8px;border-radius:8px;border:2px solid #ffb74d;font-family:inherit}
+  .q{border-left:8px solid #b0bec5}
+  .q.right{border-left-color:#43a047;background:#f1f8e9}
+  .q.wrong{border-left-color:#e53935;background:#fff5f5}
+  .opt{display:block;width:100%;text-align:left;font-size:.95em;background:#fafafa;border:2px solid #e0e0e0;border-radius:10px;padding:8px 14px;margin:8px 0;cursor:pointer;font-family:inherit}
+  .opt:hover{border-color:#ffb74d;background:#fff}
+  .opt.sel-right{background:#c8e6c9;border-color:#43a047}
+  .opt.sel-wrong{background:#ffcdd2;border-color:#e53935}
+  .fb{margin-top:6px;font-weight:bold}
+  .fb.good{color:#2e7d32} .fb.bad{color:#c62828}
+  .explain{font-weight:normal;color:#e65100}
+  .bad-sent{font-family:Consolas,"Courier New",monospace;background:#ffebee;padding:6px 10px;border-radius:8px;display:inline-block;margin:6px 0}
+  input.fix{width:100%;box-sizing:border-box;font-size:1em;padding:8px 12px;border:2px solid #ffb74d;border-radius:10px;font-family:inherit}
+  button{font-size:.95em;padding:8px 16px;border:none;border-radius:10px;cursor:pointer;font-weight:bold;font-family:inherit}
+  .go{background:#ef6c00;color:#fff} .go:hover{background:#e65100}
+  .hint{background:#ffe082;color:#5d4037}
+  .blue{background:#1e88e5;color:#fff}
+  .purple{background:#8e24aa;color:#fff}
+  .grey{background:#cfd8dc;color:#263238}
+  .btnrow{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px}
+  textarea{width:100%;box-sizing:border-box;min-height:300px;font-size:1.05em;line-height:1.7;font-family:Georgia,"Times New Roman",serif;padding:14px;border:3px solid #ffb74d;border-radius:12px}
+  textarea:focus{outline:none;border-color:#ef6c00}
+  .counter{display:flex;flex-wrap:wrap;gap:20px;align-items:center;margin:8px 0;font-weight:bold}
+  .meter{flex:1;min-width:200px;height:18px;background:#e0e0e0;border-radius:9px;overflow:hidden}
+  .meter div{height:100%;width:0;background:#ffb300;transition:width .2s}
+  .checklist label{display:block;padding:6px 4px;cursor:pointer}
+  .checklist input{transform:scale(1.4);margin-right:10px}
+  .prompts label{display:block;background:#fff3e0;border-radius:10px;padding:10px 14px;margin:8px 0;cursor:pointer}
+  .flow{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin:10px 0;font-size:.85em}
+  .flow span.st{background:#e3f2fd;border:2px solid #1e88e5;border-radius:8px;padding:4px 10px;font-weight:bold;color:#0d47a1}
+  .flow span.ar{color:#1e88e5;font-weight:bold}
+  .prompts input{transform:scale(1.3);margin-right:8px}
+  #scoreBox{position:sticky;bottom:0;background:#e65100;color:#fff;border-radius:16px 16px 0 0;padding:12px 20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-top:30px}
+  .w5{display:grid;gap:8px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));margin:10px 0}
+  .w5 label{display:block;font-weight:bold;color:#e65100}
+  .w5 input{width:100%;box-sizing:border-box;font-size:.95em;padding:6px 10px;border:2px solid #ffb74d;border-radius:8px;font-family:inherit}
+  #printArea{display:none}
+  @media print{
+    body{background:#fff;font-size:14pt}
+    .wrap,#scoreBox{display:none !important}
+    #printArea{display:block;font-family:Georgia,serif;line-height:1.8}
+    #printArea h1{font-size:18pt;margin:0 0 6pt}
+    #printArea .meta{font-size:11pt;color:#444}
+    #printArea .text{white-space:pre-wrap;border-top:1px solid #999;padding-top:10pt;margin-top:10pt}
+    #printArea .lines{margin-top:24pt;border-top:1px solid #999;padding-top:6pt;font-size:11pt}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+<a class="home" href="../../index.html">&larr; Back to all lessons</a>
+<h1>✍️ Writing Week 60: Choose-Your-Path Adventure — Into the Hidden Kingdom 🍄🧭</h1>
+<p>Yesterday you wrote a petition to change something real. Today, Ace, you get to write a story where the <em>reader</em> is the hero and makes the decisions: a <strong>choose-your-path adventure</strong> (also called a <em>branching story</em> or <em>interactive fiction</em>). Instead of one path from beginning to end, the story splits like the threads of a mycelium. At each <strong>decision point</strong>, the reader picks a choice and jumps to a different section, so one story can have three, four or even ten endings! Video game designers plan stories exactly like this. Today's genre is the <strong>choose-your-path adventure</strong>.</p>
+
+<h2>Part 1: The Lesson</h2>
+<div class="box">
+  <h3 style="margin-top:0">The six building blocks of a branching story 🧭</h3>
+  <p>Before you write a single sentence, branching-story writers draw a <strong>story map</strong>: boxes for sections and arrows for choices.</p>
+  <div class="flow"><span class="st">1. Opening</span><span class="ar">→</span><span class="st">Choice A → 2</span><span class="ar">/</span><span class="st">Choice B → 3</span><span class="ar">→</span><span class="st">2: Ending ⭐</span><span class="ar">/</span><span class="st">3: Choice C → 4 · Choice D → 5</span><span class="ar">→</span><span class="st">Endings 4 &amp; 5</span></div>
+  <div class="senses">
+    <div class="side"><strong>1. Opening hook:</strong> drop the reader into the action using <strong>"you"</strong> and the <strong>present tense</strong>: <em>"You kneel beside a rotting log..."</em></div>
+    <div class="side"><strong>2. Decision point:</strong> end a section with a real dilemma, where <em>both</em> choices are tempting: <em>"Do you climb toward the light, or follow the stream?"</em></div>
+    <div class="side"><strong>3. Navigation lines:</strong> clear instructions so the reader never gets lost: <em>"→ To climb, go to Section 3."</em></div>
+    <div class="side"><strong>4. Consequences:</strong> each choice must <em>change</em> what happens. If both paths lead to the same place, the choice was fake!</div>
+    <div class="side"><strong>5. Science woven in:</strong> real facts become part of the plot, such as a spore cloud, a glowing fungus or mycelium linking tree roots.</div>
+    <div class="side"><strong>6. Several endings:</strong> at least one triumph, one setback and one surprise. Each ending should feel <em>earned</em> by the choices that led to it.</div>
+  </div>
+  <h3>Five habits of great branching-story writers</h3>
+  <ul>
+    <li><strong>Map first, write second:</strong> number your sections <em>before</em> you write, so every arrow points somewhere real.</li>
+    <li><strong>Make choices matter:</strong> ❌ <em>"Do you go left or right?"</em> (a coin toss) ✅ <em>"Do you trust the map, or the old ranger's warning?"</em> (a real decision with clues)</li>
+    <li><strong>Plant clues:</strong> careful readers should be able to <em>predict</em> which choice is wiser, just like you did in today's reading.</li>
+    <li><strong>Keep each section short:</strong> 50 to 120 words, then a choice or an ending. Momentum matters!</li>
+    <li><strong>Be accurate:</strong> fiction can be wild, but the science facts must be true. (And no ending should ever reward eating a wild mushroom!)</li>
+  </ul>
+  <p><strong>Branching-story rule:</strong> before you finish, follow <em>every</em> path from start to end, the way a game tester would. Does each one make sense?</p>
+</div>
+
+<div class="box tipbox">
+  <h3 style="margin-top:0">Mini-lesson: grammar for second-person adventure stories 🖋️</h3>
+  <p><strong>Stay in the present tense:</strong> don't slip into the past. ❌ <em>You crawl under the log and saw a glowing mushroom.</em> ✅ <em>You crawl under the log and <u>see</u> a glowing mushroom.</em></p>
+  <p><strong>Keep the point of view:</strong> the hero is always <em>you</em>. ❌ <em>You grab the flashlight, and I run to the cave.</em> ✅ <em>You grab the flashlight and run to the cave.</em></p>
+  <p><strong>Punctuate dialogue:</strong> the comma or end mark goes <em>inside</em> the quotation marks. ✅ <em>"Don't touch it," Dr. Lee warns.</em> ✅ <em>"Is it poisonous?" you ask.</em></p>
+  <p><strong>Comma after an introductory word, phrase or clause:</strong> <em>Suddenly, the ground shakes.</em> · <em>After the rain, mushrooms appear.</em> · <em>When the light fades, you hear a crack.</em></p>
+  <p><strong>Canadian spelling:</strong> <em>mould, colour, grey, metre, centre, favourite</em>. The <em>grey mould</em> was the <em>colour</em> of ash, one <em>metre</em> from the trail.</p>
+</div>
+
+<div class="box">
+  <h3 style="margin-top:0">Model branching story: "The Glowing Log" (about 330 words, 5 sections)</h3>
+  <p class="legend"><span class="ts">Opening hook + decision points</span><span class="ev">Science woven in</span><span class="ex">Consequences + navigation</span><span class="cs">Endings</span></p>
+  <div class="model">
+    <span class="ts"><strong>SECTION 1</strong><br>It is almost dark when you realize the trail has disappeared. Your flashlight flickers and dies. Then, beside a rotting log, you notice something impossible: a soft green glow.</span> <span class="ev">The log is covered in tiny mushrooms that make their own light. Some fungi really can glow; scientists call it bioluminescence.</span> <span class="ts">Far away, you hear a stream. Do you stay by the glowing log, or head toward the sound of water?</span><br><span class="ex">→ To stay by the log, go to Section 2.<br>→ To follow the stream, go to Section 3.</span><br><br>
+    <span class="ex"><strong>SECTION 2</strong><br>You sit beside the log and wait.</span> <span class="ev">You remember that mycelium threads may run through the soil under your feet, connecting the trees around you like a hidden web.</span> <span class="ex">Somehow, that makes you feel less alone. An hour later, you see bobbing headlamps.</span><br><span class="cs">"There you are!" calls the ranger. Staying put is exactly the right choice. <strong>THE END ⭐</strong></span><br><br>
+    <span class="ex"><strong>SECTION 3</strong><br>You stumble downhill toward the stream. Suddenly, your boot slips on a slimy patch, and you slide into a hollow full of fat, white mushrooms.</span> <span class="ev">A puff of brown dust explodes into the air: millions of spores!</span> <span class="ts">You're hungry, and the mushrooms look like the ones Dad buys at the store. Do you take a bite, or keep following the stream?</span><br><span class="ex">→ To eat a mushroom, go to Section 4.<br>→ To keep going, go to Section 5.</span><br><br>
+    <span class="cs"><strong>SECTION 4</strong><br>You lift the mushroom toward your mouth, then remember: some deadly mushrooms look almost exactly like safe ones. You drop it. Phew! Too close. Go back to Section 3 and choose again. <strong>TRY AGAIN 🔁</strong></span><br><br>
+    <span class="cs"><strong>SECTION 5</strong><br>You follow the water to a road, where a car's headlights sweep across you. You're safe, muddy and full of stories. <strong>THE END 🏁</strong></span>
+  </div>
+  <p><strong>Notice:</strong> the opening drops the reader into the action with <em>you</em> and the present tense, and ends with a real dilemma. Every navigation line points to a real section. The science (bioluminescence, mycelium, spores, look-alike mushrooms) is part of the plot, not a lecture. Section 4 is a setback that teaches a real safety rule, and look for the commas after <em>Suddenly</em> and <em>An hour later</em>.</p>
+</div>
+
+<h2>Part 2: Name That Story Part</h2>
+<div class="box">
+  <p>Each line comes from a student's branching story called <strong>"Shrunk in the Wood Wide Web."</strong> Choose which <strong>part</strong> of the story it shows best.</p>
+  <div id="labelRows"></div>
+  <div class="btnrow"><button type="button" class="go" id="checkLabels">Check my answers</button></div>
+  <div class="fb" id="labelFb"></div>
+</div>
+
+<h2>Part 3: Grammar Clinic 📏</h2>
+<div class="box tipbox">In a branching story, the reader jumps between sections, so one confusing sentence can get them totally lost! <strong>Section A:</strong> pick the correct choice. <strong>Section B:</strong> type the sentence again with <em>all</em> mistakes fixed. We use <strong>Canadian spelling</strong> (mould, colour, grey, metre). Today, watch <strong>present tense</strong>, <strong>second-person point of view</strong>, <strong>dialogue punctuation</strong>, <strong>commas after introductory elements</strong> and <strong>Canadian spelling</strong>.</div>
+<h3>Section A: Pick the correct choice</h3>
+<div id="gmc"></div>
+<h3>Section B: Fix the sentence</h3>
+<p>Retype the whole sentence correctly, with capital letters and punctuation. Each one has <strong>at least two</strong> mistakes.</p>
+<div id="gfix"></div>
+
+<h2>Part 4: Your Turn to Write</h2>
+<div class="box">
+  <h3 style="margin-top:0">Step 1: Choose your adventure</h3>
+  <p>Pick <strong>one</strong> prompt. Use today's reading (and math!) for real fungus facts. Plan your story map in the boxes first, then write.</p>
+  <div class="prompts" id="prompts">
+    <label><input type="radio" name="prompt" value="Option A: Shrunk in the Wood Wide Web" checked> 🐜 <strong>Option A: Shrunk in the Wood Wide Web.</strong> You've been shrunk smaller than an ant and dropped into the soil of a BC forest. Travel along the mycelium threads between tree roots. Will you help a shaded seedling, escape a hungry beetle, or find your way back to the surface?</label>
+    <label><input type="radio" name="prompt" value="Option B: The Mould Mystery, London 1928"> 🧫 <strong>Option B: The Mould Mystery, London 1928.</strong> You're a young assistant in Alexander Fleming's laboratory, and you've just spotted the fuzzy mould on a dish of bacteria. Do you throw it out, show Fleming, or test it yourself? Your choices could change medical history.</label>
+    <label><input type="radio" name="prompt" value="Option C: The Mushroom Hunt"> 🍄 <strong>Option C: The Mushroom Hunt.</strong> You join a mycologist on an autumn fungus walk to count and photograph (never eat!) mushrooms for a science survey. Fog rolls in. Each choice should use something real you've learned about fungi.</label>
+  </div>
+  <p><strong>Plan your story map:</strong> jot a few words for each box. (These notes save with your writing.)</p>
+  <div class="w5" id="w5">
+    <div><label for="w5who">My title and who "you" are in the story</label><input id="w5who" type="text" autocomplete="off"></div>
+    <div><label for="w5place">Setting: where and when</label><input id="w5place" type="text" autocomplete="off"></div>
+    <div><label for="w5facts">Three real fungus facts I'll weave in</label><input id="w5facts" type="text" autocomplete="off"></div>
+    <div><label for="w5senses">Decision point 1: Choice A vs. Choice B</label><input id="w5senses" type="text" autocomplete="off"></div>
+    <div><label for="w5feel">Where each path leads (and my second decision point)</label><input id="w5feel" type="text" autocomplete="off"></div>
+    <div><label for="w5closing">My endings: triumph, setback and surprise</label><input id="w5closing" type="text" autocomplete="off"></div>
+  </div>
+
+  <h3>Step 2: Write your branching story</h3>
+  <p><strong>Goal:</strong> <strong>350 to 600 words</strong> in <strong>numbered sections</strong>: an <strong>opening hook</strong> written with <em>you</em> and the <strong>present tense</strong>, at least <strong>two decision points</strong>, clear <strong>navigation lines</strong> (<em>→ To ..., go to Section 3.</em>), and at least <strong>three different endings</strong> (one triumph, one setback, one surprise). Weave in <strong>three accurate fungus facts</strong> from today's lessons, include one line of correctly punctuated <strong>dialogue</strong> and two <strong>commas after introductory elements</strong>. Then add <strong>2–3 sentences to Dad</strong> saying which ending you think is the best and why. Bonus: use two words from today's spelling list correctly! Extra bonus: have someone in your family play your story and see which ending they reach.</p>
+  <p><button type="button" class="hint" id="templateBtn">📋 Add the layout for me</button></p>
+  <label for="essay"><strong>Write here, Ace:</strong></label>
+  <textarea id="essay" placeholder="SECTION 1&#10;You ... &#10;Do you ... or ...?&#10;→ To ..., go to Section 2.&#10;→ To ..., go to Section 3."></textarea>
+  <div class="counter">
+    <span id="wc">0 words</span>
+    <span id="sc">0 sentences</span>
+    <div class="meter" aria-hidden="true"><div id="meterBar"></div></div>
+  </div>
+  <div class="fb" id="wcMsg">Aim for 350 to 600 words.</div>
+  <p style="font-size:.8em;color:#607d8b" id="saveNote">Your writing is saved automatically in this browser as you type.</p>
+
+  <h3>Self-check before you finish ✅</h3>
+  <div class="checklist" id="checklist">
+    <label><input type="checkbox"> My <strong>opening hook</strong> uses <strong>"you"</strong> and the <strong>present tense</strong>, and I kept both all the way through.</label>
+    <label><input type="checkbox"> I have at least <strong>two decision points</strong>, and both choices in each one are tempting.</label>
+    <label><input type="checkbox"> Every <strong>navigation line</strong> points to a real, numbered section (I tested every path!).</label>
+    <label><input type="checkbox"> I wrote at least <strong>three endings</strong>, and each choice changes what happens.</label>
+    <label><input type="checkbox"> I wove in <strong>three accurate fungus facts</strong>, and no ending rewards eating a wild mushroom.</label>
+    <label><input type="checkbox"> I checked <strong>dialogue punctuation</strong>, <strong>commas after introductory elements</strong> and <strong>Canadian spelling</strong> (mould, colour, grey, metre).</label>
+  </div>
+  <div class="btnrow">
+    <button type="button" class="blue" id="downloadBtn">⬇️ Download my writing (for Dad)</button>
+    <button type="button" class="purple" id="printBtn">🖨️ Print my writing</button>
+    <button type="button" class="grey" id="clearBtn">Start over</button>
+  </div>
+  <div class="fb" id="doneMsg"></div>
+</div>
+
+<div id="scoreBox"><span id="scoreText"></span><span>Every path explored, Ace! 🍄🧭</span></div>
+</div>
+
+<div id="printArea"></div>
+
+<script>
+var NAME="Ace";
+var PRAISE=["Nice work, Ace!","Correct! Great editing eye!","Yes! Ace fixed it!","Excellent, story designer Ace!","That path leads to victory! 🍄"];
+function pick(a){return a[Math.floor(Math.random()*a.length)];}
+
+var LABELS=["Opening hook", "Decision point", "Navigation line", "Consequence of a choice", "Science woven in", "Ending"];
+var LABEL_ITEMS=[
+ {s:"\"You wake up the size of a sesame seed, lying on a damp leaf. A root as thick as a subway tunnel curves above your head.\"", a:"Opening hook"},
+ {s:"\"Do you squeeze into the narrow fungus thread heading toward the old fir, or climb up the root toward the light?\"", a:"Decision point"},
+ {s:"\"→ To enter the thread, go to Section 4. → To climb, go to Section 6.\"", a:"Navigation line"},
+ {s:"\"Because you chose to climb, a beetle spots you from above. Now you have to hide under a pebble until it wanders away.\"", a:"Consequence of a choice"},
+ {s:"\"All around you, the white threads are carrying sugar from the big fir down to a tiny seedling growing in the shade.\"", a:"Science woven in"},
+ {s:"\"The seedling's needles turn bright green, and you shrink back to normal size beside it, grinning. THE END ⭐\"", a:"Ending"}
+];
+var labelScore=0, labelChecked=false;
+function buildLabels(){
+  var box=document.getElementById("labelRows");
+  LABEL_ITEMS.forEach(function(it,i){
+    var d=document.createElement("div"); d.className="row"; d.id="lr"+i;
+    var sel='<select id="ls'+i+'" aria-label="Job of sentence '+(i+1)+'"><option value="">- choose -</option>';
+    LABELS.forEach(function(l){sel+='<option>'+l+'</option>';});
+    sel+='</select>';
+    d.innerHTML='<strong>'+(i+1)+'.</strong> '+it.s+'<br>'+sel+' <span id="lm'+i+'"></span>';
+    box.appendChild(d);
+  });
+}
+function checkLabels(){
+  var sc=0;
+  LABEL_ITEMS.forEach(function(it,i){
+    var ok=document.getElementById("ls"+i).value===it.a; if(ok)sc++;
+    document.getElementById("lr"+i).className="row "+(ok?"right":"wrong");
+    document.getElementById("lm"+i).textContent=ok?"✅":"❌";
+  });
+  labelScore=sc; labelChecked=true;
+  var fb=document.getElementById("labelFb");
+  if(sc===LABEL_ITEMS.length){fb.className="fb good";fb.textContent="🌟 "+sc+" / "+LABEL_ITEMS.length+". "+pick(PRAISE)+" You know exactly how a branching story is built!";}
+  else{fb.className="fb bad";fb.textContent=sc+" / "+LABEL_ITEMS.length+". Hint: drops you into the action = opening hook; a question with two options = decision point; go to Section ... = navigation line; because you chose... = consequence; a real fact inside the plot = science woven in; THE END = ending.";}
+  updateScore();
+}
+
+var GMC=[
+ {q:"Which sentence stays in the <strong>present tense</strong> all the way through?",
+  o:["You crawl under the log and saw a glowing mushroom.", "You crawled under the log and see a glowing mushroom.", "You crawl under the log and see a glowing mushroom.", "You will crawl under the log and saw a glowing mushroom."],
+  a:2,e:"<strong>Crawl</strong> and <strong>see</strong> are both present tense. The other choices switch between present, past and future in the middle of the sentence."},
+ {q:"Which sentence keeps the <strong>second-person point of view</strong> (the hero is <em>you</em>)?",
+  o:["You grab the flashlight, and I run to the cave.", "You grab the flashlight and run to the cave.", "You grab the flashlight, and he runs to the cave.", "We grab the flashlight, and you run to the cave."],
+  a:1,e:"In a choose-your-path story, the reader is <strong>you</strong> the whole time. A, C and D suddenly switch to <em>I</em>, <em>he</em> or <em>we</em>."},
+ {q:"Which line of <strong>dialogue</strong> is punctuated correctly?",
+  o:["\"Look at the gills\" Dr. Lee says.", "\"Look at the gills,\" Dr. Lee says.", "\"Look at the gills\", Dr. Lee says.", "\"Look at the gills.\" Dr. Lee says."],
+  a:1,e:"The comma goes <strong>inside</strong> the closing quotation mark, and the sentence continues with <em>Dr. Lee says</em>."},
+ {q:"Which sentence uses a <strong>comma after an introductory clause</strong> correctly?",
+  o:["When the light fades you hear, a crack.", "When, the light fades you hear a crack.", "When the light fades you hear a crack,", "When the light fades, you hear a crack."],
+  a:3,e:"The introductory clause <em>When the light fades</em> is followed by a comma, then the main clause <em>you hear a crack</em>."},
+ {q:"Which sentence uses <strong>Canadian spelling</strong> correctly?",
+  o:["The gray mold was the color of ash, one meter from the trail.", "The grey mould was the colour of ash, one metre from the trail.", "The grey mold was the colour of ash, one meter from the trail.", "The gray mould was the color of ash, one metre from the trail."],
+  a:1,e:"Canadian spelling: <strong>grey, mould, colour, metre</strong> (also centre, favourite, neighbour)."}
+];
+var gmcState=GMC.map(function(){return{answered:false,firstRight:false,done:false};});
+function buildGMC(){
+  var box=document.getElementById("gmc");
+  GMC.forEach(function(it,i){
+    var d=document.createElement("div"); d.className="box q"; d.id="g"+i;
+    var h='<div><strong>'+(i+1)+'.</strong> '+it.q+'</div>';
+    it.o.forEach(function(o,j){h+='<button type="button" class="opt" data-i="'+i+'" data-j="'+j+'">'+String.fromCharCode(65+j)+'. '+o+'</button>';});
+    h+='<div class="fb" id="gfb'+i+'"></div>';
+    d.innerHTML=h; box.appendChild(d);
+  });
+  box.addEventListener("click",function(e){
+    var b=e.target.closest?e.target.closest(".opt"):e.target; if(!b||!b.classList.contains("opt"))return;
+    var i=+b.getAttribute("data-i"), j=+b.getAttribute("data-j"), st=gmcState[i], it=GMC[i];
+    if(st.done)return;
+    var ok=j===it.a; if(!st.answered){st.answered=true;st.firstRight=ok;}
+    var fb=document.getElementById("gfb"+i);
+    if(ok){st.done=true;b.classList.add("sel-right");document.getElementById("g"+i).className="box q right";fb.className="fb good";fb.innerHTML="✅ "+pick(PRAISE)+' <span class="explain">'+it.e+'</span>';}
+    else{b.classList.add("sel-wrong");document.getElementById("g"+i).className="box q wrong";fb.className="fb bad";fb.textContent="❌ Not quite, Ace. Look closely and try again.";}
+    updateScore();
+  });
+}
+
+var GFIX=[
+ {bad:"you step into the forest and noticed a strange mould on the log",
+  ok:["You step into the forest and notice a strange mould on the log."],
+  hint:"Start with a capital letter. Keep the whole sentence in the present tense: step and notice (not noticed). End with a period."},
+ {bad:"\"dont touch that mushroom\" whispers Dr. Lee",
+  ok:["\"Don't touch that mushroom,\" whispers Dr. Lee."],
+  hint:"Capitalize the first word of the dialogue. Don't needs an apostrophe. Put a comma inside the closing quotation mark, and end with a period."},
+ {bad:"after the rain the gray mold spreads across the bread",
+  ok:["After the rain, the grey mould spreads across the bread."],
+  hint:"Capitalize After. Put a comma after the introductory phrase After the rain. Use the Canadian spellings grey and mould. End with a period."}
+];
+
+var gfixState=GFIX.map(function(){return{tries:0,correct:false,firstRight:false};});
+function norm(s){return s.replace(/[\u2018\u2019\u02BC]/g,"'").replace(/[\u201C\u201D]/g,'"').replace(/\s+/g," ").trim();}
+function checkFixAnswer(i,val){var v=norm(val);return GFIX[i].ok.some(function(a){return norm(a)===v;});}
+function buildGFix(){
+  var box=document.getElementById("gfix");
+  GFIX.forEach(function(it,i){
+    var d=document.createElement("div"); d.className="box q"; d.id="f"+i;
+    d.innerHTML='<div><strong>'+(i+1)+'.</strong> Fix: <span class="bad-sent">'+it.bad+'</span></div>'+
+     '<input class="fix" type="text" id="fi'+i+'" autocomplete="off" spellcheck="false" aria-label="Corrected sentence '+(i+1)+'">'+
+     '<div class="btnrow"><button type="button" class="go" data-act="check" data-i="'+i+'">Check</button><button type="button" class="hint" data-act="hint" data-i="'+i+'">Hint 💡</button><button type="button" class="grey" data-act="show" data-i="'+i+'" style="display:none">Show answer</button></div>'+
+     '<div class="fb" id="ffb'+i+'"></div>';
+    box.appendChild(d);
+  });
+  box.addEventListener("click",function(e){
+    var b=e.target; if(b.tagName!=="BUTTON")return;
+    var i=+b.getAttribute("data-i"), act=b.getAttribute("data-act"), fb=document.getElementById("ffb"+i);
+    if(act==="hint"){fb.className="fb";fb.style.color="#5d4037";fb.textContent="💡 "+GFIX[i].hint;return;}
+    fb.style.color="";
+    if(act==="show"){fb.className="fb";fb.innerHTML='Answer: <em>'+GFIX[i].ok[0]+'</em>'+(GFIX[i].ok.length>1?' (other correct versions are accepted too)':'');return;}
+    fixCheck(i);
+  });
+  box.addEventListener("keydown",function(e){if(e.key==="Enter"&&e.target.classList.contains("fix"))fixCheck(+e.target.id.slice(2));});
+}
+function fixCheck(i){
+  var val=document.getElementById("fi"+i).value, fb=document.getElementById("ffb"+i), st=gfixState[i];
+  fb.style.color="";
+  if(!val.trim()){fb.className="fb bad";fb.textContent="Type the corrected sentence first, Ace!";return;}
+  st.tries++;
+  if(checkFixAnswer(i,val)){ if(st.tries===1)st.firstRight=true; st.correct=true; document.getElementById("f"+i).className="box q right"; fb.className="fb good"; fb.textContent="✅ "+pick(PRAISE); }
+  else { st.correct=false; document.getElementById("f"+i).className="box q wrong"; fb.className="fb bad"; fb.textContent="❌ Not quite. Check every capital letter, apostrophe, comma, and spelling. Try again!"; if(st.tries>=2)document.querySelector('#f'+i+' [data-act=show]').style.display="inline-block"; }
+  updateScore();
+}
+
+function updateScore(){
+  var g=0; gmcState.forEach(function(s){if(s.firstRight)g++;});
+  var f=0; gfixState.forEach(function(s){if(s.correct)f++;});
+  var total=LABEL_ITEMS.length+GMC.length+GFIX.length, got=labelScore+g+f;
+  document.getElementById("scoreText").textContent="Score: "+got+" / "+total+"  (labels "+(labelChecked?labelScore:"-")+"/"+LABEL_ITEMS.length+" · grammar A "+g+"/"+GMC.length+" · grammar B "+f+"/"+GFIX.length+")";
+}
+
+var W5=["who","place","facts","senses","feel","closing"];
+function w5Save(){try{localStorage.setItem(KEY+"-5w",JSON.stringify(W5.map(function(k){return document.getElementById("w5"+k).value;})));}catch(e){}}
+function w5Restore(){try{var d=JSON.parse(localStorage.getItem(KEY+"-5w")||"null");if(d)d.forEach(function(x,i){document.getElementById("w5"+W5[i]).value=x;});}catch(e){}}
+function w5Summary(){return W5.map(function(k){return k.charAt(0).toUpperCase()+k.slice(1)+": "+document.getElementById("w5"+k).value;}).join("\n");}
+function addTemplate(){
+  var t=document.getElementById("essay");
+  var tpl="TITLE: ...\n\nSECTION 1\nYou ... (drop the reader into the action)\nDo you ... or ...?\n→ To ..., go to Section 2.\n→ To ..., go to Section 3.\n\nSECTION 2\n...\nDo you ... or ...?\n→ To ..., go to Section 4.\n→ To ..., go to Section 5.\n\nSECTION 3\n... THE END (surprise)\n\nSECTION 4\n... THE END (triumph)\n\nSECTION 5\n... TRY AGAIN (setback)\n\nNOTE TO DAD (which ending is the best, and why):\n\nby "+NAME;
+  if(t.value.trim()&&!confirm("Add the story-map layout below what you've already written?"))return;
+  t.value=(t.value.trim()?t.value.replace(/\s+$/,"")+"\n\n":"")+tpl; updateCount(); t.focus();
+}
+var KEY="ace-writing-2026-11-26";
+function countWords(t){var m=t.trim().match(/[A-Za-zÀ-ÿ0-9]+(?:['’\-][A-Za-zÀ-ÿ0-9]+)*/g);return m?m.length:0;}
+function countSentences(t){var m=t.match(/[^.!?]*[A-Za-z0-9][^.!?]*[.!?]+/g);return m?m.length:0;}
+function currentPrompt(){var r=document.querySelector('input[name=prompt]:checked');return r?r.value:"";}
+function updateCount(){
+  var t=document.getElementById("essay").value, w=countWords(t), s=countSentences(t);
+  document.getElementById("wc").textContent=w+(w===1?" word":" words");
+  document.getElementById("sc").textContent=s+(s===1?" sentence":" sentences");
+  var bar=document.getElementById("meterBar"); bar.style.width=Math.min(100,w/600*100)+"%";
+  var msg=document.getElementById("wcMsg");
+  if(w<350){bar.style.background="#ffb300";msg.className="fb";msg.textContent=w===0?"Aim for 350 to 600 words.":"Keep going, Ace! "+(350-w)+" more words to reach the goal.";}
+  else if(w<=600){bar.style.background="#43a047";msg.className="fb good";msg.textContent="🎯 You're in the target zone! Nice work, Ace!";}
+  else{bar.style.background="#1e88e5";msg.className="fb";msg.textContent="Wow, that's a big adventure! Could you trim any section longer than about 120 words so the reader reaches the next choice faster?";}
+  try{localStorage.setItem(KEY,JSON.stringify({text:t,prompt:currentPrompt(),checks:checkStates()}));}catch(e){document.getElementById("saveNote").textContent="(This browser can't auto-save here, so use the Download button before closing!)";}
+}
+function checkStates(){return Array.prototype.map.call(document.querySelectorAll("#checklist input"),function(c){return c.checked;});}
+function checklistText(){
+  return Array.prototype.map.call(document.querySelectorAll("#checklist label"),function(l){return (l.querySelector("input").checked?"[x] ":"[ ] ")+l.textContent.trim();}).join("\n");
+}
+function buildReport(){
+  var t=document.getElementById("essay").value;
+  return "Writing Week 60: "+NAME+"\nDate: "+new Date().toLocaleString("en-CA")+"\nPrompt: "+currentPrompt()+
+    "\nWords: "+countWords(t)+"   Sentences: "+countSentences(t)+"\nPlanning notes:\n"+w5Summary()+
+    "\n\n----- "+NAME+"'s writing -----\n\n"+t+"\n\n----- Self-check -----\n"+checklistText()+
+    "\n\n----- Parent feedback -----\n\n\n";
+}
+function download(){
+  var t=document.getElementById("essay").value;
+  if(!t.trim()){document.getElementById("doneMsg").className="fb bad";document.getElementById("doneMsg").textContent="Write something first, Ace!";return;}
+  var blob=new Blob([buildReport().replace(/\n/g,"\r\n")],{type:"text/plain;charset=utf-8"});
+  var a=document.createElement("a"); a.href=URL.createObjectURL(blob); a.download=NAME+"-writing-2026-11-26"+".txt";
+  document.body.appendChild(a); a.click();
+  setTimeout(function(){URL.revokeObjectURL(a.href);a.remove();},1000);
+  var dm=document.getElementById("doneMsg"); dm.className="fb good"; dm.textContent="📄 Saved! Look in your Downloads folder and show Dad. Great job finishing, Ace!";
+}
+function esc(s){return s.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");}
+function printIt(){
+  var t=document.getElementById("essay").value;
+  if(!t.trim()){document.getElementById("doneMsg").className="fb bad";document.getElementById("doneMsg").textContent="Write something first, Ace!";return;}
+  document.getElementById("printArea").innerHTML="<h1>Writing Week 60: "+NAME+"</h1><div class='meta'>"+esc(new Date().toLocaleString("en-CA"))+"<br><strong>Prompt:</strong> "+esc(currentPrompt())+"<br>Words: "+countWords(t)+" · Sentences: "+countSentences(t)+"</div><div class='text'>"+esc(t)+"</div><div class='lines'><strong>Self-check:</strong><br>"+esc(checklistText()).replace(/\n/g,"<br>")+"</div><div class='lines'><strong>Parent feedback:</strong><br><br><br><br></div>";
+  window.print();
+}
+function restore(){
+  try{var d=JSON.parse(localStorage.getItem(KEY)||"null"); if(!d)return;
+    document.getElementById("essay").value=d.text||"";
+    Array.prototype.forEach.call(document.querySelectorAll("input[name=prompt]"),function(r){r.checked=(r.value===d.prompt);});
+    if(!document.querySelector("input[name=prompt]:checked"))document.querySelector("input[name=prompt]").checked=true;
+    var cs=document.querySelectorAll("#checklist input"); (d.checks||[]).forEach(function(v,i){if(cs[i])cs[i].checked=v;});
+  }catch(e){}
+}
+buildLabels(); buildGMC(); buildGFix(); restore(); w5Restore(); updateCount(); updateScore();
+W5.forEach(function(k){document.getElementById("w5"+k).addEventListener("input",w5Save);});
+document.getElementById("templateBtn").addEventListener("click",addTemplate);
+document.getElementById("checkLabels").addEventListener("click",checkLabels);
+document.getElementById("essay").addEventListener("input",updateCount);
+document.getElementById("checklist").addEventListener("change",function(){updateCount(); if(checkStates().every(Boolean)){var dm=document.getElementById("doneMsg");dm.className="fb good";dm.textContent="✅ All boxes checked! Now download or print it for Dad. Awesome work, Ace!";}});
+document.getElementById("prompts").addEventListener("change",updateCount);
+document.getElementById("downloadBtn").addEventListener("click",download);
+document.getElementById("printBtn").addEventListener("click",printIt);
+document.getElementById("clearBtn").addEventListener("click",function(){ if(confirm("Erase your writing and start over?")){document.getElementById("essay").value="";Array.prototype.forEach.call(document.querySelectorAll("#checklist input"),function(c){c.checked=false;});document.getElementById("doneMsg").textContent="";updateCount();} });
+</script>
+<script src="../../assets/autosave.js"></script>
+</body>
+</html>

@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reading (Nov. 26): The Hidden Kingdom: The Secret Life of Fungi</title>
+<style>
+  body{font-family:"Segoe UI",Verdana,Arial,sans-serif;font-size:20px;line-height:1.65;margin:0;background:#f5f0eb;color:#2c2416}
+  .wrap{max-width:880px;margin:0 auto;padding:20px 18px 80px}
+  a.home{font-size:.9em;color:#bf360c}
+  h1{color:#e65100;font-size:2em;margin:10px 0}
+  h2{color:#ef6c00;margin-top:36px;border-bottom:3px solid #ffcc80;padding-bottom:4px}
+  .box{background:#fff;border-radius:16px;padding:18px 22px;margin:16px 0;box-shadow:0 3px 10px rgba(0,0,0,.07)}
+  .passage{font-family:Georgia,"Times New Roman",serif;font-size:1.1em;line-height:1.8}
+  .passage h3{text-align:center;font-family:"Segoe UI",Verdana,sans-serif;color:#e65100;font-size:1.4em;margin:4px 0 14px}
+  .passage p{text-indent:1.5em;margin:0 0 14px}
+  mark.v{background:#fff59d;padding:0 3px;border-radius:4px;font-weight:bold}
+  .tipbox{background:#fff8e1;border-left:8px solid #ffb300}
+  .q{border-left:8px solid #ffcc80}
+  .q.right{border-left-color:#43a047;background:#f1f8e9}
+  .q.wrong{border-left-color:#e53935;background:#fff5f5}
+  .tag{display:inline-block;font-size:.7em;background:#ef6c00;color:#fff;border-radius:8px;padding:1px 8px;margin-left:6px;vertical-align:middle}
+  .opt{display:block;width:100%;text-align:left;font-size:.95em;background:#fafafa;border:2px solid #e0e0e0;border-radius:10px;padding:8px 14px;margin:8px 0;cursor:pointer;font-family:inherit}
+  .opt:hover{border-color:#ffb74d;background:#fff}
+  .opt.sel-right{background:#c8e6c9;border-color:#43a047}
+  .opt.sel-wrong{background:#ffcdd2;border-color:#e53935}
+  .fb{margin-top:6px;font-weight:bold}
+  .fb.good{color:#2e7d32} .fb.bad{color:#c62828}
+  .explain{color:#e65100;font-weight:normal}
+  select{font-size:.95em;padding:6px 8px;border-radius:8px;border:2px solid #ffb74d;max-width:100%;font-family:inherit}
+  .vrow{display:flex;flex-wrap:wrap;align-items:center;gap:10px;padding:8px 6px;border-bottom:1px dashed #eee}
+  .vrow .w{font-weight:bold;min-width:140px}
+  .vrow.right{background:#f1f8e9} .vrow.wrong{background:#fff5f5}
+  .mark{font-size:1.2em;min-width:30px}
+  button.main{font-size:1em;padding:10px 20px;border:none;border-radius:10px;cursor:pointer;font-weight:bold;background:#ef6c00;color:#fff;margin-top:10px}
+  button.main:hover{background:#e65100}
+  button.sec{font-size:.95em;padding:8px 16px;border:none;border-radius:10px;cursor:pointer;font-weight:bold;background:#ffe082;color:#5d4037}
+  textarea{width:100%;box-sizing:border-box;font-size:1em;font-family:inherit;padding:10px;border:2px solid #ffb74d;border-radius:10px;min-height:120px}
+  #model{display:none;background:#fff3e0;border-radius:10px;padding:10px 14px;margin-top:10px}
+  #scoreBox{position:sticky;bottom:0;background:#e65100;color:#fff;border-radius:16px 16px 0 0;padding:12px 20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-top:30px}
+  #scoreBox button{font-size:.95em;padding:8px 16px;border:none;border-radius:10px;cursor:pointer;font-weight:bold;background:#ffca28;color:#3e2723}
+  #final{display:none;text-align:center;border:4px solid #43a047;font-size:1.1em}
+</style>
+</head>
+<body>
+<div class="wrap">
+<a class="home" href="../../index.html">&larr; Back to all lessons</a>
+<h1>📖 Reading Week 60: The Hidden Kingdom: The Secret Life of Fungi</h1>
+
+<div class="box tipbox">
+  <strong>Before you read, Ace:</strong> Yesterday you were an ad detective. Today's skill is one that strong readers use without even noticing: <strong>making, confirming and revising predictions</strong>. A prediction isn't a wild guess. It's a smart bet about what comes next, based on <em>clues</em>. While you read, keep a running "bet" in your head and check it against the text. Use the <strong>P-C-R</strong> cycle:
+  <ul>
+    <li><strong>P = Predict:</strong> Before a section, use clues to make a bet. Good clues are <strong>headings</strong>, <strong>questions the author asks</strong>, <strong>what you already know</strong> and <strong>signal words</strong> like <em>but, however, surprisingly</em> and <em>at first</em> (these warn you that something is about to change).</li>
+    <li><strong>C = Confirm:</strong> As you read, find the sentence that proves your bet was right. Say to yourself, "I predicted ___, and the text says ___."</li>
+    <li><strong>R = Revise:</strong> If the text surprises you, that's not failure! Change your prediction and say, "I thought ___, but now I think ___ because ___." Scientists do exactly this when an experiment surprises them.</li>
+    <li><strong>Stop and predict:</strong> Today's passage has three purple 🔮 boxes. When you reach one, <em>stop</em>, make a prediction in your head (or say it out loud) <em>before</em> you read on. Then see how you did.</li>
+    <li><strong>Word detective:</strong> Greek <strong>mykes</strong> = "fungus" + <strong>logia</strong> = "study," so a <strong>mycologist</strong> studies fungi · Greek <strong>mykes</strong> + <strong>rhiza</strong> = "root," so <strong>mycorrhizal</strong> fungi live on roots · Greek <strong>syn</strong> = "together" + <strong>bios</strong> = "life," so <strong>symbiotic</strong> partners live together and both benefit · Latin <strong>dormire</strong> = "to sleep," so something <strong>dormant</strong> is resting, as if asleep</li>
+    <li><strong>Words in <mark class="v">yellow</mark></strong> are vocabulary words. Use the sentence around them (the <em>context</em>) to figure out what they mean.</li>
+  </ul>
+</div>
+
+<div class="box passage" id="passage">
+<h3>The Hidden Kingdom: The Secret Life of Fungi</h3>
+<p>After an autumn rain in a BC forest, something strange happens overnight. Mushrooms appear where there were none the day before: orange ones on stumps, white ones in the moss, brown ones lined up along a fallen log. It's tempting to think a mushroom is a whole living thing, like a flower. But a mushroom is really just the fruit of something much bigger. Picking a mushroom is a lot like picking an apple. The "tree" that grew it is still there, hidden from view.</p>
+<p style="text-indent:0;border:2px dashed #8e24aa;background:#faf5ff;border-radius:10px;padding:6px 12px;margin:4px 0 16px;font-family:'Segoe UI',Verdana,sans-serif;font-size:.8em">🔮 <strong>Stop and predict #1:</strong> If the mushroom is only the fruit, where do you think the rest of the fungus is, and what might it look like? Make your bet, then read on.</p>
+<p><strong>The threads beneath your feet.</strong> The main body of a fungus is a tangle of threads called <em>mycelium</em>, spreading through soil, leaves and rotting wood. Each thread, or <em>hypha</em>, is thinner than a human hair, so a single one is almost invisible. Together, though, they can be enormous. Because mycelium is so <mark class="v">inconspicuous</mark>, people walk over giant fungi every day without noticing. In Oregon, scientists testing samples of tree-killing honey mushroom kept getting the same surprising result: samples taken kilometres apart had identical DNA. They were all one fungus, spreading through about 965 hectares and possibly thousands of years old. Fungi spread in a second way, too. A mushroom releases millions of microscopic <em>spores</em> that drift on the wind. A spore can stay <mark class="v">dormant</mark> for months or even years, waiting until the moisture and temperature are just right before it sprouts a new hypha.</p>
+<p><strong>Nature's recyclers.</strong> You might expect fungi to eat the way animals do, but they have no mouths and no stomachs. Instead, a fungus digests its food <em>outside</em> its body. Its hyphae push into a log and release chemicals called enzymes that break the wood into simple, dissolved nutrients, which the hyphae then soak up. Wood is tough to break down because it contains lignin, a material that makes tree trunks stiff. Very few living things can digest lignin, but some fungi can. Without them, fallen trees would pile up for centuries, and the nutrients locked inside would never return to the soil to feed new plants.</p>
+<p style="text-indent:0;border:2px dashed #8e24aa;background:#faf5ff;border-radius:10px;padding:6px 12px;margin:4px 0 16px;font-family:'Segoe UI',Verdana,sans-serif;font-size:.8em">🔮 <strong>Stop and predict #2:</strong> The next heading is "The mould that saved millions." Use the heading and what you already know about mould. How could a mould possibly save lives?</p>
+<p><strong>The mould that saved millions.</strong> In September 1928, a Scottish scientist named Alexander Fleming came back to his London laboratory after a holiday. He had left dishes of bacteria on his bench, and one had grown a fuzzy patch of blue-green mould. Most people would have thrown the spoiled dish away. However, Fleming noticed something odd: all around the mould, the bacteria had died. The mould, called <em>Penicillium</em>, was making a substance that killed bacteria. Fleming named it penicillin. Yet for more than ten years, penicillin was not a medicine. It was hard to make, and it fell apart easily. Finally, around 1940, a team at Oxford University led by Howard Florey and Ernst Chain found a way to purify it. In 1941, they treated their first patient, a police officer with a terrible infection. He began to recover, but the tiny supply ran out, and he died. The team needed far more. Factories in the United States learned to grow the mould in huge tanks, where it would <mark class="v">proliferate</mark> quickly, and by the end of the Second World War, penicillin was saving the lives of soldiers and other patients. Fleming, Florey and Chain shared the Nobel Prize in 1945.</p>
+<p style="text-indent:0;border:2px dashed #8e24aa;background:#faf5ff;border-radius:10px;padding:6px 12px;margin:4px 0 16px;font-family:'Segoe UI',Verdana,sans-serif;font-size:.8em">🔮 <strong>Stop and predict #3:</strong> In the 1990s, scientists in British Columbia asked: do the trees in a forest only <em>compete</em> for sunlight, or might they <em>help</em> each other? Predict what they found, and how a fungus might be involved.</p>
+<p><strong>Trees that share?</strong> Most trees have fungal partners. Mycorrhizal fungi wrap around and even into tree roots. The fungus gathers water and minerals, such as nitrogen and phosphorus, from far through the soil and passes them to the tree. In return, the tree gives the fungus sugar it makes by photosynthesis. Because each side gives something and gets something, scientists call this a <mark class="v">reciprocal</mark> partnership. Then forest scientist Suzanne Simard, who later became a professor at the University of British Columbia, tested a bold idea. She covered young birch and Douglas fir trees with plastic bags and fed each kind of tree a different form of carbon gas that she could trace. Later, using a Geiger counter and other tests, she found carbon from the birch inside the fir, and carbon from the fir inside the birch. Sugar had travelled between different trees through the fungal threads, and fir seedlings growing in deep shade seemed to receive more. Her team later mapped a forest patch where one big, old tree was linked to dozens of others. Newspapers called the network the "wood wide web."</p>
+<p><strong>Not so fast.</strong> At first, the story spread around the world: trees talk, share and care for their young! Surprisingly, some other forest scientists are <mark class="v">skeptical</mark>. They agree that fungi link many roots, but they argue that the evidence that trees deliberately "share" is not yet <mark class="v">conclusive</mark>. In some experiments, only small amounts of carbon moved, and the fungus might move sugar for its own benefit rather than to help a seedling. Scientists are now designing new experiments to find out. That's not a weakness of science. It is exactly how science is supposed to work.</p>
+<p><strong>A warning from mycologists.</strong> The next time you see a mushroom, remember the giant hidden under it. But look with your eyes, not your mouth. Some deadly mushrooms look almost exactly like delicious ones, and poisonous death cap mushrooms have even been found growing under city trees in BC. Never eat a wild mushroom unless an expert has identified it.</p>
+<p style="text-indent:0;font-size:.8em;color:#546e7a;text-align:right">About 1 000 words, including three prediction stops.</p>
+</div>
+
+<h2>Part 1: Comprehension</h2>
+<p>Click the best answer. You'll find out right away if you're correct. Only your <strong>first click</strong> counts toward your score, but you can keep trying to find the right answer.</p>
+<div id="mc"></div>
+
+<h2>Part 2: Think Deeper (not scored)</h2>
+<div class="box">
+  <p><strong>Your prediction log!</strong> Choose <strong>two</strong> of the 🔮 boxes. For each one, write: (1) what you predicted <em>before</em> you read on, (2) the clue you used, and (3) whether the text <strong>confirmed</strong> your prediction or made you <strong>revise</strong> it, quoting the sentence that showed you. Finally, make one new prediction: what do you think would happen to a BC forest if all its fungi suddenly disappeared? Use two facts from the passage as evidence.</p>
+  <textarea id="openAns" placeholder="Box #...: I predicted ... My clue was ... The text confirmed / made me revise ... because it says &quot;...&quot;&#10;Box #...: ...&#10;My new prediction: If all the fungi disappeared, ... because ..."></textarea>
+  <p><button type="button" class="sec" id="showModel">Compare with a model answer</button></p>
+  <div id="model"><strong>Model answer:</strong><br><strong>Box #1:</strong> I predicted the rest of the fungus was underground, like roots. My clue was the apple comparison: the tree that grows an apple stays behind. The text <strong>confirmed</strong> it, but I had to <strong>revise</strong> the details. It's not roots; it's "a tangle of threads called mycelium," and it can be giant, like the 965-hectare honey mushroom.<br><strong>Box #3:</strong> I predicted the trees just compete for sunlight, because that's what I already knew about forests. I had to <strong>revise</strong>: Simard "found carbon from the birch inside the fir," so the fungus moved sugar between trees. Then the heading "Not so fast" made me revise again, because some scientists say the evidence "is not yet conclusive."<br><strong>My new prediction:</strong> If all the fungi disappeared, fallen trees would pile up and new trees would grow badly. The passage says "very few living things can digest lignin," so logs would barely rot, and nutrients "would never return to the soil." Also, trees would lose the partners that bring them "water and minerals."</div>
+</div>
+
+<h2>Part 3: Vocabulary</h2>
+<div class="box">
+  <h3 style="margin-top:0">A. Match each word to its meaning</h3>
+  <p>Choose the meaning that fits how the word is used in the passage.</p>
+  <div id="vmatch"></div>
+  <h3>B. Fill in the blank</h3>
+  <p>Choose the vocabulary word that best completes each sentence.</p>
+  <div id="vfill"></div>
+  <button type="button" class="main" id="checkVocab">Check my vocabulary</button>
+  <div class="fb" id="vocabFb"></div>
+</div>
+
+<div class="box" id="final"></div>
+<div id="scoreBox">
+  <span id="scoreText"></span>
+  <button type="button" id="finishBtn">I'm done! Show my final score</button>
+</div>
+</div>
+
+<script>
+var MC = [
+ {q:"Before Stop and predict #1, the author compares picking a mushroom to picking an apple. Which prediction does that comparison <strong>best support</strong>?", tag:"Using clues to predict",
+  o:["Mushrooms grow on apple trees.", "The mushroom is only a small part, and the main body of the fungus stays hidden somewhere nearby.", "Mushrooms are a kind of fruit that people should eat raw.", "The rest of the passage will be about orchards."],
+  a:1, e:"The comparison says the \"tree\" that grew the fruit \"is still there, hidden from view.\" A good prediction follows the clue: the mushroom is just the fruit, and the main fungus is hidden. The next section confirms it: mycelium."},
+ {q:"Which sentence from \"The threads beneath your feet\" <strong>confirms</strong> that a fungus can be far bigger than its mushrooms?", tag:"Confirming a prediction",
+  o:["\"Each thread, or hypha, is thinner than a human hair.\"", "\"A mushroom releases millions of microscopic spores that drift on the wind.\"", "\"They were all one fungus, spreading through about 965 hectares and possibly thousands of years old.\"", "\"A spore can stay dormant for months or even years.\""],
+  a:2, e:"Only C gives evidence of enormous size: one fungus covering 965 hectares. The other sentences are true, but they describe thinness, spores and waiting, not size."},
+ {q:"In Oregon, how did scientists figure out that the honey mushroom was one single fungus?", tag:"Key detail",
+  o:["Samples taken kilometres apart had identical DNA.", "They dug up the whole forest floor.", "They counted the mushrooms with a drone.", "They followed one hypha with a microscope for 965 hectares."],
+  a:0, e:"The passage says samples \"taken kilometres apart had identical DNA. They were all one fungus.\""},
+ {q:"The section \"Nature's recyclers\" begins, \"You might expect fungi to eat the way animals do, but...\" What does the word <strong>but</strong> signal to a reader who is predicting?", tag:"Signal words",
+  o:["That the author is about to list examples that agree with your expectation.", "That the section is ending.", "That the author is about to tell a joke.", "That your expectation is about to be proven wrong, so get ready to revise your prediction."],
+  a:3, e:"<strong>But</strong> is a contrast signal. The author sets up an expectation (fungi eat like animals) and then knocks it down: they digest food <em>outside</em> their bodies. Signal words like <em>but, however</em> and <em>surprisingly</em> are prediction alarms!"},
+ {q:"According to the passage, why would fallen trees \"pile up for centuries\" without fungi?", tag:"Cause and effect",
+  o:["Because animals would eat all the leaves.", "Because wood contains lignin, and very few living things except some fungi can digest it.", "Because fungi make trees grow taller.", "Because spores stop logs from rotting."],
+  a:1, e:"\"Wood is tough to break down because it contains lignin... Very few living things can digest lignin, but some fungi can.\" Take away the fungi and the logs barely rot."},
+ {q:"At Stop and predict #2, a reader predicted: \"The mould will be used to make medicine that kills germs.\" Which detail <strong>confirms</strong> that prediction?", tag:"Confirming a prediction",
+  o:["\"He had left dishes of bacteria on his bench.\"", "\"Most people would have thrown the spoiled dish away.\"", "\"Fleming named it penicillin.\" and \"by the end of the Second World War, penicillin was saving the lives of soldiers and other patients.\"", "\"Fleming, Florey and Chain shared the Nobel Prize in 1945.\""],
+  a:2, e:"C shows the mould's substance became a medicine that saved lives, which proves the prediction. A and B are earlier events; D shows the discovery was honoured but doesn't show it was used as medicine."},
+ {q:"A reader predicted that as soon as Fleming spotted the mould in 1928, doctors began using penicillin. Which detail should make that reader <strong>revise</strong> the prediction?", tag:"Revising a prediction",
+  o:["\"Yet for more than ten years, penicillin was not a medicine. It was hard to make, and it fell apart easily.\"", "\"In September 1928, a Scottish scientist named Alexander Fleming came back to his London laboratory.\"", "\"The mould, called Penicillium, was making a substance that killed bacteria.\"", "\"Fleming named it penicillin.\""],
+  a:0, e:"The word <strong>Yet</strong> signals a surprise: it took more than ten years before penicillin became a usable medicine. A good reader says, \"I thought it was used right away, but now I know it took over a decade because it was hard to make.\""},
+ {q:"In the passage, a <strong>reciprocal</strong> partnership between a tree and a fungus means…", tag:"Vocabulary in context",
+  o:["the fungus harms the tree.", "the tree and the fungus compete for sunlight.", "each partner gives something and gets something back.", "the tree and the fungus are the same living thing."],
+  a:2, e:"The context explains it: the fungus gives water and minerals, and the tree gives sugar. \"Because each side gives something and gets something, scientists call this a reciprocal partnership.\""},
+ {q:"How did Suzanne Simard show that carbon moved <strong>between</strong> birch and fir trees?", tag:"Following the experiment",
+  o:["She cut the trees open and counted their rings.", "She fed each kind of tree a different traceable carbon gas, then found carbon from each tree inside the other.", "She asked foresters whether trees seemed friendly.", "She planted the trees in separate pots so they could not touch."],
+  a:1, e:"Simard \"fed each kind of tree a different form of carbon gas that she could trace,\" and then \"found carbon from the birch inside the fir, and carbon from the fir inside the birch.\""},
+ {q:"The heading \"Not so fast\" and the word <strong>Surprisingly</strong> come right after the exciting wood wide web story. What should a careful reader predict about that section, and is the prediction confirmed?", tag:"Predicting from headings",
+  o:["It will add even more proof that trees love each other; confirmed.", "It will be about a race; confirmed.", "It will say the fungi in BC have all died; revised.", "It will raise doubts about the \"sharing\" idea; confirmed, because some scientists say the evidence is \"not yet conclusive.\""],
+  a:3, e:"\"Not so fast\" warns you the author is going to slow down the excitement. The section confirms it: some scientists are skeptical and think the fungus might move sugar \"for its own benefit.\""},
+ {q:"Why does the author end the \"Not so fast\" section by saying the disagreement is \"exactly how science is supposed to work\"?", tag:"Author's point",
+  o:["To show that scientists test exciting ideas, question the evidence and design new experiments, and change their minds when needed, just like a reader revising a prediction.", "To prove Suzanne Simard was wrong.", "To tell readers that science can never find answers.", "To make the passage longer."],
+  a:0, e:"Scientists make a prediction (a hypothesis), test it, and revise it when new evidence appears. That's the same P-C-R cycle you used today!"}
+];
+
+var VOCAB = ["inconspicuous", "dormant", "proliferate", "reciprocal", "skeptical", "conclusive"];
+var DEFS = {
+ inconspicuous:"not easily noticed; not standing out",
+ dormant:"alive but resting and inactive for a time, as if asleep",
+ proliferate:"to grow or multiply quickly in number",
+ reciprocal:"given and received in return by both sides",
+ skeptical:"doubtful; not easily convinced without good evidence",
+ conclusive:"settling a question completely so that no real doubt remains"
+};
+var FILL = [
+ {s:"The fingerprint on the window was ____ proof that the cat had been on the counter.", a:"conclusive"},
+ {s:"The bear stays ____ in its den all winter and wakes up in spring.", a:"dormant"},
+ {s:"The spy wore plain grey clothes so he would be ____ in the crowd.", a:"inconspicuous"},
+ {s:"Dad was ____ when Ace said his room was clean, so he went to check.", a:"skeptical"}
+];
+var FILL_OPTIONS = ["inconspicuous", "dormant", "proliferate", "reciprocal", "skeptical", "conclusive"];
+
+var PRAISE=["Nice work, Ace!","Correct! Your prediction powers are growing! 🔮","Yes! That's spore-tacular reading! 🍄","Excellent thinking, Ace!","Sharp reading! You checked the evidence! 🔍"];
+function pick(a){return a[Math.floor(Math.random()*a.length)];}
+function shuffled(arr,seed){var a=arr.slice(),s=seed;for(var i=a.length-1;i>0;i--){s=(s*9301+49297)%233280;var j=Math.floor(s/233280*(i+1));var t=a[i];a[i]=a[j];a[j]=t;}return a;}
+
+var mcState=MC.map(function(){return {answered:false,firstRight:false,done:false};});
+var vocabScore=0, vocabChecked=false;
+var VOCAB_TOTAL=VOCAB.length+FILL.length;
+
+function buildMC(){
+  var box=document.getElementById("mc");
+  MC.forEach(function(item,i){
+    var d=document.createElement("div"); d.className="box q"; d.id="mc"+i;
+    var html="<div><strong>"+(i+1)+".</strong> "+item.q+(item.tag?'<span class="tag">'+item.tag+'</span>':"")+"</div>";
+    item.o.forEach(function(opt,j){ html+='<button type="button" class="opt" data-i="'+i+'" data-j="'+j+'">'+String.fromCharCode(65+j)+". "+opt+"</button>"; });
+    html+='<div class="fb" id="mcfb'+i+'"></div>';
+    d.innerHTML=html; box.appendChild(d);
+  });
+  box.addEventListener("click",function(e){
+    var b=e.target.closest?e.target.closest(".opt"):e.target; if(!b||!b.classList.contains("opt"))return;
+    answerMC(+b.getAttribute("data-i"),+b.getAttribute("data-j"),b);
+  });
+}
+function answerMC(i,j,btn){
+  var st=mcState[i], item=MC[i], fb=document.getElementById("mcfb"+i), card=document.getElementById("mc"+i);
+  if(st.done) return;
+  var right=(j===item.a);
+  if(!st.answered){ st.answered=true; st.firstRight=right; }
+  if(right){
+    st.done=true; btn.classList.add("sel-right"); card.className="box q right";
+    fb.className="fb good"; fb.innerHTML="✅ "+pick(PRAISE)+' <span class="explain">'+item.e+"</span>";
+  } else {
+    btn.classList.add("sel-wrong"); card.className="box q wrong";
+    fb.className="fb bad"; fb.innerHTML="❌ Not quite, Ace. Look back at the passage and try another answer.";
+  }
+  updateScore();
+}
+function buildVocab(){
+  var m=document.getElementById("vmatch");
+  var defOrder=shuffled(VOCAB,44);
+  VOCAB.forEach(function(w,i){
+    var row=document.createElement("div"); row.className="vrow"; row.id="vm"+i;
+    var sel='<select id="vsel'+i+'" aria-label="Meaning of '+w+'"><option value="">- choose a meaning -</option>';
+    defOrder.forEach(function(k){ sel+='<option value="'+k+'">'+DEFS[k]+'</option>'; });
+    sel+="</select>";
+    row.innerHTML='<span class="mark" id="vmk'+i+'"></span><span class="w">'+w+'</span>'+sel;
+    m.appendChild(row);
+  });
+  var f=document.getElementById("vfill");
+  FILL.forEach(function(item,i){
+    var row=document.createElement("div"); row.className="vrow"; row.id="vf"+i;
+    var sel='<select id="fsel'+i+'" aria-label="Blank '+(i+1)+'"><option value="">- choose -</option>';
+    FILL_OPTIONS.forEach(function(w){ sel+='<option value="'+w+'">'+w+'</option>'; });
+    sel+="</select>";
+    var parts=item.s.split("____");
+    row.innerHTML='<span class="mark" id="vfk'+i+'"></span><span>'+(i+1)+'. '+parts[0]+sel+parts[1]+'</span>';
+    f.appendChild(row);
+  });
+}
+function checkVocab(){
+  var score=0, blank=0;
+  VOCAB.forEach(function(w,i){
+    var v=document.getElementById("vsel"+i).value, ok=(v===w);
+    if(!v) blank++;
+    if(ok) score++;
+    document.getElementById("vm"+i).className="vrow "+(ok?"right":"wrong");
+    document.getElementById("vmk"+i).textContent=ok?"✅":"❌";
+  });
+  FILL.forEach(function(item,i){
+    var v=document.getElementById("fsel"+i).value, ok=(v===item.a);
+    if(!v) blank++;
+    if(ok) score++;
+    document.getElementById("vf"+i).className="vrow "+(ok?"right":"wrong");
+    document.getElementById("vfk"+i).textContent=ok?"✅":"❌";
+  });
+  vocabScore=score; vocabChecked=true;
+  var fb=document.getElementById("vocabFb");
+  if(score===VOCAB_TOTAL){ fb.className="fb good"; fb.textContent="🌟 "+score+" / "+VOCAB_TOTAL+". Perfect! Your vocabulary is growing like mycelium, Ace! 🍄"; }
+  else { fb.className="fb bad"; fb.textContent=score+" / "+VOCAB_TOTAL+" correct"+(blank?" ("+blank+" left blank)":"")+". Fix the ❌ ones and check again. Try finding the word in the passage for clues!"; }
+  updateScore();
+}
+function scores(){
+  var mc=0,answered=0; mcState.forEach(function(s){ if(s.firstRight) mc++; if(s.answered) answered++; });
+  return {mc:mc,answered:answered,vocab:vocabScore};
+}
+function updateScore(){
+  var s=scores();
+  document.getElementById("scoreText").textContent="Comprehension: "+s.mc+" / "+MC.length+" · Vocabulary: "+(vocabChecked?s.vocab:"-")+" / "+VOCAB_TOTAL;
+}
+function finish(){
+  if(!vocabChecked) checkVocab();
+  var s=scores(), total=MC.length+VOCAB_TOTAL, got=s.mc+s.vocab, pct=Math.round(100*got/total);
+  var msg = pct===100 ? "🏆 A perfect score! Outstanding reading, Ace!" :
+            pct>=80 ? "🌟 Fantastic work, Ace! You read like a Grade 7 student!" :
+            pct>=60 ? "💪 Solid effort, Ace! Reread the paragraphs for the questions you missed." :
+                      "🌱 This was a challenging passage. Read it once more, slowly, and try again. You've got this, Ace!";
+  var f=document.getElementById("final"); f.style.display="block";
+  f.innerHTML="<h2 style='border:none;margin-top:0'>Final Score: "+got+" / "+total+" ("+pct+"%)</h2>"+
+    "<p>Comprehension (first tries): "+s.mc+" / "+MC.length+(s.answered<MC.length?" (you skipped "+(MC.length-s.answered)+")":"")+"<br>Vocabulary: "+s.vocab+" / "+VOCAB_TOTAL+"</p><p>"+msg+"</p>"+
+    "<p style='font-size:.85em;color:#546e7a'>Finished on "+new Date().toLocaleString("en-CA")+"</p>";
+  f.scrollIntoView({behavior:"smooth"});
+}
+buildMC(); buildVocab(); updateScore();
+document.getElementById("checkVocab").addEventListener("click",checkVocab);
+document.getElementById("finishBtn").addEventListener("click",finish);
+document.getElementById("showModel").addEventListener("click",function(){document.getElementById("model").style.display="block";});
+</script>
+<script src="../../assets/autosave.js"></script>
+</body>
+</html>

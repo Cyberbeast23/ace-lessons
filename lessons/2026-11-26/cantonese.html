@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cantonese (Nov. 26): Mushrooms, Mould &amp; Yeast (蘑菇同真菌)</title>
+<style>
+  body{font-family:"Segoe UI",Verdana,Arial,sans-serif;font-size:20px;line-height:1.6;margin:0;background:#f5f0eb;color:#2c2416}
+  .wrap{max-width:880px;margin:0 auto;padding:20px 18px 80px}
+  a.home{font-size:.9em;color:#bf360c}
+  h1{color:#e65100;font-size:2em;margin:10px 0}
+  h2{color:#ef6c00;margin-top:36px;border-bottom:3px solid #ffcc80;padding-bottom:4px}
+  h3{color:#ef6c00}
+  .box{background:#fff;border-radius:16px;padding:18px 22px;margin:16px 0;box-shadow:0 3px 10px rgba(0,0,0,.07)}
+  .tipbox{background:#fff8e1;border-left:8px solid #ffb300}
+  .char{font-size:2.2em;font-weight:bold;color:#e65100;line-height:1.2}
+  .jyut{font-family:Consolas,"Courier New",monospace;background:#fff3e0;padding:2px 8px;border-radius:8px;font-size:1.05em}
+  .card{display:grid;grid-template-columns:auto 1fr;gap:8px 18px;align-items:center;border-left:8px solid #ef6c00;padding-left:14px}
+  .card .meta{grid-column:2}
+  .ex{margin-top:8px;background:#fff3e0;border-radius:10px;padding:8px 12px;font-size:.95em}
+  .q{border-left:8px solid #b0bec5}
+  .q.right{border-left-color:#43a047;background:#f1f8e9}
+  .q.wrong{border-left-color:#e53935;background:#fff5f5}
+  .opt{display:block;width:100%;text-align:left;font-size:.95em;background:#fafafa;border:2px solid #e0e0e0;border-radius:10px;padding:8px 14px;margin:8px 0;cursor:pointer;font-family:inherit}
+  .opt:hover{border-color:#ffb74d;background:#fff}
+  .opt.sel-right{background:#c8e6c9;border-color:#43a047}
+  .opt.sel-wrong{background:#ffcdd2;border-color:#e53935}
+  .fb{margin-top:6px;font-weight:bold}
+  .fb.good{color:#2e7d32} .fb.bad{color:#c62828}
+  .explain{font-weight:normal;color:#e65100}
+  .vrow{display:flex;flex-wrap:wrap;align-items:center;gap:10px;padding:8px 6px;border-bottom:1px dashed #eee}
+  .vrow .w{font-weight:bold;min-width:120px;font-size:1.3em}
+  .vrow.right{background:#f1f8e9} .vrow.wrong{background:#fff5f5}
+  select{font-size:.95em;padding:6px 8px;border-radius:8px;border:2px solid #ffb74d;max-width:100%;font-family:inherit}
+  .mark{font-size:1.2em;min-width:30px}
+  button.main{font-size:1em;padding:10px 20px;border:none;border-radius:10px;cursor:pointer;font-weight:bold;background:#ef6c00;color:#fff;margin-top:10px}
+  button.main:hover{background:#e65100}
+  input[type=text]{font-size:1.05em;padding:8px 12px;border:2px solid #ffb74d;border-radius:10px;width:220px;font-family:inherit}
+  button.check{font-size:.95em;padding:8px 16px;border:none;border-radius:10px;cursor:pointer;font-weight:bold;background:#ef6c00;color:#fff}
+  .row{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:10px}
+  #scoreBox{position:sticky;bottom:0;background:#e65100;color:#fff;border-radius:16px 16px 0 0;padding:12px 20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-top:30px}
+  #scoreBox button{font-size:.95em;padding:8px 16px;border:none;border-radius:10px;cursor:pointer;font-weight:bold;background:#ffca28;color:#3e2723}
+  #final{display:none;text-align:center;border:4px solid #43a047;font-size:1.1em}
+  .tone{font-size:.85em;color:#ef6c00}
+
+  .audio-bar{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin:12px 0 4px}
+  button.speak,button.record,button.play-mine,button.play-model,button.audio-ctrl{
+    font-size:1.05em;padding:14px 18px;min-height:52px;min-width:52px;
+    border:none;border-radius:14px;cursor:pointer;font-weight:bold;font-family:inherit;
+    touch-action:manipulation;-webkit-tap-highlight-color:transparent;
+  }
+  button.speak,button.play-model,button.audio-ctrl.hear{background:#ef6c00;color:#fff}
+  button.speak:hover,button.play-model:hover,button.audio-ctrl.hear:hover{background:#e65100}
+  button.speak.playing{background:#43a047}
+  button.record{background:#e53935;color:#fff}
+  button.record:hover{background:#c62828}
+  button.record.recording{background:#ffca28;color:#3e2723;animation:pulse 1s infinite}
+  @keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.04)}}
+  button.play-mine{background:#00897b;color:#fff}
+  button.play-mine:hover{background:#00695c}
+  button.play-mine:disabled{opacity:.45;cursor:not-allowed}
+  button.audio-ctrl.stop{background:#546e7a;color:#fff}
+  button.audio-ctrl.stop:hover{background:#37474f}
+  .practice{margin-top:14px;padding-top:12px;border-top:2px dashed #ffcc80}
+  .practice-row{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+  .rec-status{margin-top:8px;font-weight:bold;color:#ef6c00;font-size:.95em}
+  .rec-status.rec-on{color:#c62828}
+  .mic-msg{margin-top:8px;background:#fff3e0;border-left:6px solid #ef6c00;border-radius:10px;padding:10px 14px;font-size:.95em;color:#e65100}
+  .box[data-audio]{position:relative}
+</style>
+</head>
+<body>
+<div class="wrap">
+<a class="home" href="../../index.html">&larr; Back to all lessons</a>
+<h1>🗣️ Cantonese Week 60: Mushrooms, Mould &amp; Yeast 蘑菇同真菌 (Hong Kong)</h1>
+<p>Ace, you already know numbers up to 100, plus greetings, family, food, school, body parts, colours, sky &amp; space words, what to say at the doctor's, nature words, question words, music words, trains &amp; travel, brain &amp; sleep words, bees &amp; gardens, electricity &amp; lights, land, people &amp; respect, ice, snow &amp; giant animals, community, rules &amp; voting, weather &amp; storms, germ-fighter words, ancient China words, flight words, gold rush words, kitchen &amp; flavour words, cartoon &amp; movie words, fossil &amp; sea-creature words, emergency &amp; hospital words, map &amp; direction words, robot words, sports words, night &amp; Halloween words, ancient sea reptile words, money &amp; shopping words, bike &amp; riding words, eye &amp; seeing words, dinosaur &amp; fossil words, night-sky words, Viking explorer words, fire-safety words, art &amp; invention words, tide &amp; seashore words, digestion &amp; eating words, clean water words, history &amp; mountain words, stargazing words, fins-to-feet words, origami &amp; shape words, ice hockey &amp; team words, canoe &amp; fur-trade words, snowy mountain &amp; rescue words, healthy-teeth words, skyscraper &amp; building words, ancient-civilization words, pterosaur words, and garbage &amp; recycling words. Today, while your other lessons explore <strong>the hidden kingdom of fungi</strong>, you'll learn <strong>mushroom and mould words</strong>: mushroom, fungus, spore, poisonous, to go mouldy, to rot, yeast and bread. You already know 細菌 (sai3 kwan2, bacteria) and 森林 (sam1 lam4, forest), so now you can talk about what grows on the forest floor! We use <strong>Traditional Chinese</strong> characters and Jyutping with tone numbers, the Hong Kong way.</p>
+
+<div class="box tipbox">
+  <strong>How to read Jyutping (sounds):</strong>
+  <ul>
+    <li>Letters show the sound. Numbers show the <strong>tone</strong> (the musical pitch): 1 high, 2 rising, 3 mid, 4 low/falling, 5 low rising, 6 low.</li>
+    <li>Today's words use <strong>all six tones</strong>! 菇 <span class="jyut">gu1</span> is tone 1 (high and flat), 菌 <span class="jyut">kwan2</span> is tone 2 (rising), 發 <span class="jyut">faat3</span> is tone 3 (middle and flat), 蘑 <span class="jyut">mo4</span> is tone 4 (low and falling), 有 <span class="jyut">jau5</span> is tone 5 (low rising), and 毒 <span class="jyut">duk6</span> is tone 6 (low and flat). Listen for a pair that sounds the same: 孢子 <span class="jyut">baau1 zi2</span> (spore) and 麵包 <span class="jyut">min6 baau1</span> (bread) both have the sound <span class="jyut">baau1</span>. Look closely: the character 孢 even has 包 hiding inside it!</li>
+    <li><strong>Listening/speaking tip:</strong> Say each word out loud three times while looking at the characters. Tap Hear model, then Record and compare!</li>
+  </ul>
+</div>
+
+<h2>Part 1: Learn Today's Words</h2>
+<div class="box tipbox" style="background:#fff3e0;border-left-color:#ef6c00"><strong>Listen &amp; practise:</strong> Tap <em>Hear model</em> to hear the word (Hong Kong voice). Then tap <em>Record</em>, say it out loud, and compare with <em>Play my try</em> + <em>Play model</em>. Recordings stay on this device only for this visit — nothing is uploaded.</div>
+<div class="audio-bar">
+  <button type="button" class="audio-ctrl hear" id="playAll">🔊 Play all words</button>
+  <button type="button" class="audio-ctrl stop" id="stopAudio">⏹️ Stop</button>
+  <span class="tone">Plays every word with English first (greetings + family + food + school + body + colours + sky &amp; space + numbers 11–100 + at the doctor + nature + question words + music + trains &amp; travel + brain &amp; sleep + bees &amp; gardens + electricity &amp; lights).</span>
+</div>
+<div id="cards"></div>
+
+<div class="box tipbox">
+  <strong>Fungus tips for Ace:</strong>
+  <ul>
+    <li>蘑菇 <span class="jyut">mo4 gu1</span> = mushroom. Both characters have the grass radical 艹 on top, a clue that they grow from the ground. In Hong Kong you'll also hear just 菇 (gu1), as in 冬菇 (dung1 gu1), the dried black mushrooms in soup!</li>
+    <li>真菌 <span class="jyut">zan1 kwan2</span> = fungus: 真 (true, real) + 菌 (germ, fungus). You already know 細菌 <span class="jyut">sai3 kwan2</span> (bacteria): 細 means "tiny." Both words share 菌!</li>
+    <li>孢子 <span class="jyut">baau1 zi2</span> = spore. 子 (zi2) often means "seed" or "small thing," just like in 種子 (zung2 zi2, seed).</li>
+    <li>有毒 <span class="jyut">jau5 duk6</span> = poisonous: 有 (to have) + 毒 (poison), "has poison." The safety rule: 野生蘑菇可能有毒！ (je5 sang1 mo4 gu1 ho2 nang4 jau5 duk6! Wild mushrooms might be poisonous!)</li>
+    <li>發霉 <span class="jyut">faat3 mui4</span> = to go mouldy: 發 (to grow, to break out) + 霉 (mould). 腐爛 <span class="jyut">fu6 laan6</span> = to rot. 酵母 <span class="jyut">haau1 mou5</span> = yeast: 酵 (ferment) + 母 (mother), the "mother of fermenting" that makes 麵包 <span class="jyut">min6 baau1</span> (bread) rise.</li>
+  </ul>
+</div>
+
+<h2>Part 2: Match the Meaning</h2>
+<div class="box">
+  <p>Match each Cantonese phrase to its English meaning.</p>
+  <div id="vmatch"></div>
+  <button type="button" class="main" id="checkMatch">Check my matching</button>
+  <div class="fb" id="matchFb"></div>
+</div>
+
+<h2>Part 3: What Would You Say?</h2>
+<p>Click the best Cantonese phrase for each situation. Only your <strong>first click</strong> counts toward your score.</p>
+<div id="mc"></div>
+
+<h2>Part 4: Type the Jyutping</h2>
+<p>Look at the Chinese characters and type the Jyutping (with tone numbers). Spelling must match, including the numbers. Example: <span class="jyut">jin1</span></p>
+<div id="fill"></div>
+
+<div class="box" id="final"></div>
+<div id="scoreBox">
+  <span id="scoreText"></span>
+  <button type="button" id="finishBtn">I'm done! Show my final score</button>
+</div>
+</div>
+
+<script src="../../audio/cantonese/player.js"></script>
+<script>
+var WORDS = [
+ {zh:"蘑菇", jy:"mo4 gu1", audio:"462-mo4-gu1-mushroom.mp3", en:"mushroom",
+  ex_zh:"森林入面有好多蘑菇。", ex_jy:"sam1 lam4 jap6 min6 jau5 hou2 do1 mo4 gu1.", ex_en:"There are lots of mushrooms in the forest."},
+ {zh:"真菌", jy:"zan1 kwan2", audio:"463-zan1-kwan2-fungus.mp3", en:"fungus, fungi",
+  ex_zh:"蘑菇係一種真菌。", ex_jy:"mo4 gu1 hai6 jat1 zung2 zan1 kwan2.", ex_en:"A mushroom is a kind of fungus."},
+ {zh:"孢子", jy:"baau1 zi2", audio:"464-baau1-zi2-spore.mp3", en:"spore",
+  ex_zh:"風吹走啲孢子。", ex_jy:"fung1 ceoi1 zau2 di1 baau1 zi2.", ex_en:"The wind blows the spores away."},
+ {zh:"有毒", jy:"jau5 duk6", audio:"465-jau5-duk6-poisonous.mp3", en:"poisonous",
+  ex_zh:"呢啲蘑菇有毒，唔好食！", ex_jy:"ni1 di1 mo4 gu1 jau5 duk6, m4 hou2 sik6!", ex_en:"These mushrooms are poisonous. Don't eat them!"},
+ {zh:"發霉", jy:"faat3 mui4", audio:"466-faat3-mui4-go-mouldy.mp3", en:"to go mouldy",
+  ex_zh:"個麵包發霉喇！", ex_jy:"go3 min6 baau1 faat3 mui4 laa3!", ex_en:"The bread has gone mouldy!"},
+ {zh:"腐爛", jy:"fu6 laan6", audio:"467-fu6-laan6-rot.mp3", en:"to rot, to decay",
+  ex_zh:"啲樹葉慢慢腐爛。", ex_jy:"di1 syu6 jip6 maan6 maan2 fu6 laan6.", ex_en:"The leaves slowly rot."},
+ {zh:"酵母", jy:"haau1 mou5", audio:"468-haau1-mou5-yeast.mp3", en:"yeast",
+  ex_zh:"酵母可以令麵包發起。", ex_jy:"haau1 mou5 ho2 ji5 ling6 min6 baau1 faat3 hei2.", ex_en:"Yeast can make bread rise."},
+ {zh:"麵包", jy:"min6 baau1", audio:"469-min6-baau1-bread.mp3", en:"bread",
+  ex_zh:"我早餐食麵包。", ex_jy:"ngo5 zou2 caan1 sik6 min6 baau1.", ex_en:"I eat bread for breakfast."}
+];
+
+var PRAISE=["Nice work, Ace!","正確！ Correct!","Yes! 好叻! 🌟","Excellent, Ace!","好犀利！ Awesome! 🍄"];
+function pick(a){return a[Math.floor(Math.random()*a.length)];}
+function shuffled(arr,seed){var a=arr.slice(),s=seed;for(var i=a.length-1;i>0;i--){s=(s*9301+49297)%233280;var j=Math.floor(s/233280*(i+1));var t=a[i];a[i]=a[j];a[j]=t;}return a;}
+
+function buildCards(){
+  var box=document.getElementById("cards");
+  WORDS.forEach(function(w,i){
+    var d=document.createElement("div"); d.className="box";
+    if(w.audio){ d.setAttribute("data-audio", w.audio); d.setAttribute("data-audio-label", w.zh+" "+w.jy); }
+    d.innerHTML='<div class="card">'+
+      '<div class="char">'+(i+1)+'. '+w.zh+'</div>'+
+      '<div class="meta"><div><span class="jyut">'+w.jy+'</span> <span class="tone">← tap Hear model, then Record</span></div>'+
+      '<div><strong>'+w.en+'</strong></div></div></div>'+
+      '<div class="ex"><strong>Example:</strong> '+w.ex_zh+'<br><span class="jyut">'+w.ex_jy+'</span><br><em>'+w.ex_en+'</em></div>'+
+      '<div class="practice"></div>';
+    box.appendChild(d);
+  });
+}
+
+var matchScore=0, matchChecked=false;
+function buildMatch(){
+  var m=document.getElementById("vmatch");
+  var order=shuffled(WORDS.map(function(w){return w.jy;}),16);
+  WORDS.forEach(function(w,i){
+    var row=document.createElement("div"); row.className="vrow"; row.id="vm"+i;
+    var sel='<select id="vsel'+i+'" aria-label="Meaning of '+w.zh+'"><option value="">- choose English -</option>';
+    order.forEach(function(jy){
+      var en=WORDS.find(function(x){return x.jy===jy;}).en;
+      sel+='<option value="'+jy+'">'+en+'</option>';
+    });
+    sel+='</select>';
+    row.innerHTML='<span class="mark" id="vmk'+i+'"></span><span class="w">'+w.zh+'</span><span class="jyut">'+w.jy+'</span>'+sel;
+    m.appendChild(row);
+  });
+}
+function checkMatch(){
+  var score=0, blank=0;
+  WORDS.forEach(function(w,i){
+    var v=document.getElementById("vsel"+i).value, ok=(v===w.jy);
+    if(!v) blank++;
+    if(ok) score++;
+    document.getElementById("vm"+i).className="vrow "+(ok?"right":"wrong");
+    document.getElementById("vmk"+i).textContent=ok?"✅":"❌";
+  });
+  matchScore=score; matchChecked=true;
+  var fb=document.getElementById("matchFb");
+  if(score===WORDS.length){ fb.className="fb good"; fb.textContent="🌟 "+score+" / "+WORDS.length+". Perfect matching, Ace!"; }
+  else { fb.className="fb bad"; fb.textContent=score+" / "+WORDS.length+" correct"+(blank?" ("+blank+" blank)":"")+". Fix the ❌ ones and check again."; }
+  updateScore();
+}
+
+var MC = [
+ {q:"It pops up on the forest floor after the rain, with a cap and a stem.",
+  o:["麵包", "蘑菇", "酵母", "發霉"], a:1,
+  e:"蘑菇 (mo4 gu1) = mushroom. 森林入面有好多蘑菇 = There are lots of mushrooms in the forest."},
+ {q:"Not a plant and not an animal: the kingdom that mushrooms, mould and yeast belong to.",
+  o:["孢子", "有毒", "真菌", "腐爛"], a:2,
+  e:"真菌 (zan1 kwan2) = fungus. 蘑菇係一種真菌 = A mushroom is a kind of fungus."},
+ {q:"Millions of these microscopic specks drift on the wind and can grow into a new fungus.",
+  o:["孢子", "麵包", "蘑菇", "酵母"], a:0,
+  e:"孢子 (baau1 zi2) = spore. 風吹走啲孢子 = The wind blows the spores away."},
+ {q:"A death cap mushroom can make you very sick. It is…",
+  o:["發霉", "腐爛", "真菌", "有毒"], a:3,
+  e:"有毒 (jau5 duk6) = poisonous, \"has poison.\" 呢啲蘑菇有毒，唔好食！ = These mushrooms are poisonous. Don't eat them!"},
+ {q:"You forgot your sandwich in your backpack for two weeks. Now it has fuzzy green spots. It has…",
+  o:["發霉", "酵母", "孢子", "蘑菇"], a:0,
+  e:"發霉 (faat3 mui4) = to go mouldy. 個麵包發霉喇！ = The bread has gone mouldy!"},
+ {q:"Fungi help fallen logs and leaves slowly break down and turn into soil. The logs…",
+  o:["有毒", "腐爛", "麵包", "真菌"], a:1,
+  e:"腐爛 (fu6 laan6) = to rot, to decay. 啲樹葉慢慢腐爛 = The leaves slowly rot."},
+ {q:"A tiny single-celled fungus that bakers add to dough to make it puff up.",
+  o:["蘑菇", "孢子", "酵母", "有毒"], a:2,
+  e:"酵母 (haau1 mou5) = yeast, the \"mother of fermenting.\" 酵母可以令麵包發起 = Yeast can make bread rise."},
+ {q:"You make toast and sandwiches with it.",
+  o:["發霉", "真菌", "腐爛", "麵包"], a:3,
+  e:"麵包 (min6 baau1) = bread. 我早餐食麵包 = I eat bread for breakfast."}
+];
+var mcState=MC.map(function(){return{answered:false,firstRight:false,done:false};});
+function buildMC(){
+  var box=document.getElementById("mc");
+  MC.forEach(function(item,i){
+    var d=document.createElement("div"); d.className="box q"; d.id="mc"+i;
+    var html="<div><strong>"+(i+1)+".</strong> "+item.q+"</div>";
+    item.o.forEach(function(opt,j){ html+='<button type="button" class="opt" data-i="'+i+'" data-j="'+j+'">'+String.fromCharCode(65+j)+". "+opt+"</button>"; });
+    html+='<div class="fb" id="mcfb'+i+'"></div>';
+    d.innerHTML=html; box.appendChild(d);
+  });
+  box.addEventListener("click",function(e){
+    var b=e.target.closest?e.target.closest(".opt"):e.target; if(!b||!b.classList.contains("opt"))return;
+    var i=+b.getAttribute("data-i"), j=+b.getAttribute("data-j"), st=mcState[i], item=MC[i];
+    if(st.done)return;
+    var right=(j===item.a);
+    if(!st.answered){ st.answered=true; st.firstRight=right; }
+    var fb=document.getElementById("mcfb"+i), card=document.getElementById("mc"+i);
+    if(right){ st.done=true; b.classList.add("sel-right"); card.className="box q right"; fb.className="fb good"; fb.innerHTML="✅ "+pick(PRAISE)+' <span class="explain">'+item.e+"</span>"; }
+    else { b.classList.add("sel-wrong"); card.className="box q wrong"; fb.className="fb bad"; fb.textContent="❌ Not quite, Ace. Think about mushrooms, fungi, spores, poison, mould, rotting, yeast and bread, and try again."; }
+    updateScore();
+  });
+}
+
+var FILL = [
+ {zh:"蘑菇", a:"mo4 gu1"},
+ {zh:"真菌", a:"zan1 kwan2"},
+ {zh:"孢子", a:"baau1 zi2"},
+ {zh:"有毒", a:"jau5 duk6"},
+ {zh:"發霉", a:"faat3 mui4"},
+ {zh:"腐爛", a:"fu6 laan6"},
+ {zh:"酵母", a:"haau1 mou5"},
+ {zh:"麵包", a:"min6 baau1"}
+];
+var fillState=FILL.map(function(){return{correct:false,tries:0};});
+function normJy(s){return String(s).trim().toLowerCase().replace(/\s+/g," ");}
+function buildFill(){
+  var box=document.getElementById("fill");
+  FILL.forEach(function(it,i){
+    var d=document.createElement("div"); d.className="box q"; d.id="f"+i;
+    d.innerHTML='<div><strong>'+(i+1)+'.</strong> Type Jyutping for <span class="char" style="font-size:1.4em">'+it.zh+'</span></div>'+
+      '<div class="row"><input type="text" id="fi'+i+'" autocomplete="off" spellcheck="false" aria-label="Jyutping '+it.zh+'">'+
+      '<button type="button" class="check" data-i="'+i+'">Check</button></div><div class="fb" id="ffb'+i+'"></div>';
+    box.appendChild(d);
+  });
+  box.addEventListener("click",function(e){
+    var b=e.target; if(b.tagName!=="BUTTON"||!b.classList.contains("check"))return;
+    fillCheck(+b.getAttribute("data-i"));
+  });
+  box.addEventListener("keydown",function(e){if(e.key==="Enter"&&e.target.tagName==="INPUT")fillCheck(+e.target.id.slice(2));});
+}
+function fillCheck(i){
+  var val=document.getElementById("fi"+i).value, fb=document.getElementById("ffb"+i), st=fillState[i];
+  if(!val.trim()){fb.className="fb bad";fb.textContent="Type the Jyutping first, Ace!";return;}
+  st.tries++;
+  if(normJy(val)===normJy(FILL[i].a)||(FILL[i].alt&&normJy(val)===normJy(FILL[i].alt))){
+    st.correct=true; document.getElementById("f"+i).className="box q right";
+    fb.className="fb good"; fb.textContent="✅ "+pick(PRAISE)+(st.tries===1?" (first try!)":"");
+  } else {
+    st.correct=false; document.getElementById("f"+i).className="box q wrong";
+    fb.className="fb bad"; fb.textContent="❌ Not quite. Check letters, spaces, and tone numbers. Answer looks like: mo4 gu1";
+  }
+  updateScore();
+}
+
+function scores(){
+  var mc=0; mcState.forEach(function(s){if(s.firstRight)mc++;});
+  var f=0; fillState.forEach(function(s){if(s.correct)f++;});
+  return {match:matchScore, mc:mc, fill:f};
+}
+function updateScore(){
+  var s=scores();
+  document.getElementById("scoreText").textContent="Match: "+(matchChecked?s.match:"-")+"/"+WORDS.length+" · Situations: "+s.mc+"/"+MC.length+" · Jyutping: "+s.fill+"/"+FILL.length;
+}
+function finish(){
+  if(!matchChecked) checkMatch();
+  var s=scores(), total=WORDS.length+MC.length+FILL.length, got=s.match+s.mc+s.fill, pct=Math.round(100*got/total);
+  var msg = pct===100 ? "🏆 完美！ Perfect score, Ace! You're a Cantonese-speaking mycologist!" :
+            pct>=80 ? "🌟 Fantastic work, Ace! Tonight, tell Dad: 野生蘑菇可能有毒，唔好食！ (je5 sang1 mo4 gu1 ho2 nang4 jau5 duk6, m4 hou2 sik6! Wild mushrooms might be poisonous. Don't eat them!)" :
+            pct>=60 ? "💪 Solid effort! Review the cards and try the ❌ ones again." :
+                      "🌱 New words take practice! Look at Part 1 again, say each phrase three times, then retry.";
+  var f=document.getElementById("final"); f.style.display="block";
+  f.innerHTML="<h2 style='border:none;margin-top:0'>Final Score: "+got+" / "+total+" ("+pct+"%)</h2>"+
+    "<p>Matching: "+s.match+"/"+WORDS.length+" · Situations (first try): "+s.mc+"/"+MC.length+" · Jyutping typing: "+s.fill+"/"+FILL.length+"</p><p>"+msg+"</p>"+
+    "<p style='font-size:.85em;color:#ef6c00'>Finished on "+new Date().toLocaleString("en-CA")+"</p>";
+  f.scrollIntoView({behavior:"smooth"});
+}
+buildCards(); buildMatch(); buildMC(); buildFill(); updateScore();
+if(window.AceCantoneseAudio) AceCantoneseAudio.wireLesson({playAllBtn:"#playAll",stopBtn:"#stopAudio"});
+document.getElementById("checkMatch").addEventListener("click",checkMatch);
+document.getElementById("finishBtn").addEventListener("click",finish);
+</script>
+<script src="../../assets/autosave.js"></script>
+</body>
+</html>
