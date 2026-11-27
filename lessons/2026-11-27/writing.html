@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Writing (Nov. 27): Poem for Two Voices + Grammar Clinic</title>
+<style>
+  body{font-family:"Segoe UI",Verdana,Arial,sans-serif;font-size:20px;line-height:1.6;margin:0;background:#fff8f0;color:#2c2416}
+  .wrap{max-width:880px;margin:0 auto;padding:20px 18px 80px}
+  a.home{font-size:.9em;color:#bf360c}
+  h1{color:#e65100;font-size:2em;margin:10px 0}
+  h2{color:#ef6c00;margin-top:36px;border-bottom:3px solid #ffcc80;padding-bottom:4px}
+  h3{color:#ef6c00}
+  .box{background:#fff;border-radius:16px;padding:18px 22px;margin:16px 0;box-shadow:0 3px 10px rgba(0,0,0,.07)}
+  .tipbox{background:#fff8e1;border-left:8px solid #ffb300}
+  .senses{display:grid;gap:8px;margin:10px 0;grid-template-columns:repeat(auto-fit,minmax(140px,1fr))}
+  .senses .side{border-radius:14px;padding:10px 16px;background:#fff3e0}
+  .ts{background:#ffcc80;border-radius:5px;padding:1px 3px}
+  .ev{background:#c8e6c9;border-radius:5px;padding:1px 3px}
+  .ex{background:#ffe0b2;border-radius:5px;padding:1px 3px}
+  .cs{background:#e1bee7;border-radius:5px;padding:1px 3px}
+  .legend span{display:inline-block;margin:4px 8px 4px 0;font-size:.85em}
+  .model{font-family:Georgia,"Times New Roman",serif;font-size:1.05em;line-height:1.9}
+  .row{padding:10px 6px;border-bottom:1px dashed #ddd}
+  .row.right{background:#f1f8e9} .row.wrong{background:#fff5f5}
+  select{font-size:.9em;padding:5px 8px;border-radius:8px;border:2px solid #ffb74d;font-family:inherit}
+  .q{border-left:8px solid #b0bec5}
+  .q.right{border-left-color:#43a047;background:#f1f8e9}
+  .q.wrong{border-left-color:#e53935;background:#fff5f5}
+  .opt{display:block;width:100%;text-align:left;font-size:.95em;background:#fafafa;border:2px solid #e0e0e0;border-radius:10px;padding:8px 14px;margin:8px 0;cursor:pointer;font-family:inherit}
+  .opt:hover{border-color:#ffb74d;background:#fff}
+  .opt.sel-right{background:#c8e6c9;border-color:#43a047}
+  .opt.sel-wrong{background:#ffcdd2;border-color:#e53935}
+  .fb{margin-top:6px;font-weight:bold}
+  .fb.good{color:#2e7d32} .fb.bad{color:#c62828}
+  .explain{font-weight:normal;color:#e65100}
+  .bad-sent{font-family:Consolas,"Courier New",monospace;background:#ffebee;padding:6px 10px;border-radius:8px;display:inline-block;margin:6px 0}
+  input.fix{width:100%;box-sizing:border-box;font-size:1em;padding:8px 12px;border:2px solid #ffb74d;border-radius:10px;font-family:inherit}
+  button{font-size:.95em;padding:8px 16px;border:none;border-radius:10px;cursor:pointer;font-weight:bold;font-family:inherit}
+  .go{background:#ef6c00;color:#fff} .go:hover{background:#e65100}
+  .hint{background:#ffe082;color:#5d4037}
+  .blue{background:#1e88e5;color:#fff}
+  .purple{background:#8e24aa;color:#fff}
+  .grey{background:#cfd8dc;color:#263238}
+  .btnrow{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px}
+  textarea{width:100%;box-sizing:border-box;min-height:300px;font-size:1.05em;line-height:1.7;font-family:Georgia,"Times New Roman",serif;padding:14px;border:3px solid #ffb74d;border-radius:12px}
+  textarea:focus{outline:none;border-color:#ef6c00}
+  .counter{display:flex;flex-wrap:wrap;gap:20px;align-items:center;margin:8px 0;font-weight:bold}
+  .meter{flex:1;min-width:200px;height:18px;background:#e0e0e0;border-radius:9px;overflow:hidden}
+  .meter div{height:100%;width:0;background:#ffb300;transition:width .2s}
+  .checklist label{display:block;padding:6px 4px;cursor:pointer}
+  .checklist input{transform:scale(1.4);margin-right:10px}
+  .prompts label{display:block;background:#fff3e0;border-radius:10px;padding:10px 14px;margin:8px 0;cursor:pointer}
+  .flow{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin:10px 0;font-size:.85em}
+  .flow span.st{background:#e3f2fd;border:2px solid #1e88e5;border-radius:8px;padding:4px 10px;font-weight:bold;color:#0d47a1}
+  .flow span.ar{color:#1e88e5;font-weight:bold}
+  .prompts input{transform:scale(1.3);margin-right:8px}
+  #scoreBox{position:sticky;bottom:0;background:#e65100;color:#fff;border-radius:16px 16px 0 0;padding:12px 20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-top:30px}
+  .w5{display:grid;gap:8px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));margin:10px 0}
+  .w5 label{display:block;font-weight:bold;color:#e65100}
+  .w5 input{width:100%;box-sizing:border-box;font-size:.95em;padding:6px 10px;border:2px solid #ffb74d;border-radius:8px;font-family:inherit}
+  #printArea{display:none}
+  @media print{
+    body{background:#fff;font-size:14pt}
+    .wrap,#scoreBox{display:none !important}
+    #printArea{display:block;font-family:Georgia,serif;line-height:1.8}
+    #printArea h1{font-size:18pt;margin:0 0 6pt}
+    #printArea .meta{font-size:11pt;color:#444}
+    #printArea .text{white-space:pre-wrap;border-top:1px solid #999;padding-top:10pt;margin-top:10pt}
+    #printArea .lines{margin-top:24pt;border-top:1px solid #999;padding-top:6pt;font-size:11pt}
+  }
+  .tv{width:100%;border-collapse:separate;border-spacing:6px 4px;font-family:Georgia,"Times New Roman",serif;font-size:1.02em;line-height:1.5}
+  .tv th{background:#e0f7fa;color:#006064;border-radius:8px;padding:6px;font-family:'Segoe UI',Verdana,sans-serif;font-size:.85em}
+  .tv td{vertical-align:top;padding:3px 8px;width:50%}
+  .tv td.v1{background:#e3f2fd;border-radius:6px}
+  .tv td.v2{background:#fff3e0;border-radius:6px}
+  .tv td.both{background:#e1bee7;border-radius:6px;text-align:center;font-weight:bold}
+</style>
+</head>
+<body>
+<div class="wrap">
+<a class="home" href="../../index.html">&larr; Back to all lessons</a>
+<h1>✍️ Writing Week 61: Poem for Two Voices — Lost in the Ice 🧭❄️</h1>
+<p>Yesterday you wrote a story where the reader chooses the path. Today, Ace, you'll write a poem that lets the reader <em>hear two perspectives at once</em>: a <strong>poem for two voices</strong>. It's written in two columns and performed by two readers. The left voice reads the left column, the right voice reads the right column, and lines in the middle are read by <strong>both voices together</strong>. The two speakers might be enemies, strangers or people from different centuries, but by the end, the reader hears both sides of the same story. It's the perfect genre for today's reading skill: comparing perspectives. Today's genre is the <strong>poem for two voices</strong>.</p>
+
+<h2>Part 1: The Lesson</h2>
+<div class="box">
+  <h3 style="margin-top:0">The six building blocks of a poem for two voices 🎭</h3>
+  <p>Think of it like a conversation where the two voices sometimes argue, sometimes echo and sometimes agree.</p>
+  <div class="flow"><span class="st">Voice 1 line</span><span class="ar">⇄</span><span class="st">Voice 2 line</span><span class="ar">→</span><span class="st">BOTH: shared line</span><span class="ar">→</span><span class="st">contrast again…</span><span class="ar">→</span><span class="st">the turn</span><span class="ar">→</span><span class="st">BOTH: refrain</span></div>
+  <div class="senses">
+    <div class="side"><strong>1. Two contrasting voices:</strong> choose speakers who see the same thing <em>differently</em> (what each one saw, knew and wanted).</div>
+    <div class="side"><strong>2. Paired lines:</strong> line up matching lines side by side so the contrast jumps out: <em>"Behind me, the Terror groans," / "Below me, the Terror waits,"</em></div>
+    <div class="side"><strong>3. Shared lines (BOTH):</strong> lines the two voices say <em>together</em>, the things they agree on or both feel.</div>
+    <div class="side"><strong>4. A refrain:</strong> a short line that repeats (often as a BOTH line) to tie the poem together, like a chorus in a song.</div>
+    <div class="side"><strong>5. Sensory details and real facts:</strong> what each voice sees, hears and feels, built from true facts so the poem teaches as it sings.</div>
+    <div class="side"><strong>6. The turn:</strong> a moment near the end where something shifts: the voices understand each other, or the reader sees the story in a new way.</div>
+  </div>
+  <h3>Five habits of great two-voice poets</h3>
+  <ul>
+    <li><strong>Mirror your lines:</strong> use the same sentence pattern on both sides, changing only the key words: <em>her masts white with frost / her hull green with sea life</em>.</li>
+    <li><strong>Every word earns its place:</strong> poems are short, so choose strong verbs (<em>groans, slices, bites</em>) instead of weak ones (<em>is, goes, gets</em>).</li>
+    <li><strong>Be fair to both voices:</strong> give each perspective real feelings and real reasons, even the one you disagree with.</li>
+    <li><strong>Respect real people:</strong> when a voice belongs to a real person or community, like Inuit hunters, base what they say on facts from today's reading, and show them with respect.</li>
+    <li><strong>Read it aloud with a partner:</strong> two-voice poems are meant to be <em>performed</em>. Your ear will catch clunky lines your eye misses.</li>
+  </ul>
+  <p><strong>Two-voice rule:</strong> if you covered up one column, the poem should feel like it's missing half its heart.</p>
+</div>
+
+<div class="box tipbox">
+  <h3 style="margin-top:0">Mini-lesson: grammar for poems about history 🖋️</h3>
+  <p><strong>Possessive apostrophes:</strong> one ship → <em>the ship<u>'s</u> mast</em>. Two ships → <em>the ship<u>s'</u> masts</em> (add the apostrophe <em>after</em> the s). A name → <em>Franklin<u>'s</u> crew</em>, <em>Lady Franklin<u>'s</u> letters</em>.</p>
+  <p><strong>Parallel structure:</strong> items in a list or in matching lines use the same form. ❌ <em>The sailors were cold, hungry and they felt exhausted.</em> ✅ <em>The sailors were cold, hungry and <u>exhausted</u>.</em></p>
+  <p><strong>Proper nouns and respectful names:</strong> capitalize <em>Arctic, Inuit, Nunavut, King William Island</em>. <strong>Inuk</strong> means one person; <strong>Inuit</strong> means more than one person, or the people as a whole. Ship names are capitalized and often written in <em>italics</em>: <em>Erebus</em>, <em>Terror</em>.</p>
+  <p><strong>Canadian spelling:</strong> <em>grey, metre, harbour, travelled, colour, centre</em>. The <em>grey</em> ice stretched for a hundred <em>metres</em> beyond the <em>harbour</em>.</p>
+</div>
+
+<div class="box">
+  <h3 style="margin-top:0">Model poem for two voices: "Ice Has a Long Memory" (about 170 words)</h3>
+  <p class="legend"><span style="background:#e3f2fd;border-radius:5px;padding:1px 6px">Voice 1 (left reader)</span><span style="background:#fff3e0;border-radius:5px;padding:1px 6px">Voice 2 (right reader)</span><span class="cs">BOTH lines (read together)</span><span class="ex">The turn</span></p>
+  <table class="tv"><tr><th>🧭 Voice 1: Sailor, HMS <em>Terror</em>, 1848</th><th>🤿 Voice 2: Parks Canada diver, 2016</th></tr><tr><td class="v1">April 1848.</td><td class="v2">September 2016.</td></tr><tr><td class="v1">I step down from the deck onto the ice,</td><td class="v2">I step off the boat into the grey water,</td></tr><tr><td class="both" colspan="2">BOTH: and the cold bites through everything.</td></tr><tr><td class="v1">Behind me, the <em>Terror</em> groans,</td><td class="v2">Below me, the <em>Terror</em> waits,</td></tr><tr><td class="v1">her masts white with frost,</td><td class="v2">her hull green with sea life,</td></tr><tr><td class="v1">trapped for nineteen months.</td><td class="v2">silent for 168 years.</td></tr><tr><td class="both" colspan="2">BOTH: Ice has a long memory.</td></tr><tr><td class="v1">We drag the sledge south, the harness biting my shoulders,</td><td class="v2">I sink 24 metres, my flashlight slicing the dark,</td></tr><tr><td class="v1">our biscuits nearly gone,</td><td class="v2">past plates still stacked on a shelf,</td></tr><tr><td class="v1">our compasses spinning, useless.</td><td class="v2">past the captain's empty cabin.</td></tr><tr><td class="v1"><span class="ex">An Inuk hunter watches us from a ridge. I wish we knew what he knows.</span></td><td class="v2"><span class="ex">An Inuk crew member remembered a mast in the ice. We listened, and here she is.</span></td></tr><tr><td class="both" colspan="2">BOTH: Someone always knew where she was.</td></tr><tr><td class="v1">Will anyone ever find us?</td><td class="v2">We found you.</td></tr><tr><td class="both" colspan="2">BOTH: Ice has a long memory.</td></tr></table>
+  <p><strong>Notice:</strong> the paired lines mirror each other (<em>her masts white with frost / her hull green with sea life</em>), so the 168 years between the voices jump out. The facts are real: the ships were trapped for about nineteen months, compasses were nearly useless near the North Magnetic Pole, the <em>Terror</em> was found 24 metres down, and an Inuk crew member's memory led searchers to it. The refrain "Ice has a long memory" opens and closes the middle of the poem, and <strong>the turn</strong> comes when both voices mention Inuit knowledge. Then the last pair answers a question across 168 years.</p>
+</div>
+
+<h2>Part 2: Name That Poem Part</h2>
+<div class="box">
+  <p>Each line comes from a student's poem for two voices called <strong>"The Ship and the Ice,"</strong> spoken by HMS <em>Erebus</em> (Voice 1) and the Arctic sea ice (Voice 2). Choose which <strong>building block</strong> each line shows best.</p>
+  <div id="labelRows"></div>
+  <div class="btnrow"><button type="button" class="go" id="checkLabels">Check my answers</button></div>
+  <div class="fb" id="labelFb"></div>
+</div>
+
+<h2>Part 3: Grammar Clinic 📏</h2>
+<div class="box tipbox">In a poem, every word and mark is on display, so one wrong apostrophe stands out like a crack in the ice! <strong>Section A:</strong> pick the correct choice. <strong>Section B:</strong> type the sentence again with <em>all</em> mistakes fixed. We use <strong>Canadian spelling</strong> (grey, metre, harbour, travelled). Today, watch <strong>possessive apostrophes</strong>, <strong>parallel structure</strong>, <strong>commas in a series</strong>, <strong>proper nouns (Inuk / Inuit, Arctic)</strong> and <strong>Canadian spelling</strong>.</div>
+<h3>Section A: Pick the correct choice</h3>
+<div id="gmc"></div>
+<h3>Section B: Fix the sentence</h3>
+<p>Retype the whole sentence correctly, with capital letters and punctuation. Each one has <strong>at least two</strong> mistakes.</p>
+<div id="gfix"></div>
+
+<h2>Part 4: Your Turn to Write</h2>
+<div class="box">
+  <h3 style="margin-top:0">Step 1: Choose your two voices</h3>
+  <p>Pick <strong>one</strong> prompt. Use today's reading (and math!) for real facts. Plan with the S-K-W-M lens in the boxes first, then write.</p>
+  <div class="prompts" id="prompts">
+    <label><input type="radio" name="prompt" value="Option A: The Sailor and the Hunter, 1848" checked> 🧭 <strong>Option A: The Sailor and the Hunter, 1848.</strong> Voice 1 is a starving sailor dragging a sledge south after the ships were abandoned. Voice 2 is an Inuk hunter watching from a ridge, who knows how to find seals under the ice. Same moment, two very different perspectives. Show both with respect, using facts from the reading.</label>
+    <label><input type="radio" name="prompt" value="Option B: Lady Franklin and John Rae, 1855"> ✉️ <strong>Option B: Lady Franklin and John Rae, 1855.</strong> Voice 1 refuses to believe her husband's crew could have met such an end. Voice 2 has just carried home Inuit testimony and silver spoons engraved with officers' crests. What do they each want? What might they share?</label>
+    <label><input type="radio" name="prompt" value="Option C: The Ship and the Ice"> 🧊 <strong>Option C: The Ship and the Ice.</strong> Give voices to HMS <em>Erebus</em> and the Arctic sea ice that trapped it. One was built to break through; the other was made to hold on. Let the poem travel from 1846 to the day divers found the ship in 2014.</label>
+  </div>
+  <p><strong>Plan your two voices:</strong> jot a few words in each box. (These notes save with your writing.)</p>
+  <div class="w5" id="w5">
+    <div><label for="w5who">My title and my two voices</label><input id="w5who" type="text" autocomplete="off"></div>
+    <div><label for="w5place">Setting: where and when (one moment, or two times?)</label><input id="w5place" type="text" autocomplete="off"></div>
+    <div><label for="w5facts">Three real facts I'll weave in</label><input id="w5facts" type="text" autocomplete="off"></div>
+    <div><label for="w5senses">How my voices are DIFFERENT (saw, knew, wanted)</label><input id="w5senses" type="text" autocomplete="off"></div>
+    <div><label for="w5feel">What they SHARE (BOTH lines) + my refrain</label><input id="w5feel" type="text" autocomplete="off"></div>
+    <div><label for="w5closing">My turn and my last line</label><input id="w5closing" type="text" autocomplete="off"></div>
+  </div>
+
+  <h3>Step 2: Write your poem for two voices</h3>
+  <p><strong>Goal:</strong> <strong>150 to 350 words</strong> and at least <strong>16 lines</strong>. Start each line with <strong>VOICE 1:</strong>, <strong>VOICE 2:</strong> or <strong>BOTH:</strong> so your performers know who reads what. Include at least <strong>four mirrored pairs</strong>, at least <strong>three BOTH lines</strong>, a <strong>refrain</strong> that appears at least twice, a clear <strong>turn</strong> near the end and <strong>three accurate facts</strong> from today's lessons. Use one <strong>possessive apostrophe</strong> correctly (like <em>ship's</em> or <em>ships'</em>). Then add <strong>2–3 sentences to Dad</strong> explaining which voice was harder to write and why. Bonus: use two words from today's spelling list correctly! Extra bonus: perform it with Dad, each of you reading one voice!</p>
+  <p><button type="button" class="hint" id="templateBtn">📋 Add the layout for me</button></p>
+  <label for="essay"><strong>Write here, Ace:</strong></label>
+  <textarea id="essay" placeholder="TITLE: ...&#10;VOICE 1: ...&#10;VOICE 2: ...&#10;BOTH: ..."></textarea>
+  <div class="counter">
+    <span id="wc">0 words</span>
+    <span id="sc">0 sentences</span>
+    <div class="meter" aria-hidden="true"><div id="meterBar"></div></div>
+  </div>
+  <div class="fb" id="wcMsg">Aim for 150 to 350 words.</div>
+  <p style="font-size:.8em;color:#607d8b" id="saveNote">Your writing is saved automatically in this browser as you type.</p>
+
+  <h3>Self-check before you finish ✅</h3>
+  <div class="checklist" id="checklist">
+    <label><input type="checkbox"> My two voices have <strong>different perspectives</strong>: they saw, knew or wanted different things.</label>
+    <label><input type="checkbox"> I wrote at least <strong>four mirrored pairs</strong> of lines with matching patterns.</label>
+    <label><input type="checkbox"> I have at least <strong>three BOTH lines</strong>, and a <strong>refrain</strong> that appears at least twice.</label>
+    <label><input type="checkbox"> My poem has a clear <strong>turn</strong> near the end, and a strong last line.</label>
+    <label><input type="checkbox"> I wove in <strong>three accurate facts</strong>, and I showed every real person and community with respect.</label>
+    <label><input type="checkbox"> I checked <strong>possessive apostrophes</strong>, <strong>capitals for proper nouns</strong> (Arctic, Inuit) and <strong>Canadian spelling</strong> (grey, metre, harbour).</label>
+  </div>
+  <div class="btnrow">
+    <button type="button" class="blue" id="downloadBtn">⬇️ Download my writing (for Dad)</button>
+    <button type="button" class="purple" id="printBtn">🖨️ Print my writing</button>
+    <button type="button" class="grey" id="clearBtn">Start over</button>
+  </div>
+  <div class="fb" id="doneMsg"></div>
+</div>
+
+<div id="scoreBox"><span id="scoreText"></span><span>Two voices, one story, Ace! 🧭❄️</span></div>
+</div>
+
+<div id="printArea"></div>
+
+<script>
+var NAME="Ace";
+var PRAISE=["Nice work, Ace!","Correct! Great editing eye!","Yes! Ace fixed it!","Excellent, poet Ace!","Crystal clear, like Arctic ice! ❄️"];
+function pick(a){return a[Math.floor(Math.random()*a.length)];}
+
+var LABELS=["Contrasting lines", "Shared line (BOTH)", "Refrain", "Sensory detail", "Real fact woven in", "The turn"];
+var LABEL_ITEMS=[
+ {s:"VOICE 1 (ship): \"I was built to break you.\" / VOICE 2 (ice): \"I was made to hold you.\"", a:"Contrasting lines"},
+ {s:"\"Winter always wins.\" (This line appears three times: at the start, in the middle and at the end.)", a:"Refrain"},
+ {s:"BOTH: \"We both hear the wind howl across the strait.\"", a:"Shared line (BOTH)"},
+ {s:"VOICE 2 (ice): \"I creak and crack and squeeze, a sound like a thousand doors slamming.\"", a:"Sensory detail"},
+ {s:"VOICE 1 (ship): \"My steam engine came from a railway locomotive, but it cannot push through you.\"", a:"Real fact woven in"},
+ {s:"VOICE 1 (ship): \"But now my crew has walked away.\" / VOICE 2 (ice): \"And now, at last, I loosen my grip.\"", a:"The turn"}
+];
+var labelScore=0, labelChecked=false;
+function buildLabels(){
+  var box=document.getElementById("labelRows");
+  LABEL_ITEMS.forEach(function(it,i){
+    var d=document.createElement("div"); d.className="row"; d.id="lr"+i;
+    var sel='<select id="ls'+i+'" aria-label="Job of sentence '+(i+1)+'"><option value="">- choose -</option>';
+    LABELS.forEach(function(l){sel+='<option>'+l+'</option>';});
+    sel+='</select>';
+    d.innerHTML='<strong>'+(i+1)+'.</strong> '+it.s+'<br>'+sel+' <span id="lm'+i+'"></span>';
+    box.appendChild(d);
+  });
+}
+function checkLabels(){
+  var sc=0;
+  LABEL_ITEMS.forEach(function(it,i){
+    var ok=document.getElementById("ls"+i).value===it.a; if(ok)sc++;
+    document.getElementById("lr"+i).className="row "+(ok?"right":"wrong");
+    document.getElementById("lm"+i).textContent=ok?"✅":"❌";
+  });
+  labelScore=sc; labelChecked=true;
+  var fb=document.getElementById("labelFb");
+  if(sc===LABEL_ITEMS.length){fb.className="fb good";fb.textContent="🌟 "+sc+" / "+LABEL_ITEMS.length+". "+pick(PRAISE)+" You know exactly how a poem for two voices is built!";}
+  else{fb.className="fb bad";fb.textContent=sc+" / "+LABEL_ITEMS.length+". Hint: two opposite lines side by side = contrasting lines; a line that keeps coming back = refrain; both voices speak together = shared line; sounds, sights or feelings = sensory detail; a true piece of history = real fact; a shift in direction or feeling near the end = the turn.";}
+  updateScore();
+}
+
+var GMC=[
+ {q:"Both ships were trapped. Which word correctly completes the sentence? <em>\"The ____ masts were coated in frost.\"</em>",
+  o:["ships's", "ship's", "ships'", "ships"], a:2,
+  e:"For a <strong>plural</strong> noun that already ends in <em>s</em> (two ships), put the apostrophe <strong>after</strong> the s: <em>ships'</em>. <em>Ship's</em> would mean only one ship."},
+ {q:"Which phrase uses a <strong>possessive apostrophe</strong> correctly?",
+  o:["Lady Franklins letters", "Lady Franklin's letters", "Lady Franklins' letters", "Lady Franklin letter's"], a:1,
+  e:"The letters belong to one person, Lady Franklin, so add <strong>'s</strong>: <em>Lady Franklin's letters</em>."},
+ {q:"Which sentence uses <strong>parallel structure</strong>?",
+  o:["The sailors were cold, hungry and they felt exhausted.", "The sailors were cold, hungry and exhausted.", "The sailors were cold, hunger and exhaustion.", "The sailors were cold, being hungry and to be exhausted."], a:1,
+  e:"<strong>Cold, hungry</strong> and <strong>exhausted</strong> are all adjectives, so the list is parallel. The other choices mix different forms."},
+ {q:"Which sentence uses <strong>capital letters</strong> and the words <strong>Inuk</strong> and <strong>Inuit</strong> correctly?",
+  o:["One inuk hunter told the story, and many inuit remembered it.", "One Inuit hunter told the story, and many Inuk remembered it.", "one Inuk hunter told the story, and many Inuit remembered it in the arctic.", "One Inuk hunter told the story, and many Inuit in the Arctic remembered it."], a:3,
+  e:"<strong>Inuk</strong> = one person, <strong>Inuit</strong> = more than one. Both are proper nouns, and so is <strong>Arctic</strong>, so they all need capitals."},
+ {q:"Which sentence uses <strong>Canadian spelling</strong> correctly?",
+  o:["The gray ice stretched a hundred meters past the harbor where we traveled.", "The grey ice stretched a hundred meters past the harbour where we travelled.", "The gray ice stretched a hundred metres past the harbor where we travelled.", "The grey ice stretched a hundred metres past the harbour where we travelled."], a:3,
+  e:"Canadian spelling: <strong>grey, metres, harbour, travelled</strong> (also colour, centre, neighbour)."}
+];
+var gmcState=GMC.map(function(){return{answered:false,firstRight:false,done:false};});
+function buildGMC(){
+  var box=document.getElementById("gmc");
+  GMC.forEach(function(it,i){
+    var d=document.createElement("div"); d.className="box q"; d.id="g"+i;
+    var h='<div><strong>'+(i+1)+'.</strong> '+it.q+'</div>';
+    it.o.forEach(function(o,j){h+='<button type="button" class="opt" data-i="'+i+'" data-j="'+j+'">'+String.fromCharCode(65+j)+'. '+o+'</button>';});
+    h+='<div class="fb" id="gfb'+i+'"></div>';
+    d.innerHTML=h; box.appendChild(d);
+  });
+  box.addEventListener("click",function(e){
+    var b=e.target.closest?e.target.closest(".opt"):e.target; if(!b||!b.classList.contains("opt"))return;
+    var i=+b.getAttribute("data-i"), j=+b.getAttribute("data-j"), st=gmcState[i], it=GMC[i];
+    if(st.done)return;
+    var ok=j===it.a; if(!st.answered){st.answered=true;st.firstRight=ok;}
+    var fb=document.getElementById("gfb"+i);
+    if(ok){st.done=true;b.classList.add("sel-right");document.getElementById("g"+i).className="box q right";fb.className="fb good";fb.innerHTML="✅ "+pick(PRAISE)+' <span class="explain">'+it.e+'</span>';}
+    else{b.classList.add("sel-wrong");document.getElementById("g"+i).className="box q wrong";fb.className="fb bad";fb.textContent="❌ Not quite, Ace. Look closely and try again.";}
+    updateScore();
+  });
+}
+
+var GFIX=[
+ {bad:"both ships hulls were gray with frost",
+  ok:["Both ships' hulls were grey with frost."],
+  hint:"Capitalize Both. There are two ships, so the possessive is ships' (apostrophe after the s). Use the Canadian spelling grey. End with a period."},
+ {bad:"lady franklin wrote letters gave speeches and paying for ships",
+  ok:["Lady Franklin wrote letters, gave speeches and paid for ships.", "Lady Franklin wrote letters, gave speeches, and paid for ships."],
+  hint:"Lady Franklin is a name, so capitalize both words. Put a comma between items in the series. Keep the list parallel: wrote, gave and paid (not paying). End with a period."},
+ {bad:"an inuit hunter saw the sailors walking across the arctic ice",
+  ok:["An Inuk hunter saw the sailors walking across the Arctic ice."],
+  hint:"Capitalize An. One person is an Inuk (Inuit means more than one). Arctic is a proper noun, so capitalize it. End with a period."}
+];
+
+var gfixState=GFIX.map(function(){return{tries:0,correct:false,firstRight:false};});
+function norm(s){return s.replace(/[\u2018\u2019\u02BC]/g,"'").replace(/[\u201C\u201D]/g,'"').replace(/\s+/g," ").trim();}
+function checkFixAnswer(i,val){var v=norm(val);return GFIX[i].ok.some(function(a){return norm(a)===v;});}
+function buildGFix(){
+  var box=document.getElementById("gfix");
+  GFIX.forEach(function(it,i){
+    var d=document.createElement("div"); d.className="box q"; d.id="f"+i;
+    d.innerHTML='<div><strong>'+(i+1)+'.</strong> Fix: <span class="bad-sent">'+it.bad+'</span></div>'+
+     '<input class="fix" type="text" id="fi'+i+'" autocomplete="off" spellcheck="false" aria-label="Corrected sentence '+(i+1)+'">'+
+     '<div class="btnrow"><button type="button" class="go" data-act="check" data-i="'+i+'">Check</button><button type="button" class="hint" data-act="hint" data-i="'+i+'">Hint 💡</button><button type="button" class="grey" data-act="show" data-i="'+i+'" style="display:none">Show answer</button></div>'+
+     '<div class="fb" id="ffb'+i+'"></div>';
+    box.appendChild(d);
+  });
+  box.addEventListener("click",function(e){
+    var b=e.target; if(b.tagName!=="BUTTON")return;
+    var i=+b.getAttribute("data-i"), act=b.getAttribute("data-act"), fb=document.getElementById("ffb"+i);
+    if(act==="hint"){fb.className="fb";fb.style.color="#5d4037";fb.textContent="💡 "+GFIX[i].hint;return;}
+    fb.style.color="";
+    if(act==="show"){fb.className="fb";fb.innerHTML='Answer: <em>'+GFIX[i].ok[0]+'</em>'+(GFIX[i].ok.length>1?' (other correct versions are accepted too)':'');return;}
+    fixCheck(i);
+  });
+  box.addEventListener("keydown",function(e){if(e.key==="Enter"&&e.target.classList.contains("fix"))fixCheck(+e.target.id.slice(2));});
+}
+function fixCheck(i){
+  var val=document.getElementById("fi"+i).value, fb=document.getElementById("ffb"+i), st=gfixState[i];
+  fb.style.color="";
+  if(!val.trim()){fb.className="fb bad";fb.textContent="Type the corrected sentence first, Ace!";return;}
+  st.tries++;
+  if(checkFixAnswer(i,val)){ if(st.tries===1)st.firstRight=true; st.correct=true; document.getElementById("f"+i).className="box q right"; fb.className="fb good"; fb.textContent="✅ "+pick(PRAISE); }
+  else { st.correct=false; document.getElementById("f"+i).className="box q wrong"; fb.className="fb bad"; fb.textContent="❌ Not quite. Check every capital letter, apostrophe, comma, and spelling. Try again!"; if(st.tries>=2)document.querySelector('#f'+i+' [data-act=show]').style.display="inline-block"; }
+  updateScore();
+}
+
+function updateScore(){
+  var g=0; gmcState.forEach(function(s){if(s.firstRight)g++;});
+  var f=0; gfixState.forEach(function(s){if(s.correct)f++;});
+  var total=LABEL_ITEMS.length+GMC.length+GFIX.length, got=labelScore+g+f;
+  document.getElementById("scoreText").textContent="Score: "+got+" / "+total+"  (labels "+(labelChecked?labelScore:"-")+"/"+LABEL_ITEMS.length+" · grammar A "+g+"/"+GMC.length+" · grammar B "+f+"/"+GFIX.length+")";
+}
+
+var W5=["who","place","facts","senses","feel","closing"];
+function w5Save(){try{localStorage.setItem(KEY+"-5w",JSON.stringify(W5.map(function(k){return document.getElementById("w5"+k).value;})));}catch(e){}}
+function w5Restore(){try{var d=JSON.parse(localStorage.getItem(KEY+"-5w")||"null");if(d)d.forEach(function(x,i){document.getElementById("w5"+W5[i]).value=x;});}catch(e){}}
+function w5Summary(){return W5.map(function(k){return k.charAt(0).toUpperCase()+k.slice(1)+": "+document.getElementById("w5"+k).value;}).join("\n");}
+function addTemplate(){
+  var t=document.getElementById("essay");
+  var tpl="TITLE: ...\nVOICE 1 is: ...   VOICE 2 is: ...\n\nVOICE 1: ...\nVOICE 2: ...\nBOTH: ...\n\nVOICE 1: ...\nVOICE 2: ...\nVOICE 1: ...\nVOICE 2: ...\nBOTH: (refrain) ...\n\nVOICE 1: ...\nVOICE 2: ...\nVOICE 1: ...\nVOICE 2: ...\n\nVOICE 1: (the turn) ...\nVOICE 2: ...\nBOTH: (refrain) ...\n\nNote to Dad: The harder voice to write was ... because ...\n\nby "+NAME;
+  if(t.value.trim()&&!confirm("Add the two-voice layout below what you've already written?"))return;
+  t.value=(t.value.trim()?t.value.replace(/\s+$/,"")+"\n\n":"")+tpl; updateCount(); t.focus();
+}
+var KEY="ace-writing-2026-11-27";
+function countWords(t){var m=t.trim().match(/[A-Za-zÀ-ÿ0-9]+(?:['’\-][A-Za-zÀ-ÿ0-9]+)*/g);return m?m.length:0;}
+function countSentences(t){var m=t.match(/[^.!?]*[A-Za-z0-9][^.!?]*[.!?]+/g);return m?m.length:0;}
+function currentPrompt(){var r=document.querySelector('input[name=prompt]:checked');return r?r.value:"";}
+function updateCount(){
+  var t=document.getElementById("essay").value, w=countWords(t), s=countSentences(t);
+  document.getElementById("wc").textContent=w+(w===1?" word":" words");
+  document.getElementById("sc").textContent=s+(s===1?" sentence":" sentences");
+  var bar=document.getElementById("meterBar"); bar.style.width=Math.min(100,w/350*100)+"%";
+  var msg=document.getElementById("wcMsg");
+  if(w<150){bar.style.background="#ffb300";msg.className="fb";msg.textContent=w===0?"Aim for 150 to 350 words.":"Keep going, Ace! "+(150-w)+" more words to reach the goal.";}
+  else if(w<=350){bar.style.background="#43a047";msg.className="fb good";msg.textContent="🎯 You're in the target zone! Nice work, Ace!";}
+  else{bar.style.background="#1e88e5";msg.className="fb";msg.textContent="Wow, that's a long poem! Poems are strongest when every word earns its place. Could you cut any line that doesn't add a new picture or feeling?";}
+  try{localStorage.setItem(KEY,JSON.stringify({text:t,prompt:currentPrompt(),checks:checkStates()}));}catch(e){document.getElementById("saveNote").textContent="(This browser can't auto-save here, so use the Download button before closing!)";}
+}
+function checkStates(){return Array.prototype.map.call(document.querySelectorAll("#checklist input"),function(c){return c.checked;});}
+function checklistText(){
+  return Array.prototype.map.call(document.querySelectorAll("#checklist label"),function(l){return (l.querySelector("input").checked?"[x] ":"[ ] ")+l.textContent.trim();}).join("\n");
+}
+function buildReport(){
+  var t=document.getElementById("essay").value;
+  return "Writing Week 61: "+NAME+"\nDate: "+new Date().toLocaleString("en-CA")+"\nPrompt: "+currentPrompt()+
+    "\nWords: "+countWords(t)+"   Sentences: "+countSentences(t)+"\nPlanning notes:\n"+w5Summary()+
+    "\n\n----- "+NAME+"'s writing -----\n\n"+t+"\n\n----- Self-check -----\n"+checklistText()+
+    "\n\n----- Parent feedback -----\n\n\n";
+}
+function download(){
+  var t=document.getElementById("essay").value;
+  if(!t.trim()){document.getElementById("doneMsg").className="fb bad";document.getElementById("doneMsg").textContent="Write something first, Ace!";return;}
+  var blob=new Blob([buildReport().replace(/\n/g,"\r\n")],{type:"text/plain;charset=utf-8"});
+  var a=document.createElement("a"); a.href=URL.createObjectURL(blob); a.download=NAME+"-writing-2026-11-27"+".txt";
+  document.body.appendChild(a); a.click();
+  setTimeout(function(){URL.revokeObjectURL(a.href);a.remove();},1000);
+  var dm=document.getElementById("doneMsg"); dm.className="fb good"; dm.textContent="📄 Saved! Look in your Downloads folder and show Dad. Great job finishing, Ace!";
+}
+function esc(s){return s.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");}
+function printIt(){
+  var t=document.getElementById("essay").value;
+  if(!t.trim()){document.getElementById("doneMsg").className="fb bad";document.getElementById("doneMsg").textContent="Write something first, Ace!";return;}
+  document.getElementById("printArea").innerHTML="<h1>Writing Week 61: "+NAME+"</h1><div class='meta'>"+esc(new Date().toLocaleString("en-CA"))+"<br><strong>Prompt:</strong> "+esc(currentPrompt())+"<br>Words: "+countWords(t)+" · Sentences: "+countSentences(t)+"</div><div class='text'>"+esc(t)+"</div><div class='lines'><strong>Self-check:</strong><br>"+esc(checklistText()).replace(/\n/g,"<br>")+"</div><div class='lines'><strong>Parent feedback:</strong><br><br><br><br></div>";
+  window.print();
+}
+function restore(){
+  try{var d=JSON.parse(localStorage.getItem(KEY)||"null"); if(!d)return;
+    document.getElementById("essay").value=d.text||"";
+    Array.prototype.forEach.call(document.querySelectorAll("input[name=prompt]"),function(r){r.checked=(r.value===d.prompt);});
+    if(!document.querySelector("input[name=prompt]:checked"))document.querySelector("input[name=prompt]").checked=true;
+    var cs=document.querySelectorAll("#checklist input"); (d.checks||[]).forEach(function(v,i){if(cs[i])cs[i].checked=v;});
+  }catch(e){}
+}
+buildLabels(); buildGMC(); buildGFix(); restore(); w5Restore(); updateCount(); updateScore();
+W5.forEach(function(k){document.getElementById("w5"+k).addEventListener("input",w5Save);});
+document.getElementById("templateBtn").addEventListener("click",addTemplate);
+document.getElementById("checkLabels").addEventListener("click",checkLabels);
+document.getElementById("essay").addEventListener("input",updateCount);
+document.getElementById("checklist").addEventListener("change",function(){updateCount(); if(checkStates().every(Boolean)){var dm=document.getElementById("doneMsg");dm.className="fb good";dm.textContent="✅ All boxes checked! Now download or print it for Dad. Awesome work, Ace!";}});
+document.getElementById("prompts").addEventListener("change",updateCount);
+document.getElementById("downloadBtn").addEventListener("click",download);
+document.getElementById("printBtn").addEventListener("click",printIt);
+document.getElementById("clearBtn").addEventListener("click",function(){ if(confirm("Erase your writing and start over?")){document.getElementById("essay").value="";Array.prototype.forEach.call(document.querySelectorAll("#checklist input"),function(c){c.checked=false;});document.getElementById("doneMsg").textContent="";updateCount();} });
+</script>
+<script src="../../assets/autosave.js"></script>
+</body>
+</html>

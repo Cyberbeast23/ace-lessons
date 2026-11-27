@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Math (Nov. 27): Lost in the Ice! Arctic Navigator's Math Lab</title>
+<style>
+  body{font-family:"Segoe UI",Verdana,Arial,sans-serif;font-size:20px;line-height:1.6;margin:0;background:#f5f0eb;color:#2c2416}
+  .wrap{max-width:880px;margin:0 auto;padding:20px 18px 80px}
+  a.home{font-size:.9em;color:#bf360c}
+  h1{color:#e65100;font-size:2em;margin:10px 0}
+  h2{color:#ef6c00;margin-top:36px;border-bottom:3px solid #ffcc80;padding-bottom:4px}
+  .box{background:#fff;border-radius:16px;padding:18px 22px;margin:16px 0;box-shadow:0 3px 10px rgba(0,0,0,.07)}
+  .example{border-left:8px solid #ef6c00}
+  .example h3{margin:0 0 6px;color:#e65100}
+  .step{margin:4px 0 4px 10px}
+  code,.mono{font-family:Consolas,"Courier New",monospace;background:#fff3e0;padding:1px 6px;border-radius:5px}
+  .q{border-left:8px solid #90a4ae}
+  .q.right{border-left-color:#43a047;background:#f1f8e9}
+  .q.wrong{border-left-color:#e53935;background:#fff5f5}
+  .qnum{font-weight:bold;color:#e65100}
+  .row{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:10px}
+  input[type=text]{font-size:1.05em;padding:8px 12px;border:2px solid #ffcc80;border-radius:10px;width:190px}
+  input[type=text]:focus{outline:none;border-color:#ef6c00;box-shadow:0 0 0 3px #ffe0b2}
+  button{font-size:.95em;padding:8px 16px;border:none;border-radius:10px;cursor:pointer;font-weight:bold}
+  .check{background:#ef6c00;color:#fff} .check:hover{background:#e65100}
+  .hint{background:#ffe082;color:#5d4037} .hint:hover{background:#ffd54f}
+  .sol{background:#ce93d8;color:#311b92}
+  .unit{color:#546e7a}
+  .fb{margin-top:8px;font-weight:bold;min-height:1em}
+  .fb.good{color:#2e7d32} .fb.bad{color:#c62828}
+  .hints{margin-top:8px;color:#e65100;background:#fff3e0;border-radius:10px;padding:0 12px}
+  .hints p{margin:6px 0;padding:6px 0}
+  .solution{margin-top:8px;background:#f3e5f5;border-radius:10px;padding:8px 12px;display:none}
+  #scoreBox{position:sticky;bottom:0;background:#e65100;color:#fff;border-radius:16px 16px 0 0;padding:12px 20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-top:30px}
+  #scoreBox button{background:#ffca28;color:#3e2723}
+  #final{display:none;font-size:1.15em;text-align:center;border:4px solid #43a047}
+  .tipbox{background:#fff8e1;border-left:8px solid #ffb300}
+</style>
+</head>
+<body>
+<div class="wrap">
+<a class="home" href="../../index.html">&larr; Back to all lessons</a>
+<h1>🧭 Math Week 61: Lost in the Ice! Arctic Navigator's Math Lab</h1>
+<p>Ace, in May 1845, two Royal Navy ships, HMS <em>Erebus</em> and HMS <em>Terror</em>, sailed from England with <strong>129 men</strong> under Sir John Franklin. Their mission: find the <strong>Northwest Passage</strong>, a sea route through the frozen islands of Canada's Arctic. None of them ever came home. For more than 160 years, the ships were lost, until Inuit knowledge and modern sonar finally found them in 2014 and 2016. Today you're an <strong>Arctic navigator and search planner</strong>. You'll use <strong>negative temperatures, counting days across a leap year, percents, map scales, rates, the volume of a cylinder, the mean, compass bearings, search areas, two-step equations, unit conversions (knots to km/h) and the area of a circle</strong>.</p>
+
+<h2>Part 1: Learn the Moves</h2>
+
+<div class="box tipbox">
+  <strong>The 4-Step Problem Solver (a navigator's checklist):</strong>
+  <ol>
+    <li><strong>Read</strong>: What is the question actually asking? Underline the numbers and units (°C, km, m, cm, kg, mL, hours, days, knots).</li>
+    <li><strong>Plan</strong>: Do the units match? Change knots to km/h or cm on a map to km <em>before</em> you calculate.</li>
+    <li><strong>Solve</strong>: Do one step at a time and write each step down.</li>
+    <li><strong>Check</strong>: Is my answer reasonable? Arctic winters are far below zero, and nobody hauls a sledge 100 km in a day!</li>
+  </ol>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 1: Adding and subtracting negative temperatures</h3>
+  <p class="step">Start at −20 °C. Warming 8 degrees means <em>add</em>: −20 + 8 = −12 °C. Then cooling 15 degrees means <em>subtract</em>: −12 − 15 = <strong>−27 °C</strong>. Picture a thermometer: up is warmer, down is colder.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 2: Counting days between dates (watch for leap years!)</h3>
+  <p class="step">From 20 March to 5 May: 11 days left in March (31 − 20), 30 in April, then 5 in May: 11 + 30 + 5 = <strong>46 days</strong>. A <strong>leap year</strong> (like 1848 or 2028) has 29 days in February instead of 28.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 3: Percent of a group</h3>
+  <p class="step">If 12 out of 80 students walk to school, 12 ÷ 80 = 0.15 = <strong>15%</strong>. Part ÷ whole, then × 100.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 4: Map scales</h3>
+  <p class="step">If 1 cm on a map stands for 20 km, then 7.5 cm stands for 7.5 × 20 = <strong>150 km</strong>.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 5: Rates: how long will it take?</h3>
+  <p class="step">Time = distance ÷ speed. Walking 60 km at 4 km per day takes 60 ÷ 4 = <strong>15 days</strong>.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 6: Percent decrease, then share</h3>
+  <p class="step">Remove 20% of a 500 kg load: 500 × 0.80 = 400 kg left. Shared by 8 people: 400 ÷ 8 = <strong>50 kg each</strong>.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 7: Volume of a cylinder</h3>
+  <p class="step">V = π × r × r × h. A can with radius 4 cm and height 10 cm: 3.14 × 4 × 4 × 10 = <strong>502.4 cm³</strong>. Since 1 cm³ = 1 mL, it holds 502.4 mL.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 8: The mean of negative numbers</h3>
+  <p class="step">Mean of −10, −14 and −6: add them (−30), then divide by 3: <strong>−10</strong>. The mean of negatives is still negative.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 9: Compass bearings</h3>
+  <p class="step">Bearings are measured <em>clockwise</em> from north: north = 0°, east = 90°, south = 180°, west = 270°. Heading west (270°) and turning 40° toward <em>north</em> means turning clockwise: 270 + 40 = <strong>310°</strong>.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 10: Area swept by a moving strip</h3>
+  <p class="step">A strip 0.5 km wide moving 6 km covers a rectangle 0.5 × 6 = <strong>3 km²</strong>. Make sure both lengths are in the same unit (200 m = 0.2 km).</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 11: Two-step equations</h3>
+  <p class="step">"500 plus 300 times a number is 2 900" means 500 + 300n = 2 900. Undo in reverse order: 2 900 − 500 = 2 400, then 2 400 ÷ 300 = <strong>8</strong>.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 12: Knots to kilometres per hour</h3>
+  <p class="step">Sailors measure speed in <strong>knots</strong>. 1 knot = 1.852 km/h, so 10 knots = 18.52 km/h, and in 2 hours a ship travels 18.52 × 2 = <strong>37.04 km</strong>.</p>
+</div>
+
+<div class="box example">
+  <h3>Worked Example 13: Area of a circle</h3>
+  <p class="step">A = π × r × r. A circle with diameter 4 m has radius 2 m, so A = 3.14 × 2 × 2 = <strong>12.56 m²</strong>. Don't forget to halve the diameter first!</p>
+</div>
+
+<h2>Part 2: The Challenge (15 problems)</h2>
+<p>Type your answer and press <strong>Check</strong> (or Enter). Negative numbers like <span class="mono">-35</span>, fractions like <span class="mono">3/4</span>, mixed numbers like <span class="mono">1 3/4</span>, or decimals like <span class="mono">1.75</span> are fine. Don't type the units or % signs, and you may use spaces or commas in big numbers (1 000 000). Stuck? Press <strong>Hint</strong>. After 2 tries, you can see a full solution.</p>
+
+<div id="questions"></div>
+<div class="box" id="final"></div>
+<div id="scoreBox">
+  <span id="scoreText">Score: 0 / 15 correct</span>
+  <button id="finishBtn" type="button">I'm done! Show my final score</button>
+</div>
+</div>
+
+<script>
+var NAME = "Ace";
+var TABLE = '';
+var QUESTIONS = [
+ {t:"The Franklin expedition spent its first winter (1845–46) frozen in beside <strong>Beechey Island</strong>. Suppose one January morning was <strong>−38 °C</strong>. By the afternoon it warmed up by <strong>11 °C</strong>, and then overnight it dropped by <strong>19 °C</strong>. What was the temperature overnight?", a:"-46", u:"°C",
+  h:["Warming means add: −38 + 11 = −27.","Cooling means subtract: −27 − 19 = ?"],
+  s:"−38 + 11 = −27 °C. −27 − 19 = −46 °C. At temperatures like that, bare skin can freeze in minutes."},
+ {t:"Sir John Franklin died aboard the <em>Erebus</em> on <strong>11 June 1847</strong>. The crews abandoned both ships on <strong>22 April 1848</strong>. How many days apart are those two dates? (Careful: 1848 was a <strong>leap year</strong>!)", a:"316", u:"days",
+  h:["June has 30 days, so 19 days are left after 11 June. Then add July through March: 31 + 31 + 30 + 31 + 30 + 31 + 31 + 29 + 31.","Don't forget February 1848 has 29 days. Finish with 22 days in April."],
+  s:"19 (June) + 31 + 31 + 30 + 31 + 30 + 31 + 31 + 29 (leap-year February!) + 31 + 22 (April) = 316 days."},
+ {t:"A note left in a stone pile (a <strong>cairn</strong>) at Victory Point said that by April 1848, <strong>24</strong> of the expedition's <strong>129</strong> men had already died. What <strong>percent</strong> of the men had died? Round to the nearest tenth.", a:"18.6", u:"%",
+  h:["Part ÷ whole: 24 ÷ 129.","24 ÷ 129 ≈ 0.18605. Multiply by 100 and round to one decimal place."],
+  s:"24 ÷ 129 ≈ 0.186 05 → 18.6%. That was before the 105 survivors even began their long walk south."},
+ {t:"The 105 survivors planned to walk south toward the Back River. On Ace's map, where <strong>1 cm = 25 km</strong>, the planned route measures <strong>13.6 cm</strong>. How many kilometres long is the real route?", a:"340", u:"km",
+  h:["Each centimetre stands for 25 km.","13.6 × 25 = ?"],
+  s:"13.6 × 25 = 340 km, about the driving distance from Vancouver to Kamloops, but on foot over ice and rock."},
+ {t:"Pulling heavy sledges and boats over rough ice, the men might have covered only about <strong>2.5 km per day</strong>. At that rate, how many days would the 340 km route take?", a:"136", u:"days",
+  h:["Time = distance ÷ speed.","340 ÷ 2.5 = 3 400 ÷ 25."],
+  s:"340 ÷ 2.5 = 136 days, more than four months. The men were already weak from sickness and hunger, which helps explain why none of them made it."},
+ {t:"Searchers later found a ship's boat mounted on a sledge, loaded with heavy objects such as books, silverware and tools. Suppose a loaded sledge had a mass of <strong>630 kg</strong> and the men threw away <strong>15%</strong> of the load. If <strong>7 men</strong> shared the pulling equally, how many kilograms did each man pull?", a:"76.5", u:"kg",
+  h:["After removing 15%, 85% is left: 630 × 0.85.","630 × 0.85 = 535.5 kg. Now divide by 7."],
+  s:"630 × 0.85 = 535.5 kg. 535.5 ÷ 7 = 76.5 kg per man, roughly the mass of a grown adult, dragged over ice every single day."},
+ {t:"The ships carried thousands of tins of preserved food. Suppose one tin was a cylinder with a <strong>diameter of 10 cm</strong> and a <strong>height of 12 cm</strong>. How many <strong>millilitres</strong> could it hold? (Use π ≈ 3.14, and 1 cm³ = 1 mL.)", a:"942", u:"mL",
+  h:["The radius is half the diameter: 5 cm.","V = 3.14 × 5 × 5 × 12."],
+  s:"r = 5 cm. V = 3.14 × 25 × 12 = 942 cm³ = 942 mL. Some scientists think lead from the solder used to seal tins like these may have poisoned the crews, but others disagree."},
+ {t:"A Victorian sailor's weather log recorded these temperatures at noon on five January days: <strong>−34 °C, −41 °C, −29 °C, −37 °C</strong> and <strong>−44 °C</strong>. What was the <strong>mean</strong> noon temperature?", a:"-37", u:"°C",
+  h:["Add all five: (−34) + (−41) + (−29) + (−37) + (−44).","The sum is −185. Divide by 5."],
+  s:"−34 − 41 − 29 − 37 − 44 = −185. −185 ÷ 5 = −37 °C."},
+ {t:"In 2014, the wreck of HMS <em>Erebus</em> was found in about <strong>11 m</strong> of water. In 2016, HMS <em>Terror</em> was found in about <strong>24 m</strong> of water. If a Parks Canada diver descends at <strong>0.5 m per second</strong>, how many <strong>more seconds</strong> does it take to reach <em>Terror</em> than <em>Erebus</em>?", a:"26", u:"seconds",
+  h:["Find the difference in depth first: 24 − 11 = 13 m.","13 ÷ 0.5 = ?"],
+  s:"24 − 11 = 13 m. 13 ÷ 0.5 = 26 more seconds. (You could also find 48 s − 22 s = 26 s.)"},
+ {t:"To search the sea floor, a boat tows a sonar device that \"sees\" a strip <strong>200 m wide</strong>. If the boat travels at <strong>9 km/h</strong> for a <strong>10-hour</strong> day, how many <strong>square kilometres</strong> of sea floor can it search?", a:"18", u:"km²",
+  h:["Change 200 m to kilometres: 0.2 km. Distance travelled = 9 × 10 = 90 km.","Area = width × length = 0.2 × 90."],
+  s:"200 m = 0.2 km. 9 × 10 = 90 km. 0.2 × 90 = 18 km² in one day. Arctic summers are short, so every search day counts!"},
+ {t:"Searchers divided a bay into <strong>60</strong> equal squares. Without any clues, each square has the same chance of hiding the wreck. Then Inuit testimony about where a ship sank narrowed the search to just <strong>12</strong> of those squares. How many <strong>times more likely</strong> is one of those 12 squares to hold the wreck than a square chosen with no clues at all?", a:"5", u:"times",
+  h:["Without clues, the chance for one square is 1/60. With the clues, it is 1/12.","How many times bigger is 1/12 than 1/60? Divide: 60 ÷ 12."],
+  s:"1/12 ÷ 1/60 = 60/12 = 5 times more likely. Good information doesn't just help a little. It multiplies your chances!"},
+ {t:"In 1845, the North Magnetic Pole was very close to where Franklin's ships were trapped, so magnetic compasses barely worked, and navigators had to use the sun and stars. A ship heading due west (bearing <strong>270°</strong>) turns <strong>35°</strong> toward the <strong>south</strong>. What is its new bearing?", a:"235", u:"°",
+  h:["Bearings go clockwise from north: south is 180°, west is 270°.","Turning from west toward south means moving back toward 180°, so subtract: 270 − 35."],
+  s:"270 − 35 = 235°. It's between south (180°) and west (270°), which makes sense: the ship now heads southwest-ish."},
+ {t:"Franklin's wife, Lady Jane Franklin, paid for her own search ships. Suppose one search cost <strong>£2 000</strong> for supplies plus <strong>£1 500 for each month</strong> at sea, and the total was <strong>£14 000</strong>. How many months did the search last? (Write and solve an equation.)", a:"8", u:"months",
+  h:["Equation: 2 000 + 1 500m = 14 000.","Subtract 2 000 first: 1 500m = 12 000. Then divide by 1 500."],
+  s:"2 000 + 1 500m = 14 000 → 1 500m = 12 000 → m = 8 months. Check: 2 000 + 1 500 × 8 = 14 000. ✓"},
+ {t:"The <em>Erebus</em> and <em>Terror</em> had steam engines that could push them along at about <strong>4 knots</strong> in calm, open water. If <strong>1 knot = 1.852 km/h</strong>, how many kilometres could a ship travel in <strong>5 hours</strong> at that speed?", a:"37.04", u:"km",
+  h:["First change knots to km/h: 4 × 1.852 = 7.408 km/h.","Then multiply by 5 hours."],
+  s:"4 × 1.852 = 7.408 km/h. 7.408 × 5 = 37.04 km. A modern icebreaker can push through ice that would have trapped the <em>Erebus</em> for good."},
+ {t:"Inuit families in the Arctic have long built <strong>snow houses</strong> (iglus) that stay far warmer inside than the air outside. Suppose an iglu has a circular floor with a <strong>diameter of 3.6 m</strong>. What is the area of the floor? Round to the nearest tenth. (Use π ≈ 3.14.)", a:"10.2", u:"m²",
+  h:["The radius is half of 3.6 m: 1.8 m.","A = 3.14 × 1.8 × 1.8 = 3.14 × 3.24."],
+  s:"r = 1.8 m. A = 3.14 × 3.24 = 10.1736 ≈ 10.2 m². Inuit knowledge of snow, ice, hunting and travel let people thrive in the same Arctic where the expedition failed."}
+];
+
+var PRAISE = ["Nice work, Ace!","Correct! Navigator Ace is on course! 🧭","Yes! You cut right through that problem like an icebreaker!","Excellent, Ace. That was a tough one!","Right on target! 🎯","Brilliant thinking, Ace!","Ice-cold accuracy, Ace! ❄️"];
+var ENCOURAGE = ["Not quite. Check your steps and try again!","Close call. Try again, Ace! Maybe use a hint?","Hmm, not yet. Re-read the question carefully.","Keep going, Ace. Mistakes help your brain grow!"];
+
+function parseAnswer(str){
+  if(str===undefined||str===null) return NaN;
+  var s=String(str).trim().toLowerCase();
+  s=s.replace(/[\u2212\u2013]/g,"-");
+  s=s.replace(/(\d),(?=\d{3}(\D|$))/g,"$1");
+  s=s.replace(/[^0-9.\/\- ]/g," ").replace(/\s+/g," ").trim();
+  s=s.replace(/\s*\/\s*/g,"/");
+  var m;
+  if((m=s.match(/^(-?\d+) (\d+)\/(\d+)$/))){ var w=parseFloat(m[1]),n=parseFloat(m[2]),d=parseFloat(m[3]); if(d===0)return NaN; return w<0? w-n/d : w+n/d; }
+  if((m=s.match(/^(-?\d+(?:\.\d+)?)\/(\d+(?:\.\d+)?)$/))){ var d2=parseFloat(m[2]); if(d2===0)return NaN; return parseFloat(m[1])/d2; }
+  s=s.replace(/ /g,"");
+  if(/^-?(\d+\.?\d*|\.\d+)$/.test(s)) return parseFloat(s);
+  return NaN;
+}
+function isCorrect(input,key){
+  var a=parseAnswer(input), k=parseAnswer(key);
+  if(isNaN(a)) return false;
+  var isInt=Math.abs(k-Math.round(k))<1e-12;
+  var tol=isInt?1e-9:0.005;
+  return Math.abs(a-k)<=tol;
+}
+
+function isRomanCorrect(input,key){ return String(input).replace(/\s+/g,"").toUpperCase()===key; }
+var state=[];
+function render(){
+  var box=document.getElementById("questions");
+  QUESTIONS.forEach(function(q,i){
+    state.push({correct:false,tries:0,hints:0});
+    var d=document.createElement("div");
+    d.className="box q"; d.id="q"+i;
+    d.innerHTML='<div><span class="qnum">'+(i+1)+'.</span> '+q.t+'</div>'+
+      '<div class="row"><input type="text"'+(q.r?' placeholder="e.g. MMXXVI"':'')+' id="in'+i+'" aria-label="Answer to question '+(i+1)+'" autocomplete="off"> <span class="unit">'+q.u+'</span>'+
+      '<button type="button" class="check" data-i="'+i+'">Check</button>'+
+      '<button type="button" class="hint" data-i="'+i+'">Hint 💡</button>'+
+      '<button type="button" class="sol" data-i="'+i+'" style="display:none">Show solution</button></div>'+
+      '<div class="fb" id="fb'+i+'"></div><div class="hints" id="hints'+i+'"></div>'+
+      '<div class="solution" id="sol'+i+'"><strong>Solution:</strong> '+q.s+'</div>';
+    box.appendChild(d);
+  });
+  box.addEventListener("click",function(e){
+    var b=e.target; if(b.tagName!=="BUTTON")return;
+    var i=+b.getAttribute("data-i");
+    if(b.className==="check") check(i);
+    else if(b.className==="hint") hint(i);
+    else if(b.className==="sol") document.getElementById("sol"+i).style.display="block";
+  });
+  box.addEventListener("keydown",function(e){
+    if(e.key==="Enter"&&e.target.tagName==="INPUT"){ check(+e.target.id.slice(2)); }
+  });
+}
+function pick(arr){return arr[Math.floor(Math.random()*arr.length)];}
+function check(i){
+  var val=document.getElementById("in"+i).value;
+  var fb=document.getElementById("fb"+i), card=document.getElementById("q"+i);
+  if(val.trim()===""){fb.className="fb bad";fb.textContent="Type an answer first, Ace!";return;}
+  var isR=!!QUESTIONS[i].r;
+  if(isR&&!/^[ivxlcdm\s]+$/i.test(val)){fb.className="fb bad";fb.textContent="Use only Roman numeral letters: I, V, X, L, C, D, M.";return;}
+  if(!isR&&isNaN(parseAnswer(val))){fb.className="fb bad";fb.textContent="I can't read that as a number. Try something like 42, 3.5, 3/4 or 1 3/4.";return;}
+  state[i].tries++;
+  if(isR?isRomanCorrect(val,QUESTIONS[i].a):isCorrect(val,QUESTIONS[i].a)){
+    state[i].correct=true; card.className="box q right"; fb.className="fb good";
+    fb.textContent="✅ "+pick(PRAISE)+(state[i].tries===1?" (first try!)":"");
+  } else {
+    state[i].correct=false; card.className="box q wrong"; fb.className="fb bad";
+    fb.textContent="❌ "+pick(ENCOURAGE);
+    if(state[i].tries>=2) card.querySelector(".sol").style.display="inline-block";
+  }
+  updateScore();
+}
+function hint(i){
+  var q=QUESTIONS[i], s=state[i], hb=document.getElementById("hints"+i);
+  if(s.hints<q.h.length){
+    var p=document.createElement("p"); p.textContent="💡 Hint "+(s.hints+1)+": "+q.h[s.hints]; hb.appendChild(p); s.hints++;
+  }
+  if(s.hints>=q.h.length) document.querySelector("#q"+i+" .hint").disabled=true;
+  updateScore();
+}
+function counts(){
+  var c=0,first=0,h=0;
+  state.forEach(function(s){ if(s.correct){c++; if(s.tries===1)first++;} h+=s.hints; });
+  return {correct:c,first:first,hints:h};
+}
+function updateScore(){
+  var k=counts();
+  document.getElementById("scoreText").textContent="Score: "+k.correct+" / "+QUESTIONS.length+" correct · hints used: "+k.hints;
+}
+function finish(){
+  var k=counts(), n=QUESTIONS.length, pct=Math.round(100*k.correct/n);
+  var msg;
+  if(pct===100) msg="🏆 PERFECT SCORE! Incredible work, Ace. You'd be chief navigator of the whole Arctic search!";
+  else if(pct>=85) msg="🌟 Outstanding, Ace! That's a Grade 6–7 level performance!";
+  else if(pct>=65) msg="💪 Great effort, Ace! Review the ones you missed and try them again.";
+  else if(pct>=40) msg="👍 Good start, Ace! These problems are tough. Use the hints and solutions to learn the tricks, then try again.";
+  else msg="🌱 These are challenge problems, well above grade level. Every great scientist started as a beginner! Go through the worked examples and try again, Ace!";
+  var f=document.getElementById("final");
+  f.style.display="block";
+  f.innerHTML="<h2 style='border:none;margin-top:0'>Final Score: "+k.correct+" / "+n+" ("+pct+"%)</h2>"+
+    "<p>Correct on the first try: "+k.first+" · Hints used: "+k.hints+"</p><p>"+msg+"</p>"+
+    "<p style='font-size:.85em;color:#546e7a'>Finished on "+new Date().toLocaleString("en-CA")+"</p>";
+  f.scrollIntoView({behavior:"smooth"});
+}
+render();
+updateScore();
+document.getElementById("finishBtn").addEventListener("click",finish);
+</script>
+<script src="../../assets/autosave.js"></script>
+</body>
+</html>
