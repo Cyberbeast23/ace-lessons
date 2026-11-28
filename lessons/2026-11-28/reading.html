@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reading (Nov. 28): From Bean to Bar: The Long, Surprising Journey of Chocolate</title>
+<style>
+  body{font-family:"Segoe UI",Verdana,Arial,sans-serif;font-size:20px;line-height:1.65;margin:0;background:#f5f0eb;color:#2c2416}
+  .wrap{max-width:880px;margin:0 auto;padding:20px 18px 80px}
+  a.home{font-size:.9em;color:#bf360c}
+  h1{color:#e65100;font-size:2em;margin:10px 0}
+  h2{color:#ef6c00;margin-top:36px;border-bottom:3px solid #ffcc80;padding-bottom:4px}
+  .box{background:#fff;border-radius:16px;padding:18px 22px;margin:16px 0;box-shadow:0 3px 10px rgba(0,0,0,.07)}
+  .passage{font-family:Georgia,"Times New Roman",serif;font-size:1.1em;line-height:1.8}
+  .passage h3{text-align:center;font-family:"Segoe UI",Verdana,sans-serif;color:#e65100;font-size:1.4em;margin:4px 0 14px}
+  .passage p{text-indent:1.5em;margin:0 0 14px}
+  mark.v{background:#fff59d;padding:0 3px;border-radius:4px;font-weight:bold}
+  .tipbox{background:#fff8e1;border-left:8px solid #ffb300}
+  .q{border-left:8px solid #ffcc80}
+  .q.right{border-left-color:#43a047;background:#f1f8e9}
+  .q.wrong{border-left-color:#e53935;background:#fff5f5}
+  .tag{display:inline-block;font-size:.7em;background:#ef6c00;color:#fff;border-radius:8px;padding:1px 8px;margin-left:6px;vertical-align:middle}
+  .opt{display:block;width:100%;text-align:left;font-size:.95em;background:#fafafa;border:2px solid #e0e0e0;border-radius:10px;padding:8px 14px;margin:8px 0;cursor:pointer;font-family:inherit}
+  .opt:hover{border-color:#ffb74d;background:#fff}
+  .opt.sel-right{background:#c8e6c9;border-color:#43a047}
+  .opt.sel-wrong{background:#ffcdd2;border-color:#e53935}
+  .fb{margin-top:6px;font-weight:bold}
+  .fb.good{color:#2e7d32} .fb.bad{color:#c62828}
+  .explain{color:#e65100;font-weight:normal}
+  select{font-size:.95em;padding:6px 8px;border-radius:8px;border:2px solid #ffb74d;max-width:100%;font-family:inherit}
+  .vrow{display:flex;flex-wrap:wrap;align-items:center;gap:10px;padding:8px 6px;border-bottom:1px dashed #eee}
+  .vrow .w{font-weight:bold;min-width:140px}
+  .vrow.right{background:#f1f8e9} .vrow.wrong{background:#fff5f5}
+  .mark{font-size:1.2em;min-width:30px}
+  button.main{font-size:1em;padding:10px 20px;border:none;border-radius:10px;cursor:pointer;font-weight:bold;background:#ef6c00;color:#fff;margin-top:10px}
+  button.main:hover{background:#e65100}
+  button.sec{font-size:.95em;padding:8px 16px;border:none;border-radius:10px;cursor:pointer;font-weight:bold;background:#ffe082;color:#5d4037}
+  textarea{width:100%;box-sizing:border-box;font-size:1em;font-family:inherit;padding:10px;border:2px solid #ffb74d;border-radius:10px;min-height:120px}
+  #model{display:none;background:#fff3e0;border-radius:10px;padding:10px 14px;margin-top:10px}
+  #scoreBox{position:sticky;bottom:0;background:#e65100;color:#fff;border-radius:16px 16px 0 0;padding:12px 20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-top:30px}
+  #scoreBox button{font-size:.95em;padding:8px 16px;border:none;border-radius:10px;cursor:pointer;font-weight:bold;background:#ffca28;color:#3e2723}
+  #final{display:none;text-align:center;border:4px solid #43a047;font-size:1.1em}
+</style>
+</head>
+<body>
+<div class="wrap">
+<a class="home" href="../../index.html">&larr; Back to all lessons</a>
+<h1>📖 Reading Week 62: From Bean to Bar: The Long, Surprising Journey of Chocolate</h1>
+
+<div class="box tipbox">
+  <strong>Before you read, Ace:</strong> Yesterday you compared perspectives. Today's skill is one that strong readers use without even noticing, until a text gets hard: <strong>monitoring your comprehension and using fix-up strategies</strong>. Good readers keep checking, "Does this make sense?" When everything makes sense, it's a <strong>click</strong> 👍. When a word, sentence or idea stops your understanding, it's a <strong>clunk</strong> 🔧. A clunk isn't a failure. It's a signal to slow down and use a tool from the fix-up toolbox:
+  <ul>
+    <li><strong>🔁 Reread:</strong> go back and read the sentence (or the sentence before it) again, more slowly.</li>
+    <li><strong>⏩ Read on:</strong> sometimes the next sentence explains the hard one. Keep going a little, then come back.</li>
+    <li><strong>🔍 Use context clues:</strong> look for a definition, an example, a comparison or a contrast near the hard word ("<em>…the nibs, or broken pieces of bean…</em>").</li>
+    <li><strong>✂️ Break the word apart:</strong> look for a prefix, root or suffix you know (<em>de- + forest + -ation</em>).</li>
+    <li><strong>🖼️ Picture it:</strong> make a movie in your mind, or sketch a quick diagram of a process.</li>
+    <li><strong>❓ Ask and paraphrase:</strong> ask, "What is this paragraph mostly about?" and say it in your own words. If you can't, that's a clunk!</li>
+    <li><strong>Clunk checks:</strong> today's passage has three brown 🔧 boxes. When you reach one, stop and check: click or clunk? Which fix-up tool would help?</li>
+    <li><strong>Word detective:</strong> Latin <strong>cultus</strong> = "tilled, cared for," so to <strong>cultivate</strong> a plant is to grow it with care · Latin <strong>cupere</strong> = "to desire," so something <strong>coveted</strong> is strongly desired · Latin <strong>metus</strong> = "fear," so a <strong>meticulous</strong> person is so careful it's almost as if they fear making a mistake · Latin <strong>sustinere</strong> = "to hold up," so a <strong>sustainable</strong> way of farming can keep going for a long time</li>
+    <li><strong>Words in <mark class="v">yellow</mark></strong> are vocabulary words. Use the sentence around them (the <em>context</em>) to figure out what they mean.</li>
+  </ul>
+</div>
+
+<div class="box passage" id="passage">
+<h3>From Bean to Bar: The Long, Surprising Journey of Chocolate</h3>
+<p>Break a piece off a chocolate bar and listen. That sharp <em>snap</em> is the sound of thousands of years of history, a long chain of farmers and traders, and some surprisingly tricky chemistry. Before chocolate was a bar, it was a drink. Before it was a drink, it was a bitter seed hidden inside a strange, football-shaped fruit. And before anyone tasted it, it grew on a small tree in the rainforests of South America.</p>
+<p><strong>A drink fit for the gods.</strong> Scientists studying ancient pottery in Ecuador have found traces of cacao that are more than 5 000 years old, so people there were using it very long ago. Later, the Olmec, the Maya and other peoples of Mesoamerica (today's Mexico and Central America) <mark class="v">cultivated</mark> cacao trees in their gardens and forests. The Maya roasted and ground the seeds, mixed them with water, maize and chili peppers, and poured the drink from one cup to another, held high, to build a thick foam. It was bitter, spicy and nothing like a modern candy bar. The Aztecs, who ruled a great empire in the highlands of Mexico, could not grow cacao in their cool mountain valleys, so they collected the beans as <em>tribute</em>, a kind of tax paid by the peoples they had conquered. Cacao beans were so valuable that the Aztecs used them as money. Centuries later, a Swedish scientist gave the tree its official name: <em>Theobroma cacao</em>, from Greek words meaning "food of the gods."</p>
+<p><strong>Sugar crosses the ocean.</strong> In the 1500s, Spanish invaders brought cacao back to Spain. Europeans found the drink too bitter, so they added sugar, cinnamon and vanilla and served it hot. Over the next two hundred years, hot chocolate became a <mark class="v">coveted</mark> treat in the palaces of Spain, France and England. Only the rich could afford it. To grow enough cacao for Europe's appetite, colonists set up plantations in the Caribbean and South America and forced enslaved Africans to work on them. The sweet drink had a bitter history.</p>
+<p style="text-indent:0;border:2px dashed #6d4c41;background:#efebe9;border-radius:10px;padding:6px 12px;margin:4px 0 16px;font-family:'Segoe UI',Verdana,sans-serif;font-size:.8em">🔧 <strong>Clunk check #1:</strong> Did the word <em>tribute</em> clunk for you? Reread the sentence. The author gave a context clue right after the comma. What does it mean? Then paraphrase this section in one sentence: how did chocolate change when it reached Europe?</p>
+<p><strong>A tree that grows its fruit on its trunk.</strong> Cacao trees are fussy. They grow only in a hot, rainy belt within about 20° of the equator, and they prefer the shade of taller rainforest trees. Their tiny white flowers sprout straight out of the trunk and thick branches, not from the tips of twigs, so the ripe pods look as if someone stuck rugby balls onto the bark. The flowers are pollinated mainly by midges, flies so small you could barely see one on your fingernail. Each pod holds about 30 to 50 seeds, the "beans," packed in a sweet, white, slimy pulp. Farmers cut the pods open with machetes, scoop out the beans and pile them under banana leaves. For about a week, yeasts and bacteria feed on the pulp, and the pile grows hot. This <em>fermentation</em> changes chemicals inside the beans and creates the first hints of chocolate flavour. Without it, no amount of sugar could make a good bar. Then the beans are spread out to dry in the sun before they are shipped to factories around the world.</p>
+<p><strong>The factory: roast, crack, grind.</strong> At the factory, the beans are roasted, which deepens their flavour, the way toasting does to bread. Then machines crack them and blow away the papery shells, a step called <em>winnowing</em>, leaving broken pieces of bean called <em>nibs</em>. When nibs are ground, the heat of grinding melts their fat, and they turn into a thick, runny brown paste called <em>cocoa liquor</em>. (Despite its name, it contains no alcohol at all.) Cocoa liquor is made of two parts: dark, flavourful <em>cocoa solids</em> and a pale yellow fat called <em>cocoa butter</em>. In 1828, a Dutch chemist named Coenraad van Houten invented a press that could squeeze most of the cocoa butter out, leaving a cake that could be crushed into cocoa powder. By 1847, a British company called J. S. Fry &amp; Sons had worked out that if you mixed cocoa butter back in with sugar and cocoa, you could pour the mixture into a mould and make a solid bar you could eat. In 1875, the Swiss chocolatier Daniel Peter added milk, and milk chocolate was born. Four years later, another Swiss maker, Rodolphe Lindt, invented the <em>conche</em>, a machine that stirred warm chocolate for days and turned a gritty bar into a smooth one. Each invention <mark class="v">revolutionized</mark> the way people ate chocolate.</p>
+<p><strong>Why chocolate snaps.</strong> Here is where chocolate becomes a science puzzle. When melted cocoa butter cools and hardens, its fat molecules stack up into crystals, much as bricks can be stacked into many different walls. Cocoa butter can form six different crystal types, and only one of them, which scientists call Form V, gives chocolate a glossy shine, a crisp snap and a smooth melt on your tongue. The other forms make chocolate dull, soft or crumbly. To get Form V, chocolatiers <em>temper</em> the chocolate: they heat it until every crystal melts, cool it while stirring so a few crystals begin to form, and then warm it very slightly so that only the good Form V crystals survive. These "seed" crystals then guide the rest of the chocolate to stack the same way. The process is <mark class="v">meticulous</mark>: a difference of just one or two degrees can ruin a batch. If a bar gets too warm in a hot car and then cools again, the crystals rearrange, and grey-white streaks called <em>bloom</em> appear. The bar is still safe to eat, but it has lost its snap.</p>
+<p style="text-indent:0;border:2px dashed #6d4c41;background:#efebe9;border-radius:10px;padding:6px 12px;margin:4px 0 16px;font-family:'Segoe UI',Verdana,sans-serif;font-size:.8em">🔧 <strong>Clunk check #2:</strong> This was the hardest paragraph so far. Click or clunk? Try <em>Picture it</em>: sketch three boxes for the tempering steps (heat → cool while stirring → warm slightly). Then <em>Ask and paraphrase</em>: why does a chocolatier care which crystals form?</p>
+<p><strong>The bitter side of sweet.</strong> Today, the world grows about five million tonnes of cacao a year, and roughly 60 percent of it comes from just two countries in West Africa: Côte d'Ivoire and Ghana. Most of it is grown on small family farms. Yet many cacao farmers earn only a tiny share of what a chocolate bar costs in a Canadian store, often a few cents per bar. Because farm families are so poor, many children work on cacao farms instead of going to school, sometimes doing dangerous jobs with machetes and chemical sprays. This <mark class="v">exploitation</mark> has been reported for more than twenty years, and big chocolate companies have promised again and again to end it. The environment pays too: in some regions, rainforests have been cut down to plant more cacao, a problem called <em>deforestation</em>. In 2024, heavy rains, drought and a plant disease that spreads among cacao trees shrank the harvest, and cacao prices around the world shot to record highs.</p>
+<p style="text-indent:0;border:2px dashed #6d4c41;background:#efebe9;border-radius:10px;padding:6px 12px;margin:4px 0 16px;font-family:'Segoe UI',Verdana,sans-serif;font-size:.8em">🔧 <strong>Clunk check #3:</strong> Did <em>deforestation</em> clunk? Break it apart: <em>de-</em> (remove) + <em>forest</em> + <em>-ation</em> (the process of). Now check your understanding: name two problems this section describes, one for people and one for the environment.</p>
+<p><strong>A better bar?</strong> Some farmers and companies are trying a different way. Fair-trade programs promise farmers a minimum price and extra money for schools and clean water. In <em>agroforestry</em>, cacao is planted in the shade of taller trees, the way it grows in the wild, which protects the soil, gives birds and midges a home and can keep a farm healthy for generations. Scientists are breeding cacao trees that resist disease, and some small "bean-to-bar" chocolate makers buy directly from farmers and print the farm's name on the wrapper. None of these ideas is perfect yet, but together they point toward a more <mark class="v">sustainable</mark> future, one in which the people who grow chocolate can enjoy a good life too.</p>
+<p>So the next time you hear that <em>snap</em>, think about the journey: a midge visiting a flower on a tree trunk, a week of warm fermentation in a pile of pulp, a factory full of grinders and conches, crystals stacking like perfect bricks, and a farmer thousands of kilometres away who deserves a fair share of the treat.</p>
+<p style="text-indent:0;font-size:.8em;color:#546e7a;text-align:right">About 1 400 words, including three clunk checks.</p>
+</div>
+
+<h2>Part 1: Comprehension</h2>
+<p>Click the best answer. You'll find out right away if you're correct. Only your <strong>first click</strong> counts toward your score, but you can keep trying to find the right answer.</p>
+<div id="mc"></div>
+
+<h2>Part 2: Think Deeper (not scored)</h2>
+<div class="box">
+  <p><strong>Be your own reading coach!</strong> Think about the <strong>biggest clunk</strong> you hit in today's passage. It might be a word (like <em>conche</em> or <em>bloom</em>), a sentence, or a whole idea (like how tempering works). In three to five sentences: <strong>(1)</strong> name the clunk and where it was, <strong>(2)</strong> tell which fix-up strategy you used (reread, read on, context clues, break the word apart, picture it, or ask and paraphrase), and <strong>(3)</strong> explain the clunk in <strong>your own words</strong> now that it clicks. If nothing clunked, pick the paragraph "Why chocolate snaps" and explain it to a Grade 3 student.</p>
+  <textarea id="openAns" placeholder="My biggest clunk was ... in the section called ...&#10;The fix-up strategy I used was ...&#10;Now I understand that ..."></textarea>
+  <p><button type="button" class="sec" id="showModel">Compare with a model answer</button></p>
+  <div id="model"><strong>Model answer:</strong><br>My biggest clunk was the paragraph "Why chocolate snaps." When I read "only one of them, which scientists call Form V," I didn't understand what a crystal form had to do with chocolate. First I <strong>reread</strong> it slowly, and then I used <strong>picture it</strong>: I imagined bricks being stacked into a neat wall versus a messy pile, because the author compared fat molecules to bricks. Now it clicks: the fat in chocolate can harden in six different patterns, and only one pattern makes it shiny and snappy. Tempering is a careful heat-cool-warm routine that melts the bad patterns and keeps the good one, so the rest of the chocolate copies it.</div>
+</div>
+
+<h2>Part 3: Vocabulary</h2>
+<div class="box">
+  <h3 style="margin-top:0">A. Match each word to its meaning</h3>
+  <p>Choose the meaning that fits how the word is used in the passage.</p>
+  <div id="vmatch"></div>
+  <h3>B. Fill in the blank</h3>
+  <p>Choose the vocabulary word that best completes each sentence.</p>
+  <div id="vfill"></div>
+  <button type="button" class="main" id="checkVocab">Check my vocabulary</button>
+  <div class="fb" id="vocabFb"></div>
+</div>
+
+<div class="box" id="final"></div>
+<div id="scoreBox">
+  <span id="scoreText"></span>
+  <button type="button" id="finishBtn">I'm done! Show my final score</button>
+</div>
+</div>
+
+<script>
+var MC = [
+ {q:"You are reading the first section and the word <em>Mesoamerica</em> clunks. Which fix-up strategy would solve it <strong>fastest</strong>?", tag:"Choosing a fix-up strategy",
+  o:["Skip the whole passage.", "Use the context clue in the brackets right after it: \"(today's Mexico and Central America).\"", "Guess that it means \"a kind of chocolate.\"", "Read the last paragraph first."],
+  a:1, e:"The author put the meaning right beside the word in brackets. Checking nearby context clues is often the quickest repair."},
+ {q:"Why did the Aztecs collect cacao beans as tribute instead of growing their own?", tag:"Cause and effect",
+  o:["Their cool mountain valleys were not right for cacao trees.", "They thought cacao tasted terrible.", "Cacao was against their laws.", "They had already cut down all their cacao trees."],
+  a:0, e:"The passage says the Aztecs \"could not grow cacao in their cool mountain valleys.\" Cacao needs a hot, rainy climate near the equator."},
+ {q:"In \"Sugar crosses the ocean,\" what does the author mean by \"The sweet drink had a bitter history\"?", tag:"Figurative language",
+  o:["Hot chocolate in Europe still tasted bitter.", "Europeans did not like hot chocolate.", "Although the drink was sweet, growing cacao for it depended on cruelty, including forcing enslaved Africans to work on plantations.", "Sugar made the drink go bad."],
+  a:2, e:"\"Bitter\" has a double meaning here. The drink tasted sweet, but its history included enslaved people forced to grow cacao: a painful, \"bitter\" truth."},
+ {q:"Which detail explains why ripe cacao pods look \"as if someone stuck rugby balls onto the bark\"?", tag:"Key detail",
+  o:["The trees are pollinated by midges.", "The flowers sprout straight out of the trunk and thick branches, not from the tips of twigs.", "The pods are full of white pulp.", "The trees grow in shade."],
+  a:1, e:"Because the flowers grow right on the trunk, the pods that develop from them hang from the trunk too."},
+ {q:"According to the passage, what is the job of <strong>fermentation</strong>?", tag:"Key detail",
+  o:["It changes chemicals inside the beans and creates the first hints of chocolate flavour.", "It melts the cocoa butter.", "It removes the shells from the beans.", "It adds sugar to the beans."],
+  a:0, e:"The passage says fermentation \"changes chemicals inside the beans and creates the first hints of chocolate flavour. Without it, no amount of sugar could make a good bar.\""},
+ {q:"Put these factory steps in the correct order.", tag:"Sequence",
+  o:["grind into cocoa liquor → roast → winnow into nibs", "winnow into nibs → roast → grind into cocoa liquor", "roast → grind into cocoa liquor → winnow into nibs", "roast → crack and winnow into nibs → grind into cocoa liquor"],
+  a:3, e:"First the beans are roasted, then cracked and winnowed so only the nibs are left, and then the nibs are ground into cocoa liquor."},
+ {q:"A reader stops at \"cocoa liquor\" and worries that chocolate contains alcohol. Which strategy fixes this clunk?", tag:"Choosing a fix-up strategy",
+  o:["Read on: the very next sentence says it \"contains no alcohol at all.\"", "Break the word apart into co- + coa.", "Stop eating chocolate.", "Look up the word in a Spanish dictionary."],
+  a:0, e:"Sometimes the author answers your question one sentence later. Reading on is the right tool here."},
+ {q:"Which invention made it possible to eat chocolate as a <strong>solid bar</strong>, rather than only drink it?", tag:"Cause and effect",
+  o:["Lindt's conche in 1879.", "J. S. Fry &amp; Sons mixing cocoa butter back in with sugar and cocoa and pouring it into a mould, by 1847.", "The Maya's foamy drink.", "Daniel Peter's milk chocolate."],
+  a:1, e:"Van Houten's press separated the cocoa butter (1828), and by 1847 Fry's company mixed it back in to make a mouldable, solid bar. Milk (1875) and conching (1879) came later."},
+ {q:"Which sentence is the best <strong>paraphrase</strong> of the tempering process?", tag:"Paraphrasing to check understanding",
+  o:["Chocolatiers freeze chocolate so it becomes Form V.", "Chocolatiers add more sugar until it shines.", "Chocolatiers heat chocolate to melt all the crystals, cool it while stirring, then warm it slightly so only the good Form V crystals remain and guide the rest.", "Chocolatiers leave chocolate in a hot car to make bloom."],
+  a:2, e:"Heat → cool while stirring → warm slightly. The surviving Form V \"seed\" crystals guide the rest of the chocolate to stack the same way."},
+ {q:"Ace finds a bar with grey-white streaks after it was left in a warm car. Using the passage, what can he <strong>infer</strong>?", tag:"Inference",
+  o:["The bar is poisonous and must be thrown away.", "The cocoa butter crystals rearranged when it warmed and cooled again, so it is safe but has lost its snap.", "Someone painted the bar.", "The bar was never fermented."],
+  a:1, e:"The passage says bloom appears when crystals rearrange after warming and cooling, and that \"the bar is still safe to eat, but it has lost its snap.\""},
+ {q:"What is the <strong>main idea</strong> of the sections \"The bitter side of sweet\" and \"A better bar?\" together?", tag:"Main idea",
+  o:["Chocolate prices always go down.", "Most cacao is grown in Canada.", "Fair trade has completely solved every problem.", "Cacao farming has serious problems for people and forests, and farmers, companies and scientists are trying ideas to make it fairer and more sustainable."],
+  a:3, e:"The first section describes the problems (low pay, child labour, deforestation, disease) and the second describes possible solutions (fair trade, agroforestry, disease-resistant trees, bean-to-bar makers)."},
+ {q:"Which habit best shows a reader <strong>monitoring comprehension</strong>?", tag:"Applying the skill",
+  o:["Reading as fast as possible so you finish first.", "Reading every word aloud without stopping.", "Stopping when something doesn't make sense, naming the clunk, and choosing a fix-up strategy before moving on.", "Skipping every paragraph with a hard word."],
+  a:2, e:"Monitoring means noticing clicks and clunks as you read, and repairing clunks with a strategy instead of just pushing on."}
+];
+
+var VOCAB = ["cultivated", "coveted", "revolutionized", "meticulous", "exploitation", "sustainable"];
+var DEFS = {
+ cultivated:"grew and cared for plants on purpose",
+ coveted:"strongly wanted by many people",
+ revolutionized:"changed something completely and in a big way",
+ meticulous:"extremely careful and exact about every detail",
+ exploitation:"unfairly using people or things for someone else's gain",
+ sustainable:"able to keep going for a long time without harming people or the environment"
+};
+var FILL = [
+ {s:"Ace was so ____ with his science fair labels that he measured every line with a ruler.", a:"meticulous"},
+ {s:"The smartphone ____ how people take photos, talk and find their way.", a:"revolutionized"},
+ {s:"Front-row tickets to the final game were the most ____ seats in the arena.", a:"coveted"},
+ {s:"Grandma ____ tomatoes, beans and squash in her backyard garden every summer.", a:"cultivated"}
+];
+var FILL_OPTIONS = ["cultivated", "coveted", "revolutionized", "meticulous", "exploitation", "sustainable"];
+
+var PRAISE=["Nice work, Ace!","Correct! That one clicked! 👍","Yes! Smooth as tempered chocolate! 🍫","Excellent thinking, Ace!","Sharp reading! You fixed the clunk! 🔧"];
+function pick(a){return a[Math.floor(Math.random()*a.length)];}
+function shuffled(arr,seed){var a=arr.slice(),s=seed;for(var i=a.length-1;i>0;i--){s=(s*9301+49297)%233280;var j=Math.floor(s/233280*(i+1));var t=a[i];a[i]=a[j];a[j]=t;}return a;}
+
+var mcState=MC.map(function(){return {answered:false,firstRight:false,done:false};});
+var vocabScore=0, vocabChecked=false;
+var VOCAB_TOTAL=VOCAB.length+FILL.length;
+
+function buildMC(){
+  var box=document.getElementById("mc");
+  MC.forEach(function(item,i){
+    var d=document.createElement("div"); d.className="box q"; d.id="mc"+i;
+    var html="<div><strong>"+(i+1)+".</strong> "+item.q+(item.tag?'<span class="tag">'+item.tag+'</span>':"")+"</div>";
+    item.o.forEach(function(opt,j){ html+='<button type="button" class="opt" data-i="'+i+'" data-j="'+j+'">'+String.fromCharCode(65+j)+". "+opt+"</button>"; });
+    html+='<div class="fb" id="mcfb'+i+'"></div>';
+    d.innerHTML=html; box.appendChild(d);
+  });
+  box.addEventListener("click",function(e){
+    var b=e.target.closest?e.target.closest(".opt"):e.target; if(!b||!b.classList.contains("opt"))return;
+    answerMC(+b.getAttribute("data-i"),+b.getAttribute("data-j"),b);
+  });
+}
+function answerMC(i,j,btn){
+  var st=mcState[i], item=MC[i], fb=document.getElementById("mcfb"+i), card=document.getElementById("mc"+i);
+  if(st.done) return;
+  var right=(j===item.a);
+  if(!st.answered){ st.answered=true; st.firstRight=right; }
+  if(right){
+    st.done=true; btn.classList.add("sel-right"); card.className="box q right";
+    fb.className="fb good"; fb.innerHTML="✅ "+pick(PRAISE)+' <span class="explain">'+item.e+"</span>";
+  } else {
+    btn.classList.add("sel-wrong"); card.className="box q wrong";
+    fb.className="fb bad"; fb.innerHTML="❌ Not quite, Ace. Look back at the passage and try another answer.";
+  }
+  updateScore();
+}
+function buildVocab(){
+  var m=document.getElementById("vmatch");
+  var defOrder=shuffled(VOCAB,44);
+  VOCAB.forEach(function(w,i){
+    var row=document.createElement("div"); row.className="vrow"; row.id="vm"+i;
+    var sel='<select id="vsel'+i+'" aria-label="Meaning of '+w+'"><option value="">- choose a meaning -</option>';
+    defOrder.forEach(function(k){ sel+='<option value="'+k+'">'+DEFS[k]+'</option>'; });
+    sel+="</select>";
+    row.innerHTML='<span class="mark" id="vmk'+i+'"></span><span class="w">'+w+'</span>'+sel;
+    m.appendChild(row);
+  });
+  var f=document.getElementById("vfill");
+  FILL.forEach(function(item,i){
+    var row=document.createElement("div"); row.className="vrow"; row.id="vf"+i;
+    var sel='<select id="fsel'+i+'" aria-label="Blank '+(i+1)+'"><option value="">- choose -</option>';
+    FILL_OPTIONS.forEach(function(w){ sel+='<option value="'+w+'">'+w+'</option>'; });
+    sel+="</select>";
+    var parts=item.s.split("____");
+    row.innerHTML='<span class="mark" id="vfk'+i+'"></span><span>'+(i+1)+'. '+parts[0]+sel+parts[1]+'</span>';
+    f.appendChild(row);
+  });
+}
+function checkVocab(){
+  var score=0, blank=0;
+  VOCAB.forEach(function(w,i){
+    var v=document.getElementById("vsel"+i).value, ok=(v===w);
+    if(!v) blank++;
+    if(ok) score++;
+    document.getElementById("vm"+i).className="vrow "+(ok?"right":"wrong");
+    document.getElementById("vmk"+i).textContent=ok?"✅":"❌";
+  });
+  FILL.forEach(function(item,i){
+    var v=document.getElementById("fsel"+i).value, ok=(v===item.a);
+    if(!v) blank++;
+    if(ok) score++;
+    document.getElementById("vf"+i).className="vrow "+(ok?"right":"wrong");
+    document.getElementById("vfk"+i).textContent=ok?"✅":"❌";
+  });
+  vocabScore=score; vocabChecked=true;
+  var fb=document.getElementById("vocabFb");
+  if(score===VOCAB_TOTAL){ fb.className="fb good"; fb.textContent="🌟 "+score+" / "+VOCAB_TOTAL+". Perfect! Your vocabulary is as rich as dark chocolate, Ace! 🍫"; }
+  else { fb.className="fb bad"; fb.textContent=score+" / "+VOCAB_TOTAL+" correct"+(blank?" ("+blank+" left blank)":"")+". Fix the ❌ ones and check again. Try finding the word in the passage for clues!"; }
+  updateScore();
+}
+function scores(){
+  var mc=0,answered=0; mcState.forEach(function(s){ if(s.firstRight) mc++; if(s.answered) answered++; });
+  return {mc:mc,answered:answered,vocab:vocabScore};
+}
+function updateScore(){
+  var s=scores();
+  document.getElementById("scoreText").textContent="Comprehension: "+s.mc+" / "+MC.length+" · Vocabulary: "+(vocabChecked?s.vocab:"-")+" / "+VOCAB_TOTAL;
+}
+function finish(){
+  if(!vocabChecked) checkVocab();
+  var s=scores(), total=MC.length+VOCAB_TOTAL, got=s.mc+s.vocab, pct=Math.round(100*got/total);
+  var msg = pct===100 ? "🏆 A perfect score! Outstanding reading, Ace!" :
+            pct>=80 ? "🌟 Fantastic work, Ace! You read like a Grade 7 student!" :
+            pct>=60 ? "💪 Solid effort, Ace! Reread the paragraphs for the questions you missed." :
+                      "🌱 This was a challenging passage. Read it once more, slowly, and try again. You've got this, Ace!";
+  var f=document.getElementById("final"); f.style.display="block";
+  f.innerHTML="<h2 style='border:none;margin-top:0'>Final Score: "+got+" / "+total+" ("+pct+"%)</h2>"+
+    "<p>Comprehension (first tries): "+s.mc+" / "+MC.length+(s.answered<MC.length?" (you skipped "+(MC.length-s.answered)+")":"")+"<br>Vocabulary: "+s.vocab+" / "+VOCAB_TOTAL+"</p><p>"+msg+"</p>"+
+    "<p style='font-size:.85em;color:#546e7a'>Finished on "+new Date().toLocaleString("en-CA")+"</p>";
+  f.scrollIntoView({behavior:"smooth"});
+}
+buildMC(); buildVocab(); updateScore();
+document.getElementById("checkVocab").addEventListener("click",checkVocab);
+document.getElementById("finishBtn").addEventListener("click",finish);
+document.getElementById("showModel").addEventListener("click",function(){document.getElementById("model").style.display="block";});
+</script>
+<script src="../../assets/autosave.js"></script>
+</body>
+</html>
